@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><OML_O21 xmlns="urn:hl7-org:v2xml">
+    <MSH>
+        <MSH.1>|</MSH.1>
+        <MSH.2>^~\&amp;#</MSH.2>
+        <MSH.3>
+            <HD.1>NIST EHR</HD.1>
+        </MSH.3>
+        <MSH.4>
+            <HD.1>NIST EHR Facility</HD.1>
+        </MSH.4>
+        <MSH.5>
+            <HD.1>NIST Test Lab APP</HD.1>
+        </MSH.5>
+        <MSH.6>
+            <HD.1>NIST Lab Facility</HD.1>
+        </MSH.6>
+        <MSH.7>
+            <TS.1>20130211184101-0500</TS.1>
+        </MSH.7>
+        <MSH.9>
+            <MSG.1>OML</MSG.1>
+            <MSG.2>O21</MSG.2>
+            <MSG.3>OML_O21</MSG.3>
+        </MSH.9>
+        <MSH.10>NIST-LOI_5.0_1.1-NG</MSH.10>
+        <MSH.11>
+            <PT.1>T</PT.1>
+        </MSH.11>
+        <MSH.12>
+            <VID.1>2.5.1</VID.1>
+        </MSH.12>
+        <MSH.15>AL</MSH.15>
+        <MSH.16>AL</MSH.16>
+    </MSH>
+    <OML_O21.PATIENT>
+        <PID>
+            <PID.1>1</PID.1>
+            <PID.3>
+                <CX.1>PATID5421</CX.1>
+                <CX.4>
+                    <HD.1>NIST MPI</HD.1>
+                </CX.4>
+                <CX.5>MR</CX.5>
+            </PID.3>
+            <PID.5>
+                <XPN.1>
+                    <FN.1>Wilson</FN.1>
+                </XPN.1>
+                <XPN.2>Patrice</XPN.2>
+                <XPN.3>Natasha</XPN.3>
+                <XPN.7>L</XPN.7>
+            </PID.5>
+            <PID.7>
+                <TS.1>19820304</TS.1>
+            </PID.7>
+            <PID.8>F</PID.8>
+            <PID.10>
+                <CE.1>2106-3</CE.1>
+                <CE.2>White</CE.2>
+                <CE.3>HL70005</CE.3>
+            </PID.10>
+            <PID.11>
+                <XAD.1>
+                    <SAD.1>144 East 12th Street</SAD.1>
+                </XAD.1>
+                <XAD.3>Los Angeles</XAD.3>
+                <XAD.4>CA</XAD.4>
+                <XAD.5>90012</XAD.5>
+                <XAD.7>H</XAD.7>
+            </PID.11>
+            <PID.13>
+                <XTN.2>PRN</XTN.2>
+                <XTN.3>PH</XTN.3>
+                <XTN.6>203</XTN.6>
+                <XTN.7>2290210</XTN.7>
+            </PID.13>
+            <PID.22>
+                <CE.1>N</CE.1>
+                <CE.2>Not Hispanic or Latino</CE.2>
+                <CE.3>HL70189</CE.3>
+            </PID.22>
+        </PID>
+        <NK1>
+            <NK1.1>1</NK1.1>
+            <NK1.2>
+                <XPN.1>
+                    <FN.1>Wilson</FN.1>
+                </XPN.1>
+                <XPN.2>Phillip</XPN.2>
+                <XPN.3>Arthur</XPN.3>
+                <XPN.7>L</XPN.7>
+            </NK1.2>
+            <NK1.3>
+                <CE.1>SPO</CE.1>
+                <CE.2>Spouse</CE.2>
+                <CE.3>HL70063</CE.3>
+            </NK1.3>
+            <NK1.4>
+                <XAD.1>
+                    <SAD.1>144 East 12th Street</SAD.1>
+                </XAD.1>
+                <XAD.3>Los Angeles</XAD.3>
+                <XAD.4>CA</XAD.4>
+                <XAD.5>90012</XAD.5>
+                <XAD.7>H</XAD.7>
+            </NK1.4>
+        </NK1>
+    </OML_O21.PATIENT>
+    <OML_O21.ORDER>
+        <ORC>
+            <ORC.1>NW</ORC.1>
+            <ORC.2>
+                <EI.1>ORD448811</EI.1>
+                <EI.2>NIST EHR</EI.2>
+            </ORC.2>
+            <ORC.9>
+                <TS.1>20120628070100</TS.1>
+            </ORC.9>
+            <ORC.12>
+                <XCN.1>5742200012</XCN.1>
+                <XCN.2>
+                    <FN.1>Radon</FN.1>
+                </XCN.2>
+                <XCN.3>Nicholas</XCN.3>
+                <XCN.9>
+                    <HD.1>NPI</HD.1>
+                </XCN.9>
+                <XCN.10>L</XCN.10>
+                <XCN.13>NPI</XCN.13>
+            </ORC.12>
+        </ORC>
+        <OML_O21.OBSERVATION_REQUEST>
+            <OBR>
+                <OBR.1>1</OBR.1>
+                <OBR.2>
+                    <EI.1>ORD448811</EI.1>
+                    <EI.2>NIST EHR</EI.2>
+                </OBR.2>
+                <OBR.4>
+                    <CE.1>1000</CE.1>
+                    <CE.2>Hepatitis A B C Panel</CE.2>
+                    <CE.3>99USL</CE.3>
+                </OBR.4>
+                <OBR.7>
+                    <TS.1>20120628070100</TS.1>
+                </OBR.7>
+                <OBR.16>
+                    <XCN.1>5742200012</XCN.1>
+                    <XCN.2>
+                        <FN.1>Radon</FN.1>
+                    </XCN.2>
+                    <XCN.3>Nicholas</XCN.3>
+                    <XCN.9>
+                        <HD.1>NPI</HD.1>
+                    </XCN.9>
+                    <XCN.10>L</XCN.10>
+                    <XCN.13>NPI</XCN.13>
+                </OBR.16>
+            </OBR>
+            <DG1>
+                <DG1.1>1</DG1.1>
+                <DG1.3>
+                    <CE.1>F11.129</CE.1>
+                    <CE.2>Opioid abuse with intoxication, unspecified</CE.2>
+                    <CE.3>I10C</CE.3>
+                </DG1.3>
+                <DG1.6>W</DG1.6>
+                <DG1.15>1</DG1.15>
+            </DG1>
+        </OML_O21.OBSERVATION_REQUEST>
+    </OML_O21.ORDER>
+</OML_O21>

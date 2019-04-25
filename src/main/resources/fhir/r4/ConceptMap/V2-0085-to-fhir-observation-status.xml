@@ -1,0 +1,116 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="V2-00085-to-fhir-observation-status"/>
+   <version value="1.0"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2019-04-24T00:00:00-04:00"/>
+   <publisher value="Audacious Inquiry"/>
+   <contact>
+      <telecom>
+         <system value="email"/>
+         <value value="kboone@ainq.com"/>
+      </telecom>
+   </contact>
+   <description value="This concept map is used to convert codes from HL7 table 0085 to the FHIR observation-statuscodes"/>
+   <copyright value="[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)&#xa;This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).&#xa;It is based on original work by Keith W. Boone at Audacious Inquiry."/>
+   <sourceUri value="http://hl7.org/fhir/v2/0123"/>
+   <targetUri value="http://hl7.org/fhir/diagnostic-report-status"/>
+   <group>
+      <element>
+         <code value="F"/>
+         <target>
+            <code value="final"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="C"/>
+         <target>
+            <code value="amended"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="D"/>
+         <target>
+            <code value="entered-in-error"/>
+            <equivalence value="inexact"/>
+            <comment value="D deletes the OBX, withdrawing it."/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="I"/>
+         <target>
+            <code value="registered"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="N"/>
+         <target>
+            <code value="unknown"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="O"/>
+         <target>
+            <code value="unknown"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="P"/>
+         <target>
+            <code value="preliminary"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="R"/>
+         <target>
+            <code value="preliminary"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="S"/>
+         <target>
+            <code value="preliminary"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="X"/>
+         <target>
+            <code value="cancelled"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="U"/>
+         <target>
+            <code value="final"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="W"/>
+         <target>
+            <code value="entered-in-error"/>
+         </target>
+      </element>
+   </group>
+</ConceptMap>

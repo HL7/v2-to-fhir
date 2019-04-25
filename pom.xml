@@ -15,6 +15,7 @@
 		<dockerfile.push.skip>true</dockerfile.push.skip>
 		<junit.jupiter.version>5.3.1</junit.jupiter.version>
 		<hapi.fhir.version>3.6.0</hapi.fhir.version>
+		<hapi.v2.version>2.3</hapi.v2.version>
 		<spring.boot.version>1.5.6.RELEASE</spring.boot.version>
 	</properties>
 	<dependencies>
@@ -52,27 +53,93 @@
 		</dependency>
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
-			<artifactId>hapi-fhir-structures-dstu3</artifactId>
-			<version>${hapi.fhir.version}</version>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>ca.uhn.hapi.fhir</groupId>
-			<artifactId>hapi-fhir-structures-r4</artifactId>
-			<version>${hapi.fhir.version}</version>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>ca.uhn.hapi.fhir</groupId>
 			<artifactId>hapi-fhir-converter</artifactId>
 			<version>${hapi.fhir.version}</version>
 			<optional>true</optional>
 		</dependency>
-
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
 			<artifactId>hapi-fhir-spring-boot-starter</artifactId>
 			<version>${hapi.fhir.version}</version>
+		</dependency>
+
+		<!-- HL7 HL7 V2 artifacts -->
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-base</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v281</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v28</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency>
+		<!-- dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v271</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency -->
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v27</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v26</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v251</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v25</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v24</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency>
+		<!--dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v231-alternatenames</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency-->
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v23</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v22</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-structures-v21</artifactId>
+			<version>${hapi.v2.version}</version>
+		</dependency>
+
+		<!-- Charset detection -->
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-core</artifactId>
+			<version>1.20</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-parsers</artifactId>
+			<version>1.20</version>
 		</dependency>
 
 		<dependency>
@@ -133,7 +200,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<version>${spring.boot.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
@@ -141,9 +208,9 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-		    <groupId>org.opentest4j</groupId>
-		    <artifactId>opentest4j</artifactId>
-		    <version>1.1.1</version>
+			<groupId>org.opentest4j</groupId>
+			<artifactId>opentest4j</artifactId>
+			<version>1.1.1</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
@@ -171,7 +238,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<repositories>
 		<repository>
 			<id>snapshot</id>
@@ -184,7 +251,7 @@
 			<url>https://jitpack.io</url>
 		</repository>
 	</repositories>
-	
+
 	<build>
 		<finalName>fhir-framework</finalName>
 
@@ -256,14 +323,14 @@
 					</archive>
 				</configuration>
 			</plugin>
-			
-			<!--  Surefire plugin is needed for Junit5 -->
+
+			<!-- Surefire plugin is needed for Junit5 -->
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.1</version>
 			</plugin>
 
-			<plugin>
+			<!--plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.9</version>
@@ -283,7 +350,7 @@
 						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
 				</configuration>
-			</plugin>
+			</plugin-->
 
 			<!-- JavaDoc support -->
 			<plugin>
@@ -319,20 +386,9 @@
 		</plugins>
 	</reporting>
 
-	<!--  distributionManagement>
-		<repository>
-			<uniqueVersion>false</uniqueVersion>
-			<id>release</id>
-			<name>Audacious Inquiry Releases</name>
-			<url>https://nexus.ainq.com/repository/maven-dadd/</url>
-			<layout>default</layout>
-		</repository>
-		<snapshotRepository>
-			<uniqueVersion>true</uniqueVersion>
-			<id>snapshot</id>
-			<name>Audacious Inquiry Releases</name>
-			<url>https://nexus.ainq.com/repository/maven-dadd/</url>
-			<layout>default</layout>
-		</snapshotRepository>
-	</distributionManagement -->
+	<!-- distributionManagement> <repository> <uniqueVersion>false</uniqueVersion> 
+		<id>release</id> <name>Audacious Inquiry Releases</name> <url>https://nexus.ainq.com/repository/maven-dadd/</url> 
+		<layout>default</layout> </repository> <snapshotRepository> <uniqueVersion>true</uniqueVersion> 
+		<id>snapshot</id> <name>Audacious Inquiry Releases</name> <url>https://nexus.ainq.com/repository/maven-dadd/</url> 
+		<layout>default</layout> </snapshotRepository> </distributionManagement -->
 </project>

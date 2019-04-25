@@ -1,0 +1,2202 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="V2-isoplus-to-ucum"/>
+   <version value="1.0"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2019-04-24T00:00:00-04:00"/>
+   <publisher value="Audacious Inquiry"/>
+   <contact>
+      <telecom>
+         <system value="email"/>
+         <value value="kboone@ainq.com"/>
+      </telecom>
+   </contact>
+   <description value="This concept map is used to convert codes from HL7 ISO plus units defined in HL7 V2    to ucum codes used in FHIR.  See http://motorcycleguy.blogspot.com/2009/11/iso-to-ucum-mapping-table.html    and http://download.hl7.de/documents/ucum/ucumdata.html (TBD) for sources"/>
+   <copyright value="[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)&#xa;This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).&#xa;It is based on original work by Keith W. Boone at Audacious Inquiry."/>
+   <sourceUri value="http://hl7.org/fhir/v2/isoplus"/>
+   <targetUri value="http://unitsofmeasure.org"/>
+   <group>
+      <element>
+         <code value="%"/>
+         <target>
+            <code value="%"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(arb_u)"/>
+         <target>
+            <code value="[arb'U]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(bdsk_u)"/>
+         <target>
+            <code value="[bdsk'U]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(bsa)"/>
+         <target>
+            <code value="{bsa}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(cal)"/>
+         <target>
+            <code value="cal"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(cfu)"/>
+         <target>
+            <code value="{cfu}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(drop)"/>
+         <target>
+            <code value="[drp]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(ka_u)"/>
+         <target>
+            <code value="[ka'U]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(kcal)"/>
+         <target>
+            <code value="kcal"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(kcal)/(8.hr)"/>
+         <target>
+            <code value="kcal/(8.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(kcal)/d"/>
+         <target>
+            <code value="kcal/d"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(kcal)/hr"/>
+         <target>
+            <code value="kcal/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(knk_u)"/>
+         <target>
+            <code value="[knk'U]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(mclg_u)"/>
+         <target>
+            <code value="[mclg'U]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(od)"/>
+         <target>
+            <code value="{od}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(ph)"/>
+         <target>
+            <code value="pH"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(ppb)"/>
+         <target>
+            <code value="[ppb]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(ppm)"/>
+         <target>
+            <code value="[ppm]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(ppt)"/>
+         <target>
+            <code value="[pptr]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(ppth)"/>
+         <target>
+            <code value="[ppth]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="(th_u)"/>
+         <target>
+            <code value="[todd'U]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/(arb_u)"/>
+         <target>
+            <code value="/[arb'U]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/(hpf)"/>
+         <target>
+            <code value="[HPF]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/(tot)"/>
+         <target>
+            <code value="/{tot}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/iu"/>
+         <target>
+            <code value="/[iU]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/kg"/>
+         <target>
+            <code value="/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/L"/>
+         <target>
+            <code value="/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/m3"/>
+         <target>
+            <code value="/m3"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/m3"/>
+         <target>
+            <code value="/m3"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/min"/>
+         <target>
+            <code value="/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/min"/>
+         <target>
+            <code value="/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/mL"/>
+         <target>
+            <code value="/mL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="1/mL"/>
+         <target>
+            <code value="1/mL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*12/L"/>
+         <target>
+            <code value="10*12/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*3(rbc)"/>
+         <target>
+            <code value="10*3{rbc}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*3/L"/>
+         <target>
+            <code value="10*3/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*3/mL"/>
+         <target>
+            <code value="10*3/mL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*3/mm3"/>
+         <target>
+            <code value="10*3/mm3"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*3/uL"/>
+         <target>
+            <code value="10*3/uL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*6/L"/>
+         <target>
+            <code value="10*6/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*6/mL"/>
+         <target>
+            <code value="10*6/mL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*6/mm3"/>
+         <target>
+            <code value="10*6/mm3"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*6/uL"/>
+         <target>
+            <code value="10*6/uL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*9/L"/>
+         <target>
+            <code value="10*9/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*9/mL"/>
+         <target>
+            <code value="10*9/mL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10*9/mm3"/>
+         <target>
+            <code value="10*9/mm3"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10.L"/>
+         <target>
+            <code value="10.L/(min.m2)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10.L/min"/>
+         <target>
+            <code value="10.L/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10.un.s/(cm5.m2)"/>
+         <target>
+            <code value="dyn.s/(cm5.m2)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="10.un.s/cm5"/>
+         <target>
+            <code value="dyn.s/cm5"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="a/m"/>
+         <target>
+            <code value="a/m"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="bar"/>
+         <target>
+            <code value="bar"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="Bq"/>
+         <target>
+            <code value="Bq"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="cel"/>
+         <target>
+            <code value="cel"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="Cm"/>
+         <target>
+            <code value="Cm"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="cm_h20"/>
+         <target>
+            <code value="cm[H20]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="cm_h20.s/L"/>
+         <target>
+            <code value="cm[H20].s/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="cm_h20/(s.m)"/>
+         <target>
+            <code value="cm[H20]/(s.m)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="cm2/s"/>
+         <target>
+            <code value="cm2/s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="d"/>
+         <target>
+            <code value="d"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="dB"/>
+         <target>
+            <code value="dB"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="dba"/>
+         <target>
+            <code value="dB[SPL]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="deg"/>
+         <target>
+            <code value="deg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="dm2/s2"/>
+         <target>
+            <code value="REM"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="eq"/>
+         <target>
+            <code value="eq"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="eV"/>
+         <target>
+            <code value="eV"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="fg"/>
+         <target>
+            <code value="fg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="fL"/>
+         <target>
+            <code value="fL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="fmol"/>
+         <target>
+            <code value="fmol"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g"/>
+         <target>
+            <code value="g"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g(creat)"/>
+         <target>
+            <code value="g{creat}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g(hgb)"/>
+         <target>
+            <code value="g{hgb}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g(tot_nit)"/>
+         <target>
+            <code value="g{tit_nit}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g(tot_prot)"/>
+         <target>
+            <code value="g{tot_prot}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g(wet_tis)"/>
+         <target>
+            <code value="g{wet_tis}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g.m"/>
+         <target>
+            <code value="g.m"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g.m/((hb).m2)"/>
+         <target>
+            <code value="g.m/{hb}m2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g.m/(hb)"/>
+         <target>
+            <code value="g.m/{hb}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/(8.hr)"/>
+         <target>
+            <code value="g/(8.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/(8.kg.hr)"/>
+         <target>
+            <code value="g/(8.kg.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/(kg.d)"/>
+         <target>
+            <code value="g/(kg.d)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/(kg.hr)"/>
+         <target>
+            <code value="g/(kg.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/(kg.min)"/>
+         <target>
+            <code value="g/(kg.min)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/d"/>
+         <target>
+            <code value="g/d"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/dL"/>
+         <target>
+            <code value="g/dL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/hr"/>
+         <target>
+            <code value="g/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/kg"/>
+         <target>
+            <code value="g/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/L"/>
+         <target>
+            <code value="g/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/m2"/>
+         <target>
+            <code value="g/m2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="g/min"/>
+         <target>
+            <code value="g/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="Gy"/>
+         <target>
+            <code value="Gy"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="h"/>
+         <target>
+            <code value="h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="hL"/>
+         <target>
+            <code value="hL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/[HPF]"/>
+         <target>
+            <code value="/[HPF]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/HPF"/>
+         <target>
+            <code value="/[HPF]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="in"/>
+         <target>
+            <code value="[in_us]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="in_hg"/>
+         <target>
+            <code value="[in_i'Hg]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="iu"/>
+         <target>
+            <code value="[iU]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="iu/d"/>
+         <target>
+            <code value="[iU]/d"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="iu/hr"/>
+         <target>
+            <code value="[iU]/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="iu/kg"/>
+         <target>
+            <code value="[iU]/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="iu/L"/>
+         <target>
+            <code value="[iU]/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="iu/min"/>
+         <target>
+            <code value="[iU]/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="iu/mL"/>
+         <target>
+            <code value="[iU]/mL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="J/L"/>
+         <target>
+            <code value="J/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="k/watt"/>
+         <target>
+            <code value="K/W"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kat"/>
+         <target>
+            <code value="kat"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kat/kg"/>
+         <target>
+            <code value="kat/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kat/L"/>
+         <target>
+            <code value="kat/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kg"/>
+         <target>
+            <code value="kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kg(body_wt)"/>
+         <target>
+            <code value="kg{body_wt}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kg.m/s"/>
+         <target>
+            <code value="kg.m/s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kg/(s.m2)"/>
+         <target>
+            <code value="kg/(s.m2)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kg/L"/>
+         <target>
+            <code value="kg/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kg/m3"/>
+         <target>
+            <code value="kg/m3"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kg/min"/>
+         <target>
+            <code value="kg/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kg/mol"/>
+         <target>
+            <code value="kg/mol"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kg/ms"/>
+         <target>
+            <code value="kg/m2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kg/s"/>
+         <target>
+            <code value="kg/s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kh/h"/>
+         <target>
+            <code value="kg/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="kPa"/>
+         <target>
+            <code value="kPa"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ks"/>
+         <target>
+            <code value="ks"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="L"/>
+         <target>
+            <code value="L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="L.s"/>
+         <target>
+            <code value="L.s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="L/(8.hr)"/>
+         <target>
+            <code value="L/(8.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="L/(min.m2)"/>
+         <target>
+            <code value="L/(min.m2)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="L/d"/>
+         <target>
+            <code value="L/d"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="L/hr"/>
+         <target>
+            <code value="L/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="L/kg"/>
+         <target>
+            <code value="L/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="L/min"/>
+         <target>
+            <code value="L/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="L/s"/>
+         <target>
+            <code value="L/s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="lb"/>
+         <target>
+            <code value="[lb_av]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/[LPF]"/>
+         <target>
+            <code value="/[LPF]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="/LPF"/>
+         <target>
+            <code value="/[HPF]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="lm"/>
+         <target>
+            <code value="lm"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="m"/>
+         <target>
+            <code value="m"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="m/s"/>
+         <target>
+            <code value="ms/s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="m/s2"/>
+         <target>
+            <code value="m/s2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="m2"/>
+         <target>
+            <code value="m2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="m2/s"/>
+         <target>
+            <code value="m2/s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="m3/s"/>
+         <target>
+            <code value="m3/s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mas"/>
+         <target>
+            <code value="Ms"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mbar"/>
+         <target>
+            <code value="mbar"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mbar.s/L"/>
+         <target>
+            <code value="mbar.s/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="meq"/>
+         <target>
+            <code value="meq"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="meq/(8.hr)"/>
+         <target>
+            <code value="meq/(8.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="meq/(8.hr.kg)"/>
+         <target>
+            <code value="meq/(8.h.kg)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="meq/(kg.d)"/>
+         <target>
+            <code value="meq/(kg.d)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="meq/(kg.hr)"/>
+         <target>
+            <code value="meq/(kg.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="meq/(kg.min)"/>
+         <target>
+            <code value="meq/(kg.min)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="meq/d"/>
+         <target>
+            <code value="meq/d"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="meq/hr"/>
+         <target>
+            <code value="meq/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="meq/kg"/>
+         <target>
+            <code value="meq/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="meq/L"/>
+         <target>
+            <code value="meq/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="meq/min"/>
+         <target>
+            <code value="meq/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg"/>
+         <target>
+            <code value="mg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/(8.hr)"/>
+         <target>
+            <code value="mg/(8.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/(8.hr.kg)"/>
+         <target>
+            <code value="mg/(8.h.kg)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/(kg.d)"/>
+         <target>
+            <code value="mg/(kg.d)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/(kg.hr)"/>
+         <target>
+            <code value="mg/(kg.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/(kg.min)"/>
+         <target>
+            <code value="mg/(kg.min)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/d"/>
+         <target>
+            <code value="mg/d"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/dL"/>
+         <target>
+            <code value="mg/dL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/hr"/>
+         <target>
+            <code value="mg/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/kg"/>
+         <target>
+            <code value="mg/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/L"/>
+         <target>
+            <code value="mg/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/m2"/>
+         <target>
+            <code value="mg/m2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/m3"/>
+         <target>
+            <code value="mg/m3"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mg/min"/>
+         <target>
+            <code value="mg/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="miu/mL"/>
+         <target>
+            <code value="m[iU]/mL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL"/>
+         <target>
+            <code value="mL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/((hb).m2)"/>
+         <target>
+            <code value="mL/{hb}.m2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/(8.hr)"/>
+         <target>
+            <code value="mL/(8.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/(8.hr.kg)"/>
+         <target>
+            <code value="mL/(8.h.kg)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/(hb)"/>
+         <target>
+            <code value="mL/{hb}"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/(kg.d)"/>
+         <target>
+            <code value="mL/(kg.d)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/(kg.hr)"/>
+         <target>
+            <code value="mL/(kg.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/(kg.min)"/>
+         <target>
+            <code value="mL/(kg.min)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/(min.m2)"/>
+         <target>
+            <code value="mL/(min.m2)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/cm_h20"/>
+         <target>
+            <code value="mL/cm[H20]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/d"/>
+         <target>
+            <code value="mL/d"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/hr"/>
+         <target>
+            <code value="mL/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/kg"/>
+         <target>
+            <code value="mL/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/m2"/>
+         <target>
+            <code value="mL/m2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/mbar"/>
+         <target>
+            <code value="mL/mbar"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/min"/>
+         <target>
+            <code value="mL/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mL/s"/>
+         <target>
+            <code value="mL/s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mm"/>
+         <target>
+            <code value="mm"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mm(hg)"/>
+         <target>
+            <code value="mm[Hg]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mm/hr"/>
+         <target>
+            <code value="mm/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mmol/(8.hr.kg)"/>
+         <target>
+            <code value="mmol/(8.h.kg)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mmol/(8hr)"/>
+         <target>
+            <code value="mmol/(8.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mmol/(kg.d)"/>
+         <target>
+            <code value="mmol/(kg.d)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mmol/(kg.hr)"/>
+         <target>
+            <code value="mmol/(kg.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mmol/(kg.min)"/>
+         <target>
+            <code value="mmol/(kg.min)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mmol/hr"/>
+         <target>
+            <code value="mmol/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mmol/kg"/>
+         <target>
+            <code value="mmol/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mmol/L"/>
+         <target>
+            <code value="mmol/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mmol/m2"/>
+         <target>
+            <code value="mmol/m2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mmol/min"/>
+         <target>
+            <code value="mmol/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mol/(kg.s)"/>
+         <target>
+            <code value="mol/(kg.s)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mol/kg"/>
+         <target>
+            <code value="mol/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mol/L"/>
+         <target>
+            <code value="mol/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mol/m3"/>
+         <target>
+            <code value="mol/m3"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mol/s"/>
+         <target>
+            <code value="mol/s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mosm/L"/>
+         <target>
+            <code value="mosm/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ms"/>
+         <target>
+            <code value="ms"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="mV"/>
+         <target>
+            <code value="mV"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng"/>
+         <target>
+            <code value="ng"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/(8.hr)"/>
+         <target>
+            <code value="ng/(8.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/(8.hr.kg)"/>
+         <target>
+            <code value="ng/(8.h.kg)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/(kg.d)"/>
+         <target>
+            <code value="ng/(kg.d)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/(kg.hr)"/>
+         <target>
+            <code value="ng/(kg.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/(kg.min)"/>
+         <target>
+            <code value="ng/(kg.min)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/d"/>
+         <target>
+            <code value="ng/d"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/hr"/>
+         <target>
+            <code value="ng/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/kg"/>
+         <target>
+            <code value="ng/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/L"/>
+         <target>
+            <code value="ng/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/m2"/>
+         <target>
+            <code value="ng/m2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/min"/>
+         <target>
+            <code value="ng/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/mL"/>
+         <target>
+            <code value="ng/mL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ng/s"/>
+         <target>
+            <code value="ng/s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="nkat"/>
+         <target>
+            <code value="nkat"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="nm"/>
+         <target>
+            <code value="nm"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="nmol/s"/>
+         <target>
+            <code value="nmol/s"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ns"/>
+         <target>
+            <code value="ns"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="Ohm"/>
+         <target>
+            <code value="Ohm"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="Ohm.m"/>
+         <target>
+            <code value="Ohm.m"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="osmol"/>
+         <target>
+            <code value="osm"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="osmol/kg"/>
+         <target>
+            <code value="osm/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="osmol/L"/>
+         <target>
+            <code value="osm/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="pa"/>
+         <target>
+            <code value="pA"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="pal"/>
+         <target>
+            <code value="Pa"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="pg"/>
+         <target>
+            <code value="pg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="pg/L"/>
+         <target>
+            <code value="pg/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="pg/mL"/>
+         <target>
+            <code value="pg/mL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="pkat"/>
+         <target>
+            <code value="pkat"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="pm"/>
+         <target>
+            <code value="pm"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="pmol"/>
+         <target>
+            <code value="pmol"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ps"/>
+         <target>
+            <code value="ps"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="pt"/>
+         <target>
+            <code value="pt"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="sec"/>
+         <target>
+            <code value="''"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="sie"/>
+         <target>
+            <code value="S"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="Sv"/>
+         <target>
+            <code value="Sv"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="t"/>
+         <target>
+            <code value="t"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ueq"/>
+         <target>
+            <code value="ueq"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug"/>
+         <target>
+            <code value="ug"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug(8hr)"/>
+         <target>
+            <code value="ug(8.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/(8.hr.kg)"/>
+         <target>
+            <code value="ug/(8.h.kg)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/(kg.d)"/>
+         <target>
+            <code value="ug/(kg.d)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/(kg.hr)"/>
+         <target>
+            <code value="ug/(kg.h)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/(kg.min)"/>
+         <target>
+            <code value="ug/(kg.min)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/d"/>
+         <target>
+            <code value="ug/d"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/dL"/>
+         <target>
+            <code value="ug/dL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/g"/>
+         <target>
+            <code value="ug/g"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/hr"/>
+         <target>
+            <code value="ug/h"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/kg"/>
+         <target>
+            <code value="ug/kg"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/L"/>
+         <target>
+            <code value="ug/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/m2"/>
+         <target>
+            <code value="ug/m2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/min"/>
+         <target>
+            <code value="ug/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ug/mL"/>
+         <target>
+            <code value="ug/mL"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="uiu"/>
+         <target>
+            <code value="u[iU]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ukat"/>
+         <target>
+            <code value="ukat"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="um"/>
+         <target>
+            <code value="um"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="umol"/>
+         <target>
+            <code value="umol"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="umol/d"/>
+         <target>
+            <code value="umol/d"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="umol/L"/>
+         <target>
+            <code value="umol/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="umol/min"/>
+         <target>
+            <code value="umol/min"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="us"/>
+         <target>
+            <code value="us"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="uV"/>
+         <target>
+            <code value="uV"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="U/L"/>
+         <target>
+            <code value="U/L"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="V"/>
+         <target>
+            <code value="V"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="Wb"/>
+         <target>
+            <code value="Wb"/>
+         </target>
+      </element>
+   </group>
+</ConceptMap>

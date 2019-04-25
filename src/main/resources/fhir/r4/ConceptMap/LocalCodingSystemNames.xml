@@ -1,0 +1,26 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="LocalCodingSystemNames"/>
+   <version value="1.0"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2019-03-05T00:00:00-05:00"/>
+   <publisher value="Audacious Inquiry"/>
+   <contact>
+      <telecom>
+         <system value="email"/>
+         <value value="kboone@ainq.com"/>
+      </telecom>
+   </contact>
+   <description value="This concept map is used to convert Local Coding Systems in a CWE/CNE to Coding System URLs usable with FHIR"/>
+   <copyright value="[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)&#xa;This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).&#xa;It is based on original work by Keith W. Boone at Audacious Inquiry."/>
+   <sourceUri value="http://hl7.org/fhir"/>
+   <targetUri value="http://example.com"/>
+   <group>
+      <element>
+         <code value="LN"/>
+         <target>
+            <code value="http://loinc.org"/>
+         </target>
+      </element>
+   </group>
+</ConceptMap>
