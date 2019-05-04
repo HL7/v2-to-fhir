@@ -1,15 +1,13 @@
-package org.hl7.v2tofhir.testing;
+package org.hl7.v2tofhir.tools;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.hl7.fhir.convertors.NullVersionConverterAdvisor30;
-import org.hl7.fhir.convertors.NullVersionConverterAdvisor40;
 import org.hl7.fhir.convertors.VersionConvertor_10_30;
-import org.hl7.fhir.convertors.VersionConvertor_10_40;
-import org.hl7.fhir.r4.model.ConceptMap;
-import org.hl7.fhir.r4.model.ConceptMap.ConceptMapGroupComponent;
-import org.hl7.fhir.r4.model.ConceptMap.SourceElementComponent;
+import org.hl7.fhir.dstu3.model.ConceptMap;
+import org.hl7.fhir.dstu3.model.ConceptMap.ConceptMapGroupComponent;
+import org.hl7.fhir.dstu3.model.ConceptMap.SourceElementComponent;
 import org.hl7.fhir.exceptions.FHIRException;
 import org.hl7.fhir.instance.model.CodeableConcept;
 
@@ -20,17 +18,17 @@ import org.hl7.fhir.instance.model.CodeableConcept;
  * @author Keith W. Boone
  *
  */
-public class MyVersionConverter_10_40 extends VersionConvertor_10_40 {
+public class MyVersionConverter_10_30 extends VersionConvertor_10_30 {
 
-    public MyVersionConverter_10_40() {
-        super(new NullVersionConverterAdvisor40());
+    public MyVersionConverter_10_30() {
+        super(new NullVersionConverterAdvisor30());
     }
 
-    public org.hl7.fhir.r4.model.ConceptMap convertConceptMap(org.hl7.fhir.instance.model.ConceptMap src)
+    public org.hl7.fhir.dstu3.model.ConceptMap convertConceptMap(org.hl7.fhir.instance.model.ConceptMap src)
             throws FHIRException {
         if (src == null || src.isEmpty())
             return null;
-        org.hl7.fhir.r4.model.ConceptMap tgt = new org.hl7.fhir.r4.model.ConceptMap();
+        org.hl7.fhir.dstu3.model.ConceptMap tgt = new org.hl7.fhir.dstu3.model.ConceptMap();
         copyDomainResource(src, tgt);
         tgt.setUrl(src.getUrl());
         tgt.setIdentifier(convertIdentifier(src.getIdentifier()));
@@ -79,7 +77,7 @@ public class MyVersionConverter_10_40 extends VersionConvertor_10_40 {
 
         private String source;
         private String target;
-        private org.hl7.fhir.r4.model.ConceptMap.SourceElementComponent comp;
+        private org.hl7.fhir.dstu3.model.ConceptMap.SourceElementComponent comp;
 
     }
 
@@ -89,7 +87,7 @@ public class MyVersionConverter_10_40 extends VersionConvertor_10_40 {
         if (src == null || src.isEmpty())
             return res;
         for (org.hl7.fhir.instance.model.ConceptMap.TargetElementComponent t : src.getTarget()) {
-            org.hl7.fhir.r4.model.ConceptMap.SourceElementComponent tgt = new org.hl7.fhir.r4.model.ConceptMap.SourceElementComponent();
+            org.hl7.fhir.dstu3.model.ConceptMap.SourceElementComponent tgt = new org.hl7.fhir.dstu3.model.ConceptMap.SourceElementComponent();
             copyElement(src, tgt);
             tgt.setCode(src.getCode());
             tgt.addTarget(convertTargetElementComponent(t));
@@ -99,15 +97,15 @@ public class MyVersionConverter_10_40 extends VersionConvertor_10_40 {
     }
 
     public org.hl7.fhir.instance.model.ConceptMap.SourceElementComponent myConvertSourceElementComponent(
-            org.hl7.fhir.r4.model.ConceptMap.SourceElementComponent src,
-            org.hl7.fhir.r4.model.ConceptMap.ConceptMapGroupComponent g) throws FHIRException {
+            org.hl7.fhir.dstu3.model.ConceptMap.SourceElementComponent src,
+            org.hl7.fhir.dstu3.model.ConceptMap.ConceptMapGroupComponent g) throws FHIRException {
         if (src == null || src.isEmpty())
             return null;
         org.hl7.fhir.instance.model.ConceptMap.SourceElementComponent tgt = new org.hl7.fhir.instance.model.ConceptMap.SourceElementComponent();
         copyElement(src, tgt);
         tgt.setCodeSystem(g.getSource());
         tgt.setCode(src.getCode());
-        for (org.hl7.fhir.r4.model.ConceptMap.TargetElementComponent t : src.getTarget())
+        for (org.hl7.fhir.dstu3.model.ConceptMap.TargetElementComponent t : src.getTarget())
             tgt.addTarget(convertTargetElementComponent(t, g));
         return tgt;
     }

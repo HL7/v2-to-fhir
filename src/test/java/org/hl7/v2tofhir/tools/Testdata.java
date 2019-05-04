@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.hl7.v2tofhir.testing;
+package org.hl7.v2tofhir.tools;
 
 import java.io.File;
 import java.io.IOException;

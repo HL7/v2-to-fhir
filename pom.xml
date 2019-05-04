@@ -6,7 +6,7 @@
 	<artifactId>v2-to-fhir</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>FHIR Conversion Tools</name>
+	<name>V2 to FHIR Conversion Tools</name>
 	<url>https://github.com/HL7/v2-to-fhir</url>
 	<properties>
 		<timestamp>${maven.build.timestamp}</timestamp>
@@ -253,7 +253,7 @@
 	</repositories>
 
 	<build>
-		<finalName>fhir-framework</finalName>
+		<finalName>v2-to-fhir</finalName>
 
 		<plugins>
 			<plugin>

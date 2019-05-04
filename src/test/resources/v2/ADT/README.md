@@ -1,6 +1,16 @@
 File|Description
 ----|-----------
+A01-Admit-Patient-(example-from-V2-8-2-base-standard)-v2.8.txt|
+A01-Admit-Patient-(example-from-V2-8-2-base-standard)-v2.8.xml|
+A04-Register-Patient-v2.1.txt|
+A04-Register-Patient-v2.1.xml|
+A05-A28-Add-Patient-v2.4.txt|
+A05-A28-Add-Patient-v2.4.xml|
 A08-Update-Patient-v2.3.txt|
 A08-Update-Patient-v2.3.xml|
+A31-A05-Pre-admit-Patient-v2.3.txt|
+A31-A05-Pre-admit-Patient-v2.3.xml|
 A34-Merge-Patients---Patient-ID-v2.3.txt|
 A34-Merge-Patients---Patient-ID-v2.3.xml|
+A39-Patient-Merge-CHIS-2-v2.5.1.txt|
+A39-Patient-Merge-CHIS-2-v2.5.1.xml|
