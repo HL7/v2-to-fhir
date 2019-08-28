@@ -7,7 +7,6 @@ import java.util.Collection;
 import java.util.Collections;
 
 import org.apache.commons.io.FileUtils;
-import org.hl7.fhir.convertors.NullVersionConverterAdvisor40;
 import org.hl7.fhir.convertors.VersionConvertor_10_30;
 import org.hl7.fhir.convertors.VersionConvertor_10_40;
 import org.hl7.fhir.convertors.VersionConvertor_30_40;
@@ -27,15 +26,15 @@ import ca.uhn.fhir.parser.StrictErrorHandler;
  * one version of FHIR to another. To use it, give it the source folder or file
  * name to convert, and the destination file or folder to convert to, and the
  * target FHIR release (2, 3 or 4).
- * 
+ *
  * e.g., java Converter.class source destination 3
- * 
+ *
  * It will look for files of the form *.json and *.xml and convert them to files
  * of the same form (either json or xml) using the destination version. It
  * automatically detects the FHIR version of the input content.
- * 
+ *
  * a folder containing one or more FHIR resources
- * 
+ *
  * @author Keith W. Boone
  *
  */
@@ -130,7 +129,7 @@ public class Converter {
             if (dest.getName().endsWith(".xml")) {
                 p = destContext.newXmlParser().setPrettyPrint(true);
             } else {
-                p = destContext.newXmlParser().setPrettyPrint(true);
+                p = destContext.newJsonParser().setPrettyPrint(true);
             }
 
             if (CONVERTER == null) {
@@ -143,6 +142,9 @@ public class Converter {
     }
 
     private static IBaseResource convert(IBaseResource read) {
+        if (CONVERTER == null) {
+            return read;
+        }
         if (CONVERTER instanceof VersionConvertor_10_30) {
             if (read instanceof org.hl7.fhir.instance.model.Resource) {
                 return ((VersionConvertor_10_30) CONVERTER)
@@ -224,6 +226,8 @@ public class Converter {
                 return new MyVersionConverter_10_30();
             case R4:
                 return new MyVersionConverter_10_40();
+            case DSTU2_HL7ORG:
+                return null;
             default:
                 break;
             }

@@ -3,9 +3,7 @@ package org.hl7.v2tofhir.tools;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.hl7.fhir.convertors.NullVersionConverterAdvisor30;
 import org.hl7.fhir.convertors.NullVersionConverterAdvisor40;
-import org.hl7.fhir.convertors.VersionConvertor_10_30;
 import org.hl7.fhir.convertors.VersionConvertor_10_40;
 import org.hl7.fhir.r4.model.ConceptMap;
 import org.hl7.fhir.r4.model.ConceptMap.ConceptMapGroupComponent;

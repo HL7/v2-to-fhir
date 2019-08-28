@@ -74,16 +74,11 @@
 			<artifactId>hapi-structures-v281</artifactId>
 			<version>${hapi.v2.version}</version>
 		</dependency>
-		<dependency>
+		<!-- dependency>
 			<groupId>ca.uhn.hapi</groupId>
 			<artifactId>hapi-structures-v28</artifactId>
 			<version>${hapi.v2.version}</version>
 		</dependency>
-		<!-- dependency>
-			<groupId>ca.uhn.hapi</groupId>
-			<artifactId>hapi-structures-v271</artifactId>
-			<version>${hapi.v2.version}</version>
-		</dependency -->
 		<dependency>
 			<groupId>ca.uhn.hapi</groupId>
 			<artifactId>hapi-structures-v27</artifactId>
@@ -109,11 +104,6 @@
 			<artifactId>hapi-structures-v24</artifactId>
 			<version>${hapi.v2.version}</version>
 		</dependency>
-		<!--dependency>
-			<groupId>ca.uhn.hapi</groupId>
-			<artifactId>hapi-structures-v231-alternatenames</artifactId>
-			<version>${hapi.v2.version}</version>
-		</dependency-->
 		<dependency>
 			<groupId>ca.uhn.hapi</groupId>
 			<artifactId>hapi-structures-v23</artifactId>
@@ -128,7 +118,7 @@
 			<groupId>ca.uhn.hapi</groupId>
 			<artifactId>hapi-structures-v21</artifactId>
 			<version>${hapi.v2.version}</version>
-		</dependency>
+		</dependency -->
 
 		<!-- Charset detection -->
 		<dependency>
@@ -182,6 +172,24 @@
 			<version>${spring.boot.version}</version>
 			<optional>true</optional>
 		</dependency>
+
+		<!-- Google Sheets Stuff -->
+		<dependency>
+		    <groupId>com.google.api-client</groupId>
+		    <artifactId>google-api-client</artifactId>
+		    <version>1.23.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.oauth-client</groupId>
+            <artifactId>google-oauth-client-jetty</artifactId>
+            <version>1.23.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-sheets</artifactId>
+            <version>v4-rev516-1.23.0</version>
+        </dependency>
+
 		<!-- Test -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
@@ -265,8 +273,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 
@@ -386,9 +394,9 @@
 		</plugins>
 	</reporting>
 
-	<!-- distributionManagement> <repository> <uniqueVersion>false</uniqueVersion> 
-		<id>release</id> <name>Audacious Inquiry Releases</name> <url>https://nexus.ainq.com/repository/maven-dadd/</url> 
-		<layout>default</layout> </repository> <snapshotRepository> <uniqueVersion>true</uniqueVersion> 
-		<id>snapshot</id> <name>Audacious Inquiry Releases</name> <url>https://nexus.ainq.com/repository/maven-dadd/</url> 
+	<!-- distributionManagement> <repository> <uniqueVersion>false</uniqueVersion>
+		<id>release</id> <name>Audacious Inquiry Releases</name> <url>https://nexus.ainq.com/repository/maven-dadd/</url>
+		<layout>default</layout> </repository> <snapshotRepository> <uniqueVersion>true</uniqueVersion>
+		<id>snapshot</id> <name>Audacious Inquiry Releases</name> <url>https://nexus.ainq.com/repository/maven-dadd/</url>
 		<layout>default</layout> </snapshotRepository> </distributionManagement -->
 </project>
