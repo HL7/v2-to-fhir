@@ -1,0 +1,332 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <name value="HL7 Version 2 Model Elements"/>
+   <title value="HL7 Version 2 Model Elements"/>
+   <status value="draft"/>
+   <experimental value="true"/>
+   <date value="2019-05-05T04:52:26-04:00"/>
+   <publisher value="Health Level 7 International, Inc."/>
+   <contact>
+      <name value="Keith W. Boone"/>
+      <telecom>
+         <system value="email"/>
+         <value value="kboone@ainq.com"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="This code system defines HL7 Version 2 Model Elements used for Version 2 to FHIR Translation&#xa;This subset addresses model elements used for conversion of V2-FHIR Mapping - Segment: OBX[Media]&#xa;Source data can be found at https://confluence.hl7.org/pages/viewpage.action?pageId=40739828"/>
+   <copyright value="Copyright (c) Health Level 7 International, Inc."/>
+   <caseSensitive value="false"/>
+   <compositional value="false"/>
+   <content value="fragment"/>
+   <property>
+      <code value="Low"/>
+      <description value="Low value for cardinality"/>
+      <type value="integer"/>
+   </property>
+   <property>
+      <code value="High"/>
+      <description value="High value for cardinality, set to 2147483647 if unbounded"/>
+      <type value="integer"/>
+   </property>
+   <property>
+      <code value="DataType"/>
+      <description value="The V2 Datatype assigned to this model element"/>
+      <type value="code"/>
+   </property>
+   <concept>
+      <code value="This field doesn't warrant mapping"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Can we tell an image from a video by OBX-2 or is OBX-3 more appropriate?Will there ever be a value other than RP that maps to Media?"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="If the data type is RP, additional mappings to the Attachment data type are possible"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="n/a for a media OBX segment"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="n/a for a media OBX segment"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Most OBXs are likely to have a status of F which likely maps to completed"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="n/a for a media OBX segment"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="No apparent mapping as this is a fairly broad field"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="This isn't an exact mapping, but it seems to be better than Media"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Media"/>
+      <display value="OBX-15 and -16 might combine to a Practitioner resource"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="This might contribute to Media"/>
+      <display value="view"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Would this be better for Media"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="No good mapping, but could it contribute to Media"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Only one operator (0"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Only one operator (0"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="No apparent mapping"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Could be related to security labels"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="No apparent mapping"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="No apparent mapping"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="No apparent mapping"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="No apparent mapping"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+</CodeSystem>

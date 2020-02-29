@@ -1,0 +1,125 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "mHealthADE",
+  "url": "http://hl7.org/fhir/mHealth-ADE/ImplementationGuide/mHealthADE",
+  "version": "0.1.0",
+  "name": "ApplicationDataExchangeAssessmentFrameworkandFunctionalRequirementsforMobileHealth",
+  "title": "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
+  "status": "active",
+  "publisher": "HL7 International",
+  "contact": [
+    {
+      "name": "HL7 Mobile Health Workgroup",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "https://confluence.hl7.org/display/MH/Mobile+Health"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "asdf",
+  "packageId": "mHealthADE",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "acknowledgements.html",
+          "title": "Acknowledgements",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "codingsystemmaps.html",
+          "title": "Codingsystemmaps",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "datatypemaps.html",
+          "title": "Datatypemaps",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "glossary.html",
+          "title": "Glossary",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "implementationconsiderations.html",
+          "title": "Implementationconsiderations",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "mappingguidelines.html",
+          "title": "Mappingguidelines",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "messagemaps.html",
+          "title": "Messagemaps",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "overview.html",
+          "title": "Overview",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "segmentmaps.html",
+          "title": "Segmentmaps",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "testconversions.html",
+          "title": "Testconversions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "validation.html",
+          "title": "Validation",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}

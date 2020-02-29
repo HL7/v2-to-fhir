@@ -1,0 +1,108 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="V2-0123-to-fhir-diagnostic-report-status"/>
+   <version value="1.0"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2019-04-24T00:00:00-04:00"/>
+   <publisher value="Audacious Inquiry"/>
+   <contact>
+      <telecom>
+         <system value="email"/>
+         <value value="kboone@ainq.com"/>
+      </telecom>
+   </contact>
+   <description value="This concept map is used to convert codes from HL7 table 0123 to the FHIR diagnostic-report-statuscodes"/>
+   <copyright value="[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)&#xa;This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).&#xa;It is based on original work by Keith W. Boone at Audacious Inquiry."/>
+   <sourceUri value="http://hl7.org/fhir/v2/0123"/>
+   <targetUri value="http://hl7.org/fhir/diagnostic-report-status"/>
+   <group>
+      <element>
+         <code value="Y"/>
+         <target>
+            <code value="unknown"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="Z"/>
+         <target>
+            <code value="unknown"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="I"/>
+         <target>
+            <code value="registered"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="S"/>
+         <target>
+            <code value="registered"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="A"/>
+         <target>
+            <code value="partial"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="P"/>
+         <target>
+            <code value="partial"/>
+            <equivalence value="wider"/>
+            <comment value="partial in FHIR can be initial, interim or preliminary. Preliminary does exist in STU3)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="O"/>
+         <target>
+            <code value="registered"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="R"/>
+         <target>
+            <code value="partial"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="F"/>
+         <target>
+            <code value="final"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="C"/>
+         <target>
+            <code value="corrected"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="X"/>
+         <target>
+            <code value="cancelled"/>
+         </target>
+      </element>
+   </group>
+</ConceptMap>

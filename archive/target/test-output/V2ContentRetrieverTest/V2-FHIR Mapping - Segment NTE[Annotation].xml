@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD used to support HTML entities in content in Confluence -->
+<div xmlns:ac="http://www.atlassian.com/schema/confluence/4/ac/"
+     xmlns:at="http://www.atlassian.com/schema/confluence/4/at/"
+     xmlns:ri="http://www.atlassian.com/schema/confluence/4/ri/">
+   <p class="auto-cursor-target">v2 Description: The NTE segment  is commonly used for sending notes and comments. The work groups define the meaning of the NTE segments within the context of the messages in their chapters. </p>
+   <p>FHIR Description (Annotation): <span style="color: rgb(51,51,51);">A text note which also contains information about who made the statement and when.</span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">Note that this is a mapping from a v2 segment to a FHIR data type. The Annotation data type is used in a variety of resources and the NTE following a particular segment will need to be mapped to an Annotation-type element in the appropriate resource.</span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">Messages used by:</span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">OML^O01</span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">MDM^T02</span>
+   </p>
+   <h3>
+      <strong>
+         <span style="color: rgb(51,51,51);">Mapping</span>
+      </strong>
+   </h3>
+   <table class="wrapped relative-table" style="width: 100.0%;">
+      <colgroup>
+         <col style="width: 7.13033%;"/>
+         <col style="width: 11.28%;"/>
+         <col style="width: 3.0976%;"/>
+         <col style="width: 9.99416%;"/>
+         <col style="width: 1.69492%;"/>
+         <col style="width: 18.761%;"/>
+         <col style="width: 10.0526%;"/>
+         <col style="width: 9.70193%;"/>
+         <col style="width: 11.5137%;"/>
+         <col style="width: 1.69492%;"/>
+         <col style="width: 15.0789%;"/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td class="highlight-green" colspan="4" data-highlight-colour="green">
+               <strong title="">HL7 V2</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-yellow" colspan="4" data-highlight-colour="yellow">
+               <strong title="">HL7 FHIR</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-blue" data-highlight-colour="blue" rowspan="2">
+               <strong title="">Comments</strong>
+            </td>
+         </tr>
+         <tr>
+            <td class="highlight-green" data-highlight-colour="green">
+               <strong title="">Name</strong>
+            </td>
+            <td class="highlight-green" data-highlight-colour="green">
+               <strong title="">Definition</strong>
+            </td>
+            <td class="highlight-green" data-highlight-colour="green">
+               <strong title="">Data Type</strong>
+            </td>
+            <td class="highlight-green" data-highlight-colour="green">
+               <strong title="">Mapping Rules</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-yellow" data-highlight-colour="yellow">
+               <strong title="">Name</strong>
+            </td>
+            <td class="highlight-yellow" data-highlight-colour="yellow">
+               <strong title="">Definition</strong>
+            </td>
+            <td class="highlight-yellow" data-highlight-colour="yellow">
+               <strong title="">Data Type</strong>
+            </td>
+            <td class="highlight-yellow" data-highlight-colour="yellow">
+               <strong title="">Mapping Rules</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>NTE-01<span>.00.00 - Set ID - NTE</span>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>SI</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <p>
+                  <br/>
+               </p>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>No need to map</td>
+         </tr>
+         <tr>
+            <td>
+               <span>
+                  <span>NTE</span>-0</span>2<span>.00.00 - Source of Comment</span>
+            </td>
+            <td>This field is used when source of comment must be identified.</td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>No apparent mapping</td>
+         </tr>
+         <tr>
+            <td>
+               <span>
+                  <span>NTE</span>-0</span>3<span>.00.00 - <span>Comment</span>
+               </span>
+            </td>
+            <td>This field contains the comment contained in the segment.</td>
+            <td>FT</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Annotation.text</td>
+            <td>The annotation - text content</td>
+            <td>markdown</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <span>
+                  <span>NTE</span>-0</span>4<span>.00.00 - <span>Comment Type</span>
+               </span>
+            </td>
+            <td>This field contains a value to identify the type of comment text being sent in the specific comment record. </td>
+            <td>CWE</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Annotation.#ext-noteType#</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>No apparent mapping</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>
+                  <span>NTE</span>-0</span>5.00.00 - Entered By</td>
+            <td colspan="1">This field contains the identity of the person who actually keyed the comment into the application. It provides an audit trail in case the comment is entered incorrectly and the ancillary department needs to clarify the comment</td>
+            <td colspan="1">XCN</td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <p class="auto-cursor-target">Likely Provenance related. It's not clear if the "entered by" use can always be considered the "author" and put in Annotation.author</p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>NTE</span>-06.00.00 - Entered Date/Time</td>
+            <td colspan="1">This field contains the actual date the comment was keyed into the application</td>
+            <td colspan="1">DTM</td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">Annotation.time</td>
+            <td colspan="1">When the annotation was made</td>
+            <td colspan="1">dateTime</td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">This could also be Provenance related</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <p>
+                  <span>NTE</span>-07.00.00 - Effective Start Date </p>
+            </td>
+            <td colspan="1">This field contains the date the comment becomes or became effective.</td>
+            <td colspan="1">
+               <span>DTM</span>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <span>No apparent mapping</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>
+                  <span>NTE</span>-08.00.00 - Expiration Date</span>
+            </td>
+            <td colspan="1">This field contains the date the comment becomes or became non-effective.</td>
+            <td colspan="1">
+               <span>DTM</span>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <span>No apparent mapping</span>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+</div>

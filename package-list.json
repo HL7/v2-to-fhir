@@ -1,0 +1,24 @@
+{
+  "package-id": "mHealthADE",
+  "title": "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
+  "canonical": "http://hl7.org/fhir/mHealth-ADE",
+  "introduction": "asdf",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://hl7.org/fhir/mHealth-ADE",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "0.1.0",
+      "fhirversion": "4.0.1",
+      "date": "2099-01-01",
+      "desc": "Initial STU ballot (Mmm yyyy Ballot)",
+      "path": "http://hl7.org/fhir/mHealth-ADE",
+      "status": "ballot",
+      "sequence": "STU 1"
+    }
+  ]
+}

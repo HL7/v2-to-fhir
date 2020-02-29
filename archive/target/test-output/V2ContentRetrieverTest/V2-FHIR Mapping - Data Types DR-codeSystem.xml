@@ -1,0 +1,191 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <name value="HL7 Version 2 Model Elements"/>
+   <title value="HL7 Version 2 Model Elements"/>
+   <status value="draft"/>
+   <experimental value="true"/>
+   <date value="2019-05-05T04:52:18-04:00"/>
+   <publisher value="Health Level 7 International, Inc."/>
+   <contact>
+      <name value="Keith W. Boone"/>
+      <telecom>
+         <system value="email"/>
+         <value value="kboone@ainq.com"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="This code system defines HL7 Version 2 Model Elements used for Version 2 to FHIR Translation&#xa;This subset addresses model elements used for conversion of V2-FHIR Mapping - Data Types: DR&#xa;Source data can be found at https://confluence.hl7.org/pages/viewpage.action?pageId=37913897"/>
+   <copyright value="Copyright (c) Health Level 7 International, Inc."/>
+   <caseSensitive value="false"/>
+   <compositional value="false"/>
+   <content value="fragment"/>
+   <property>
+      <code value="Low"/>
+      <description value="Low value for cardinality"/>
+      <type value="integer"/>
+   </property>
+   <property>
+      <code value="High"/>
+      <description value="High value for cardinality, set to 2147483647 if unbounded"/>
+      <type value="integer"/>
+   </property>
+   <property>
+      <code value="DataType"/>
+      <description value="The V2 Datatype assigned to this model element"/>
+      <type value="code"/>
+   </property>
+   <concept>
+      <code value="This element defines the date from which an access restriction commences until the date it is specifically rescinded"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="This field contains the date/time or date/time range of the transaction"/>
+      <display value="To specify a single point in time, only the first component is valued. When the second component is valued, the field specifies a time interval during which the transaction took place"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="The date and time when the specimen was acquired from the source"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="This field contains the date and time that the appointment is requested to begin, in the form of a date/time range"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="This field contains the date range during which assertion of the relationship took place"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="This field contains the period the staff member started and ended membership in the professional organization"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="This field contains the date range when the academic degree program took place"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="This field contains the date range during which the staff member participated in the academic degree program"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="This field contains the date range in which the practitioner started and ended working at the specific organization unit in the specific practicing specialty category"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="This field contains the period during which the staff person started and ended the relationship specified in STF-33 Institution Relationship Type Code"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Begin and end of billing period"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+</CodeSystem>

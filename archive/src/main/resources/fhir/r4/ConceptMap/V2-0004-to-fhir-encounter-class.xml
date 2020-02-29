@@ -1,0 +1,149 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="V2-0004-to-fhir-encounter-class"/>
+   <version value="1.0"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <date value="2019-04-24T00:00:00-04:00"/>
+   <publisher value="Audacious Inquiry"/>
+   <contact>
+      <telecom>
+         <system value="email"/>
+         <value value="kboone@ainq.com"/>
+      </telecom>
+   </contact>
+   <description value="This concept map is used to convert codes from HL7 table 0004 to the FHIR EncounterClass codes"/>
+   <copyright value="[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)&#xa;This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).&#xa;It is based on original work by Keith W. Boone at Audacious Inquiry."/>
+   <sourceUri value="http://hl7.org/fhir/v2/0001"/>
+   <targetUri value="http://hl7.org/fhir/encounter-class"/>
+   <group>
+      <element>
+         <code value="E"/>
+         <target>
+            <code value="emergency"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ER"/>
+         <target>
+            <code value="emergency"/>
+            <comment value="A commonly used code for emergency room"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ED"/>
+         <target>
+            <code value="emergency"/>
+            <comment value="A commonly used code for emergency room"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="EMERGENCY"/>
+         <target>
+            <code value="emergency"/>
+            <comment value="A commonly used code for emergency room"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="I"/>
+         <target>
+            <code value="inpatient"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="INP"/>
+         <target>
+            <code value="inpatient"/>
+            <comment value="A commonly used code for inpatient care"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="INPATIENT"/>
+         <target>
+            <code value="inpatient"/>
+            <comment value="A commonly used code for inpatient care"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="O"/>
+         <target>
+            <code value="outpatient"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OUTPATIENT"/>
+         <target>
+            <code value="outpatient"/>
+            <comment value="A commonly used code for outpatiennt care"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="R"/>
+         <target>
+            <code value="other"/>
+            <comment value="Recurring"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="P"/>
+         <target>
+            <code value="other"/>
+            <comment value="Preadmit"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="B"/>
+         <target>
+            <code value="other"/>
+            <comment value="Obstetrics"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="C"/>
+         <target>
+            <code value="other"/>
+            <comment value="Commercial Account"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="N"/>
+         <target>
+            <code value="unknown"/>
+            <comment value="Not Applicable"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="U"/>
+         <target>
+            <code value="unknown"/>
+         </target>
+      </element>
+   </group>
+</ConceptMap>

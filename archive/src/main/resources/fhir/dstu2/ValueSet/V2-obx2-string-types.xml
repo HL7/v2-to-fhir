@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="V2-obx2-string-types"/>
+	<version value="1.0"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<publisher value="Audacious Inquiry"/>
+	<contact><telecom>
+		<system value="email"/>
+		<value value="kboone@ainq.com"/>
+	</telecom></contact>
+	<date value="2019-03-11"/>
+	<description
+		value="This value set identifies codes in OBX-2 that represent V2 data types used for coded values"/>
+	<copyright value="[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)&#xA;This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).&#xA;It is based on original work by Keith W. Boone at Audacious Inquiry."/>
+	<compose>
+		<include>
+			<system value="http://hl7.org/fhir/v2/0125"/>
+			<concept><code value="FT"/><display value="Formatted Text (display)"/></concept>
+			<concept><code value="ST"/><display value="String Data"/></concept>
+			<concept><code value="TX"/><display value="Text Data (display)"/></concept>
+		</include>
+	</compose>
+</ValueSet>

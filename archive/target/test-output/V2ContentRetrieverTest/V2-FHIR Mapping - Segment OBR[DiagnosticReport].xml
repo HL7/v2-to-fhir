@@ -1,0 +1,2025 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD used to support HTML entities in content in Confluence -->
+<div xmlns:ac="http://www.atlassian.com/schema/confluence/4/ac/"
+     xmlns:at="http://www.atlassian.com/schema/confluence/4/at/"
+     xmlns:ri="http://www.atlassian.com/schema/confluence/4/ri/">
+   <p class="auto-cursor-target">v2 Description: The Observation Request (OBR) segment is used to transmit information specific to an order for a diagnostic study or observation, physical exam, or assessment.</p>
+   <p>
+      <span style="color: rgb(51,51,51);">FHIR Description (DiagnosticReport): The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these.</span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">
+         <br/>
+      </span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">Messages used by:</span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">OML</span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">ORU</span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">Notes:</span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">Because OBR is part of both an order (OML) and a result (ORU) message, the segment may map to either ServiceRequest and/or DiagnosticReport. It can also contribute to a Specimen resource. It also has some overlap with the ORC and SPM segments.</span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">Where an OBR is used to create a DiagnosticReport resource and a ServiceRequest Resource, DiagnosticReport.basedOn should point to the ServiceRequest.</span>
+   </p>
+   <table class="wrapped" style="width: 1593.0px;">
+      <colgroup>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td colspan="5" style="width: 453.0px;">HL7 V2</td>
+            <td rowspan="2" style="width: 73.0px;">
+               <br/>
+            </td>
+            <td colspan="5" style="width: 856.0px;">HL7 FHIR</td>
+            <td rowspan="2" style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">Comments</td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">Name</td>
+            <td style="width: 87.0px;">Definition</td>
+            <td style="width: 80.0px;">DataType</td>
+            <td style="width: 87.0px;">Cardinality</td>
+            <td style="width: 77.0px;">Mapping Rules</td>
+            <td style="width: 470.0px;">Name</td>
+            <td style="width: 171.0px;">Definition</td>
+            <td style="width: 51.0px;">Data Type</td>
+            <td style="width: 87.0px;">Cardinality</td>
+            <td style="width: 77.0px;">Mapping Rules</td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <br/>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-01.00.00 - Set ID – OBR</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">SI</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">N/A</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-02.00.00 - Placer Order Number</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">EI</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <p>DiagnosticReport.identifier where DiagnosticRepor.identifier.type = "PLAC"</p>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">Should the placer ID really be an ID on the DiagnosticReport resource? Is the Filler ID (OBR-3) the report ID?</td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-03.00.00 - Filler Order Number</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">EI</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">DiagnosticReport.identifier where DiagnosticRepor.identifier.type = "FILL"</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-04.00.00 - Universal Service Identifier</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">1..1</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">DiagnosticReport.code</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-05.00.00 - Priority</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-06.00.00 - Requested Date/Time</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-07.00.00 - Observation Date/Time</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">DTM</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <p>DiagnosticReport.effective[x]</p>
+               <p>Can also be part of a Specimen resource (See OBR-to-ServiceRequest mapping)</p>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-08.00.00 - Observation End Date/Time</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">DTM</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <p>DiagnosticReport.effective[x]</p>
+               <p>Can also be part of a Specimen resource (See OBR-to-ServiceRequest mapping)</p>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-09.00.00 - Collection Volume</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CQ</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Specimen resource (See OBR-to-ServiceRequest mapping)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-10.00.00 - Collector Identifier *</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">XCN</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Specimen resource (See OBR-to-ServiceRequest mapping)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-11.00.00 - Specimen Action Code</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">ID</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">G=&gt;Reflex  DiagnosticReport.#partOf# could point back to a parent DiagnosticReport</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-12.00.00 - Danger Code</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Who is doing this?</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-13.00.00 - Relevant Clinical Information</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Specimen resource (See OBR-to-ServiceRequest mapping)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-14.00.00 - Specimen Received Date/Time</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Specimen resource (See OBR-to-ServiceRequest mapping)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-15.00.00 - Specimen Source</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CM</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Specimen resource (See OBR-to-ServiceRequest mapping)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-16.00.00 - Ordering Provider</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">XCN</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-17.00.00 - Order Callback Phone Number</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">XTN</td>
+            <td style="width: 87.0px;">0..*/2</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-18.00.00 - Placer Field 1</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">ST</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-19.00.00 - Placer Field 2</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">ST</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-20.00.00 - Filler Field 1 +</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">ST</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Do we need a extension or DiagnosticReport.#supportingInfo#</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-21.00.00 - Filler Field 2 +</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">ST</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Do we need a extension or DiagnosticReport.#supportingInfo#</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-22.00.00 - Results Rpt/Status Chng – Date/Time +</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">DTM</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">DiagnosticReport.issued</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-23.00.00 - Charge to Practice +</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">MOC</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Who is doing this?</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-24.00.00 - Diagnostic Serv Sect ID</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">ID</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <p>DiagnosticReport.performer (Reference to Organization) or DiagnosticReport.locationPerformed (Reference to Location) or DiagnosticReport.location (Reference to Location)</p>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-25.00.00 - Result Status +</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">ID</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">DiagnosticReport.status</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-26.00.00 - Parent Result +</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">PRL</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Do we need a extension or DiagnosticReport.#supportingInfo# (Reference to Observation)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-27.00.00 - Quantity/Timing</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-28.00.00 - Result Copies To</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">XCN</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-29.00.00 - Parent  Results Observation Identifier</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">EIP</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Do we need a extension or DiagnosticReport.#supportingInfo# (Reference to DiagnosticReport)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-30.00.00 - Transportation Mode</td>
+            <td style="width: 87.0px;">This field identifies how (or whether) to transport a patient, when applicable.</td>
+            <td style="width: 80.0px;">ID</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-31.00.00 - Reason for Study</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-32.00.00 - Principal Result Interpreter +</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">NDL</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">DiagnosticReport.resultsInterpreter (Reference to PractitionerRole where PractitionerRole.code includes an indication of Principle Result Interpreter)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-33.00.00 - Assistant Result Interpreter +</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">NDL</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">DiagnosticReport.resultsInterpreter (Reference to PractitionerRole where PractitionerRole.code includes an indication of Assistant Result Interpreter)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-34.00.00 - Technician +</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">NDL</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">DiagnosticReport.performer (Reference to PractitionerRole where PractitionerRole.code includes an indication of technician)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-35.00.00 - Transcriptionist +</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">NDL</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">DiagnosticReport.performer (Reference to PractitionerRole where PractitionerRole.code includes an indication of transcriptionist) or possibly as a Provenance record</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-36.00.00 - Scheduled Date/Time +</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">DTM</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-37.00.00 - Number of Sample Containers *</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">NM</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Specimen resource (See OBR-to-ServiceRequest mapping)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-38.00.00 - Transport Logistics of Collected Sample *</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Specimen resource (See OBR-to-ServiceRequest mapping)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-39.00.00 - Collector's Comment *</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Specimen resource (See OBR-to-ServiceRequest mapping)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-40.00.00 - Transport Arrangement Responsibility</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-41.00.00 - Transport Arranged</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">ID</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-42.00.00 - Escort Required</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">ID</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-43.00.00 - Planned Patient Transport Comment</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">
+               <span style="color: rgb(23,43,77);">N/A for a DiagnosticReport but there is a separate mapping to ServiceRequest</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-44.00.00 - Procedure Code</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CNE</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Who is doing this?</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-45.00.00 - Procedure Code Modifier</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CNE</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Who is doing this?</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-46.00.00 - Placer Supplemental Service Information</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Who is doing this?</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-47.00.00 - Filler Supplemental Service Information</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Who is doing this?</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-48.00.00 - Medically Necessary Duplicate Procedure Reason</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Who is doing this?</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-49.00.00 - Result Handling</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <p>F - Film-with-patient</p>
+               <p>N -Notify provider when ready</p>
+               <p>A - Alert provider when abnormal</p>
+            </td>
+            <td style="width: 73.0px;">
+               <p>
+                  <br/>
+               </p>
+            </td>
+            <td style="width: 470.0px;">Who is doing this?</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-50.00.00 - Parent Universal Service Identifier</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CWE</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <p>
+                  <br/>
+               </p>
+            </td>
+            <td style="width: 73.0px;">
+               <p>
+                  <br/>
+               </p>
+            </td>
+            <td style="width: 470.0px;">Do we need a extension or DiagnosticReport.#supportingInfo# (Reference to DiagnosticReport)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-51.00.00 - Observation Group ID</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">EI</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Who is doing this?</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-52.00.00 - Parent Observation Group ID</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">EI</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Who is doing this?</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-53.00.00 - Alternate Placer Order Number</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">CX</td>
+            <td style="width: 87.0px;">0..*</td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">DiagnosticReport.identifier where DiagnosticRepor.identifier.type = <span style="color: rgb(23,43,77);">some other value</span>
+            </td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 122.0px;">OBR-54.00.00 - Parent Order</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 80.0px;">EIP</td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 73.0px;">
+               <br/>
+            </td>
+            <td style="width: 470.0px;">Do we need a extension or DiagnosticReport.#supportingInfo# (Reference to DiagnosticReport)</td>
+            <td style="width: 171.0px;">
+               <br/>
+            </td>
+            <td style="width: 51.0px;">
+               <br/>
+            </td>
+            <td style="width: 87.0px;">
+               <br/>
+            </td>
+            <td style="width: 77.0px;">
+               <br/>
+            </td>
+            <td style="width: 29.0px;">
+               <br/>
+            </td>
+            <td style="width: 182.0px;">
+               <br/>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+</div>

@@ -1,0 +1,1758 @@
+{
+  "resourceType": "CodeSystem",
+  "name": "HL7 Version 2 Model Elements",
+  "title": "HL7 Version 2 Model Elements",
+  "status": "draft",
+  "experimental": true,
+  "date": "2019-05-05T04:52:20-04:00",
+  "publisher": "Health Level 7 International, Inc.",
+  "contact": [
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "This code system defines HL7 Version 2 Model Elements used for Version 2 to FHIR Translation\nThis subset addresses model elements used for conversion of V2-FHIR Mapping - Segment: ARV[General]\nSource data can be found at https://confluence.hl7.org/pages/viewpage.action?pageId=39160404",
+  "copyright": "Copyright (c) Health Level 7 International, Inc.",
+  "caseSensitive": false,
+  "compositional": false,
+  "content": "fragment",
+  "property": [
+    {
+      "code": "Low",
+      "description": "Low value for cardinality",
+      "type": "integer"
+    },
+    {
+      "code": "High",
+      "description": "High value for cardinality, set to 2147483647 if unbounded",
+      "type": "integer"
+    },
+    {
+      "code": "DataType",
+      "description": "The V2 Datatype assigned to this model element",
+      "type": "code"
+    }
+  ],
+  "concept": [
+    {
+      "code": "Likely need to use Provenance",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "As of v2",
+      "display": "20 is not populated. Both CWE.6 and CWE.17 may be populated. Receivers should not identify a code based on its position within the tuples (Identifier, Alternate Identifier, or Second Alternate Identifier) or position within a repeating field. Instead, the receiver should always examine the coding System as specified in CWE.12 and/or CWE.20, the \"Coding System\" component or the \"Coding System OID\", for the tuple.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.3 and CWE.14 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The value for this component is 2-16-840",
+      "display": "1.113883.12.#### where  \"####\" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.6 and CWE.17 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The value for this component is 2-16-840",
+      "display": "1.113883.12.#### where  \"####\" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.12 and CWE.20 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Bundle",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "ARV-3 carries policy that directs placement of the policy code on other resources (ie policy influences X resource) and other security labels on resources (ie, policy requires Y security on X resource)",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Resource",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Resource",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Resource",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Resource",
+      "display": "version must populate to first instance of Bundle.meta.security transformed from v2 to FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Bundle",
+      "display": "version must populate to first alternative instance of Bundle.meta.security transformed from v2 to FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "As of v2",
+      "display": "20 is not populated. Both CWE.6 and CWE.17 may be populated. Receivers should not identify a code based on its position within the tuples (Identifier, Alternate Identifier, or Second Alternate Identifier) or position within a repeating field. Instead, the receiver should always examine the coding System as specified in CWE.12 and/or CWE.20, the \"Coding System\" component or the \"Coding System OID\", for the tuple.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.03; if not, use ARV-3.03 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.3 and CWE.14 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.06; if not, use ARV-3.06 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The value for this component is 2-16-840",
+      "display": "1.113883.12.#### where  \"####\" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.6 and CWE.17 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.12; if not, use ARV-3.12 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The value for this component is 2-16-840",
+      "display": "1.113883.12.#### where  \"####\" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.12 and CWE.20 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The particular resource this is added to is determined by ARV-3 and ARV-9",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Bundle",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Bundle",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Bundle",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Bundle",
+      "display": "version must populate to first instance of Bundle.meta.security transformed from v2 to FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Bundle",
+      "display": "version must populate to first alternative instance of Bundle.meta.security transformed from v2 to FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Potential extension for \"rendered text\"?? This could be for the Meta data type or an extension that can be applied to all resources for \"security narrative\"",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "As of v2",
+      "display": "20 is not populated. Both CWE.6 and CWE.17 may be populated. Receivers should not identify a code based on its position within the tuples (Identifier, Alternate Identifier, or Second Alternate Identifier) or position within a repeating field. Instead, the receiver should always examine the coding System as specified in CWE.12 and/or CWE.20, the \"Coding System\" component or the \"Coding System OID\", for the tuple.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.03; if not, use ARV-3.03 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.3 and CWE.14 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.06; if not, use ARV-3.06 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The value for this component is 2-16-840",
+      "display": "1.113883.12.#### where  \"####\" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.6 and CWE.17 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.12; if not, use ARV-3.12 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The value for this component is 2-16-840",
+      "display": "1.113883.12.#### where  \"####\" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.12 and CWE.20 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Is there a more visable place for this human readable content?Could be an extension (see previous comment on a security narrative)This is more geared to being human readable",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This is something that should be developed in FHIRProbably warrants an extension",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This is the \"kitchen sink\" problem of putting multiple concepts in meta",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Bundle",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Bundle",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Bundle",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Bundle",
+      "display": "version must populate to first instance of Bundle.meta.security transformed from v2 to FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Bundle",
+      "display": "version must populate to first alternative instance of Bundle.meta.security transformed from v2 to FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "As of v2",
+      "display": "20 is not populated. Both CWE.6 and CWE.17 may be populated. Receivers should not identify a code based on its position within the tuples (Identifier, Alternate Identifier, or Second Alternate Identifier) or position within a repeating field. Instead, the receiver should always examine the coding System as specified in CWE.12 and/or CWE.20, the \"Coding System\" component or the \"Coding System OID\", for the tuple.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.03; if not, use ARV-3.03 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.3 and CWE.14 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.06; if not, use ARV-3.06 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The value for this component is 2-16-840",
+      "display": "1.113883.12.#### where  \"####\" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.6 and CWE.17 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.12; if not, use ARV-3.12 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The value for this component is 2-16-840",
+      "display": "1.113883.12.#### where  \"####\" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.12 and CWE.20 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "See previous kitchen sink problem",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Bundle",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Bundle",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each alternate identifier, text, and system name will be a separate instance of Bundle",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Bundle",
+      "display": "version must populate to first instance of Bundle.meta.security transformed from v2 to FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Bundle",
+      "display": "version must populate to first alternative instance of Bundle.meta.security transformed from v2 to FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "As of v2",
+      "display": "20 is not populated. Both CWE.6 and CWE.17 may be populated. Receivers should not identify a code based on its position within the tuples (Identifier, Alternate Identifier, or Second Alternate Identifier) or position within a repeating field. Instead, the receiver should always examine the coding System as specified in CWE.12 and/or CWE.20, the \"Coding System\" component or the \"Coding System OID\", for the tuple.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.03; if not, use ARV-3.03 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.3 and CWE.14 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.06; if not, use ARV-3.06 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The value for this component is 2-16-840",
+      "display": "1.113883.12.#### where  \"####\" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.6 and CWE.17 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This would be a lookup against https://www",
+      "display": "html; if found, this would replace value in ARV-3.12; if not, use ARV-3.12 as default",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The value for this component is 2-16-840",
+      "display": "1.113883.12.#### where  \"####\" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This component is required when CWE",
+      "display": "Both CWE.12 and CWE.20 may be populated.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each of these attributes provides information for an integration engine to place the preceeding security tags on the appropriate FHIR resource instances",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Each of these attributes provides information for an integration engine to place the preceeding security tags on the appropriate FHIR resource instances",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    }
+  ]
+}

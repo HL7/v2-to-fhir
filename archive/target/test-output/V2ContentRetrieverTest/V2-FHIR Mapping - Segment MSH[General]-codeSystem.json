@@ -1,0 +1,819 @@
+{
+  "resourceType": "CodeSystem",
+  "name": "HL7 Version 2 Model Elements",
+  "title": "HL7 Version 2 Model Elements",
+  "status": "draft",
+  "experimental": true,
+  "date": "2019-05-05T04:52:21-04:00",
+  "publisher": "Health Level 7 International, Inc.",
+  "contact": [
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "This code system defines HL7 Version 2 Model Elements used for Version 2 to FHIR Translation\nThis subset addresses model elements used for conversion of V2-FHIR Mapping - Segment: MSH[General]\nSource data can be found at https://confluence.hl7.org/pages/viewpage.action?pageId=39160393",
+  "copyright": "Copyright (c) Health Level 7 International, Inc.",
+  "caseSensitive": false,
+  "compositional": false,
+  "content": "fragment",
+  "property": [
+    {
+      "code": "Low",
+      "description": "Low value for cardinality",
+      "type": "integer"
+    },
+    {
+      "code": "High",
+      "description": "High value for cardinality, set to 2147483647 if unbounded",
+      "type": "integer"
+    },
+    {
+      "code": "DataType",
+      "description": "The V2 Datatype assigned to this model element",
+      "type": "code"
+    }
+  ],
+  "concept": [
+    {
+      "code": "Field separators are not used in FHIR",
+      "display": "..",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Encoding characters are not used in FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Example: MSH|^~\\%|LAB|",
+      "display": "If taking Provenance, should have both an instance of the original source (which may include a binary of the full v2 message) as well as an instance of the transformation.  See .  It also may be that depending on how the v2 message is transformed, either into a FHIR message, or a FHIR \"something else\", would yield MessageHeader and/or Provenance for this data.  ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Example: MSH|^~\\%|LAB^2-16-840",
+      "display": "1.113883.3.987.1^ISO|...",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Provenance??",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Example: MSH|^~\\%|LAB^2-16-840",
+      "display": "1.113883.3.987.1^ISO|...",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Use identifier??",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "If not, consider Organization??",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "How do we represent HD and identifiers? Need to work with InM",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Should consider aligning sender/receiver constructs",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "MessageHeader",
+      "display": ".1.  Must be a reachable address.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Need a gForge (#20522) to identifier data type to add the value set subset from HL7 0301 OR clarification on how to populate ",
+      "display": "system when it is a DNS (or other relevant \"types\"), e.g., point to another RFC that defines domain names. And get better clarification between type and system.Note that in messages that include the CLIA# for labs here would fall in the right place here.  However, in non-messages the CLIA # would not be in MessageHeader, but elsewhere.  That needs to be clarified first elsewhere before we can determine what additional guidance to provide.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "https://gforge",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "How deep do we go to get to the \"ISO\" equivalent",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "MessageHeader",
+      "display": "type)???",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Example: MSH",
+      "display": "|RH^2.16.840.1.113883.632.3^ISO|...",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Example: MSH",
+      "display": "|RH^2.16.840.1.113883.632.3^ISO|...",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Example: MSH",
+      "display": "|RH^2.16.840.1.113883.632.3^ISO|...",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Need gForge (#20522) to change MessageHeader",
+      "display": ".1 to 0..1.  Must be a reachable address.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The Bundle",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "See https://chat",
+      "display": "20FHIR/topic/MessageHeader.2Etimestamp for a discussion on this topic.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Depending on vocabulary used, mapping is locally defined",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Set up time with InM",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Do we still care about message structure, or is MessageHeader",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Do we need to define a value set of message definitions to map into?  At some point",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Should MessageDefinition",
+      "display": ".*",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Need to check on zulip whether this acceptable",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Note that as messages switch from V2 to FHIR and the response back from FHIR to V2, the \"mapping engine\" needs to track the actual MSH-10",
+      "display": "00 value and Bundle.identifier value to connect responses correctly.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Would have to agree on how to recognize value set reflecting T and P",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Need to define the code system that would represent T=Test, P=Production, etc",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Need to define the code system that would represent I=Initial, A=Archive, etc",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Note that use MessageHeader",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Need a gForge/zulip (#20523) to create a list of HL7 V2",
+      "display": "g., V2.2 => hl7.messageVersion.v2.2  atlernatively point to https://www.hl7.org/implement/standards/product_brief.cfm?product_id=139.This field would at most go into Provenance either as a reference or the full binary.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Need a gForge/zulip (#20523) to create a list of HL7 V2",
+      "display": "g., V2.2 => hl7.messageVersion.v2.2  atlernatively point to https://www.hl7.org/implement/standards/product_brief.cfm?product_id=139.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "A value set may or need not be present irrespective of other fields",
+      "display": "  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Value set version ID is required if CWE",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Need a gForge/zulip (#20523) to create a list of HL7 V2",
+      "display": "g., V2.2 => hl7.messageVersion.v2.2  atlernatively point to https://www.hl7.org/implement/standards/product_brief.cfm?product_id=139.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Check what LRI/LOI terminology is and use that",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Craig",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Check what LRI/LOI terminology is and use that",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": " We need to investigate how FHIR resources define a character set (if they even do)",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This does only cover the MessageHeader resource",
+      "display": "language valued, then it is assumed to follow MessageHeader.meta.language?? Doesn't seem RESTful, so what is the default for Resource.meta.language?",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "See MSH-18 for same guidance",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Need to support multiple profiles",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "MessageHeader",
+      "display": "type.coding.system) = \"HL70203\"",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "We should see if this should be added to the base resource",
+      "display": "org/#narrow/stream/179188-v2-to.20FHIR/topic/MSH-23.20to.20MessageHeader/near/163382914.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "MessageHeader",
+      "display": "type.coding.system) = \"HL70203\"",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    }
+  ]
+}

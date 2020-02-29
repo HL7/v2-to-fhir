@@ -1,0 +1,29 @@
+{
+  "name": "mHealthADE",
+  "version": "0.1.0",
+  "canonical": "http://hl7.org/fhir/mHealth-ADE",
+  "url": "http://hl7.org/fhir/mHealth-ADE",
+  "title": "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
+  "description": "asdf",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+  },
+  "keywords": [
+    "Mobile",
+    "mHealth",
+    "ADE"
+  ],
+  "language": "en",
+  "author": "HL7 International",
+  "maintainers": [
+    {
+      "name": "HL7 Mobile Health Workgroup",
+      "email": "https://confluence.hl7.org/display/MH/Mobile+Health"
+    },
+    {
+      "name": "Keith W. Boone",
+      "email": "kboone@ainq.com"
+    }
+  ],
+  "license": "CC0-1.0"
+}

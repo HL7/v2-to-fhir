@@ -1,0 +1,124 @@
+{
+	"script": "scripts/ant.xml",
+	"targets": {
+		"onLoad": "onLoad",
+		"onGenerate": "onGenerate"
+	},
+	"_extraTemplates-documentation": "This array of objects identifies additional templates available for generation for different resource types",
+  "extraTemplates": [
+    {
+      "name": "mappings",
+      "description": "Mappings"
+    },
+    {
+      "name": "examples",
+      "description": "Examples"
+    },
+    {
+      "name": "profile-xml",
+      "description": "Profile XML"
+    },
+    {
+      "name": "profile-json",
+      "description": "Profile JSON"
+    },
+    {
+      "name": "profile-ttl",
+      "description": "Profile Turtle"
+    }
+  ],
+	"_pre-process-documentation": "This array of objects indicates data being converted from existing files using scripts to support dependency checking when performing continuous builds",
+	"pre-process": [
+    {
+			"folder": "input/includes",
+			"relativePath": "_includes"
+		}, {
+			"folder": "input/data",
+			"relativePath": "_data"
+		}, {
+			"folder": "input/resourcedocs",
+			"relativePath": "_data"
+		}, {
+			"folder": "input/pagecontent",
+			"relativePath": "_includes",
+      "transform": "template/scripts/processPages.xslt"
+		}, {
+			"folder": "input/pages",
+			"relativePath": "_includes",
+      "transform": "template/scripts/processPages.xslt"
+		}
+	],
+	"defaults": {
+		"_documentation": "this object contains the default publishing policy for different types. Anything not mentioned defaults to true",
+		"Any": {
+			"java": false,
+			"template-base": "template/layouts/layout-instance-base.html",
+			"template-format": "template/layouts/layout-instance-format.html",
+			"base": "{{[type]}}-{{[id]}}.html",
+			"format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html",
+      "list-types" : "CodeSystem|ValueSet"
+    },
+		"example": {
+			"java": false,
+      "template-base": "template/layouts/layout-instance-base.html",
+      "template-format": "template/layouts/layout-instance-format.html",
+        "base": "{{[type]}}-{{[id]}}.html",
+        "format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html"
+		},
+		"ImplementationGuide": {
+			"template-base": "",
+			"template-format": ""
+		},
+		"StructureDefinition:extension": {
+      "template-base": "template/layouts/layout-ext.html",
+      "template-defns": "template/layouts/layout-ext-definitions.html",
+      "template-mappings": "template/layouts/layout-ext-mappings.html",
+      "template-examples": "",
+      "template-profile-xml": "template/layouts/layout-ext-xml.html",
+      "template-profile-json": "template/layouts/layout-ext-json.html",
+      "template-profile-ttl": "template/layouts/layout-ext-ttl.html",
+      "template-format": "",
+      "base": "{{[type]}}-{{[id]}}.html",
+      "defns": "{{[type]}}-{{[id]}}-definitions.html",
+      "mappings": "{{[type]}}-{{[id]}}-mappings.html",
+      "examples": "{{[type]}}-{{[id]}}-examples.html",
+      "profile-xml": "{{[type]}}-{{[id]}}.profile.xml.html",
+      "profile-json": "{{[type]}}-{{[id]}}.profile.json.html",
+      "profile-ttl": "{{[type]}}-{{[id]}}.profile.ttl.html"
+		},
+		"StructureDefinition": {
+			"template-base": "template/layouts/layout-profile.html",
+			"template-defns": "template/layouts/layout-profile-definitions.html",
+			"template-mappings": "template/layouts/layout-profile-mappings.html",
+			"template-examples": "template/layouts/layout-profile-examples.html",
+			"template-profile-xml": "template/layouts/layout-profile-xml.html",
+			"template-profile-json": "template/layouts/layout-profile-json.html",
+			"template-profile-ttl": "template/layouts/layout-profile-ttl.html",
+			"base": "{{[type]}}-{{[id]}}.html",
+			"defns": "{{[type]}}-{{[id]}}-definitions.html",
+			"mappings": "{{[type]}}-{{[id]}}-mappings.html",
+			"examples": "{{[type]}}-{{[id]}}-examples.html",
+			"profile-xml": "{{[type]}}-{{[id]}}.profile.xml.html",
+			"profile-json": "{{[type]}}-{{[id]}}.profile.json.html",
+			"profile-ttl": "{{[type]}}-{{[id]}}.profile.ttl.html"
+		},
+		"CodeSystem": {
+			"template-base": "template/layouts/layout-codesystem.html",
+			"template-format": "template/layouts/layout-instance-format.html",
+			"base": "{{[type]}}-{{[id]}}.html",
+			"format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html"
+		},
+		"ConceptMap": {
+			"template-base": "template/layouts/layout-conceptmap.html",
+			"template-format": "template/layouts/layout-instance-format.html",
+			"base": "{{[type]}}-{{[id]}}.html",
+			"format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html"
+		},
+		"ValueSet": {
+			"template-base": "template/layouts/layout-valueset.html",
+			"template-format": "template/layouts/layout-instance-format.html",
+			"base": "{{[type]}}-{{[id]}}.html",
+			"format": "{{[type]}}-{{[id]}}.{{[fmt]}}.html"
+		}
+	}
+}

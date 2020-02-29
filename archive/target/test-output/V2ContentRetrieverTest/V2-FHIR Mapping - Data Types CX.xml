@@ -1,0 +1,2221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD used to support HTML entities in content in Confluence -->
+<div xmlns:ac="http://www.atlassian.com/schema/confluence/4/ac/"
+     xmlns:at="http://www.atlassian.com/schema/confluence/4/at/"
+     xmlns:ri="http://www.atlassian.com/schema/confluence/4/ri/">
+   <h2>CX - people</h2>
+   <p>The CX data type is used in the following segments for a patient, person or employee ID:</p>
+   <table class="relative-table wrapped" style="width: 90.0709%;">
+      <colgroup>
+         <col style="width: 6.39229%;"/>
+         <col style="width: 7.00525%;"/>
+         <col style="width: 4.64098%;"/>
+         <col style="width: 9.89492%;"/>
+         <col style="width: 52.5394%;"/>
+         <col style="width: 19.5271%;"/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Chapter</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Segment</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Field</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Field Name</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Base Description</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Concept/Comment</strong>
+            </td>
+         </tr>
+         <tr>
+            <td>3</td>
+            <td>PID</td>
+            <td>3</td>
+            <td>Patient Identifier List   </td>
+            <td>This field contains the list of identifiers (one or more) used by the healthcare facility to uniquely identify a patient (e.g., medical record number, billing number, birth registry, national unique individual identifier, etc.).  </td>
+            <td>
+               <p>Patient</p>
+               <p>In previous versions PID-2 and -4 were similar</p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">PID</td>
+            <td colspan="1">21</td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">This field is used, for example, as a link field for newborns.  Typically a patient ID or account number may be used.  This field can contain multiple identifiers for the same mother.  Refer </td>
+            <td colspan="1">Patient (or account) - typically I've seen this be the patient</td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">NK1</td>
+            <td colspan="1">12</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Next of Kin / Associated Parties Employee Number</p>
+            </td>
+            <td colspan="1">This field contains the number that the employer assigns to the employee that is acting as next of kin/associated parties. However, if the contact role is the patient's employer, this field contains the employee number of the patient at their place of employment.  </td>
+            <td colspan="1">Person? Employee ID?</td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">NK1</td>
+            <td colspan="1">33</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Next of Kin/Associated Party's Identifiers</p>
+            </td>
+            <td colspan="1">This field contains the identifiers for the next of kin/associated party, </td>
+            <td colspan="1">Person</td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">MRG</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Prior Patient Identifier List   </td>
+            <td colspan="1">This field contains the prior patient identifier list.  This field contains a list of potential "old" numbers to match. </td>
+            <td colspan="1">
+               <p>Patient</p>
+               <p>
+                  <span>In previous versions MRG-2 and -4 were similar</span>
+               </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">PD1</td>
+            <td colspan="1">10</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Duplicate Patient</p>
+            </td>
+            <td colspan="1">This field indicates that a patient is the same as, or a duplicate of, another patient found on the sending system.  The intent is to be informational only and no action is required by the receiver.  Include the patient identifier if the sender knows an identifier for the patient.  </td>
+            <td colspan="1">Patient</td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">DB1</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Disabled Person Identifier   </td>
+            <td colspan="1">This is the identifier (or identifiers) for the person whose disability information is sent on the segment.</td>
+            <td colspan="1">Person? Patient?</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">GT1</td>
+            <td colspan="1">2</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Guarantor Number</p>
+            </td>
+            <td colspan="1">This field contains the primary identifier, or other identifiers, assigned to the guarantor. </td>
+            <td colspan="1">Person? Could this be an organization or something?</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">GT1</td>
+            <td colspan="1">19</td>
+            <td colspan="1">Guarantor Employee ID Number</td>
+            <td colspan="1">This field contains the guarantor's employee number.  </td>
+            <td colspan="1">
+               <span>Person? Employee ID?</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">IN1</td>
+            <td colspan="1">49</td>
+            <td colspan="1">Insured's ID Number</td>
+            <td colspan="1">This data element contains a healthcare institution's identifiers for the insured. </td>
+            <td colspan="1">
+               <span>Person? Patient?</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">IN2</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Insured's Employee ID</td>
+            <td colspan="1">This field contains the employee ID of the insured.  </td>
+            <td colspan="1">
+               <span>Person? Employee ID?</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">IN2</td>
+            <td colspan="1">61</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Patient Member Number</p>
+            </td>
+            <td colspan="1">This field contains an identifying number assigned by the payor for each individual covered by the insurance policy issued to the insured</td>
+            <td colspan="1">
+               <span>Person? Patient?</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">CSR</td>
+            <td colspan="1">4</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Sponsor Patient ID </p>
+            </td>
+            <td colspan="1">This field contains the main patient identification for the study.  </td>
+            <td colspan="1">Patient</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">CSR</td>
+            <td colspan="1">5</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Alternate Patient ID - CSR</p>
+            </td>
+            <td colspan="1">This field may be the sending application's patient identification.</td>
+            <td colspan="1">
+               <span>Patient</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">15</td>
+            <td colspan="1">ORG</td>
+            <td colspan="1">5</td>
+            <td colspan="1">Practitioner Org Unit Identifier</td>
+            <td colspan="1">This field contains an identification code used by the institution to identify this person at this specific organization unit.  </td>
+            <td colspan="1">
+               <span>Person/Practitioner/Employee ID</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">15</td>
+            <td colspan="1">STF</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Staff Identifier List</td>
+            <td colspan="1">This field contains the list of identifiers (one or more) used by the institution to identify this person.</td>
+            <td colspan="1">
+               <span>Person/Practitioner<span>/Employee ID</span>
+               </span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">SCD</td>
+            <td colspan="1">33</td>
+            <td colspan="1">Patient Identifier List</td>
+            <td colspan="1">The unique identifier associating the patient with the supplies being sterilized. </td>
+            <td colspan="1">
+               <span>Patient</span>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <h2>CX - account/visit</h2>
+   <p>The CX data type is used in the following segments for an account or visit:</p>
+   <table class="relative-table wrapped" style="width: 90.0709%;">
+      <colgroup>
+         <col style="width: 6.39229%;"/>
+         <col style="width: 7.00525%;"/>
+         <col style="width: 4.64098%;"/>
+         <col style="width: 8.669%;"/>
+         <col style="width: 53.5902%;"/>
+         <col style="width: 19.7023%;"/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Chapter</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Segment</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Field</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Field Name</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Base Description</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Concept/Comment</strong>
+            </td>
+         </tr>
+         <tr>
+            <td>3</td>
+            <td>PID</td>
+            <td>18</td>
+            <td>Patient Account Number   </td>
+            <td>This field contains the patient account number assigned by accounting to which all charges, payments, etc., are recorded.  It is used to identify the patient's account.  </td>
+            <td>
+               <p>Account</p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">PV1</td>
+            <td colspan="1">5</td>
+            <td colspan="1">Preadmit Number</td>
+            <td colspan="1">This field uniquely identifies the patient's preâ&#x80;&#x91;admit account.  </td>
+            <td colspan="1">Account</td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">
+               <span>PV1</span>
+            </td>
+            <td colspan="1">19</td>
+            <td colspan="1">Visit Number   </td>
+            <td colspan="1">This field contains the unique number assigned to each patient visit</td>
+            <td colspan="1">Visit</td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">
+               <span>PV1</span>
+            </td>
+            <td colspan="1">50</td>
+            <td colspan="1">Alternate Visit ID</td>
+            <td colspan="1">This field contains the alternative, temporary, or pending optional visit ID number to be used if needed.  Multiple alternate identifiers may be sent. </td>
+            <td colspan="1">Visit</td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">
+               <span>PV1</span>
+            </td>
+            <td colspan="1">54</td>
+            <td colspan="1">Service Episode Identifier</td>
+            <td colspan="1">This field contains the identifier of a Service Episode in or for which the visit occurs.</td>
+            <td colspan="1">Episode</td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">MRG</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Prior Patient Account Number   </td>
+            <td colspan="1">This field contains the prior patient account number.  </td>
+            <td colspan="1">Account</td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">MRG</td>
+            <td colspan="1">5</td>
+            <td colspan="1">Prior Visit Number   </td>
+            <td colspan="1">This field contains the prior visit number.  </td>
+            <td colspan="1">Visit</td>
+         </tr>
+         <tr>
+            <td colspan="1">3</td>
+            <td colspan="1">MRG</td>
+            <td colspan="1">6</td>
+            <td colspan="1">Prior Alternate Visit ID   </td>
+            <td colspan="1">This field contains the prior alternate visit number.  Multiple alternate identifiers may be sent. </td>
+            <td colspan="1">Visit</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">BLG</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Account ID</td>
+            <td colspan="1">This field identifies the account to be billed.  </td>
+            <td colspan="1">Account</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">RQD</td>
+            <td colspan="1">7</td>
+            <td colspan="1">Cost Center Account Number   </td>
+            <td colspan="1">This field contains the general ledger cost center account number associated with a department that may issue or charge for this item.  </td>
+            <td colspan="1">Account</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">PMT</td>
+            <td colspan="1">10</td>
+            <td colspan="1">Payee Bank Account ID</td>
+            <td colspan="1">Id of Payee's Bank account.</td>
+            <td colspan="1">Bank Account</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">PCE</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Cost Center Account Number</td>
+            <td colspan="1">This field would contain the specific general ledger cost center account number associated with a department that may issue or charge for this item.  </td>
+            <td colspan="1">Cost Center Account</td>
+         </tr>
+      </tbody>
+   </table>
+   <h2>CX - other</h2>
+   <p>The CX data type is used in the following segments for other things:</p>
+   <table class="relative-table wrapped">
+      <colgroup>
+         <col style="width: 73.0px;"/>
+         <col style="width: 80.0px;"/>
+         <col style="width: 53.0px;"/>
+         <col style="width: 190.0px;"/>
+         <col style="width: 537.0px;"/>
+         <col style="width: 208.0px;"/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Chapter</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Segment</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Field</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Field Name</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Base Description</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Concept/Comment</strong>
+            </td>
+         </tr>
+         <tr>
+            <td>4</td>
+            <td>ORC</td>
+            <td>33</td>
+            <td>
+               <p align="left" class="AttributeTableBody">Alternate Placer Order Number</p>
+            </td>
+            <td>This field enables a shorter number to be communicated that is unique within other identifiers</td>
+            <td>Order</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">OBR</td>
+            <td colspan="1">53</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Alternate Placer Order Number</p>
+            </td>
+            <td colspan="1">This field enables a shorter number to be communicated that is unique within other identifiers</td>
+            <td colspan="1">Order</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">FT1</td>
+            <td colspan="1">30</td>
+            <td colspan="1">Payment Reference ID</td>
+            <td colspan="1">The payment reference number of the payment medium reported in FT1-7</td>
+            <td colspan="1">Payment</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">
+               <span>FT1</span>
+            </td>
+            <td colspan="1">38</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Referral Number</p>
+            </td>
+            <td colspan="1">This field contains the Referral Number associated with the charge.</td>
+            <td colspan="1">Referral</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">
+               <span>FT1</span>
+            </td>
+            <td colspan="1">39</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Authorization Number</p>
+            </td>
+            <td colspan="1">This field contains an authorization number assigned to the referral charge.</td>
+            <td colspan="1">Authorization number of a referral</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">GT1</td>
+            <td colspan="1">29</td>
+            <td colspan="1">Guarantor Employer ID Number</td>
+            <td colspan="1">
+               <p class="NormalIndented">This is a code that uniquely identifies the guarantor's employer when the employer is a person.  It may be a user-defined code or a code defined by a government agency (Federal Tax ID#).</p>
+            </td>
+            <td colspan="1">Organization?</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">IN1</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Insurance Company ID</td>
+            <td colspan="1">This field contains unique identifiers for the insurance company.  </td>
+            <td colspan="1">
+               <span>Organization?</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">IN1</td>
+            <td colspan="1">10</td>
+            <td colspan="1">Insured's Group Emp ID</td>
+            <td colspan="1">This field holds the group employer ID for the insured's insurance.  </td>
+            <td colspan="1">
+               <span>Organization?</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">IN1</td>
+            <td colspan="1">54</td>
+            <td colspan="1">External Health Plan Identifiers</td>
+            <td colspan="1">This field contains the external Health Plan Identifiers that correspond to the internal Health Plan ID</td>
+            <td colspan="1">Plan</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">IN2</td>
+            <td colspan="1">25</td>
+            <td colspan="1">Payor ID</td>
+            <td colspan="1">Identifies the organization from which reimbursement is expected.  This field can also be used to report the National Health Plan ID.  </td>
+            <td colspan="1">
+               <span>Organization?</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>6</span>
+            </td>
+            <td colspan="1">IN2</td>
+            <td colspan="1">26</td>
+            <td colspan="1">Payor Subscriber ID</td>
+            <td colspan="1">Identifies the specific office within the insurance carrier that is designated as responsible for the claim</td>
+            <td colspan="1">
+               <span>Organization?</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">IN3</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Certification Number</td>
+            <td colspan="1">This field contains the number assigned by the certification agency. </td>
+            <td colspan="1">??</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">SPM</td>
+            <td colspan="1">30</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Accession ID</p>
+            </td>
+            <td colspan="1">This field contains accession identifier(s) associated with the specimen.  </td>
+            <td colspan="1">Specimen</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">SPM</td>
+            <td colspan="1">31</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Other Specimen ID</p>
+            </td>
+            <td colspan="1">This field contains other identifier(s) for the specimen as referenced an application.  </td>
+            <td colspan="1">
+               <span>Specimen</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">IVC</td>
+            <td colspan="1">20</td>
+            <td colspan="1">Cost Center</td>
+            <td colspan="1">Cost centers are organizational units or activities that provide goods and services. In this context, it would be the department which delivered the Service/Product Line Item, e.g., Radiology, Emergency Room</td>
+            <td colspan="1">
+               <span>Organization Unit?</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">PSL</td>
+            <td colspan="1">25</td>
+            <td colspan="1">
+               <span>Cost Center</span>
+            </td>
+            <td colspan="1">Cost centers are organizational units or activities that provide goods and services. In this context, it would be the department which delivered the Service/Product Line Item, e.g., Radiology, Emergency Room.</td>
+            <td colspan="1">
+               <span>Organization Unit?</span>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+   <table class="relative-table wrapped" style="width: 77.8936%;">
+      <colgroup>
+         <col style="width: 10.0775%;"/> 
+         <col style="width: 30.3735%;"/> 
+         <col style="width: 5.5673%;"/> 
+         <col style="width: 5.42636%;"/> 
+         <col style="width: 2.04369%;"/> 
+         <col style="width: 21.494%;"/> 
+         <col style="width: 5.77872%;"/> 
+         <col style="width: 5.5673%;"/>
+         <col style="width: 5.42636%;"/>
+         <col style="width: 2.04369%;"/>
+         <col style="width: 6.20155%;"/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td class="highlight-green"
+                colspan="4"
+                data-highlight-colour="green"
+                style="text-align: center;"
+                title="Background colour : Green">
+               <strong title="">HL7 V2</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-yellow"
+                colspan="4"
+                data-highlight-colour="yellow"
+                style="text-align: center;"
+                title="Background colour : Yellow">
+               <strong title="">HL7 FHIR</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-blue"
+                data-highlight-colour="blue"
+                rowspan="2"
+                title="Background colour : Blue">
+               <strong title="">Comments</strong>
+            </td>
+         </tr>
+         <tr>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">Name</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">Definition</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">DataType</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">Mapping Rules</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Name</strong>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Definition</strong>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Data Type</strong>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Mapping Rules</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.01.00 - ID Number</td>
+            <td>The value of the identifier itself.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.value</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.02.00 - Identifier Check Digit</td>
+            <td>A digit, or digits, exclusive of the identifier in CX.1, calculated by applying an algorithm to all or some of the digits in the number, which may be used to test validity of the non-check-digit identifier.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-checkDigit</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.03. 00 - Check Digit Scheme</td>
+            <td>Contains the code identifying the check digit scheme employed.</td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-checkDigitSheme</td>
+            <td>
+               <br/>
+            </td>
+            <td>code</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.04.00 - Assigning Authority</td>
+            <td>The assigning authority is a unique name of the system (or organization or agency or department) that creates the data. As of v2.7, CX.4 Assigning Authority is required if neither CX.9 nor CX.10 are populated. Best practice is to always send an OID in the Assigning Authority component</td>
+            <td>HD</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.assigner.Organization.??</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.04.01 - Assigning Authority : Namespace ID</td>
+            <td>User-defined table 0300 - Namespace ID is used as the HL7 identifier for the user-defined table of values for this component. </td>
+            <td>IS</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.assigner.??</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.04.02 -  Assigning Authority : Universal ID</td>
+            <td>The HD’s second component, &lt;universal ID (UID), is a string formatted according to the scheme defined by the third component, &lt;universal ID type&gt; (UID type).  The UID is intended to be unique over time with-in the UID type.  It is rigorously defined.  Each UID must belong to one of the specifically enumerated schemes for constructing UID’s (defined by the UID type).  The UID (second component) must follow the syntactic rules of the particular universal identifier scheme (defined by the third component).  Note that these syntactic rules are not defined within HL7 but are defined by the rules of the particular universal identifier scheme (defined by the third component).</td>
+            <td>ST </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.assigner.??</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.04.03 -  Assigning Authority : Universal ID Type</td>
+            <td>The third component governs the interpretation of the second component of the HD.  If the third compo-nent is a known UID refer to HL7 table 0301 - Universal ID type for valid values, then the second compo-nent is a universal ID of that type.</td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.assigner.??</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.05.00 - Identifier Type Code</td>
+            <td>A code corresponding to the type of identifier. As of v2.7, CX.5 Identifier Type Code is required. </td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.type.coding.code</td>
+            <td>
+               <br/>
+            </td>
+            <td>code</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.06.00 - Assigning Facility</td>
+            <td>The place or location identifier where the identifier was first assigned to the patient. This component is not an inherent part of the identifier but rather part of the history of the identifier: as part of this data type, its existence is a convenience for certain intercommunicating systems.</td>
+            <td>HD</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-location.type="Location"</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.06.01 - Assigning Facility : Namespace ID</td>
+            <td>User-defined table 0300 - Namespace ID is used as the HL7 identifier for the user-defined table of values for this component. </td>
+            <td>IS</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-location.type="Location"</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.06.02 -  Assigning Facility : Universal ID</td>
+            <td>The HD’s second component, &lt;universal ID (UID), is a string formatted according to the scheme defined by the third component, &lt;universal ID type&gt; (UID type).  The UID is intended to be unique over time with-in the UID type.  It is rigorously defined.  Each UID must belong to one of the specifically enumerated schemes for constructing UID’s (defined by the UID type).  The UID (second component) must follow the syntactic rules of the particular universal identifier scheme (defined by the third component).  Note that these syntactic rules are not defined within HL7 but are defined by the rules of the particular universal identifier scheme (defined by the third component).</td>
+            <td>ST </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-location.??</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.06.03 -  Assigning Facility : Universal ID Type</td>
+            <td>The third component governs the interpretation of the second component of the HD.  If the third compo-nent is a known UID refer to HL7 table 0301 - Universal ID type for valid values, then the second compo-nent is a universal ID of that type.</td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-location.??</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.07.00 - Effective Date</td>
+            <td>The first date, if known, on which the identifier is valid and active.</td>
+            <td>DT</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.period.start</td>
+            <td>
+               <br/>
+            </td>
+            <td>dateTime</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.08.00 - Expiration Date</td>
+            <td>The last date, if known, on which the identifier is valid and active.</td>
+            <td>DT</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.period.end</td>
+            <td>
+               <br/>
+            </td>
+            <td>dateTime</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.00 - Assigning Jurisdiction</td>
+            <td>The geo-political body that assigned the identifier in component 1. As of v2.7, Assigning Jurisdiction is required if neither CX.4 nor CX.10 are populated. </td>
+            <td>CWE</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-jurisdiction</td>
+            <td>
+               <br/>
+            </td>
+            <td colspan="2">codeableConcept</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.01 - Assigning Jurisdiction : Identifier</td>
+            <td>Sequence of characters (the code) that uniquely identifies the item being referenced by the &lt;text&gt;.  Differ-ent coding schemes will have different elements here.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-jurisdiction.coding.code</td>
+            <td>
+               <br/>
+            </td>
+            <td>code</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.02 - Assigning Jurisdiction : Text</td>
+            <td>Name or description of the item in question.  E.g., myocardial infarction or X-ray impression.  Its data type is string (ST).</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Ext:Identifier.ext-jurisdiction.coding.display</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.03 - Assigning Jurisdiction : Name of Coding System</td>
+            <td>Each coding system is assigned a unique identifier.  This component will serve to identify the coding scheme being used in the identifier component.  The combination of the identifier and name of coding system components will be a unique code for a data item.  </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-jurisdiction.coding.systemName</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.04 - Assigning Jurisdiction : Alternate Identifier</td>
+            <td>Sequence of characters (the code) that uniquely identifies the item being referenced by the &lt;text&gt;.  Differ-ent coding schemes will have different elements here.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-jurisdiction.coding.code</td>
+            <td>
+               <br/>
+            </td>
+            <td>code</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.05 - Assigning Jurisdiction : Alternate Text</td>
+            <td>Name or description of the item in question.  E.g., myocardial infarction or X-ray impression.  Its data type is string (ST).</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-jurisdiction.coding.display</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.06 - Assigning Jurisdiction : Alternate Name of Coding System</td>
+            <td>Each coding system is assigned a unique identifier.  This component will serve to identify the coding scheme being used in the identifier component.  The combination of the identifier and name of coding system components will be a unique code for a data item.  </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-jurisdiction.coding.systemName</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.07 - Assigning Jurisdiction : Coding System Version ID</td>
+            <td>This component carries the version for the coding system identified by components 1-3. If CWE.3 is populated with a value other than HL7nnnn or is of table type user-defined, version ID must be valued with an actual version ID.  If CWE.3 is populated with a value of HL7nnnn and nnnn is of table type HL7, version ID may have an actual value or it may be absent. If version ID is absent, it will be interpreted to have the same value as the HL7 version number in the message header. </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-jurisdiction.coding.version</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.08 - Assigning Jurisdiction : Alternate Coding System Version ID</td>
+            <td>This component carries the version for the coding system identified by components 4-6. Analogous To CWE.7 - Coding System Version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-jurisdiction.coding.version</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.09 - Assigning Jurisdiction : Original Text</td>
+            <td>The text as seen and/or selected by the user who entered the data. Original text can be used in a structured user interface to capture what the user saw as a representation of the code on the data input screen, or in a situation where the user dictates or directly enters text, it is the text entered or uttered by the user. In a situation where the code is assigned sometime after the text was entered, original text is the text or phrase used as the basis for assigning the code.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext.jurisdication.coding.originalText</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.10 - Assigning Jurisdiction : Second Alternate Identifier</td>
+            <td>A sequence of characters that uniquely identifies a second alternate code. Analogous to CWE.1- Identifier. </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-jurisdiction.coding.code</td>
+            <td>
+               <br/>
+            </td>
+            <td>code</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.11 - Assigning Jurisdiction : Second Alternate Text</td>
+            <td>The descriptive or textual name of the alternate identifier. Analogous to CWE.2 - Text. See usage note in section introduction.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Ext:Identifier.jurisdiction.coding.display</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.12 - Assigning Jurisdiction : Name of Second Alternate Coding System</td>
+            <td>Identifies the coding scheme being used in the alternate identifier component. Analogous to CWE.3 Name of Coding System. See usage note in section introduction.<br/> As of v2.7 this component is required when CWE.10 is populated and CWE.20 is not populated. Both CWE.6 and CWE.17 may be populated. Receivers should not identify a code based on its position within the tuples (Identifier, Alternate Identifier, or Second Alternate Identifier) or position within a repeating field. Instead, the receiver should always examine the coding System as specified in CWE.12 and/or CWE.20, the "Coding System" component or the "Coding System OID", for the tuple.</td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.ext-jurisdiction.coding.systemName</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.13 - Assigning Jurisdiction : Second Alternate Coding System Version ID</td>
+            <td>This component carries the version for the coding system identified by components 10-12. Analogous to CWE.7 - Coding System Version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-jurisdiction.coding.version</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.14 - Assigning Jurisdiction : Coding System OID</td>
+            <td>This component contains the ISO Object Identifier (OID) for the coding system or value set named in CWE.3. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. <br/> This component is required when CWE.1 is populated and CWE.3 is not populated. Both CWE.3 and CWE.14 may be populated.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-jurisdiction.coding.system</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.15 - Assigning Jurisdiction : Value Set OID</td>
+            <td>This component contains the ISO Object Identifier (OID) to allow identification of the value set from which the value in CWE.1 is obtained. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined value sets, the OID registered in the HL7 OID registry SHALL be used. <br/> A value set may or need not be present irrespective of other fields. Note that if a code is provided, the meaning of the code must come from the definition of the code in the code system. The meaning of the code SHALL NOT depend on the value set.  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-jurisdiction.coding.valueSetSystem</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.16 - Assigning Jurisdiction : Value Set Version ID</td>
+            <td>This component carries the version for the value set identified by CWE.15. The version is a date. The date is the date/time that the value set being used was published.<br/> Value set version ID is required if CWE.15 is populated.</td>
+            <td>DTM</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-jurisdiction.coding.valueSetVersion</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.17 - Assigning Jurisdiction : Alternate Coding System OID</td>
+            <td>This component contains the ISO Object Identifier (OID) for the coding system or value set named in CWE.6. Analogous to CWE.14 Coding System OID. <br/> The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. <br/> This component is required when CWE.4 is populated and CWE.6 is not populated. Both CWE.6 and CWE.17 may be populated.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-jurisdiction.coding.system</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.18 - Assigning Jurisdiction : Alternate Value Set OID</td>
+            <td>This component contains the ISO Object Identifier (OID) to allow identification of the value set from which the value in CWE.4 is obtained. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined value sets, the OID registered in the HL7 OID registry SHALL be used. <br/> A value set may or need not be present irrespective of other fields. Note that if a code is provided, the meaning of the code must come from the definition of the code in the code system. The meaning of the code SHALL NOT depend on the value set.  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-jurisdiction.coding.valueSetSystem</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.19 - Assigning Jurisdiction : Alternate Value Set Version ID</td>
+            <td>This component carries the version for the value set identified by CWE.18. The version is a date. The date is the date/time that the value set being used was published.<br/> Value set version ID is required if CWE.18 is populated.</td>
+            <td>DTM</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-jurisdiction.coding.valueSetVersion</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.20 - Assigning Jurisdiction : Second Alternate Coding System OID</td>
+            <td>This component contains the ISO Object Identifier (OID) for the coding system or value set named in CWE.12. Analogous to CWE.14 - Coding System OID. <br/> The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. <br/> This component is required when CWE.10 is populated and CWE.12 is not populated. Both CWE.12 and CWE.20 may be populated.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-jurisdiction.coding.system</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.21 - Assigning Jurisdiction : Second Alternate Value Set OID</td>
+            <td>This component contains the ISO Object Identifier (OID) to allow identification of the value set from which the value in CWE.10 is obtained. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined value sets, the OID registered in the HL7 OID registry SHALL be used. <br/> A value set may or need not be present irrespective of other fields. Note that if a code is provided, the meaning of the code must come from the definition of the code in the code system. The meaning of the code SHALL NOT depend on the value set.  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-jurisdiction.coding.valueSetSystem</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.09.22 - Assigning Jurisdiction : Second Alternate Value Set Version ID</td>
+            <td>This component carries the version for the value set identified by CWE.21. The version is a date. The date is the date/time that the value set being used was published.<br/> Value set version ID is required if CWE.21 is populated.</td>
+            <td>DTM</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-jurisdiction.coding.valueSetVersion</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.00 - Assigning Agency or Department</td>
+            <td>The agency or department that assigned the identifier in component 1. As of v2.7, Assigning Agency or Department is required if neither CX.4 nor CX.9 are populated.</td>
+            <td>CWE</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.code</td>
+            <td>
+               <br/>
+            </td>
+            <td>code</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.01 - Assigning Agency or Department : Identifier</td>
+            <td>Sequence of characters (the code) that uniquely identifies the item being referenced by the &lt;text&gt;.  Differ-ent coding schemes will have different elements here.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.display</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.02 - Assigning Agency or Department : Text</td>
+            <td>Name or description of the item in question.  E.g., myocardial infarction or X-ray impression.  Its data type is string (ST).</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.systemName</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.03 - Assigning Agency or Department : Name of Coding System</td>
+            <td>Each coding system is assigned a unique identifier.  This component will serve to identify the coding scheme being used in the identifier component.  The combination of the identifier and name of coding system components will be a unique code for a data item.  </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.code</td>
+            <td>
+               <br/>
+            </td>
+            <td>code</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.04 - Assigning Agency or Department : Alternate Identifier</td>
+            <td>Sequence of characters (the code) that uniquely identifies the item being referenced by the &lt;text&gt;.  Differ-ent coding schemes will have different elements here.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.display</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.05 - Assigning Agency or Department : Alternate Text</td>
+            <td>Name or description of the item in question.  E.g., myocardial infarction or X-ray impression.  Its data type is string (ST).</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.systemName</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.06 - Assigning Agency or Department : Alternate Name of Coding System</td>
+            <td>Each coding system is assigned a unique identifier.  This component will serve to identify the coding scheme being used in the identifier component.  The combination of the identifier and name of coding system components will be a unique code for a data item.  </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.version</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.07 - Assigning Agency or Department : Coding System Version ID</td>
+            <td>This component carries the version for the coding system identified by components 1-3. If CWE.3 is populated with a value other than HL7nnnn or is of table type user-defined, version ID must be valued with an actual version ID.  If CWE.3 is populated with a value of HL7nnnn and nnnn is of table type HL7, version ID may have an actual value or it may be absent. If version ID is absent, it will be interpreted to have the same value as the HL7 version number in the message header. </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.version</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.08 - Assigning Agency or Department : Alternate Coding System Version ID</td>
+            <td>This component carries the version for the coding system identified by components 4-6. Analogous To CWE.7 - Coding System Version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.code</td>
+            <td>
+               <br/>
+            </td>
+            <td>code</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.09 - Assigning Agency or Department : Original Text</td>
+            <td>The text as seen and/or selected by the user who entered the data. Original text can be used in a structured user interface to capture what the user saw as a representation of the code on the data input screen, or in a situation where the user dictates or directly enters text, it is the text entered or uttered by the user. In a situation where the code is assigned sometime after the text was entered, original text is the text or phrase used as the basis for assigning the code.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.display</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.10 - Assigning Agency or Department : Second Alternate Identifier</td>
+            <td>A sequence of characters that uniquely identifies a second alternate code. Analogous to CWE.1- Identifier. </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganizaiton.coding.systemName</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.11 - Assigning Agency or Department : Second Alternate Text</td>
+            <td>The descriptive or textual name of the alternate identifier. Analogous to CWE.2 - Text. See usage note in section introduction.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.version</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.12 - Assigning Agency or Department : Name of Second Alternate Coding System</td>
+            <td>Identifies the coding scheme being used in the alternate identifier component. Analogous to CWE.3 Name of Coding System. See usage note in section introduction.<br/> As of v2.7 this component is required when CWE.10 is populated and CWE.20 is not populated. Both CWE.6 and CWE.17 may be populated. Receivers should not identify a code based on its position within the tuples (Identifier, Alternate Identifier, or Second Alternate Identifier) or position within a repeating field. Instead, the receiver should always examine the coding System as specified in CWE.12 and/or CWE.20, the "Coding System" component or the "Coding System OID", for the tuple.</td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.system</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.13 - Assigning Agency or Department : Second Alternate Coding System Version ID</td>
+            <td>This component carries the version for the coding system identified by components 10-12. Analogous to CWE.7 - Coding System Version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.valueSetSystem</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.14 - Assigning Agency or Department : Coding System OID</td>
+            <td>This component contains the ISO Object Identifier (OID) for the coding system or value set named in CWE.3. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. <br/> This component is required when CWE.1 is populated and CWE.3 is not populated. Both CWE.3 and CWE.14 may be populated.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.valueSetVersion</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.15 - Assigning Agency or Department : Value Set OID</td>
+            <td>This component contains the ISO Object Identifier (OID) to allow identification of the value set from which the value in CWE.1 is obtained. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined value sets, the OID registered in the HL7 OID registry SHALL be used. <br/> A value set may or need not be present irrespective of other fields. Note that if a code is provided, the meaning of the code must come from the definition of the code in the code system. The meaning of the code SHALL NOT depend on the value set.  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.system</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.16 - Assigning Agency or Department : Value Set Version ID</td>
+            <td>This component carries the version for the value set identified by CWE.15. The version is a date. The date is the date/time that the value set being used was published.<br/> Value set version ID is required if CWE.15 is populated.</td>
+            <td>DTM</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.valueSetSystem</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.17 - Assigning Agency or Department : Alternate Coding System OID</td>
+            <td>This component contains the ISO Object Identifier (OID) for the coding system or value set named in CWE.6. Analogous to CWE.14 Coding System OID. <br/> The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. <br/> This component is required when CWE.4 is populated and CWE.6 is not populated. Both CWE.6 and CWE.17 may be populated.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.valueSetVersion</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.18 - Assigning Agency or Department : Alternate Value Set OID</td>
+            <td>This component contains the ISO Object Identifier (OID) to allow identification of the value set from which the value in CWE.4 is obtained. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined value sets, the OID registered in the HL7 OID registry SHALL be used. <br/> A value set may or need not be present irrespective of other fields. Note that if a code is provided, the meaning of the code must come from the definition of the code in the code system. The meaning of the code SHALL NOT depend on the value set.  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.system</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.19 - Assigning Agency or Department : Alternate Value Set Version ID</td>
+            <td>This component carries the version for the value set identified by CWE.18. The version is a date. The date is the date/time that the value set being used was published.<br/> Value set version ID is required if CWE.18 is populated.</td>
+            <td>DTM</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.valueSetSystem</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.20 - Assigning Agency or Department : Second Alternate Coding System OID</td>
+            <td>This component contains the ISO Object Identifier (OID) for the coding system or value set named in CWE.12. Analogous to CWE.14 - Coding System OID. <br/> The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. <br/> This component is required when CWE.10 is populated and CWE.12 is not populated. Both CWE.12 and CWE.20 may be populated.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.valueSetVersion</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.21 - Assigning Agency or Department : Second Alternate Value Set OID</td>
+            <td>This component contains the ISO Object Identifier (OID) to allow identification of the value set from which the value in CWE.10 is obtained. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined value sets, the OID registered in the HL7 OID registry SHALL be used. <br/> A value set may or need not be present irrespective of other fields. Note that if a code is provided, the meaning of the code must come from the definition of the code in the code system. The meaning of the code SHALL NOT depend on the value set.  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.valueSetSystem</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.10.22 - Assigning Agency or Department : Second Alternate Value Set Version ID</td>
+            <td>This component carries the version for the value set identified by CWE.21. The version is a date. The date is the date/time that the value set being used was published.<br/> Value set version ID is required if CWE.21 is populated.</td>
+            <td>DTM</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>identifier.ext-assigningOrganization.coding.valueSetVersion</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.11.00 - Security Check</td>
+            <td>This component is used to communicate a version code that may be assigned to the value given in CX.1 ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CX.12.00 - Security Check Scheme</td>
+            <td>This component is used to transmit information intended to validate the veracity of the supplied identifier or the presenter of the identifier. For example, this component may be used to ensure that the presenter of a credit card is an authorized user of that card.</td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>XYZ</td>
+         </tr>
+      </tbody>
+   </table>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+</div>

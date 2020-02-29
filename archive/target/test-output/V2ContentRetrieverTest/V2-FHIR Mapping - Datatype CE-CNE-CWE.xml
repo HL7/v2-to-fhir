@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD used to support HTML entities in content in Confluence -->
+<div xmlns:ac="http://www.atlassian.com/schema/confluence/4/ac/"
+     xmlns:at="http://www.atlassian.com/schema/confluence/4/at/"
+     xmlns:ri="http://www.atlassian.com/schema/confluence/4/ri/">
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+   <table class="relative-table wrapped" style="width: 1765.0px;">
+      <colgroup>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <th class="highlight-green"
+                colspan="4"
+                data-highlight-colour="green"
+                style="text-align: center;">
+               <h2>
+                  <strong>HL7 V2</strong>
+               </h2>
+            </th>
+            <th>
+               <br/>
+            </th>
+            <th class="highlight-yellow"
+                colspan="4"
+                data-highlight-colour="yellow"
+                style="text-align: center;">
+               <h2>
+                  <strong>HL7 FHIR</strong>
+               </h2>
+            </th>
+            <th colspan="1">
+               <br/>
+            </th>
+            <th class="highlight-blue"
+                data-highlight-colour="blue"
+                style="text-align: center;">
+               <h2>
+                  <strong>Comments</strong>
+               </h2>
+            </th>
+         </tr>
+         <tr>
+            <th class="highlight-green" colspan="1" data-highlight-colour="green">
+               <strong title="">Name</strong>
+            </th>
+            <th class="highlight-green" colspan="1" data-highlight-colour="green">
+               <strong title="">Definition</strong>
+            </th>
+            <th class="highlight-green" colspan="1" data-highlight-colour="green">
+               <strong title="">Type</strong>
+            </th>
+            <th class="highlight-green" colspan="1" data-highlight-colour="green">
+               <strong title="">Mapping Rules</strong>
+            </th>
+            <th colspan="1">
+               <br/>
+            </th>
+            <th class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+               <strong>Name</strong>
+            </th>
+            <th class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+               <strong>Definition</strong>
+            </th>
+            <th class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+               <strong>Data Type</strong>
+            </th>
+            <th class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+               <strong>Mapping Rules</strong>
+            </th>
+            <th colspan="1">
+               <br/>
+            </th>
+            <th colspan="1">
+               <br/>
+            </th>
+         </tr>
+         <tr>
+            <td>CWE.01.00 - Identifier</td>
+            <td>Sequence of characters (the code) that uniquely identifies the item being referenced by the &lt;text&gt;.  Differ-ent coding schemes will have different elements here.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.code</td>
+            <td>A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).</td>
+            <td>code</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <span>CodeableConcept.coding can repeat</span>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.02.00 - Text</td>
+            <td>Name or description of the item in question.  E.g., myocardial infarction or X-ray impression.  Its data type is string (ST).</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.display</td>
+            <td>A representation of the meaning of the code in the system, following the rules of the system.</td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.03.00 - Name of Coding System</td>
+            <td>Each coding system is assigned a unique identifier.  This component will serve to identify the coding scheme being used in the identifier component.  The combination of the identifier and name of coding system components will be a unique code for a data item.  </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.ext-systemName</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.04.00 - Alternate Identifier</td>
+            <td>Sequence of characters (the code) that uniquely identifies the item being referenced by the &lt;text&gt;.  Differ-ent coding schemes will have different elements here.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.code</td>
+            <td>A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).</td>
+            <td>code</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.05.00 - Alternate Text</td>
+            <td>Name or description of the item in question.  E.g., myocardial infarction or X-ray impression.  Its data type is string (ST).</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.display</td>
+            <td>A representation of the meaning of the code in the system, following the rules of the system.</td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.06.00 - Alternate Name of Coding System</td>
+            <td>Each coding system is assigned a unique identifier.  This component will serve to identify the coding scheme being used in the identifier component.  The combination of the identifier and name of coding system components will be a unique code for a data item.  </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.ext-systemName</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.07.00 - Coding System Version ID</td>
+            <td>This component carries the version for the coding system identified by components 1-3. If CWE.3 is populated with a value other than HL7nnnn or is of table type user-defined, version ID must be valued with an actual version ID.  If CWE.3 is populated with a value of HL7nnnn and nnnn is of table type HL7, version ID may have an actual value or it may be absent. If version ID is absent, it will be interpreted to have the same value as the HL7 version number in the message header. </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.version</td>
+            <td>The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.</td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.08.00 - Alternate Coding System Version ID</td>
+            <td>This component carries the version for the coding system identified by components 4-6. Analogous To CWE.7 - Coding System Version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.version</td>
+            <td>The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.</td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.09.00 - Original Text</td>
+            <td>The text as seen and/or selected by the user who entered the data. Original text can be used in a structured user interface to capture what the user saw as a representation of the code on the data input screen, or in a situation where the user dictates or directly enters text, it is the text entered or uttered by the user. In a situation where the code is assigned sometime after the text was entered, original text is the text or phrase used as the basis for assigning the code.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.text</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>The definition of this field is not restricted to original text, but still seems best fit.</td>
+         </tr>
+         <tr>
+            <td>CWE.10.00 - Second Alternate Identifier</td>
+            <td>A sequence of characters that uniquely identifies a second alternate code. Analogous to CWE.1- Identifier. </td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.code</td>
+            <td>A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).</td>
+            <td>code</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.11.00 - Second Alternate Text</td>
+            <td>The descriptive or textual name of the alternate identifier. Analogous to CWE.2 - Text. See usage note in section introduction.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.display</td>
+            <td>A representation of the meaning of the code in the system, following the rules of the system.</td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.12.00 - Name of Second Alternate Coding System</td>
+            <td>Identifies the coding scheme being used in the alternate identifier component. Analogous to CWE.3 Name of Coding System. See usage note in section introduction.<br/> As of v2.7 this component is required when CWE.10 is populated and CWE.20 is not populated. Both CWE.6 and CWE.17 may be populated. Receivers should not identify a code based on its position within the tuples (Identifier, Alternate Identifier, or Second Alternate Identifier) or position within a repeating field. Instead, the receiver should always examine the coding System as specified in CWE.12 and/or CWE.20, the "Coding System" component or the "Coding System OID", for the tuple.</td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.ext-systemName</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.13.00 - Second Alternate Coding System Version ID</td>
+            <td>This component carries the version for the coding system identified by components 10-12. Analogous to CWE.7 - Coding System Version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.version</td>
+            <td>The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.</td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.14.00 - Coding System OID</td>
+            <td>This component contains the ISO Object Identifier (OID) for the coding system or value set named in CWE.3. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. <br/> This component is required when CWE.1 is populated and CWE.3 is not populated. Both CWE.3 and CWE.14 may be populated.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.system</td>
+            <td>The identification of the code system that defines the meaning of the symbol in the code.</td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.14.00 - Coding System OID</td>
+            <td>This component contains the ISO Object Identifier (OID) for the coding system or value set named in CWE.3. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. <br/> This component is required when CWE.1 is populated and CWE.3 is not populated. Both CWE.3 and CWE.14 may be populated.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.system</td>
+            <td>The identification of the code system that defines the meaning of the symbol in the code.</td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.15.00 - Value Set OID</td>
+            <td>This component contains the ISO Object Identifier (OID) to allow identification of the value set from which the value in CWE.1 is obtained. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined value sets, the OID registered in the HL7 OID registry SHALL be used. <br/> A value set may or need not be present irrespective of other fields. Note that if a code is provided, the meaning of the code must come from the definition of the code in the code system. The meaning of the code SHALL NOT depend on the value set.  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.ext-valueSetSystem</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.16.00 - Value Set Version ID</td>
+            <td>This component carries the version for the value set identified by CWE.15. The version is a date. The date is the date/time that the value set being used was published.<br/> Value set version ID is required if CWE.15 is populated.</td>
+            <td>DTM</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.ext-G55valueSetVersion</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.17.00 - Alternate Coding System OID</td>
+            <td>This component contains the ISO Object Identifier (OID) for the coding system or value set named in CWE.6. Analogous to CWE.14 Coding System OID. <br/> The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. <br/> This component is required when CWE.4 is populated and CWE.6 is not populated. Both CWE.6 and CWE.17 may be populated.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.system</td>
+            <td>The identification of the code system that defines the meaning of the symbol in the code.</td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.18.00 - Alternate Value Set OID</td>
+            <td>This component contains the ISO Object Identifier (OID) to allow identification of the value set from which the value in CWE.4 is obtained. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined value sets, the OID registered in the HL7 OID registry SHALL be used. <br/> A value set may or need not be present irrespective of other fields. Note that if a code is provided, the meaning of the code must come from the definition of the code in the code system. The meaning of the code SHALL NOT depend on the value set.  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.ext-valueSetSystem</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.19.00 - Alternate Value Set Version ID</td>
+            <td>This component carries the version for the value set identified by CWE.18. The version is a date. The date is the date/time that the value set being used was published.<br/> Value set version ID is required if CWE.18 is populated.</td>
+            <td>DTM</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.ext-valueSetVersion</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.20.00 - Second Alternate Coding System OID</td>
+            <td>This component contains the ISO Object Identifier (OID) for the coding system or value set named in CWE.12. Analogous to CWE.14 - Coding System OID. <br/> The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined code systems the OID registered in the HL7 OID registry SHALL be used. <br/> This component is required when CWE.10 is populated and CWE.12 is not populated. Both CWE.12 and CWE.20 may be populated.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.system</td>
+            <td>The identification of the code system that defines the meaning of the symbol in the code.</td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.21.00 - Second Alternate Value Set OID</td>
+            <td>This component contains the ISO Object Identifier (OID) to allow identification of the value set from which the value in CWE.10 is obtained. The value for this component is 2.16.840.1.113883.12.#### where  "####" is to be replaced by the HL7 table number in the case of an HL7 defined or user defined table. For externally defined value sets, the OID registered in the HL7 OID registry SHALL be used. <br/> A value set may or need not be present irrespective of other fields. Note that if a code is provided, the meaning of the code must come from the definition of the code in the code system. The meaning of the code SHALL NOT depend on the value set.  Applications SHALL NOT be required to interpret the code in light of the valueSet, and they SHALL NOT reject an instance because of the presence or absence of any or a particular value set/ value set version ID.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.ext-valueSetSystem</td>
+            <td>
+               <br/>
+            </td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>CWE.22.00 - Second Alternate Value Set Version ID</td>
+            <td>This component carries the version for the value set identified by CWE.21. The version is a date. The date is the date/time that the value set being used was published.<br/> Value set version ID is required if CWE.21 is populated.</td>
+            <td>DTM</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>CodeableConcept.coding.ext-valueSetVersion</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+</div>

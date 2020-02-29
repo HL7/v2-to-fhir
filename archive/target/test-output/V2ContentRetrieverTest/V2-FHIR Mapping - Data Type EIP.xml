@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD used to support HTML entities in content in Confluence -->
+<div xmlns:ac="http://www.atlassian.com/schema/confluence/4/ac/"
+     xmlns:at="http://www.atlassian.com/schema/confluence/4/at/"
+     xmlns:ri="http://www.atlassian.com/schema/confluence/4/ri/">
+   <p>
+      <br/>
+   </p>
+   <p>
+      <br/>
+   </p>
+   <table>
+      <colgroup>
+         <col/> 
+         <col/> 
+         <col/> 
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td class="highlight-green"
+                colspan="4"
+                data-highlight-colour="green"
+                style="text-align: center;"
+                title="Background colour : Green">
+               <strong title="">HL7 V2</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-yellow"
+                colspan="4"
+                data-highlight-colour="yellow"
+                style="text-align: center;"
+                title="Background colour : Yellow">
+               <strong title="">HL7 FHIR</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-blue"
+                data-highlight-colour="blue"
+                rowspan="2"
+                title="Background colour : Blue">
+               <strong title="">Comments</strong>
+            </td>
+         </tr>
+         <tr>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">Name</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">Definition</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">DataType</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">Mapping Rules</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Name</strong>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Definition</strong>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Data Type</strong>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Mapping Rules</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EIP.01.00 - Placer Assigned Identifier</td>
+            <td>Specifies an identifier assigned to an entity by the placer system. </td>
+            <td>EI</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EIP.01.01 - Placer Assigned Identifier : Entity Identifier</td>
+            <td>The first component, &lt;entity identifier&gt;, is usually defined to be unique within the series of identifiers created by the &lt;assigning authority&gt;, defined by a hierarchic designator, represented by components 2 through 4. See Section 2.A.33, "HD - hierarchic designator".</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EIP.01.02 - Placer Assigned Identifier : Namespace ID</td>
+            <td>See Section 2.A.33.1, "Namespace ID (IS)" for definition. The component intentionally remains associated with the IS data type in v 2.7.</td>
+            <td>IS</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EIP.01.03 - Placer Assigned Identifier : Universal ID</td>
+            <td>See Section 2.A.33.2, "Universal ID (ST)" for definition.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EIP.01.04 - Placer Assigned Identifier : Universal ID Type</td>
+            <td>See Section 2.A.33.3, "Universal ID Type (ID)," for definition.</td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EIP.02.00 - Filler Assigned Identifier</td>
+            <td>Specifies an identifier assigned to an entity by the filler system. </td>
+            <td>EI</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EIP.02.01 - Filler Assigned Identifier : Entity Identifier</td>
+            <td>The first component, &lt;entity identifier&gt;, is usually defined to be unique within the series of identifiers created by the &lt;assigning authority&gt;, defined by a hierarchic designator, represented by components 2 through 4. See Section 2.A.33, "HD - hierarchic designator".</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EIP.02.02 - Filler Assigned Identifier : Namespace ID</td>
+            <td>See Section 2.A.33.1, "Namespace ID (IS)" for definition. The component intentionally remains associated with the IS data type in v 2.7.</td>
+            <td>IS</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EIP.02.03 - Filler Assigned Identifier : Universal ID</td>
+            <td>See Section 2.A.33.2, "Universal ID (ST)" for definition.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EIP.02.04 - Filler Assigned Identifier : Universal ID Type</td>
+            <td>See Section 2.A.33.3, "Universal ID Type (ID)," for definition.</td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+</div>

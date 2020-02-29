@@ -1,0 +1,77 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+
+
+Questions for Ballot Review
+Mapping Guidelines
+Mapping Outputs
+    Map Index
+        Message Maps
+        Segment Maps
+        Data Type Maps
+        Code System Maps
+    Extensions
+Profiles (question)
+Implementation Considerations
+Validation of Transformations
+Test Message Conversions
+Glossary
+Acknowledgements
+
+
+  <li><a href="toc.html">Table of Contents</a></li>
+    <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">V2 to FHIR<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="introduction.html">Introduction</a></li>
+	  <li><a href="overview.html">Overview</a></li>
+      <li><a href="glossary.html">Glossary</a></li>
+      <li><a href="acknowledgements.html">Acknowledgments</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Mapping<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+          <a href="mappingguidelines.html">Mapping Guidelines</a>
+      </li>
+      <li>
+          <a href="mapindex.html">Map Index</a>
+      </li>
+      <li>
+        <a href="messagemaps.html">Messages</a>
+      </li>
+      <li>
+        <a href="segmentmaps.html">Segments</a>
+      </li>
+      <li>
+        <a href="datatypemaps.html">Data Types</a>
+      </li>
+      <li>
+        <a href="codingsystemmaps.html">Coding Systems</a>
+      </li>
+      <li>
+        <a href="profiles.html">Profiles</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation and Use<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="implementationconsiderations.html">Implementation Considerations</a></li>
+      <li>
+        <a href="validation.html">Validation of Transformations</a>
+      </li>
+      <li>
+        <a href="testconversions.html">Test Message Conversions</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+</ul>

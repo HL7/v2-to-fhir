@@ -1,0 +1,1393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD used to support HTML entities in content in Confluence -->
+<div xmlns:ac="http://www.atlassian.com/schema/confluence/4/ac/"
+     xmlns:at="http://www.atlassian.com/schema/confluence/4/at/"
+     xmlns:ri="http://www.atlassian.com/schema/confluence/4/ri/">
+   <p>The EI data type is used in the following data types and segments for a wide variety of "things" such as orders, products, devices, documents, even segments etc. I imagine most resources that represent these "things" will have an Identifier element that corresponds. We will have to think about how we document flavors of identifiers which are unique fields today (placer/filler, parent IDs, etc) for which the FHIR resources don't have specific concepts.</p>
+   <table class="relative-table wrapped" style="width: 97.8935%;">
+      <colgroup>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+         <col/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Chapter</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Data Type</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Element</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Field Name</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Base Description</strong>
+            </td>
+         </tr>
+         <tr>
+            <td>2</td>
+            <td>EIP</td>
+            <td>1</td>
+            <td>Placer Assigned Identifier </td>
+            <td>Specifies an identifier assigned to an entity by the placer system</td>
+         </tr>
+         <tr>
+            <td colspan="1">2</td>
+            <td colspan="1">EIP</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Filler Assigned Identifier</td>
+            <td colspan="1">Specifies an identifier assigned to an entity by the filler system. </td>
+         </tr>
+         <tr>
+            <td colspan="1">2</td>
+            <td colspan="1">PIP</td>
+            <td colspan="1">5</td>
+            <td colspan="1">Facility</td>
+            <td colspan="1">Specifies the facility in which the institutional privilege is/was valid.</td>
+         </tr>
+         <tr>
+            <td colspan="1">2</td>
+            <td colspan="1">PL</td>
+            <td colspan="1">10</td>
+            <td colspan="1">Comprehensive Location Identifier</td>
+            <td colspan="1">The unique identifier that represents the physical location as a whole without regard for the individual components. This accommodates sites that may have a different method of defining physical units or who may code at a less granular level.</td>
+         </tr>
+         <tr>
+            <td colspan="1">2</td>
+            <td colspan="1">XAD</td>
+            <td colspan="1">23</td>
+            <td colspan="1">Address Identifier </td>
+            <td colspan="1">
+               <p class="NormalIndented">A unique identifier for the address. This component allows an address to be uniquely identified, and enables the linking of a single address to multiple people and contexts. </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">2</td>
+            <td colspan="1">XTN</td>
+            <td colspan="1">17</td>
+            <td colspan="1">Shared Telecommunication Identifier </td>
+            <td colspan="1">
+               <p class="NormalIndented">A unique identifier for the phone number or e-mail address. This component allows a phone number to be uniquely identified, and enables the linking of a single phone number to multiple people and contexts. </p>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+   <table class="relative-table wrapped" style="width: 99.0053%;">
+      <colgroup>
+         <col style="width: 4.31697%;"/>
+         <col style="width: 4.73093%;"/>
+         <col style="width: 3.13424%;"/>
+         <col style="width: 9.6984%;"/>
+         <col style="width: 78.1195%;"/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Chapter</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Segment</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Field</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Field Name</strong>
+            </td>
+            <td class="highlight-red" data-highlight-colour="red">
+               <strong title="">Base Description</strong>
+            </td>
+         </tr>
+         <tr>
+            <td>3</td>
+            <td>IAM</td>
+            <td>7</td>
+            <td>Allergy Unique Identifier   </td>
+            <td>This field contains a value that uniquely identifies a single allergy for a person.  It is unique across all segments and messages for a person.  If a system maintains allergen codes as a unique identifier for a particular allergy, then this field should not be used.</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">ORC</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Placer Order Number </td>
+            <td colspan="1">This field is the placer application's order number</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">ORC</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Filler Order Number</td>
+            <td colspan="1">This field is the order number associated with the filling application</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">ORC</td>
+            <td colspan="1">34</td>
+            <td colspan="1">Order Workflow Profile   </td>
+            <td colspan="1">The Order Workflow Profile references/represents the information necessary to define the workflow variant when that is not fully described through the use of ORC-1 Order Control and  MSH-21 Message Profile. </td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">OBR</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Placer Order Number </td>
+            <td colspan="1">This field is the placer application's order number</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">OBR</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Filler Order Number</td>
+            <td colspan="1">This field is the order number associated with the filling application</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">OBR</td>
+            <td colspan="1">51</td>
+            <td colspan="1">Observation Group ID   </td>
+            <td colspan="1">The Observation Group ID is the identifier assigned by the producer of a result to uniquely identify the results associated with this OBR segment.  The Observation Group ID is intended to remain the same regardless of the change in status to the result (i.e., it is not a snapshot ID).</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">OBR</td>
+            <td colspan="1">52</td>
+            <td colspan="1">Parent Observation Group ID    </td>
+            <td colspan="1">The Parent Observation Group ID field relates this child OBR to its parent OBR segment using the Observation Group ID of the parent result.</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">TQ2</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Related Placer Number   </td>
+            <td colspan="1">The placer numbers of the service request(s) to which this TQ2 segment links the current service request. This field should be populated with the appropriate "Placer number" from the current service request. For orders, the Placer Order Number from ORC-2 is the appropriate "Placer number".</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">TQ2</td>
+            <td colspan="1">4</td>
+            <td colspan="1">Related Filler Number   </td>
+            <td colspan="1">The filler numbers of the service request(s) to which this TQ2 segment links the current service request. This field should be populated with the appropriate "Filler number" from the current service request. For orders, the Filler Order Number from ORC-3 is the appropriate "Filler number". </td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">TQ2</td>
+            <td colspan="1">5</td>
+            <td colspan="1">Related Placer Group Number   </td>
+            <td colspan="1">The placer group numbers of the service request(s) to which this TQ2 segment links the current service request.  This field should be populated with the appropriate "Placer group number" from the current service request. For orders, the Placer Group Number from ORC-4 is the appropriate "Placer group number".</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">IPC</td>
+            <td colspan="1">1</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Accession Identifier</p>
+            </td>
+            <td colspan="1">A workflow-management IDIS generated number that identifies the Filler Order for an Imaging Service (Imaging Service Request).   This identifier corresponds one-to-one to the Order Filler number but is used in internal tracking of the work by the IDIS and in communication between IDIS within the department</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">IPC</td>
+            <td colspan="1">2</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Requested Procedure ID</p>
+            </td>
+            <td colspan="1">This field is the identifier of the Requested Procedure that the workflow management IDIS selected to perform as a part of the order for the imaging service.</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">IPC</td>
+            <td colspan="1">3</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Study Instance UID</p>
+            </td>
+            <td colspan="1">Globally unique identifier assigned by the workflow management IDIS to the Imaging Study under which all images and other DICOM objects produced in the course of the Requested Procedure shall be collected.</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">IPC</td>
+            <td colspan="1">4</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Scheduled Procedure Step ID</p>
+            </td>
+            <td colspan="1">This field is the identifier of a particular Procedure Step (sub-procedure) of the Requested Procedure that the workflow management IDIS selected to perform as a part of the order for imaging service.</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">IPC</td>
+            <td colspan="1">7</td>
+            <td colspan="1">Scheduled Station Name</td>
+            <td colspan="1">This field identifies the instance of the modality resource being requested for the performance of a particular Scheduled Procedure Step</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">BPX</td>
+            <td colspan="1">5</td>
+            <td colspan="1">BC Donation ID   </td>
+            <td colspan="1">The Donation ID is the unique identification number assigned to a blood donation</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">BPX</td>
+            <td colspan="1">10</td>
+            <td colspan="1">CP Lot Number   </td>
+            <td colspan="1">This field identifies the lot number for blood derivatives or commercially supplied items used as accessories to transfusion</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">BPX</td>
+            <td colspan="1">17</td>
+            <td colspan="1">BP Unique ID   </td>
+            <td colspan="1">This field is a unique system-generated number assigned to the blood product to which the message is referring.</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>4</span>
+            </td>
+            <td colspan="1">BTX</td>
+            <td colspan="1">2</td>
+            <td colspan="1">BC Donation ID   </td>
+            <td colspan="1">The donation ID is the unique identification number assigned to a blood donation. </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>4</span>
+            </td>
+            <td colspan="1">BTX</td>
+            <td colspan="1">7</td>
+            <td colspan="1">CP Lot Number   </td>
+            <td colspan="1">This field identifies the lot number for blood derivatives or commercially supplied items used as accessories to transfusion</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>4</span>
+            </td>
+            <td colspan="1">
+               <span>BTX</span>
+            </td>
+            <td colspan="1">20</td>
+            <td colspan="1">BP Unique ID   </td>
+            <td colspan="1">This field is a unique system-generated number assigned to the blood product to which the message is referring</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">DON</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Donation Identification Number</td>
+            <td colspan="1">This field contains a unique identifier, Donation Identification Number (DIN), for the specific donation </td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">DON</td>
+            <td colspan="1">31</td>
+            <td colspan="1">Donation Sample Identifier   </td>
+            <td colspan="1">The sample identifier for the sample collected during a donation for the purpose of testing. This is a field for sample or specimen identifiers.</td>
+         </tr>
+         <tr>
+            <td colspan="1">4</td>
+            <td colspan="1">BUI</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Blood Unit Identifier</td>
+            <td colspan="1">The blood unit identifier is a unique identifier assigned to the particular blood unit in a container</td>
+         </tr>
+         <tr>
+            <td colspan="1">4A</td>
+            <td colspan="1">RXO</td>
+            <td colspan="1">29</td>
+            <td colspan="1">Medication Instance Identifier   </td>
+            <td colspan="1">This field contains a value that uniquely identifies the medication associated with this segment.  At this time, there are no documented use cases for this field in the context of a pharmacy/treatment orders as described in this chapter.  This statement does not preclude the use of RXO-29 in pharmacy messages, but implementers should exercise caution in using this field outside of the Patient Care context until the pharmacy/treatment use cases are established.</td>
+         </tr>
+         <tr>
+            <td colspan="1">4A</td>
+            <td colspan="1">RXO</td>
+            <td colspan="1">30</td>
+            <td colspan="1">Segment Instance Identifier   </td>
+            <td colspan="1">This field contains a value that uniquely identifies this segment across time and messages. At this time, there are no documented use cases for this field in the context of a pharmacy/treatment orders as described in this chapter.  This statement does not preclude the use of RXO-30 in pharmacy messages, but implementers should exercise caution in using this field outside of the Patient Care context until the pharmacy/treatment use cases are established</td>
+         </tr>
+         <tr>
+            <td colspan="1">4A</td>
+            <td colspan="1">RXD</td>
+            <td colspan="1">35</td>
+            <td colspan="1">Dispense Tag Identifier </td>
+            <td colspan="1">This field contains an identifier for the individual product instance for the dispense occurrence. </td>
+         </tr>
+         <tr>
+            <td colspan="1">4A</td>
+            <td colspan="1">RXG</td>
+            <td colspan="1">31</td>
+            <td colspan="1">Give Tag Identifier   </td>
+            <td colspan="1">This field contains an identifier for the individual product instance for the dispense occurrence.  This differs from RXG-25 Give Barcode Identifier in that RXG-25 may include other workflow content or the product at various levels of granularity.  RXG-31 specifically identifies the product instance</td>
+         </tr>
+         <tr>
+            <td colspan="1">4A</td>
+            <td colspan="1">RXA</td>
+            <td colspan="1">29</td>
+            <td colspan="1">Administration Tag Identifier   </td>
+            <td colspan="1">This field contains an identifier for the individual product instance for the dispense occurrence. </td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">FT1</td>
+            <td colspan="1">23</td>
+            <td colspan="1">Filler Order Number   </td>
+            <td colspan="1">This field is used when the billing system is requesting observational reporting justification for a charge.  This is the number used by a filler to uniquely identify a result.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">
+               <span>DG1</span>
+            </td>
+            <td colspan="1">20</td>
+            <td colspan="1">Diagnosis Identifier </td>
+            <td colspan="1">This field contains a value that uniquely identifies a single diagnosis for an encounter. It is unique across all segments and messages for an encounter</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">DG1</td>
+            <td colspan="1">22</td>
+            <td colspan="1">Parent Diagnosis</td>
+            <td colspan="1">This field contains the entity identifier for the parent diagnosis.  This field links the "current" manifestation diagnosis ("*") to the entity identifier of the "parent" etiological diagnosis ("+").</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">PR1</td>
+            <td colspan="1">19</td>
+            <td colspan="1">Procedure Identifier</td>
+            <td colspan="1">This field contains a value that uniquely identifies a single procedure for an encounter. It is unique across all segments and messages for an encounter</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">PR1</td>
+            <td colspan="1">25</td>
+            <td colspan="1">Parent Procedure ID   </td>
+            <td colspan="1">This field contains a procedure ID which points to the procedure group (e.g., complete surgery) in which this instance belongs</td>
+         </tr>
+         <tr>
+            <td colspan="1">6</td>
+            <td colspan="1">ACC</td>
+            <td colspan="1">13</td>
+            <td colspan="1">Accident Identifier   </td>
+            <td colspan="1">This field contains the identifier of the accident report assigned by a jurisdiction that is required in the insurance accident claim. </td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">OBX</td>
+            <td colspan="1">18</td>
+            <td colspan="1">Equipment Instance Identifier</td>
+            <td colspan="1">Retained for backwards compatibility as of v 2.7 only.  This field is now represented through the PRT segment.  This field identifies the Equipment Instance (e.g., Analyzer, Analyzer module, group of Analyzers, etc.) responsible for the production of the observation</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">OBX</td>
+            <td colspan="1">21</td>
+            <td colspan="1">Observation Instance Identifier   </td>
+            <td colspan="1">This field contains a unique identifier for this observation.  This instance identifier is persistent between messages. At this time, there are no documented use cases for this field in the context of messages as described in this chapter.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">SPM</td>
+            <td colspan="1">32</td>
+            <td colspan="1">Shipment ID   </td>
+            <td colspan="1">The shipment identifier is the identifier assigned by the shipment transportation provider that uniquely identifies this shipment from all other shipments by the same provider. </td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">PRT</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Participation Instance ID   </td>
+            <td colspan="1">This field contains a unique identifier of the specific participation record.</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">PRT</td>
+            <td colspan="1">10</td>
+            <td colspan="1">Participation Device   </td>
+            <td colspan="1">Identifier for the device participating</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">PRT</td>
+            <td colspan="1">16</td>
+            <td colspan="1">Participation Device Identifier   </td>
+            <td colspan="1">Provides the U.S. FDA UDI <em>device identifier</em> (DI) element</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">PRT</td>
+            <td colspan="1">21</td>
+            <td colspan="1">Participation Device Donation Identification   </td>
+            <td colspan="1">Identifies a device related to a donation (e.g., whole blood).</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">CSR</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Sponsor Study ID   </td>
+            <td colspan="1">The field contains the universal identifier for the clinical trial</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">CSR</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Alternate Study ID   </td>
+            <td colspan="1">This field contains an alternate identifier that may be used as agreed upon by messaging parties. </td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">CTI</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Sponsor Study ID   </td>
+            <td colspan="1">This field contains the universal identifier for the clinical trial.</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">PES</td>
+            <td colspan="1">5</td>
+            <td colspan="1">Sender Event Identifier   </td>
+            <td colspan="1">The first component of this field contains the product manufacturer's unique alphanumeric identifier for this specific event.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">FAC</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Facility ID</td>
+            <td colspan="1">This field contains the facility identifier</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">SHP</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Shipment ID   </td>
+            <td colspan="1">The shipment id is the identifier assigned by the shipment transportation provider that uniquely identifies this shipment from all other shipments by the same provider. </td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">SHP</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Internal Shipment ID   </td>
+            <td colspan="1">The internal shipment id is an identifier assigned to the shipment by the sender or addressee of the shipment.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">PAC</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Package ID   </td>
+            <td colspan="1">The Package ID uniquely identifies this package from all other packages within its shipment</td>
+         </tr>
+         <tr>
+            <td colspan="1">7</td>
+            <td colspan="1">PAC</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Parent Package ID   </td>
+            <td colspan="1">The parent package id identifies the package which contains this package</td>
+         </tr>
+         <tr>
+            <td colspan="1">8</td>
+            <td colspan="1">OMC</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Segment Unique Key   </td>
+            <td colspan="1">This field contains a unique identifier for one of the multiple repetitions of this segment, to be used in conjunction with the preceding field</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>8</span>
+            </td>
+            <td colspan="1">LCH</td>
+            <td colspan="1">3</td>
+            <td colspan="1">
+               <span>Segment Unique Key   </span>
+            </td>
+            <td colspan="1">This field contains a unique identifier for one of the multiple repetitions of this segment, to be used in conjunction with the preceding field.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>8</span>
+            </td>
+            <td colspan="1">LRL</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Segment Unique Key   </td>
+            <td colspan="1">This field contains a unique identifier for one of the multiple repetitions of this segment, to be used in conjunction with the preceding field.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>8</span>
+            </td>
+            <td colspan="1">CMO</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Sponsor Study ID   </td>
+            <td colspan="1">This field contains the study number established by the study sponsor</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>8</span>
+            </td>
+            <td colspan="1">
+               <span>CMO</span>
+            </td>
+            <td colspan="1">3</td>
+            <td colspan="1">Alternate Study ID   </td>
+            <td colspan="1">This field contains the local or collaborators' cross-referenced study numbers.</td>
+         </tr>
+         <tr>
+            <td colspan="1">9</td>
+            <td colspan="1">CON</td>
+            <td colspan="1">4</td>
+            <td colspan="1">Consent Form Number   </td>
+            <td colspan="1">Uniquely identifies a specific recorded consent.  This may be the number assigned to an electronic consent, or may be the number on a printed consent form</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>9</span>
+            </td>
+            <td colspan="1">TXA</td>
+            <td colspan="1">12</td>
+            <td colspan="1">Unique Document Number   </td>
+            <td colspan="1">This field contains a unique document identification number assigned by the sending system. </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>9</span>
+            </td>
+            <td colspan="1">TXA</td>
+            <td colspan="1">13</td>
+            <td colspan="1">Parent Document Number </td>
+            <td colspan="1">This field contains a document number that identifies the parent document to which this document belongs</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>9</span>
+            </td>
+            <td colspan="1">TXA</td>
+            <td colspan="1">14</td>
+            <td colspan="1">Placer Order Number </td>
+            <td colspan="1">This field is the placer application's order number</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>9</span>
+            </td>
+            <td colspan="1">TXA</td>
+            <td colspan="1">15</td>
+            <td colspan="1">Filler Order Number </td>
+            <td colspan="1">This field is the order number associated with the filling application</td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">ARQ</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Placer Appointment ID</td>
+            <td colspan="1">This field contains placer application's permanent identifier for the appointment request (and the scheduled appointment itself, when confirmed as booked by the filler application).  </td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">ARQ</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Filler Appointment ID </td>
+            <td colspan="1">This field contains the filler application's permanent identifier for the appointment request (and the scheduled appointment itself, when confirmed as a booked slot by the filler application).  </td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">ARQ</td>
+            <td colspan="1">22</td>
+            <td colspan="1">Parent Placer Appointment ID   </td>
+            <td colspan="1">This field relates a child to its parent, when a parent-child relationship exists.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">ARQ</td>
+            <td colspan="1">23</td>
+            <td colspan="1">Parent Filler Appointment ID   </td>
+            <td colspan="1">This field relates a child to its parent, when a parent-child relationship exists.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">ARQ</td>
+            <td colspan="1">24</td>
+            <td colspan="1">Placer Order Number </td>
+            <td colspan="1">This field is the placer application's order number for the order associated with this scheduling request</td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">ARQ</td>
+            <td colspan="1">25</td>
+            <td colspan="1">Filler Order Number   </td>
+            <td colspan="1">This field is the order number assigned by the filler application for the order associated with this scheduling request</td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">SCH</td>
+            <td colspan="1">1</td>
+            <td colspan="1">
+               <span>Placer Appointment ID</span>
+            </td>
+            <td colspan="1">This field contains the placer application's permanent identifier for the appointment request (and the scheduled appointment itself, when it has been confirmed as a booked slot by the filler application).  </td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">SCH</td>
+            <td colspan="1">2</td>
+            <td colspan="1">
+               <span>Filler Appointment ID  </span>
+            </td>
+            <td colspan="1">This field contains the filler application's permanent identifier for the appointment request (and the scheduled appointment itself, when it has been confirmed as a booked slot by the filler application).  </td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">SCH</td>
+            <td colspan="1">23</td>
+            <td colspan="1">
+               <span>Parent Placer Appointment ID   </span>
+            </td>
+            <td colspan="1">This field relates a child to its parent, when a parent-child relationship exists.  It contains the placer application's permanent identifier for the parent of the appointment request.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">SCH</td>
+            <td colspan="1">24</td>
+            <td colspan="1">
+               <span>Parent Filler Appointment ID   </span>
+            </td>
+            <td colspan="1">This field relates a child to its parent, when a parent-child relationship exists.  It contains the filler application's permanent identifier for the parent of the appointment request.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">SCH</td>
+            <td colspan="1">26</td>
+            <td colspan="1">
+               <span>Placer Order Number</span>
+            </td>
+            <td colspan="1">This field is the placer application's order number for the order associated with this scheduling filler application response.</td>
+         </tr>
+         <tr>
+            <td colspan="1">10</td>
+            <td colspan="1">SCH</td>
+            <td colspan="1">27</td>
+            <td colspan="1">
+               <span>Filler Order Number   </span>
+            </td>
+            <td colspan="1">This field is the order number assigned by the filler application for the order associated with this scheduling filler response.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">11</td>
+            <td colspan="1">RF1</td>
+            <td colspan="1">6</td>
+            <td colspan="1">Originating Referral Identifier   </td>
+            <td colspan="1">This field contains the originating application's permanent identifier for the referral.</td>
+         </tr>
+         <tr>
+            <td colspan="1">11</td>
+            <td colspan="1">RF1</td>
+            <td colspan="1">11</td>
+            <td colspan="1">External Referral Identifier</td>
+            <td colspan="1">This field contains an external application's permanent identifier for the referral.  That is, this referral identifier does not belong to the application that originated the referral and assigned the originating referral identifier.</td>
+         </tr>
+         <tr>
+            <td colspan="1">11</td>
+            <td colspan="1">AUT</td>
+            <td colspan="1">6</td>
+            <td colspan="1">Authorization Identifier   </td>
+            <td colspan="1">This field contains the coverage application's permanent identifier assigned to track the authorization and all related billing documents</td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">GOL</td>
+            <td colspan="1">4</td>
+            <td colspan="1">Goal Instance ID   </td>
+            <td colspan="1">This field contains the unique identifier assigned by an initiating system to this instance of the goal. It is required that the value in this field be unique over time.  This instance ID identifies a specific instance for a specific patient and is unique across all patients.  </td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">GOL</td>
+            <td colspan="1">5</td>
+            <td colspan="1">Episode of Care ID   </td>
+            <td colspan="1">This field uniquely identifies the episode of care to which this goal applies. Based on application use, this field is required to be unique over time.</td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">PRB</td>
+            <td colspan="1">4</td>
+            <td colspan="1">Problem Instance ID   </td>
+            <td colspan="1">
+               <p class="NormalIndented">This field contains the identifier assigned by an initiating system to an instance of a problem. It is required that this value remain unique over time.  This instance ID identifies a specific instance for a specific patient and is unique across all patients.  </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">
+               <span>PRB</span>
+            </td>
+            <td colspan="1">5</td>
+            <td colspan="1">Episode of Care ID   </td>
+            <td colspan="1">
+               <span>This field uniquely identifies the episode of care to which this problem applies. </span>
+               <span>Based on application use, this field is required to be unique over time.</span>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>12</span>
+            </td>
+            <td colspan="1">PTH</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Pathway Instance ID   </td>
+            <td colspan="1">
+               <p class="NormalIndented">This field contains a value generated by the originating application that represents an associated order placer group number, or other unique identifier assigned to the grouping of pathway directives. It is required that this value remain unique over time.  This instance ID identifies a specific instance for a specific patient and is unique across all patients. </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>12</span>
+            </td>
+            <td colspan="1">VAR</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Variance Instance ID</td>
+            <td colspan="1">This field contains the unique identifier of the specific variance record.</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>12</span>
+            </td>
+            <td colspan="1">REL</td>
+            <td colspan="1">3</td>
+            <td colspan="1">This Relationship Instance Identifier   </td>
+            <td colspan="1">This field contains the instance identifier of this relationship</td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">REL</td>
+            <td colspan="1">4</td>
+            <td colspan="1">Source Information Instance Identifier</td>
+            <td colspan="1">This field contains the Instance ID of the Source Segment</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>12</span>
+            </td>
+            <td colspan="1">
+               <span>REL</span>
+            </td>
+            <td colspan="1">5</td>
+            <td colspan="1">Target Information Instance Identifier   </td>
+            <td colspan="1">This field contains the Instance ID of the Target Segment</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>12</span>
+            </td>
+            <td colspan="1">
+               <span>REL</span>
+            </td>
+            <td colspan="1">6</td>
+            <td colspan="1">Asserting Entity Instance ID</td>
+            <td colspan="1">This field contains the Instance ID of the Person or Organization that asserted the relationship</td>
+         </tr>
+         <tr>
+            <td colspan="1">13</td>
+            <td colspan="1">EQU</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Equipment Instance Identifier   </td>
+            <td colspan="1">This field identifies the equipment.  This is the identifier from an institution's master list of equipment. The &lt;namespace ID&gt; identifies the institution.</td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">SAC</td>
+            <td colspan="1">1</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">External Accession Identifier</p>
+            </td>
+            <td colspan="1">
+               <p class="NormalIndented">This field identifies the laboratory accession. This identifier is assigned by the external laboratory information system.</p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">SAC</td>
+            <td colspan="1">2</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Accession Identifier</p>
+            </td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">This field identifies the laboratory accession. This identifier is assigned by the information system of the laboratory performing the tests.</p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">SAC</td>
+            <td colspan="1">3</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Container Identifier</p>
+            </td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">This field identifies the container. This field is the container's unique identifier assigned by the corresponding equipment</p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">SAC</td>
+            <td colspan="1">4</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Primary (Parent) Container Identifier</p>
+            </td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">If this field is filled in, it identifies the primary container from which this specimen came. For primary samples this field is empty; for aliquot samples this field should contain the identifier of primary container</p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">SAC</td>
+            <td colspan="1">5</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Equipment Container Identifier</p>
+            </td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">This field identifies the container in a particular device </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">SAC</td>
+            <td colspan="1">10</td>
+            <td colspan="1">Carrier Identifier</td>
+            <td colspan="1">This field identifies the carrier. It is the ID (e.g., number or bar code) of the carrier where the container (e.g., tube) is located.</td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">SAC</td>
+            <td colspan="1">13</td>
+            <td colspan="1">Tray Identifier   </td>
+            <td colspan="1">This field identifies the tray identifier (e.g., a number of a tray or a bar code on the tray) where the container carrier is located</td>
+         </tr>
+         <tr>
+            <td colspan="1">12</td>
+            <td colspan="1">TCC</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Equipment Test Application Identifier</td>
+            <td colspan="1">This field identifies the test application code assigned by the manufacturer of the equipment or reagents and associated with performing of the particular test specified by the Universal Test Identifier.</td>
+         </tr>
+         <tr>
+            <td colspan="1">15</td>
+            <td colspan="1">CER</td>
+            <td colspan="1">12</td>
+            <td colspan="1">Subject ID</td>
+            <td colspan="1">This field expresses the identifier of the certificate's subject as used by the certifying body. </td>
+         </tr>
+         <tr>
+            <td colspan="1">15</td>
+            <td colspan="1">ROL</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Role instance ID</td>
+            <td colspan="1">This field contains a unique identifier of the specific role record</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">IVC</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Provider Invoice Number</td>
+            <td colspan="1">Unique Invoice Number assigned by the Provider Application</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">IVC</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Payer Invoice Number   </td>
+            <td colspan="1">Unique Invoice Number assigned by the Payer Application</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">IVC</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Contract/Agreement Number   </td>
+            <td colspan="1">Contract/agreement number issued by Payer which must be specified in some circumstances by the Provider</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>16</span>
+            </td>
+            <td colspan="1">PSS</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Provider Product/Service Section Number</td>
+            <td colspan="1">Unique Product/Service Section Number assigned by the Provider Application</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>16</span>
+            </td>
+            <td colspan="1">
+               <span>PSS</span>
+            </td>
+            <td colspan="1">2</td>
+            <td colspan="1">Payer Product/Service Section Number</td>
+            <td colspan="1">Unique Product/Service Section Number assigned by the Payer Application.</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>16</span>
+            </td>
+            <td colspan="1">PSG</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Provider Product/Service Group Number   </td>
+            <td colspan="1">Unique Product/Service Group Number assigned by the Provider Application</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>16</span>
+            </td>
+            <td colspan="1">PSG</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Payer Product/Service Group Number   </td>
+            <td colspan="1">Unique Product/Service Group Number assigned by the Payer Application</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>16</span>
+            </td>
+            <td colspan="1">PSL</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Provider Product/Service Line Item Number</td>
+            <td colspan="1">Unique Product/Service Line Item Number assigned by the Provider Application</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">PSL</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Payer Product/Service Line Item Number   </td>
+            <td colspan="1">Unique Product/Service Line Item Number assigned by the Payer Application</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">PSL</td>
+            <td colspan="1">4</td>
+            <td colspan="1">Provider Tracking ID   </td>
+            <td colspan="1">Identifier for this Product/Service Line Item assigned by the Provider Application. This will be echoed on all interactions between participants for this Product/Service Line Item</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">PSL</td>
+            <td colspan="1">5</td>
+            <td colspan="1">Payer Tracking ID   </td>
+            <td colspan="1">Identifier for this Product/Service Line Item assigned by the Payer Application. This will be echoed on all interactions between participants for this Product/Service Line Item</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">PSL</td>
+            <td colspan="1">19</td>
+            <td colspan="1">Health Document Reference Identifier   </td>
+            <td colspan="1">Health Documents (electronic or paper) that support this Product/Service Line Item</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">ADJ</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Provider Adjustment Number    </td>
+            <td colspan="1">Unique Adjustment Number assigned by the Provider Application</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">ADJ</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Payer Adjustment Number</td>
+            <td colspan="1">Unique Adjustment Number assigned by the Payer Application</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">ADJ</td>
+            <td colspan="1">12</td>
+            <td colspan="1">Provider Adjustment Number Cross Reference   </td>
+            <td colspan="1">Unique Provider Adjustment Number assigned by the Provider Application that is referenced by this Payer Adjustment</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">ADJ</td>
+            <td colspan="1">13</td>
+            <td colspan="1">Provider Product/Service Line Item Number Cross Reference   </td>
+            <td colspan="1">Unique Provider Product/Service Line Item Number assigned by the Provider Application that is referenced by this Payer Adjustment; used for groups with multiple line items that need to be singled out by a Payer Adjustment</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">PMT</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Payment/Remittance Advice Number   </td>
+            <td colspan="1">Unique Payment/Remittance Advice number for the sending Network Application ID</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">PMT</td>
+            <td colspan="1">7</td>
+            <td colspan="1">Check Number    </td>
+            <td colspan="1">Unique check number from the Payer's application system.</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">IPR</td>
+            <td colspan="1">1</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">IPR Identifier</p>
+            </td>
+            <td colspan="1">Unique IPR Number assigned by the Payer Application</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">IPR</td>
+            <td colspan="1">2</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Provider Cross Reference Identifier</p>
+            </td>
+            <td colspan="1">Cross reference to Provider Product/Service Group Number or Provider Product/Service Line Item Number from original Invoice</td>
+         </tr>
+         <tr>
+            <td colspan="1">16</td>
+            <td colspan="1">IPR</td>
+            <td colspan="1">3</td>
+            <td colspan="1">
+               <p align="left" class="AttributeTableBody">Payer Cross Reference Identifier</p>
+            </td>
+            <td colspan="1">
+               <p class="NormalIndented">Cross reference to Payer Product/Service Group Number or Payer Product/Service Line Item Number from original Invoice.</p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>17</span>
+            </td>
+            <td colspan="1">ITM</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Item Identifier   </td>
+            <td colspan="1">The Item Identifier is a unique code assigned to the material item by the Item Inventory Master catalog software application to identify the item</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>17</span>
+            </td>
+            <td colspan="1">ITM</td>
+            <td colspan="1">7</td>
+            <td colspan="1">Manufacturer Identifier   </td>
+            <td colspan="1">This field identifies the identifying code of the manufacturer of the item</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>17</span>
+            </td>
+            <td colspan="1">ITM</td>
+            <td colspan="1">25</td>
+            <td colspan="1">Item Set Identifier   </td>
+            <td colspan="1">The Item Identifier is a unique code assigned to the material item by the Item Inventory Master catalog software application to identify the item.</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">ITM</td>
+            <td colspan="1">32</td>
+            <td colspan="1">Material Safety Data Sheet Number   </td>
+            <td colspan="1">The Material Safety Data Sheet Number is the manufacturer's identification number for the Material Saftey Data Sheet (if one exists for the item)</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>17</span>
+            </td>
+            <td colspan="1">VND</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Vendor Identifier   </td>
+            <td colspan="1">This field contains the identifier of the vendor in the system</td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <span>17</span>
+            </td>
+            <td colspan="1">VND</td>
+            <td colspan="1">4</td>
+            <td colspan="1">Vendor Catalog Number   </td>
+            <td colspan="1">This field contains the catalog number assigned to the item by a purchasing vendor</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">IVT</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Inventory Location Identifier   </td>
+            <td colspan="1">This field contains the code identifying an inventory supply location that stocks or purchases this item</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">IVT</td>
+            <td colspan="1">4</td>
+            <td colspan="1">Source Location Identifier   </td>
+            <td colspan="1">This field contains the code identifying the source location that purchases and stocks items in addition to filling supply requests for the location specified in IVT-2, Inventory Location Identifier</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">IVT</td>
+            <td colspan="1">7</td>
+            <td colspan="1">Bin Location Identifier</td>
+            <td colspan="1">A unique code assigned to a bin location located within the inventory location in IVT-2, where the inventory supply item may be stored</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">IVT</td>
+            <td colspan="1">10</td>
+            <td colspan="1">Default Inventory Asset Account   </td>
+            <td colspan="1">This field contains the general ledger number for the default inventory asset account used in journal transactions associated with items stored in this inventory location</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">IVT</td>
+            <td colspan="1">19</td>
+            <td colspan="1">Substitute Item Identifier   </td>
+            <td colspan="1">The substitute item is an item that is recommended as a substitute for the corresponding item in ITM-1.</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">IVT</td>
+            <td colspan="1">20</td>
+            <td colspan="1">Latex-Free Substitute Item Identifier   </td>
+            <td colspan="1">The latex-free substitute item is an item that is latex-free, recommended as a substitute for the corresponding item in the ITM-1 segment when a latex-free item is needed</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">SCP</td>
+            <td colspan="1">4</td>
+            <td colspan="1">Device Number   </td>
+            <td colspan="1">The number of the device</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">SLT</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Device Number</td>
+            <td colspan="1">The unique identifier of the device </td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">SLT</td>
+            <td colspan="1">3</td>
+            <td colspan="1">Lot Number   </td>
+            <td colspan="1">A unique number associated with an instance of a sterilization/decontamination cycle assigned by the instrument-tracking system</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">SLT</td>
+            <td colspan="1">4</td>
+            <td colspan="1">Item Identifier   </td>
+            <td colspan="1">The Item Identifier is a unique code assigned to the material item by the Instrument-tracking software application to identify the item being sterilized or decontaminated</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">SDD</td>
+            <td colspan="1">1</td>
+            <td colspan="1">Lot Number   </td>
+            <td colspan="1">A unique number associated with an instance of a sterilization/decontamination cycle assigned by the instrument-tracking system</td>
+         </tr>
+         <tr>
+            <td colspan="1">17</td>
+            <td colspan="1">SDD</td>
+            <td colspan="1">2</td>
+            <td colspan="1">Device Number   </td>
+            <td colspan="1">The number of the device </td>
+         </tr>
+      </tbody>
+   </table>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+   <table class="wrapped">
+      <colgroup>
+         <col/> 
+         <col/> 
+         <col/> 
+         <col/> 
+         <col/> 
+         <col/> 
+         <col/> 
+         <col/> 
+         <col/>
+         <col/>
+         <col/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td class="highlight-green"
+                colspan="4"
+                data-highlight-colour="green"
+                style="text-align: center;"
+                title="Background colour : Green">
+               <strong title="">HL7 V2</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-yellow"
+                colspan="4"
+                data-highlight-colour="yellow"
+                style="text-align: center;"
+                title="Background colour : Yellow">
+               <strong title="">HL7 FHIR</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-blue"
+                data-highlight-colour="blue"
+                rowspan="2"
+                title="Background colour : Blue">
+               <strong title="">Comments</strong>
+            </td>
+         </tr>
+         <tr>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">Name</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">Definition</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">DataType</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                title="Background colour : Green">
+               <strong title="">Mapping Rules</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Name</strong>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Definition</strong>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Data Type</strong>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                title="Background colour : Yellow">
+               <strong title="">Mapping Rules</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EI.01.00 - Entity Identifier</td>
+            <td>The first component, &lt;entity identifier&gt;, is usually defined to be unique within the series of identifiers created by the &lt;assigning authority&gt;, defined by a hierarchic designator, represented by components 2 through 4. See Section 2.A.33, "HD - hierarchic designator".</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.value</td>
+            <td>
+               <br/>
+            </td>
+            <td>string</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EI.02.00 - Namespace ID</td>
+            <td>See Section 2.A.33.1, "Namespace ID (IS)" for definition. The component intentionally remains associated with the IS data type in v 2.7.</td>
+            <td>IS</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.assigner.??</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td>EI.03.00 - Universal ID</td>
+            <td>See Section 2.A.33.2, "Universal ID (ST)" for definition.</td>
+            <td>ST</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Identifier.system</td>
+            <td>The namespace for the identifier value</td>
+            <td>uri</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>Works for OIDs but I’m not sure about other ID types</td>
+         </tr>
+         <tr>
+            <td>EI.04.00 - Universal ID Type</td>
+            <td>See Section 2.A.33.3, "Universal ID Type (ID)," for definition.</td>
+            <td>ID</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>??</td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+</div>

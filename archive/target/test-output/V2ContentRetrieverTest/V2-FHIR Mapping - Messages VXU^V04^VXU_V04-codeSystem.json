@@ -1,0 +1,691 @@
+{
+  "resourceType": "CodeSystem",
+  "name": "HL7 Version 2 Model Elements",
+  "title": "HL7 Version 2 Model Elements",
+  "status": "draft",
+  "experimental": true,
+  "date": "2019-05-05T01:16:47-04:00",
+  "publisher": "Health Level 7 International, Inc.",
+  "contact": [
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "This code system defines HL7 Version 2 Model Elements used for Version 2 to FHIR Translation\nThis subset addresses model elements used for conversion of V2-FHIR Mapping - Messages: VXU^V04^VXU_V04",
+  "copyright": "Copyright (c) Health Level 7 International, Inc.",
+  "caseSensitive": false,
+  "compositional": false,
+  "content": "fragment",
+  "property": [
+    {
+      "code": "Low",
+      "description": "Low value for cardinality",
+      "type": "integer"
+    },
+    {
+      "code": "High",
+      "description": "High value for cardinality, set to 2147483647 if unbounded",
+      "type": "integer"
+    },
+    {
+      "code": "DataType",
+      "description": "The V2 Datatype assigned to this model element",
+      "type": "code"
+    }
+  ],
+  "concept": [
+    {
+      "code": "MSH-0",
+      "definition": "Message Header Segment",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "[{ SFT }]-0",
+      "definition": "Software",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "[  UAC  ]-0",
+      "definition": "User Authentication Credential",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "PID-0",
+      "definition": "Patient Identification Segment",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "[  PD1  ]-0",
+      "definition": "Additional Demographics",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "[{ NK1 }]-0",
+      "definition": "Next of Kin/Associated Parties",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "[{ ARV }]-0",
+      "definition": "Access Restrictions",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "[ -0",
+      "definition": "--- PATIENT_VISIT begin",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "      PV1-0",
+      "definition": "Patient Visit",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "   [  PV2  ]-0",
+      "definition": "Patient Visit – Additional Info",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "   [{ ARV }]-0",
+      "definition": "Access Restrictions",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "]-0",
+      "definition": "--- PATIENT_VISIT end",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "[{ GT1 }]-0",
+      "definition": "Guarantor",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "[{-0",
+      "definition": "--- INSURANCE begin",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "      IN1-0",
+      "definition": "Insurance",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "   [  IN2  ]-0",
+      "definition": "Insurance Additional Information",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "   [  IN3  ]-0",
+      "definition": "Insurance Additional Information, Certification",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "}]-0",
+      "definition": "--- INSURANCE end",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "[{ -0",
+      "definition": "--- PERSON_OBSERVATION begin",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "      OBX-0",
+      "definition": "Observation/Result",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "   [{ PRT }]-0",
+      "definition": "Participation (for Observation)",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "   [{ NTE }]-0",
+      "definition": "Notes (Regarding Patient Observation)",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "}]-0",
+      "definition": "--- PERSON_OBSERVATION end",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "[{-0",
+      "definition": "--- ORDER begin",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "      ORC-0",
+      "definition": "Common Order",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "    [{PRT}]-0",
+      "definition": "Participation (for ORC)",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "   [{-0",
+      "definition": "--- TIMING begin",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "         TQ1-0",
+      "definition": "Timing/Quantity",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "      [{ TQ2 }]-0",
+      "definition": "Timing/Quantity Order Sequence",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "   }]-0",
+      "definition": "--- TIMING end",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "      RXA-0",
+      "definition": "Pharmacy Administration Segment",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "   [  RXR  ]-0",
+      "definition": "Pharmacy Route",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "   [{-0",
+      "definition": "--- OBSERVATION begin",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "         OBX-0",
+      "definition": "Observation/Result",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "      [{ PRT }]-0",
+      "definition": "Participation (for Observation)",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "      [{ NTE }]-0",
+      "definition": "Notes (Regarding Immunization)",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "   }]-0",
+      "definition": "--- OBSERVATION end",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "}]-0",
+      "definition": "--- ORDER end",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    }
+  ]
+}

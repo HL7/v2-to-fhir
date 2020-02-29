@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD used to support HTML entities in content in Confluence -->
+<div xmlns:ac="http://www.atlassian.com/schema/confluence/4/ac/"
+     xmlns:at="http://www.atlassian.com/schema/confluence/4/at/"
+     xmlns:ri="http://www.atlassian.com/schema/confluence/4/ri/">
+   <p class="auto-cursor-target">v2 Description: &lt;segment description&gt;</p>
+   <p>FHIR Description (&lt;resource goes here&gt;): <span style="color: rgb(51,51,51);">&lt;resource description&gt;</span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">
+         <span style="color: rgb(51,51,51);">
+            <span style="color: rgb(51,51,51);">
+               <br/>
+            </span>
+         </span>
+      </span>
+   </p>
+   <p>
+      <span style="color: rgb(51,51,51);">
+         <span style="color: rgb(51,51,51);">
+            <span style="color: rgb(51,51,51);">&lt;notes&gt;</span>
+         </span>
+      </span>
+   </p>
+   <h3>
+      <strong>
+         <span style="color: rgb(51,51,51);">Mapping to &lt;resource&gt; </span>
+      </strong>
+   </h3>
+   <table class="wrapped">
+      <colgroup>
+         <col style="width: 60.0px;"/>
+         <col style="width: 98.0px;"/>
+         <col style="width: 56.0px;"/>
+         <col style="width: 242.0px;"/>
+         <col style="width: 29.0px;"/>
+         <col style="width: 333.0px;"/>
+         <col style="width: 207.0px;"/>
+         <col style="width: 171.0px;"/>
+         <col style="width: 81.0px;"/>
+         <col style="width: 29.0px;"/>
+         <col style="width: 230.0px;"/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td class="highlight-green" colspan="4" data-highlight-colour="green">
+               <strong title="">HL7 V2</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-yellow" colspan="4" data-highlight-colour="yellow">
+               <strong title="">HL7 FHIR</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-blue" data-highlight-colour="blue" rowspan="2">
+               <strong title="">Comments</strong>
+            </td>
+         </tr>
+         <tr>
+            <td class="highlight-green" data-highlight-colour="green">
+               <strong title="">Location</strong>
+            </td>
+            <td class="highlight-green" data-highlight-colour="green">
+               <strong title="">Name</strong>
+            </td>
+            <td class="highlight-green" data-highlight-colour="green">
+               <strong title="">Data Type</strong>
+            </td>
+            <td class="highlight-green" data-highlight-colour="green">
+               <strong title="">Description</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+            <td class="highlight-yellow" data-highlight-colour="yellow">
+               <strong title="">Name</strong>
+            </td>
+            <td class="highlight-yellow" data-highlight-colour="yellow">
+               <strong title="">Definition</strong>
+            </td>
+            <td class="highlight-yellow" data-highlight-colour="yellow">
+               <strong title="">Data Type</strong>
+            </td>
+            <td class="highlight-yellow" data-highlight-colour="yellow">
+               <strong title="">Mapping Rules</strong>
+            </td>
+            <td>
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <p class="auto-cursor-target">
+      <br/>
+   </p>
+</div>

@@ -1,0 +1,501 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <name value="HL7 Version 2 Model Elements"/>
+   <title value="HL7 Version 2 Model Elements"/>
+   <status value="draft"/>
+   <experimental value="true"/>
+   <date value="2019-05-05T01:16:46-04:00"/>
+   <publisher value="Health Level 7 International, Inc."/>
+   <contact>
+      <name value="Keith W. Boone"/>
+      <telecom>
+         <system value="email"/>
+         <value value="kboone@ainq.com"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="This code system defines HL7 Version 2 Model Elements used for Version 2 to FHIR Translation&#xa;This subset addresses model elements used for conversion of V2-FHIR Mapping - Message: SIU^S12-S24,26,S27^SIU_S12"/>
+   <copyright value="Copyright (c) Health Level 7 International, Inc."/>
+   <caseSensitive value="false"/>
+   <compositional value="false"/>
+   <content value="fragment"/>
+   <property>
+      <code value="Low"/>
+      <description value="Low value for cardinality"/>
+      <type value="integer"/>
+   </property>
+   <property>
+      <code value="High"/>
+      <description value="High value for cardinality, set to 2147483647 if unbounded"/>
+      <type value="integer"/>
+   </property>
+   <property>
+      <code value="DataType"/>
+      <description value="The V2 Datatype assigned to this model element"/>
+      <type value="code"/>
+   </property>
+   <concept>
+      <code value="MSH-0"/>
+      <definition value="Message Header"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="SCH-0"/>
+      <definition value="Schedule Activity Information"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="  [ { TQ1 } ]-0"/>
+      <definition value="Timing/Quantity"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="  [ { NTE } ]-0"/>
+      <definition value="Notes and Comments for the SCH"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="[ {-0"/>
+      <definition value="--- PATIENT begin"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="    PID-0"/>
+      <definition value="Patient Identification"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="    [ PD1 ]-0"/>
+      <definition value="Additional Demographics"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="    [ PV1 ]-0"/>
+      <definition value="Patient Visit"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="    [ PV2 ]-0"/>
+      <definition value="Patient Visit - Additional Info"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="    [ { OBX } ]-0"/>
+      <definition value="Observation/Result"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="    [ { DG1 } ]-0"/>
+      <definition value="Diagnosis"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="} ]-0"/>
+      <definition value="--- PATIENT end"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="{ -0"/>
+      <definition value="--- RESOURCES begin"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="  RGS-0"/>
+      <definition value="Resource Group Segment"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="  [ {-0"/>
+      <definition value="--- SERVICE begin"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="      AIS-0"/>
+      <definition value="Appointment Information - Service"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="      [ { NTE } ]-0"/>
+      <definition value="Notes and Comments for the AIS"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="  } ]-0"/>
+      <definition value="--- SERVICE end"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="  [ {-0"/>
+      <definition value="--- GENERAL_RESOURCE begin"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="      AIG-0"/>
+      <definition value="Appointment Information - General Resource"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="      [ { NTE } ]-0"/>
+      <definition value="Notes and Comments for the AIG"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="  } ]-0"/>
+      <definition value="--- GENERAL_RESOURCE end"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="  [ {-0"/>
+      <definition value="--- LOCATION_RESOURCE begin"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="      AIL-0"/>
+      <definition value="Appointment Information - Location Resource"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="      [ { NTE } ]-0"/>
+      <definition value="Notes and Comments for the AIL"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="  } ]-0"/>
+      <definition value="--- LOCATION_RESOURCE end"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="  [ {-0"/>
+      <definition value="--- PERSONNEL_RESOURCE begin"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="      AIP-0"/>
+      <definition value="Appointment Information - Personnel Resource"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="      [ { NTE } ]-0"/>
+      <definition value="Notes and Comments for the AIP"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="  } ]-0"/>
+      <definition value="--- PERSONNEL_RESOURCE end"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="}-0"/>
+      <definition value="--- RESOURCES end"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+</CodeSystem>

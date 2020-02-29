@@ -1,0 +1,4620 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+   <id value="V2toFHIR"/>
+   <status value="active"/>
+   <date value="2019-04-24T00:00:00-04:00"/>
+   <publisher value="Audacious Inquiry"/>
+   <contact>
+      <telecom>
+         <system value="email"/>
+         <value value="kboone@ainq.com"/>
+      </telecom>
+   </contact>
+   <description value="This concept map is used to convert codes from HL7 table 0001 to the FHIR AdministrativeGender codes"/>
+   <copyright value="[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)&#xa;This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).&#xa;It is based on original work by Keith W. Boone at Audacious Inquiry."/>
+   <sourceUri value="https://www.hl7.org/V2/2-8-1"/>
+   <targetUri value="https://www.hl7.org/fhir/DSTU2"/>
+   <group>
+      <element>
+         <code value="ERR"/>
+         <target>
+            <code value="MessageHeader"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR"/>
+         <target>
+            <code value="MessageHeader.response.details"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR"/>
+         <target>
+            <code value="OperationOutcome"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR"/>
+         <target>
+            <code value="OperationOutcome.issue"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR-1"/>
+         <target>
+            <code value="OperationOutcome.issue.code"/>
+            <comment value="If ERR-3 not present"/>
+            <dependsOn>
+               <property value="ERR-3"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR-1"/>
+         <target>
+            <code value="OperationOutcome.issue.location"/>
+            <comment value="If ERR-2 not present"/>
+            <dependsOn>
+               <property value="ERR-2"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR-2"/>
+         <target>
+            <code value="OperationOutcome.issue.location"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR-3"/>
+         <target>
+            <code value="OperationOutcome.issue.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR-4"/>
+         <target>
+            <code value="OperationOutcome.issue.severity"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR-5"/>
+         <target>
+            <code value="OperationOutcome.issue.details"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR-7"/>
+         <target>
+            <code value="OperationOutcome.issue.diagnostics"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR-8"/>
+         <target>
+            <code value="OperationOutcome.issue.diagnostics"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ERR-12"/>
+         <target>
+            <code value="OperationOutcome.issue.diagnostics"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="EVN-1"/>
+         <target>
+            <code value="MessageHeader.event"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="EVN-2"/>
+         <target>
+            <code value="MessageHeader.meta.lastUpdated"/>
+            <comment value="(preferred)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="EVN-4"/>
+         <target>
+            <code value="MessageHeader.reason"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="EVN-5"/>
+         <target>
+            <code value="MessageHeader.enterer"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSA"/>
+         <target>
+            <code value="MessageHeader"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSA"/>
+         <target>
+            <code value="MessageHeader.response"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSA-1"/>
+         <target>
+            <code value="MessageHeader.response.code"/>
+            <comment value="(AR = transient, AE = fatal, AA = OK)"/>
+            <dependsOn>
+               <code value="ConceptMap/V2-0008-to-fhir-response-code"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSA-2"/>
+         <target>
+            <code value="MessageHeader.response.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSA-3"/>
+         <target>
+            <code value="OperationOutcome.issue.diagnostics"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSA-6"/>
+         <target>
+            <code value="OperationOutcome.issue.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSG-2"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH"/>
+         <target>
+            <code value="MessageHeader"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-3"/>
+         <target>
+            <code value="MessageHeader.source.name"/>
+            <product>
+               <property value="MessageHeader.source.endpoint"/>
+               <code value="{MessageHeader.source.name}"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-4"/>
+         <target>
+            <code value="MessageHeader.source.endpoint"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-5"/>
+         <target>
+            <code value="MessageHeader.destination.name"/>
+            <product>
+               <property value="MessageHeader.destination.endpoint"/>
+               <code value="{MessageHeader.destination.name}"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-6"/>
+         <target>
+            <code value="MessageHeader.destination.endpoint"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-7"/>
+         <target>
+            <code value="MessageHeader.timestamp"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-8"/>
+         <target>
+            <code value="MessageHeader.meta.security.code"/>
+            <product>
+               <property value="MessageHeader.meta.security.system"/>
+               <code value="http://example.com/Site-specific-security-code-system"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-9"/>
+         <target>
+            <code value="MessageHeader.event"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-9-2"/>
+         <target>
+            <code value="MessageHeader.event.code"/>
+            <product>
+               <property value="MessageHeader.event.system"/>
+               <code value="http://hl7.org/fhir/v2/0003"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-10"/>
+         <target>
+            <code value="MessageHeader.id"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-11-1"/>
+         <target>
+            <code value="MessageHeader.meta.tag"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-11-1"/>
+         <target>
+            <code value="MessageHeader.meta.tag.code"/>
+            <product>
+               <property value="MessageHeader.meta.tag.system"/>
+               <code value="http://hl7.org/fhir/v2/0103"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-11-2"/>
+         <target>
+            <code value="MessageHeader.meta.tag"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-11-2"/>
+         <target>
+            <code value="MessageHeader.meta.tag.code"/>
+            <product>
+               <property value="MessageHeader.meta.tag.system"/>
+               <code value="http://hl7.org/fhir/v2/0207"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-12"/>
+         <target>
+            <code value="MessageHeader.meta.tag"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-12"/>
+         <target>
+            <code value="MessageHeader.meta.tag.code"/>
+            <product>
+               <property value="MessageHeader.meta.tag.system"/>
+               <code value="http://hl7.org/fhir/v2/0104"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-15"/>
+         <target>
+            <code value="MessageHeader.meta.tag"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-16"/>
+         <target>
+            <code value="MessageHeader.meta.tag"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-17"/>
+         <target>
+            <code value="MessageHeader.meta.tag"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-19"/>
+         <target>
+            <code value="MessageHeader.language"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-21"/>
+         <target>
+            <code value="MessageHeader.meta.profile"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-22"/>
+         <target>
+            <code value="MessageHeader.responsibleOrganization"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-22"/>
+         <target>
+            <code value="MessageHeader.responsible.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-22"/>
+         <target>
+            <code value="Organization.name"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-22"/>
+         <target>
+            <code value="MessageHeader.source.contact"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-23"/>
+         <target>
+            <code value="MessageHeader.receiverOrganization"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-23"/>
+         <target>
+            <code value="MessageHeader.receiver.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-23"/>
+         <target>
+            <code value="Organization.name"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-24"/>
+         <target>
+            <code value="MessageHeader.source.endpoint"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSH-25"/>
+         <target>
+            <code value="MessageHeader.destination.endpoint"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE"/>
+         <target>
+            <code value="Annotation"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE"/>
+         <target>
+            <code value="Annotation"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE"/>
+         <target>
+            <code value="Condition.notes"/>
+            <comment value="child of PRB"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE"/>
+         <target>
+            <code value="Procedure.notes"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE-1"/>
+         <target>
+            <code value="Annotation.id"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE-1"/>
+         <target>
+            <code value="Annotation.id"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE-3"/>
+         <target>
+            <code value="Annotation.text"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE-3"/>
+         <target>
+            <code value="Annotation.text"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE-3"/>
+         <target>
+            <code value="Observation.comments"/>
+            <comment value="(partner NTE to OBX or sometimes another (child?) OBX)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE-5"/>
+         <target>
+            <code value="Annotation.authorPractitioner"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE-5"/>
+         <target>
+            <code value="Annotation.authorPractitioner.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE-5"/>
+         <target>
+            <code value="Practitioner"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE-5"/>
+         <target>
+            <code value="Annotation.author[x]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE-6"/>
+         <target>
+            <code value="Annotation.time"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NTE-6"/>
+         <target>
+            <code value="Annotation.time"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SFT-1"/>
+         <target>
+            <code value="MessageHeader.source.software"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SFT-2"/>
+         <target>
+            <code value="MessageHeader.source.version"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SFT-3"/>
+         <target>
+            <code value="MessageHeader.source.software"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SFT-4"/>
+         <target>
+            <code value="MessageHeader.source.version"/>
+            <comment value="(if SFT-2 empty)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SFT-5"/>
+         <target>
+            <code value="MessageHeader.source.software"/>
+            <comment value="(if SFT-3 empty)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SFT-6"/>
+         <target>
+            <code value="MessageHeader.source.version"/>
+            <comment value="(if SFT-2 and SFT-4 empty)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XON-1"/>
+         <target>
+            <code value="Organization.name"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XON-3"/>
+         <target>
+            <code value="Organization.identifier.value"/>
+            <comment value="Must be handled together"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XON-4"/>
+         <target>
+            <code value="Organization.identifier.value"/>
+            <comment value="Must be handled together"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XON-5"/>
+         <target>
+            <code value="Organization.identifier.value"/>
+            <comment value="Must be handled together"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XON-6"/>
+         <target>
+            <code value="Organization.identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XON-10"/>
+         <target>
+            <code value="Organization.identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PD1-3"/>
+         <target>
+            <code value="Patient.managingOrganization"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PD1-3"/>
+         <target>
+            <code value="Patient.managingOrganization.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PD1-3"/>
+         <target>
+            <code value="Organization.name"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PD1-4"/>
+         <target>
+            <code value="Patient.careProvider"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID"/>
+         <target>
+            <code value="Patient"/>
+            <product>
+               <property value="AllergyIntolerance.patient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="CarePlan.subject"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="ClinicalImpression.patient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="Condition.patient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="DiagnosticOrder.subject"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="DiagnosticReport.subjectPatient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="Encounter.patient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="Immunization.patient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="ImmunizationRecommendation.patient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="Procedure.subject"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="ReferralRequest.patient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="RelatedPerson.patient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="Appointment.participant.actor"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="AppointmentResponse.actor"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="Goal.subject"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="MedicationAdministration.patient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="MedicationDispense.patient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="MedicationOrder.patient"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="Appointment.participant.actor"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="Appointment.participant.type"/>
+               <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+               <code value="SBJ"/>
+            </product>
+            <product>
+               <property value="Appointment.participant.required"/>
+               <code value="required"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-2"/>
+         <target>
+            <code value="Patient.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-2-1"/>
+         <target>
+            <code value="Patient.identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-2-4"/>
+         <target>
+            <code value="Patient.identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-2-5"/>
+         <target>
+            <code value="Patient.identifier.type.coding.code"/>
+            <product>
+               <property value="Patient.identifier.type.coding.system"/>
+               <code value="http://hl7.org/fhir/v2/0203"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-3"/>
+         <target>
+            <code value="Patient.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-3-4"/>
+         <target>
+            <code value="Patient.identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-3-5"/>
+         <target>
+            <code value="Patient.identifier.type.coding.code"/>
+            <product>
+               <property value="Patient.identifier.type.coding.system"/>
+               <code value="http://hl7.org/fhir/v2/0203"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-5"/>
+         <target>
+            <code value="Patient.name"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-7"/>
+         <target>
+            <code value="Patient.birthDate"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-8"/>
+         <target>
+            <code value="Patient.gender"/>
+            <dependsOn>
+               <code value="ConceptMap/V2-0001-to-fhir-administrative-gender"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-9"/>
+         <target>
+            <code value="Patient.name"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-11"/>
+         <target>
+            <code value="Patient.address"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-13"/>
+         <target>
+            <code value="Patient.telecom"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-14"/>
+         <target>
+            <code value="Patient.telecom"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-15"/>
+         <target>
+            <code value="Patient.communication.language"/>
+            <product>
+               <property value="Patient.communication.preferred"/>
+               <code value="true"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-16"/>
+         <target>
+            <code value="Patient.maritalStatus"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-24"/>
+         <target>
+            <code value="Patient.multipleBirthBoolean"/>
+            <comment value="(bool)"/>
+            <dependsOn>
+               <code value="ConceptMap/V2-0136-to-fhir-boolean"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-25"/>
+         <target>
+            <code value="Patient.multipleBirthInteger"/>
+            <comment value="(integer)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-29"/>
+         <target>
+            <code value="Patient.deceasedDateTime"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-30"/>
+         <target>
+            <code value="Patient.deceasedBoolean"/>
+            <comment value="(bool)"/>
+            <dependsOn>
+               <code value="ConceptMap/V2-0136-to-fhir-boolean"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PID-40"/>
+         <target>
+            <code value="Patient.telecom"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1"/>
+         <target>
+            <code value="Encounter"/>
+            <product>
+               <property value="Encounter.status"/>
+               <code value="in-progress"/>
+            </product>
+            <product>
+               <property value="Immunization.encounter"/>
+               <code value="{Encounter}"/>
+            </product>
+            <product>
+               <property value="DiagnosticOrder.encounter"/>
+               <code value="{Encounter}"/>
+            </product>
+            <product>
+               <property value="DiagnosticReport.encounter"/>
+               <code value="{Encounter}"/>
+            </product>
+            <product>
+               <property value="Procedure.encounter"/>
+               <code value="{Encounter}"/>
+            </product>
+            <product>
+               <property value="ReferralRequest.encounter"/>
+               <code value="{Encounter}"/>
+            </product>
+            <product>
+               <property value="Condition.encounter"/>
+               <code value="{Encounter}"/>
+            </product>
+            <product>
+               <property value="MedicationAdministration.encounter"/>
+               <code value="{Encounter}"/>
+            </product>
+            <product>
+               <property value="MedicationOrder.encounter"/>
+               <code value="{Encounter}"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-2"/>
+         <target>
+            <code value="Encounter.class"/>
+            <dependsOn>
+               <code value="ConceptMap/V2-0004-to-fhir-encounter-class"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-3"/>
+         <target>
+            <code value="Encounter.location.location"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-3"/>
+         <target>
+            <code value="Encounter.location.location.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-3"/>
+         <target>
+            <code value="Location"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-3"/>
+         <target>
+            <code value="Location.name"/>
+            <comment value="For now, we will process using Field() defaulting"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-4"/>
+         <target>
+            <code value="Encounter.type"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-5"/>
+         <target>
+            <code value="Encounter.hospitalization.preAdmissionIdentifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-6"/>
+         <target>
+            <code value="Encounter.location.location"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-6"/>
+         <target>
+            <code value="Encounter.location.location.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-7"/>
+         <target>
+            <code value="Practitioner.practitionerRole.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-7"/>
+         <target>
+            <code value="Procedure.performer.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-8"/>
+         <target>
+            <code value="Practitioner.practitionerRole.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-8"/>
+         <target>
+            <code value="Procedure.performer.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-9"/>
+         <target>
+            <code value="Practitioner.practitionerRole.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-9"/>
+         <target>
+            <code value="Procedure.performer.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-10"/>
+         <target>
+            <code value="Encounter.serviceProvider"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-10"/>
+         <target>
+            <code value="Organization"/>
+            <comment value="If PV1-10 is empty, create an 'Unknown' Organization"/>
+            <dependsOn>
+               <code value="{}"/>
+            </dependsOn>
+            <product>
+               <property value="Organization.name"/>
+               <code value="Unknown"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-10"/>
+         <target>
+            <code value="Organization.name"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-11"/>
+         <target>
+            <code value="Encounter.location.location"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-11"/>
+         <target>
+            <code value="Encounter.location.location.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-13"/>
+         <target>
+            <code value="Encounter.hospitalization.reAdmission"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-14"/>
+         <target>
+            <code value="Encounter.hospitalization.admitSource"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-15"/>
+         <target>
+            <code value="Encounter.hospitalization.specialArrangement"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-16"/>
+         <target>
+            <code value="Encounter.hospitalization.specialCourtesy"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-17"/>
+         <target>
+            <code value="Practitioner.practitionerRole.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-17"/>
+         <target>
+            <code value="Procedure.performer.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-18"/>
+         <target>
+            <code value="Encounter.type"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-19"/>
+         <target>
+            <code value="Encounter.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-36"/>
+         <target>
+            <code value="Encounter.hospitalization.dischargeDisposition"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-37"/>
+         <target>
+            <code value="Encounter.hospitalization.destination"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-38"/>
+         <target>
+            <code value="Encounter.hospitalization.dietPreference"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-42"/>
+         <target>
+            <code value="Encounter.location.location"/>
+            <product>
+               <property value="Encounter.location.status"/>
+               <code value="planned"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-42"/>
+         <target>
+            <code value="Encounter.location.location.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-43"/>
+         <target>
+            <code value="Encounter.location.location"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-43"/>
+         <target>
+            <code value="Encounter.location.location.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-44"/>
+         <target>
+            <code value="Encounter.period.start"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-45"/>
+         <target>
+            <code value="Encounter.period.end"/>
+            <product>
+               <property value="Encounter.status"/>
+               <code value="finished"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-53"/>
+         <target>
+            <code value="Encounter.episodeOfCare"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV1-54"/>
+         <target>
+            <code value="Encounter.episodeOfCare"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV2-3"/>
+         <target>
+            <code value="Encounter.reason"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV2-16"/>
+         <target>
+            <code value="Encounter.status"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV2-24"/>
+         <target>
+            <code value="Encounter.status"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PV2-25"/>
+         <target>
+            <code value="Encounter.priority"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD"/>
+         <target>
+            <code value="Address"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-1"/>
+         <target>
+            <code value="Address.line"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-2"/>
+         <target>
+            <code value="Address.line"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-3"/>
+         <target>
+            <code value="Address.city"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-4"/>
+         <target>
+            <code value="Address.state"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-5"/>
+         <target>
+            <code value="Address.postalCode"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-6"/>
+         <target>
+            <code value="Address.country"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-7"/>
+         <target>
+            <code value="Address.use"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-8"/>
+         <target>
+            <code value="Address.district"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-12"/>
+         <target>
+            <code value="Address.period"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-13"/>
+         <target>
+            <code value="Address.period.start"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-14"/>
+         <target>
+            <code value="Address.period.end"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="AD-18"/>
+         <target>
+            <code value="Address.type"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE"/>
+         <target>
+            <code value="CodeableConcept"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE"/>
+         <target>
+            <code value="Coding"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-1"/>
+         <target>
+            <code value="CodeableConcept.coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-1"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-2"/>
+         <target>
+            <code value="CodeableConcept.coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-2"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-3"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-3"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-4"/>
+         <target>
+            <code value="CodeableConcept.coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-4"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-5"/>
+         <target>
+            <code value="CodeableConcept.coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-5"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-6"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CE-6"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF"/>
+         <target>
+            <code value="CodeableConcept"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF"/>
+         <target>
+            <code value="CodeableConcept"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-1"/>
+         <target>
+            <code value="CodeableConcept.coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-1"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-2"/>
+         <target>
+            <code value="CodeableConcept.coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-2"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-3"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-3"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-4"/>
+         <target>
+            <code value="CodeableConcept.coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-4"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-5"/>
+         <target>
+            <code value="CodeableConcept.coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-5"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-6"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CF-6"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CN"/>
+         <target>
+            <code value="HumanName"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CN"/>
+         <target>
+            <code value="Identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CN-1"/>
+         <target>
+            <code value="Identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CN-2-1"/>
+         <target>
+            <code value="HumanName.family"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CN-3"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CN-4"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CN-5"/>
+         <target>
+            <code value="HumanName.suffix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CN-6"/>
+         <target>
+            <code value="HumanName.prefix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CN-7"/>
+         <target>
+            <code value="HumanName.suffix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CN-8"/>
+         <target>
+            <code value="Identifier.type"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CN-9"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE"/>
+         <target>
+            <code value="CodeableConcept"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE"/>
+         <target>
+            <code value="Coding"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-1"/>
+         <target>
+            <code value="CodeableConcept.coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-1"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-2"/>
+         <target>
+            <code value="CodeableConcept.coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-2"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-3"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-3"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-4"/>
+         <target>
+            <code value="CodeableConcept.coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-4"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-5"/>
+         <target>
+            <code value="CodeableConcept.coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-5"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-6"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-6"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-7"/>
+         <target>
+            <code value="CodeableConcept.coding.version"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-7"/>
+         <target>
+            <code value="Coding.version"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-8"/>
+         <target>
+            <code value="CodeableConcept.coding.version"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-8"/>
+         <target>
+            <code value="Coding.version"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-9"/>
+         <target>
+            <code value="CodeableConcept.text"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-9"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-9"/>
+         <target>
+            <code value="CodeableConcept.text"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-10"/>
+         <target>
+            <code value="CodeableConcept.coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-10"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-11"/>
+         <target>
+            <code value="CodeableConcept.coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-11"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-12"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-12"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-13"/>
+         <target>
+            <code value="CodeableConcept.coding.version"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-14"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-14"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-17"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-17"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-20"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNE-20"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN"/>
+         <target>
+            <code value="HumanName"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN"/>
+         <target>
+            <code value="Identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN-1"/>
+         <target>
+            <code value="Identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN-2-1"/>
+         <target>
+            <code value="HumanName.family"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN-3"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN-4"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN-5"/>
+         <target>
+            <code value="HumanName.suffix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN-6"/>
+         <target>
+            <code value="HumanName.prefix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN-7"/>
+         <target>
+            <code value="HumanName.suffix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN-8"/>
+         <target>
+            <code value="Identifier.type"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN-9"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN-10"/>
+         <target>
+            <code value="Identifier.system"/>
+            <comment value="Both must be valued"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CNN-11"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE"/>
+         <target>
+            <code value="CodeableConcept"/>
+            <comment value="TODO: This needs work b/c of multiple codings in CWE"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE"/>
+         <target>
+            <code value="Coding"/>
+            <comment value="TODO: This needs work b/c of multiple codings in CWE"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-1"/>
+         <target>
+            <code value="CodeableConcept.coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-1"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-2"/>
+         <target>
+            <code value="CodeableConcept.coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-2"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-3"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-3"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-4"/>
+         <target>
+            <code value="CodeableConcept.coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-4"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-5"/>
+         <target>
+            <code value="CodeableConcept.coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-5"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-6"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-6"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-7"/>
+         <target>
+            <code value="CodeableConcept.coding.version"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-7"/>
+         <target>
+            <code value="Coding.version"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-8"/>
+         <target>
+            <code value="CodeableConcept.coding.version"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-8"/>
+         <target>
+            <code value="Coding.version"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-9"/>
+         <target>
+            <code value="CodeableConcept.text"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-9"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-9"/>
+         <target>
+            <code value="CodeableConcept.text"/>
+            <comment value="If display is empty?"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-10"/>
+         <target>
+            <code value="CodeableConcept.coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-10"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-11"/>
+         <target>
+            <code value="CodeableConcept.coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-11"/>
+         <target>
+            <code value="Coding.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-12"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-12"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-14"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-14"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-17"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-17"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-20"/>
+         <target>
+            <code value="CodeableConcept.coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CWE-20"/>
+         <target>
+            <code value="Coding.system"/>
+            <dependsOn>
+               <code value="ConceptMap/LocalCodingSystemNames"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CX"/>
+         <target>
+            <code value="Identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CX-1"/>
+         <target>
+            <code value="Identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CX-2"/>
+         <target>
+            <code value="Identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CX-3"/>
+         <target>
+            <code value="Identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CX-4"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CX-5"/>
+         <target>
+            <code value="Identifier.type"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CX-6"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CX-7"/>
+         <target>
+            <code value="Identifier.period.start"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CX-8"/>
+         <target>
+            <code value="Identifier.period.end"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CX-9"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="CX-10"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="EI"/>
+         <target>
+            <code value="Identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="EI-1"/>
+         <target>
+            <code value="Identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="EI-2"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="EI-3"/>
+         <target>
+            <code value="Identifier.system"/>
+            <comment value="Both must be valued"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="EI-4"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ID"/>
+         <target>
+            <code value="CodeableConcept"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ID"/>
+         <target>
+            <code value="Coding"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ID"/>
+         <target>
+            <code value="CodeableConcept"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ID"/>
+         <target>
+            <code value="Code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="IS"/>
+         <target>
+            <code value="CodeableConcept"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MSG"/>
+         <target>
+            <code value="Coding.code"/>
+            <product>
+               <property value="Coding.system"/>
+               <code value="http://hl7.org/fhir/v2/0003"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="NM"/>
+         <target>
+            <code value="Quantity.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PN"/>
+         <target>
+            <code value="HumanName"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PN-1-1"/>
+         <target>
+            <code value="HumanName.family"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PN-2"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PN-3"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PN-4"/>
+         <target>
+            <code value="HumanName.suffix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PN-5"/>
+         <target>
+            <code value="HumanName.prefix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PN-6"/>
+         <target>
+            <code value="HumanName.suffix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN"/>
+         <target>
+            <code value="HumanName"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN"/>
+         <target>
+            <code value="Identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN"/>
+         <target>
+            <code value="Reference"/>
+            <comment value="Disambiguate using PNN-13"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-1"/>
+         <target>
+            <code value="Identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-2-1"/>
+         <target>
+            <code value="HumanName.family"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-3"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-4"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-5"/>
+         <target>
+            <code value="HumanName.suffix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-6"/>
+         <target>
+            <code value="HumanName.prefix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-7"/>
+         <target>
+            <code value="HumanName.suffix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-9"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-10"/>
+         <target>
+            <code value="HumanName.use"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-11"/>
+         <target>
+            <code value="Identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-12"/>
+         <target>
+            <code value="Identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-13"/>
+         <target>
+            <code value="Identifier.type"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-17"/>
+         <target>
+            <code value="HumanName.period"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-19"/>
+         <target>
+            <code value="HumanName.period.end"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-20"/>
+         <target>
+            <code value="HumanName.period.start"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-22"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PPN-23"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PT"/>
+         <target>
+            <code value="Coding"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ST"/>
+         <target>
+            <code value="Coding.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ST"/>
+         <target>
+            <code value="Resource.id"/>
+            <comment value="copy"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="VID"/>
+         <target>
+            <code value="Coding"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD"/>
+         <target>
+            <code value="Address"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-1"/>
+         <target>
+            <code value="Address.line"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-2"/>
+         <target>
+            <code value="Address.line"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-3"/>
+         <target>
+            <code value="Address.city"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-4"/>
+         <target>
+            <code value="Address.state"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-5"/>
+         <target>
+            <code value="Address.postalCode"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-6"/>
+         <target>
+            <code value="Address.country"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-7"/>
+         <target>
+            <code value="Address.use"/>
+            <dependsOn>
+               <code value="ConceptMap/V2-0190-to-fhir-address-use"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-8"/>
+         <target>
+            <code value="Address.line"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-9"/>
+         <target>
+            <code value="Address.district"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-12"/>
+         <target>
+            <code value="Address.period"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-13"/>
+         <target>
+            <code value="Address.period.start"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-14"/>
+         <target>
+            <code value="Address.period.end"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XAD-18"/>
+         <target>
+            <code value="Address.type"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN"/>
+         <target>
+            <code value="HumanName"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN"/>
+         <target>
+            <code value="Identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN"/>
+         <target>
+            <code value="ReferencePractitioner"/>
+            <comment value="Disambiguate using XCN-13"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-1"/>
+         <target>
+            <code value="Identifier.value"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-2-1"/>
+         <target>
+            <code value="HumanName.family"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-3"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-4"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-5"/>
+         <target>
+            <code value="HumanName.suffix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-6"/>
+         <target>
+            <code value="HumanName.prefix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-7"/>
+         <target>
+            <code value="HumanName.suffix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-9"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-10"/>
+         <target>
+            <code value="HumanName.use"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-13"/>
+         <target>
+            <code value="Identifier.type"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-17"/>
+         <target>
+            <code value="HumanName.period"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-19"/>
+         <target>
+            <code value="HumanName.period.end"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-20"/>
+         <target>
+            <code value="HumanName.period.start"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-22"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XCN-23"/>
+         <target>
+            <code value="Identifier.system"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XON"/>
+         <target>
+            <code value="ReferenceOrganization"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XON"/>
+         <target>
+            <code value="Organization"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN"/>
+         <target>
+            <code value="HumanName"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-1-1"/>
+         <target>
+            <code value="HumanName.family"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-1-2"/>
+         <target>
+            <code value="HumanName.family"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-2"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-3"/>
+         <target>
+            <code value="HumanName.given"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-5"/>
+         <target>
+            <code value="HumanName.prefix"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-7"/>
+         <target>
+            <code value="HumanName.use"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-10"/>
+         <target>
+            <code value="HumanName.period"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-12"/>
+         <target>
+            <code value="HumanName.period.end"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-13"/>
+         <target>
+            <code value="HumanName.period.start"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-15"/>
+         <target>
+            <code value="HumanName.given"/>
+            <comment value="When present, this is a second human name giving the &quot;nickname&quot;"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-15"/>
+         <target>
+            <code value="HumanName.use"/>
+            <comment value="use=&quot;nickname&quot;"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="XPN-15"/>
+         <target>
+            <code value="HumanName"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="TXA"/>
+         <target>
+            <code value="DiagnosticReport.performerPractitioner"/>
+            <comment value="If TXA-5 doesn't exist, we need to create an unknown practitioner"/>
+            <dependsOn>
+               <property value="TXA-5"/>
+               <code value="{}"/>
+            </dependsOn>
+            <product>
+               <property value="Practitioner.id"/>
+               <code value="Practitioner/Unknown"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="TXA-2"/>
+         <target>
+            <code value="DiagnosticReport.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="TXA-4"/>
+         <target>
+            <code value="DiagnosticReport.effectiveDateTime"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="TXA-5"/>
+         <target>
+            <code value="Practitioner"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="TXA-6"/>
+         <target>
+            <code value="DiagnosticReport.issued"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR"/>
+         <target>
+            <code value="Practitioner"/>
+            <comment value="If OBR-32-1 doesn't exist, we need to create an unknown practitioner"/>
+            <dependsOn>
+               <property value="OBR-32-1"/>
+               <code value="{}"/>
+            </dependsOn>
+            <product>
+               <property value="Practitioner.id"/>
+               <code value="Practitioner/Unknown"/>
+            </product>
+            <product>
+               <property value="DiagnosticReport.performerPractitioner"/>
+               <code value="{Practitioner}"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MDM_T02"/>
+         <target>
+            <code value="DiagnosticReport"/>
+            <product>
+               <property value="DiagnosticReport.status"/>
+               <code value="final"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="MDM_T02"/>
+         <target>
+            <code value="DiagnosticReport.presentedForm"/>
+            <product>
+               <property value="DiagnosticReport.presentedForm.contentType"/>
+               <code value="text/plain"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-2"/>
+         <target>
+            <code value="DiagnosticOrder.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-2"/>
+         <target>
+            <code value="DiagnosticReport.requestDiagnosticOrder"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-2"/>
+         <target>
+            <code value="Procedure.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-3"/>
+         <target>
+            <code value="DiagnosticOrder.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-3"/>
+         <target>
+            <code value="DiagnosticReport.requestDiagnosticOrder"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-3"/>
+         <target>
+            <code value="Procedure.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-4"/>
+         <target>
+            <code value="CodeableConcept"/>
+            <product>
+               <property value="DiagnosticOrder.item.code"/>
+               <code value="{CodeableConcept}"/>
+            </product>
+            <product>
+               <property value="DiagnosticReport.code"/>
+               <code value="{CodeableConcept}"/>
+            </product>
+            <product>
+               <property value="ReferralRequest.serviceRequested"/>
+               <code value="{CodeableConcept}"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-5"/>
+         <target>
+            <code value="DiagnosticOrder.priority"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-6"/>
+         <target>
+            <code value="DiagnosticOrder.event.status"/>
+            <comment value="requested"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-7"/>
+         <target>
+            <code value="DiagnosticReport.effectiveDateTime"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-7"/>
+         <target>
+            <code value="Procedure.performed[x]"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-7"/>
+         <target>
+            <code value="ReferralRequest.fulfillmentTime"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-8"/>
+         <target>
+            <code value="ReferralRequest.fulfillmentTime"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-13"/>
+         <target>
+            <code value="DiagnosticOrder.supportingInformationCondition"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-16"/>
+         <target>
+            <code value="DiagnosticOrder.orderer"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-16"/>
+         <target>
+            <code value="Order.sourcePractitioner"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-16"/>
+         <target>
+            <code value="Practitioner.practitionerRole.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-16"/>
+         <target>
+            <code value="Procedure.performer.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-18"/>
+         <target>
+            <code value="DiagnosticOrder.note.text"/>
+            <comment value="Must also produce note"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-19"/>
+         <target>
+            <code value="DiagnosticOrder.note.text"/>
+            <comment value="Must also produce note"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-20"/>
+         <target>
+            <code value="DiagnosticOrder.note.text"/>
+            <comment value="Must also produce note"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-21"/>
+         <target>
+            <code value="DiagnosticOrder.note.text"/>
+            <comment value="Must also produce note"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-22"/>
+         <target>
+            <code value="DiagnosticReport.issued"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-22"/>
+         <target>
+            <code value="DiagnosticReport.issued"/>
+            <dependsOn>
+               <code value="{}"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-24"/>
+         <target>
+            <code value="DiagnosticReport.category.coding.code"/>
+            <product>
+               <property value="DiagnosticReport.category.coding.system"/>
+               <code value="http://hl7.org/fhir/v2/0074"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-24"/>
+         <target>
+            <code value="DiagnosticReport.category"/>
+            <comment value="Set a default value for code if not present"/>
+            <dependsOn>
+               <code value="{}"/>
+            </dependsOn>
+            <product>
+               <property value="DiagnosticReport.category.coding"/>
+               <system value="http://hl7.org/fhir/v2/0074"/>
+               <code value="LAB"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-25"/>
+         <target>
+            <code value="DiagnosticReport.status"/>
+            <comment value="(not 1:1 mapping)"/>
+            <dependsOn>
+               <code value="ConceptMap/V2-0123-to-fhir-diagnostic-report-status"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-31"/>
+         <target>
+            <code value="DiagnosticOrder.reason"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-31"/>
+         <target>
+            <code value="MessageHeader.reason"/>
+            <comment value="reason for study"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-31"/>
+         <target>
+            <code value="Order.reason[x]"/>
+            <comment value="0.2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-32-1"/>
+         <target>
+            <code value="DiagnosticReport.performerPractitioner"/>
+            <comment value="If there is an OBR-32-1, then we need practitioner"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-32-1"/>
+         <target>
+            <code value="DiagnosticReport.performer.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-33-1"/>
+         <target>
+            <code value="DiagnosticReport.performerPractitioner"/>
+            <comment value="If there is an OBR-33-1, then we need practitioner"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-33-1"/>
+         <target>
+            <code value="DiagnosticReport.performer.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-39"/>
+         <target>
+            <code value="Specimen.collection.comment"/>
+            <comment value="Must also produce note"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-44"/>
+         <target>
+            <code value="DiagnosticOrder.item.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-44"/>
+         <target>
+            <code value="Procedure.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-45"/>
+         <target>
+            <code value="DiagnosticOrder.item.code"/>
+            <comment value="As modifier qualifier "/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-45"/>
+         <target>
+            <code value="Procedure.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBR-51"/>
+         <target>
+            <code value="DiagnosticReport.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORU_R01"/>
+         <target>
+            <code value="Patient"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORU_R01"/>
+         <target>
+            <code value="Encounter"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PATIENT_RESULT"/>
+         <target>
+            <code value="DiagnosticOrder"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PATIENT_RESULT"/>
+         <target>
+            <code value="DiagnosticReport"/>
+            <product>
+               <property value="DiagnosticReport.request"/>
+               <code value="{DiagnosticOrder}"/>
+            </product>
+            <product>
+               <property value="DiagnosticReport.issued"/>
+               <code value="{MessageHeader.timestamp}"/>
+            </product>
+            <product>
+               <property value="DiagnosticReport.status"/>
+               <code value="final"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="PATIENT_RESULT"/>
+         <target>
+            <code value="DiagnosticReport.presentedForm"/>
+            <product>
+               <property value="DiagnosticReport.presentedForm.contentType"/>
+               <code value="text/plain"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORDER_OBSERVATION"/>
+         <target>
+            <code value="DiagnosticOrder.item"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBSERVATION"/>
+         <target>
+            <code value="Observation"/>
+            <product>
+               <property value="Observation.code.coding"/>
+               <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+               <code value="NI"/>
+            </product>
+            <product>
+               <property value="Observation.subject"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="Observation.issued"/>
+               <code value="{DiagnosticReport.issued}"/>
+            </product>
+            <product>
+               <property value="Observation.encounter"/>
+               <code value="{Encounter}"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-2"/>
+         <target>
+            <code value="Observation.meta.tag.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-3"/>
+         <target>
+            <code value="Observation.code"/>
+            <comment value="observation identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-5"/>
+         <target>
+            <code value="Observation.valueQuantity"/>
+            <dependsOn>
+               <property value="OBX-2"/>
+               <code value="NM"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-5"/>
+         <target>
+            <code value="Observation.valueCodeableConcept"/>
+            <dependsOn>
+               <property value="OBX-2"/>
+               <code value="ValueSet/V2-obx2-coded-types"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-5"/>
+         <target>
+            <code value="Observation.valueString"/>
+            <dependsOn>
+               <property value="OBX-2"/>
+               <code value="ValueSet/V2-obx2-string-types"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-6"/>
+         <target>
+            <code value="Observation.valueQuantity.unit"/>
+            <comment value="Report unit as found in message"/>
+            <dependsOn>
+               <property value="OBX-2"/>
+               <code value="NM"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-6"/>
+         <target>
+            <code value="Observation.valueQuantity.code"/>
+            <comment value="Report code mapping OBX-6 via mapping table"/>
+            <dependsOn>
+               <code value="ConceptMap/V2-isoplus-to-ucum"/>
+            </dependsOn>
+            <dependsOn>
+               <property value="OBX-2"/>
+               <code value="NM"/>
+            </dependsOn>
+            <product>
+               <property value="Observation.valueQuantity.system"/>
+               <code value="http://unitsofmeasure.org"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-7"/>
+         <target>
+            <code value="Observation.referenceRange.text"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-8"/>
+         <target>
+            <code value="Observation.interpretation.coding.code"/>
+            <comment value="interpretation codes"/>
+            <product>
+               <property value="Observation.interpretation.coding.system"/>
+               <code value="http://hl7.org/fhir/v2/0078"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-8"/>
+         <target>
+            <code value="DiagnosticReport.meta.tag.code"/>
+            <comment value="Copy interpretation codes to the DiagnosticReport resource"/>
+            <product>
+               <property value="DiagnosticReport.meta.tag.system"/>
+               <code value="http://hl7.org/fhir/v2/0078"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-10"/>
+         <target>
+            <code value="Observation.referenceRange.meaning"/>
+            <comment value="?"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-11"/>
+         <target>
+            <code value="Observation.status"/>
+            <dependsOn>
+               <code value="ConceptMap/V2-0085-to-fhir-observation-status"/>
+            </dependsOn>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-14"/>
+         <target>
+            <code value="Observation.effectiveDateTime"/>
+            <comment value="-date or OBX-19 after v2.4 (depends on who observation made)"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-15"/>
+         <target>
+            <code value="Observation.performerOrganization"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-15"/>
+         <target>
+            <code value="Observation.performer.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-15"/>
+         <target>
+            <code value="Organization.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-16"/>
+         <target>
+            <code value="Observation.performerPractitioner"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-16"/>
+         <target>
+            <code value="Observation.performer.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-16"/>
+         <target>
+            <code value="Practitioner"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-17"/>
+         <target>
+            <code value="Observation.device"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-17"/>
+         <target>
+            <code value="Observation.method"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-18"/>
+         <target>
+            <code value="Observation.deviceDevice"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-18"/>
+         <target>
+            <code value="Device.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-20"/>
+         <target>
+            <code value="BodySite.code"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-20"/>
+         <target>
+            <code value="Observation.bodySite"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-20"/>
+         <target>
+            <code value="Observation.bodySite"/>
+            <comment value="observation site"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-20"/>
+         <target>
+            <code value="Procedure.bodySite"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-21"/>
+         <target>
+            <code value="Observation.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-23"/>
+         <target>
+            <code value="Observation.performerOrganization"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-23"/>
+         <target>
+            <code value="Observation.performer.display"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-23"/>
+         <target>
+            <code value="Organization.name"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="OBX-25"/>
+         <target>
+            <code value="Procedure.performer.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC"/>
+         <target>
+            <code value="DiagnosticOrder"/>
+            <comment value="Create a diagnostic order to represent certain components of ORC"/>
+            <product>
+               <property value="DiagnosticOrder.subject"/>
+               <code value="{Patient}"/>
+            </product>
+            <product>
+               <property value="DiagnosticOrder.encounter"/>
+               <code value="{Encounter}"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-2"/>
+         <target>
+            <code value="DiagnosticOrder.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-2"/>
+         <target>
+            <code value="DiagnosticReport.requestDiagnosticOrder"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-2"/>
+         <target>
+            <code value="Procedure.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-3"/>
+         <target>
+            <code value="DiagnosticOrder.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-3"/>
+         <target>
+            <code value="DiagnosticReport.requestDiagnosticOrder"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-3"/>
+         <target>
+            <code value="Procedure.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-9"/>
+         <target>
+            <code value="Order.date"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-10"/>
+         <target>
+            <code value="MessageHeader.enterer"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-12"/>
+         <target>
+            <code value="DiagnosticOrder.orderer"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-12"/>
+         <target>
+            <code value="MessageHeader.responsiblePractitioner"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-12"/>
+         <target>
+            <code value="Order.sourcePractitioner"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-12"/>
+         <target>
+            <code value="Practitioner.practitionerRole.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-12"/>
+         <target>
+            <code value="Procedure.performer.role"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-14"/>
+         <target>
+            <code value="ContactPoint"/>
+            <comment value="But we don't know where this will go."/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-16"/>
+         <target>
+            <code value="MessageHeader.reason"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-16"/>
+         <target>
+            <code value="DiagnosticOrder.reason"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-16"/>
+         <target>
+            <code value="Order.reasonCodeableConcept"/>
+            <comment value="0.2"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-19"/>
+         <target>
+            <code value="MessageHeader.author"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-19"/>
+         <target>
+            <code value="Procedure.performer.actor"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-21"/>
+         <target>
+            <code value="Organization.name"/>
+            <comment value="If we get an organization, we need an organization to put it in"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-22"/>
+         <target>
+            <code value="Organization.telecom"/>
+            <comment value="If we get a telephone number, we need an organization to put it in"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-23"/>
+         <target>
+            <code value="Organization.address"/>
+            <comment value="If we get a address, we need an organization to put it in"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="ORC-24"/>
+         <target>
+            <code value="Practitioner.address"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SAC-16"/>
+         <target>
+            <code value="Specimen.container.capacity"/>
+            <comment value=", SAC 17 and SAC 20, or SAC 21 and SAC 20"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM"/>
+         <target>
+            <code value="Specimen"/>
+            <product>
+               <property value="Specimen.subject"/>
+               <code value="{Patient}"/>
+            </product>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM"/>
+         <target>
+            <code value="DiagnosticReport.specimen"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM"/>
+         <target>
+            <code value="DiagnosticOrder.item.specimen"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM"/>
+         <target>
+            <code value="Observation.specimen"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-2"/>
+         <target>
+            <code value="Specimen.identifier"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-4"/>
+         <target>
+            <code value="Specimen.type"/>
+            <comment value="and possibly SPM-5"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-6"/>
+         <target>
+            <code value="Specimen.treatment.additive"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-7"/>
+         <target>
+            <code value="Specimen.collection.method"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-8"/>
+         <target>
+            <code value="Specimen.collection.bodySite"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-9"/>
+         <target>
+            <code value="Specimen.collection.bodySite"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-12"/>
+         <target>
+            <code value="Specimen.collection.quantity"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-14"/>
+         <target>
+            <code value="Specimen.collection"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-17"/>
+         <target>
+            <code value="Specimen.collection.collectedDateTime"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-18"/>
+         <target>
+            <code value="Specimen.receivedTime"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-20"/>
+         <target>
+            <code value="Specimen.status"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-27"/>
+         <target>
+            <code value="Specimen.container.type"/>
+         </target>
+      </element>
+   </group>
+   <group>
+      <element>
+         <code value="SPM-30"/>
+         <target>
+            <code value="Specimen.accessionIdentifier"/>
+            <comment value="(v2.7+)"/>
+         </target>
+      </element>
+   </group>
+</ConceptMap>

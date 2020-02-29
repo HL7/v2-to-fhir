@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD used to support HTML entities in content in Confluence -->
+<div xmlns:ac="http://www.atlassian.com/schema/confluence/4/ac/"
+     xmlns:at="http://www.atlassian.com/schema/confluence/4/at/"
+     xmlns:ri="http://www.atlassian.com/schema/confluence/4/ri/">
+   <p class="auto-cursor-target">v2 Description: The following message structure may be used for the communication of laboratory and other order messages and must be used for lab automation messages where it is required that the Specimen/Container information is within the ORC/OBR segment group</p>
+   <p>FHIR Description: This message centers around the ServiceRequest resource which is linked to a patient, encounter and possibly observations.</p>
+   <p>
+      <span style="color: rgb(51,51,51);">In the US, the national implementation guide (LOI) forms the basis of certified EHR lab ordering.</span>
+   </p>
+   <h3>
+      <span style="color: rgb(51,51,51);">Output </span>
+      <span style="color: rgb(51,51,51);">Expectations</span>
+   </h3>
+   <ul>
+      <li>
+         <span style="color: rgb(51,51,51);">The Bundle will consist at a minimum of the following resources:</span>
+         <ul>
+            <li>
+               <span style="color: rgb(51,51,51);">Bundle</span>
+            </li>
+            <li>
+               <span style="color: rgb(51,51,51);">Patient</span>
+            </li>
+            <li>
+               <span style="color: rgb(51,51,51);">ServiceRequest</span>
+            </li>
+            <li>
+               <span style="color: rgb(51,51,51);">Provenance (General - origin and transformation)</span>
+            </li>
+         </ul>
+      </li>
+      <li>
+         <span style="color: rgb(51,51,51);">The Bundle may also contain the following resources:</span>
+         <ul>
+            <li>
+               <span style="color: rgb(51,51,51);">MessageHeader (if using the messaging workflow)</span>
+            </li>
+            <li>
+               <span style="color: rgb(51,51,51);">RelatedPerson (next of kin)</span>
+            </li>
+            <li>
+               <span style="color: rgb(51,51,51);">Encounter</span>
+            </li>
+            <li>
+               <span style="color: rgb(51,51,51);">Practitioner/PractitionerRole</span>
+            </li>
+            <li>
+               <span style="color: rgb(51,51,51);">Observation</span>
+            </li>
+         </ul>
+      </li>
+      <li>
+         <span style="color: rgb(51,51,51);">Task resources maybe appropriate for this message type if there is something the receiving system has to fulfill..</span>
+      </li>
+   </ul>
+   <h3>
+      <strong>
+         <span style="color: rgb(51,51,51);">Mapping</span>
+      </strong>
+   </h3>
+   <p>
+      <br/>
+   </p>
+   <table class="relative-table wrapped" style="width: 100.0%;">
+      <colgroup>
+         <col style="width: 7.64388%;"/>
+         <col style="width: 19.0647%;"/>
+         <col style="width: 14.0288%;"/>
+         <col style="width: 11.3309%;"/>
+         <col style="width: 3.23741%;"/>
+         <col style="width: 18.1655%;"/>
+         <col style="width: 2.60791%;"/>
+         <col style="width: 23.9209%;"/>
+      </colgroup>
+      <tbody>
+         <tr>
+            <td class="highlight-green"
+                colspan="4"
+                data-highlight-colour="green"
+                style="width: 52.2065%;">
+               <strong title="">HL7 V2</strong>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                style="width: 18.1515%;"
+                title="Background colour : Yellow">
+               <strong>FHIR</strong>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td class="highlight-blue"
+                data-highlight-colour="blue"
+                rowspan="2"
+                style="width: 23.8968%;">
+               <strong title="">Comments</strong>
+            </td>
+         </tr>
+         <tr>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                style="width: 7.66028%;">
+               <strong title="">Segment</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                style="width: 19.0674%;">
+               <strong title="">Description</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                style="width: 14.0716%;">
+               <strong title="">Segment Map</strong>
+            </td>
+            <td class="highlight-green"
+                data-highlight-colour="green"
+                style="width: 11.4072%;">
+               <strong>Mapping Rules</strong>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td class="highlight-yellow"
+                data-highlight-colour="yellow"
+                style="width: 18.1515%;"
+                title="Background colour : Yellow">
+               <strong>Element</strong>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">MSH</td>
+            <td style="width: 19.0674%;">Message Header</td>
+            <td style="width: 14.0716%;">
+               <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=39160393"
+                  style="text-decoration: none;text-align: left;">MSH[General]</a>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">[{SFT}]</td>
+            <td style="width: 19.0674%;">Software</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">[ UAC ]</td>
+            <td style="width: 19.0674%;">User Authentication Credential</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">[{NTE}]</td>
+            <td style="width: 19.0674%;">Notes and Comments (for Header)</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">[</td>
+            <td style="width: 19.0674%;">--- PATIENT begin</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    PID</td>
+            <td style="width: 19.0674%;">Patient Identification</td>
+            <td style="width: 14.0716%;">
+               <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=39160396"
+                  style="text-decoration: none;text-align: left;">PID[General]</a>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">ServiceRequest.subject</td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  [PD1]</td>
+            <td style="width: 19.0674%;">Additional Demographics</td>
+            <td style="width: 14.0716%;">
+               <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=46892142"
+                  style="text-decoration: none;text-align: left;">PD1[General]</a>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">ServiceRequest.subject</td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  [{PRT}]</td>
+            <td style="width: 19.0674%;">Participation (for Patient)</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  [{NTE}]</td>
+            <td style="width: 19.0674%;">Notes and Comments (for Patient ID)</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  [{NK1}]</td>
+            <td style="width: 19.0674%;">Next of Kin/Associated Parties</td>
+            <td style="width: 14.0716%;">
+               <p style="text-align: left;">
+                  <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=40731146"
+                     style="text-decoration: none;">NK1[Patient.contact]</a>
+               </p>
+               <p style="text-align: left;">or</p>
+               <p style="text-align: left;">
+                  <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=40731212"
+                     style="text-decoration: none;">NK1[RelatedPerson]</a>
+               </p>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <p>ServiceRequest.subject.contact</p>
+               <p>or</p>
+               <p>RelatedPerson pointing to the same Patient resource as ServiceRequest.subject</p>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">[{ARV}]</td>
+            <td style="width: 19.0674%;">Access Restrictions</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  [</td>
+            <td style="width: 19.0674%;">--- PATIENT_VISIT begin</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">      PV1</td>
+            <td style="width: 19.0674%;">Patient Visit</td>
+            <td style="width: 14.0716%;">
+               <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=39160408"
+                  style="text-decoration: none;text-align: left;">PV1[General]</a>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">ServiceRequest.encounter</td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [ PV2 ]</td>
+            <td style="width: 19.0674%;">Patient Visit- Additional Info</td>
+            <td style="width: 14.0716%;">
+               <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=39160410"
+                  style="text-decoration: none;text-align: left;">
+                  <span>PV2[General]</span>
+               </a>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">ServiceRequest.encounter</td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [{PRT}]</td>
+            <td style="width: 19.0674%;">Participation (for Patient Visit)</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  ]</td>
+            <td style="width: 19.0674%;">--- PATIENT_VISIT end</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  [{</td>
+            <td style="width: 19.0674%;">--- INSURANCE begin</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">      IN1</td>
+            <td style="width: 19.0674%;">Insurance</td>
+            <td style="width: 14.0716%;">
+               <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=39160398"
+                  style="text-decoration: none;text-align: left;">IN1[General]</a>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [ IN2 ]</td>
+            <td style="width: 19.0674%;">Insurance Additional Information</td>
+            <td style="width: 14.0716%;">
+               <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=39160400"
+                  style="text-decoration: none;text-align: left;">IN2[General]</a>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [ IN3 ]</td>
+            <td style="width: 19.0674%;">Insurance Additional Information, Certification</td>
+            <td style="width: 14.0716%;">
+               <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=39160402"
+                  style="text-decoration: none;text-align: left;">IN3[General]</a>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  }]</td>
+            <td style="width: 19.0674%;">--- INSURANCE end</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  [ GT1 ]</td>
+            <td style="width: 19.0674%;">Guarantor</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  [{AL1}]</td>
+            <td style="width: 19.0674%;">Allergy Information</td>
+            <td style="width: 14.0716%;">
+               <ac:link>
+                  <ri:page ri:content-title="V2-FHIR Mapping - Segment: AL1[AllergyIntolerance]"
+                           ri:space-key="OO"/>
+                  <ac:plain-text-link-body>AL1[AllergyIntolerance]</ac:plain-text-link-body>
+               </ac:link>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">AllergyIntolerance pointing to the same Patient resource as ServiceRequest.subject</td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">]</td>
+            <td style="width: 19.0674%;">--- PATIENT end</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">{</td>
+            <td style="width: 19.0674%;">--- ORDER begin</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    ORC</td>
+            <td style="width: 19.0674%;">Common Order</td>
+            <td style="width: 14.0716%;">
+               <ac:link>
+                  <ri:page ri:content-title="V2-FHIR Mapping - Segment: ORC[General]"
+                           ri:space-key="OO"/>
+                  <ac:plain-text-link-body>ORC[ServiceRequest]</ac:plain-text-link-body>
+               </ac:link>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  [{PRT}]</td>
+            <td style="width: 19.0674%;">Participation (for Common Order)</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  [{</td>
+            <td style="width: 19.0674%;">--- TIMING begin</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">      TQ1</td>
+            <td style="width: 19.0674%;">Timing/Quantity</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [{TQ2}]</td>
+            <td style="width: 19.0674%;">Timing/Quantity Order Sequence</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  }]</td>
+            <td style="width: 19.0674%;">--- TIMING end</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">  [</td>
+            <td style="width: 19.0674%;">--- OBSERVATION_REQUEST begin</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">      OBR</td>
+            <td style="width: 19.0674%;">Observation Request</td>
+            <td style="width: 14.0716%;">
+               <ac:link>
+                  <ri:page ri:content-title="V2-FHIR Mapping - Segment: OBR[ServiceRequest]"
+                           ri:space-key="OO"/>
+                  <ac:plain-text-link-body>OBR[ServiceRequest]</ac:plain-text-link-body>
+               </ac:link>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [ TCD ]</td>
+            <td style="width: 19.0674%;">Test Code Details</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [{NTE}]</td>
+            <td style="width: 19.0674%;">Notes and Comments (for Detail) </td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [{PRT}]</td>
+            <td style="width: 19.0674%;">Participation (for Observation Request)</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [ CTD ]</td>
+            <td style="width: 19.0674%;">Contact Data</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [{DG1}]</td>
+            <td style="width: 19.0674%;">Diagnosis</td>
+            <td style="width: 14.0716%;">
+               <ac:link>
+                  <ri:page ri:content-title="V2-FHIR Mapping - Segment: DG1[Condition]"
+                           ri:space-key="OO"/>
+                  <ac:plain-text-link-body>DG1[Condition]</ac:plain-text-link-body>
+               </ac:link>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">Condition pointing to the same Patient resource as ServiceRequest.subject</td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [{</td>
+            <td style="width: 19.0674%;">--- OBSERVATION begin</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">        OBX</td>
+            <td style="width: 19.0674%;">Observation/Result</td>
+            <td style="width: 14.0716%;">
+               <ac:link>
+                  <ri:page ri:content-title="V2-FHIR Mapping - Segment: OBX[Observation]"
+                           ri:space-key="OO"/>
+                  <ac:plain-text-link-body>OBX[Observation]</ac:plain-text-link-body>
+               </ac:link>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">??</td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">      [{PRT}]</td>
+            <td style="width: 19.0674%;">Participation (for OBX)</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">      [ TCD ]</td>
+            <td style="width: 19.0674%;">Test Code Detail</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">      [{NTE}]</td>
+            <td style="width: 19.0674%;">Notes and Comments (for Results)</td>
+            <td style="width: 14.0716%;">
+               <ac:link>
+                  <ri:page ri:content-title="V2-FHIR Mapping - Segment: NTE[Annotation]"
+                           ri:space-key="OO"/>
+                  <ac:plain-text-link-body>NTE[Annotation]</ac:plain-text-link-body>
+               </ac:link>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">Observation.not</td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    }]</td>
+            <td style="width: 19.0674%;">--- OBSERVATION end</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [{</td>
+            <td style="width: 19.0674%;">--- SPECIMEN begin</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">        SPM</td>
+            <td style="width: 19.0674%;">Specimen</td>
+            <td style="width: 14.0716%;">
+               <ac:link>
+                  <ri:page ri:content-title="V2-FHIR Mapping - Segment: SPM[Specimen]"
+                           ri:space-key="OO"/>
+                  <ac:plain-text-link-body>SPM[Specimen]</ac:plain-text-link-body>
+               </ac:link>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <span style="color: rgb(23,43,77);">ServiceRequest.specimen OR [depending on sequence of specimen collection visa vis service request]</span>
+               <br style="text-align: left;"/>
+               <span style="color: rgb(23,43,77);">Specimen.request(ServiceRequest) references the appropriate ServiceRequest </span>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    [{</td>
+            <td style="width: 19.0674%;">--- SPECIMEN_OBSERVATION begin</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">        OBX</td>
+            <td style="width: 19.0674%;">Observation/Result related to specimen</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">Do we need an extension to Specimen for referencing an Observation (or maybe generic supporting information (any reference))?</td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">      [{PRT}]</td>
+            <td style="width: 19.0674%;">Participation (for Specimen Observation)</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">    }]</td>
+            <td style="width: 19.0674%;">--- SPECIMEN_OBSERVATION end</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">      [{</td>
+            <td style="width: 19.0674%;">--- CONTAINER begin</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">          SAC</td>
+            <td style="width: 19.0674%;">Specimen Container</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">Some elements of SAC may map to Specimen but is this used enough to be relevant?</td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">        [{</td>
+            <td style="width: 19.0674%;">--- CONTAINER_OBSERVATION begin</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">          OBX</td>
+            <td style="width: 19.0674%;">Observation/Result related to container</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">        [{PRT}]</td>
+            <td style="width: 19.0674%;">Participation (for Container Observation)</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">        }]</td>
+            <td style="width: 19.0674%;">--- CONTAINER_OBSERVATION end</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td style="width: 7.66028%;">      }]</td>
+            <td style="width: 19.0674%;">--- CONTAINER end</td>
+            <td style="width: 14.0716%;">
+               <br/>
+            </td>
+            <td style="width: 11.4072%;">
+               <br/>
+            </td>
+            <td style="width: 3.16403%;">
+               <br/>
+            </td>
+            <td style="width: 18.1515%;">
+               <br/>
+            </td>
+            <td style="width: 2.58118%;">
+               <br/>
+            </td>
+            <td style="width: 23.8968%;">
+               <br/>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1">    }]</td>
+            <td colspan="1">--- SPECIMEN end</td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+            <td colspan="1">
+               <br/>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <p>
+      <strong>
+         <span style="color: rgb(51,51,51);">
+            <br/>
+         </span>
+      </strong>
+   </p>
+</div>

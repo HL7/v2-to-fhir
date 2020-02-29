@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="V2-0004-to-fhir-encounter-class"/>
+	<version value="1.0" />
+	<status value="active" />
+	<experimental value="false" />
+	<publisher value="Audacious Inquiry" />
+	<contact>
+		<telecom>
+			<system value="email" />
+			<value value="kboone@ainq.com" />
+		</telecom>
+	</contact>
+	<date value="2019-04-24" />
+	<description
+		value="This concept map is used to convert codes from HL7 table 0004 to the FHIR EncounterClass codes" />
+	<copyright
+		value="[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)&#xA;This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).&#xA;It is based on original work by Keith W. Boone at Audacious Inquiry." />
+	<sourceUri value="http://hl7.org/fhir/v2/0001" />
+	<targetUri value="http://hl7.org/fhir/encounter-class" />
+	<element>
+		<code value="E" />
+		<target>
+			<code value="emergency" />
+		</target>
+	</element>
+	<element>
+		<code value="ER" />
+		<target>
+			<code value="emergency" />
+			<comments value="A commonly used code for emergency room" />
+		</target>
+	</element>
+	<element>
+		<code value="ED" />
+		<target>
+			<code value="emergency" />
+			<comments value="A commonly used code for emergency room" />
+		</target>
+	</element>
+	<element>
+		<code value="EMERGENCY" />
+		<target>
+			<code value="emergency" />
+			<comments value="A commonly used code for emergency room" />
+		</target>
+	</element>
+	<element>
+		<code value="I" />
+		<target>
+			<code value="inpatient" />
+		</target>
+	</element>
+	<element>
+		<code value="INP" />
+		<target>
+			<code value="inpatient" />
+			<comments value="A commonly used code for inpatient care" />
+		</target>
+	</element>
+	<element>
+		<code value="INPATIENT" />
+		<target>
+			<code value="inpatient" />
+			<comments value="A commonly used code for inpatient care" />
+		</target>
+	</element>
+	<element>
+		<code value="O" />
+		<target>
+			<code value="outpatient" />
+		</target>
+	</element>
+	<element>
+		<code value="OUTPATIENT" />
+		<target>
+			<code value="outpatient" />
+			<comments value="A commonly used code for outpatiennt care" />
+		</target>
+	</element>
+	<element>
+		<code value="R" />
+		<target>
+			<code value="other" />
+			<comments value="Recurring" />
+		</target>
+	</element>
+	<element>
+		<code value="P" />
+		<target>
+			<code value="other" />
+			<comments value="Preadmit" />
+		</target>
+	</element>
+	<element>
+		<code value="B" />
+		<target>
+			<code value="other" />
+			<comments value="Obstetrics" />
+		</target>
+	</element>
+	<element>
+		<code value="C" />
+		<target>
+			<code value="other" />
+			<comments value="Commercial Account" />
+		</target>
+	</element>
+	<element>
+		<code value="N" />
+		<target>
+			<code value="unknown" />
+			<comments value="Not Applicable" />
+		</target>
+	</element>
+	<element>
+		<code value="U" />
+		<target>
+			<code value="unknown" />
+		</target>
+	</element>
+</ConceptMap>

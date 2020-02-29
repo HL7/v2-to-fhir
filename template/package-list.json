@@ -1,0 +1,42 @@
+{
+  "package-id": "fhir.base.template",
+  "title": "Base template for FHIR IGs",
+  "canonical": "http://fhir.org/templates/fhir.base.template",
+  "introduction": "This is the basic template",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "https://build.fhir.org/ig/HL7/ig-template-base",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "0.1.1",
+      "desc": "Copy button, mapping folder, better overrides",
+      "path": "http://fhir.org/templates/fhir.base.template/0.1.0",
+      "status": "release",
+      "sequence": "Publications",
+      "current": true,
+      "date": "yyyy-mm-dd"
+    },
+    {
+      "version": "0.1.0",
+      "desc": "Improved error messages and vocab layout",
+      "path": "http://fhir.org/templates/fhir.base.template/0.1.0",
+      "status": "release",
+      "sequence": "Publications",
+      "current": false,
+      "date": "2020-02-17"
+    },
+    {
+      "version": "0.0.2",
+      "date": "2020-02-03",
+      "desc": "First Release",
+      "path": "http://fhir.org/templates/fhir.base.template/0.0.2",
+      "status": "release",
+      "sequence": "Publications",
+      "current": false
+    }
+  ]
+}

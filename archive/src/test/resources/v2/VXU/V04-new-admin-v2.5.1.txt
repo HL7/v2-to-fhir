@@ -1,0 +1,16 @@
+MSH|^~\&|NISTEHRAPP|NISTEHRFAC|NISTIISAPP|NISTIISFAC|20150624073733.994-0500||VXU^V04^VXU_V04|NIST-IZ-AD-1.1_Send_V04_Z22|P|2.5.1|||ER|AL|||||Z22^CDCPHINVS|NISTEHRFAC|NISTIISFAC
+PID|1||3123^^^NIST-MPI-1^MR||Richardson^Russell^Clint^^^^L|Billington^^^^^^M|20150415|M||1002-5^American Indian or Alaska Native^CDCREC|543 Blount Drive^^Bozeman^MT^59715^USA^P||^PRN^PH^^^406^5557690|||||||||2186-5^Not Hispanic or Latino^CDCREC||N|1|||||N
+PD1|||||||||||02^Reminder/recall - any method^HL70215|N|20150624|||A|20150415|20150624
+NK1|1|Richardson^Maria^Elizabeth^^^^L|MTH^Mother^HL70063|543 Blount Drive^^Bozeman^MT^59715^USA^P|^PRN^PH^^^406^5557690
+NK1|2|Richardson^John^William^^^^L|FTH^Father^HL70063|543 Blount Drive^^Bozeman^MT^59715^USA^P|^PRN^CP^^^406^5558299
+ORC|RE|3140^NIST-AA-IZ-2|38766^NIST-AA-IZ-2|||||||7824^Jackson^Lily^Suzanne^^^^^NIST-PI-1^L^^^PRN||654^Thomas^Wilma^Elizabeth^^^^^NIST-PI-1^L^^^MD|||||NISTEHRFAC^NISTEHRFacility^HL70362|
+RXA|0|1|20150624||49281-0560-05^Pentacel^NDC|0.5|mL^mL^UCUM||00^New Record^NIP001|7824^Jackson^Lily^Suzanne^^^^^NIST-PI-1^L^^^PRN|^^^NIST-Clinic-1||||526434|20150722|PMC^Sanofi Pasteur^MVX|||CP|A
+RXR|C28161^Intramuscular^NCIT|RT^Right Thigh^HL70163
+OBX|1|CE|30963-3^Vaccine Funding Source^LN|1|VXC50^Public^CDCPHINVS||||||F|||20150624
+OBX|2|CE|64994-7^Vaccine Funding Program Eligibility^LN|2|V04^VFC Eligible - American Indian/Alaska Native^HL70064||||||F|||20150624|||VXC40^per immunization^CDCPHINVS
+OBX|3|CE|69764-9^Document Type^LN|3|253088698300017211160720^Polio VIS^cdcgs1vis||||||F|||20150624
+OBX|4|DT|29769-7^Date Vis Presented^LN|3|20150624||||||F|||20150624
+OBX|5|CE|69764-9^Document Type^LN|4|253088698300006611150402^Haemophilus Influenzae type b VIS^cdcgs1vis||||||F|||20150624
+OBX|6|DT|29769-7^Date Vis Presented^LN|4|20150624||||||F|||20150624
+OBX|7|CE|69764-9^Document Type^LN|5|253088698300003511180824^Diphtheria/Tetanus/Pertussis (DTaP) VIS^cdcgs1vis||||||F|||20150624
+OBX|8|DT|29769-7^Date Vis Presented^LN|5|20150624||||||F|||20150624

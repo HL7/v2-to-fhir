@@ -1,0 +1,3225 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="V2-0001-to-fhir-administrative-gender"/>
+	<status value="active" />
+	<publisher value="Audacious Inquiry"/>
+    <contact><telecom>
+        <system value="email"/>
+        <value value="kboone@ainq.com"/>
+    </telecom></contact>
+    <date value="2019-04-24"/>
+    <description
+        value="This concept map is used to convert codes from HL7 table 0001 to the FHIR AdministrativeGender codes"/>
+    <copyright value="[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)&#xA;This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).&#xA;It is based on original work by Keith W. Boone at Audacious Inquiry."/>
+	<sourceUri value="https://www.hl7.org/V2/2-8-1" />
+	<targetUri value="https://www.hl7.org/fhir/DSTU2" />
+	<!-- Message Header and Related -->
+	<element>
+		<code value="ERR" />
+		<target>
+			<code value="MessageHeader" />
+		</target>
+		<target>
+			<code value="MessageHeader.response.details" />
+		</target>
+		<target>
+			<code value="OperationOutcome" />
+		</target>
+		<target>
+			<code value="OperationOutcome.issue" />
+		</target>
+	</element>
+	<element>
+		<code value="ERR-1" />
+		<target>
+			<code value="OperationOutcome.issue.code" />
+			<comments value="If ERR-3 not present" />
+			<dependsOn>
+				<element value="ERR-3" />
+				<code value=" " />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="OperationOutcome.issue.location" />
+			<comments value="If ERR-2 not present" />
+			<dependsOn>
+				<element value="ERR-2" />
+				<code value=" " />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="ERR-2" />
+		<target>
+			<code value="OperationOutcome.issue.location" />
+		</target>
+	</element>
+	<element>
+		<code value="ERR-3" />
+		<target>
+			<code value="OperationOutcome.issue.code" />
+		</target>
+	</element>
+	<element>
+		<code value="ERR-4" />
+		<target>
+			<code value="OperationOutcome.issue.severity" />
+		</target>
+	</element>
+	<element>
+		<code value="ERR-5" />
+		<target>
+			<code value="OperationOutcome.issue.details" />
+		</target>
+	</element>
+	<element>
+		<code value="ERR-7" />
+		<target>
+			<code value="OperationOutcome.issue.diagnostics" />
+		</target>
+	</element>
+	<element>
+		<code value="ERR-8" />
+		<target>
+			<code value="OperationOutcome.issue.diagnostics" />
+		</target>
+	</element>
+	<element>
+		<code value="ERR-12" />
+		<target>
+			<code value="OperationOutcome.issue.diagnostics" />
+		</target>
+	</element>
+	<element>
+		<code value="EVN-1" />
+		<target>
+			<code value="MessageHeader.event" />
+		</target>
+	</element>
+	<element>
+		<code value="EVN-2" />
+		<target>
+			<code value="MessageHeader.meta.lastUpdated" />
+			<comments value="(preferred)" />
+		</target>
+	</element>
+	<element>
+		<code value="EVN-4" />
+		<target>
+			<code value="MessageHeader.reason" />
+		</target>
+	</element>
+	<element>
+		<code value="EVN-5" />
+		<target>
+			<code value="MessageHeader.enterer" />
+		</target>
+	</element>
+	<element>
+		<code value="MSA" />
+		<target>
+			<code value="MessageHeader" />
+		</target>
+		<target>
+			<code value="MessageHeader.response" />
+		</target>
+	</element>
+	<element>
+		<code value="MSA-1" />
+		<target id="MSA-1">
+			<code value="MessageHeader.response.code" />
+			<comments value="(AR = transient, AE = fatal, AA = OK)" />
+			<dependsOn>
+				<code value="ConceptMap/V2-0008-to-fhir-response-code" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="MSA-2" />
+		<target>
+			<code value="MessageHeader.response.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="MSA-3" />
+		<target>
+			<code value="OperationOutcome.issue.diagnostics" />
+		</target>
+	</element>
+	<element>
+		<code value="MSA-6" />
+		<target>
+			<code value="OperationOutcome.issue.code" />
+		</target>
+	</element>
+	<element>
+		<code value="MSG-2" />
+		<target>
+			<code value="Coding.code" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH" />
+		<target>
+			<code value="MessageHeader" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-3" />
+		<target>
+			<code value="MessageHeader.source.name" />
+			<product>
+				<!--  Set default value for endpoint from name if MSH-4 not present -->
+				<element value="MessageHeader.source.endpoint"/>
+				<code value="{MessageHeader.source.name}"/>
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="MSH-4" />
+		<target>
+			<code value="MessageHeader.source.endpoint" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-5" />
+		<target>
+			<code value="MessageHeader.destination.name" />
+			<product>
+				<!--  Set default value for endpoint from name if MSH-6 not present -->
+				<element value="MessageHeader.destination.endpoint"/>
+				<code value="{MessageHeader.destination.name}"/>
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="MSH-6" />
+		<target>
+			<code value="MessageHeader.destination.endpoint" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-7" />
+		<target>
+			<code value="MessageHeader.timestamp" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-8" />
+		<target>
+			<code value="MessageHeader.meta.security.code" />
+			<product>
+				<element value="MessageHeader.meta.security.system" />
+				<code value="http://example.com/Site-specific-security-code-system" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="MSH-9" />
+		<target>
+			<code value="MessageHeader.event" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-9-2" />
+		<target>
+			<code value="MessageHeader.event.code" />
+			<product>
+				<element value="MessageHeader.event.system" />
+				<code value="http://hl7.org/fhir/v2/0003" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="MSH-10" />
+		<target>
+			<code value="MessageHeader.id" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-11-1" />
+		<target>
+			<code value="MessageHeader.meta.tag" />
+		</target>
+		<target>
+			<code value="MessageHeader.meta.tag.code" />
+			<product>
+				<element value="MessageHeader.meta.tag.system" />
+				<code value="http://hl7.org/fhir/v2/0103" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="MSH-11-2" />
+		<target>
+			<code value="MessageHeader.meta.tag" />
+		</target>
+		<target>
+			<code value="MessageHeader.meta.tag.code" />
+			<product>
+				<element value="MessageHeader.meta.tag.system" />
+				<code value="http://hl7.org/fhir/v2/0207" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="MSH-12" />
+		<target>
+			<code value="MessageHeader.meta.tag" />
+		</target>
+		<target>
+			<code value="MessageHeader.meta.tag.code" />
+			<product>
+				<element value="MessageHeader.meta.tag.system" />
+				<code value="http://hl7.org/fhir/v2/0104" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="MSH-15" />
+		<target>
+			<code value="MessageHeader.meta.tag" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-16" />
+		<target>
+			<code value="MessageHeader.meta.tag" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-17" />
+		<target>
+			<code value="MessageHeader.meta.tag" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-19" />
+		<target>
+			<code value="MessageHeader.language" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-21" />
+		<target>
+			<code value="MessageHeader.meta.profile" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-22" />
+		<target>
+			<code value="MessageHeader.responsibleOrganization" />
+		</target>
+		<target>
+			<code value="MessageHeader.responsible.display" />
+		</target>
+		<target>
+			<code value="Organization.name" />
+		</target>
+		<target>
+			<code value="MessageHeader.source.contact" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-23" />
+		<target>
+			<code value="MessageHeader.receiverOrganization" />
+		</target>
+		<target>
+			<code value="MessageHeader.receiver.display" />
+		</target>
+		<target>
+			<code value="Organization.name" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-24" />
+		<target>
+			<code value="MessageHeader.source.endpoint" />
+		</target>
+	</element>
+	<element>
+		<code value="MSH-25" />
+		<target>
+			<code value="MessageHeader.destination.endpoint" />
+		</target>
+	</element>
+	<element>
+		<code value="NTE" />
+		<target>
+			<code value="Annotation" />
+		</target>
+		<target>
+			<code value="Annotation" />
+		</target>
+		<target>
+			<code value="Condition.notes" />
+			<comments value="child of PRB" />
+		</target>
+		<target>
+			<code value="Procedure.notes" />
+		</target>
+	</element>
+	<element>
+		<code value="NTE-1" />
+		<target>
+			<code value="Annotation.id" />
+		</target>
+		<target>
+			<code value="Annotation.id" />
+		</target>
+	</element>
+	<element>
+		<code value="NTE-3" />
+		<target>
+			<code value="Annotation.text" />
+		</target>
+		<target>
+			<code value="Annotation.text" />
+		</target>
+		<target>
+			<code value="Observation.comments" />
+			<comments
+				value="(partner NTE to OBX or sometimes another (child?) OBX)" />
+		</target>
+	</element>
+	<element>
+		<code value="NTE-5" />
+		<target>
+			<code value="Annotation.authorPractitioner" />
+		</target>
+		<target>
+			<code value="Annotation.authorPractitioner.display" />
+		</target>
+		<target>
+			<code value="Practitioner" />
+		</target>
+		<target>
+			<code value="Annotation.author[x]" />
+		</target>
+	</element>
+	<element>
+		<code value="NTE-6" />
+		<target>
+			<code value="Annotation.time" />
+		</target>
+		<target>
+			<code value="Annotation.time" />
+		</target>
+	</element>
+	<element>
+		<code value="SFT-1" />
+		<target>
+			<code value="MessageHeader.source.software" />
+		</target>
+	</element>
+	<element>
+		<code value="SFT-2" />
+		<target>
+			<code value="MessageHeader.source.version" />
+		</target>
+	</element>
+	<element>
+		<code value="SFT-3" />
+		<target>
+			<code value="MessageHeader.source.software" />
+		</target>
+	</element>
+	<element>
+		<code value="SFT-4" />
+		<target>
+			<code value="MessageHeader.source.version" />
+			<comments value="(if SFT-2 empty)" />
+		</target>
+	</element>
+	<element>
+		<code value="SFT-5" />
+		<target>
+			<code value="MessageHeader.source.software" />
+			<comments value="(if SFT-3 empty)" />
+		</target>
+	</element>
+	<element>
+		<code value="SFT-6" />
+		<target>
+			<code value="MessageHeader.source.version" />
+			<comments value="(if SFT-2 and SFT-4 empty)" />
+		</target>
+	</element>
+	<element>
+		<code value="XON-1" />
+		<target>
+			<code value="Organization.name" />
+		</target>
+	</element>
+	<element>
+		<code value="XON-3" />
+		<target>
+			<code value="Organization.identifier.value" />
+			<comments value="Must be handled together" />
+		</target>
+	</element>
+	<element>
+		<code value="XON-4" />
+		<target>
+			<code value="Organization.identifier.value" />
+			<comments value="Must be handled together" />
+		</target>
+	</element>
+	<element>
+		<code value="XON-5" />
+		<target>
+			<code value="Organization.identifier.value" />
+			<comments value="Must be handled together" />
+		</target>
+	</element>
+	<element>
+		<code value="XON-6" />
+		<target>
+			<code value="Organization.identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="XON-10" />
+		<target>
+			<code value="Organization.identifier.value" />
+		</target>
+	</element>
+	<!-- Patient and Related -->
+	<element>
+		<code value="PD1-3" />
+		<target>
+			<code value="Patient.managingOrganization" />
+		</target>
+		<target>
+			<code value="Patient.managingOrganization.display" />
+		</target>
+		<target>
+			<code value="Organization.name" />
+		</target>
+	</element>
+	<element>
+		<code value="PD1-4" />
+		<target>
+			<code value="Patient.careProvider" />
+		</target>
+	</element>
+	<element>
+		<code value="PID" />
+		<target>
+			<code value="Patient" />
+			<product>
+				<!-- TODO: Move to creation for AL1 segment -->
+				<element value="AllergyIntolerance.patient" />
+				<code value="{Patient}" />
+			</product>
+			<product>
+				<!-- TODO: Move to creation for ??? segment -->
+				<element value="CarePlan.subject" />
+				<code value="{Patient}" />
+			</product>
+			<product>
+				<!-- TODO: Move to creation for ??? segment -->
+				<element value="ClinicalImpression.patient" />
+				<code value="{Patient}" />
+			</product>
+			<product>
+				<!-- TODO: Move to creation for DG1/PRB segment -->
+				<element value="Condition.patient" />
+				<code value="{Patient}" />
+			</product>
+			<product>
+				<element value="DiagnosticOrder.subject"/>
+				<code value="{Patient}"/>
+			</product>
+			<product>
+				<element value="DiagnosticReport.subjectPatient"/>
+				<code value="{Patient}" />
+				<!-- comments value="(no HL7 v2 mapping for Group or Device)" / -->
+			</product>
+			<product>
+				<element value="Encounter.patient" />
+				<code value="{Patient}" />
+			</product>
+			<product>
+				<!-- TODO: Move to creation for RXA segment in context of VXU message -->
+				<element value="Immunization.patient" />
+				<code value="{Patient}" />
+			</product>
+			<product>
+				<!-- TODO: Move to creation for ??? segment in context of ??? message -->
+				<element value="ImmunizationRecommendation.patient" />
+				<code value="{Patient}" />
+			</product>
+			<product>
+				<!-- TODO: Move to creation for PR1 segment -->
+				<element value="Procedure.subject" />
+				<code value="{Patient}" />
+			</product>
+			<product>
+				<!-- TODO: Move to creation for RF1 segment -->
+				<element value="ReferralRequest.patient" />
+				<code value="{Patient}" />
+			</product>
+			<product>
+				<!-- TODO: Move to creation for NK1 segment -->
+				<element value="RelatedPerson.patient" />
+				<code value="{Patient}" />
+			</product>
+			<product>
+				<!-- TODO: Move to creation for ARQ segment -->
+				<element value="Appointment.participant.actor" />
+				<code value="{Patient}" />
+				<!-- comments value="Patient ID List" /-->
+			</product>
+			<product>
+				<!-- TODO: Move to creation for ARQ segment -->
+				<element value="AppointmentResponse.actor" />
+				<code value="{Patient}" />
+				<!--  comments value="Patient ID List" / -->
+			</product>
+			<product>
+				<!-- TODO: Move to creation for GOL segment -->
+				<element value="Goal.subject" />
+				<code value="{Patient}" />
+				<!-- comments value="patient ID list" / -->
+			</product>
+			<product>
+				<!-- TODO: Move to creation for RXA segment in response to a medication administration event -->
+				<element value="MedicationAdministration.patient" />
+				<code value="{Patient}" />
+				<!--comments value="Patient ID List" /-->
+			</product>
+			<product>
+				<!-- TODO: Move to creation for RXD segment in response to a medication dispense event -->
+				<element value="MedicationDispense.patient" />
+				<code value="{Patient}" />
+				<!--comments value="Patient ID List" /-->
+			</product>
+			<product>
+				<!-- TODO: Move to creation for RXO segment  -->
+				<element value="MedicationOrder.patient" />
+				<code value="{Patient}" />
+				<!--comments value="Patient ID List" /-->
+			</product>
+			<product>
+				<!-- TODO: Move to creation for ARQ segment -->
+				<element value="Appointment.participant.actor" />
+				<code value="{Patient}" />
+			</product>
+			<product>
+				<!-- TODO: Move to creation for ARQ segment -->
+				<element value="Appointment.participant.type" />
+				<codeSystem
+					value="http://hl7.org/fhir/v3/ParticipationType" />
+				<code value="SBJ" />
+			</product>
+			<product>
+				<!-- TODO: Move to creation for ARQ segment -->
+				<element value="Appointment.participant.required" />
+				<code value="required" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="PID-2" />
+		<target>
+			<code value="Patient.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-2-1" />
+		<target>
+			<code value="Patient.identifier.value" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-2-4" />
+		<target>
+			<code value="Patient.identifier.system" />
+			<!-- To map via a mapping table, populate the dependsOn element as follows. 
+				<dependsOn> <code value="ConceptMap/concept-map-identifier"/> </dependsOn> -->
+			<!-- To use a fixed value, specify the product in code below <product> 
+				<element value="Patient.identifier.system"/> <code value=""/> </product> -->
+		</target>
+	</element>
+	<element>
+		<code value="PID-2-5" />
+		<target>
+			<code value="Patient.identifier.type.coding.code" />
+			<product>
+				<element value="Patient.identifier.type.coding.system" />
+				<code value="http://hl7.org/fhir/v2/0203" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="PID-3" />
+		<target>
+			<code value="Patient.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-3-4" />
+		<target>
+			<code value="Patient.identifier.system" />
+			<!-- To map via a mapping table, populate the dependsOn element as follows. 
+				<dependsOn> <code value="ConceptMap/concept-map-identifier"/> </dependsOn> -->
+			<!-- To use a fixed value, specify the product in code below <product> 
+				<element value="Patient.identifier.system"/> <code value=""/> </product> -->
+		</target>
+	</element>
+	<element>
+		<code value="PID-3-5" />
+		<target>
+			<code value="Patient.identifier.type.coding.code" />
+			<product>
+				<element value="Patient.identifier.type.coding.system" />
+				<code value="http://hl7.org/fhir/v2/0203" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="PID-5" />
+		<target>
+			<code value="Patient.name" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-7" />
+		<target>
+			<code value="Patient.birthDate" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-8" />
+		<target>
+			<code value="Patient.gender" />
+			<dependsOn>
+				<code
+					value="ConceptMap/V2-0001-to-fhir-administrative-gender" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="PID-9" />
+		<target>
+			<code value="Patient.name" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-11" />
+		<target>
+			<code value="Patient.address" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-13" />
+		<target>
+			<code value="Patient.telecom" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-14" />
+		<target>
+			<code value="Patient.telecom" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-15" />
+		<target>
+			<code value="Patient.communication.language" />
+			<product>
+				<element value="Patient.communication.preferred" />
+				<code value="true" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="PID-16" />
+		<target>
+			<code value="Patient.maritalStatus" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-24" />
+		<target>
+			<code value="Patient.multipleBirthBoolean" />
+			<comments value="(bool)" />
+			<dependsOn>
+				<code value="ConceptMap/V2-0136-to-fhir-boolean" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="PID-25" />
+		<target>
+			<code value="Patient.multipleBirthInteger" />
+			<comments value="(integer)" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-29" />
+		<target>
+			<code value="Patient.deceasedDateTime" />
+		</target>
+	</element>
+	<element>
+		<code value="PID-30" />
+		<target>
+			<code value="Patient.deceasedBoolean" />
+			<comments value="(bool)" />
+			<dependsOn>
+				<code value="ConceptMap/V2-0136-to-fhir-boolean" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="PID-40" />
+		<target>
+			<code value="Patient.telecom" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1" />
+		<target>
+			<code value="Encounter" />
+			<product>
+				<element value="Encounter.status" />
+				<code value="in-progress" />
+				<!--comments value="Set value in case PV1-45 not set"/-->
+			</product>
+			<product>
+				<!-- Move to Creation code for RXA segment in context of immunization -->
+				<element value="Immunization.encounter" />
+				<code value="{Encounter}" />
+			</product>
+			<product>
+				<element value="DiagnosticOrder.encounter"/>
+				<code value="{Encounter}"/>
+			</product>
+			<product>
+				<element value="DiagnosticReport.encounter" />
+				<code value="{Encounter}" />
+			</product>
+			<product>
+				<!-- Move to Creation code for PR1 segment -->
+				<element value="Procedure.encounter" />
+				<code value="{Encounter}" />
+			</product>
+			<product>
+				<!-- Move to Creation code for RF1 segment -->
+				<element value="ReferralRequest.encounter" />
+				<code value="{Encounter}" />
+			</product>
+			<product>
+				<!-- Move to Creation code for SG1/PRB segment -->
+				<element value="Condition.encounter" />
+				<code value="{Encounter}" />
+			</product>
+			<product>
+				<!-- Move to Creation code for RXA/RXG segment -->
+				<element value="MedicationAdministration.encounter" />
+				<code value="{Encounter}" />
+			</product>
+			<product>
+				<!-- Move to Creation code for RXO segment -->
+				<element value="MedicationOrder.encounter" />
+				<code value="{Encounter}" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="PV1-2" />
+		<target>
+			<code value="Encounter.class" />
+			<dependsOn>
+				<code
+					value="ConceptMap/V2-0004-to-fhir-encounter-class" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="PV1-3" />
+		<target>
+			<code value="Encounter.location.location" />
+		</target>
+		<target>
+			<code value="Encounter.location.location.display" />
+		</target>
+		<target>
+			<code value="Location"/>
+		</target>
+		<target>
+			<code value="Location.name" />
+			<comments
+				value="For now, we will process using Field() defaulting" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-4" />
+		<target>
+			<code value="Encounter.type" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-5" />
+		<target>
+			<code value="Encounter.hospitalization.preAdmissionIdentifier" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-6" />
+		<target>
+			<code value="Encounter.location.location" />
+		</target>
+		<target>
+			<code value="Encounter.location.location.display" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-7" />
+		<target>
+			<code value="Practitioner.practitionerRole.role" />
+		</target>
+		<target>
+			<code value="Procedure.performer.role" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-8" />
+		<target>
+			<code value="Practitioner.practitionerRole.role" />
+		</target>
+		<target>
+			<code value="Procedure.performer.role" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-9" />
+		<target>
+			<code value="Practitioner.practitionerRole.role" />
+		</target>
+		<target>
+			<code value="Procedure.performer.role" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-10" />
+		<target>
+			<code value="Encounter.serviceProvider" />
+		</target>
+		<target>
+			<code value="Organization"/>
+			<comments value="If PV1-10 is empty, create an 'Unknown' Organization"/>
+			<dependsOn>
+				<code value="{}"/>
+			</dependsOn>
+			<product>
+				<element value="Organization.name"/>
+				<code value="Unknown"/>
+			</product>
+		</target>
+		<target>
+			<code value="Organization.name"/>
+		</target>
+	</element>
+	<element>
+		<code value="PV1-11" />
+		<target>
+			<code value="Encounter.location.location" />
+		</target>
+		<target>
+			<code value="Encounter.location.location.display" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-13" />
+		<target>
+			<code value="Encounter.hospitalization.reAdmission" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-14" />
+		<target>
+			<code value="Encounter.hospitalization.admitSource" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-15" />
+		<target>
+			<code value="Encounter.hospitalization.specialArrangement" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-16" />
+		<target>
+			<code value="Encounter.hospitalization.specialCourtesy" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-17" />
+		<target>
+			<code value="Practitioner.practitionerRole.role" />
+		</target>
+		<target>
+			<code value="Procedure.performer.role" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-18" />
+		<target>
+			<code value="Encounter.type" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-19" />
+		<target>
+			<code value="Encounter.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-36" />
+		<target>
+			<code value="Encounter.hospitalization.dischargeDisposition" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-37" />
+		<target>
+			<code value="Encounter.hospitalization.destination" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-38" />
+		<target>
+			<code value="Encounter.hospitalization.dietPreference" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-42" />
+		<target>
+			<code value="Encounter.location.location" />
+			<product>
+				<element value="Encounter.location.status" />
+				<code value="planned"/>
+			</product>
+		</target>
+		<target>
+			<code value="Encounter.location.location.display"/>
+		</target>
+	</element>
+	<element>
+		<code value="PV1-43" />
+		<target>
+			<code value="Encounter.location.location" />
+		</target>
+		<target>
+			<code value="Encounter.location.location.display"/>
+		</target>
+	</element>
+	<element>
+		<code value="PV1-44" />
+		<target>
+			<code value="Encounter.period.start" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-45" />
+		<target>
+			<code value="Encounter.period.end" />
+			<product>
+				<element value="Encounter.status" />
+				<code value="finished" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="PV1-53" />
+		<target>
+			<code value="Encounter.episodeOfCare" />
+		</target>
+	</element>
+	<element>
+		<code value="PV1-54" />
+		<target>
+			<code value="Encounter.episodeOfCare" />
+		</target>
+	</element>
+	<element>
+		<code value="PV2-3" />
+		<target>
+			<code value="Encounter.reason" />
+		</target>
+	</element>
+	<element>
+		<code value="PV2-16" />
+		<target>
+			<code value="Encounter.status" />
+		</target>
+	</element>
+	<element>
+		<code value="PV2-24" />
+		<target>
+			<code value="Encounter.status" />
+		</target>
+	</element>
+	<element>
+		<code value="PV2-25" />
+		<target>
+			<code value="Encounter.priority" />
+		</target>
+	</element>
+	<!-- Data Types -->
+	<element>
+		<code value="AD" />
+		<target>
+			<code value="Address" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-1" />
+		<target>
+			<code value="Address.line" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-2" />
+		<target>
+			<code value="Address.line" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-3" />
+		<target>
+			<code value="Address.city" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-4" />
+		<target>
+			<code value="Address.state" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-5" />
+		<target>
+			<code value="Address.postalCode" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-6" />
+		<target>
+			<code value="Address.country" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-7" />
+		<target>
+			<code value="Address.use" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-8" />
+		<target>
+			<code value="Address.district" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-12" />
+		<target>
+			<code value="Address.period" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-13" />
+		<target>
+			<code value="Address.period.start" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-14" />
+		<target>
+			<code value="Address.period.end" />
+		</target>
+	</element>
+	<element>
+		<code value="AD-18" />
+		<target>
+			<code value="Address.type" />
+		</target>
+	</element>
+	<element>
+		<code value="CE" />
+		<target>
+			<code value="CodeableConcept" />
+		</target>
+		<target>
+			<code value="Coding" />
+		</target>
+	</element>
+	<element>
+		<code value="CE-1" />
+		<target>
+			<code value="CodeableConcept.coding.code" />
+		</target>
+		<target>
+			<code value="Coding.code" />
+		</target>
+	</element>
+	<element>
+		<code value="CE-2" />
+		<target>
+			<code value="CodeableConcept.coding.display" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+	</element>
+	<element>
+		<code value="CE-3" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>			
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CE-4" />
+		<target>
+			<code value="CodeableConcept.coding.code" />
+		</target>
+		<target>
+			<code value="Coding.code" />
+		</target>
+	</element>
+	<element>
+		<code value="CE-5" />
+		<target>
+			<code value="CodeableConcept.coding.display" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+	</element>
+	<element>
+		<code value="CE-6" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CF" />
+		<target>
+			<code value="CodeableConcept" />
+		</target>
+		<target>
+			<code value="CodeableConcept" />
+		</target>
+	</element>
+	<element>
+		<code value="CF-1" />
+		<target>
+			<code value="CodeableConcept.coding.code" />
+		</target>
+		<target>
+			<code value="Coding.code" />
+		</target>
+	</element>
+	<element>
+		<code value="CF-2" />
+		<target>
+			<code value="CodeableConcept.coding.display" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+	</element>
+	<element>
+		<code value="CF-3" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CF-4" />
+		<target>
+			<code value="CodeableConcept.coding.code" />
+		</target>
+		<target>
+			<code value="Coding.code" />
+		</target>
+	</element>
+	<element>
+		<code value="CF-5" />
+		<target>
+			<code value="CodeableConcept.coding.display" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+	</element>
+	<element>
+		<code value="CF-6" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CN" />
+		<target>
+			<code value="HumanName" />
+		</target>
+		<target>
+			<code value="Identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="CN-1" />
+		<target>
+			<code value="Identifier.value" />
+		</target>
+	</element>
+	<element>
+		<code value="CN-2-1" />
+		<target>
+			<code value="HumanName.family" />
+		</target>
+	</element>
+	<element>
+		<code value="CN-3" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="CN-4" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="CN-5" />
+		<target>
+			<code value="HumanName.suffix" />
+		</target>
+	</element>
+	<element>
+		<code value="CN-6" />
+		<target>
+			<code value="HumanName.prefix" />
+		</target>
+	</element>
+	<element>
+		<code value="CN-7" />
+		<target>
+			<code value="HumanName.suffix" />
+		</target>
+	</element>
+	<element>
+		<code value="CN-8" />
+		<target>
+			<code value="Identifier.type" />
+		</target>
+	</element>
+	<element>
+		<code value="CN-9" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE" />
+		<target>
+			<code value="CodeableConcept" />
+		</target>
+		<target>
+			<code value="Coding" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE-1" />
+		<target>
+			<code value="CodeableConcept.coding.code" />
+		</target>
+		<target>
+			<code value="Coding.code" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE-2" />
+		<target>
+			<code value="CodeableConcept.coding.display" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE-3" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CNE-4" />
+		<target>
+			<code value="CodeableConcept.coding.code" />
+		</target>
+		<target>
+			<code value="Coding.code" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE-5" />
+		<target>
+			<code value="CodeableConcept.coding.display" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE-6" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CNE-7" />
+		<target>
+			<code value="CodeableConcept.coding.version" />
+		</target>
+		<target>
+			<code value="Coding.version" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE-8" />
+		<target>
+			<code value="CodeableConcept.coding.version" />
+		</target>
+		<target>
+			<code value="Coding.version" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE-9" />
+		<target>
+			<code value="CodeableConcept.text" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+		<target>
+			<code value="CodeableConcept.text" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE-10" />
+		<target>
+			<code value="CodeableConcept.coding.code" />
+		</target>
+		<target>
+			<code value="Coding.code" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE-11" />
+		<target>
+			<code value="CodeableConcept.coding.display" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE-12" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CNE-13" />
+		<target>
+			<code value="CodeableConcept.coding.version" />
+		</target>
+	</element>
+	<element>
+		<code value="CNE-14" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CNE-17" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CNE-20" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CNN" />
+		<target>
+			<code value="HumanName" />
+		</target>
+		<target>
+			<code value="Identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="CNN-1" />
+		<target>
+			<code value="Identifier.value" />
+		</target>
+	</element>
+	<element>
+		<code value="CNN-2-1" />
+		<target>
+			<code value="HumanName.family" />
+		</target>
+	</element>
+	<element>
+		<code value="CNN-3" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="CNN-4" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="CNN-5" />
+		<target>
+			<code value="HumanName.suffix" />
+		</target>
+	</element>
+	<element>
+		<code value="CNN-6" />
+		<target>
+			<code value="HumanName.prefix" />
+		</target>
+	</element>
+	<element>
+		<code value="CNN-7" />
+		<target>
+			<code value="HumanName.suffix" />
+		</target>
+	</element>
+	<element>
+		<code value="CNN-8" />
+		<target>
+			<code value="Identifier.type" />
+		</target>
+	</element>
+	<element>
+		<code value="CNN-9" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="CNN-10" />
+		<target>
+			<code value="Identifier.system" />
+			<comments value="Both must be valued" />
+		</target>
+	</element>
+	<element>
+		<code value="CNN-11" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="CWE" />
+		<target>
+			<code value="CodeableConcept" />
+			<comments value="TODO: This needs work b/c of multiple codings in CWE"/>
+		</target>
+		<target>
+			<code value="Coding" />
+			<comments value="TODO: This needs work b/c of multiple codings in CWE"/>
+		</target>
+	</element>
+	<element>
+		<code value="CWE-1" />
+		<target>
+			<code value="CodeableConcept.coding.code" />
+		</target>
+		<target>
+			<code value="Coding.code" />
+		</target>
+	</element>
+	<element>
+		<code value="CWE-2" />
+		<target>
+			<code value="CodeableConcept.coding.display" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+	</element>
+	<element>
+		<code value="CWE-3" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CWE-4" />
+		<target>
+			<code value="CodeableConcept.coding.code" />
+		</target>
+		<target>
+			<code value="Coding.code" />
+		</target>
+	</element>
+	<element>
+		<code value="CWE-5" />
+		<target>
+			<code value="CodeableConcept.coding.display" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+	</element>
+	<element>
+		<code value="CWE-6" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CWE-7" />
+		<target>
+			<code value="CodeableConcept.coding.version" />
+		</target>
+		<target>
+			<code value="Coding.version" />
+		</target>
+	</element>
+	<element>
+		<code value="CWE-8" />
+		<target>
+			<code value="CodeableConcept.coding.version" />
+		</target>
+		<target>
+			<code value="Coding.version" />
+		</target>
+	</element>
+	<element>
+		<code value="CWE-9" />
+		<target>
+			<code value="CodeableConcept.text" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+		<target>
+			<code value="CodeableConcept.text" />
+			<comments value="If display is empty?" />
+		</target>
+	</element>
+	<element>
+		<code value="CWE-10" />
+		<target>
+			<code value="CodeableConcept.coding.code" />
+		</target>
+		<target>
+			<code value="Coding.code" />
+		</target>
+	</element>
+	<element>
+		<code value="CWE-11" />
+		<target>
+			<code value="CodeableConcept.coding.display" />
+		</target>
+		<target>
+			<code value="Coding.display" />
+		</target>
+	</element>
+	<element>
+		<code value="CWE-12" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CWE-14" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CWE-17" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CWE-20" />
+		<target>
+			<code value="CodeableConcept.coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Coding.system" />
+			<dependsOn>
+				<code value="ConceptMap/LocalCodingSystemNames" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="CX" />
+		<target>
+			<code value="Identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="CX-1" />
+		<target>
+			<code value="Identifier.value" />
+		</target>
+	</element>
+	<element>
+		<code value="CX-2" />
+		<target>
+			<code value="Identifier.value" />
+		</target>
+	</element>
+	<element>
+		<code value="CX-3" />
+		<target>
+			<code value="Identifier.value" />
+		</target>
+	</element>
+	<element>
+		<code value="CX-4" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="CX-5" />
+		<target>
+			<code value="Identifier.type" />
+		</target>
+	</element>
+	<element>
+		<code value="CX-6" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="CX-7" />
+		<target>
+			<code value="Identifier.period.start" />
+		</target>
+	</element>
+	<element>
+		<code value="CX-8" />
+		<target>
+			<code value="Identifier.period.end" />
+		</target>
+	</element>
+	<element>
+		<code value="CX-9" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="CX-10" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="EI" />
+		<target>
+			<code value="Identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="EI-1" />
+		<target>
+			<code value="Identifier.value" />
+		</target>
+	</element>
+	<element>
+		<code value="EI-2" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="EI-3" />
+		<target>
+			<code value="Identifier.system" />
+			<comments value="Both must be valued" />
+		</target>
+	</element>
+	<element>
+		<code value="EI-4" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="ID" />
+		<target>
+			<code value="CodeableConcept" />
+		</target>
+		<target>
+			<code value="Coding" />
+		</target>
+		<target>
+			<code value="CodeableConcept" />
+		</target>
+		<target>
+			<code value="Code" />
+		</target>
+	</element>
+	<element>
+		<code value="IS" />
+		<target>
+			<code value="CodeableConcept" />
+		</target>
+	</element>
+	<element>
+		<code value="MSG" />
+		<target>
+			<code value="Coding.code" />
+			<product>
+				<element value="Coding.system" />
+				<code value="http://hl7.org/fhir/v2/0003" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="NM" />
+		<target>
+			<code value="Quantity.value" />
+		</target>
+	</element>
+	<element>
+		<code value="PN" />
+		<target>
+			<code value="HumanName" />
+		</target>
+	</element>
+	<element>
+		<code value="PN-1-1" />
+		<target>
+			<code value="HumanName.family" />
+		</target>
+	</element>
+	<element>
+		<code value="PN-2" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="PN-3" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="PN-4" />
+		<target>
+			<code value="HumanName.suffix" />
+		</target>
+	</element>
+	<element>
+		<code value="PN-5" />
+		<target>
+			<code value="HumanName.prefix" />
+		</target>
+	</element>
+	<element>
+		<code value="PN-6" />
+		<target>
+			<code value="HumanName.suffix" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN" />
+		<target>
+			<code value="HumanName" />
+		</target>
+		<target>
+			<code value="Identifier" />
+		</target>
+		<target>
+			<code value="Reference" />
+			<comments value="Disambiguate using PNN-13" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-1" />
+		<target>
+			<code value="Identifier.value" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-2-1" />
+		<target>
+			<code value="HumanName.family" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-3" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-4" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-5" />
+		<target>
+			<code value="HumanName.suffix" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-6" />
+		<target>
+			<code value="HumanName.prefix" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-7" />
+		<target>
+			<code value="HumanName.suffix" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-9" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-10" />
+		<target>
+			<code value="HumanName.use" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-11" />
+		<target>
+			<code value="Identifier.value" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-12" />
+		<target>
+			<code value="Identifier.value" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-13" />
+		<target>
+			<code value="Identifier.type" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-17" />
+		<target>
+			<code value="HumanName.period" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-19" />
+		<target>
+			<code value="HumanName.period.end" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-20" />
+		<target>
+			<code value="HumanName.period.start" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-22" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="PPN-23" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="PT" />
+		<target>
+			<code value="Coding" />
+		</target>
+	</element>
+	<element>
+		<code value="ST" />
+		<target>
+			<code value="Coding.code" />
+		</target>
+		<target>
+			<code value="Resource.id" />
+			<comments value="copy" />
+		</target>
+	</element>
+	<element>
+		<code value="VID" />
+		<target>
+			<code value="Coding" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD" />
+		<target>
+			<code value="Address" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-1" />
+		<target>
+			<code value="Address.line" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-2" />
+		<target>
+			<code value="Address.line" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-3" />
+		<target>
+			<code value="Address.city" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-4" />
+		<target>
+			<code value="Address.state" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-5" />
+		<target>
+			<code value="Address.postalCode" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-6" />
+		<target>
+			<code value="Address.country" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-7" />
+		<target>
+			<code value="Address.use" />
+			<dependsOn>
+				<code value="ConceptMap/V2-0190-to-fhir-address-use" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="XAD-8" />
+		<target>
+			<code value="Address.line" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-9" />
+		<target>
+			<code value="Address.district" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-12" />
+		<target>
+			<code value="Address.period" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-13" />
+		<target>
+			<code value="Address.period.start" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-14" />
+		<target>
+			<code value="Address.period.end" />
+		</target>
+	</element>
+	<element>
+		<code value="XAD-18" />
+		<target>
+			<code value="Address.type" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN" />
+		<target>
+			<code value="HumanName" />
+		</target>
+		<target>
+			<code value="Identifier" />
+		</target>
+		<target>
+			<code value="ReferencePractitioner" />
+			<comments value="Disambiguate using XCN-13" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-1" />
+		<target>
+			<code value="Identifier.value" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-2-1" />
+		<target>
+			<code value="HumanName.family" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-3" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-4" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-5" />
+		<target>
+			<code value="HumanName.suffix" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-6" />
+		<target>
+			<code value="HumanName.prefix" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-7" />
+		<target>
+			<code value="HumanName.suffix" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-9" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-10" />
+		<target>
+			<code value="HumanName.use" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-13" />
+		<target>
+			<code value="Identifier.type" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-17" />
+		<target>
+			<code value="HumanName.period" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-19" />
+		<target>
+			<code value="HumanName.period.end" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-20" />
+		<target>
+			<code value="HumanName.period.start" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-22" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="XCN-23" />
+		<target>
+			<code value="Identifier.system" />
+		</target>
+	</element>
+	<element>
+		<code value="XON" />
+		<target>
+			<code value="ReferenceOrganization" />
+		</target>
+		<target>
+			<code value="Organization" />
+		</target>
+	</element>
+	<element>
+		<code value="XPN" />
+		<target>
+			<code value="HumanName" />
+		</target>
+	</element>
+	<element>
+		<code value="XPN-1-1" />
+		<target>
+			<code value="HumanName.family" />
+		</target>
+	</element>
+	<element>
+		<code value="XPN-1-2" />
+		<target>
+			<code value="HumanName.family" />
+		</target>
+	</element>
+	<element>
+		<code value="XPN-2" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="XPN-3" />
+		<target>
+			<code value="HumanName.given" />
+		</target>
+	</element>
+	<element>
+		<code value="XPN-5" />
+		<target>
+			<code value="HumanName.prefix" />
+		</target>
+	</element>
+	<element>
+		<code value="XPN-7" />
+		<target>
+			<code value="HumanName.use" />
+		</target>
+	</element>
+	<element>
+		<code value="XPN-10" />
+		<target>
+			<code value="HumanName.period" />
+		</target>
+	</element>
+	<element>
+		<code value="XPN-12" />
+		<target>
+			<code value="HumanName.period.end" />
+		</target>
+	</element>
+	<element>
+		<code value="XPN-13" />
+		<target>
+			<code value="HumanName.period.start" />
+		</target>
+	</element>
+	<element>
+		<code value="XPN-15" />
+		<target>
+			<code value="HumanName.given" />
+			<comments
+				value="When present, this is a second human name giving the &quot;nickname&quot;" />
+		</target>
+		<target>
+			<code value="HumanName.use" />
+			<comments value="use=&quot;nickname&quot;" />
+		</target>
+		<target>
+			<code value="HumanName" />
+		</target>
+	</element>
+	<element>
+		<code value="TXA" />
+		<!--  NOTE: TXA does not have to map to DiagnosticReport b/c MDM_T02 already does -->
+		<target>
+			<code value="DiagnosticReport.performerPractitioner" />
+			<comments value="If TXA-5 doesn't exist, we need to create an unknown practitioner"/>
+			<dependsOn>
+				<element value="TXA-5"/>
+				<code value="{}"/>
+			</dependsOn>
+			<product>
+				<element value="Practitioner.id"/>
+				<code value="Practitioner/Unknown"/>
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="TXA-2"/>
+		<target>
+			<code value="DiagnosticReport.code"/>
+		</target>
+	</element>
+	<element>
+		<code value="TXA-4"/>
+		<target>
+			<code value="DiagnosticReport.effectiveDateTime"/>
+		</target>
+	</element>
+	<element>
+		<code value="TXA-5"/>
+		<target>
+			<code value="Practitioner"/>
+		</target>
+	</element>
+	<element>
+		<code value="TXA-6"/>
+		<target>
+			<code value="DiagnosticReport.issued"/>
+		</target>
+	</element>
+	<!-- Observation and Diagnotic Reporting Rules -->
+	<element>
+		<code value="OBR" />
+		<target>
+			<code value="Practitioner"/>
+			<comments value="If OBR-32-1 doesn't exist, we need to create an unknown practitioner"/>
+			<dependsOn>
+				<element value="OBR-32-1"/>
+				<code value="{}"/>
+			</dependsOn>
+			<product>
+				<element value="Practitioner.id"/>
+				<code value="Practitioner/Unknown"/>
+			</product>
+			<product>
+				<element value="DiagnosticReport.performerPractitioner"/>
+				<code value="{Practitioner}"/>
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="MDM_T02" />
+		<target>
+			<code value="DiagnosticReport" />
+			<product>
+				<element value="DiagnosticReport.status" />
+				<code value="final" />
+				<!--comments value="Set default status in case OBR-25 not set" /-->
+			</product>			
+		</target>
+		<target>
+			<code value="DiagnosticReport.presentedForm"/>
+			<product>
+				<element value="DiagnosticReport.presentedForm.contentType"/>
+				<code value="text/plain"/>
+			</product>
+		</target>
+	</element>	
+	<element>
+		<code value="OBR-2" />
+		<target>
+			<code value="DiagnosticOrder.identifier" />
+		</target>
+		<target>
+			<code value="DiagnosticReport.requestDiagnosticOrder" />
+		</target>
+		<target>
+			<code value="Procedure.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-3" />
+		<target>
+			<code value="DiagnosticOrder.identifier" />
+		</target>
+		<target>
+			<code value="DiagnosticReport.requestDiagnosticOrder" />
+		</target>
+		<target>
+			<code value="Procedure.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-4" />
+		<target>
+			<code value="CodeableConcept" />
+			<product>
+				<element value="DiagnosticOrder.item.code" />
+				<code value="{CodeableConcept}"/>
+			</product>
+			<product>
+				<element value="DiagnosticReport.code"/>
+				<code value="{CodeableConcept}"/>
+			</product>
+			<product>
+				<element value="ReferralRequest.serviceRequested"/>
+				<code value="{CodeableConcept}"/>
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="OBR-5" />
+		<target>
+			<code value="DiagnosticOrder.priority" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-6" />
+		<target>
+			<code value="DiagnosticOrder.event.status" />
+			<comments value="requested" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-7" />
+		<target>
+			<code value="DiagnosticReport.effectiveDateTime" />
+		</target>
+		<target>
+			<code value="Procedure.performed[x]" />
+		</target>
+		<target>
+			<code value="ReferralRequest.fulfillmentTime" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-8" />
+		<target>
+			<code value="ReferralRequest.fulfillmentTime" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-13" />
+		<target>
+			<code value="DiagnosticOrder.supportingInformationCondition" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-16" />
+		<target>
+			<code value="DiagnosticOrder.orderer" />
+		</target>
+		<target>
+			<code value="Order.sourcePractitioner" />
+		</target>
+		<target>
+			<code value="Practitioner.practitionerRole.role" />
+		</target>
+		<target>
+			<code value="Procedure.performer.role" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-18" />
+		<target>
+			<code value="DiagnosticOrder.note.text" />
+			<comments value="Must also produce note" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-19" />
+		<target>
+			<code value="DiagnosticOrder.note.text" />
+			<comments value="Must also produce note" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-20" />
+		<target>
+			<code value="DiagnosticOrder.note.text" />
+			<comments value="Must also produce note" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-21" />
+		<target>
+			<code value="DiagnosticOrder.note.text" />
+			<comments value="Must also produce note" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-22" />
+		<target>
+			<code value="DiagnosticReport.issued" />
+		</target>
+		<target>
+			<code value="DiagnosticReport.issued" />
+			<dependsOn>
+				<code value="{}"/>
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="OBR-24" />
+		<target>
+			<code value="DiagnosticReport.category.coding.code" />
+			<product>
+				<element value="DiagnosticReport.category.coding.system" />
+				<code value="http://hl7.org/fhir/v2/0074" />
+			</product>
+		</target>
+		<target>
+			<code value="DiagnosticReport.category" />
+			<comments value="Set a default value for code if not present"/>
+			<dependsOn>
+				<code value="{}"/>
+			</dependsOn>
+			<product>
+				<element value ="DiagnosticReport.category.coding" />
+				<codeSystem value="http://hl7.org/fhir/v2/0074" />
+				<code value="LAB"/>
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="OBR-25" />
+		<target>
+			<code value="DiagnosticReport.status" />
+			<comments value="(not 1:1 mapping)" />
+			<dependsOn>
+				<code
+					value="ConceptMap/V2-0123-to-fhir-diagnostic-report-status" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="OBR-31" />
+		<target>
+			<code value="DiagnosticOrder.reason" />
+		</target>
+		<target>
+			<code value="MessageHeader.reason" />
+			<comments value="reason for study" />
+		</target>
+		<target>
+			<code value="Order.reason[x]" />
+			<comments value="0.2" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-32-1"/>
+		<target>
+			<code value="DiagnosticReport.performerPractitioner"/>
+			<comments value="If there is an OBR-32-1, then we need practitioner"/>
+		</target>
+		<target>
+			<code value="DiagnosticReport.performer.display"/>
+		</target>
+	</element>
+	<element>
+		<code value="OBR-33-1"/>
+		<target>
+			<code value="DiagnosticReport.performerPractitioner"/>
+			<comments value="If there is an OBR-33-1, then we need practitioner"/>	
+		</target>
+		<target>
+			<code value="DiagnosticReport.performer.display"/>
+		</target>
+	</element>
+	<element>
+		<code value="OBR-39" />
+		<target>
+			<code value="Specimen.collection.comment" />
+			<comments value="Must also produce note" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-44" />
+		<target>
+			<code value="DiagnosticOrder.item.code" />
+		</target>
+		<target>
+			<code value="Procedure.code" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-45" />
+		<target>
+			<code value="DiagnosticOrder.item.code" />
+			<comments value="As modifier qualifier " />
+		</target>
+		<target>
+			<code value="Procedure.code" />
+		</target>
+	</element>
+	<element>
+		<code value="OBR-51" />
+		<target>
+			<code value="DiagnosticReport.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="ORU_R01"/>
+		<!--  The following items must live in the scope of the message
+			  for persistence after the segment that creates it has gone out
+			  of scope.
+		  -->
+		<target><code value="Patient"/></target>
+		<target><code value="Encounter"/></target>
+	</element>
+	<element>
+		<!--  This should be PATIENT_RESULT, but was ORDER_OBSERVATION -->
+		<!--  Each result is related to both a DiagnosticReport and a DiagnosticOrder
+			  Each ORC in the Result is somehow related to an item in the order
+			  Each OBR in the Result is somehow related to an item in the order
+		 -->
+		<code value="PATIENT_RESULT" />
+		<target>
+			<code value="DiagnosticOrder" />
+		</target>
+		<target>
+			<code value="DiagnosticReport"/>
+			<product>
+				<element value="DiagnosticReport.request" />
+				<code value="{DiagnosticOrder}" />
+			</product>
+			<product>
+				<!-- Set the issued time of the report to the default value from the message header
+					to deal with cases where there is no OBR-22.
+				 -->
+				<element value="DiagnosticReport.issued" />
+				<code value="{MessageHeader.timestamp}"/>
+			</product>
+			<product>
+				<element value="DiagnosticReport.status" />
+				<code value="final" />
+				<!--comments value="Set default status in case OBR-25 not set" /-->
+			</product>
+		</target>
+		<target>
+			<code value="DiagnosticReport.presentedForm" />
+			<product>
+				<element value="DiagnosticReport.presentedForm.contentType"/>
+				<code value="text/plain"/>
+			</product>
+		</target>
+	</element>
+	<element>
+		<!--  Each result is related to both a DiagnosticReport and a DiagnosticOrder
+			  Each ORC in the Result is somehow related to an item in the order
+			  Each OBR in the Result is somehow related to an item in the order
+		 -->
+		<code value="ORDER_OBSERVATION" />
+		<target>
+			<code value="DiagnosticOrder.item"/>
+		</target>
+	</element>
+	<element>
+		<code value="OBSERVATION" />
+		<target>
+			<code value="Observation" />
+			<product>
+				<!-- Some OBX segments do not report a code, but code is required in Observation,
+					 thus, we default to a No Information value from V2 to allow these kinds of observations
+					 to be expressed in FHIR.
+				-->
+				<element value="Observation.code.coding"/>
+				<code value="NI"/>
+				<codeSystem value="http://hl7.org/fhir/v3/NullFlavor"/>
+			</product>
+			<product>
+				<element value="Observation.subject"/>
+				<code value="{Patient}"/>
+			</product>
+			<product>
+				<element value="Observation.issued"/>
+				<code value="{DiagnosticReport.issued}"/>
+			</product>
+			<product>
+				<element value="Observation.encounter" />
+				<code value="{Encounter}" />
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="OBX-2" />
+		<target>
+			<!-- TODO: Dependency handling -->
+			<code value="Observation.meta.tag.code" />
+		</target>
+	</element>
+	<element>
+		<code value="OBX-3" />
+		<target>
+			<code value="Observation.code" />
+			<comments value="observation identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="OBX-5" />
+		<target>
+			<code value="Observation.valueQuantity" />
+			<dependsOn>
+				<element value="OBX-2"/>
+				<code value="NM"/>
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Observation.valueCodeableConcept" />
+			<dependsOn>
+				<element value="OBX-2"/>
+				<code value="ValueSet/V2-obx2-coded-types"/>
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Observation.valueString" />
+			<dependsOn>
+				<element value="OBX-2"/>
+				<code value="ValueSet/V2-obx2-string-types"/>
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="OBX-6" />
+		<target>
+			<code value="Observation.valueQuantity.unit" />
+			<comments value="Report unit as found in message"/>
+			<dependsOn>
+				<element value="OBX-2"/>
+				<code value="NM"/>
+			</dependsOn>
+		</target>
+		<target>
+			<code value="Observation.valueQuantity.code" />
+			<comments value="Report code mapping OBX-6 via mapping table"/>
+			<dependsOn>
+				<code value="ConceptMap/V2-isoplus-to-ucum" />
+			</dependsOn>
+			<dependsOn>
+				<element value="OBX-2"/>
+				<code value="NM"/>
+			</dependsOn>
+			<product>
+				<element value="Observation.valueQuantity.system" />
+				<code value="http://unitsofmeasure.org"/>
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="OBX-7" />
+		<target>
+			<code value="Observation.referenceRange.text" />
+		</target>
+	</element>
+	<element>
+		<code value="OBX-8" />
+		<target>
+			<code value="Observation.interpretation.coding.code" />
+			<comments value="interpretation codes" />
+			<product>
+				<element value="Observation.interpretation.coding.system"/>
+				<code value="http://hl7.org/fhir/v2/0078"/>
+			</product>
+		</target>
+		<target>
+			<code value="DiagnosticReport.meta.tag.code"/>
+			<comments value="Copy interpretation codes to the DiagnosticReport resource"/>
+			<product>
+				<element value="DiagnosticReport.meta.tag.system"/>
+				<code value="http://hl7.org/fhir/v2/0078"/>
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="OBX-10" />
+		<target>
+			<code value="Observation.referenceRange.meaning" />
+			<comments value="?" />
+		</target>
+	</element>
+	<element>
+		<code value="OBX-11" />
+		<target>
+			<code value="Observation.status" />
+			<dependsOn>
+				<code
+					value="ConceptMap/V2-0085-to-fhir-observation-status" />
+			</dependsOn>
+		</target>
+	</element>
+	<element>
+		<code value="OBX-14" />
+		<target>
+			<code value="Observation.effectiveDateTime" />
+			<comments
+				value="-date or OBX-19 after v2.4 (depends on who observation made)" />
+		</target>
+	</element>
+	<element>
+		<code value="OBX-15" />
+		<target>
+			<code value="Observation.performerOrganization" />
+		</target>
+		<target>
+			<code value="Observation.performer.display" />
+		</target>
+		<target>
+			<code value="Organization.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="OBX-16" />
+		<target>
+			<code value="Observation.performerPractitioner" />
+		</target>
+		<target>
+			<code value="Observation.performer.display"/>
+		</target>
+		
+		<target>
+			<code value="Practitioner" />
+		</target>
+	</element>
+	<element>
+		<code value="OBX-17" />
+		<target>
+			<code value="Observation.device" />
+		</target>
+		<target>
+			<code value="Observation.method" />
+		</target>
+	</element>
+	<element>
+		<code value="OBX-18" />
+		<target>
+			<code value="Observation.deviceDevice" />
+		</target>
+		<target>
+			<code value="Device.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="OBX-20" />
+		<target>
+			<code value="BodySite.code" />
+		</target>
+		<target>
+			<code value="Observation.bodySite" />
+		</target>
+		<target>
+			<code value="Observation.bodySite" />
+			<comments value="observation site" />
+		</target>
+		<target>
+			<code value="Procedure.bodySite" />
+		</target>
+	</element>
+	<element>
+		<code value="OBX-21" />
+		<target>
+			<code value="Observation.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="OBX-23" />
+		<target>
+			<code value="Observation.performerOrganization" />
+		</target>
+		<target>
+			<code value="Observation.performer.display"/>
+		</target>
+		<target>
+			<code value="Organization.name" />
+		</target>
+		<!-- TODO: Should check for duplications in input file and ignore them -->
+	</element>
+	<element>
+		<code value="OBX-25" />
+		<target>
+			<code value="Procedure.performer.role" />
+		</target>
+	</element>
+	<element>
+		<code value="ORC"/>
+		<target>
+			<code value="DiagnosticOrder" />
+			<comments value="Create a diagnostic order to represent certain components of ORC"/>
+			<product>
+				<element value="DiagnosticOrder.subject"/>
+				<code value="{Patient}"/>
+			</product>
+			<product>
+				<element value="DiagnosticOrder.encounter"/>
+				<code value="{Encounter}"/>
+			</product>
+		</target>
+	</element>
+	<element>
+		<code value="ORC-2" />
+		<target>
+			<code value="DiagnosticOrder.identifier" />
+		</target>
+		<target>
+			<code value="DiagnosticReport.requestDiagnosticOrder" />
+		</target>
+		<target>
+			<code value="Procedure.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="ORC-3" />
+		<target>
+			<code value="DiagnosticOrder.identifier" />
+		</target>
+		<target>
+			<code value="DiagnosticReport.requestDiagnosticOrder" />
+		</target>
+		<target>
+			<code value="Procedure.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="ORC-9" />
+		<target>
+			<code value="Order.date" />
+		</target>
+	</element>
+	<element>
+		<code value="ORC-10" />
+		<target>
+			<code value="MessageHeader.enterer" />
+		</target>
+	</element>
+	<element>
+		<code value="ORC-12" />
+		<target>
+			<code value="DiagnosticOrder.orderer" />
+		</target>
+		<target>
+			<code value="MessageHeader.responsiblePractitioner" />
+		</target>
+		<target>
+			<code value="Order.sourcePractitioner" />
+		</target>
+		<target>
+			<code value="Practitioner.practitionerRole.role" />
+		</target>
+		<target>
+			<code value="Procedure.performer.role" />
+		</target>
+	</element>
+	<element>
+		<code value="ORC-14" />
+		<target>
+			<code value="ContactPoint" />
+			<comments value="But we don't know where this will go." />
+		</target>
+	</element>
+	<element>
+		<code value="ORC-16" />
+		<target>
+			<code value="MessageHeader.reason" />
+		</target>
+		<target>
+			<code value="DiagnosticOrder.reason" />
+		</target>
+		<target>
+			<code value="Order.reasonCodeableConcept" />
+			<comments value="0.2" />
+		</target>
+	</element>
+	<element>
+		<code value="ORC-19" />
+		<target>
+			<code value="MessageHeader.author" />
+		</target>
+		<target>
+			<code value="Procedure.performer.actor" />
+		</target>
+	</element>
+	<element>
+		<code value="ORC-21" />
+		<target>
+			<code value="Organization.name" />
+			<comments value="If we get an organization, we need an organization to put it in" />
+		</target>
+	</element>
+	<element>
+		<code value="ORC-22" />
+		<target>
+			<code value="Organization.telecom" />
+			<comments value="If we get a telephone number, we need an organization to put it in" />
+		</target>
+	</element>
+	<element>
+		<code value="ORC-23" />
+		<target>
+			<code value="Organization.address" />
+			<comments value="If we get a address, we need an organization to put it in" />
+		</target>
+	</element>
+	<element>
+		<code value="ORC-24" />
+		<target>
+			<code value="Practitioner.address" />
+		</target>
+	</element>
+	<element>
+		<code value="SAC-16" />
+		<target>
+			<code value="Specimen.container.capacity" />
+			<comments value=", SAC 17 and SAC 20, or SAC 21 and SAC 20" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM" />
+		<target>
+			<code value="Specimen"/>
+			<product>
+				<element value="Specimen.subject" />
+				<code value="{Patient}" />
+			</product>
+		</target>
+		<target>
+			<code value="DiagnosticReport.specimen" />
+		</target>
+		<target>
+			<code value="DiagnosticOrder.item.specimen" />
+		</target>
+		<target>
+			<code value="Observation.specimen" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-2" />
+		<target>
+			<code value="Specimen.identifier" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-4" />
+		<target>
+			<code value="Specimen.type" />
+			<comments value="and possibly SPM-5" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-6" />
+		<target>
+			<code value="Specimen.treatment.additive" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-7" />
+		<target>
+			<code value="Specimen.collection.method" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-8" />
+		<target>
+			<code value="Specimen.collection.bodySite" />
+		</target>
+	</element>
+		<element>
+		<code value="SPM-9" />
+		<target>
+			<code value="Specimen.collection.bodySite" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-12" />
+		<target>
+			<code value="Specimen.collection.quantity" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-14" />
+		<target>
+			<code value="Specimen.collection" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-17" />
+		<target>
+			<code value="Specimen.collection.collectedDateTime" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-18" />
+		<target>
+			<code value="Specimen.receivedTime" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-20" />
+		<target>
+			<code value="Specimen.status" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-27" />
+		<target>
+			<code value="Specimen.container.type" />
+		</target>
+	</element>
+	<element>
+		<code value="SPM-30" />
+		<target>
+			<code value="Specimen.accessionIdentifier" />
+			<comments value="(v2.7+)" />
+		</target>
+	</element>
+</ConceptMap>

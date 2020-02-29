@@ -1,0 +1,78 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <name value="HL7 Version 2 Model Elements"/>
+   <title value="HL7 Version 2 Model Elements"/>
+   <status value="draft"/>
+   <experimental value="true"/>
+   <date value="2019-05-05T04:52:17-04:00"/>
+   <publisher value="Health Level 7 International, Inc."/>
+   <contact>
+      <name value="Keith W. Boone"/>
+      <telecom>
+         <system value="email"/>
+         <value value="kboone@ainq.com"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="This code system defines HL7 Version 2 Model Elements used for Version 2 to FHIR Translation&#xa;This subset addresses model elements used for conversion of V2-FHIR Mapping - Datatype: CP&#xa;Source data can be found at https://confluence.hl7.org/pages/viewpage.action?pageId=37388301"/>
+   <copyright value="Copyright (c) Health Level 7 International, Inc."/>
+   <caseSensitive value="false"/>
+   <compositional value="false"/>
+   <content value="fragment"/>
+   <property>
+      <code value="Low"/>
+      <description value="Low value for cardinality"/>
+      <type value="integer"/>
+   </property>
+   <property>
+      <code value="High"/>
+      <description value="High value for cardinality, set to 2147483647 if unbounded"/>
+      <type value="integer"/>
+   </property>
+   <property>
+      <code value="DataType"/>
+      <description value="The V2 Datatype assigned to this model element"/>
+      <type value="code"/>
+   </property>
+   <concept>
+      <code value="There doesn't seem to be a single data type that includes all the concepts in CP The Money amount may also be represented as a Quantity, using the MoneyQuantity constraint sqty-1 Presumably the mappings would be Quantity"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Straw Recommendation: Deprecate from V2, do not map to FHIR in this context"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="the code data doesn't give all the data elements as CWE the type of unit would be represented in both the low and high range elements"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+</CodeSystem>

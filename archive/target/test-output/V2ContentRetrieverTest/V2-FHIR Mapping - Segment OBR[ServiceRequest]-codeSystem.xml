@@ -1,0 +1,179 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <name value="HL7 Version 2 Model Elements"/>
+   <title value="HL7 Version 2 Model Elements"/>
+   <status value="draft"/>
+   <experimental value="true"/>
+   <date value="2019-05-05T04:52:25-04:00"/>
+   <publisher value="Health Level 7 International, Inc."/>
+   <contact>
+      <name value="Keith W. Boone"/>
+      <telecom>
+         <system value="email"/>
+         <value value="kboone@ainq.com"/>
+         <use value="work"/>
+      </telecom>
+   </contact>
+   <description value="This code system defines HL7 Version 2 Model Elements used for Version 2 to FHIR Translation&#xa;This subset addresses model elements used for conversion of V2-FHIR Mapping - Segment: OBR[ServiceRequest]&#xa;Source data can be found at https://confluence.hl7.org/pages/viewpage.action?pageId=49644438"/>
+   <copyright value="Copyright (c) Health Level 7 International, Inc."/>
+   <caseSensitive value="false"/>
+   <compositional value="false"/>
+   <content value="fragment"/>
+   <property>
+      <code value="Low"/>
+      <description value="Low value for cardinality"/>
+      <type value="integer"/>
+   </property>
+   <property>
+      <code value="High"/>
+      <description value="High value for cardinality, set to 2147483647 if unbounded"/>
+      <type value="integer"/>
+   </property>
+   <property>
+      <code value="DataType"/>
+      <description value="The V2 Datatype assigned to this model element"/>
+      <type value="code"/>
+   </property>
+   <concept>
+      <code value="Considering purpose of OBR-8, need to further refine boundaries of what is put into collectionPeriod"/>
+      <display value=", creatanine clearance."/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Clarify the choice depends on whether the specimen is collected first and then a service request is made OR service request is made and then the specimen is collected"/>
+      <display value="If OBR-11 = &quot;P&quot; then that can be used to determine whether to start with ServiceRequest or create a Specimen first."/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Clarify the choice depends on whether the specimen is collected first and then a service request is made OR service request is made and then the specimen is collected"/>
+      <display value="If OBR-11 = &quot;P&quot; then that can be used to determine whether to start with ServiceRequest or create a Specimen first."/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Needs to be fully mapped"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Would be defined as part of an implementation guide"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Needs to be decomposed before we can proceed"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Follow ORC-12"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Extension?  Provenance? PractitionerRole"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Is there any real need to have different note types for Placer Field 1 and 2?"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="Is there any real need to have different note types for FillerField 1 and 2?"/>
+      <property>
+         <code value="Low"/>
+         <valueInteger value="0"/>
+      </property>
+      <property>
+         <code value="High"/>
+         <valueInteger value="1"/>
+      </property>
+      <property>
+         <code value="DataType"/>
+      </property>
+   </concept>
+</CodeSystem>

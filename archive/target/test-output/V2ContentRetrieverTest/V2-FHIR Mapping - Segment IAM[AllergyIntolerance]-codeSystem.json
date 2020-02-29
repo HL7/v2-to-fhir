@@ -1,0 +1,689 @@
+{
+  "resourceType": "CodeSystem",
+  "name": "HL7 Version 2 Model Elements",
+  "title": "HL7 Version 2 Model Elements",
+  "status": "draft",
+  "experimental": true,
+  "date": "2019-05-05T04:52:21-04:00",
+  "publisher": "Health Level 7 International, Inc.",
+  "contact": [
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "This code system defines HL7 Version 2 Model Elements used for Version 2 to FHIR Translation\nThis subset addresses model elements used for conversion of V2-FHIR Mapping - Segment: IAM[AllergyIntolerance]\nSource data can be found at https://confluence.hl7.org/pages/viewpage.action?pageId=44499802",
+  "copyright": "Copyright (c) Health Level 7 International, Inc.",
+  "caseSensitive": false,
+  "compositional": false,
+  "content": "fragment",
+  "property": [
+    {
+      "code": "Low",
+      "description": "Low value for cardinality",
+      "type": "integer"
+    },
+    {
+      "code": "High",
+      "description": "High value for cardinality, set to 2147483647 if unbounded",
+      "type": "integer"
+    },
+    {
+      "code": "DataType",
+      "description": "The V2 Datatype assigned to this model element",
+      "type": "code"
+    }
+  ],
+  "concept": [
+    {
+      "code": "This field doesn't warrant mapping",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The FHIR table has a \"required\" binding",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "medication",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "food",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "<none>",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "<none>",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "environment",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "environment",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "environment",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "environment",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "AllergyIntolerance",
+      "display": "Consider using AllergyIntolerance.criticality",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "severe",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "moderate",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "mild",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "<none>",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Mapping from a string to a code is likely not possible",
+      "display": "If so, the severity will like be used in all iterations.",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "It might be overkill to populate both ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "allergy",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "intolerance",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The description of IAM-11 more closely matches that of ",
+      "display": "onset is possible too",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This assumes that \"asserting\" and \"reporting\" mean the same thing",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This assumes that \"asserting\" and \"reporting\" mean the same thing",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "AllergyIntolerance",
+      "display": ") has an extensible value set which could be used to distinguish Pending, Suspect, Unconfirmed and Doubts Raised",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "FHIR",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "unconfirmed",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "unconfirmed?",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "unconfirmed?",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "confirmedplus ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "confirmedplus ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "entered-in-error",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "unconfirmed?",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "AllergyIntolerance",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Can it be assumed that the organization sending the message is responsible for providing the allergy/intolerance information?",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "AllergyIntolerance",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "See comment for IAM-23",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "There are multiple fields about who contributed data, but this seems like the best fit for ",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "See comment for IAM-23",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?><ORU_R01 xmlns="urn:hl7-org:v2xml">
+    <MSH>
+        <MSH.1>|</MSH.1>
+        <MSH.2>^~\&amp;</MSH.2>
+        <MSH.3>
+            <HD.1>NIST Test Lab APP</HD.1>
+        </MSH.3>
+        <MSH.4>
+            <HD.1>NIST Lab Facility</HD.1>
+        </MSH.4>
+        <MSH.6>
+            <HD.1>NIST EHR Facility</HD.1>
+        </MSH.6>
+        <MSH.7>
+            <TS.1>20150926140551</TS.1>
+        </MSH.7>
+        <MSH.9>
+            <MSG.1>ORU</MSG.1>
+            <MSG.2>R01</MSG.2>
+            <MSG.3>ORU_R01</MSG.3>
+        </MSH.9>
+        <MSH.10>NIST-LOI_5.0_1.1-NG</MSH.10>
+        <MSH.11>
+            <PT.1>T</PT.1>
+        </MSH.11>
+        <MSH.12>
+            <VID.1>2.5.1</VID.1>
+        </MSH.12>
+        <MSH.15>AL</MSH.15>
+        <MSH.16>AL</MSH.16>
+    </MSH>
+    <ORU_R01.PATIENT_RESULT>
+        <ORU_R01.PATIENT>
+            <PID>
+                <PID.1>1</PID.1>
+                <PID.3>
+                    <CX.1>PATID5421</CX.1>
+                    <CX.4>
+                        <HD.1>NIST MPI</HD.1>
+                    </CX.4>
+                    <CX.5>MR</CX.5>
+                </PID.3>
+                <PID.5>
+                    <XPN.1>
+                        <FN.1>Wilson</FN.1>
+                    </XPN.1>
+                    <XPN.2>Patrice</XPN.2>
+                    <XPN.3>Natasha</XPN.3>
+                    <XPN.7>L</XPN.7>
+                </PID.5>
+                <PID.7>
+                    <TS.1>19820304</TS.1>
+                </PID.7>
+                <PID.8>F</PID.8>
+                <PID.10>
+                    <CE.1>2106-3</CE.1>
+                    <CE.2>White</CE.2>
+                    <CE.3>HL70005</CE.3>
+                </PID.10>
+                <PID.11>
+                    <XAD.1>
+                        <SAD.1>144 East 12th Street</SAD.1>
+                    </XAD.1>
+                    <XAD.3>Los Angeles</XAD.3>
+                    <XAD.4>CA</XAD.4>
+                    <XAD.5>90012</XAD.5>
+                    <XAD.7>H</XAD.7>
+                </PID.11>
+                <PID.13>
+                    <XTN.2>PRN</XTN.2>
+                    <XTN.3>PH</XTN.3>
+                    <XTN.6>203</XTN.6>
+                    <XTN.7>2290210</XTN.7>
+                </PID.13>
+                <PID.22>
+                    <CE.1>N</CE.1>
+                    <CE.2>Not Hispanic or Latino</CE.2>
+                    <CE.3>HL70189</CE.3>
+                </PID.22>
+            </PID>
+        </ORU_R01.PATIENT>
+        <ORU_R01.ORDER_OBSERVATION>
+            <ORC>
+                <ORC.1>NW</ORC.1>
+                <ORC.2>
+                    <EI.1>ORD448811</EI.1>
+                    <EI.2>NIST EHR</EI.2>
+                </ORC.2>
+                <ORC.3>
+                    <EI.1>R-511</EI.1>
+                    <EI.2>NIST Lab Filler</EI.2>
+                </ORC.3>
+                <ORC.9>
+                    <TS.1>20120628070100</TS.1>
+                </ORC.9>
+                <ORC.12>
+                    <XCN.1>5742200012</XCN.1>
+                    <XCN.2>
+                        <FN.1>Radon</FN.1>
+                    </XCN.2>
+                    <XCN.3>Nicholas</XCN.3>
+                    <XCN.9>
+                        <HD.1>NPI</HD.1>
+                    </XCN.9>
+                    <XCN.10>L</XCN.10>
+                    <XCN.13>NPI</XCN.13>
+                </ORC.12>
+            </ORC>
+            <OBR>
+                <OBR.1>1</OBR.1>
+                <OBR.2>
+                    <EI.1>ORD448811</EI.1>
+                    <EI.2>NIST EHR</EI.2>
+                </OBR.2>
+                <OBR.3>
+                    <EI.1>R-511</EI.1>
+                    <EI.2>NIST Lab Filler</EI.2>
+                </OBR.3>
+                <OBR.4>
+                    <CE.1>1000</CE.1>
+                    <CE.2>Hepatitis A B C Panel</CE.2>
+                    <CE.3>99USL</CE.3>
+                </OBR.4>
+                <OBR.7>
+                    <TS.1>20120628070100</TS.1>
+                </OBR.7>
+                <OBR.16>
+                    <XCN.1>5742200012</XCN.1>
+                    <XCN.2>
+                        <FN.1>Radon</FN.1>
+                    </XCN.2>
+                    <XCN.3>Nicholas</XCN.3>
+                    <XCN.9>
+                        <HD.1>NPI</HD.1>
+                    </XCN.9>
+                    <XCN.10>L</XCN.10>
+                    <XCN.13>NPI</XCN.13>
+                </OBR.16>
+            </OBR>
+            <ORU_R01.OBSERVATION>
+                <OBX>
+                    <OBX.1>1</OBX.1>
+                    <OBX.2>CWE</OBX.2>
+                    <OBX.3>
+                        <CE.1>22314-9</CE.1>
+                        <CE.2>Hepatitis A virus IgM Ab [Presence] in Serum</CE.2>
+                        <CE.3>LN</CE.3>
+                        <CE.4>HAVM</CE.4>
+                        <CE.5>Hepatitis A IgM antibodies (IgM anti-HAV)</CE.5>
+                        <CE.6>L</CE.6>
+                    </OBX.3>
+                    <OBX.5>
+                        <CWE.1>260385009</CWE.1>
+                        <CWE.2>Negative (qualifier value)</CWE.2>
+                        <CWE.3>SCT</CWE.3>
+                        <CWE.4>NEG</CWE.4>
+                        <CWE.5>NEGATIVE</CWE.5>
+                        <CWE.6>L</CWE.6>
+                        <CWE.7>201509USEd</CWE.7>
+                        <CWE.9>Negative (qualifier value)</CWE.9>
+                    </OBX.5>
+                    <OBX.7>Negative</OBX.7>
+                    <OBX.8>N</OBX.8>
+                    <OBX.11>F</OBX.11>
+                    <OBX.14>
+                        <TS.1>20150925</TS.1>
+                    </OBX.14>
+                    <OBX.19>
+                        <TS.1>201509261400</TS.1>
+                    </OBX.19>
+                </OBX>
+            </ORU_R01.OBSERVATION>
+            <ORU_R01.OBSERVATION>
+                <OBX>
+                    <OBX.1>2</OBX.1>
+                    <OBX.2>CWE</OBX.2>
+                    <OBX.3>
+                        <CE.1>20575-7</CE.1>
+                        <CE.2>Hepatitis A virus Ab [Presence] in Serum</CE.2>
+                        <CE.3>LN</CE.3>
+                        <CE.4>HAVAB</CE.4>
+                        <CE.5>Hepatitis A antibodies (anti-HAV)</CE.5>
+                        <CE.6>L</CE.6>
+                    </OBX.3>
+                    <OBX.5>
+                        <CWE.1>260385009</CWE.1>
+                        <CWE.2>Negative (qualifier value)</CWE.2>
+                        <CWE.3>SCT</CWE.3>
+                        <CWE.4>NEG</CWE.4>
+                        <CWE.5>NEGATIVE</CWE.5>
+                        <CWE.6>L</CWE.6>
+                        <CWE.7>201509USEd</CWE.7>
+                        <CWE.9>Negative (qualifier value)</CWE.9>
+                    </OBX.5>
+                    <OBX.7>Negative</OBX.7>
+                    <OBX.8>N</OBX.8>
+                    <OBX.11>F</OBX.11>
+                    <OBX.14>
+                        <TS.1>20150925</TS.1>
+                    </OBX.14>
+                    <OBX.19>
+                        <TS.1>201509261400</TS.1>
+                    </OBX.19>
+                </OBX>
+            </ORU_R01.OBSERVATION>
+            <ORU_R01.OBSERVATION>
+                <OBX>
+                    <OBX.1>3</OBX.1>
+                    <OBX.2>NM</OBX.2>
+                    <OBX.3>
+                        <CE.1>22316-4</CE.1>
+                        <CE.2>Hepatitis B virus core Ab [Units/volume] in Serum</CE.2>
+                        <CE.3>LN</CE.3>
+                        <CE.4>HBcAbQ</CE.4>
+                        <CE.5>Hepatitis B core antibodies (anti-HBVc) Quant</CE.5>
+                        <CE.6>L</CE.6>
+                    </OBX.3>
+                    <OBX.5>0.70</OBX.5>
+                    <OBX.6>
+                        <CE.1>[IU]/mL</CE.1>
+                        <CE.2>international unit per milliliter</CE.2>
+                        <CE.3>UCUM</CE.3>
+                        <CE.4>IU/ml</CE.4>
+                        <CE.6>L</CE.6>
+                    </OBX.6>
+                    <OBX.7>&lt;0.50 IU/mL</OBX.7>
+                    <OBX.8>H</OBX.8>
+                    <OBX.11>F</OBX.11>
+                    <OBX.14>
+                        <TS.1>20150925</TS.1>
+                    </OBX.14>
+                    <OBX.19>
+                        <TS.1>201509261400</TS.1>
+                    </OBX.19>
+                </OBX>
+            </ORU_R01.OBSERVATION>
+        </ORU_R01.ORDER_OBSERVATION>
+    </ORU_R01.PATIENT_RESULT>
+</ORU_R01>

@@ -1,0 +1,222 @@
+{
+  "resourceType": "CodeSystem",
+  "name": "HL7 Version 2 Model Elements",
+  "title": "HL7 Version 2 Model Elements",
+  "status": "draft",
+  "experimental": true,
+  "date": "2019-05-05T04:52:18-04:00",
+  "publisher": "Health Level 7 International, Inc.",
+  "contact": [
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "This code system defines HL7 Version 2 Model Elements used for Version 2 to FHIR Translation\nThis subset addresses model elements used for conversion of V2-FHIR Mapping - Data Types: DR\nSource data can be found at https://confluence.hl7.org/pages/viewpage.action?pageId=37913897",
+  "copyright": "Copyright (c) Health Level 7 International, Inc.",
+  "caseSensitive": false,
+  "compositional": false,
+  "content": "fragment",
+  "property": [
+    {
+      "code": "Low",
+      "description": "Low value for cardinality",
+      "type": "integer"
+    },
+    {
+      "code": "High",
+      "description": "High value for cardinality, set to 2147483647 if unbounded",
+      "type": "integer"
+    },
+    {
+      "code": "DataType",
+      "description": "The V2 Datatype assigned to this model element",
+      "type": "code"
+    }
+  ],
+  "concept": [
+    {
+      "code": "This element defines the date from which an access restriction commences until the date it is specifically rescinded",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This field contains the date/time or date/time range of the transaction",
+      "display": "To specify a single point in time, only the first component is valued. When the second component is valued, the field specifies a time interval during which the transaction took place",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "The date and time when the specimen was acquired from the source",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This field contains the date and time that the appointment is requested to begin, in the form of a date/time range",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This field contains the date range during which assertion of the relationship took place",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This field contains the period the staff member started and ended membership in the professional organization",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This field contains the date range when the academic degree program took place",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This field contains the date range during which the staff member participated in the academic degree program",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This field contains the date range in which the practitioner started and ended working at the specific organization unit in the specific practicing specialty category",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "This field contains the period during which the staff person started and ended the relationship specified in STF-33 Institution Relationship Type Code",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    },
+    {
+      "code": "Begin and end of billing period",
+      "property": [
+        {
+          "code": "Low",
+          "valueInteger": 0
+        },
+        {
+          "code": "High",
+          "valueInteger": 1
+        },
+        {
+          "code": "DataType"
+        }
+      ]
+    }
+  ]
+}
