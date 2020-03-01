@@ -195,73 +195,49 @@ When mapping from HL7 v2 messages to FHIR Resources, there are a number of cases
 <th>Binding</th>
 <th>v2/FHIR Cardinality</th>
 <th>Comments</th></tr></thead>
-<thead class="tableFloatingHeader" style="display: none;"><tr class="tablesorter-headerRow">
-<th>FHIR Data Type</th>
-<th>Binding</th>
-<th>v2/FHIR Cardinality</th>
-<th>Comments</th></tr></thead>
-<tbody>code</td>
-<td>Required or Preferred</td>
-<td>0..1/1..1</td>
+<thead>
+<tr><th>FHIR Data Type</th><th>Binding</th><th>v2/FHIR Cardinality</th><th>Comments</th></tr></thead>
+<tbody><tr><td rowspan='2'>code</td><td rowspan='2'>Required or Preferred</td><td>0..1/1..1</td>
 <td><p>As the vocabulary is not the same, and the values are fixed in the FHIR Schema, the only way to record the original code is to attach it to an extension.&nbsp;</p><p>Preferred bindings are ONLY used with the code data type in Resource.language, and these should be treated as if they were required bindings.</p></td></tr>
 <tr>
-<td></td>
-<td></td>
 <td>0..*/1..*</td>
 <td>This combination is rarely used in FHIR, only for FHIR definition or conformance resources and CoverageEligibilityRequest and CoverageEligibilityResponse, and so is not applicable to V2 conversion.</td></tr>
 <tr>
-<td>Coding</td>
+<td rowspan='5'>Coding</td>
 <td>Required</td>
 <td>0..1/1..1/0..*/1..*</td>
 <td>This combination is not presently used in FHIR</td>
 <td>When there is a singular coding allow to a required or preferred term</td></tr>
 <tr>
-<td><br></td>
-<td>Preferred</td>
+<td rowspan='2'>Preferred</td>
 <td>0..1/1..1</td>
-<td><br></td></tr>
+<td>&#xA0;</td></tr>
 <tr>
-<td><br></td>
-<td><br></td>
 <td>0..*/1..*</td>
-<td><br></td></tr>
+<td>&#xA0;</td>
+</tr>
 <tr>
-<td><br></td>
-<td>Extensible</td>
+<td rowspan='2'>Extensible</td>
 <td>0..1/1..1</td>
-<td><br></td></tr>
+<td>&#xA0;</td></tr>
 <tr>
-<td><br></td>
-<td><br></td>
 <td>0..*/1..*</td>
 <td><p>Only applicable to AuditEvent.entity.securityLabel, AuditEvent.source.type, AuditEvent.subtype, Consent.provision.class, Consent.provision.purpose, Consent.provision.securityLabel,&nbsp;ImagingStudy.modality, and StructureDefinition.keyword</p><p><br></p></td></tr>
 <tr>
-<td>CodableConcept</td>
-<td>Required</td>
-<td>0..1</td>
-<td><br></td></tr>
+<td rowspan='6'>CodableConcept</td><td rowspan='2'>Required</td><td>0..1</td><td>&#xA0;</td></tr>
 <tr>
-<td><br></td>
-<td><br></td>
 <td>0..*/1..1/1..*</td>
 <td>This combination is not presently used in FHIR</td></tr>
 <tr>
-<td><br></td>
-<td>Preferred</td>
+<td rowspan='2'>Preferred</td>
 <td>0..1/1..1</td>
-<td><br></td></tr>
 <tr>
-<td><br></td>
-<td><br></td>
 <td>0..*/1..*</td>
-<td><br></td></tr>
+<td>&#xA0;</td></tr>
 <tr>
-<td><br></td>
-<td>Extensible</td>
+<td rowspan='2'>Extensible</td>
 <td>0..1/1..1</td>
-<td><br></td></tr>
+<td>&#xA0;</td></tr>
 <tr>
-<td><br></td>
-<td><br></td>
 <td>0..*/1..*</td>
-<td><br></td></tr></tbody></table>
+<td>&#xA0;</td></tr></tbody></table>
