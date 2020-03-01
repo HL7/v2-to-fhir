@@ -1,13 +1,12 @@
-## Introduction
 The mappings for this round of review are documented and published using a spreadsheet style format.  This format allows for easy, side-by-side editing and review of from=to mappings with supporting information.  At the same time, the content must be computable enabling a mapping engine to ingest the mappings to populate their base mappings for subsequent refinement.
 
 To this end, the infrastructure is based on a number of FHIR ConceptMap profiles to capture the relevant data for message structure, segment, data type, and vocabulary mappings.  Until such time that tools are available to directly edit the ConceptMaps, Google Spreadsheets are used to capture the mappings and populate the ConceptMaps in gitHub at regular intervals.  Regardless of the tools used, as the displayed format will be spreadsheet style, we refer to the mappings as mapping spreadsheets.
 
 The following provides a review for each of the types of spreadsheets the mapping and supporting information capture.
 
-## Mapping Spreadsheets
+### Mapping Spreadsheets
 
-### General Format/Approach
+#### General Format/Approach
 * Regardless of the mapping spreadsheet, the spreadsheet is organized into three sections:
   * HL7 v2
      * The v2 elements being mapped.
@@ -32,7 +31,7 @@ The following provides a review for each of the types of spreadsheets the mappin
 
 * A condition includes the following statements:
    * If computable, both a condition using:
-       * the following easy to read syntax (referenced as Computable ANTLR - further documented here: [ANTLR Condition Syntax](antlrconditionsyntax.md))
+       * the following easy to read syntax (referenced as Computable ANTLR - further documented here: [ANTLR Condition Syntax](antlr_condition_syntax.md))
 ```
         IF X EQUALS "A"
         IF X NOT EQUALS
@@ -53,7 +52,7 @@ The following provides a review for each of the types of spreadsheets the mappin
         IF X LST.COUNT LESS THAN OR EQUALS
 ```
 
-    * The FHIRpath syntax (referenced as Computable FHIRpath) https://www.hl7.org/fhir/fhirpath.html)
+    * The [FHIRpath syntax](https://www.hl7.org/fhir/fhirpath.html) (referenced as Computable FHIRpath)
   * If not computable or in addition to the computable condition further non-computable conditions must be considered as well (referenced as Narrative).
 
 * [n] Notation
@@ -67,7 +66,7 @@ The following provides a review for each of the types of spreadsheets the mappin
 
 * Each mapping row includes comments to document any considerations for the mapping that can aid in further refining the mappings for local use.
 
-### Message Spreadsheet
+#### Message Spreadsheet
 
 * HL7 v2
    * Sort Order
@@ -103,7 +102,7 @@ The following provides a review for each of the types of spreadsheets the mappin
       * Used to establish attributes involved in referencing the row at hand and a resource created/updated elsewhere in the message when converting the v2 message to a bundle of FHIR resources.
 
 
-### Segment Spreadsheet
+#### Segment Spreadsheet
 * HL7 v2
    * Sort Order
       * See above
@@ -134,7 +133,7 @@ The following provides a review for each of the types of spreadsheets the mappin
    * Vocabulary Mapping
       * The URL to the Vocabulary Map that is to be used for the coded element for this attribute.
 
-### Data Type Spreadsheet
+#### Data Type Spreadsheet
 * HL7 v2
    * Sort Order
       * See above
@@ -170,7 +169,7 @@ The following provides a review for each of the types of spreadsheets the mappin
    * Vocabulary Mapping
       * The URL to the Vocabulary Map that is to be used for the coded element for this attribute.
 
-### Code System Spreadsheet
+#### Code System Spreadsheet
 * HL7 v2
    * Sort Order
        * See above
@@ -189,13 +188,6 @@ The following provides a review for each of the types of spreadsheets the mappin
 When mapping from HL7 v2 messages to FHIR Resources, there are a number of cases where concept mapping needs to be performed.  When this mapping is performed, there may be information that is lost because it cannot be represented in a required coding system, or more specific detail may be lost when one or more codes is mapped to a singular required or preferred code in the FHIR specified terminology.
 
 <table class="grid" >
-    <thead>
-        <tr>
-<th>FHIR Data Type</th>
-<th>Binding</th>
-<th>v2/FHIR Cardinality</th>
-<th>Comments</th></tr></thead>
-<thead>
 <tr><th>FHIR Data Type</th><th>Binding</th><th>v2/FHIR Cardinality</th><th>Comments</th></tr></thead>
 <tbody><tr><td rowspan='2'>code</td><td rowspan='2'>Required or Preferred</td><td>0..1/1..1</td>
 <td><p>As the vocabulary is not the same, and the values are fixed in the FHIR Schema, the only way to record the original code is to attach it to an extension.&nbsp;</p><p>Preferred bindings are ONLY used with the code data type in Resource.language, and these should be treated as if they were required bindings.</p></td></tr>
@@ -240,4 +232,5 @@ When mapping from HL7 v2 messages to FHIR Resources, there are a number of cases
 <td>&#xA0;</td></tr>
 <tr>
 <td>0..*/1..*</td>
-<td>&#xA0;</td></tr></tbody></table>
+<td>&#xA0;</td></tr>
+</tbody></table>

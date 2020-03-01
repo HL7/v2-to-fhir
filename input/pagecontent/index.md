@@ -8,13 +8,12 @@ and testing of implementations.
 
 This guide is organized into three main sections:
 
-1. [Introduction](introduction.html)
-   This section provides an overview of the project, and explains how mapping is performed.
-2. [Mappings](mappingoutputs.html)
-   This section provides an index to the mappings produced by this project, organized
+   1. [Introduction](introduction.html)<br/>This section provides an overview of the project, and explains how mapping is performed.
+
+   2. [Mappings](mapping_outputs.html)<br/>This section provides an index to the mappings produced by this project, organized
    by message, segment, datatype, or vocabulary mapping.
-3. [Implementation and Use]()
-   This section covers implementation considerations and validation, and provides
+
+   3. [Implementation and Use](implementation_considerations.html)<br/>This section covers implementation considerations and validation, and provides
    example test conversions.
 
 Click on any of the links above, head on over the [table of contents](toc.html), or
@@ -26,4 +25,4 @@ You can also download:
 * the definition resources in [json](definitions.json.zip), [xml](definitions.xml.zip), [ttl](definitions.ttl.zip), or [csv](csvs.zip) format, or
 * the example resources in [json](examples.json.zip), [xml](examples.xml.zip) or [ttl](examples.ttl.zip) format.
 
-The source code for this Implementation Guide can be found on [https://github.com/HL7https://github.com/HL7/v2-to-fhir/](https://github.com/HL7https://github.com/HL7/v2-to-fhir/).
+The source code for this Implementation Guide can be found on [GitHub](https://github.com/HL7/v2-to-fhir/).

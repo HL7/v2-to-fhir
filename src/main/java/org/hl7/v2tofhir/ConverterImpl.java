@@ -196,9 +196,9 @@ public abstract class ConverterImpl<T> implements Converter {
             }
             if (introWriter != null) {
                 introWriter.printf(
-                    "This ConceptMap represents the mapping from the HL7 V2 %s to the FHIR %s. "
-                        + "See also the [FHIR Shorthand](https://github.com/HL7/v2-to-fhir/blob/master/tank/%s) or "
-                        + "the [CSV Source File](https://github.com/HL7/v2-to-fhir/blob/master/mappings/%s)\"%n",
+                    "%nThis ConceptMap represents the mapping from the HL7 V2 %s to the FHIR %s. "
+                        + "See also the <a href='https://github.com/HL7/v2-to-fhir/blob/master/tank/%s'>FHIR Shorthand</a> or "
+                        + "the <a href='https://github.com/HL7/v2-to-fhir/blob/master/mappings/%s'>CSV Source</a>.\"%n",
                         getV2Description(),
                         getFHIRDescription(),
                         output, StringUtils.substringAfterLast(theSource.getPath(), "mappings/"));

@@ -1,4 +1,5 @@
-This ConceptMap represents the mapping from the HL7 V2 PV1 Segment to the FHIR Encounter Resource representing that segment. See also the [FHIR Shorthand](https://github.com/HL7/v2-to-fhir/blob/master/tank/Segment PV1 to Encounter.fsh) or the [CSV Source File](https://github.com/HL7/v2-to-fhir/blob/master/mappings/)"
+
+This ConceptMap represents the mapping from the HL7 V2 PV1 Segment to the FHIR Encounter Resource representing that segment. See also the <a href='https://github.com/HL7/v2-to-fhir/blob/master/tank/Segment PV1 to Encounter.fsh'>FHIR Shorthand</a> or the <a href='https://github.com/HL7/v2-to-fhir/blob/master/mappings/'>CSV Source</a>."
 <table class='grid'><thead>
 <tr><th colspan='6'>HL7 v2</th><th colspan='3'>Condition (IF True, args)</th><th colspan='7'>HL7 FHIR</th><th>&#xA0;</th><th>Comments</th></tr>
 <tr><th>Sort Order</th><th>Identifier</th><th>Name</th><th>Data Type</th><th>Cardinality - Min</th><td style='border-right: 2px'>Cardinality - Max</td><th>Computable ANTLR</th><th>Computable FHIRPath</th><td style='border-right: 2px'>Narrative</td><th>FHIR Attribute</th><th>Data Type</th><th>Cardinality - Min</th><td style='border-right: 2px'>Cardinality - Max</td><th>Data Type Mapping</th><th colspan='3'>Vocabulary Mapping (IS, ID, CE, CNE, CWE)</th></tr></thead>

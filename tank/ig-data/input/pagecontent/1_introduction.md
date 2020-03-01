@@ -1,11 +1,10 @@
-## Overview
 With the advent of HL7(R) FHIR(R), an HL7 endorsed mapping of HL7 v2 components to FHIR components that can act as a starting point for implementations would aid in the consistent transition of data from v2 messages into FHIR based approaches (messages, persistence, RESTful APIs). The current mapping information in FHIR is limited to addressing FHIR components only and is incomplete in that it does not go down to the data type component level nor does it cover all commonly used v2 data elements.
 
 This project will develop v2-to-FHIR maps for v2 messages, segments and data types to standard FHIR elements, as well as agreed to extensions where there is a gap in FHIR. The initial focus of the project is on commonly used v2 message structures and the segment and data type building blocks used to construct those messages.  Over time, other v2 message structures will be added based on interest and demand.
 
 Drafting, documenting, and publishing the v2-to-FHIR mappings and link to them from relevant FHIR component and upcoming v2+ elements, there is also a need for an infrastructure that can take advantage of the FHIR publishing infrastructure and enable linkages to the respective v2+ and FHIR standards.
 
-## Scope
+### Scope
 The scope of the project is:
 
 * The most current v2 version is the v2 source.
@@ -47,5 +46,5 @@ The scope of the project is:
 
 The intent is to ultimately achieve normative status of the mappings.
 
-## Additional Mappings
+### Additional Mappings
 The mappings will be expanded over time and messages, segments, fields, data types, or code sets you use may not be included.  When you run into a situation where you have non-z-data in your messages for which no mappings are available yet, please submit a JIRA here to help complete the mappings.

@@ -13,7 +13,7 @@
       "telecom": [
         {
           "system": "email",
-          "value": "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
+          "value": "v2-to-fhir@lists.hl7.org"
         }
       ]
     },
@@ -535,8 +535,8 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "mappingguidelines.html",
-          "title": "Mappingguidelines",
+          "nameUrl": "mapping_guidelines.html",
+          "title": "Mapping Guidelines",
           "generation": "markdown"
         },
         {
@@ -555,33 +555,33 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "mappingoutputs.html",
-          "title": "Mappingoutputs",
+          "nameUrl": "mapping_outputs.html",
+          "title": "Mapping Outputs",
           "generation": "markdown"
         },
         {
-          "nameUrl": "messagemaps.html",
-          "title": "Messagemaps",
+          "nameUrl": "message_maps.html",
+          "title": "Message Maps",
           "generation": "markdown"
         },
         {
-          "nameUrl": "segmentmaps.html",
-          "title": "Segmentmaps",
+          "nameUrl": "segment_maps.html",
+          "title": "Segment Maps",
           "generation": "markdown"
         },
         {
-          "nameUrl": "datatypemaps.html",
-          "title": "Datatypemaps",
+          "nameUrl": "datatype_maps.html",
+          "title": "Datatype Maps",
           "generation": "markdown"
         },
         {
-          "nameUrl": "codingsystemmaps.html",
-          "title": "Codingsystemmaps",
+          "nameUrl": "coding_system_maps.html",
+          "title": "Coding System Maps",
           "generation": "markdown"
         },
         {
-          "nameUrl": "implementationconsiderations.html",
-          "title": "Implementationconsiderations",
+          "nameUrl": "implementation_considerations.html",
+          "title": "Implementation Considerations",
           "generation": "markdown"
         },
         {
@@ -590,13 +590,18 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "testconversions.html",
-          "title": "Testconversions",
+          "nameUrl": "test_conversions.html",
+          "title": "Test Conversions",
           "generation": "markdown"
         },
         {
           "nameUrl": "profiles.html",
           "title": "Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "antlr_condition_syntax.html",
+          "title": "Antlr Condition Syntax",
           "generation": "markdown"
         }
       ]
