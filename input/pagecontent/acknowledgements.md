@@ -2,7 +2,7 @@ HL7 would like to thank the following individuals for their contributions to thi
 
 * [Hans Buitendijk](https://www.linkedin.com/in/buitendijk-hans-203599/) - Project Co-Lead - Cerner Corporation
 * [Craig Newman]() - Project Co-Lead - Altarum
-* [Keith Boone](https://www.linkedin.com/in/keithwboone/) - Audacious Inquiry
+* [Keith Boone](https://www.linkedin.com/in/keithwboone/) - Publishing Facilitator - Audacious Inquiry
 * [David Burgess](https://www.linkedin.com/in/david-burgess-272648a4/) - LabCorp
 * [Grahame Grieve](https://www.linkedin.com/in/grahame-grieve-952637/)
 * Kuma Gupta
