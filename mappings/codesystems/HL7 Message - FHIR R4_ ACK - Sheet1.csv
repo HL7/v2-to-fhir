@@ -1,0 +1,9 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
+Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
+1,ACK.MSH,MSH,Message Header,,,,,,MessageHeader[1],MSH,,,
+1,ACK.MSH,MSH,Message Header,,,,,,Provenance[1],MSH[Provenance - Originator],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
+1,ACK.MSH,MSH,Message Header,,,,,,Provenance[2],MSH[Provenance - Translator],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
+2,ACK.SFT,[{ SFT }],Software segment,0,-1,,,,,,,,
+3,ACK.UAC,[ UAC ],User Authentication Credential,0,1,,,,,,,,
+4,ACK.MSA,MSA,Message Acknowledgment,1,1,,,,MessageHeader[1],MSA,,,
+5,ACK.ERR,[{ ERR }],Error,0,-1,,,,,,,,

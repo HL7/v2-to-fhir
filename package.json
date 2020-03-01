@@ -1,24 +1,24 @@
 {
   "name": "mHealthADE",
   "version": "0.1.0",
-  "canonical": "http://hl7.org/fhir/mHealth-ADE",
-  "url": "http://hl7.org/fhir/mHealth-ADE",
-  "title": "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
+  "canonical": "http://hl7.org/fhir/v2-tofhir",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "title": "HL7 Version 2 to FHIR",
   "description": "asdf",
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1"
   },
   "keywords": [
-    "Mobile",
-    "mHealth",
-    "ADE"
+    "ADT",
+    "ORU",
+    "V2"
   ],
   "language": "en",
   "author": "HL7 International",
   "maintainers": [
     {
-      "name": "HL7 Mobile Health Workgroup",
-      "email": "https://confluence.hl7.org/display/MH/Mobile+Health"
+      "name": "HL7 Orders and Observations Workgroup",
+      "email": "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
     },
     {
       "name": "Keith W. Boone",

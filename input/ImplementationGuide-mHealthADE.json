@@ -1,19 +1,19 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "mHealthADE",
-  "url": "http://hl7.org/fhir/mHealth-ADE/ImplementationGuide/mHealthADE",
+  "url": "http://hl7.org/fhir/v2-tofhir/ImplementationGuide/mHealthADE",
   "version": "0.1.0",
-  "name": "ApplicationDataExchangeAssessmentFrameworkandFunctionalRequirementsforMobileHealth",
-  "title": "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
+  "name": "HL7Version2toFHIR",
+  "title": "HL7 Version 2 to FHIR",
   "status": "active",
   "publisher": "HL7 International",
   "contact": [
     {
-      "name": "HL7 Mobile Health Workgroup",
+      "name": "HL7 Orders and Observations Workgroup",
       "telecom": [
         {
           "system": "email",
-          "value": "https://confluence.hl7.org/display/MH/Mobile+Health"
+          "value": "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
         }
       ]
     },
