@@ -16,8 +16,15 @@ public class Convert {
         String output = ".";
         String download = null;
         for (String arg: args) {
+            if (arg.startsWith("-e")) {
+                return; // We're done
+            }
             if (arg.startsWith("-o")) {
                 output = arg.substring(2);
+                File dir = new File(output);
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                }
                 continue;
             } else if (arg.startsWith("-d")) {
                 download = arg.substring(2);
@@ -96,8 +103,9 @@ public class Convert {
                 System.err.printf("Don't know know how to convert '%s'.\n", f);
                 return;
             }
-            String output = String.format("%s %s.fsh", c.getType(), c.getName());
+            String output = String.format("%s %s to %s.fsh", c.getType(), c.getSourceName(), c.getTargetName());
             File out = new File(outputLocation, output);
+            System.out.printf("Converting '%s' to '%s'%n", f, out);
             c.store(out);
         } catch (IOException ex) {
             ex.printStackTrace();

@@ -1,0 +1,535 @@
+﻿<html>
+<head>
+  <title>ConceptMap-segment-pv1-to-encounter-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap">resourceType</a>" : "ConceptMap",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.id">id</a>" : "segment-pv1-to-encounter",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Segment_PV1_Map (http://hl7.org/fhir/v2-tofhir)&lt;/h2&gt;&lt;p&gt;Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir&lt;/p&gt;&lt;p&gt;ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: &lt;a href=\&quot;mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\&quot;&gt;https://confluence.hl7.org/display/OO/v2-to-FHIR+IG&lt;/a&gt;, Keith W. Boone: &lt;a href=\&quot;mailto:kboone@ainq.com\&quot;&gt;kboone@ainq.com&lt;/a&gt;). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.&lt;/p&gt;&lt;div&gt;&lt;p&gt;This ConceptMap represents the mapping from the HL7 V2 PV1 Segment to the FHIR Encounter Resource representing that segment.&lt;/p&gt;\n&lt;/div&gt;&lt;br/&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Destination Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-2&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.class&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-2&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.status&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-3&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.location[1].location(Location)&lt;/td&gt;&lt;td&gt;Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-3&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.location[1].status&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-3&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.location[1].status&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-4&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.type&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.hospitalization.preAdmissionIdentifier&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-6&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.location[2].location(Location)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-6&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.location[2].status&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-7&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[1].individual(Practitioner)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-7&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[1].type.coding.code&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-7&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[1].type.coding.system&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-7&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[1].type.coding.display&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-8&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[2].individual(Practitioner)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-8&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[2].type.coding.code&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-8&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[2].type.coding.system&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-8&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[2].type.text&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-9&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[3].individual(Practitioner)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-9&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[3].type.coding.code&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-9&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[3].type.coding.system&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-9&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[3].type.text&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-10&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.serviceType&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-13&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.hospitalization.reAdmission&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-14&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.hospitalization.admitSource&lt;/td&gt;&lt;td&gt;Table 0023 doesn't have any suggested values, therefore there is no vocabulary mapping&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-16&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Patient.extension-patient-importance&lt;/td&gt;&lt;td&gt;Depending on the vocabulary used in PV1-16, this may require additional mapping.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-17&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[4].individual(Practitioner)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-17&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[4].type.coding.code&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-17&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[4].type.coding.system&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-17&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[4].type.text&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-19&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.identifier[1]&lt;/td&gt;&lt;td&gt;Propose an identifier type of &amp;quot;visit number&amp;quot; &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-19&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.identifie[1]r.type.coding.code&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-19&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.identifier[1].type.coding.system&lt;/td&gt;&lt;td&gt; .  &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-19&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.identifier[1].type.text&lt;/td&gt;&lt;td&gt; .  &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-36&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.hospitalization.dischargeDisposition&lt;/td&gt;&lt;td&gt;Table 0112 doesn't have any suggested values, therefore there is no vocabulary mapping&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-37&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.hospitalization.destination(Location)&lt;/td&gt;&lt;td&gt;Encounter.hospitalization.destination.reference=Location[1].id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-38&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.hospitalization.dietPreference&lt;/td&gt;&lt;td&gt;Table 0114 doesn't have any suggested values, therefore there is no vocabulary mapping&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-44&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.period.start&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-45&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.period.end&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-45&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.status&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-50&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.identifier[2]&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-52&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[5].individual(Practitioner)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-52&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[5].type.coding.code&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-52&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[5].type.coding.system&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-52&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.participant[5].type.text&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PV1-54&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Encounter.episodeOfCare(EpisodeOfCare.identifier.value)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">url</a>" : "http://hl7.org/fhir/v2-tofhir",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">version</a>" : "0.1.0",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.name">name</a>" : "Segment_PV1_Map",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.experimental">experimental</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">date</a>" : "2020-03-01T00:00:00-05:00",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.publisher">publisher</a>" : "HL7 International",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "HL7 Orders and Observations Workgroup",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Keith W. Boone",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.description">description</a>" : "This ConceptMap represents the mapping from the HL7 V2 PV1 Segment to the FHIR Encounter Resource representing that segment.",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.copyright">copyright</a>" : "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.source[x]">sourceUri</a>" : "https://www.hl7.org/v2",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.target[x]">targetUri</a>" : "https://www.hl7.org/fhir",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-2",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Patient Class",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.class",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-2",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Patient Class",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.status",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-3",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Assigned Patient Location",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.location[1].location(Location)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-3",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Assigned Patient Location",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.location[1].status",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;active\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-3",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Assigned Patient Location",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.location[1].status",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;planned\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-4",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Admission Type",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.type",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Preadmit Number",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.hospitalization.preAdmissionIdentifier",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-6",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Prior Patient Location",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.location[2].location(Location)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-6",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Prior Patient Location",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.location[2].status",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;completed\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-7",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Attending Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[1].individual(Practitioner)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-7",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Attending Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[1].type.coding.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;ATND\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-7",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Attending Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[1].type.coding.system",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;http://terminology.hl7.org/CodeSystem/v3-ParticipationType\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-7",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Attending Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[1].type.coding.display",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;attender\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-8",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Referring Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[2].individual(Practitioner)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-8",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Referring Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[2].type.coding.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;REF\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-8",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Referring Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[2].type.coding.system",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;http://terminology.hl7.org/CodeSystem/v3-ParticipationType\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-8",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Referring Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[2].type.text",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;referrer\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-9",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Consulting Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[3].individual(Practitioner)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-9",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Consulting Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[3].type.coding.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;CON\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-9",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Consulting Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[3].type.coding.system",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;http://terminology.hl7.org/CodeSystem/v3-ParticipationType\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-9",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Consulting Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[3].type.text",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;consultant\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-10",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Hospital Service",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.serviceType",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-13",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Re-admission Indicator",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.hospitalization.reAdmission",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-14",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Admit Source",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.hospitalization.admitSource",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Table 0023 doesn't have any suggested values, therefore there is no vocabulary mapping"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-16",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "VIP Indicator",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Patient.extension-patient-importance",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Depending on the vocabulary used in PV1-16, this may require additional mapping."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-17",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Admitting Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[4].individual(Practitioner)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-17",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Admitting Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[4].type.coding.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;ADM\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-17",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Admitting Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[4].type.coding.system",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;http://terminology.hl7.org/CodeSystem/v3-ParticipationType\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-17",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Admitting Doctor",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[4].type.text",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;admitter\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-19",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Visit Number",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.identifier[1]",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Propose an identifier type of \&quot;visit number\&quot; "
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-19",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Visit Number",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.identifie[1]r.type.coding.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;VN\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-19",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Visit Number",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.identifier[1].type.coding.system",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;http://terminology.hl7.org/CodeSystem/v2-0203\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : " .  "
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-19",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Visit Number",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.identifier[1].type.text",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;visit number\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : " .  "
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-36",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Discharge Disposition",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.hospitalization.dischargeDisposition",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Table 0112 doesn't have any suggested values, therefore there is no vocabulary mapping"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-37",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Discharged to Location",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.hospitalization.destination(Location)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Encounter.hospitalization.destination.reference=Location[1].id"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-38",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Diet Type",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.hospitalization.dietPreference",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Table 0114 doesn't have any suggested values, therefore there is no vocabulary mapping"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-44",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Admit Date/Time",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.period.start",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-45",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Discharge Date/Time",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.period.end",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-45",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Discharge Date/Time",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.status",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;finished\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-50",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Alternate Visit ID",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.identifier[2]",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-52",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Other Healthcare Provider",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[5].individual(Practitioner)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-52",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Other Healthcare Provider",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[5].type.coding.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;PART\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-52",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Other Healthcare Provider",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[5].type.coding.system",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;http://terminology.hl7.org/CodeSystem/v3-ParticipationType\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-52",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Other Healthcare Provider",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.participant[5].type.text",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;Participation\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "PV1-54",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Service Episode Identifier",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Encounter.episodeOfCare(EpisodeOfCare.identifier.value)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</pre>
+</body>
+</html>

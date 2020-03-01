@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="conceptmap-v2-0717-to-access-restriction-value"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>ConceptMap_v2-0717_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from <a href="http://hl7.org/fhir/R4/v2/0717/index.html">http://terminology.hl7.org/CodeSystem/v2-0717</a> to (not specified)</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href="mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href="mailto:kboone@ainq.com">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 Table v2-0717 to the FHIR Access Restriction Value Value Set.</p>
+</div><br/><table class="grid"><tr><td colspan="1"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="1"><b>Destination Concept Details</b></td></tr><tr><td><b>Code</b> from </td><td/><td><b>Code</b> from </td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/v2-tofhir"/>
+  <version value="0.1.0"/>
+  <name value="ConceptMap_v2-0717_Map"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2020-03-01T00:00:00-05:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Orders and Observations Workgroup"/>
+    <telecom>
+      <system value="email"/>
+      <value value="https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <description value="This ConceptMap represents the mapping from the HL7 V2 Table v2-0717 to the FHIR Access Restriction Value Value Set."/>
+  <copyright value="Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."/>
+  <sourceUri value="http://terminology.hl7.org/CodeSystem/v2-0717"/>
+  <group>
+    <element>
+      <code value="PersDEID"/>
+      <display value="personal de-identified information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="ALL"/>
+      <display value="All"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="DEM"/>
+      <display value="All demographic data"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="LOC"/>
+      <display value="Patient Location"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="PID-7"/>
+      <display value="Date of Birth"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="PID-17"/>
+      <display value="Religion"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HIV"/>
+      <display value="HIV status and results"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="STD"/>
+      <display value="Sexually transmitted diseases"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="PSY"/>
+      <display value="Psychiatric Mental health"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="DRG"/>
+      <display value="Drug"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="SMD"/>
+      <display value="Sensitive medical data"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="NO"/>
+      <display value="None"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OO"/>
+      <display value="Opt out all registries (HIPAA)"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OI"/>
+      <display value="Opt in all registries (HIPAA)"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="JurisIP"/>
+      <display value="jurisdictional information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="JurisCUI"/>
+      <display value="jurisdictional controlled unclassified information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="JurisDEID"/>
+      <display value="jurisdictional de-identified information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="JurisLDS"/>
+      <display value="jurisdictional limited data set"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="JurisNSI"/>
+      <display value="jurisdictional non-sensitive information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="JurisPI"/>
+      <display value="jurisdictional public information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="JurisSP-CUI"/>
+      <display value="jurisdictional specified controlled unclassified information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="JurisUUI"/>
+      <display value="jurisdictional uncontrolled unclassified information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OrgIP"/>
+      <display value="organizational information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OrgCUI"/>
+      <display value="organizational basic controlled unclassified information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OrgDEID"/>
+      <display value="organizational de-identified information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OrgLDS"/>
+      <display value="organizational limited data set information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OrgNSI"/>
+      <display value="organizational non-sensitive information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OrgPI"/>
+      <display value="organizational public information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OrgSP-CUI"/>
+      <display value="organizational specified controlled unclassified information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OrgUUI"/>
+      <display value="organizational uncontrolled unclassified information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="PersIP"/>
+      <display value="personal information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="PersNSI"/>
+      <display value="personal non-sensitive information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="PersLDS"/>
+      <display value="personal limited data set information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="PersPI"/>
+      <display value="personal public information policy"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GRANTORCHOICE"/>
+      <display value="grantor choice"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="IMPLIED"/>
+      <display value="implied consent"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="IMPLIEDD"/>
+      <display value="implied consent with opportunity to dissent"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="NOCONSENT"/>
+      <display value="no consent"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OPTIN"/>
+      <display value="opt-in"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OPTINR"/>
+      <display value="opt-in with restrictions"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OPTOUT"/>
+      <display value="opt-out"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OPTOUTE"/>
+      <display value="opt-out with exceptions"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="EMRGONLY"/>
+      <display value="opt-in emergency only"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="NOPP"/>
+      <display value="notice of privacy practices"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OOC"/>
+      <display value="opt-out of personal information or effect collection in a registry or repository"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OOS"/>
+      <display value="opt-out of personal information or effect sharing via a registry or repository"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OIC"/>
+      <display value="opt-in to personal information or effect collection in a registry or repository"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="OIS"/>
+      <display value="opt-in to personal information or effect sharing via a registry or repository"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="42CFRPart2CD"/>
+      <display value="42 CFR Part 2 consent directive"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HIPAAAuthCD"/>
+      <display value="HIPAA Authorization Consent Directive"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HIPAAConsentCD"/>
+      <display value="HIPAA Consent Directive"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HIPAAROACD"/>
+      <display value="HIPAA Right of Access Consent Directive"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HIPAAResearchAuthCD"/>
+      <display value="HIPAA Authorization for Disclosure for Research Consent Directive"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="CompoundResearchCD"/>
+      <display value="Compound HIPAA Research Authorization and Informed Consent for Research"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="MDHHS-5515"/>
+      <display value="Michigan Consent to Share Behavioral Health Information for Care Coordination Purposes"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRCD"/>
+      <display value="GDPR Consent Directive"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRResearchCD"/>
+      <display value="GDPR Research Consent Directive"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="42CFRPart2"/>
+      <display value="42 CFR Part 2)"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="COMMONRULE"/>
+      <display value="Common Rule"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HIPAANOPP"/>
+      <display value="HIPAA notice of privacy practices"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HIPAAPsyNotes"/>
+      <display value="HIPAA psychotherapy notes"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HIPAASelfPay"/>
+      <display value="HIPAA self-pay"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="Title38Section7332"/>
+      <display value="Title 38 Section 7332"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HIPAAConsent"/>
+      <display value="HIPAA Consent"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HIPAAAuth"/>
+      <display value="HIPAA Authorization for Disclosure"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="HIPAAROA"/>
+      <display value="HIPAA Right of Access"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRCONSENT"/>
+      <display value="GDPR Consent"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRCONTRACT"/>
+      <display value="GDPR contract"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRHLTHSOCSY"/>
+      <display value="GDPR health or social system management"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRLEGALCLAIM"/>
+      <display value="GDPR legal claim"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRLEGALOBL"/>
+      <display value="GDPR legal obligation"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRLEGITINTEREST"/>
+      <display value="GDPR legitimate interest"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRPUBLICHEALTH"/>
+      <display value="GDPR public health"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRPUBLICINTEREST"/>
+      <display value="GDPR public interest"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRRESEARCH"/>
+      <display value="GDPR research"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="GDPRVITALINTEREST"/>
+      <display value="GDPR vital interest"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

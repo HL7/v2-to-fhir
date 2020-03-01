@@ -1,0 +1,491 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pv1-to-encounter> a fhir:ConceptMap;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "segment-pv1-to-encounter"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Segment_PV1_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 PV1 Segment to the FHIR Encounter Resource representing that segment.</p>\n</div><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>PV1-2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.class</td><td/></tr><tr><td>PV1-2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.status</td><td/></tr><tr><td>PV1-3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.location[1].location(Location)</td><td>Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included.</td></tr><tr><td>PV1-3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.location[1].status</td><td/></tr><tr><td>PV1-3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.location[1].status</td><td/></tr><tr><td>PV1-4</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.type</td><td/></tr><tr><td>PV1-5</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.hospitalization.preAdmissionIdentifier</td><td/></tr><tr><td>PV1-6</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.location[2].location(Location)</td><td/></tr><tr><td>PV1-6</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.location[2].status</td><td/></tr><tr><td>PV1-7</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[1].individual(Practitioner)</td><td/></tr><tr><td>PV1-7</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[1].type.coding.code</td><td/></tr><tr><td>PV1-7</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[1].type.coding.system</td><td/></tr><tr><td>PV1-7</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[1].type.coding.display</td><td/></tr><tr><td>PV1-8</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[2].individual(Practitioner)</td><td/></tr><tr><td>PV1-8</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[2].type.coding.code</td><td/></tr><tr><td>PV1-8</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[2].type.coding.system</td><td/></tr><tr><td>PV1-8</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[2].type.text</td><td/></tr><tr><td>PV1-9</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[3].individual(Practitioner)</td><td/></tr><tr><td>PV1-9</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[3].type.coding.code</td><td/></tr><tr><td>PV1-9</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[3].type.coding.system</td><td/></tr><tr><td>PV1-9</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[3].type.text</td><td/></tr><tr><td>PV1-10</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.serviceType</td><td/></tr><tr><td>PV1-13</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.hospitalization.reAdmission</td><td/></tr><tr><td>PV1-14</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.hospitalization.admitSource</td><td>Table 0023 doesn't have any suggested values, therefore there is no vocabulary mapping</td></tr><tr><td>PV1-16</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.extension-patient-importance</td><td>Depending on the vocabulary used in PV1-16, this may require additional mapping.</td></tr><tr><td>PV1-17</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[4].individual(Practitioner)</td><td/></tr><tr><td>PV1-17</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[4].type.coding.code</td><td/></tr><tr><td>PV1-17</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[4].type.coding.system</td><td/></tr><tr><td>PV1-17</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[4].type.text</td><td/></tr><tr><td>PV1-19</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.identifier[1]</td><td>Propose an identifier type of &quot;visit number&quot; </td></tr><tr><td>PV1-19</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.identifie[1]r.type.coding.code</td><td/></tr><tr><td>PV1-19</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.identifier[1].type.coding.system</td><td> .  </td></tr><tr><td>PV1-19</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.identifier[1].type.text</td><td> .  </td></tr><tr><td>PV1-36</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.hospitalization.dischargeDisposition</td><td>Table 0112 doesn't have any suggested values, therefore there is no vocabulary mapping</td></tr><tr><td>PV1-37</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.hospitalization.destination(Location)</td><td>Encounter.hospitalization.destination.reference=Location[1].id</td></tr><tr><td>PV1-38</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.hospitalization.dietPreference</td><td>Table 0114 doesn't have any suggested values, therefore there is no vocabulary mapping</td></tr><tr><td>PV1-44</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.period.start</td><td/></tr><tr><td>PV1-45</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.period.end</td><td/></tr><tr><td>PV1-45</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.status</td><td/></tr><tr><td>PV1-50</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.identifier[2]</td><td/></tr><tr><td>PV1-52</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[5].individual(Practitioner)</td><td/></tr><tr><td>PV1-52</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[5].type.coding.code</td><td/></tr><tr><td>PV1-52</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[5].type.coding.system</td><td/></tr><tr><td>PV1-52</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.participant[5].type.text</td><td/></tr><tr><td>PV1-54</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Encounter.episodeOfCare(EpisodeOfCare.identifier.value)</td><td/></tr></table></div>"
+  ];
+  fhir:ConceptMap.url [ fhir:value "http://hl7.org/fhir/v2-tofhir"];
+  fhir:ConceptMap.version [ fhir:value "0.1.0"];
+  fhir:ConceptMap.name [ fhir:value "Segment_PV1_Map"];
+  fhir:ConceptMap.status [ fhir:value "active"];
+  fhir:ConceptMap.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ConceptMap.date [ fhir:value "2020-03-01T00:00:00-05:00"^^xsd:dateTime];
+  fhir:ConceptMap.publisher [ fhir:value "HL7 International"];
+  fhir:ConceptMap.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Orders and Observations Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ConceptMap.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 PV1 Segment to the FHIR Encounter Resource representing that segment."];
+  fhir:ConceptMap.copyright [ fhir:value "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."];
+  fhir:ConceptMap.sourceUri [ fhir:value "https://www.hl7.org/v2"];
+  fhir:ConceptMap.targetUri [ fhir:value "https://www.hl7.org/fhir"];
+  fhir:ConceptMap.group [
+     fhir:index 0;
+     fhir:ConceptMap.group.element [
+       fhir:index 0;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-2" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Class" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.class" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-2" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Class" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.status" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-3" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Assigned Patient Location" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.location[1].location(Location)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included." ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-3" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Assigned Patient Location" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.location[1].status" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"active\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-3" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Assigned Patient Location" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.location[1].status" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"planned\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-4" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Admission Type" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.type" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-5" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Preadmit Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.hospitalization.preAdmissionIdentifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-6" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Prior Patient Location" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.location[2].location(Location)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-6" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Prior Patient Location" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.location[2].status" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"completed\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-7" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Attending Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[1].individual(Practitioner)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-7" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Attending Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[1].type.coding.code" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"ATND\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-7" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Attending Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[1].type.coding.system" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-7" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Attending Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[1].type.coding.display" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"attender\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-8" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Referring Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[2].individual(Practitioner)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-8" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Referring Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[2].type.coding.code" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"REF\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-8" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Referring Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[2].type.coding.system" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-8" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Referring Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[2].type.text" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"referrer\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-9" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Consulting Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[3].individual(Practitioner)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-9" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Consulting Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[3].type.coding.code" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"CON\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-9" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Consulting Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[3].type.coding.system" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-9" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Consulting Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[3].type.text" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"consultant\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-10" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Hospital Service" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.serviceType" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-13" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Re-admission Indicator" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.hospitalization.reAdmission" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-14" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Admit Source" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.hospitalization.admitSource" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Table 0023 doesn't have any suggested values, therefore there is no vocabulary mapping" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-16" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "VIP Indicator" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.extension-patient-importance" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Depending on the vocabulary used in PV1-16, this may require additional mapping." ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-17" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Admitting Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[4].individual(Practitioner)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 26;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-17" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Admitting Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[4].type.coding.code" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"ADM\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-17" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Admitting Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[4].type.coding.system" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-17" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Admitting Doctor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[4].type.text" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"admitter\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 29;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-19" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Visit Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.identifier[1]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Propose an identifier type of \"visit number\" " ]
+       ]
+     ], [
+       fhir:index 30;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-19" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Visit Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.identifie[1]r.type.coding.code" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"VN\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 31;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-19" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Visit Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.identifier[1].type.coding.system" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"http://terminology.hl7.org/CodeSystem/v2-0203\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value " .  " ]
+       ]
+     ], [
+       fhir:index 32;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-19" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Visit Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.identifier[1].type.text" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"visit number\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value " .  " ]
+       ]
+     ], [
+       fhir:index 33;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-36" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Discharge Disposition" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.hospitalization.dischargeDisposition" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Table 0112 doesn't have any suggested values, therefore there is no vocabulary mapping" ]
+       ]
+     ], [
+       fhir:index 34;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-37" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Discharged to Location" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.hospitalization.destination(Location)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Encounter.hospitalization.destination.reference=Location[1].id" ]
+       ]
+     ], [
+       fhir:index 35;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-38" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Diet Type" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.hospitalization.dietPreference" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Table 0114 doesn't have any suggested values, therefore there is no vocabulary mapping" ]
+       ]
+     ], [
+       fhir:index 36;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-44" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Admit Date/Time" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.period.start" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 37;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-45" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Discharge Date/Time" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.period.end" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 38;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-45" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Discharge Date/Time" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.status" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"finished\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 39;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-50" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Alternate Visit ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.identifier[2]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 40;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-52" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Other Healthcare Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[5].individual(Practitioner)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 41;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-52" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Other Healthcare Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[5].type.coding.code" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"PART\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 42;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-52" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Other Healthcare Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[5].type.coding.system" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 43;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-52" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Other Healthcare Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.participant[5].type.text" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"Participation\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 44;
+       fhir:ConceptMap.group.element.code [ fhir:value "PV1-54" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Service Episode Identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Encounter.episodeOfCare(EpisodeOfCare.identifier.value)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pv1-to-encounter.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/v2-tofhir/ConceptMap/segment-pv1-to-encounter.ttl> .
+
+# -------------------------------------------------------------------------------------
+

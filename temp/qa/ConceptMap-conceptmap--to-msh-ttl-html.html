@@ -1,0 +1,248 @@
+﻿<html>
+<head>
+  <title>ConceptMap-conceptmap--to-msh-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:ConceptMap;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;conceptmap--to-msh&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Segment_MSH_Map (http://hl7.org/fhir/v2-tofhir)&lt;/h2&gt;&lt;p&gt;Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir&lt;/p&gt;&lt;p&gt;ACTIVE (not intended for production usage). Published on Feb 29, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: &lt;a href=\&quot;mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\&quot;&gt;https://confluence.hl7.org/display/OO/v2-to-FHIR+IG&lt;/a&gt;, Keith W. Boone: &lt;a href=\&quot;mailto:kboone@ainq.com\&quot;&gt;kboone@ainq.com&lt;/a&gt;). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.&lt;/p&gt;&lt;br/&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td colspan=\&quot;1\&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=\&quot;1\&quot;&gt;&lt;b&gt;Destination Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt; from &lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt; from &lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-3&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.source&lt;/td&gt;&lt;td&gt;Example: MSH|^~%|LAB^2.16.840.1.113883.3.987.1^ISO|...\nExample: MSH|^~%|LAB|…\nHow do we populate this if MSH-3 is not valued?&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-4&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.sender(Organization)&lt;/td&gt;&lt;td&gt;How do we populate this if MSH-4 is not valued?\nHow do we represent HD and identifiers? Need to work with InM.\nShould consider aligning sender/receiver constructs.\nOpen gForge to request that &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.destination[1]&lt;/td&gt;&lt;td&gt;Example: MSH...|RH^2.16.840.1.113883.632.3^ISO|...&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-6&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.destination[1].receiver(Organization)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-7&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bundle.timestamp&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-8&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.meta.security&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-9&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.event.coding&lt;/td&gt;&lt;td&gt;Set up time with InM.  Set up mapping tables for all components (message code, trigger event, structure)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-10&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bundle.identifier&lt;/td&gt;&lt;td&gt;Need a gForge to request a MessageHeader.identifier (https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;amp;tracker_item_id=20704&amp;amp;start=0)\nNote that if a message is part of a batch, then the MSH goes to a &amp;quot;sub-bundle&amp;quot;..\nNote that as messages switch from V2 to FHIR and the response back from FHIR to V2, the &amp;quot;mapping engine&amp;quot; needs to track the actual MSH.10.00.00 value and Bundle.identifier value to connect responses correctly.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-10&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bundle.type&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-11&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.meta.tag&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-17&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.sender(Organization.address.country)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-19&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.language&lt;/td&gt;&lt;td&gt;This does only cover the MessageHeader resource. Need to have clarity that if other resources that are part of the message that do not have Resource.meta.language valued, then it is assumed to follow MessageHeader.meta.language?? Doesn't seem RESTful, so what is the default for Resource.meta.language?&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-22&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.responsible(Organization)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-23&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.destination[1].receiver(Organization)&lt;/td&gt;&lt;td&gt;This is an alternate representation of MSH-6.  The local implementation needs to determine whech components of HD vs. XON to be used and whether it may even yield a separate Organization reference.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-24&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Messageheader.source.endpoint&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MSH-25&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.destination[1].endpoint&lt;/td&gt;&lt;td&gt;This is an alternate representation of MSH-5.  Need to agree on prioritization.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">fhir:ConceptMap.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/v2-tofhir&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">fhir:ConceptMap.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.1.0&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.name">fhir:ConceptMap.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Segment_MSH_Map&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">fhir:ConceptMap.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.experimental">fhir:ConceptMap.experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">fhir:ConceptMap.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2020-02-29T00:00:00-05:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.publisher">fhir:ConceptMap.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HL7 International&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">fhir:ConceptMap.contact</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:ContactDetail.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HL7 Orders and Observations Workgroup&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;email&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;https://confluence.hl7.org/display/OO/v2-to-FHIR+IG&quot; ]     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:ContactDetail.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Keith W. Boone&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;email&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;kboone@ainq.com&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.copyright">fhir:ConceptMap.copyright</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.source[x]">fhir:ConceptMap.sourceUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.hl7.org/v2&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.target[x]">fhir:ConceptMap.targetUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.hl7.org/fhir&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">fhir:ConceptMap.group</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">fhir:ConceptMap.group.element</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-1&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Field Separator&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-2&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Encoding Characters&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-3&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Sending Application&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.source&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">fhir:ConceptMap.group.element.target.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Example: MSH|^~%|LAB^2.16.840.1.113883.3.987.1^ISO|...\nExample: MSH|^~%|LAB|…\nHow do we populate this if MSH-3 is not valued?&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-4&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Sending Facility&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.sender(Organization)&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">fhir:ConceptMap.group.element.target.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;How do we populate this if MSH-4 is not valued?\nHow do we represent HD and identifiers? Need to work with InM.\nShould consider aligning sender/receiver constructs.\nOpen gForge to request that &quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-5&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Receiving Application&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.destination[1]&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">fhir:ConceptMap.group.element.target.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Example: MSH...|RH^2.16.840.1.113883.632.3^ISO|...&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-6&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Receiving Facility&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.destination[1].receiver(Organization)&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 6;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-7&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Date/Time of Message&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 7;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-7&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Date/Time of Message&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Bundle.timestamp&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= MSH-7&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 8;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-8&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Security&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.meta.security&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 9;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-9&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Message Type&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.event.coding&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">fhir:ConceptMap.group.element.target.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Set up time with InM.  Set up mapping tables for all components (message code, trigger event, structure)&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 10;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-10&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Message Control ID&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Bundle.identifier&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">fhir:ConceptMap.group.element.target.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Need a gForge to request a MessageHeader.identifier (https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=20704&amp;start=0)\nNote that if a message is part of a batch, then the MSH goes to a \&quot;sub-bundle\&quot;..\nNote that as messages switch from V2 to FHIR and the response back from FHIR to V2, the \&quot;mapping engine\&quot; needs to track the actual MSH.10.00.00 value and Bundle.identifier value to connect responses correctly.&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 11;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-10&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Message Control ID&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Bundle.type&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= \&quot;message\&quot;&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 12;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-11&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Processing ID&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.meta.tag&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 13;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-12&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Version ID&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 14;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-13&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Sequence Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 15;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-14&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Continuation Pointer&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 16;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-15&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Accept Acknowledgment Type&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 17;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-16&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Application Acknowledgment Type&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 18;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-17&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Country Code&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.sender(Organization.address.country)&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 19;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-18&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Character Set&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 20;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-19&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Principal Language Of Message&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.language&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">fhir:ConceptMap.group.element.target.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;This does only cover the MessageHeader resource. Need to have clarity that if other resources that are part of the message that do not have Resource.meta.language valued, then it is assumed to follow MessageHeader.meta.language?? Doesn't seem RESTful, so what is the default for Resource.meta.language?&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 21;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-20&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alternate Character Set Handling Scheme&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 22;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-21&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Message Profile Identifier&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 23;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-22&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Sending Responsible Organization&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.responsible(Organization)&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 24;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-23&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Receiving Responsible Organization&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.destination[1].receiver(Organization)&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">fhir:ConceptMap.group.element.target.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;This is an alternate representation of MSH-6.  The local implementation needs to determine whech components of HD vs. XON to be used and whether it may even yield a separate Organization reference.&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 25;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-24&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Sending Network Address&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Messageheader.source.endpoint&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 26;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MSH-25&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Receiving Network Address&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;MessageHeader.destination[1].endpoint&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">fhir:ConceptMap.group.element.target.comment</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;This is an alternate representation of MSH-5.  Need to agree on prioritization.&quot; ]       ]     ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+</body>
+</html>

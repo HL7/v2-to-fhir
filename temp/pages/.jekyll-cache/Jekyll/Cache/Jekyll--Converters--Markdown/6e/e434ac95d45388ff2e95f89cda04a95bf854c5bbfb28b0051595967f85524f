@@ -1,0 +1,52 @@
+I"å
+<div class="markdown-toc">
+
+</div>
+<p>The {org} {Profile.title} {Profile.id} profile supports the selection
+of assessment instruments from a repository and the integration of those instruments
+into a provider workflow for the capture of assessment data for a given patient.</p>
+
+<p>This implementation guide provides the FHIR Implementation materials associated with
+this {org} profile.  This guide includes content from the {org} {Profile.id} Profile Supplement,
+however, the {org} published PDF content for this supplement is considered to be the
+normative content.</p>
+
+<p>This guide is organized into three main sections:</p>
+
+<ol>
+  <li>Volume I: <a href="overview.html">Overview</a>
+    <ol>
+      <li><a href="actorsandtransactions.html">Actors and Transactions</a></li>
+      <li><a href="profileoptions.html">Profile Options</a></li>
+      <li><a href="securityconsiderations.html">Security Considerations</a></li>
+      <li><a href="crossprofileconsiderations.html">Cross Profile Considerations</a></li>
+    </ol>
+  </li>
+  <li>Volume II: <a href="transactions.html">Transactions</a>
+{ for-each Profile.transaction T }
+    <ol>
+      <li><a href="transaction-{T.id}.html}">[{T.id}] {T.name}</a></li>
+    </ol>
+  </li>
+  <li>Volume III: <a href="contentprofiles.html">Content Profiles</a>
+{ for-each Profile.content C }
+    <ol>
+      <li><a href="StructureDefinition-{org}-{Profile.id}-{C.id}.html">{C.name} FHIR Profile</a></li>
+    </ol>
+  </li>
+</ol>
+
+<p>Click on any of the links above, head on over the <a href="toc.html">table of contents</a>, or
+if you are looking for a specific artifact, check out the <a href="artifacts.html">index</a>.</p>
+
+<p>You can also download:</p>
+
+<ul>
+  <li><a href="full-ig.zip">this entire guide</a>,</li>
+  <li>the definition resources in <a href="definitions.json.zip">json</a>, <a href="definitions.xml.zip">xml</a>, <a href="definitions.ttl.zip">ttl</a>, or <a href="csvs.zip">csv</a> format, or</li>
+  <li>the example resources in <a href="examples.json.zip">json</a>, <a href="examples.xml.zip">xml</a> or <a href="examples.ttl.zip">ttl</a> format.</li>
+</ul>
+
+<p>The source code for this Implementation Guide can be found on <a href="https://github.com/{org}/{Profile.id}">https://github.com/{org}/{Profile.id}</a>.</p>
+
+:ET

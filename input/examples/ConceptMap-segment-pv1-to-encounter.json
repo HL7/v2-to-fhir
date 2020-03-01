@@ -1,0 +1,512 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-pv1-to-encounter",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 PV1 Segment to the FHIR Encounter Resource representing that segment.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "Segment_PV1_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "https://www.hl7.org/v2",
+  "targetUri": "https://www.hl7.org/fhir",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "PV1-2",
+          "display": "Patient Class",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.class"
+            }
+          ]
+        },
+        {
+          "code": "PV1-2",
+          "display": "Patient Class",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.status"
+            }
+          ]
+        },
+        {
+          "code": "PV1-3",
+          "display": "Assigned Patient Location",
+          "target": [
+            {
+              "comment": "Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included.",
+              "equivalence": "equivalent",
+              "code": "Encounter.location[1].location(Location)"
+            }
+          ]
+        },
+        {
+          "code": "PV1-3",
+          "display": "Assigned Patient Location",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.location[1].status",
+              "display": "= \"active\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-3",
+          "display": "Assigned Patient Location",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.location[1].status",
+              "display": "= \"planned\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-4",
+          "display": "Admission Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.type"
+            }
+          ]
+        },
+        {
+          "code": "PV1-5",
+          "display": "Preadmit Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.hospitalization.preAdmissionIdentifier"
+            }
+          ]
+        },
+        {
+          "code": "PV1-6",
+          "display": "Prior Patient Location",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.location[2].location(Location)"
+            }
+          ]
+        },
+        {
+          "code": "PV1-6",
+          "display": "Prior Patient Location",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.location[2].status",
+              "display": "= \"completed\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-7",
+          "display": "Attending Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[1].individual(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "PV1-7",
+          "display": "Attending Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[1].type.coding.code",
+              "display": "= \"ATND\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-7",
+          "display": "Attending Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[1].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-7",
+          "display": "Attending Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[1].type.coding.display",
+              "display": "= \"attender\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-8",
+          "display": "Referring Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[2].individual(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "PV1-8",
+          "display": "Referring Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[2].type.coding.code",
+              "display": "= \"REF\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-8",
+          "display": "Referring Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[2].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-8",
+          "display": "Referring Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[2].type.text",
+              "display": "= \"referrer\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-9",
+          "display": "Consulting Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[3].individual(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "PV1-9",
+          "display": "Consulting Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[3].type.coding.code",
+              "display": "= \"CON\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-9",
+          "display": "Consulting Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[3].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-9",
+          "display": "Consulting Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[3].type.text",
+              "display": "= \"consultant\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-10",
+          "display": "Hospital Service",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.serviceType"
+            }
+          ]
+        },
+        {
+          "code": "PV1-13",
+          "display": "Re-admission Indicator",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.hospitalization.reAdmission"
+            }
+          ]
+        },
+        {
+          "code": "PV1-14",
+          "display": "Admit Source",
+          "target": [
+            {
+              "comment": "Table 0023 doesn't have any suggested values, therefore there is no vocabulary mapping",
+              "equivalence": "equivalent",
+              "code": "Encounter.hospitalization.admitSource"
+            }
+          ]
+        },
+        {
+          "code": "PV1-16",
+          "display": "VIP Indicator",
+          "target": [
+            {
+              "comment": "Depending on the vocabulary used in PV1-16, this may require additional mapping.",
+              "equivalence": "equivalent",
+              "code": "Patient.extension-patient-importance"
+            }
+          ]
+        },
+        {
+          "code": "PV1-17",
+          "display": "Admitting Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[4].individual(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "PV1-17",
+          "display": "Admitting Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[4].type.coding.code",
+              "display": "= \"ADM\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-17",
+          "display": "Admitting Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[4].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-17",
+          "display": "Admitting Doctor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[4].type.text",
+              "display": "= \"admitter\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-19",
+          "display": "Visit Number",
+          "target": [
+            {
+              "comment": "Propose an identifier type of \"visit number\" ",
+              "equivalence": "equivalent",
+              "code": "Encounter.identifier[1]"
+            }
+          ]
+        },
+        {
+          "code": "PV1-19",
+          "display": "Visit Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.identifie[1]r.type.coding.code",
+              "display": "= \"VN\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-19",
+          "display": "Visit Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.identifier[1].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\"",
+              "comment": " .  "
+            }
+          ]
+        },
+        {
+          "code": "PV1-19",
+          "display": "Visit Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.identifier[1].type.text",
+              "display": "= \"visit number\"",
+              "comment": " .  "
+            }
+          ]
+        },
+        {
+          "code": "PV1-36",
+          "display": "Discharge Disposition",
+          "target": [
+            {
+              "comment": "Table 0112 doesn't have any suggested values, therefore there is no vocabulary mapping",
+              "equivalence": "equivalent",
+              "code": "Encounter.hospitalization.dischargeDisposition"
+            }
+          ]
+        },
+        {
+          "code": "PV1-37",
+          "display": "Discharged to Location",
+          "target": [
+            {
+              "comment": "Encounter.hospitalization.destination.reference=Location[1].id",
+              "equivalence": "equivalent",
+              "code": "Encounter.hospitalization.destination(Location)"
+            }
+          ]
+        },
+        {
+          "code": "PV1-38",
+          "display": "Diet Type",
+          "target": [
+            {
+              "comment": "Table 0114 doesn't have any suggested values, therefore there is no vocabulary mapping",
+              "equivalence": "equivalent",
+              "code": "Encounter.hospitalization.dietPreference"
+            }
+          ]
+        },
+        {
+          "code": "PV1-44",
+          "display": "Admit Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.period.start"
+            }
+          ]
+        },
+        {
+          "code": "PV1-45",
+          "display": "Discharge Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.period.end"
+            }
+          ]
+        },
+        {
+          "code": "PV1-45",
+          "display": "Discharge Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.status",
+              "display": "= \"finished\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-50",
+          "display": "Alternate Visit ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.identifier[2]"
+            }
+          ]
+        },
+        {
+          "code": "PV1-52",
+          "display": "Other Healthcare Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[5].individual(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "PV1-52",
+          "display": "Other Healthcare Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[5].type.coding.code",
+              "display": "= \"PART\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-52",
+          "display": "Other Healthcare Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[5].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-52",
+          "display": "Other Healthcare Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant[5].type.text",
+              "display": "= \"Participation\""
+            }
+          ]
+        },
+        {
+          "code": "PV1-54",
+          "display": "Service Episode Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.episodeOfCare(EpisodeOfCare.identifier.value)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

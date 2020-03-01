@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="segment-obx-observationcomponent-to-observation"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Segment_OBX!ObservationComponent_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href="mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href="mailto:kboone@ainq.com">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 OBX!ObservationComponent Segment to the FHIR Observation Resource representing that segment.</p>
+</div><br/><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>OBX-3</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.code</td><td/></tr><tr><td>OBX-3</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[each].code</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[each].valueQuantity</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[each].valueString</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[each].valueCodeableConcept</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valueCodeableConcept</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valuePeriod</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valueDateTime</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valueRange</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valueString</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valueTime</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valueRatio</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valueRange</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valueString</td><td/></tr><tr><td>OBX-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valueQuantity</td><td/></tr><tr><td>OBX-6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valueQuantity</td><td/></tr><tr><td>OBX-6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].valueQuantity</td><td/></tr><tr><td>OBX-6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component.valueRange.low</td><td/></tr><tr><td>OBX-6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component.valueRange.high</td><td/></tr><tr><td>OBX-6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component.valueRatio.numerator</td><td/></tr><tr><td>OBX-6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component.valueRatio.denominator</td><td/></tr><tr><td>OBX-7</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.component[all].referenceRange.text</td><td>If OBX-7 is sufficiently parseable, then the low, high, type, appliesTo, and/or age may be used.</td></tr><tr><td>OBX-8</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.nterpretation</td><td/></tr><tr><td>OBX-11</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.status</td><td/></tr><tr><td>OBX-14</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.effectiveDateTime</td><td/></tr><tr><td>OBX-16</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.performer[1](PractitionerRole.practitioner(Practitioner))</td><td>  .  </td></tr><tr><td>OBX-16</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.performer[1](PractitionerRole.code</td><td/></tr><tr><td>OBX-17</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.method</td><td>The cardinality of Observation.method is 0..1 while the source allows for multiple methods.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide.</td></tr><tr><td>OBX-18</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.device(Device.identifier)</td><td/></tr><tr><td>OBX-20</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.bodySite</td><td>The cardinality of Observation.bodySite is 0..1 while the source allows for multiple body sites.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide.</td></tr><tr><td>OBX-21</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.identifier</td><td/></tr><tr><td>OBX-21</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.identifier.type.coding.code</td><td/></tr><tr><td>OBX-23</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.performer[2](Organization)</td><td/></tr><tr><td>OBX-23</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.performer[3](PractitionerRole.organization(Organization))</td><td/></tr><tr><td>OBX-24</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.performer[2](Organization.address)</td><td/></tr><tr><td>OBX-24</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.performer[3](PractitionerRole.organization(Organization.address))</td><td/></tr><tr><td>OBX-25</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.performer[3](PractitionerRole)</td><td/></tr><tr><td>OBX-25</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Observation.performer[3](PractitionerRole.code</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/v2-tofhir"/>
+  <version value="0.1.0"/>
+  <name value="Segment_OBX!ObservationComponent_Map"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2020-03-01T00:00:00-05:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Orders and Observations Workgroup"/>
+    <telecom>
+      <system value="email"/>
+      <value value="https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <description value="This ConceptMap represents the mapping from the HL7 V2 OBX!ObservationComponent Segment to the FHIR Observation Resource representing that segment."/>
+  <copyright value="Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."/>
+  <sourceUri value="https://www.hl7.org/v2"/>
+  <targetUri value="https://www.hl7.org/fhir"/>
+  <group>
+    <element>
+      <code value="OBX-3"/>
+      <display value="Observation Identifier"/>
+      <target>
+        <code value="Observation.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-3"/>
+      <display value="Observation Identifier"/>
+      <target>
+        <code value="Observation.component[each].code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[each].valueQuantity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[each].valueString"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[each].valueCodeableConcept"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[all].valueCodeableConcept"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[all].valuePeriod"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[all].valueDateTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[all].valueRange"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[all].valueString"/>
+        <display value="= OBX-5.1+&quot;-&quot;+OBX-5.2"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[all].valueTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[all].valueRatio"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[all].valueRange"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[all].valueString"/>
+        <display value="= OBX-5.1+&quot; &quot;+OBX-5.2+&quot; &quot;+OBX-5.3+&quot; &quot;+OBX-5.4"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-5"/>
+      <display value="Observation Value"/>
+      <target>
+        <code value="Observation.component[all].valueQuantity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-6"/>
+      <display value="Units"/>
+      <target>
+        <code value="Observation.component[all].valueQuantity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-6"/>
+      <display value="Units"/>
+      <target>
+        <code value="Observation.component[all].valueQuantity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-6"/>
+      <display value="Units"/>
+      <target>
+        <code value="Observation.component.valueRange.low"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-6"/>
+      <display value="Units"/>
+      <target>
+        <code value="Observation.component.valueRange.high"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-6"/>
+      <display value="Units"/>
+      <target>
+        <code value="Observation.component.valueRatio.numerator"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-6"/>
+      <display value="Units"/>
+      <target>
+        <code value="Observation.component.valueRatio.denominator"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-7"/>
+      <display value="References Range"/>
+      <target>
+        <code value="Observation.component[all].referenceRange.text"/>
+        <equivalence value="equivalent"/>
+        <comment value="If OBX-7 is sufficiently parseable, then the low, high, type, appliesTo, and/or age may be used."/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-8"/>
+      <display value="Interpretation Codes"/>
+      <target>
+        <code value="Observation.nterpretation"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-11"/>
+      <display value="Observation Result Status"/>
+      <target>
+        <code value="Observation.status"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-14"/>
+      <display value="Date/Time of the Observation"/>
+      <target>
+        <code value="Observation.effectiveDateTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-16"/>
+      <display value="Responsible Observer"/>
+      <target>
+        <code value="Observation.performer[1](PractitionerRole.practitioner(Practitioner))"/>
+        <equivalence value="equivalent"/>
+        <comment value="  .  "/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-16"/>
+      <display value="Responsible Observer"/>
+      <target>
+        <code value="Observation.performer[1](PractitionerRole.code"/>
+        <display value="= &quot;#ext-responsibleObserver#&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-17"/>
+      <display value="Observation Method"/>
+      <target>
+        <code value="Observation.method"/>
+        <equivalence value="equivalent"/>
+        <comment value="The cardinality of Observation.method is 0..1 while the source allows for multiple methods.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide."/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-18"/>
+      <display value="Equipment Instance Identifier"/>
+      <target>
+        <code value="Observation.device(Device.identifier)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-20"/>
+      <display value="Observation Site"/>
+      <target>
+        <code value="Observation.bodySite"/>
+        <equivalence value="equivalent"/>
+        <comment value="The cardinality of Observation.bodySite is 0..1 while the source allows for multiple body sites.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide."/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-21"/>
+      <display value="Observation Instance Identifier"/>
+      <target>
+        <code value="Observation.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-21"/>
+      <display value="Observation Instance Identifier"/>
+      <target>
+        <code value="Observation.identifier.type.coding.code"/>
+        <display value="= &quot;FILL&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-23"/>
+      <display value="Performing Organization Name"/>
+      <target>
+        <code value="Observation.performer[2](Organization)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-23"/>
+      <display value="Performing Organization Name"/>
+      <target>
+        <code value="Observation.performer[3](PractitionerRole.organization(Organization))"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-24"/>
+      <display value="Performing Organization Address"/>
+      <target>
+        <code value="Observation.performer[2](Organization.address)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-24"/>
+      <display value="Performing Organization Address"/>
+      <target>
+        <code value="Observation.performer[3](PractitionerRole.organization(Organization.address))"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-25"/>
+      <display value="Performing Organization Medical Director"/>
+      <target>
+        <code value="Observation.performer[3](PractitionerRole)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBX-25"/>
+      <display value="Performing Organization Medical Director"/>
+      <target>
+        <code value="Observation.performer[3](PractitionerRole.code"/>
+        <display value="= &quot;#ext-LabMedicalDirector#&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

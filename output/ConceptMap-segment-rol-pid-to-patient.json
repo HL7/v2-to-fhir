@@ -1,0 +1,165 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-rol-pid-to-patient",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Segment_ROL!PID_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 ROL!PID Segment to the FHIR Patient Resource representing that segment.</p>\n</div><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td></tr><tr><td>ROL-1</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.generalPractioner(PractitionerRole.identifier)</td></tr><tr><td>ROL-2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Operation</td></tr><tr><td>ROL-3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.generalPractioner(PractitionerRole.code)</td></tr><tr><td>ROL-4</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.generalPractitioner(PractitionerRole.practitioner)</td></tr><tr><td>ROL-5</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.generalPractioner(PractitionerRole.period.start)</td></tr><tr><td>ROL-6</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.generalPractioner(PractitionerRole.period.end)</td></tr><tr><td>ROL-11</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.generalPractioner(PractitionerRole.Practioner(Practitioner.address))</td></tr><tr><td>ROL-11</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.generalPractioner(PractitionerRole.location(Location.address))</td></tr><tr><td>ROL-11</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.generalPractioner(PractitionerRole.organization.(Organization.address))</td></tr><tr><td>ROL-12</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.generalPractioner(PractitionerRole.telecom)</td></tr><tr><td>ROL-13</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.generalPractioner(PractitionerRole.location(Location))</td></tr><tr><td>ROL-14</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.generalPractioner(PractitionerRole.organization.(Organization))</td></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "0.1.0",
+  "name": "Segment_ROL!PID_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01T00:00:00-05:00",
+  "publisher": "HL7 International",
+  "contact": [
+    {
+      "name": "HL7 Orders and Observations Workgroup",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "This ConceptMap represents the mapping from the HL7 V2 ROL!PID Segment to the FHIR Patient Resource representing that segment.",
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "https://www.hl7.org/v2",
+  "targetUri": "https://www.hl7.org/fhir",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "ROL-1",
+          "display": "Role Instance ID",
+          "target": [
+            {
+              "code": "Patient.generalPractioner(PractitionerRole.identifier)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ROL-2",
+          "display": "Action Code",
+          "target": [
+            {
+              "code": "Operation",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ROL-3",
+          "display": "Role-ROL",
+          "target": [
+            {
+              "code": "Patient.generalPractioner(PractitionerRole.code)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ROL-4",
+          "display": "Role Person",
+          "target": [
+            {
+              "code": "Patient.generalPractitioner(PractitionerRole.practitioner)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ROL-5",
+          "display": "Role Begin Date/Time",
+          "target": [
+            {
+              "code": "Patient.generalPractioner(PractitionerRole.period.start)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ROL-6",
+          "display": "Role End Date/Time",
+          "target": [
+            {
+              "code": "Patient.generalPractioner(PractitionerRole.period.end)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ROL-11",
+          "display": "Office/Home Address/Birthplace",
+          "target": [
+            {
+              "code": "Patient.generalPractioner(PractitionerRole.Practioner(Practitioner.address))",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ROL-11",
+          "display": "Office/Home Address/Birthplace",
+          "target": [
+            {
+              "code": "Patient.generalPractioner(PractitionerRole.location(Location.address))",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ROL-11",
+          "display": "Office/Home Address/Birthplace",
+          "target": [
+            {
+              "code": "Patient.generalPractioner(PractitionerRole.organization.(Organization.address))",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ROL-12",
+          "display": "Phone",
+          "target": [
+            {
+              "code": "Patient.generalPractioner(PractitionerRole.telecom)",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ROL-13",
+          "display": "Person's Location",
+          "target": [
+            {
+              "code": "Patient.generalPractioner(PractitionerRole.location(Location))",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ROL-14",
+          "display": "Organization",
+          "target": [
+            {
+              "code": "Patient.generalPractioner(PractitionerRole.organization.(Organization))",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-iam-to-allergyintolerance",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 IAM Segment to the FHIR AllergyIntolerance Resource representing that segment.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "Segment_IAM_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "https://www.hl7.org/v2",
+  "targetUri": "https://www.hl7.org/fhir",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "IAM-2",
+          "display": "Allergen Type Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.category"
+            }
+          ]
+        },
+        {
+          "code": "IAM-2",
+          "display": "Allergen Type Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.type"
+            }
+          ]
+        },
+        {
+          "code": "IAM-3",
+          "display": "Allergen Code/Mnemonic/Description",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.code[1]"
+            }
+          ]
+        },
+        {
+          "code": "IAM-4",
+          "display": "Allergy Severity Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.reaction.severity"
+            }
+          ]
+        },
+        {
+          "code": "IAM-5",
+          "display": "Allergy Reaction Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.reaction.manifestation.text"
+            }
+          ]
+        },
+        {
+          "code": "IAM-7",
+          "display": "Allergy Unique Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.identifier"
+            }
+          ]
+        },
+        {
+          "code": "IAM-11",
+          "display": "Onset Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.onsetDateTime"
+            }
+          ]
+        },
+        {
+          "code": "IAM-12",
+          "display": "Onset Date Text",
+          "target": [
+            {
+              "comment": "Cannot map to both onsetDateTime and onsetString, so take onsetDateTime if available.",
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.onsetString"
+            }
+          ]
+        },
+        {
+          "code": "IAM-13",
+          "display": "Reported Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.recordedDate"
+            }
+          ]
+        },
+        {
+          "code": "IAM-14",
+          "display": "Reported By",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.recorder.reference(Practitioner.name)"
+            }
+          ]
+        },
+        {
+          "code": "IAM-14",
+          "display": "Reported By",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.recorder.reference(Patient[1].name)"
+            }
+          ]
+        },
+        {
+          "code": "IAM-14",
+          "display": "Reported By",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.recorder.reference(RelatedPerson.name)"
+            }
+          ]
+        },
+        {
+          "code": "IAM-15",
+          "display": "Relationship to Patient",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.recorder.reference(RelatedPerson.relationship)"
+            }
+          ]
+        },
+        {
+          "code": "IAM-17",
+          "display": "Allergy Clinical Status",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.clinicalStatus"
+            }
+          ]
+        },
+        {
+          "code": "IAM-27",
+          "display": "Clinician Identified Code",
+          "target": [
+            {
+              "comment": "The values are added as additional .coding entries in the CodeableConcept for AllergyIntolerance.code",
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.code[1]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

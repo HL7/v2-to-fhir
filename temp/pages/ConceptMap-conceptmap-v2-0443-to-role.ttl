@@ -1,0 +1,249 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0443-to-role> a fhir:ConceptMap;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "conceptmap-v2-0443-to-role"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ConceptMap_v2-0443_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from <a href=\"http://hl7.org/fhir/R4/v2/0443/index.html\">http://terminology.hl7.org/CodeSystem/v2-0443</a> to <a href=\"http://hl7.org/fhir/R4/v3/ParticipationType/cs.html\">http://terminology.hl7.org/CodeSystem/v3-ParticipationType</a></p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 Table v2-0443 to the FHIR Role Value Set.</p>\n</div><br/><table class=\"grid\"><tr><td colspan=\"1\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"1\"><b>Destination Concept Details</b></td></tr><tr><td><b>Code</b> from </td><td/><td><b>Code</b> from </td></tr><tr><td>AD</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ADM</td></tr><tr><td>AT</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ATND</td></tr><tr><td>CP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>CON</td></tr><tr><td>RP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>REF</td></tr><tr><td>PI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>translator</td></tr></table></div>"
+  ];
+  fhir:ConceptMap.url [ fhir:value "http://hl7.org/fhir/v2-tofhir"];
+  fhir:ConceptMap.version [ fhir:value "0.1.0"];
+  fhir:ConceptMap.name [ fhir:value "ConceptMap_v2-0443_Map"];
+  fhir:ConceptMap.status [ fhir:value "active"];
+  fhir:ConceptMap.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ConceptMap.date [ fhir:value "2020-03-01T00:00:00-05:00"^^xsd:dateTime];
+  fhir:ConceptMap.publisher [ fhir:value "HL7 International"];
+  fhir:ConceptMap.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Orders and Observations Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ConceptMap.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0443 to the FHIR Role Value Set."];
+  fhir:ConceptMap.copyright [ fhir:value "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."];
+  fhir:ConceptMap.sourceUri [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0443"];
+  fhir:ConceptMap.targetUri [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"];
+  fhir:ConceptMap.group [
+     fhir:index 0;
+     fhir:ConceptMap.group.element [
+       fhir:index 0;
+       fhir:ConceptMap.group.element.code [ fhir:value "AD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Admitting" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ADM" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "admitter" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.group.element.code [ fhir:value "AP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Administering Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.group.element.code [ fhir:value "AT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Attending" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ATND" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "attender" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ConceptMap.group.element.code [ fhir:value "CLP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Collecting Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ConceptMap.group.element.code [ fhir:value "CP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Consulting Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "CON" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "consultant" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ConceptMap.group.element.code [ fhir:value "DP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Dispensing Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ConceptMap.group.element.code [ fhir:value "EP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Entering Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ConceptMap.group.element.code [ fhir:value "FHCP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Family Health Care Professional" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ConceptMap.group.element.code [ fhir:value "IP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Initiating Provider (as in action by)" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ConceptMap.group.element.code [ fhir:value "MDIR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Medical Director" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ConceptMap.group.element.code [ fhir:value "OP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Ordering Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ConceptMap.group.element.code [ fhir:value "PH" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Pharmacist " ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:ConceptMap.group.element.code [ fhir:value "PP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Primary Care Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:ConceptMap.group.element.code [ fhir:value "RO" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Responsible Observer" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:ConceptMap.group.element.code [ fhir:value "RP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Referring Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "REF" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "referrer" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:ConceptMap.group.element.code [ fhir:value "RT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Referred to Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:ConceptMap.group.element.code [ fhir:value "TR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Transcriptionist" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:ConceptMap.group.element.code [ fhir:value "PI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Primary Interpreter" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "translator" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Translator" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:ConceptMap.group.element.code [ fhir:value "AI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Assistant/Alternate Interpreter" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:ConceptMap.group.element.code [ fhir:value "TN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Technician" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:ConceptMap.group.element.code [ fhir:value "VP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Verifying Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:ConceptMap.group.element.code [ fhir:value "VPS" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Verifying Pharmaceutical Supplier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:ConceptMap.group.element.code [ fhir:value "VTS" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Verifying Treatment Supplier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0443-to-role.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/v2-tofhir/ConceptMap/conceptmap-v2-0443-to-role.ttl> .
+
+# -------------------------------------------------------------------------------------
+

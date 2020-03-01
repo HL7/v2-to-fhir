@@ -1,0 +1,202 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0190-to-address-type> a fhir:ConceptMap;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "conceptmap-v2-0190-to-address-type"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ConceptMap_v2-0190_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from <a href=\"http://hl7.org/fhir/R4/v2/0190/index.html\">http://terminology.hl7.org/CodeSystem/v2-0190</a> to (not specified)</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 Table v2-0190 to the FHIR Address Type Value Set.</p>\n</div><br/><table class=\"grid\"><tr><td colspan=\"1\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"1\"><b>Destination Concept Details</b></td></tr><tr><td><b>Code</b> from </td><td/><td><b>Code</b> from </td></tr><tr><td>M</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>postal</td></tr><tr><td>SH</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>postal</td></tr></table></div>"
+  ];
+  fhir:ConceptMap.url [ fhir:value "http://hl7.org/fhir/v2-tofhir"];
+  fhir:ConceptMap.version [ fhir:value "0.1.0"];
+  fhir:ConceptMap.name [ fhir:value "ConceptMap_v2-0190_Map"];
+  fhir:ConceptMap.status [ fhir:value "active"];
+  fhir:ConceptMap.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ConceptMap.date [ fhir:value "2020-03-01T00:00:00-05:00"^^xsd:dateTime];
+  fhir:ConceptMap.publisher [ fhir:value "HL7 International"];
+  fhir:ConceptMap.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Orders and Observations Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ConceptMap.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0190 to the FHIR Address Type Value Set."];
+  fhir:ConceptMap.copyright [ fhir:value "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."];
+  fhir:ConceptMap.sourceUri [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0190"];
+  fhir:ConceptMap.group [
+     fhir:index 0;
+     fhir:ConceptMap.group.element [
+       fhir:index 0;
+       fhir:ConceptMap.group.element.code [ fhir:value "BA" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Bad address" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.group.element.code [ fhir:value "BI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Billing Address" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.group.element.code [ fhir:value "N" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Birth (nee) (birth address, not otherwise specified)" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ConceptMap.group.element.code [ fhir:value "BDL" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Birth delivery location (address where birth occurred)" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ConceptMap.group.element.code [ fhir:value "F" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Country Of Origin" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ConceptMap.group.element.code [ fhir:value "C" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Current Or Temporary" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ConceptMap.group.element.code [ fhir:value "B" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Firm/Business" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ConceptMap.group.element.code [ fhir:value "H" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Home" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ConceptMap.group.element.code [ fhir:value "L" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Legal Address" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ConceptMap.group.element.code [ fhir:value "M" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Mailing" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "postal" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Postal" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ConceptMap.group.element.code [ fhir:value "O" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Office/Business" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ConceptMap.group.element.code [ fhir:value "P" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Permanent" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:ConceptMap.group.element.code [ fhir:value "RH" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Registry home" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:ConceptMap.group.element.code [ fhir:value "BR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Residence at birth (home address at time of birth)" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:ConceptMap.group.element.code [ fhir:value "S" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Service Location" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:ConceptMap.group.element.code [ fhir:value "SH" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Shipping Address" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "postal" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Postal" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:ConceptMap.group.element.code [ fhir:value "TM" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Tube Address" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:ConceptMap.group.element.code [ fhir:value "V" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Vacation" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0190-to-address-type.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/v2-tofhir/ConceptMap/conceptmap-v2-0190-to-address-type.ttl> .
+
+# -------------------------------------------------------------------------------------
+

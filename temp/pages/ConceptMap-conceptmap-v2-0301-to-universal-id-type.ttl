@@ -1,0 +1,196 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0301-to-universal-id-type> a fhir:ConceptMap;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "conceptmap-v2-0301-to-universal-id-type"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ConceptMap_v2-0301_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from <a href=\"http://hl7.org/fhir/R4/v2/0301/index.html\">http://terminology.hl7.org/CodeSystem/v2-0301</a> to <a href=\"http://hl7.org/fhir/R4/v2/0301/index.html\">http://terminology.hl7.org/CodeSystem/v2-0301</a></p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 Table v2-0301 to the FHIR Universal ID Type Value Set.</p>\n</div><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>DNS</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DNS</td><td/></tr><tr><td>EUI64</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>EUI64</td><td/></tr><tr><td>CLIA</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>CLIA</td><td/></tr><tr><td>CLIP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>CLIP</td><td/></tr><tr><td>GUID</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>GUID</td><td/></tr><tr><td>HCD</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>HCD</td><td/></tr><tr><td>HL7</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>HL7</td><td/></tr><tr><td>ISO</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ISO</td><td/></tr><tr><td>L,M,N</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>L</td><td>,M,N.  </td></tr><tr><td>Random</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Random</td><td/></tr><tr><td>URI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>URI</td><td/></tr><tr><td>UUID</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>UUID</td><td/></tr><tr><td>x400</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>x400</td><td/></tr><tr><td>x500</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>x500</td><td/></tr></table></div>"
+  ];
+  fhir:ConceptMap.url [ fhir:value "http://hl7.org/fhir/v2-tofhir"];
+  fhir:ConceptMap.version [ fhir:value "0.1.0"];
+  fhir:ConceptMap.name [ fhir:value "ConceptMap_v2-0301_Map"];
+  fhir:ConceptMap.status [ fhir:value "active"];
+  fhir:ConceptMap.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ConceptMap.date [ fhir:value "2020-03-01T00:00:00-05:00"^^xsd:dateTime];
+  fhir:ConceptMap.publisher [ fhir:value "HL7 International"];
+  fhir:ConceptMap.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Orders and Observations Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ConceptMap.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0301 to the FHIR Universal ID Type Value Set."];
+  fhir:ConceptMap.copyright [ fhir:value "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."];
+  fhir:ConceptMap.sourceUri [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0301"];
+  fhir:ConceptMap.targetUri [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0301"];
+  fhir:ConceptMap.group [
+     fhir:index 0;
+     fhir:ConceptMap.group.element [
+       fhir:index 0;
+       fhir:ConceptMap.group.element.code [ fhir:value "DNS" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "An Internet host name, in accordance with RFC 1035; or an IP address. Either in ASCII or as integers, with periods between components (“dotted” notation)." ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DNS" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "An Internet host name, in accordance with RFC 1035; or an IP address. Either in ASCII or as integers, with periods between components (“dotted” notation)." ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.group.element.code [ fhir:value "EUI64" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "IEEE 64-bit Extended Unique Identifier is comprised of a 24-bit company identifier and a 40-bit instance identifier. The value shall be formatted as 16 ASCII HEX digits, for example, “AABBCC1122334455”. The 24-bit company identifier, formally known as Organizationally Unique Identifier (OUI-24), is guaranteed to be globally unique. The 40-bit extensions are assigned by manufacturers. This identifier is often used in equipment interfaces (e.g., “MAC” address format for IPv4 & IPv6). [See http://standards.ieee.org/regauth/oui/tutorials/EUI64.html for a detailed explanation of the format.]" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "EUI64" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "IEEE 64-bit Extended Unique Identifier is comprised of a 24-bit company identifier and a 40-bit instance identifier. The value shall be formatted as 16 ASCII HEX digits, for example, “AABBCC1122334455”. The 24-bit company identifier, formally known as Organizationally Unique Identifier (OUI-24), is guaranteed to be globally unique. The 40-bit extensions are assigned by manufacturers. This identifier is often used in equipment interfaces (e.g., “MAC” address format for IPv4 & IPv6). [See http://standards.ieee.org/regauth/oui/tutorials/EUI64.html for a detailed explanation of the format.]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.group.element.code [ fhir:value "CLIA" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Clinical Laboratory Improvement Amendments. Allows for the ability to designate organization identifier as a “CLIA” assigned number (for labs)" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "CLIA" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Clinical Laboratory Improvement Amendments. Allows for the ability to designate organization identifier as a “CLIA” assigned number (for labs)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ConceptMap.group.element.code [ fhir:value "CLIP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Clinical laboratory Improvement Program. Allows for the ability to designate organization identifier as a “CLIP” assigned number (for labs). Used by US Department of Defense." ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "CLIP" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Clinical laboratory Improvement Program. Allows for the ability to designate organization identifier as a “CLIP” assigned number (for labs). Used by US Department of Defense." ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ConceptMap.group.element.code [ fhir:value "GUID" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Same as UUID." ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "GUID" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Same as UUID." ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ConceptMap.group.element.code [ fhir:value "HCD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "The CEN Healthcare Coding Scheme Designator" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "HCD" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "The CEN Healthcare Coding Scheme Designator" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ConceptMap.group.element.code [ fhir:value "HL7" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "HL7 registration schemes" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "HL7" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "HL7 registration schemes" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ConceptMap.group.element.code [ fhir:value "ISO" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "An International Standards Organization Object Identifier (OID), in accordance with ISO/IEC 8824. Formatted as decimal digits separated by periods; recommended limit of 64 characters" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ISO" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "An International Standards Organization Object Identifier (OID), in accordance with ISO/IEC 8824. Formatted as decimal digits separated by periods; recommended limit of 64 characters" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ConceptMap.group.element.code [ fhir:value "L,M,N" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Locally defined coding entity identifier." ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "L" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Locally defined coding entity identifier." ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value ",M,N.  " ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ConceptMap.group.element.code [ fhir:value "Random" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Usually a base64 encoded string of random bits.\n Note: Random IDs are typically used for instance identifiers, rather than an identifier of an Assigning Authority that issues instance identifiers" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Random" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Usually a base64 encoded string of random bits.\n Note: Random IDs are typically used for instance identifiers, rather than an identifier of an Assigning Authority that issues instance identifiers" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ConceptMap.group.element.code [ fhir:value "URI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Uniform Resource Identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "URI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Uniform Resource Identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ConceptMap.group.element.code [ fhir:value "UUID" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "The DCE Universal Unique Identifier, in accordance with RFC 4122. Recommended format is 32 hexadecimal digits separated by hyphens, in the digit grouping 8-4-4-4-12" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "UUID" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "The DCE Universal Unique Identifier, in accordance with RFC 4122. Recommended format is 32 hexadecimal digits separated by hyphens, in the digit grouping 8-4-4-4-12" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:ConceptMap.group.element.code [ fhir:value "x400" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "An X.400 MHS identifier. Recommended format is in accordance with RFC 1649" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "x400" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "An X.400 MHS identifier. Recommended format is in accordance with RFC 1649" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:ConceptMap.group.element.code [ fhir:value "x500" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "An X.500 directory name" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "x500" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "An X.500 directory name" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0301-to-universal-id-type.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/v2-tofhir/ConceptMap/conceptmap-v2-0301-to-universal-id-type.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="segment-pv2-to-encounter"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Segment_PV2_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href="mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href="mailto:kboone@ainq.com">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 PV2 Segment to the FHIR Encounter Resource representing that segment.</p>
+</div><br/><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>PV2-3</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Encounter.reasonCode</td><td>PV2-3 doesn't have an associated table so no vocabulary mapping is provided</td></tr><tr><td>PV2-11</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Encounter.length.value</td><td/></tr><tr><td>PV2-11</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Encounter.length.unit</td><td/></tr><tr><td>PV2-11</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Encounter.length.system</td><td/></tr><tr><td>PV2-12</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Encounter.text.div</td><td/></tr><tr><td>PV2-13</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Encounter.participant.individual(Practitioner|PractitionerRole)</td><td/></tr><tr><td>PV2-13</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Encounter.participant.type.coding.code</td><td/></tr><tr><td>PV2-13</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Encounter.participant.type.coding.system</td><td/></tr><tr><td>PV2-13</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Encounter.participant.type.text</td><td/></tr><tr><td>PV2-25</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Encounter.priority</td><td/></tr><tr><td>PV2-38</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>Encounter.extension-encounter-modeOfArrival</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/v2-tofhir"/>
+  <version value="0.1.0"/>
+  <name value="Segment_PV2_Map"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2020-03-01T00:00:00-05:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Orders and Observations Workgroup"/>
+    <telecom>
+      <system value="email"/>
+      <value value="https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <description value="This ConceptMap represents the mapping from the HL7 V2 PV2 Segment to the FHIR Encounter Resource representing that segment."/>
+  <copyright value="Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."/>
+  <sourceUri value="https://www.hl7.org/v2"/>
+  <targetUri value="https://www.hl7.org/fhir"/>
+  <group>
+    <element>
+      <code value="PV2-3"/>
+      <display value="Admit Reason"/>
+      <target>
+        <code value="Encounter.reasonCode"/>
+        <equivalence value="equivalent"/>
+        <comment value="PV2-3 doesn&#39;t have an associated table so no vocabulary mapping is provided"/>
+      </target>
+    </element>
+    <element>
+      <code value="PV2-11"/>
+      <display value="Actual Length of Inpatient Stay"/>
+      <target>
+        <code value="Encounter.length.value"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PV2-11"/>
+      <display value="Actual Length of Inpatient Stay"/>
+      <target>
+        <code value="Encounter.length.unit"/>
+        <display value="= &quot;d&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PV2-11"/>
+      <display value="Actual Length of Inpatient Stay"/>
+      <target>
+        <code value="Encounter.length.system"/>
+        <display value="= &quot;http://unitsofmeasure.org/&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PV2-12"/>
+      <display value="Visit Description"/>
+      <target>
+        <code value="Encounter.text.div"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PV2-13"/>
+      <display value="Referral Source Code"/>
+      <target>
+        <code value="Encounter.participant.individual(Practitioner|PractitionerRole)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PV2-13"/>
+      <display value="Referral Source Code"/>
+      <target>
+        <code value="Encounter.participant.type.coding.code"/>
+        <display value="= &quot;REF&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PV2-13"/>
+      <display value="Referral Source Code"/>
+      <target>
+        <code value="Encounter.participant.type.coding.system"/>
+        <display value="= &quot;http://terminology.hl7.org/CodeSystem/v3-ParticipationType&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PV2-13"/>
+      <display value="Referral Source Code"/>
+      <target>
+        <code value="Encounter.participant.type.text"/>
+        <display value="= &quot;referrer&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PV2-25"/>
+      <display value="Visit Priority Code"/>
+      <target>
+        <code value="Encounter.priority"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="PV2-38"/>
+      <display value="Mode of Arrival Code"/>
+      <target>
+        <code value="Encounter.extension-encounter-modeOfArrival"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

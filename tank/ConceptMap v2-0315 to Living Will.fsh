@@ -1,0 +1,42 @@
+Instance: ConceptMapv2-0315toLivingWill
+InstanceOf: ConceptMap
+Title: "ConceptMap v2-0315 to Living Will Map"
+* description = "This ConceptMap represents the mapping from the HL7 V2 Table v2-0315 to the FHIR Living Will Value Set."
+* id = "conceptmap-v2-0315-to-living-will"
+* url = "http://hl7.org/fhir/v2-tofhir"
+* version = "1.0"
+* name = "ConceptMap_v2-0315_Map"
+* status = #active
+* experimental = true
+* date = "2020-03-01"
+* publisher = "HL7 International, Inc"
+* contact.telecom.system = #email
+* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
+* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
+* sourceUri = "http://terminology.hl7.org/CodeSystem/v2-0315"
+* targetUri = "http://terminology.hl7.org/CodeSystem/v2-0315"
+* group.element[0].code = #Y
+* group.element[0].display = "Yes, patient has a living will"
+* group.element[0].target.equivalence = #equivalent
+* group.element[0].target.code = #Y
+* group.element[0].target.display = "Yes, patient has a living will"
+* group.element[1].code = #F
+* group.element[1].display = "Yes, patient has a living will but it is not on file"
+* group.element[1].target.equivalence = #equivalent
+* group.element[1].target.code = #F
+* group.element[1].target.display = "Yes, patient has a living will but it is not on file"
+* group.element[2].code = #N
+* group.element[2].display = "No, patient does not have a living will and no information was provided"
+* group.element[2].target.equivalence = #equivalent
+* group.element[2].target.code = #N
+* group.element[2].target.display = "No, patient does not have a living will and no information was provided"
+* group.element[3].code = #I
+* group.element[3].display = "No, patient does not have a living will but information was provided"
+* group.element[3].target.equivalence = #equivalent
+* group.element[3].target.code = #I
+* group.element[3].target.display = "No, patient does not have a living will but information was provided"
+* group.element[4].code = #U
+* group.element[4].display = "Unknown"
+* group.element[4].target.equivalence = #equivalent
+* group.element[4].target.code = #U
+* group.element[4].target.display = "Unknown"

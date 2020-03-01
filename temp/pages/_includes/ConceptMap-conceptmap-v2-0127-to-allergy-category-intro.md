@@ -1,0 +1,14 @@
+This ConceptMap represents the mapping from the HL7 V2 Table v2-0127 to the FHIR Allergy Category Value Set. See also the [FHIR Shorthand](https://github.com/HL7/v2-to-fhir/blob/master/tank/ConceptMap v2-0127 to Allergy Category.fsh) or the [CSV Source File](https://github.com/HL7/v2-to-fhir/blob/master/mappings/)"
+<table class='grid'><thead>
+<tr><th colspan='3' style='border-right: 2px solid black;'>HL7 v2</th><th colspan='3' style='border-right: 2px solid black;'>Condition (IF True, args)</th><th colspan='4'>HL7 FHIR</th><th>Comments</th></tr>
+<tr><th>Code</th><th>Text</th><th>Computable ANTLR</th><th>Computable FHIRPath</th><th>Code</th><th>&#xA0;</th><th>Display</th><th>Code System</th><th>&#xA0;</th></tr></thead>
+<tbody>
+<tr><td>DA</td><td>Drug allergy</td><td style='border-right: 2px'>http://terminology.hl7.org/CodeSystem/v2-0127</td><td></td><td></td><td style='border-right: 2px'></td><td>medication</td><td></td><td>Medication</td><td>http://hl7.org/fhir/allergy-intolerance-category</td><td></td></tr>
+<tr><td>FA</td><td>Food allergy</td><td style='border-right: 2px'>http://terminology.hl7.org/CodeSystem/v2-0127</td><td></td><td></td><td style='border-right: 2px'></td><td>food</td><td></td><td>Food</td><td>http://hl7.org/fhir/allergy-intolerance-category</td><td></td></tr>
+<tr><td>MA</td><td>Miscellaneous allergy</td><td style='border-right: 2px'>http://terminology.hl7.org/CodeSystem/v2-0127</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>MC</td><td>Miscellaneous contraindication</td><td style='border-right: 2px'>http://terminology.hl7.org/CodeSystem/v2-0127</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>EA</td><td>Environmental allergy</td><td style='border-right: 2px'>http://terminology.hl7.org/CodeSystem/v2-0127</td><td></td><td></td><td style='border-right: 2px'></td><td>environment</td><td></td><td>Environment</td><td>http://hl7.org/fhir/allergy-intolerance-category</td><td></td></tr>
+<tr><td>AA</td><td>Animal allergy</td><td style='border-right: 2px'>http://terminology.hl7.org/CodeSystem/v2-0127</td><td></td><td></td><td style='border-right: 2px'></td><td>environment</td><td></td><td>Environment</td><td>http://hl7.org/fhir/allergy-intolerance-category</td><td></td></tr>
+<tr><td>PA</td><td>Plant allergy</td><td style='border-right: 2px'>http://terminology.hl7.org/CodeSystem/v2-0127</td><td></td><td></td><td style='border-right: 2px'></td><td>environment</td><td></td><td>Environment</td><td>http://hl7.org/fhir/allergy-intolerance-category</td><td></td></tr>
+<tr><td>LA</td><td>Pollen allergy</td><td style='border-right: 2px'>http://terminology.hl7.org/CodeSystem/v2-0127</td><td></td><td></td><td style='border-right: 2px'></td><td>environment</td><td></td><td>Environment</td><td>http://hl7.org/fhir/allergy-intolerance-category</td><td></td></tr>
+</tbody></table>

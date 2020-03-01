@@ -1,0 +1,71 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "conceptmap-v2-0136-to-yesno",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table v2-0136 to the FHIR YesNo Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "ConceptMap_v2-0136_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "http://terminology.hl7.org/CodeSystem/v2-0136",
+  "targetUri": "",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "Y",
+          "display": "Yes",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "true"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "No",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "false"
+            }
+          ]
+        },
+        {
+          "code": "Y",
+          "display": "Yes",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "true"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "No",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "false"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{% raw %}<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap">ConceptMap</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;segment-sft-to-messageheader&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Segment_SFT_Map (http://hl7.org/fhir/v2-tofhir)&lt;/h2&gt;&lt;p&gt;Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir&lt;/p&gt;&lt;p&gt;ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: &lt;a href=&quot;mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG&quot;&gt;https://confluence.hl7.org/display/OO/v2-to-FHIR+IG&lt;/a&gt;, Keith W. Boone: &lt;a href=&quot;mailto:kboone@ainq.com&quot;&gt;kboone@ainq.com&lt;/a&gt;). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.&lt;/p&gt;&lt;div&gt;&lt;p&gt;This ConceptMap represents the mapping from the HL7 V2 SFT Segment to the FHIR MessageHeader Resource representing that segment.&lt;/p&gt;
+&lt;/div&gt;&lt;br/&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Destination Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SFT-2&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.source.version&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SFT-3&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;MessageHeader.source.software&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/v2-tofhir&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Segment_SFT_Map&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2020-03-01T00:00:00-05:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 International&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 Orders and Observations Workgroup&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://confluence.hl7.org/display/OO/v2-to-FHIR+IG&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Keith W. Boone&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;kboone@ainq.com&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.description">description</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;This ConceptMap represents the mapping from the HL7 V2 SFT Segment to the FHIR MessageHeader Resource representing that segment.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.copyright">copyright</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.source[x]">sourceUri</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://www.hl7.org/v2&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.target[x]">targetUri</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://www.hl7.org/fhir&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SFT-2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Software Certified Version or Release Number&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MessageHeader.source.version&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SFT-3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Software Product Name&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MessageHeader.source.software&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/target&gt;
+    &lt;/element&gt;
+  &lt;/group&gt;
+&lt;/ConceptMap&gt;</pre>
+{% endraw %}

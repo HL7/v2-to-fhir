@@ -1,0 +1,1758 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ImplementationGuide/v2-tofhir> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "v2-tofhir"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HL7Version2toFHIR</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/v2-tofhir/ImplementationGuide/v2-tofhir</pre><div><p>asdf</p>\n</div></div>"
+  ];
+  fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/v2-tofhir/ImplementationGuide/v2-tofhir"];
+  fhir:ImplementationGuide.version [ fhir:value "0.1.0"];
+  fhir:ImplementationGuide.name [ fhir:value "HL7Version2toFHIR"];
+  fhir:ImplementationGuide.title [ fhir:value "HL7 Version 2 to FHIR"];
+  fhir:ImplementationGuide.status [ fhir:value "active"];
+  fhir:ImplementationGuide.date [ fhir:value "2020-03-01T02:41:42-05:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.publisher [ fhir:value "HL7 International"];
+  fhir:ImplementationGuide.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Orders and Observations Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ImplementationGuide.description [ fhir:value "asdf"];
+  fhir:ImplementationGuide.packageId [ fhir:value "v2-tofhir"];
+  fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.0.1";
+     fhir:index 0
+  ];
+  fhir:ImplementationGuide.definition [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "2020+" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "CI Build" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "show-inherited-invariants" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "false" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ];
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-hl7-concept-map-access-restriction-reason-code-sheet1.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-hl7-concept-map-access-restriction-reason-code-sheet1>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-hl7-concept-map-access-restriction-reason-code-sheet1" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap HL7 Concept Map_ Access Restriction Reason Code - Sheet1.csv to Unknown Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table HL7 Concept Map_ Access Restriction Reason Code - Sheet1.csv to the FHIR Unknown Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-hl7-concept-map-collection-method-modifier-sheet1.csv.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-hl7-concept-map-collection-method-modifier-sheet1.csv>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-hl7-concept-map-collection-method-modifier-sheet1.csv" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap HL7 Concept Map_ Collection Method Modifier - Sheet1.csv to Unknown Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table HL7 Concept Map_ Collection Method Modifier - Sheet1.csv to the FHIR Unknown Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-hl7-concept-map-duration-unit-sheet1.csv-to-unknown.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-hl7-concept-map-duration-unit-sheet1.csv-to-unknown>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-hl7-concept-map-duration-unit-sheet1.csv-to-unknown" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap HL7 Concept Map_ Duration Unit - Sheet1.csv to Unknown Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table HL7 Concept Map_ Duration Unit - Sheet1.csv to the FHIR Unknown Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-hl7-concept-map-language-sheet1.csv-to-unknown.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-hl7-concept-map-language-sheet1.csv-to-unknown>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-hl7-concept-map-language-sheet1.csv-to-unknown" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap HL7 Concept Map_ Language - Sheet1.csv to Unknown Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table HL7 Concept Map_ Language - Sheet1.csv to the FHIR Unknown Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-hl7-concept-map-religion-sheet1.csv-to-unknown.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-hl7-concept-map-religion-sheet1.csv-to-unknown>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-hl7-concept-map-religion-sheet1.csv-to-unknown" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap HL7 Concept Map_ Religion - Sheet1.csv to Unknown Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table HL7 Concept Map_ Religion - Sheet1.csv to the FHIR Unknown Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0001-to-gender.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0001-to-gender>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0001-to-gender" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0001 to Gender Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0001 to the FHIR Gender Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0002-to-marital-status.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0002-to-marital-status>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0002-to-marital-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0002 to Marital Status Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0002 to the FHIR Marital Status Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0004-to-encounter-class.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0004-to-encounter-class>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0004-to-encounter-class" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0004 to Encounter Class Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0004 to the FHIR Encounter Class Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0004-to-encounter-type.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0004-to-encounter-type>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0004-to-encounter-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0004 to Encounter Type Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0004 to the FHIR Encounter Type Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0007-to-admission-type.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0007-to-admission-type>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0007-to-admission-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0007 to Admission Type Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0007 to the FHIR Admission Type Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0063-to-relationship.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0063-to-relationship>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0063-to-relationship" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0063 to Relationship Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0063 to the FHIR Relationship Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0078-to-interpretation-codes.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0078-to-interpretation-codes>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0078-to-interpretation-codes" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0078 to Interpretation Codes Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0078 to the FHIR Interpretation Codes Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0085-to-observation-status.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0085-to-observation-status>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0085-to-observation-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0085 to Observation Status Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0085 to the FHIR Observation Status Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0092-to-readmission-indicator.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0092-to-readmission-indicator>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0092-to-readmission-indicator" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0092 to Readmission Indicator Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0092 to the FHIR Readmission Indicator Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0123-to-result-status.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0123-to-result-status>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0123-to-result-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0123 to Result Status Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0123 to the FHIR Result Status Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0125-to-value-type.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0125-to-value-type>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0125-to-value-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0125 to Value Type Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0125 to the FHIR Value Type Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0127-to-allergy-category.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0127-to-allergy-category>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0127-to-allergy-category" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0127 to Allergy Category Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0127 to the FHIR Allergy Category Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0127-to-allergy-type.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0127-to-allergy-type>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0127-to-allergy-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0127 to Allergy Type Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0127 to the FHIR Allergy Type Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0131-to-contact-role.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0131-to-contact-role>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0131-to-contact-role" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0131 to Contact Role Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0131 to the FHIR Contact Role Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0136-to-specimen-availability.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0136-to-specimen-availability>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0136-to-specimen-availability" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0136 to Specimen Availability Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0136 to the FHIR Specimen Availability Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0136-to-yesno.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0136-to-yesno>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0136-to-yesno" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0136 to YesNo Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0136 to the FHIR YesNo Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0155-to-acknowledgements.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0155-to-acknowledgements>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0155-to-acknowledgements" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0155 to Acknowledgements Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0155 to the FHIR Acknowledgements Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0185-to-preferred-method-of-contact.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0185-to-preferred-method-of-contact>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0185-to-preferred-method-of-contact" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0185 to Preferred Method of Contact Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0185 to the FHIR Preferred Method of Contact Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0190-to-address-type.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0190-to-address-type>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0190-to-address-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0190 to Address Type Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0190 to the FHIR Address Type Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0200-to-name-type.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0200-to-name-type>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0200-to-name-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0200 to Name Type Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0200 to the FHIR Name Type Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0201-to-telecom-use-code.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0201-to-telecom-use-code>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0201-to-telecom-use-code" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0201 to Telecom Use Code Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0201 to the FHIR Telecom Use Code Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0203-to-id-type.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0203-to-id-type>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0203-to-id-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0203 to ID Type Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0203 to the FHIR ID Type Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0206-to-segment-action-code.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0206-to-segment-action-code>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0206-to-segment-action-code" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0206 to Segment Action Code Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0206 to the FHIR Segment Action Code Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0217-to-encounter-priority.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0217-to-encounter-priority>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0217-to-encounter-priority" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0217 to Encounter Priority Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0217 to the FHIR Encounter Priority Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0231-to-student-status.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0231-to-student-status>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0231-to-student-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0231 to Student Status Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0231 to the FHIR Student Status Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0301-to-universal-id-type.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0301-to-universal-id-type>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0301-to-universal-id-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0301 to Universal ID Type Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0301 to the FHIR Universal ID Type Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0315-to-living-will.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0315-to-living-will>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0315-to-living-will" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0315 to Living Will Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0315 to the FHIR Living Will Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0322-to-completion-status.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0322-to-completion-status>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0322-to-completion-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0322 to Completion Status Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0322 to the FHIR Completion Status Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0406-to-organization-unit-type.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0406-to-organization-unit-type>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0406-to-organization-unit-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0406 to Organization Unit Type Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0406 to the FHIR Organization Unit Type Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0430-to-mode-of-arrival.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0430-to-mode-of-arrival>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0430-to-mode-of-arrival" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0430 to Mode of Arrival Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0430 to the FHIR Mode of Arrival Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0441-to-registry-status.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0441-to-registry-status>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0441-to-registry-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0441 to Registry Status Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0441 to the FHIR Registry Status Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0443-to-role.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0443-to-role>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0443-to-role" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0443 to Role Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0443 to the FHIR Role Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0444-to-name-assembly-order.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0444-to-name-assembly-order>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0444-to-name-assembly-order" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0444 to Name Assembly Order Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0444 to the FHIR Name Assembly Order Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0480-to-order-type.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0480-to-order-type>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0480-to-order-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0480 to Order Type Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0480 to the FHIR Order Type Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0485-to-priority.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0485-to-priority>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0485-to-priority" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0485 to Priority Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0485 to the FHIR Priority Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0498-to-consent-status.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0498-to-consent-status>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0498-to-consent-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0498 to Consent Status Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0498 to the FHIR Consent Status Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0549-to-consent-relationship.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0549-to-consent-relationship>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0549-to-consent-relationship" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0549 to Consent Relationship Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0549 to the FHIR Consent Relationship Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-conceptmap-v2-0717-to-access-restriction-value.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0717-to-access-restriction-value>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/conceptmap-v2-0717-to-access-restriction-value" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ConceptMap v2-0717 to Access Restriction Value Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0717 to the FHIR Access Restriction Value Value Set." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-al1-to-allergyintolerance.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-al1-to-allergyintolerance>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-al1-to-allergyintolerance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment AL1 to AllergyIntolerance Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 AL1 Segment to the FHIR AllergyIntolerance Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-dg1-to-condition.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-dg1-to-condition>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-dg1-to-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment DG1 to Condition Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 DG1 Segment to the FHIR Condition Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-hl7-segment-fhir-r4-orcmedicationrequest-sheet1.csv-to-u.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-hl7-segment-fhir-r4-orcmedicationrequest-sheet1.csv-to-u>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-hl7-segment-fhir-r4-orcmedicationrequest-sheet1.csv-to-u" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment HL7 Segment - FHIR R4_ ORC[MedicationRequest] - Sheet1.csv to Unknown Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 HL7 Segment - FHIR R4_ ORC[MedicationRequest] - Sheet1.csv Segment to the FHIR Unknown Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-iam-to-allergyintolerance.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-iam-to-allergyintolerance>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-iam-to-allergyintolerance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment IAM to AllergyIntolerance Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 IAM Segment to the FHIR AllergyIntolerance Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-msh-to-messageheader.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-msh-to-messageheader>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-msh-to-messageheader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment MSH to MessageHeader Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 MSH Segment to the FHIR MessageHeader Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-nk1-patient-to-patient.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-nk1-patient-to-patient>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-nk1-patient-to-patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment NK1!Patient to Patient Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 NK1!Patient Segment to the FHIR Patient Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-nk1-relatedperson-to-relatedperson.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-nk1-relatedperson-to-relatedperson>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-nk1-relatedperson-to-relatedperson" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment NK1!RelatedPerson to RelatedPerson Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 NK1!RelatedPerson Segment to the FHIR RelatedPerson Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 50;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-nte-annotation-to-annotation.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-nte-annotation-to-annotation>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-nte-annotation-to-annotation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment NTE!Annotation to Annotation Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 NTE!Annotation Segment to the FHIR Annotation Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 51;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-obr-diagnosticreport-to-diagnosticreport.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-obr-diagnosticreport-to-diagnosticreport>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-obr-diagnosticreport-to-diagnosticreport" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment OBR!DiagnosticReport to DiagnosticReport Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 OBR!DiagnosticReport Segment to the FHIR DiagnosticReport Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 52;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-obr-servicerequest-to-servicerequest.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-obr-servicerequest-to-servicerequest>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-obr-servicerequest-to-servicerequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment OBR!ServiceRequest to ServiceRequest Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 OBR!ServiceRequest Segment to the FHIR ServiceRequest Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 53;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-obx-observation-to-observation.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-obx-observation-to-observation>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-obx-observation-to-observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment OBX!Observation to Observation Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 OBX!Observation Segment to the FHIR Observation Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 54;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-obx-observationcomponent-to-observation.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-obx-observationcomponent-to-observation>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-obx-observationcomponent-to-observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment OBX!ObservationComponent to Observation Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 OBX!ObservationComponent Segment to the FHIR Observation Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 55;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-orc-diagnosticreport-to-diagnosticreport.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-orc-diagnosticreport-to-diagnosticreport>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-orc-diagnosticreport-to-diagnosticreport" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment ORC!DiagnosticReport to DiagnosticReport Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 ORC!DiagnosticReport Segment to the FHIR DiagnosticReport Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 56;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-orc-immunization-to-immunization.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-orc-immunization-to-immunization>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-orc-immunization-to-immunization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment ORC!Immunization to Immunization Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 ORC!Immunization Segment to the FHIR Immunization Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 57;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-orc-provenance-to-provenance.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-orc-provenance-to-provenance>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-orc-provenance-to-provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment ORC!Provenance to Provenance Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 ORC!Provenance Segment to the FHIR Provenance Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 58;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-orc-servicerequest-to-servicerequest.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-orc-servicerequest-to-servicerequest>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-orc-servicerequest-to-servicerequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment ORC!ServiceRequest to ServiceRequest Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 ORC!ServiceRequest Segment to the FHIR ServiceRequest Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 59;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-pd1-to-patient.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pd1-to-patient>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-pd1-to-patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment PD1 to Patient Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 PD1 Segment to the FHIR Patient Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 60;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-pid-to-patient.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pid-to-patient>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-pid-to-patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment PID to Patient Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 PID Segment to the FHIR Patient Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 61;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-pv1-to-encounter.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pv1-to-encounter>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-pv1-to-encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment PV1 to Encounter Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 PV1 Segment to the FHIR Encounter Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 62;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-pv2-to-encounter.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pv2-to-encounter>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-pv2-to-encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment PV2 to Encounter Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 PV2 Segment to the FHIR Encounter Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 63;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-rol-pid-to-patient.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-rol-pid-to-patient>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-rol-pid-to-patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment ROL!PID to Patient Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 ROL!PID Segment to the FHIR Patient Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 64;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-rol-pid-to-relatedperson.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-rol-pid-to-relatedperson>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-rol-pid-to-relatedperson" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment ROL!PID to RelatedPerson Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 ROL!PID Segment to the FHIR RelatedPerson Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 65;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-rol-pv1-to-encounterpv1.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-rol-pv1-to-encounterpv1>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-rol-pv1-to-encounterpv1" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment ROL!PV1 to Encounter[PV1] Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 ROL!PV1 Segment to the FHIR Encounter[PV1] Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 66;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-rxa-immunization-to-immunization.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-rxa-immunization-to-immunization>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-rxa-immunization-to-immunization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment RXA!Immunization to Immunization Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 RXA!Immunization Segment to the FHIR Immunization Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 67;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-sft-to-messageheader.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-sft-to-messageheader>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-sft-to-messageheader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment SFT to MessageHeader Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 SFT Segment to the FHIR MessageHeader Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 68;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ConceptMap-segment-spm-specimen-to-specimen.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-spm-specimen-to-specimen>;
+         fhir:Reference.reference [ fhir:value "ConceptMap/segment-spm-specimen-to-specimen" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Segment SPM!Specimen to Specimen Map" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 SPM!Specimen Segment to the FHIR Specimen Resource representing that segment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ];
+     fhir:ImplementationGuide.definition.page [
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ];
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ];
+       fhir:ImplementationGuide.definition.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Home" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "acknowledgements.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Acknowledgements" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 2;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "codingsystemmaps.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Codingsystemmaps" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 3;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "datatypemaps.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Datatypemaps" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 4;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "glossary.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Glossary" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 5;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "implementationconsiderations.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Implementationconsiderations" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 6;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "mappingguidelines.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Mappingguidelines" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 7;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "messagemaps.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Messagemaps" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 8;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "overview.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Overview" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 9;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "profiles.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Profiles" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 10;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "segmentmaps.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Segmentmaps" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 11;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "testconversions.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Testconversions" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 12;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "validation.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Validation" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ]
+     ];
+     fhir:ImplementationGuide.definition.parameter [
+       fhir:index 0;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
+     ], [
+       fhir:index 1;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
+     ], [
+       fhir:index 3;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
+     ], [
+       fhir:index 4;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
+     ], [
+       fhir:index 5;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
+     ], [
+       fhir:index 6;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+     ], [
+       fhir:index 7;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
+     ], [
+       fhir:index 8;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+     ], [
+       fhir:index 9;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 10;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-hl7-concept-map-access-restriction-reason-code-sheet1> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-hl7-concept-map-collection-method-modifier-sheet1.csv> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-hl7-concept-map-duration-unit-sheet1.csv-to-unknown> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-hl7-concept-map-language-sheet1.csv-to-unknown> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-hl7-concept-map-religion-sheet1.csv-to-unknown> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0001-to-gender> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0002-to-marital-status> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0004-to-encounter-class> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0004-to-encounter-type> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0007-to-admission-type> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0063-to-relationship> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0078-to-interpretation-codes> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0085-to-observation-status> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0092-to-readmission-indicator> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0123-to-result-status> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0125-to-value-type> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0127-to-allergy-category> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0127-to-allergy-type> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0131-to-contact-role> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0136-to-specimen-availability> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0136-to-yesno> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0155-to-acknowledgements> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0185-to-preferred-method-of-contact> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0190-to-address-type> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0200-to-name-type> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0201-to-telecom-use-code> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0203-to-id-type> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0206-to-segment-action-code> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0217-to-encounter-priority> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0231-to-student-status> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0301-to-universal-id-type> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0315-to-living-will> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0322-to-completion-status> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0406-to-organization-unit-type> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0430-to-mode-of-arrival> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0441-to-registry-status> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0443-to-role> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0444-to-name-assembly-order> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0480-to-order-type> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0485-to-priority> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0498-to-consent-status> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0549-to-consent-relationship> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0717-to-access-restriction-value> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-al1-to-allergyintolerance> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-dg1-to-condition> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-hl7-segment-fhir-r4-orcmedicationrequest-sheet1.csv-to-u> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-iam-to-allergyintolerance> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-msh-to-messageheader> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-nk1-patient-to-patient> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-nk1-relatedperson-to-relatedperson> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-nte-annotation-to-annotation> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-obr-diagnosticreport-to-diagnosticreport> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-obr-servicerequest-to-servicerequest> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-obx-observation-to-observation> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-obx-observationcomponent-to-observation> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-orc-diagnosticreport-to-diagnosticreport> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-orc-immunization-to-immunization> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-orc-provenance-to-provenance> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-orc-servicerequest-to-servicerequest> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pd1-to-patient> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pid-to-patient> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pv1-to-encounter> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pv2-to-encounter> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-rol-pid-to-patient> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-rol-pid-to-relatedperson> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-rol-pv1-to-encounterpv1> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-rxa-immunization-to-immunization> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-sft-to-messageheader> a fhir:v2-tofhir .
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-spm-specimen-to-specimen> a fhir:v2-tofhir .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ImplementationGuide/v2-tofhir.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/v2-tofhir/ImplementationGuide/v2-tofhir.ttl> .
+
+# -------------------------------------------------------------------------------------
+

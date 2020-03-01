@@ -1,0 +1,170 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-orc-diagnosticreport-to-diagnosticreport> a fhir:ConceptMap;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "segment-orc-diagnosticreport-to-diagnosticreport"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Segment_ORC!DiagnosticReport_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 ORC!DiagnosticReport Segment to the FHIR DiagnosticReport Resource representing that segment.</p>\n</div><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>ORC-2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.identifier[1]</td><td/></tr><tr><td>ORC-2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.identifier[1].type.coding.code</td><td/></tr><tr><td>ORC-2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.identifier[1].type.coding.system</td><td/></tr><tr><td>ORC-2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.basedOn(ServiceRequest)</td><td>The Placer Order Number may be used to find the ServiceRequest with the same ID to link the ServiceRequest and the DiagnosticReport which fulfills the order.\nIdeally, DiagnosticReport.identifier will be unique. Depending on how the resulting system populates the Filler ID, it may be desirable to concatenate the Filler ID with the procedure code and/or date/time to create a unique identifier.</td></tr><tr><td>ORC-3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.identifier[2]</td><td/></tr><tr><td>ORC-3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.identifier[2].type.coding.code</td><td/></tr><tr><td>ORC-3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.identifier[2].type.coding.system</td><td/></tr><tr><td>ORC-4</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.identifier[3]</td><td/></tr><tr><td>ORC-4</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.identifier[3].type.coding.code</td><td/></tr><tr><td>ORC-4</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.identifier[3].type.coding.system</td><td/></tr><tr><td>ORC-9</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.effectiveDateTime</td><td/></tr><tr><td>ORC-16</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DiagnosticReport.extension-event-statusReason</td><td/></tr></table></div>"
+  ];
+  fhir:ConceptMap.url [ fhir:value "http://hl7.org/fhir/v2-tofhir"];
+  fhir:ConceptMap.version [ fhir:value "0.1.0"];
+  fhir:ConceptMap.name [ fhir:value "Segment_ORC!DiagnosticReport_Map"];
+  fhir:ConceptMap.status [ fhir:value "active"];
+  fhir:ConceptMap.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ConceptMap.date [ fhir:value "2020-03-01T00:00:00-05:00"^^xsd:dateTime];
+  fhir:ConceptMap.publisher [ fhir:value "HL7 International"];
+  fhir:ConceptMap.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Orders and Observations Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ConceptMap.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 ORC!DiagnosticReport Segment to the FHIR DiagnosticReport Resource representing that segment."];
+  fhir:ConceptMap.copyright [ fhir:value "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."];
+  fhir:ConceptMap.sourceUri [ fhir:value "https://www.hl7.org/v2"];
+  fhir:ConceptMap.targetUri [ fhir:value "https://www.hl7.org/fhir"];
+  fhir:ConceptMap.group [
+     fhir:index 0;
+     fhir:ConceptMap.group.element [
+       fhir:index 0;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-2" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Placer Order Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.identifier[1]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-2" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Placer Order Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.identifier[1].type.coding.code" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"PLAC\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-2" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Placer Order Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.identifier[1].type.coding.system" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"http://terminology.hl7.org/CodeSystem/v2-0203\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-2" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Placer Order Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.basedOn(ServiceRequest)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "The Placer Order Number may be used to find the ServiceRequest with the same ID to link the ServiceRequest and the DiagnosticReport which fulfills the order.\nIdeally, DiagnosticReport.identifier will be unique. Depending on how the resulting system populates the Filler ID, it may be desirable to concatenate the Filler ID with the procedure code and/or date/time to create a unique identifier." ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-3" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Filler Order Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.identifier[2]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-3" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Filler Order Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.identifier[2].type.coding.code" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"FILL\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-3" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Filler Order Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.identifier[2].type.coding.system" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"http://terminology.hl7.org/CodeSystem/v2-0203\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-4" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Placer Group Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.identifier[3]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-4" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Placer Group Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.identifier[3].type.coding.code" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"PGN\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-4" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Placer Group Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.identifier[3].type.coding.system" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"http://terminology.hl7.org/CodeSystem/v2-0203\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-9" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Date/Time of Transaction" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.effectiveDateTime" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ConceptMap.group.element.code [ fhir:value "ORC-16" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Order Control Code Reason" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DiagnosticReport.extension-event-statusReason" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-orc-diagnosticreport-to-diagnosticreport.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/v2-tofhir/ConceptMap/segment-orc-diagnosticreport-to-diagnosticreport.ttl> .
+
+# -------------------------------------------------------------------------------------
+

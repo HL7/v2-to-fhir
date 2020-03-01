@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="conceptmap-v2-0200-to-name-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>ConceptMap_v2-0200_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from <a href="http://hl7.org/fhir/R4/v2/0200/index.html">http://terminology.hl7.org/CodeSystem/v2-0200</a> to (not specified)</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href="mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href="mailto:kboone@ainq.com">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 Table v2-0200 to the FHIR Name Type Value Set.</p>
+</div><br/><table class="grid"><tr><td colspan="1"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="1"><b>Destination Concept Details</b></td></tr><tr><td><b>Code</b> from </td><td/><td><b>Code</b> from </td></tr><tr><td>BAD</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>old</td></tr><tr><td>D</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>usual</td></tr><tr><td>L</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>official</td></tr><tr><td>M</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>maiden</td></tr><tr><td>MSK</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>anonymous</td></tr><tr><td>N</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>nickname</td></tr><tr><td>NAV</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>temp</td></tr><tr><td>R</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>official</td></tr><tr><td>TEMP</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>temp</td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/v2-tofhir"/>
+  <version value="0.1.0"/>
+  <name value="ConceptMap_v2-0200_Map"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2020-03-01T00:00:00-05:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Orders and Observations Workgroup"/>
+    <telecom>
+      <system value="email"/>
+      <value value="https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <description value="This ConceptMap represents the mapping from the HL7 V2 Table v2-0200 to the FHIR Name Type Value Set."/>
+  <copyright value="Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."/>
+  <sourceUri value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
+  <group>
+    <element>
+      <code value="A"/>
+      <display value="Assigned"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="B"/>
+      <display value="Birth name"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="BAD"/>
+      <display value="Bad Name"/>
+      <target>
+        <code value="old"/>
+        <display value="Old"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="C"/>
+      <display value="Adopted Name"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="D"/>
+      <display value="Customary Name"/>
+      <target>
+        <code value="usual"/>
+        <display value="Usual"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="F"/>
+      <display value="Fathers Name"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="I"/>
+      <display value="Licensing Name"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="K"/>
+      <display value="Business name"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="L"/>
+      <display value="Official Registry Name"/>
+      <target>
+        <code value="official"/>
+        <display value="Official"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="M"/>
+      <display value="Maiden Name"/>
+      <target>
+        <code value="maiden"/>
+        <display value="Maiden"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MSK"/>
+      <display value="Masked"/>
+      <target>
+        <code value="anonymous"/>
+        <display value="Anonymous"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="N"/>
+      <display value="Nickname"/>
+      <target>
+        <code value="nickname"/>
+        <display value="Nickname"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NAV"/>
+      <display value="Temporarily Unavailable"/>
+      <target>
+        <code value="temp"/>
+        <display value="temp"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NB"/>
+      <display value="Newborn Name"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="NOUSE"/>
+      <display value="No Longer To Be Used"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="P"/>
+      <display value="Name of Partner/Spouse"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="R"/>
+      <display value="Registered Name"/>
+      <target>
+        <code value="official"/>
+        <display value="Official"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="REL"/>
+      <display value="Religious"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="S"/>
+      <display value="Pseudonym"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="T"/>
+      <display value="Indigenous/Tribal"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="TEMP"/>
+      <display value="Temporary Name"/>
+      <target>
+        <code value="temp"/>
+        <display value="Temp"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="U"/>
+      <display value="Unknown"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

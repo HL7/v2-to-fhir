@@ -1,0 +1,609 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "v2-tofhir",
+  "url": "http://hl7.org/fhir/v2-tofhir/ImplementationGuide/v2-tofhir",
+  "version": "0.1.0",
+  "name": "HL7Version2toFHIR",
+  "title": "HL7 Version 2 to FHIR",
+  "status": "active",
+  "publisher": "HL7 International",
+  "contact": [
+    {
+      "name": "HL7 Orders and Observations Workgroup",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "asdf",
+  "packageId": "v2-tofhir",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-hl7-concept-map-access-restriction-reason-code-sheet1"
+        },
+        "name": "ConceptMap HL7 Concept Map_ Access Restriction Reason Code - Sheet1.csv to Unknown Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-hl7-concept-map-collection-method-modifier-sheet1.csv"
+        },
+        "name": "ConceptMap HL7 Concept Map_ Collection Method Modifier - Sheet1.csv to Unknown Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-hl7-concept-map-duration-unit-sheet1.csv-to-unknown"
+        },
+        "name": "ConceptMap HL7 Concept Map_ Duration Unit - Sheet1.csv to Unknown Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-hl7-concept-map-language-sheet1.csv-to-unknown"
+        },
+        "name": "ConceptMap HL7 Concept Map_ Language - Sheet1.csv to Unknown Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-hl7-concept-map-religion-sheet1.csv-to-unknown"
+        },
+        "name": "ConceptMap HL7 Concept Map_ Religion - Sheet1.csv to Unknown Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0001-to-gender"
+        },
+        "name": "ConceptMap v2-0001 to Gender Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0002-to-marital-status"
+        },
+        "name": "ConceptMap v2-0002 to Marital Status Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0004-to-encounter-class"
+        },
+        "name": "ConceptMap v2-0004 to Encounter Class Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0004-to-encounter-type"
+        },
+        "name": "ConceptMap v2-0004 to Encounter Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0007-to-admission-type"
+        },
+        "name": "ConceptMap v2-0007 to Admission Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0063-to-relationship"
+        },
+        "name": "ConceptMap v2-0063 to Relationship Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0078-to-interpretation-codes"
+        },
+        "name": "ConceptMap v2-0078 to Interpretation Codes Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0085-to-observation-status"
+        },
+        "name": "ConceptMap v2-0085 to Observation Status Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0092-to-readmission-indicator"
+        },
+        "name": "ConceptMap v2-0092 to Readmission Indicator Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0123-to-result-status"
+        },
+        "name": "ConceptMap v2-0123 to Result Status Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0125-to-value-type"
+        },
+        "name": "ConceptMap v2-0125 to Value Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0127-to-allergy-category"
+        },
+        "name": "ConceptMap v2-0127 to Allergy Category Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0127-to-allergy-type"
+        },
+        "name": "ConceptMap v2-0127 to Allergy Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0131-to-contact-role"
+        },
+        "name": "ConceptMap v2-0131 to Contact Role Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0136-to-specimen-availability"
+        },
+        "name": "ConceptMap v2-0136 to Specimen Availability Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0136-to-yesno"
+        },
+        "name": "ConceptMap v2-0136 to YesNo Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0155-to-acknowledgements"
+        },
+        "name": "ConceptMap v2-0155 to Acknowledgements Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0185-to-preferred-method-of-contact"
+        },
+        "name": "ConceptMap v2-0185 to Preferred Method of Contact Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0190-to-address-type"
+        },
+        "name": "ConceptMap v2-0190 to Address Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0200-to-name-type"
+        },
+        "name": "ConceptMap v2-0200 to Name Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0201-to-telecom-use-code"
+        },
+        "name": "ConceptMap v2-0201 to Telecom Use Code Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0203-to-id-type"
+        },
+        "name": "ConceptMap v2-0203 to ID Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0206-to-segment-action-code"
+        },
+        "name": "ConceptMap v2-0206 to Segment Action Code Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0217-to-encounter-priority"
+        },
+        "name": "ConceptMap v2-0217 to Encounter Priority Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0231-to-student-status"
+        },
+        "name": "ConceptMap v2-0231 to Student Status Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0301-to-universal-id-type"
+        },
+        "name": "ConceptMap v2-0301 to Universal ID Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0315-to-living-will"
+        },
+        "name": "ConceptMap v2-0315 to Living Will Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0322-to-completion-status"
+        },
+        "name": "ConceptMap v2-0322 to Completion Status Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0406-to-organization-unit-type"
+        },
+        "name": "ConceptMap v2-0406 to Organization Unit Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0430-to-mode-of-arrival"
+        },
+        "name": "ConceptMap v2-0430 to Mode of Arrival Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0441-to-registry-status"
+        },
+        "name": "ConceptMap v2-0441 to Registry Status Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0443-to-role"
+        },
+        "name": "ConceptMap v2-0443 to Role Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0444-to-name-assembly-order"
+        },
+        "name": "ConceptMap v2-0444 to Name Assembly Order Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0480-to-order-type"
+        },
+        "name": "ConceptMap v2-0480 to Order Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0485-to-priority"
+        },
+        "name": "ConceptMap v2-0485 to Priority Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0498-to-consent-status"
+        },
+        "name": "ConceptMap v2-0498 to Consent Status Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0549-to-consent-relationship"
+        },
+        "name": "ConceptMap v2-0549 to Consent Relationship Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/conceptmap-v2-0717-to-access-restriction-value"
+        },
+        "name": "ConceptMap v2-0717 to Access Restriction Value Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-al1-to-allergyintolerance"
+        },
+        "name": "Segment AL1 to AllergyIntolerance Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-dg1-to-condition"
+        },
+        "name": "Segment DG1 to Condition Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-hl7-segment-fhir-r4-orcmedicationrequest-sheet1.csv-to-u"
+        },
+        "name": "Segment HL7 Segment - FHIR R4_ ORC[MedicationRequest] - Sheet1.csv to Unknown Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-iam-to-allergyintolerance"
+        },
+        "name": "Segment IAM to AllergyIntolerance Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-msh-to-messageheader"
+        },
+        "name": "Segment MSH to MessageHeader Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-nk1-patient-to-patient"
+        },
+        "name": "Segment NK1!Patient to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-nk1-relatedperson-to-relatedperson"
+        },
+        "name": "Segment NK1!RelatedPerson to RelatedPerson Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-nte-annotation-to-annotation"
+        },
+        "name": "Segment NTE!Annotation to Annotation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-obr-diagnosticreport-to-diagnosticreport"
+        },
+        "name": "Segment OBR!DiagnosticReport to DiagnosticReport Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-obr-servicerequest-to-servicerequest"
+        },
+        "name": "Segment OBR!ServiceRequest to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-obx-observation-to-observation"
+        },
+        "name": "Segment OBX!Observation to Observation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-obx-observationcomponent-to-observation"
+        },
+        "name": "Segment OBX!ObservationComponent to Observation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-orc-diagnosticreport-to-diagnosticreport"
+        },
+        "name": "Segment ORC!DiagnosticReport to DiagnosticReport Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-orc-immunization-to-immunization"
+        },
+        "name": "Segment ORC!Immunization to Immunization Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-orc-provenance-to-provenance"
+        },
+        "name": "Segment ORC!Provenance to Provenance Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-orc-servicerequest-to-servicerequest"
+        },
+        "name": "Segment ORC!ServiceRequest to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pd1-to-patient"
+        },
+        "name": "Segment PD1 to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pid-to-patient"
+        },
+        "name": "Segment PID to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pv1-to-encounter"
+        },
+        "name": "Segment PV1 to Encounter Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pv2-to-encounter"
+        },
+        "name": "Segment PV2 to Encounter Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-rol-pid-to-patient"
+        },
+        "name": "Segment ROL!PID to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-rol-pid-to-relatedperson"
+        },
+        "name": "Segment ROL!PID to RelatedPerson Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-rol-pv1-to-encounterpv1"
+        },
+        "name": "Segment ROL!PV1 to Encounter[PV1] Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-rxa-immunization-to-immunization"
+        },
+        "name": "Segment RXA!Immunization to Immunization Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-sft-to-messageheader"
+        },
+        "name": "Segment SFT to MessageHeader Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-spm-specimen-to-specimen"
+        },
+        "name": "Segment SPM!Specimen to Specimen Map",
+        "exampleBoolean": true
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "acknowledgements.html",
+          "title": "Acknowledgements",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "codingsystemmaps.html",
+          "title": "Codingsystemmaps",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "datatypemaps.html",
+          "title": "Datatypemaps",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "glossary.html",
+          "title": "Glossary",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "implementationconsiderations.html",
+          "title": "Implementationconsiderations",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "mappingguidelines.html",
+          "title": "Mappingguidelines",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "messagemaps.html",
+          "title": "Messagemaps",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "overview.html",
+          "title": "Overview",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "segmentmaps.html",
+          "title": "Segmentmaps",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "testconversions.html",
+          "title": "Testconversions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "validation.html",
+          "title": "Validation",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}

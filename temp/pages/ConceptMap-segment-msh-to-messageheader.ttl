@@ -1,0 +1,209 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-msh-to-messageheader> a fhir:ConceptMap;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "segment-msh-to-messageheader"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Segment_MSH_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 MSH Segment to the FHIR MessageHeader Resource representing that segment.</p>\n</div><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>MSH-3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.source</td><td>Example: MSH|^~%|LAB^2.16.840.1.113883.3.987.1^ISO|...\nExample: MSH|^~%|LAB|…\nHow do we populate this if MSH-3 is not valued?</td></tr><tr><td>MSH-4</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.sender(Organization)</td><td>How do we populate this if MSH-4 is not valued?\nHow do we represent HD and identifiers? Need to work with InM.\nShould consider aligning sender/receiver constructs.\nOpen gForge to request that </td></tr><tr><td>MSH-5</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.destination[1]</td><td>Example: MSH...|RH^2.16.840.1.113883.632.3^ISO|...</td></tr><tr><td>MSH-6</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.destination[1].receiver(Organization)</td><td/></tr><tr><td>MSH-7</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Bundle.timestamp</td><td/></tr><tr><td>MSH-8</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.meta.security</td><td/></tr><tr><td>MSH-9</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.event.coding</td><td>Set up time with InM.  Set up mapping tables for all components (message code, trigger event, structure)</td></tr><tr><td>MSH-10</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Bundle.identifier</td><td>Need a gForge to request a MessageHeader.identifier (https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=20704&amp;start=0)\nNote that if a message is part of a batch, then the MSH goes to a &quot;sub-bundle&quot;..\nNote that as messages switch from V2 to FHIR and the response back from FHIR to V2, the &quot;mapping engine&quot; needs to track the actual MSH.10.00.00 value and Bundle.identifier value to connect responses correctly.</td></tr><tr><td>MSH-10</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Bundle.type</td><td/></tr><tr><td>MSH-11</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.meta.tag</td><td/></tr><tr><td>MSH-17</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.sender(Organization.address.country)</td><td/></tr><tr><td>MSH-19</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.language</td><td>This does only cover the MessageHeader resource. Need to have clarity that if other resources that are part of the message that do not have Resource.meta.language valued, then it is assumed to follow MessageHeader.meta.language?? Doesn't seem RESTful, so what is the default for Resource.meta.language?</td></tr><tr><td>MSH-22</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.responsible(Organization)</td><td/></tr><tr><td>MSH-23</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.destination[1].receiver(Organization)</td><td>This is an alternate representation of MSH-6.  The local implementation needs to determine whech components of HD vs. XON to be used and whether it may even yield a separate Organization reference.</td></tr><tr><td>MSH-24</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Messageheader.source.endpoint</td><td/></tr><tr><td>MSH-25</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MessageHeader.destination[1].endpoint</td><td>This is an alternate representation of MSH-5.  Need to agree on prioritization.</td></tr></table></div>"
+  ];
+  fhir:ConceptMap.url [ fhir:value "http://hl7.org/fhir/v2-tofhir"];
+  fhir:ConceptMap.version [ fhir:value "0.1.0"];
+  fhir:ConceptMap.name [ fhir:value "Segment_MSH_Map"];
+  fhir:ConceptMap.status [ fhir:value "active"];
+  fhir:ConceptMap.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ConceptMap.date [ fhir:value "2020-03-01T00:00:00-05:00"^^xsd:dateTime];
+  fhir:ConceptMap.publisher [ fhir:value "HL7 International"];
+  fhir:ConceptMap.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Orders and Observations Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ConceptMap.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 MSH Segment to the FHIR MessageHeader Resource representing that segment."];
+  fhir:ConceptMap.copyright [ fhir:value "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."];
+  fhir:ConceptMap.sourceUri [ fhir:value "https://www.hl7.org/v2"];
+  fhir:ConceptMap.targetUri [ fhir:value "https://www.hl7.org/fhir"];
+  fhir:ConceptMap.group [
+     fhir:index 0;
+     fhir:ConceptMap.group.element [
+       fhir:index 0;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-3" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Sending Application" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.source" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Example: MSH|^~%|LAB^2.16.840.1.113883.3.987.1^ISO|...\nExample: MSH|^~%|LAB|…\nHow do we populate this if MSH-3 is not valued?" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-4" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Sending Facility" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.sender(Organization)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "How do we populate this if MSH-4 is not valued?\nHow do we represent HD and identifiers? Need to work with InM.\nShould consider aligning sender/receiver constructs.\nOpen gForge to request that " ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-5" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Receiving Application" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.destination[1]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Example: MSH...|RH^2.16.840.1.113883.632.3^ISO|..." ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-6" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Receiving Facility" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.destination[1].receiver(Organization)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-7" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Date/Time of Message" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Bundle.timestamp" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= MSH-7" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-8" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Security" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.meta.security" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-9" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Message Type" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.event.coding" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Set up time with InM.  Set up mapping tables for all components (message code, trigger event, structure)" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-10" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Message Control ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Bundle.identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Need a gForge to request a MessageHeader.identifier (https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&tracker_item_id=20704&start=0)\nNote that if a message is part of a batch, then the MSH goes to a \"sub-bundle\"..\nNote that as messages switch from V2 to FHIR and the response back from FHIR to V2, the \"mapping engine\" needs to track the actual MSH.10.00.00 value and Bundle.identifier value to connect responses correctly." ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-10" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Message Control ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Bundle.type" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"message\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-11" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Processing ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.meta.tag" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-17" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Country Code" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.sender(Organization.address.country)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-19" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Principal Language Of Message" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.language" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "This does only cover the MessageHeader resource. Need to have clarity that if other resources that are part of the message that do not have Resource.meta.language valued, then it is assumed to follow MessageHeader.meta.language?? Doesn't seem RESTful, so what is the default for Resource.meta.language?" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-22" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Sending Responsible Organization" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.responsible(Organization)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-23" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Receiving Responsible Organization" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.destination[1].receiver(Organization)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "This is an alternate representation of MSH-6.  The local implementation needs to determine whech components of HD vs. XON to be used and whether it may even yield a separate Organization reference." ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-24" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Sending Network Address" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Messageheader.source.endpoint" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSH-25" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Receiving Network Address" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MessageHeader.destination[1].endpoint" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "This is an alternate representation of MSH-5.  Need to agree on prioritization." ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-msh-to-messageheader.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/v2-tofhir/ConceptMap/segment-msh-to-messageheader.ttl> .
+
+# -------------------------------------------------------------------------------------
+

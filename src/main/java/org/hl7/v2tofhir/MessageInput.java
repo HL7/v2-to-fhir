@@ -5,25 +5,25 @@ import com.opencsv.bean.CsvBindByPosition;
 public class MessageInput {
     /** The V2 coding system */
     @CsvBindByPosition(position=0)
-    private String v2Code;
+    String v2Code;
     @CsvBindByPosition(position=1)
-    private String v2Text;
+    String v2Text;
     @CsvBindByPosition(position=2)
-    private String v2CodeSystem;
+    String v2CodeSystem;
     @CsvBindByPosition(position=3)
-    private String conditionANTLR;
+    String conditionANTLR;
     @CsvBindByPosition(position=4)
-    private String conditionfhirPath;
+    String conditionfhirPath;
     @CsvBindByPosition(position=5)
-    private String conditionNarrative;
+    String conditionNarrative;
     @CsvBindByPosition(position=6)
-    private String fhirCode;
+    String fhirCode;
     @CsvBindByPosition(position=7)
-    private String fhirExtension;
+    String fhirExtension;
     @CsvBindByPosition(position=8)
-    private String fhirDisplay;
+    String fhirDisplay;
     @CsvBindByPosition(position=9)
-    private String fhirCodeSystem;
+    String fhirCodeSystem;
     @CsvBindByPosition(position=10)
-    private String comments;
+    String comments;
 }

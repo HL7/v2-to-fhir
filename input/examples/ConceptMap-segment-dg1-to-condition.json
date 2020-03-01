@@ -1,0 +1,171 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-dg1-to-condition",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 DG1 Segment to the FHIR Condition Resource representing that segment.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "Segment_DG1_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "https://www.hl7.org/v2",
+  "targetUri": "https://www.hl7.org/fhir",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "DG1-3",
+          "display": "Diagnosis Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.code"
+            }
+          ]
+        },
+        {
+          "code": "DG1-4",
+          "display": "Diagnosis Description",
+          "target": [
+            {
+              "comment": "Doesn't warrant mapping",
+              "equivalence": "equivalent",
+              "code": "Condition.code.text"
+            }
+          ]
+        },
+        {
+          "code": "DG1-5",
+          "display": "Diagnosis Date/Time",
+          "target": [
+            {
+              "comment": "Should confirm that these two concepts are equivalent. Condition.recordedDate is also available",
+              "equivalence": "equivalent",
+              "code": "Condition.onsetDateTime"
+            }
+          ]
+        },
+        {
+          "code": "DG1-6",
+          "display": "Diagnosis Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.diagnosis.use"
+            }
+          ]
+        },
+        {
+          "code": "DG1-6",
+          "display": "Diagnosis Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.diagnosis.use"
+            }
+          ]
+        },
+        {
+          "code": "DG1-6",
+          "display": "Diagnosis Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "EpisodeOfCare.diagnose.role"
+            }
+          ]
+        },
+        {
+          "code": "DG1-16",
+          "display": "Diagnosing Clinician",
+          "target": [
+            {
+              "comment": "Condition.recorder is also an option. Neither of these fields can repeat like DG1-16 can.",
+              "equivalence": "equivalent",
+              "code": "Condition.asserter(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "DG1-19",
+          "display": "Attestation Date/Time",
+          "target": [
+            {
+              "comment": "It is unclear whether to use recorded or asserted date.  What is your opinion?",
+              "equivalence": "equivalent",
+              "code": "Condition.extension-assertedDate"
+            }
+          ]
+        },
+        {
+          "code": "DG1-19",
+          "display": "Attestation Date/Time",
+          "target": [
+            {
+              "comment": "It is unclear whether to use recorded or asserted date.  What is your opinion?",
+              "equivalence": "equivalent",
+              "code": "Condition.recordedDate"
+            }
+          ]
+        },
+        {
+          "code": "DG1-20",
+          "display": "Diagnosis Identifier",
+          "target": [
+            {
+              "comment": "We should confirm that this is truly a unique ID before it gets used as .id. It may need to be combined with a visit ID to make it fully unique.",
+              "equivalence": "equivalent",
+              "code": "Condition.identifier"
+            }
+          ]
+        },
+        {
+          "code": "DG1-21",
+          "display": "Diagnosis Action Code",
+          "target": [
+            {
+              "comment": "Other values (A and U) don't map to anything",
+              "equivalence": "equivalent",
+              "code": "Condition.verificationStatus.coding.code",
+              "display": "= \"entered-in-error\""
+            }
+          ]
+        },
+        {
+          "code": "DG1-21",
+          "display": "Diagnosis Action Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.verificationStatus.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/condition-ver-status\""
+            }
+          ]
+        },
+        {
+          "code": "DG1-22",
+          "display": "Parent Diagnosis",
+          "target": [
+            {
+              "comment": "Extensions for occurredFollowing and related also exist",
+              "equivalence": "equivalent",
+              "code": "Condition.extension-condition-dueTo(Condition)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

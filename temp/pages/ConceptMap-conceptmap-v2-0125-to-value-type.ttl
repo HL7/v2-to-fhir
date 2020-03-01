@@ -1,0 +1,695 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0125-to-value-type> a fhir:ConceptMap;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "conceptmap-v2-0125-to-value-type"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ConceptMap_v2-0125_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from http://terminology.hl7.org/CodeSystem/v2-0125 to (not specified)</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 Table v2-0125 to the FHIR Value Type Value Set.</p>\n</div><br/><table class=\"grid\"><tr><td colspan=\"1\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"1\"><b>Destination Concept Details</b></td><td><b>Comment</b></td></tr><tr><td><b>Code</b> from </td><td/><td><b>Code</b> from </td><td/></tr><tr><td>CF</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueCodeableConcept</td><td/></tr><tr><td>CNE</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueCodeableConcept</td><td/></tr><tr><td>CWE</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueCodeableConcept</td><td/></tr><tr><td>DR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valuePeriod</td><td/></tr><tr><td>DT</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueDateTime</td><td/></tr><tr><td>DTM</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueDateTime</td><td/></tr><tr><td>FT</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueString</td><td/></tr><tr><td>IS</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueCodeableConcept</td><td/></tr><tr><td>NM</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueInteger</td><td> or valueQuantity.  </td></tr><tr><td>NR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueRange</td><td/></tr><tr><td>SN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueInteger</td><td>, valueRange or valueRatio.  </td></tr><tr><td>ST</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueString</td><td/></tr><tr><td>TM</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueTime</td><td/></tr><tr><td>TX</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueString</td><td/></tr><tr><td>VR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>valueRange</td><td/></tr></table></div>"
+  ];
+  fhir:ConceptMap.url [ fhir:value "http://hl7.org/fhir/v2-tofhir"];
+  fhir:ConceptMap.version [ fhir:value "0.1.0"];
+  fhir:ConceptMap.name [ fhir:value "ConceptMap_v2-0125_Map"];
+  fhir:ConceptMap.status [ fhir:value "active"];
+  fhir:ConceptMap.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ConceptMap.date [ fhir:value "2020-03-01T00:00:00-05:00"^^xsd:dateTime];
+  fhir:ConceptMap.publisher [ fhir:value "HL7 International"];
+  fhir:ConceptMap.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Orders and Observations Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ConceptMap.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0125 to the FHIR Value Type Value Set."];
+  fhir:ConceptMap.copyright [ fhir:value "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."];
+  fhir:ConceptMap.sourceUri [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0125"];
+  fhir:ConceptMap.group [
+     fhir:index 0;
+     fhir:ConceptMap.group.element [
+       fhir:index 0;
+       fhir:ConceptMap.group.element.code [ fhir:value "AUI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Authorization information" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.group.element.code [ fhir:value "CCD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Charge code and date" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.group.element.code [ fhir:value "CCP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Channel calibration parameters" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ConceptMap.group.element.code [ fhir:value "CD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Channel definition" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ConceptMap.group.element.code [ fhir:value "CF" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Coded element with formatted values" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueCodeableConcept" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ConceptMap.group.element.code [ fhir:value "CNE" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Coded with no exceptions" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueCodeableConcept" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ConceptMap.group.element.code [ fhir:value "CNN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Composite ID number and name simplified" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ConceptMap.group.element.code [ fhir:value "CP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Composite price" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ConceptMap.group.element.code [ fhir:value "CSU" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Channel sensitivity and units" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ConceptMap.group.element.code [ fhir:value "CWE" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Coded with exceptions" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueCodeableConcept" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ConceptMap.group.element.code [ fhir:value "CX" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Extended composite ID with check digit" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ConceptMap.group.element.code [ fhir:value "DDI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Daily deductible information" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:ConceptMap.group.element.code [ fhir:value "DIN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Date and institution name" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:ConceptMap.group.element.code [ fhir:value "DLD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Discharge to location and date" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:ConceptMap.group.element.code [ fhir:value "DLN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Driver’s license number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:ConceptMap.group.element.code [ fhir:value "DLT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Delta" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:ConceptMap.group.element.code [ fhir:value "DR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Date/time range" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valuePeriod" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:ConceptMap.group.element.code [ fhir:value "DT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Date" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueDateTime" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:ConceptMap.group.element.code [ fhir:value "DTM" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Date/time" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueDateTime" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:ConceptMap.group.element.code [ fhir:value "DTN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Day type and number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:ConceptMap.group.element.code [ fhir:value "ED" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Encapsulated data" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:ConceptMap.group.element.code [ fhir:value "EI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Entity identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:ConceptMap.group.element.code [ fhir:value "EIP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Entity identifier pair" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:ConceptMap.group.element.code [ fhir:value "ERL" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Error location" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:ConceptMap.group.element.code [ fhir:value "FC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Financial class" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:ConceptMap.group.element.code [ fhir:value "FT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Formatted text" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueString" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 26;
+       fhir:ConceptMap.group.element.code [ fhir:value "GTS" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "General timing specification" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:ConceptMap.group.element.code [ fhir:value "HD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Hierarchic designator" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:ConceptMap.group.element.code [ fhir:value "ICD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Insurance certification definition" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 29;
+       fhir:ConceptMap.group.element.code [ fhir:value "IS" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Coded value for user-defined tables" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueCodeableConcept" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 30;
+       fhir:ConceptMap.group.element.code [ fhir:value "JCC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Job code/class" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 31;
+       fhir:ConceptMap.group.element.code [ fhir:value "LA1" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Location with address variation 1" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 32;
+       fhir:ConceptMap.group.element.code [ fhir:value "LA2" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Location with address variation 2" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 33;
+       fhir:ConceptMap.group.element.code [ fhir:value "MA" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Multiplexed array" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 34;
+       fhir:ConceptMap.group.element.code [ fhir:value "MO" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Money" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 35;
+       fhir:ConceptMap.group.element.code [ fhir:value "MOC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Money and charge code" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 36;
+       fhir:ConceptMap.group.element.code [ fhir:value "MOP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Money or percentage" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 37;
+       fhir:ConceptMap.group.element.code [ fhir:value "MSG" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Message type" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 38;
+       fhir:ConceptMap.group.element.code [ fhir:value "NA" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Numeric array" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 39;
+       fhir:ConceptMap.group.element.code [ fhir:value "NDL" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Name with date and location" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 40;
+       fhir:ConceptMap.group.element.code [ fhir:value "NM" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Numeric" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueInteger" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value " or valueQuantity.  " ]
+       ]
+     ], [
+       fhir:index 41;
+       fhir:ConceptMap.group.element.code [ fhir:value "NR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Numeric range" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueRange" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 42;
+       fhir:ConceptMap.group.element.code [ fhir:value "OCD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Occurrence code and date" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 43;
+       fhir:ConceptMap.group.element.code [ fhir:value "OSP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Occurrence span code and date" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 44;
+       fhir:ConceptMap.group.element.code [ fhir:value "PIP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Practitioner institutional privileges" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 45;
+       fhir:ConceptMap.group.element.code [ fhir:value "PL" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Person location" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 46;
+       fhir:ConceptMap.group.element.code [ fhir:value "PLN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Practitioner license or other ID number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 47;
+       fhir:ConceptMap.group.element.code [ fhir:value "PPN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Performing person time stamp" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 48;
+       fhir:ConceptMap.group.element.code [ fhir:value "PRL" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Parent result link" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 49;
+       fhir:ConceptMap.group.element.code [ fhir:value "PT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Processing type" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 50;
+       fhir:ConceptMap.group.element.code [ fhir:value "PTA" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Policy type and amount" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 51;
+       fhir:ConceptMap.group.element.code [ fhir:value "QIP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Query input parameter list" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 52;
+       fhir:ConceptMap.group.element.code [ fhir:value "QSC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Query selection criteria" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 53;
+       fhir:ConceptMap.group.element.code [ fhir:value "RCD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Row column definition" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 54;
+       fhir:ConceptMap.group.element.code [ fhir:value "RFR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Reference range" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 55;
+       fhir:ConceptMap.group.element.code [ fhir:value "RI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Repeat interval" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 56;
+       fhir:ConceptMap.group.element.code [ fhir:value "RMC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Room coverage" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 57;
+       fhir:ConceptMap.group.element.code [ fhir:value "RP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Reference pointer" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 58;
+       fhir:ConceptMap.group.element.code [ fhir:value "RPT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Repeat pattern" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 59;
+       fhir:ConceptMap.group.element.code [ fhir:value "SCV" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Scheduling class value pair" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 60;
+       fhir:ConceptMap.group.element.code [ fhir:value "SN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Structured numeric" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueInteger" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value ", valueRange or valueRatio.  " ]
+       ]
+     ], [
+       fhir:index 61;
+       fhir:ConceptMap.group.element.code [ fhir:value "SNM" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "String of telephone number digits" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 62;
+       fhir:ConceptMap.group.element.code [ fhir:value "SPD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Specialty description" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 63;
+       fhir:ConceptMap.group.element.code [ fhir:value "SRT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Sort order" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 64;
+       fhir:ConceptMap.group.element.code [ fhir:value "ST" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "String data" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueString" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 65;
+       fhir:ConceptMap.group.element.code [ fhir:value "TM" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Time" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueTime" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 66;
+       fhir:ConceptMap.group.element.code [ fhir:value "TX" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Text data" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueString" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 67;
+       fhir:ConceptMap.group.element.code [ fhir:value "UVC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "UB value code and amount" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 68;
+       fhir:ConceptMap.group.element.code [ fhir:value "VH" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Visiting hours" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 69;
+       fhir:ConceptMap.group.element.code [ fhir:value "VID" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Version identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 70;
+       fhir:ConceptMap.group.element.code [ fhir:value "VR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Value range" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "valueRange" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 71;
+       fhir:ConceptMap.group.element.code [ fhir:value "WVI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Channel Identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 72;
+       fhir:ConceptMap.group.element.code [ fhir:value "WVS" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Waveform source" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 73;
+       fhir:ConceptMap.group.element.code [ fhir:value "XAD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Extended address" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 74;
+       fhir:ConceptMap.group.element.code [ fhir:value "XCN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Extended composite ID number and name for persons" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 75;
+       fhir:ConceptMap.group.element.code [ fhir:value "XON" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Extended composite name and ID number for organizations" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 76;
+       fhir:ConceptMap.group.element.code [ fhir:value "XPN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Extended person name" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 77;
+       fhir:ConceptMap.group.element.code [ fhir:value "XTN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Extended telecommunications number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0125-to-value-type.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/v2-tofhir/ConceptMap/conceptmap-v2-0125-to-value-type.ttl> .
+
+# -------------------------------------------------------------------------------------
+

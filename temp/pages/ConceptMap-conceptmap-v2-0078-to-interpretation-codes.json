@@ -1,0 +1,526 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "conceptmap-v2-0078-to-interpretation-codes",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ConceptMap_v2-0078_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from <a href=\"http://hl7.org/fhir/R4/v2/0078/index.html\">http://terminology.hl7.org/CodeSystem/v2-0078</a> to <a href=\"http://hl7.org/fhir/R4/v3/ObservationInterpretation/cs.html\">http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</a></p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 Table v2-0078 to the FHIR Interpretation Codes Value Set.</p>\n</div><br/><table class=\"grid\"><tr><td colspan=\"1\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"1\"><b>Destination Concept Details</b></td></tr><tr><td><b>Code</b> from </td><td/><td><b>Code</b> from </td></tr><tr><td>&lt; </td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>&lt;</td></tr><tr><td>&gt; </td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>&gt;</td></tr><tr><td>A</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>A</td></tr><tr><td>AA</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>AA</td></tr><tr><td>AC</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>AC</td></tr><tr><td>B</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>B</td></tr><tr><td>CAR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>CAR</td></tr><tr><td>D</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>D</td></tr><tr><td>DET</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DET</td></tr><tr><td>E</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>E</td></tr><tr><td>EX</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>EX</td></tr><tr><td>EXP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>EXP</td></tr><tr><td>H</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>H</td></tr><tr><td>HH</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>HH</td></tr><tr><td>HU</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>HU</td></tr><tr><td>I</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>I</td></tr><tr><td>IE</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>IE</td></tr><tr><td>IND</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>IND</td></tr><tr><td>L</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>L</td></tr><tr><td>LL</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>LL</td></tr><tr><td>LU</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>LU</td></tr><tr><td>N</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>N</td></tr><tr><td>NCL</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NCL</td></tr><tr><td>ND</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ND</td></tr><tr><td>NEG</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NEG</td></tr><tr><td>NR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NR</td></tr><tr><td>NS</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NS</td></tr><tr><td>POS</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>POS</td></tr><tr><td>R</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>R</td></tr><tr><td>RR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>RR</td></tr><tr><td>S</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>S</td></tr><tr><td>SDD</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>SDD</td></tr><tr><td>SYN-R</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>SYN-R</td></tr><tr><td>SYN-S</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>SYN-S</td></tr><tr><td>U</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>U</td></tr><tr><td>UNE</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>UNE</td></tr><tr><td>W</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>W</td></tr><tr><td>WR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>WR</td></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "0.1.0",
+  "name": "ConceptMap_v2-0078_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01T00:00:00-05:00",
+  "publisher": "HL7 International",
+  "contact": [
+    {
+      "name": "HL7 Orders and Observations Workgroup",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table v2-0078 to the FHIR Interpretation Codes Value Set.",
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "http://terminology.hl7.org/CodeSystem/v2-0078",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "< ",
+          "display": "Off scale low",
+          "target": [
+            {
+              "code": "<",
+              "display": "Off scale low",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "> ",
+          "display": "Off scale high",
+          "target": [
+            {
+              "code": ">",
+              "display": "Off scale high",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "A",
+          "display": "Abnormal",
+          "target": [
+            {
+              "code": "A",
+              "display": "Abnormal",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AA",
+          "display": "Critically abnormal",
+          "target": [
+            {
+              "code": "AA",
+              "display": "Critical abnormal",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AC",
+          "display": "Anti-complementary substances present",
+          "target": [
+            {
+              "code": "AC",
+              "display": "Anti-complementary substances present",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "display": "Better",
+          "target": [
+            {
+              "code": "B",
+              "display": "Better",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CAR",
+          "display": "Carrier",
+          "target": [
+            {
+              "code": "CAR",
+              "display": "Carrier",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "D",
+          "display": "Significant change down",
+          "target": [
+            {
+              "code": "D",
+              "display": "Significant change down",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DET",
+          "display": "Detected",
+          "target": [
+            {
+              "code": "DET",
+              "display": "Detected",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "E",
+          "display": "Equivocal",
+          "target": [
+            {
+              "code": "E",
+              "display": "Equivocal",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EX",
+          "display": "outside threshold",
+          "target": [
+            {
+              "code": "EX",
+              "display": "outside threshold",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EXP",
+          "display": "Expected",
+          "target": [
+            {
+              "code": "EXP",
+              "display": "Expected",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "H",
+          "display": "High",
+          "target": [
+            {
+              "code": "H",
+              "display": "High",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "HH",
+          "display": "Critically high",
+          "target": [
+            {
+              "code": "HH",
+              "display": "Critical high",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "HM",
+          "display": "Hold for Medical Review",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HU",
+          "display": "Very high",
+          "target": [
+            {
+              "code": "HU",
+              "display": "Significantly high",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "I",
+          "display": "Intermediate",
+          "target": [
+            {
+              "code": "I",
+              "display": "Intermediate",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IE",
+          "display": "Insufficient evidence",
+          "target": [
+            {
+              "code": "IE",
+              "display": "Insufficient evidence",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IND",
+          "display": "Indeterminate",
+          "target": [
+            {
+              "code": "IND",
+              "display": "Indeterminate",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "L",
+          "display": "Low",
+          "target": [
+            {
+              "code": "L",
+              "display": "Low",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LL",
+          "display": "Critically low",
+          "target": [
+            {
+              "code": "LL",
+              "display": "Critical low",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LU",
+          "display": "Very low",
+          "target": [
+            {
+              "code": "LU",
+              "display": "Significantly low",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "MS",
+          "display": "Moderately susceptible. Indicates for microbiology susceptibilities only.",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "Normal",
+          "target": [
+            {
+              "code": "N",
+              "display": "Normal",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NCL",
+          "display": "No CLSI defined breakpoint",
+          "target": [
+            {
+              "code": "NCL",
+              "display": "No CLSI defined breakpoint",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ND",
+          "display": "Not Detected",
+          "target": [
+            {
+              "code": "ND",
+              "display": "Not detected",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NEG",
+          "display": "Negative",
+          "target": [
+            {
+              "code": "NEG",
+              "display": "Negative",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NR",
+          "display": "Non-reactive",
+          "target": [
+            {
+              "code": "NR",
+              "display": "Non-reactive",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "NS",
+          "display": "Non-susceptible",
+          "target": [
+            {
+              "code": "NS",
+              "display": "Non-susceptible",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "null",
+          "display": "No range defined, or normal ranges don’t apply",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OBX",
+          "display": "Interpretation qualifiers in separate OBX segments",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "POS",
+          "display": "Positive",
+          "target": [
+            {
+              "code": "POS",
+              "display": "Positive",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "QCF",
+          "display": "Quality Control Failure",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "R",
+          "display": "Resistant",
+          "target": [
+            {
+              "code": "R",
+              "display": "Resistant",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "RR",
+          "display": "Reactive",
+          "target": [
+            {
+              "code": "RR",
+              "display": "Reactive",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "display": "Susceptible",
+          "target": [
+            {
+              "code": "S",
+              "display": "Susceptible",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SDD",
+          "display": "Susceptible-dose dependent",
+          "target": [
+            {
+              "code": "SDD",
+              "display": "Susceptible-dose dependent",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SYN-R",
+          "display": "Synergy – resistant",
+          "target": [
+            {
+              "code": "SYN-R",
+              "display": "Synergy - resistant",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SYN-S",
+          "display": "Synergy – susceptible",
+          "target": [
+            {
+              "code": "SYN-S",
+              "display": "Synergy - susceptible",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TOX",
+          "display": "Cytotoxic substance present",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "Significant change up",
+          "target": [
+            {
+              "code": "U",
+              "display": "Significant change up",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "VS",
+          "display": "Very susceptible. Indicates for microbiology susceptibilities only.",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "UNE",
+          "display": "Unexpected",
+          "target": [
+            {
+              "code": "UNE",
+              "display": "Unexpected",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "W",
+          "display": "Worse",
+          "target": [
+            {
+              "code": "W",
+              "display": "Worse",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "WR",
+          "display": "Weakly reactive",
+          "target": [
+            {
+              "code": "WR",
+              "display": "Weakly reactive",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,750 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "conceptmap-v2-0125-to-value-type",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table v2-0125 to the FHIR Value Type Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "ConceptMap_v2-0125_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "http://terminology.hl7.org/CodeSystem/v2-0125",
+  "targetUri": "",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "AUI",
+          "display": "Authorization information",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "CCD",
+          "display": "Charge code and date",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "CCP",
+          "display": "Channel calibration parameters",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "CD",
+          "display": "Channel definition",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "CF",
+          "display": "Coded element with formatted values",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueCodeableConcept"
+            }
+          ]
+        },
+        {
+          "code": "CNE",
+          "display": "Coded with no exceptions",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueCodeableConcept"
+            }
+          ]
+        },
+        {
+          "code": "CNN",
+          "display": "Composite ID number and name simplified",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "CP",
+          "display": "Composite price",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "CSU",
+          "display": "Channel sensitivity and units",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "CWE",
+          "display": "Coded with exceptions",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueCodeableConcept"
+            }
+          ]
+        },
+        {
+          "code": "CX",
+          "display": "Extended composite ID with check digit",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "DDI",
+          "display": "Daily deductible information",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "DIN",
+          "display": "Date and institution name",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "DLD",
+          "display": "Discharge to location and date",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "DLN",
+          "display": "Driver’s license number",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "DLT",
+          "display": "Delta",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "DR",
+          "display": "Date/time range",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valuePeriod"
+            }
+          ]
+        },
+        {
+          "code": "DT",
+          "display": "Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueDateTime"
+            }
+          ]
+        },
+        {
+          "code": "DTM",
+          "display": "Date/time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueDateTime"
+            }
+          ]
+        },
+        {
+          "code": "DTN",
+          "display": "Day type and number",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "ED",
+          "display": "Encapsulated data",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "EI",
+          "display": "Entity identifier",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "EIP",
+          "display": "Entity identifier pair",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "ERL",
+          "display": "Error location",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "FC",
+          "display": "Financial class",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "FT",
+          "display": "Formatted text",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueString"
+            }
+          ]
+        },
+        {
+          "code": "GTS",
+          "display": "General timing specification",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HD",
+          "display": "Hierarchic designator",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "ICD",
+          "display": "Insurance certification definition",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "IS",
+          "display": "Coded value for user-defined tables",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueCodeableConcept"
+            }
+          ]
+        },
+        {
+          "code": "JCC",
+          "display": "Job code/class",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "LA1",
+          "display": "Location with address variation 1",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "LA2",
+          "display": "Location with address variation 2",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "MA",
+          "display": "Multiplexed array",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "MO",
+          "display": "Money",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "MOC",
+          "display": "Money and charge code",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "MOP",
+          "display": "Money or percentage",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "MSG",
+          "display": "Message type",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "NA",
+          "display": "Numeric array",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "NDL",
+          "display": "Name with date and location",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "NM",
+          "display": "Numeric",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueInteger",
+              "comment": " or valueQuantity.  "
+            }
+          ]
+        },
+        {
+          "code": "NR",
+          "display": "Numeric range",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueRange"
+            }
+          ]
+        },
+        {
+          "code": "OCD",
+          "display": "Occurrence code and date",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OSP",
+          "display": "Occurrence span code and date",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PIP",
+          "display": "Practitioner institutional privileges",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PL",
+          "display": "Person location",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PLN",
+          "display": "Practitioner license or other ID number",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PPN",
+          "display": "Performing person time stamp",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PRL",
+          "display": "Parent result link",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PT",
+          "display": "Processing type",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PTA",
+          "display": "Policy type and amount",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "QIP",
+          "display": "Query input parameter list",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "QSC",
+          "display": "Query selection criteria",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "RCD",
+          "display": "Row column definition",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "RFR",
+          "display": "Reference range",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "RI",
+          "display": "Repeat interval",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "RMC",
+          "display": "Room coverage",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "RP",
+          "display": "Reference pointer",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "RPT",
+          "display": "Repeat pattern",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "SCV",
+          "display": "Scheduling class value pair",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "SN",
+          "display": "Structured numeric",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueInteger",
+              "comment": ", valueRange or valueRatio.  "
+            }
+          ]
+        },
+        {
+          "code": "SNM",
+          "display": "String of telephone number digits",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "SPD",
+          "display": "Specialty description",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "SRT",
+          "display": "Sort order",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "ST",
+          "display": "String data",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueString"
+            }
+          ]
+        },
+        {
+          "code": "TM",
+          "display": "Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueTime"
+            }
+          ]
+        },
+        {
+          "code": "TX",
+          "display": "Text data",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueString"
+            }
+          ]
+        },
+        {
+          "code": "UVC",
+          "display": "UB value code and amount",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "VH",
+          "display": "Visiting hours",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "VID",
+          "display": "Version identifier",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "VR",
+          "display": "Value range",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "valueRange"
+            }
+          ]
+        },
+        {
+          "code": "WVI",
+          "display": "Channel Identifier",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "WVS",
+          "display": "Waveform source",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "XAD",
+          "display": "Extended address",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "XCN",
+          "display": "Extended composite ID number and name for persons",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "XON",
+          "display": "Extended composite name and ID number for organizations",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "XPN",
+          "display": "Extended person name",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "XTN",
+          "display": "Extended telecommunications number",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

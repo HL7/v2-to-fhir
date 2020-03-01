@@ -1,10 +1,12 @@
 {
-  "url": "http://hl7.org/fhir/v2-tofhir/ImplementationGuide/mHealthADE",
+  "url": "http://hl7.org/fhir/v2-tofhir/ImplementationGuide/v2-tofhir",
   "name": "HL7Version2toFHIR",
-  "package-id": "mHealthADE",
+  "package-id": "v2-tofhir",
   "ig-ver": "0.1.0",
-  "date": "Sat, 29 Feb, 2020 13:06:28 -0500",
-  "exception": "No Source directories to scan found",
+  "date": "Sun, 01 Mar, 2020 02:41:42 -0500",
+  "errs": 138,
+  "warnings": 150,
+  "hints": 0,
   "version": "4.0.1",
   "tool": "4.2.0 (3)"
 }

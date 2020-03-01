@@ -1,0 +1,108 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "conceptmap-v2-0007-to-admission-type",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table v2-0007 to the FHIR Admission Type Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "ConceptMap_v2-0007_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "http://terminology.hl7.org/CodeSystem/v2-0007",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v2-0007",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "A",
+          "display": "Accident",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "A",
+              "display": "Accident"
+            }
+          ]
+        },
+        {
+          "code": "E",
+          "display": "Emergency",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "E",
+              "display": "Emergency"
+            }
+          ]
+        },
+        {
+          "code": "L",
+          "display": "Labor and Delivery",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "L",
+              "display": "Labor and Delivery"
+            }
+          ]
+        },
+        {
+          "code": "R",
+          "display": "Routine",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "R",
+              "display": "Routine"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "Newborn (Birth in healthcare facility)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "N",
+              "display": "Newborn (Birth in healthcare facility)"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "Urgent",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "U",
+              "display": "Urgent"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "display": "Elective",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "C",
+              "display": "Elective"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

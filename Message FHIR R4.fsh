@@ -1,8 +1,8 @@
 Instance: MessageFHIRR4
 InstanceOf: ConceptMap
-Title: Message FHIR R4 Map
+Title: "Message FHIR R4 Map"
 * url = "http://hl7.org/fhir/v2-tofhir"
-* version = 1.0
+* version = "1.0"
 * name = "Message_FHIR R4_Map"
 * status = #active
 * experimental = true

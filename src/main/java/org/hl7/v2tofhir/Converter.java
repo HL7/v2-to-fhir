@@ -26,5 +26,6 @@ public interface Converter {
     void store() throws IOException;
 
     String getType();
-    String getName();
+    String getSourceName();
+    String getTargetName();
 }

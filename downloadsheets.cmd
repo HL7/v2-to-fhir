@@ -1,0 +1,1 @@
+java -cp target\v2-to-fhir-jar-with-dependencies.jar org.hl7.v2tofhir.Convert -omappings/codesystems "-dmappings/v2-to-FHIR Map Inventory - Code System.lst" -omappings/datatypes "-dmappings/v2-to-FHIR Map Inventory - Data Type.lst" -omappings/messages "-dmappings/v2-to-FHIR Map Inventory - Message.lst" -omappings/segments "-dmappings/v2-to-FHIR Map Inventory - Segment.lst"

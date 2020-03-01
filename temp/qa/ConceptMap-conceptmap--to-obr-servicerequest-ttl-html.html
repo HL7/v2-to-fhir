@@ -1,0 +1,500 @@
+﻿<html>
+<head>
+  <title>ConceptMap-conceptmap--to-obr-servicerequest-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:ConceptMap;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;conceptmap--to-obr-servicerequest&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Segment_OBR!ServiceRequest_Map (http://hl7.org/fhir/v2-tofhir)&lt;/h2&gt;&lt;p&gt;Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir&lt;/p&gt;&lt;p&gt;ACTIVE (not intended for production usage). Published on Feb 29, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: &lt;a href=\&quot;mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\&quot;&gt;https://confluence.hl7.org/display/OO/v2-to-FHIR+IG&lt;/a&gt;, Keith W. Boone: &lt;a href=\&quot;mailto:kboone@ainq.com\&quot;&gt;kboone@ainq.com&lt;/a&gt;). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.&lt;/p&gt;&lt;br/&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td colspan=\&quot;1\&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=\&quot;1\&quot;&gt;&lt;b&gt;Destination Concept Details&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt; from &lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt; from &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-2&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.identifier&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-2&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.identifier.type.coding.code&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-2&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.identifier.type.coding.system&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-3&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.identifier&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-3&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.identifier.type.coding.code&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-3&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.identifier.type.coding.system&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-4&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.code&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.priority&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-6&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.occurrenceDateTime&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-9&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.specimen[1](Specimen.collection.quantity)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-10&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.specimen[1](Specimen.collection.collector(Practitioner))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-11&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.intent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-11&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.intent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-14&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.specimen[1](Specimen.receivedTime)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-15&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.specimen[1](Specimen)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-16&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.requester(Practitioner)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-27&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.quantity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-29&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.basedOn.identifier&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-29&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.basedOn.type&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-29&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.basedOn.identifier&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-29&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.basedOn.type&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-31&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.reasonCode&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-39&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;SpecimenRequest.specimen[1](Specimen.note)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-46&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.orderDetail[1]??&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-47&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.orderDetail[2]??&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-53&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.identifier&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-53&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.identifier.type.coding.code&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBR-53&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;ServiceRequest.identifier.type.coding.system&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">fhir:ConceptMap.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/v2-tofhir&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">fhir:ConceptMap.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.1.0&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.name">fhir:ConceptMap.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Segment_OBR!ServiceRequest_Map&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">fhir:ConceptMap.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.experimental">fhir:ConceptMap.experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">fhir:ConceptMap.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2020-02-29T00:00:00-05:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.publisher">fhir:ConceptMap.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HL7 International&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">fhir:ConceptMap.contact</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:ContactDetail.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HL7 Orders and Observations Workgroup&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;email&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;https://confluence.hl7.org/display/OO/v2-to-FHIR+IG&quot; ]     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:ContactDetail.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Keith W. Boone&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;email&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;kboone@ainq.com&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.copyright">fhir:ConceptMap.copyright</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.source[x]">fhir:ConceptMap.sourceUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.hl7.org/v2&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.target[x]">fhir:ConceptMap.targetUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://www.hl7.org/fhir&quot;];
+  <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">fhir:ConceptMap.group</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">fhir:ConceptMap.group.element</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-1&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Set ID – OBR&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-2&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Placer Order Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.identifier&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-2&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Placer Order Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.identifier.type.coding.code&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= \&quot;PLAC\&quot;&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-2&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Placer Order Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.identifier.type.coding.system&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= \&quot;http://terminology.hl7.org/CodeSystem/v2-0203\&quot;&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-3&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Filler Order Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.identifier&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-3&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Filler Order Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 6;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-3&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Filler Order Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.identifier.type.coding.code&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= \&quot;FILL\&quot;&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 7;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-3&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Filler Order Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.identifier.type.coding.system&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= \&quot;http://terminology.hl7.org/CodeSystem/v2-0203\&quot;&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 8;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-4&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Universal Service Identifier&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.code&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 9;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-5&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Priority&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.priority&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 10;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-6&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Requested Date/Time&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.occurrenceDateTime&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 11;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-7&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation Date/Time&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 12;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-8&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation End Date/Time&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 13;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-9&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Collection Volume&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.specimen[1](Specimen.collection.quantity)&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 14;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-10&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Collector Identifier&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.specimen[1](Specimen.collection.collector(Practitioner))&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 15;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-11&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Specimen Action Code&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 16;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-11&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Specimen Action Code&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.intent&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= \&quot;reflex-order\&quot;&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 17;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-11&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Specimen Action Code&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.intent&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= \&quot;order\&quot;&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 18;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-12&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Danger Code&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 19;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-13&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Relevant Clinical Information&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 20;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-14&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Specimen Received Date/Time *&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.specimen[1](Specimen.receivedTime)&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 21;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-15&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Specimen Source&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.specimen[1](Specimen)&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 22;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-16&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Ordering Provider&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.requester(Practitioner)&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 23;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-17&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Order Callback Phone Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 24;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-18&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Placer Field 1&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 25;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-19&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Placer Field 2&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 26;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-20&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Filler Field 1 +&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 27;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-21&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Filler Field 2 +&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 28;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-22&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Results Rpt/Status Chng – Date/Time +&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 29;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-23&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Charge to Practice +&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 30;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-24&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Diagnostic Serv Sect ID&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 31;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-25&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Result Status +&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 32;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-26&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Parent Result +&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 33;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-27&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Quantity/Timing&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.quantity&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 34;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-28&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Result Copies To&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 35;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-29&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ParentResults Observation Identifier&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.basedOn.identifier&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 36;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-29&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ParentResults Observation Identifier&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.basedOn.type&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= \&quot;ServiceRequest\&quot;&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 37;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-29&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ParentResults Observation Identifier&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.basedOn.identifier&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 38;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-29&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ParentResults Observation Identifier&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.basedOn.type&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= \&quot;ServiceRequest\&quot;&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 39;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-29&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ParentResults Observation Identifier&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 40;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-30&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Transportation Mode&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 41;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-31&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Reason for Study&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.reasonCode&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 42;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-32&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Principal Result Interpreter +&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 43;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-33&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Assistant Result Interpreter +&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 44;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-34&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Technician +&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 45;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-35&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Transcriptionist +&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 46;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-36&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Scheduled Date/Time +&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 47;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-37&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Number of Sample Containers *&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 48;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-38&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Transport Logistics of Collected Sample *&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 49;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-39&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Collector's Comment *&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;SpecimenRequest.specimen[1](Specimen.note)&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 50;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-40&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Transport Arrangement Responsibility&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 51;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-41&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Transport Arranged&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 52;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-42&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Escort Required&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 53;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-43&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Planned Patient Transport Comment&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 54;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-44&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Procedure Code&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 55;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-45&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Procedure Code Modifier&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 56;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-46&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Placer Supplemental Service Information&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.orderDetail[1]??&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 57;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-47&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Filler Supplemental Service Information&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.orderDetail[2]??&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 58;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-48&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Medically Necessary Duplicate Procedure Reason&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 59;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-49&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Result Handling&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 60;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-50&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Parent Universal Service Identifier&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 61;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-51&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation Group ID&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 62;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-52&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Parent Observation Group ID&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 63;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-53&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alternate Placer Order Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.identifier&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 64;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-53&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alternate Placer Order Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.identifier.type.coding.code&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= \&quot;PLAC\&quot;&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 65;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-53&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alternate Placer Order Number&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">fhir:ConceptMap.group.element.target.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;ServiceRequest.identifier.type.coding.system&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">fhir:ConceptMap.group.element.target.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;= \&quot;http://terminology.hl7.org/CodeSystem/v2-0203\&quot;&quot; ];
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;equivalent&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 66;
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">fhir:ConceptMap.group.element.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;OBR-54&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">fhir:ConceptMap.group.element.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Parent Order&quot; ];
+       <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">fhir:ConceptMap.group.element.target</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">fhir:ConceptMap.group.element.target.equivalence</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unmatched&quot; ]       ]     ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+</body>
+</html>

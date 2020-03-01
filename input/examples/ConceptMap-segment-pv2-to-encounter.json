@@ -1,0 +1,147 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-pv2-to-encounter",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 PV2 Segment to the FHIR Encounter Resource representing that segment.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "Segment_PV2_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "https://www.hl7.org/v2",
+  "targetUri": "https://www.hl7.org/fhir",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "PV2-3",
+          "display": "Admit Reason",
+          "target": [
+            {
+              "comment": "PV2-3 doesn't have an associated table so no vocabulary mapping is provided",
+              "equivalence": "equivalent",
+              "code": "Encounter.reasonCode"
+            }
+          ]
+        },
+        {
+          "code": "PV2-11",
+          "display": "Actual Length of Inpatient Stay",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.length.value"
+            }
+          ]
+        },
+        {
+          "code": "PV2-11",
+          "display": "Actual Length of Inpatient Stay",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.length.unit",
+              "display": "= \"d\""
+            }
+          ]
+        },
+        {
+          "code": "PV2-11",
+          "display": "Actual Length of Inpatient Stay",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.length.system",
+              "display": "= \"http://unitsofmeasure.org/\""
+            }
+          ]
+        },
+        {
+          "code": "PV2-12",
+          "display": "Visit Description",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.text.div"
+            }
+          ]
+        },
+        {
+          "code": "PV2-13",
+          "display": "Referral Source Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant.individual(Practitioner|PractitionerRole)"
+            }
+          ]
+        },
+        {
+          "code": "PV2-13",
+          "display": "Referral Source Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant.type.coding.code",
+              "display": "= \"REF\""
+            }
+          ]
+        },
+        {
+          "code": "PV2-13",
+          "display": "Referral Source Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant.type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""
+            }
+          ]
+        },
+        {
+          "code": "PV2-13",
+          "display": "Referral Source Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.participant.type.text",
+              "display": "= \"referrer\""
+            }
+          ]
+        },
+        {
+          "code": "PV2-25",
+          "display": "Visit Priority Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.priority"
+            }
+          ]
+        },
+        {
+          "code": "PV2-38",
+          "display": "Mode of Arrival Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.extension-encounter-modeOfArrival"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

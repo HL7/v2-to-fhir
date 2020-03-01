@@ -5,25 +5,39 @@ import com.opencsv.bean.CsvBindByPosition;
 public class SegmentInput {
     /** The V2 coding system */
     @CsvBindByPosition(position=0)
-    private String v2Code;
+    String v2Sort;
     @CsvBindByPosition(position=1)
-    private String v2Text;
+    String v2Code;
     @CsvBindByPosition(position=2)
-    private String v2CodeSystem;
+    String v2Name;
     @CsvBindByPosition(position=3)
-    private String conditionANTLR;
+    String v2Datatype;
     @CsvBindByPosition(position=4)
-    private String conditionfhirPath;
+    String v2Min;
     @CsvBindByPosition(position=5)
-    private String conditionNarrative;
+    String v2Max;
     @CsvBindByPosition(position=6)
-    private String fhirCode;
+    String conditionANTLR;
     @CsvBindByPosition(position=7)
-    private String fhirExtension;
+    String conditionfhirPath;
     @CsvBindByPosition(position=8)
-    private String fhirDisplay;
+    String conditionNarrative;
     @CsvBindByPosition(position=9)
-    private String fhirCodeSystem;
+    String fhirCode;
     @CsvBindByPosition(position=10)
-    private String comments;
+    String fhirExtension;
+    @CsvBindByPosition(position=11)
+    String fhirDatatype;
+    @CsvBindByPosition(position=12)
+    String fhirMin;
+    @CsvBindByPosition(position=13)
+    String fhirMax;
+    @CsvBindByPosition(position=14)
+    String v2DataTypeMap;
+    @CsvBindByPosition(position=15)
+    String fhirVocab;
+    @CsvBindByPosition(position=16)
+    String fhirEmpty;
+    @CsvBindByPosition(position=17)
+    String comments;
 }

@@ -1,0 +1,186 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "conceptmap-v2-0301-to-universal-id-type",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table v2-0301 to the FHIR Universal ID Type Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "ConceptMap_v2-0301_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "http://terminology.hl7.org/CodeSystem/v2-0301",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v2-0301",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "DNS",
+          "display": "An Internet host name, in accordance with RFC 1035; or an IP address. Either in ASCII or as integers, with periods between components (“dotted” notation).",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DNS",
+              "display": "An Internet host name, in accordance with RFC 1035; or an IP address. Either in ASCII or as integers, with periods between components (“dotted” notation)."
+            }
+          ]
+        },
+        {
+          "code": "EUI64",
+          "display": "IEEE 64-bit Extended Unique Identifier is comprised of a 24-bit company identifier and a 40-bit instance identifier. The value shall be formatted as 16 ASCII HEX digits, for example, “AABBCC1122334455”. The 24-bit company identifier, formally known as Organizationally Unique Identifier (OUI-24), is guaranteed to be globally unique. The 40-bit extensions are assigned by manufacturers. This identifier is often used in equipment interfaces (e.g., “MAC” address format for IPv4 & IPv6). [See http://standards.ieee.org/regauth/oui/tutorials/EUI64.html for a detailed explanation of the format.]",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "EUI64",
+              "display": "IEEE 64-bit Extended Unique Identifier is comprised of a 24-bit company identifier and a 40-bit instance identifier. The value shall be formatted as 16 ASCII HEX digits, for example, “AABBCC1122334455”. The 24-bit company identifier, formally known as Organizationally Unique Identifier (OUI-24), is guaranteed to be globally unique. The 40-bit extensions are assigned by manufacturers. This identifier is often used in equipment interfaces (e.g., “MAC” address format for IPv4 & IPv6). [See http://standards.ieee.org/regauth/oui/tutorials/EUI64.html for a detailed explanation of the format.]"
+            }
+          ]
+        },
+        {
+          "code": "CLIA",
+          "display": "Clinical Laboratory Improvement Amendments. Allows for the ability to designate organization identifier as a “CLIA” assigned number (for labs)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CLIA",
+              "display": "Clinical Laboratory Improvement Amendments. Allows for the ability to designate organization identifier as a “CLIA” assigned number (for labs)"
+            }
+          ]
+        },
+        {
+          "code": "CLIP",
+          "display": "Clinical laboratory Improvement Program. Allows for the ability to designate organization identifier as a “CLIP” assigned number (for labs). Used by US Department of Defense.",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CLIP",
+              "display": "Clinical laboratory Improvement Program. Allows for the ability to designate organization identifier as a “CLIP” assigned number (for labs). Used by US Department of Defense."
+            }
+          ]
+        },
+        {
+          "code": "GUID",
+          "display": "Same as UUID.",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "GUID",
+              "display": "Same as UUID."
+            }
+          ]
+        },
+        {
+          "code": "HCD",
+          "display": "The CEN Healthcare Coding Scheme Designator",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "HCD",
+              "display": "The CEN Healthcare Coding Scheme Designator"
+            }
+          ]
+        },
+        {
+          "code": "HL7",
+          "display": "HL7 registration schemes",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "HL7",
+              "display": "HL7 registration schemes"
+            }
+          ]
+        },
+        {
+          "code": "ISO",
+          "display": "An International Standards Organization Object Identifier (OID), in accordance with ISO/IEC 8824. Formatted as decimal digits separated by periods; recommended limit of 64 characters",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ISO",
+              "display": "An International Standards Organization Object Identifier (OID), in accordance with ISO/IEC 8824. Formatted as decimal digits separated by periods; recommended limit of 64 characters"
+            }
+          ]
+        },
+        {
+          "code": "L,M,N",
+          "display": "Locally defined coding entity identifier.",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "L",
+              "display": "Locally defined coding entity identifier.",
+              "comment": ",M,N.  "
+            }
+          ]
+        },
+        {
+          "code": "Random",
+          "display": "Usually a base64 encoded string of random bits.\n Note: Random IDs are typically used for instance identifiers, rather than an identifier of an Assigning Authority that issues instance identifiers",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Random",
+              "display": "Usually a base64 encoded string of random bits.\n Note: Random IDs are typically used for instance identifiers, rather than an identifier of an Assigning Authority that issues instance identifiers"
+            }
+          ]
+        },
+        {
+          "code": "URI",
+          "display": "Uniform Resource Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "URI",
+              "display": "Uniform Resource Identifier"
+            }
+          ]
+        },
+        {
+          "code": "UUID",
+          "display": "The DCE Universal Unique Identifier, in accordance with RFC 4122. Recommended format is 32 hexadecimal digits separated by hyphens, in the digit grouping 8-4-4-4-12",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "UUID",
+              "display": "The DCE Universal Unique Identifier, in accordance with RFC 4122. Recommended format is 32 hexadecimal digits separated by hyphens, in the digit grouping 8-4-4-4-12"
+            }
+          ]
+        },
+        {
+          "code": "x400",
+          "display": "An X.400 MHS identifier. Recommended format is in accordance with RFC 1649",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "x400",
+              "display": "An X.400 MHS identifier. Recommended format is in accordance with RFC 1649"
+            }
+          ]
+        },
+        {
+          "code": "x500",
+          "display": "An X.500 directory name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "x500",
+              "display": "An X.500 directory name"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

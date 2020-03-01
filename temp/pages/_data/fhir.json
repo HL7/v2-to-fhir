@@ -1,0 +1,47 @@
+{
+  "path": "http://hl7.org/fhir/R4/",
+  "canonical": "http://hl7.org/fhir/v2-tofhir",
+  "igId": "v2-tofhir",
+  "igName": "HL7Version2toFHIR",
+  "packageId": "v2-tofhir",
+  "igVer": "0.1.0",
+  "errorCount": 69,
+  "version": "4.0.1",
+  "revision": "a53ec6ee1b",
+  "versionFull": "4.0.1-a53ec6ee1b",
+  "toolingVersion": "4.2.0",
+  "toolingRevision": "3",
+  "toolingVersionFull": "4.2.0 (3)",
+  "totalFiles": 70,
+  "processedFiles": 159,
+  "genDate": "Sun, Mar 1, 2020 02:41-0500",
+  "genDay": "01/03/2020",
+  "ig": {
+    "id": "v2-tofhir",
+    "name": "HL7Version2toFHIR",
+    "title": "HL7 Version 2 to FHIR",
+    "url": "http://hl7.org/fhir/v2-tofhir/ImplementationGuide/v2-tofhir",
+    "version": "0.1.0",
+    "status": "active",
+    "experimental": false,
+    "publisher": "HL7 International",
+    "gitstatus": "master",
+    "contact": [
+      {
+        "name": "HL7 Orders and Observations Workgroup",
+        "telecom": [
+          "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
+        ]
+      },
+      {
+        "name": "Keith W. Boone",
+        "telecom": [
+          "kboone@ainq.com"
+        ]
+      }
+    ],
+    "date": "2020-03-01T02:41:42-05:00",
+    "description": "asdf",
+    "fhirVersion": "4.0.1"
+  }
+}

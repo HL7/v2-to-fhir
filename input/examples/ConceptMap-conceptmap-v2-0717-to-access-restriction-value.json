@@ -1,0 +1,715 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "conceptmap-v2-0717-to-access-restriction-value",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table v2-0717 to the FHIR Access Restriction Value Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "ConceptMap_v2-0717_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "http://terminology.hl7.org/CodeSystem/v2-0717",
+  "targetUri": "",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "PersDEID",
+          "display": "personal de-identified information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "ALL",
+          "display": "All",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "DEM",
+          "display": "All demographic data",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "LOC",
+          "display": "Patient Location",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PID-7",
+          "display": "Date of Birth",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PID-17",
+          "display": "Religion",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HIV",
+          "display": "HIV status and results",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "STD",
+          "display": "Sexually transmitted diseases",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PSY",
+          "display": "Psychiatric Mental health",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "DRG",
+          "display": "Drug",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "SMD",
+          "display": "Sensitive medical data",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "NO",
+          "display": "None",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OO",
+          "display": "Opt out all registries (HIPAA)",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OI",
+          "display": "Opt in all registries (HIPAA)",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "JurisIP",
+          "display": "jurisdictional information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "JurisCUI",
+          "display": "jurisdictional controlled unclassified information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "JurisDEID",
+          "display": "jurisdictional de-identified information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "JurisLDS",
+          "display": "jurisdictional limited data set",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "JurisNSI",
+          "display": "jurisdictional non-sensitive information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "JurisPI",
+          "display": "jurisdictional public information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "JurisSP-CUI",
+          "display": "jurisdictional specified controlled unclassified information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "JurisUUI",
+          "display": "jurisdictional uncontrolled unclassified information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OrgIP",
+          "display": "organizational information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OrgCUI",
+          "display": "organizational basic controlled unclassified information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OrgDEID",
+          "display": "organizational de-identified information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OrgLDS",
+          "display": "organizational limited data set information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OrgNSI",
+          "display": "organizational non-sensitive information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OrgPI",
+          "display": "organizational public information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OrgSP-CUI",
+          "display": "organizational specified controlled unclassified information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OrgUUI",
+          "display": "organizational uncontrolled unclassified information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PersIP",
+          "display": "personal information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PersNSI",
+          "display": "personal non-sensitive information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PersLDS",
+          "display": "personal limited data set information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PersPI",
+          "display": "personal public information policy",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GRANTORCHOICE",
+          "display": "grantor choice",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "IMPLIED",
+          "display": "implied consent",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "IMPLIEDD",
+          "display": "implied consent with opportunity to dissent",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "NOCONSENT",
+          "display": "no consent",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OPTIN",
+          "display": "opt-in",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OPTINR",
+          "display": "opt-in with restrictions",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OPTOUT",
+          "display": "opt-out",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OPTOUTE",
+          "display": "opt-out with exceptions",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "EMRGONLY",
+          "display": "opt-in emergency only",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "NOPP",
+          "display": "notice of privacy practices",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OOC",
+          "display": "opt-out of personal information or effect collection in a registry or repository",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OOS",
+          "display": "opt-out of personal information or effect sharing via a registry or repository",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OIC",
+          "display": "opt-in to personal information or effect collection in a registry or repository",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OIS",
+          "display": "opt-in to personal information or effect sharing via a registry or repository",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "42CFRPart2CD",
+          "display": "42 CFR Part 2 consent directive",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HIPAAAuthCD",
+          "display": "HIPAA Authorization Consent Directive",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HIPAAConsentCD",
+          "display": "HIPAA Consent Directive",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HIPAAROACD",
+          "display": "HIPAA Right of Access Consent Directive",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HIPAAResearchAuthCD",
+          "display": "HIPAA Authorization for Disclosure for Research Consent Directive",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "CompoundResearchCD",
+          "display": "Compound HIPAA Research Authorization and Informed Consent for Research",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "MDHHS-5515",
+          "display": "Michigan Consent to Share Behavioral Health Information for Care Coordination Purposes",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRCD",
+          "display": "GDPR Consent Directive",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRResearchCD",
+          "display": "GDPR Research Consent Directive",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "42CFRPart2",
+          "display": "42 CFR Part 2)",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "COMMONRULE",
+          "display": "Common Rule",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HIPAANOPP",
+          "display": "HIPAA notice of privacy practices",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HIPAAPsyNotes",
+          "display": "HIPAA psychotherapy notes",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HIPAASelfPay",
+          "display": "HIPAA self-pay",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "Title38Section7332",
+          "display": "Title 38 Section 7332",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HIPAAConsent",
+          "display": "HIPAA Consent",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HIPAAAuth",
+          "display": "HIPAA Authorization for Disclosure",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HIPAAROA",
+          "display": "HIPAA Right of Access",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRCONSENT",
+          "display": "GDPR Consent",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRCONTRACT",
+          "display": "GDPR contract",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRHLTHSOCSY",
+          "display": "GDPR health or social system management",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRLEGALCLAIM",
+          "display": "GDPR legal claim",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRLEGALOBL",
+          "display": "GDPR legal obligation",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRLEGITINTEREST",
+          "display": "GDPR legitimate interest",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRPUBLICHEALTH",
+          "display": "GDPR public health",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRPUBLICINTEREST",
+          "display": "GDPR public interest",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRRESEARCH",
+          "display": "GDPR research",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "GDPRVITALINTEREST",
+          "display": "GDPR vital interest",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

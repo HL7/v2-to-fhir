@@ -1,0 +1,439 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-pid-to-patient",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 PID Segment to the FHIR Patient Resource representing that segment.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "Segment_PID_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "https://www.hl7.org/v2",
+  "targetUri": "https://www.hl7.org/fhir",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "PID-2",
+          "display": "Patient ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.identifier[1]"
+            }
+          ]
+        },
+        {
+          "code": "PID-3",
+          "display": "Patient Identifier List",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.identifier[2]"
+            }
+          ]
+        },
+        {
+          "code": "PID-4",
+          "display": "Alternate Patient ID - PID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.identifier[3]"
+            }
+          ]
+        },
+        {
+          "code": "PID-5",
+          "display": "Patient Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.name[1]"
+            }
+          ]
+        },
+        {
+          "code": "PID-6",
+          "display": "Mother's Maiden Name",
+          "target": [
+            {
+              "comment": "This may not be the second name if there are repeats in PID-5. ext.patientMothersMaiden (string) also exists if we prefer.",
+              "equivalence": "equivalent",
+              "code": "Patient.extension-mothersMaidenName"
+            }
+          ]
+        },
+        {
+          "code": "PID-7",
+          "display": "Date/Time of Birth",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.birthdate"
+            }
+          ]
+        },
+        {
+          "code": "PID-8",
+          "display": "Administrative Sex",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.gender"
+            }
+          ]
+        },
+        {
+          "code": "PID-9",
+          "display": "Patient Alias",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.name[2]"
+            }
+          ]
+        },
+        {
+          "code": "PID-10",
+          "display": "Race",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation"
+            }
+          ]
+        },
+        {
+          "code": "PID-10",
+          "display": "Race",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation.subject.reference",
+              "display": "= Patient.id"
+            }
+          ]
+        },
+        {
+          "code": "PID-11",
+          "display": "Patient Address",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.address[1]"
+            }
+          ]
+        },
+        {
+          "code": "PID-12",
+          "display": "County Code",
+          "target": [
+            {
+              "comment": "This may not be the second occurrence if PID-11 repeats. Because PID-11 can repeat but PID-12 cannot, it's not appropriate to include PID-12 in an iteration of .address populated from PID-11",
+              "equivalence": "equivalent",
+              "code": "Patient.address[2].district"
+            }
+          ]
+        },
+        {
+          "code": "PID-13",
+          "display": "Phone Number - Home",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.telecom[1]"
+            }
+          ]
+        },
+        {
+          "code": "PID-13",
+          "display": "Phone Number - Home",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.telecom[1].use",
+              "display": "= \"home\""
+            }
+          ]
+        },
+        {
+          "code": "PID-14",
+          "display": "Phone Number - Business",
+          "target": [
+            {
+              "comment": "XTN[ContactPoint.use=\"work\"]",
+              "equivalence": "equivalent",
+              "code": "Patient.telecom[2]"
+            }
+          ]
+        },
+        {
+          "code": "PID-14",
+          "display": "Phone Number - Business",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.telecom[2].use",
+              "display": "= \"work\""
+            }
+          ]
+        },
+        {
+          "code": "PID-15",
+          "display": "Primary Language",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.communication.language"
+            }
+          ]
+        },
+        {
+          "code": "PID-15",
+          "display": "Primary Language",
+          "target": [
+            {
+              "comment": "There is a critical question whether it is appropriate to include this specific mapping.  While it seems that \"primary\" would mean \"true\", it is unclear how this would be resolved if from other sources another language is marked as \"true\".  If not marked, it would not be clear which language to put in on the return.  Furthermore, depending on purpose, the language may change (verbal vs. written, etc.)  So not having cardinality and purpose aligned makes it hard to have a consistent, correct map.  Consequently if set to t\"true\" some are concerned it may expected to be used for, or not be used for translation purposes it is or is not intended for that purpose.  Therefore, should we or should we not leave this mapping in?",
+              "equivalence": "equivalent",
+              "code": "Patient.communication.preferred",
+              "display": "= \"true\""
+            }
+          ]
+        },
+        {
+          "code": "PID-16",
+          "display": "Marital Status",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.maritalStatus"
+            }
+          ]
+        },
+        {
+          "code": "PID-17",
+          "display": "Religion",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.extension-patient-religion"
+            }
+          ]
+        },
+        {
+          "code": "PID-18",
+          "display": "Patient Account Number",
+          "target": [
+            {
+              "comment": "Where Account.subject.Reference(Patient.identifier)=Patient.identifier",
+              "equivalence": "equivalent",
+              "code": "Account[1].identifier"
+            }
+          ]
+        },
+        {
+          "code": "PID-18",
+          "display": "Patient Account Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Account[1].subject",
+              "display": "= Patient.id"
+            }
+          ]
+        },
+        {
+          "code": "PID-19",
+          "display": "SSN Number - Patient",
+          "target": [
+            {
+              "comment": "the value set for Identifier.type doesn't contain SSN but it does have SB (social beneficiary)",
+              "equivalence": "equivalent",
+              "code": "Patient.identifier[4].value"
+            }
+          ]
+        },
+        {
+          "code": "PID-19",
+          "display": "SSN Number - Patient",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.identifier[4].type",
+              "display": "= \"SB\""
+            }
+          ]
+        },
+        {
+          "code": "PID-20",
+          "display": "Driver's License Number - Patient",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.identifier[5]"
+            }
+          ]
+        },
+        {
+          "code": "PID-21",
+          "display": "Mother's Identifier",
+          "target": [
+            {
+              "comment": "Where RelatedPerson.patient.Reference(Patient.identifier)=Patient.identifier\nIs this worth worrying about?",
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.identifier"
+            }
+          ]
+        },
+        {
+          "code": "PID-22",
+          "display": "Ethnic Group",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation"
+            }
+          ]
+        },
+        {
+          "code": "PID-23",
+          "display": "Birth Place",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.extension-patient-birthplace.text"
+            }
+          ]
+        },
+        {
+          "code": "PID-24",
+          "display": "Multiple Birth Indicator",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.multipleBirthBoolean"
+            }
+          ]
+        },
+        {
+          "code": "PID-25",
+          "display": "Birth Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.multipleBirthInteger"
+            }
+          ]
+        },
+        {
+          "code": "PID-26",
+          "display": "Citizenship",
+          "target": [
+            {
+              "comment": "The standard extension does not include a value set",
+              "equivalence": "equivalent",
+              "code": "Patient.extension-patient-citizenship[1].code"
+            }
+          ]
+        },
+        {
+          "code": "PID-28",
+          "display": "Nationality",
+          "target": [
+            {
+              "comment": "The standard extension does not include a value set",
+              "equivalence": "equivalent",
+              "code": "Patient.extension-patient-nationality.code"
+            }
+          ]
+        },
+        {
+          "code": "PID-29",
+          "display": "Patient Death Date and Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.deceasedDateTime"
+            }
+          ]
+        },
+        {
+          "code": "PID-30",
+          "display": "Patient Death Indicator",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.deceasedBoolean"
+            }
+          ]
+        },
+        {
+          "code": "PID-33",
+          "display": "Last Update Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.meta.lastUpdated"
+            }
+          ]
+        },
+        {
+          "code": "PID-35",
+          "display": "Taxonomic Classification Code",
+          "target": [
+            {
+              "comment": "A voacabulary map may not be worth the lift given there is no HL7 table associated with this element",
+              "equivalence": "equivalent",
+              "code": "Patient.extension-patient-animal.species"
+            }
+          ]
+        },
+        {
+          "code": "PID-36",
+          "display": "Breed Code",
+          "target": [
+            {
+              "comment": "A voacabulary map may not be worth the lift given that the associated HL7 table (HL70447) has no suggested values",
+              "equivalence": "equivalent",
+              "code": "Patient.extension-patient-animal.breed"
+            }
+          ]
+        },
+        {
+          "code": "PID-39",
+          "display": "Tribal Citizenship",
+          "target": [
+            {
+              "comment": "The standard extension does not include a value set.  Also suggest that the extension should not be limited to \"country\".  Consider adding a .type to the extension to distinguish tribal vs. \"country\" (or whatever we call it), or otherwise add an extension for tribal citizenship to accommodate the return flow.",
+              "equivalence": "equivalent",
+              "code": "Patient.extension-patient-citizenship[2].code"
+            }
+          ]
+        },
+        {
+          "code": "PID-40",
+          "display": "Patient Telecommunication Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.telecom[3]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

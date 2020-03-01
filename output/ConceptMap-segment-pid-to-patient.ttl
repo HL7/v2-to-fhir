@@ -1,0 +1,424 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pid-to-patient> a fhir:ConceptMap;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "segment-pid-to-patient"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Segment_PID_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 PID Segment to the FHIR Patient Resource representing that segment.</p>\n</div><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>PID-2</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.identifier[1]</td><td/></tr><tr><td>PID-3</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.identifier[2]</td><td/></tr><tr><td>PID-4</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.identifier[3]</td><td/></tr><tr><td>PID-5</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.name[1]</td><td/></tr><tr><td>PID-6</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.extension-mothersMaidenName</td><td>This may not be the second name if there are repeats in PID-5. ext.patientMothersMaiden (string) also exists if we prefer.</td></tr><tr><td>PID-7</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.birthdate</td><td/></tr><tr><td>PID-8</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.gender</td><td/></tr><tr><td>PID-9</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.name[2]</td><td/></tr><tr><td>PID-10</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Observation</td><td/></tr><tr><td>PID-10</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Observation.subject.reference</td><td/></tr><tr><td>PID-11</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.address[1]</td><td/></tr><tr><td>PID-12</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.address[2].district</td><td>This may not be the second occurrence if PID-11 repeats. Because PID-11 can repeat but PID-12 cannot, it's not appropriate to include PID-12 in an iteration of .address populated from PID-11</td></tr><tr><td>PID-13</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.telecom[1]</td><td/></tr><tr><td>PID-13</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.telecom[1].use</td><td/></tr><tr><td>PID-14</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.telecom[2]</td><td>XTN[ContactPoint.use=&quot;work&quot;]</td></tr><tr><td>PID-14</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.telecom[2].use</td><td/></tr><tr><td>PID-15</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.communication.language</td><td/></tr><tr><td>PID-15</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.communication.preferred</td><td>There is a critical question whether it is appropriate to include this specific mapping.  While it seems that &quot;primary&quot; would mean &quot;true&quot;, it is unclear how this would be resolved if from other sources another language is marked as &quot;true&quot;.  If not marked, it would not be clear which language to put in on the return.  Furthermore, depending on purpose, the language may change (verbal vs. written, etc.)  So not having cardinality and purpose aligned makes it hard to have a consistent, correct map.  Consequently if set to t&quot;true&quot; some are concerned it may expected to be used for, or not be used for translation purposes it is or is not intended for that purpose.  Therefore, should we or should we not leave this mapping in?</td></tr><tr><td>PID-16</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.maritalStatus</td><td/></tr><tr><td>PID-17</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.extension-patient-religion</td><td/></tr><tr><td>PID-18</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Account[1].identifier</td><td>Where Account.subject.Reference(Patient.identifier)=Patient.identifier</td></tr><tr><td>PID-18</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Account[1].subject</td><td/></tr><tr><td>PID-19</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.identifier[4].value</td><td>the value set for Identifier.type doesn't contain SSN but it does have SB (social beneficiary)</td></tr><tr><td>PID-19</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.identifier[4].type</td><td/></tr><tr><td>PID-20</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.identifier[5]</td><td/></tr><tr><td>PID-21</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>RelatedPerson.identifier</td><td>Where RelatedPerson.patient.Reference(Patient.identifier)=Patient.identifier\nIs this worth worrying about?</td></tr><tr><td>PID-22</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Observation</td><td/></tr><tr><td>PID-23</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.extension-patient-birthplace.text</td><td/></tr><tr><td>PID-24</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.multipleBirthBoolean</td><td/></tr><tr><td>PID-25</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.multipleBirthInteger</td><td/></tr><tr><td>PID-26</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.extension-patient-citizenship[1].code</td><td>The standard extension does not include a value set</td></tr><tr><td>PID-28</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.extension-patient-nationality.code</td><td>The standard extension does not include a value set</td></tr><tr><td>PID-29</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.deceasedDateTime</td><td/></tr><tr><td>PID-30</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.deceasedBoolean</td><td/></tr><tr><td>PID-33</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.meta.lastUpdated</td><td/></tr><tr><td>PID-35</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.extension-patient-animal.species</td><td>A voacabulary map may not be worth the lift given there is no HL7 table associated with this element</td></tr><tr><td>PID-36</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.extension-patient-animal.breed</td><td>A voacabulary map may not be worth the lift given that the associated HL7 table (HL70447) has no suggested values</td></tr><tr><td>PID-39</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.extension-patient-citizenship[2].code</td><td>The standard extension does not include a value set.  Also suggest that the extension should not be limited to &quot;country&quot;.  Consider adding a .type to the extension to distinguish tribal vs. &quot;country&quot; (or whatever we call it), or otherwise add an extension for tribal citizenship to accommodate the return flow.</td></tr><tr><td>PID-40</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>Patient.telecom[3]</td><td/></tr></table></div>"
+  ];
+  fhir:ConceptMap.url [ fhir:value "http://hl7.org/fhir/v2-tofhir"];
+  fhir:ConceptMap.version [ fhir:value "0.1.0"];
+  fhir:ConceptMap.name [ fhir:value "Segment_PID_Map"];
+  fhir:ConceptMap.status [ fhir:value "active"];
+  fhir:ConceptMap.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ConceptMap.date [ fhir:value "2020-03-01T00:00:00-05:00"^^xsd:dateTime];
+  fhir:ConceptMap.publisher [ fhir:value "HL7 International"];
+  fhir:ConceptMap.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Orders and Observations Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ConceptMap.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 PID Segment to the FHIR Patient Resource representing that segment."];
+  fhir:ConceptMap.copyright [ fhir:value "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."];
+  fhir:ConceptMap.sourceUri [ fhir:value "https://www.hl7.org/v2"];
+  fhir:ConceptMap.targetUri [ fhir:value "https://www.hl7.org/fhir"];
+  fhir:ConceptMap.group [
+     fhir:index 0;
+     fhir:ConceptMap.group.element [
+       fhir:index 0;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-2" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.identifier[1]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-3" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Identifier List" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.identifier[2]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-4" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Alternate Patient ID - PID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.identifier[3]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-5" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Name" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.name[1]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-6" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Mother's Maiden Name" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.extension-mothersMaidenName" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "This may not be the second name if there are repeats in PID-5. ext.patientMothersMaiden (string) also exists if we prefer." ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-7" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Date/Time of Birth" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.birthdate" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-8" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Administrative Sex" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.gender" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-9" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Alias" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.name[2]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-10" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Race" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-10" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Race" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.subject.reference" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= Patient.id" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-11" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Address" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.address[1]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-12" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "County Code" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.address[2].district" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "This may not be the second occurrence if PID-11 repeats. Because PID-11 can repeat but PID-12 cannot, it's not appropriate to include PID-12 in an iteration of .address populated from PID-11" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-13" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Phone Number - Home" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.telecom[1]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-13" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Phone Number - Home" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.telecom[1].use" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"home\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-14" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Phone Number - Business" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.telecom[2]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "XTN[ContactPoint.use=\"work\"]" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-14" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Phone Number - Business" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.telecom[2].use" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"work\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-15" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Primary Language" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.communication.language" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-15" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Primary Language" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.communication.preferred" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"true\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "There is a critical question whether it is appropriate to include this specific mapping.  While it seems that \"primary\" would mean \"true\", it is unclear how this would be resolved if from other sources another language is marked as \"true\".  If not marked, it would not be clear which language to put in on the return.  Furthermore, depending on purpose, the language may change (verbal vs. written, etc.)  So not having cardinality and purpose aligned makes it hard to have a consistent, correct map.  Consequently if set to t\"true\" some are concerned it may expected to be used for, or not be used for translation purposes it is or is not intended for that purpose.  Therefore, should we or should we not leave this mapping in?" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-16" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Marital Status" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.maritalStatus" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-17" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Religion" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.extension-patient-religion" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-18" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Account Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Account[1].identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Where Account.subject.Reference(Patient.identifier)=Patient.identifier" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-18" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Account Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Account[1].subject" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= Patient.id" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-19" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "SSN Number - Patient" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.identifier[4].value" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "the value set for Identifier.type doesn't contain SSN but it does have SB (social beneficiary)" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-19" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "SSN Number - Patient" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.identifier[4].type" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "= \"SB\"" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-20" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Driver's License Number - Patient" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.identifier[5]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-21" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Mother's Identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Where RelatedPerson.patient.Reference(Patient.identifier)=Patient.identifier\nIs this worth worrying about?" ]
+       ]
+     ], [
+       fhir:index 26;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-22" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Ethnic Group" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-23" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Birth Place" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.extension-patient-birthplace.text" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-24" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Multiple Birth Indicator" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.multipleBirthBoolean" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 29;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-25" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Birth Order" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.multipleBirthInteger" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 30;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-26" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Citizenship" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.extension-patient-citizenship[1].code" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "The standard extension does not include a value set" ]
+       ]
+     ], [
+       fhir:index 31;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-28" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Nationality" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.extension-patient-nationality.code" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "The standard extension does not include a value set" ]
+       ]
+     ], [
+       fhir:index 32;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-29" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Death Date and Time" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.deceasedDateTime" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 33;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-30" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Death Indicator" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.deceasedBoolean" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 34;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-33" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Last Update Date/Time" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.meta.lastUpdated" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 35;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-35" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Taxonomic Classification Code" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.extension-patient-animal.species" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "A voacabulary map may not be worth the lift given there is no HL7 table associated with this element" ]
+       ]
+     ], [
+       fhir:index 36;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-36" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Breed Code" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.extension-patient-animal.breed" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "A voacabulary map may not be worth the lift given that the associated HL7 table (HL70447) has no suggested values" ]
+       ]
+     ], [
+       fhir:index 37;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-39" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Tribal Citizenship" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.extension-patient-citizenship[2].code" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ];
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "The standard extension does not include a value set.  Also suggest that the extension should not be limited to \"country\".  Consider adding a .type to the extension to distinguish tribal vs. \"country\" (or whatever we call it), or otherwise add an extension for tribal citizenship to accommodate the return flow." ]
+       ]
+     ], [
+       fhir:index 38;
+       fhir:ConceptMap.group.element.code [ fhir:value "PID-40" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Telecommunication Information" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.telecom[3]" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/segment-pid-to-patient.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/v2-tofhir/ConceptMap/segment-pid-to-patient.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,56 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "conceptmap-v2-0092-to-readmission-indicator",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ConceptMap_v2-0092_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from <a href=\"http://hl7.org/fhir/R4/v2/0092/index.html\">http://terminology.hl7.org/CodeSystem/v2-0092</a> to <a href=\"http://hl7.org/fhir/R4/v2/0092/index.html\">http://terminology.hl7.org/CodeSystem/v2-0092</a></p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 Table v2-0092 to the FHIR Readmission Indicator Value Set.</p>\n</div><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td></tr><tr><td>R</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>R</td></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "0.1.0",
+  "name": "ConceptMap_v2-0092_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01T00:00:00-05:00",
+  "publisher": "HL7 International",
+  "contact": [
+    {
+      "name": "HL7 Orders and Observations Workgroup",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table v2-0092 to the FHIR Readmission Indicator Value Set.",
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "http://terminology.hl7.org/CodeSystem/v2-0092",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v2-0092",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "R",
+          "display": "Re-admission",
+          "target": [
+            {
+              "code": "R",
+              "display": "Re-admission",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

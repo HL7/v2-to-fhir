@@ -1,0 +1,251 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-orc-servicerequest-to-servicerequest",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 ORC!ServiceRequest Segment to the FHIR ServiceRequest Resource representing that segment.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "Segment_ORC!ServiceRequest_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "https://www.hl7.org/v2",
+  "targetUri": "https://www.hl7.org/fhir",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "ORC-1",
+          "display": "Order Control",
+          "target": [
+            {
+              "comment": "This is a complicated mapping where .status, .intent, and Task get involved that may have various localized interpretation.",
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.status"
+            }
+          ]
+        },
+        {
+          "code": "ORC-1",
+          "display": "Order Control",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.intent",
+              "display": "= \"order\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-2",
+          "display": "Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier[1]"
+            }
+          ]
+        },
+        {
+          "code": "ORC-2",
+          "display": "Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier[1].type.coding.code",
+              "display": "= \"PLAC\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-2",
+          "display": "Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier[1].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-3",
+          "display": "Filler Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier[2]"
+            }
+          ]
+        },
+        {
+          "code": "ORC-3",
+          "display": "Filler Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier[2].type.coding.code",
+              "display": "= \"FILL\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-3",
+          "display": "Filler Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier[2].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-4",
+          "display": "Placer Group Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier[3]"
+            }
+          ]
+        },
+        {
+          "code": "ORC-4",
+          "display": "Placer Group Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier[3].type.coding.code",
+              "display": "= \"PGN\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-4",
+          "display": "Placer Group Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier[3].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-5",
+          "display": "Order Status",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.status"
+            }
+          ]
+        },
+        {
+          "code": "ORC-7",
+          "display": "Quantity/Timing",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.quantity"
+            }
+          ]
+        },
+        {
+          "code": "ORC-9",
+          "display": "Date/Time of Transaction",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.authoredOn"
+            }
+          ]
+        },
+        {
+          "code": "ORC-12",
+          "display": "Ordering Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.requester(PractitionerRole)"
+            }
+          ]
+        },
+        {
+          "code": "ORC-16",
+          "display": "Order Control Code Reason",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.extension-request-statusReason"
+            }
+          ]
+        },
+        {
+          "code": "ORC-21",
+          "display": "Ordering Facility Name",
+          "target": [
+            {
+              "comment": "PractitionerRole.location is an alternative mapping, we invite ballot comments on which element in PractitionerRole is best.",
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.requester(PractitionerRole.organization(Organization))"
+            }
+          ]
+        },
+        {
+          "code": "ORC-22",
+          "display": "Ordering Facility Address",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.requester(PractitionerRole.organization(Organization.address))"
+            }
+          ]
+        },
+        {
+          "code": "ORC-23",
+          "display": "Ordering Facility Phone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.requester(PractitionerRole.organization(Organization.telecom))"
+            }
+          ]
+        },
+        {
+          "code": "ORC-24",
+          "display": "Ordering Provider Address",
+          "target": [
+            {
+              "comment": "We request feedback on whether this address is more directly related to the Practitioner rather than the PractitionerRole",
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.requester(PractitionerRole.practitioner(Practititoner.address))"
+            }
+          ]
+        },
+        {
+          "code": "ORC-29",
+          "display": "Order Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.locationCode"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

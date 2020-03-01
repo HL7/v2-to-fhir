@@ -1,0 +1,380 @@
+﻿<html>
+<head>
+  <title>ImplementationGuide-mHealthADE-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:ImplementationGuide;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;mHealthADE&quot;];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;HL7Version2toFHIR&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://hl7.org/fhir/v2-tofhir/ImplementationGuide/mHealthADE&lt;/pre&gt;&lt;div&gt;&lt;p&gt;asdf&lt;/p&gt;\n&lt;/div&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.url">fhir:ImplementationGuide.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/v2-tofhir/ImplementationGuide/mHealthADE&quot;];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.version">fhir:ImplementationGuide.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.1.0&quot;];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.name">fhir:ImplementationGuide.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HL7Version2toFHIR&quot;];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.title">fhir:ImplementationGuide.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HL7 Version 2 to FHIR&quot;];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.status">fhir:ImplementationGuide.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">fhir:ImplementationGuide.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2020-03-01T01:24:24-05:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.publisher">fhir:ImplementationGuide.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HL7 International&quot;];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.contact">fhir:ImplementationGuide.contact</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:ContactDetail.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HL7 Orders and Observations Workgroup&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;email&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;https://confluence.hl7.org/display/OO/v2-to-FHIR+IG&quot; ]     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:ContactDetail.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Keith W. Boone&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;email&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;kboone@ainq.com&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.description">fhir:ImplementationGuide.description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;asdf&quot;];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.packageId">fhir:ImplementationGuide.packageId</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;mHealthADE&quot;];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.license">fhir:ImplementationGuide.license</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;CC0-1.0&quot;];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.fhirVersion">fhir:ImplementationGuide.fhirVersion</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;4.0.1&quot;;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
+  ];
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition">fhir:ImplementationGuide.definition</a> [
+     <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;copyrightyear&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;2020+&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;releaselabel&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;CI Build&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;show-inherited-invariants&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;false&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;path-qa&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;temp/qa&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;path-temp&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;temp/pages&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;path-output&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;output&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 6;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;path-suppressed-warnings&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;input/ignoreWarnings.txt&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 7;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;template-html&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;template-page.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 8;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;template-md&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;template-page-md.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 9;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;apply-contact&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;true&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 10;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;apply-context&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;true&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 11;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;apply-copyright&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;true&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 12;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;apply-jurisdiction&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;true&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 13;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;apply-license&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;true&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 14;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;apply-publisher&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;true&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 15;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;apply-version&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;true&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 16;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;code&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;active-tables&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;value&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;true&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">fhir:ImplementationGuide.definition.resource</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;ConceptMap-MessageFHIRR4.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:ImplementationGuide.definition.resource.reference</a> [
+         <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap/MessageFHIRR4&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:ImplementationGuide.definition.resource.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Message FHIR R4 Map&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">fhir:ImplementationGuide.definition.resource.exampleBoolean</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;ConceptMap-a.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:ImplementationGuide.definition.resource.reference</a> [
+         <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap/a&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:ImplementationGuide.definition.resource.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Segment AL1 Map&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">fhir:ImplementationGuide.definition.resource.exampleBoolean</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;ConceptMap-conceptmap-dg1-to-.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:ImplementationGuide.definition.resource.reference</a> [
+         <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap/conceptmap-dg1-to-&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:ImplementationGuide.definition.resource.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Segment DG1 Map&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">fhir:ImplementationGuide.definition.resource.exampleBoolean</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;ConceptMap-conceptmap-orc-to-servicerequest.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:ImplementationGuide.definition.resource.reference</a> [
+         <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap/conceptmap-orc-to-servicerequest&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:ImplementationGuide.definition.resource.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Segment ORC[ServiceRequest] Map&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">fhir:ImplementationGuide.definition.resource.exampleBoolean</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;ConceptMap-conceptmap-pd1-to-.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:ImplementationGuide.definition.resource.reference</a> [
+         <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap/conceptmap-pd1-to-&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:ImplementationGuide.definition.resource.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Segment PD1 Map&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">fhir:ImplementationGuide.definition.resource.exampleBoolean</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;ConceptMap-conceptmap-spm-specimen-to-.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:ImplementationGuide.definition.resource.reference</a> [
+         <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ConceptMap/conceptmap-spm-specimen-to-&quot; ]       ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:ImplementationGuide.definition.resource.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Segment FHIR R4 Map&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">fhir:ImplementationGuide.definition.resource.exampleBoolean</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ];
+     <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page">fhir:ImplementationGuide.definition.page</a> [
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;toc.html&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Table of Contents&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;html&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">fhir:ImplementationGuide.definition.page.page</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;index.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Home&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;acknowledgements.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Acknowledgements&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;codingsystemmaps.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Codingsystemmaps&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;datatypemaps.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Datatypemaps&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;glossary.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Glossary&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;implementationconsiderations.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Implementationconsiderations&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 6;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;mappingguidelines.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Mappingguidelines&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 7;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;messagemaps.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Messagemaps&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 8;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;overview.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Overview&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 9;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;profiles.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Profiles&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 10;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;segmentmaps.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Segmentmaps&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 11;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;testconversions.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Testconversions&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 12;
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">fhir:ImplementationGuide.definition.page.nameUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;validation.html&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:ImplementationGuide.definition.page.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Validation&quot; ];
+         <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:ImplementationGuide.definition.page.generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;markdown&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter">fhir:ImplementationGuide.definition.parameter</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.code">fhir:ImplementationGuide.definition.parameter.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;path-resource&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.value">fhir:ImplementationGuide.definition.parameter.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;input/capabilities&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.code">fhir:ImplementationGuide.definition.parameter.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;path-resource&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.value">fhir:ImplementationGuide.definition.parameter.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;input/examples&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.code">fhir:ImplementationGuide.definition.parameter.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;path-resource&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.value">fhir:ImplementationGuide.definition.parameter.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;input/extensions&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.code">fhir:ImplementationGuide.definition.parameter.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;path-resource&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.value">fhir:ImplementationGuide.definition.parameter.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;input/models&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.code">fhir:ImplementationGuide.definition.parameter.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;path-resource&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.value">fhir:ImplementationGuide.definition.parameter.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;input/operations&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.code">fhir:ImplementationGuide.definition.parameter.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;path-resource&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.value">fhir:ImplementationGuide.definition.parameter.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;input/profiles&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 6;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.code">fhir:ImplementationGuide.definition.parameter.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;path-resource&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.value">fhir:ImplementationGuide.definition.parameter.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;input/resources&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 7;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.code">fhir:ImplementationGuide.definition.parameter.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;path-resource&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.value">fhir:ImplementationGuide.definition.parameter.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;input/vocabulary&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 8;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.code">fhir:ImplementationGuide.definition.parameter.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;path-pages&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.value">fhir:ImplementationGuide.definition.parameter.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;template/config&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 9;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.code">fhir:ImplementationGuide.definition.parameter.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;path-pages&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.value">fhir:ImplementationGuide.definition.parameter.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;input/images&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 10;
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.code">fhir:ImplementationGuide.definition.parameter.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;path-tx-cache&quot; ];
+       <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.parameter.value">fhir:ImplementationGuide.definition.parameter.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;input-cache/txcache&quot; ]     ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+</body>
+</html>

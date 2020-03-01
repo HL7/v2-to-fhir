@@ -1,0 +1,173 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-nk1-patient-to-patient",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 NK1!Patient Segment to the FHIR Patient Resource representing that segment.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "Segment_NK1!Patient_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "https://www.hl7.org/v2",
+  "targetUri": "https://www.hl7.org/fhir",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "NK1-2",
+          "display": "Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.name"
+            }
+          ]
+        },
+        {
+          "code": "NK1-4",
+          "display": "Address",
+          "target": [
+            {
+              "comment": "Note the decreased cardinality for the FHIR map",
+              "equivalence": "equivalent",
+              "code": "Patient.contact.address"
+            }
+          ]
+        },
+        {
+          "code": "NK1-5",
+          "display": "Phone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.telecom[1]"
+            }
+          ]
+        },
+        {
+          "code": "NK1-6",
+          "display": "Business Phone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.telecom[2]"
+            }
+          ]
+        },
+        {
+          "code": "NK1-7",
+          "display": "Contact Role",
+          "target": [
+            {
+              "comment": "Should we update the names in the base FHIR standard as the names and value sets are confusing?  It's normative, so has to have a very strong case.",
+              "equivalence": "equivalent",
+              "code": "Patient.contact.relationship"
+            }
+          ]
+        },
+        {
+          "code": "NK1-8",
+          "display": "Start Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.period.start"
+            }
+          ]
+        },
+        {
+          "code": "NK1-9",
+          "display": "End Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.period.end"
+            }
+          ]
+        },
+        {
+          "code": "NK1-13",
+          "display": "Organization Name - NK1",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.organization[1](Organization)"
+            }
+          ]
+        },
+        {
+          "code": "NK1-15",
+          "display": "Administrative Sex",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.gender"
+            }
+          ]
+        },
+        {
+          "code": "NK1-30",
+          "display": "Contact Person's Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.organization[1](Organization.contact.name)"
+            }
+          ]
+        },
+        {
+          "code": "NK1-31",
+          "display": "Contact Person's Telephone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.organization[1](Organization.contact.telecom)"
+            }
+          ]
+        },
+        {
+          "code": "NK1-32",
+          "display": "Contact Person's Address",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.organization[1](Organization.contact.address)"
+            }
+          ]
+        },
+        {
+          "code": "NK1-40",
+          "display": "Next of Kin Telecommunication Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.telecom[3]"
+            }
+          ]
+        },
+        {
+          "code": "NK1-41",
+          "display": "Contact Person's Telecommunication Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.contact.telecom[4]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

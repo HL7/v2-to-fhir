@@ -1,0 +1,194 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "conceptmap-v2-0085-to-observation-status",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ConceptMap_v2-0085_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from <a href=\"http://hl7.org/fhir/R4/v2/0085/index.html\">http://terminology.hl7.org/CodeSystem/v2-0085</a> to <a href=\"http://hl7.org/fhir/R4/codesystem-observation-status.html\">http://hl7.org/fhir/observation-status</a></p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 Table v2-0085 to the FHIR Observation Status Value Set.</p>\n</div><br/><table class=\"grid\"><tr><td colspan=\"1\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"1\"><b>Destination Concept Details</b></td></tr><tr><td><b>Code</b> from </td><td/><td><b>Code</b> from </td></tr><tr><td>A</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ammended</td></tr><tr><td>C</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>corrected</td></tr><tr><td>D</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>entered-in-error</td></tr><tr><td>F</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>final</td></tr><tr><td>P</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>preliminary</td></tr><tr><td>S</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>preliminary</td></tr><tr><td>W</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>entered-in-error</td></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "0.1.0",
+  "name": "ConceptMap_v2-0085_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01T00:00:00-05:00",
+  "publisher": "HL7 International",
+  "contact": [
+    {
+      "name": "HL7 Orders and Observations Workgroup",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table v2-0085 to the FHIR Observation Status Value Set.",
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "http://terminology.hl7.org/CodeSystem/v2-0085",
+  "targetUri": "http://hl7.org/fhir/observation-status",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "A",
+          "display": "Amended ",
+          "target": [
+            {
+              "code": "ammended",
+              "display": "Ammended",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "display": "Appended ",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "display": "Correction ",
+          "target": [
+            {
+              "code": "corrected",
+              "display": "Corrected",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "D",
+          "display": "Deleted",
+          "target": [
+            {
+              "code": "entered-in-error",
+              "display": "Entered in Error",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "F",
+          "display": "Final",
+          "target": [
+            {
+              "code": "final",
+              "display": "Final",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "I",
+          "display": "In Process",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "Not Asked",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "O",
+          "display": "Order Detail",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "P",
+          "display": "Preliminary",
+          "target": [
+            {
+              "code": "preliminary",
+              "display": "Preliminary",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "R",
+          "display": "Entered - Not Verified",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "display": "Partial",
+          "target": [
+            {
+              "code": "preliminary",
+              "display": "Preliminary",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "V",
+          "display": "Verified",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "X",
+          "display": "Cannot be Obtained",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "Status Change to Final Without Retransmission",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "W",
+          "display": "Original Posted as Wrong",
+          "target": [
+            {
+              "code": "entered-in-error",
+              "display": "Entered in Error",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

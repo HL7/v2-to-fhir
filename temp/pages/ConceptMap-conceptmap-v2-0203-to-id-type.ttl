@@ -1,0 +1,1135 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0203-to-id-type> a fhir:ConceptMap;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "conceptmap-v2-0203-to-id-type"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ConceptMap_v2-0203_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from <a href=\"http://hl7.org/fhir/R4/v2/0203/index.html\">http://terminology.hl7.org/CodeSystem/v2-0203</a> to <a href=\"http://hl7.org/fhir/R4/v2/0203/index.html\">http://terminology.hl7.org/CodeSystem/v2-0203</a></p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 Table v2-0203 to the FHIR ID Type Value Set.</p>\n</div><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td></tr><tr><td>ACSN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ACSN</td></tr><tr><td>AM</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>AM</td></tr><tr><td>AMA</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>AMA</td></tr><tr><td>AN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>AN</td></tr><tr><td>ANON</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ANON</td></tr><tr><td>ANC</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ANC</td></tr><tr><td>AND</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>AND</td></tr><tr><td>ANT</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ANT</td></tr><tr><td>APRN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>APRN</td></tr><tr><td>ASID</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ASID</td></tr><tr><td>BA</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>BA</td></tr><tr><td>BC</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>BC</td></tr><tr><td>BCT</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>BCT</td></tr><tr><td>BR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>BR</td></tr><tr><td>BRN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>BRN</td></tr><tr><td>BSNR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>BSNR</td></tr><tr><td>CC</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>CC</td></tr><tr><td>CONM</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>CONM</td></tr><tr><td>CZ</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>CZ</td></tr><tr><td>CY</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>CY</td></tr><tr><td>DDS</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DDS</td></tr><tr><td>DEA</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DEA</td></tr><tr><td>DI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DI</td></tr><tr><td>DFN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DFN</td></tr><tr><td>DL</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DL</td></tr><tr><td>DN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DN</td></tr><tr><td>DO</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DO</td></tr><tr><td>DP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DP</td></tr><tr><td>DPM</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DPM</td></tr><tr><td>DR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DR</td></tr><tr><td>DS</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>DS</td></tr><tr><td>EI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>EI</td></tr><tr><td>EN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>EN</td></tr><tr><td>ESN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>ESN</td></tr><tr><td>FI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>FI</td></tr><tr><td>GI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>GI</td></tr><tr><td>GL</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>GL</td></tr><tr><td>GN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>GN</td></tr><tr><td>HC</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>HC</td></tr><tr><td>JHN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>JHN</td></tr><tr><td>IND</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>IND</td></tr><tr><td>LACSN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>LACSN</td></tr><tr><td>LANR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>LANR</td></tr><tr><td>LI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>LI</td></tr><tr><td>LN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>LN</td></tr><tr><td>LR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>LR</td></tr><tr><td>MA</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MA</td></tr><tr><td>MB</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MB</td></tr><tr><td>MC</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MC</td></tr><tr><td>MCD</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MCD</td></tr><tr><td>MCN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MCN</td></tr><tr><td>MCR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MCR</td></tr><tr><td>MCT</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MCT</td></tr><tr><td>MD</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MD</td></tr><tr><td>MI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MI</td></tr><tr><td>MR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MR</td></tr><tr><td>MRT</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MRT</td></tr><tr><td>MS</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>MS</td></tr><tr><td>NBSNR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NBSNR</td></tr><tr><td>NCT</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NCT</td></tr><tr><td>NE</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NE</td></tr><tr><td>NH</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NH</td></tr><tr><td>NI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NI</td></tr><tr><td>NII</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NII</td></tr><tr><td>NIIP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NIIP</td></tr><tr><td>NNxxx</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NNxxx</td></tr><tr><td>NP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NP</td></tr><tr><td>NPI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>NPI</td></tr><tr><td>OD</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>OD</td></tr><tr><td>PA</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PA</td></tr><tr><td>PC</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PC</td></tr><tr><td>PCN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PCN</td></tr><tr><td>PE</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PE</td></tr><tr><td>PEN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PEN</td></tr><tr><td>PI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PI</td></tr><tr><td>PN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PN</td></tr><tr><td>PNT</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PNT</td></tr><tr><td>PPIN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PPIN</td></tr><tr><td>PPN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PPN</td></tr><tr><td>PRC</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PRC</td></tr><tr><td>PRN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PRN</td></tr><tr><td>PT</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>PT</td></tr><tr><td>QA</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>QA</td></tr><tr><td>RI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>RI</td></tr><tr><td>RPH</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>RPH</td></tr><tr><td>RN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>RN</td></tr><tr><td>RR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>RR</td></tr><tr><td>RRI</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>RRI</td></tr><tr><td>RRP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>RRP</td></tr><tr><td>SID</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>SID</td></tr><tr><td>SL</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>SL</td></tr><tr><td>SN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>SN</td></tr><tr><td>SP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>SP</td></tr><tr><td>SR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>SR</td></tr><tr><td>SS</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>SS</td></tr><tr><td>TAX</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>TAX</td></tr><tr><td>TN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>TN</td></tr><tr><td>TPR</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>TPR</td></tr><tr><td>U</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>U</td></tr><tr><td>UPIN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>UPIN</td></tr><tr><td>USID</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>USID</td></tr><tr><td>VN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>VN</td></tr><tr><td>VP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>VP</td></tr><tr><td>VS</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>VS</td></tr><tr><td>WC</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>WC</td></tr><tr><td>WCN</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>WCN</td></tr><tr><td>WP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>WP</td></tr><tr><td>XX</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>XX</td></tr></table></div>"
+  ];
+  fhir:ConceptMap.url [ fhir:value "http://hl7.org/fhir/v2-tofhir"];
+  fhir:ConceptMap.version [ fhir:value "0.1.0"];
+  fhir:ConceptMap.name [ fhir:value "ConceptMap_v2-0203_Map"];
+  fhir:ConceptMap.status [ fhir:value "active"];
+  fhir:ConceptMap.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ConceptMap.date [ fhir:value "2020-03-01T00:00:00-05:00"^^xsd:dateTime];
+  fhir:ConceptMap.publisher [ fhir:value "HL7 International"];
+  fhir:ConceptMap.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 Orders and Observations Workgroup" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:ContactDetail.name [ fhir:value "Keith W. Boone" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "kboone@ainq.com" ]
+     ]
+  ];
+  fhir:ConceptMap.description [ fhir:value "This ConceptMap represents the mapping from the HL7 V2 Table v2-0203 to the FHIR ID Type Value Set."];
+  fhir:ConceptMap.copyright [ fhir:value "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."];
+  fhir:ConceptMap.sourceUri [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203"];
+  fhir:ConceptMap.targetUri [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203"];
+  fhir:ConceptMap.group [
+     fhir:index 0;
+     fhir:ConceptMap.group.element [
+       fhir:index 0;
+       fhir:ConceptMap.group.element.code [ fhir:value "ACSN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Accession ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ACSN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Accession ID" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ConceptMap.group.element.code [ fhir:value "AM" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "American Express" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AM" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "American Express" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ConceptMap.group.element.code [ fhir:value "AMA" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "American Medical Association Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AMA" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "American Medical Association Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ConceptMap.group.element.code [ fhir:value "AN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Account number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Account number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:ConceptMap.group.element.code [ fhir:value "ANON" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Anonymous identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ANON" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Anonymous identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ConceptMap.group.element.code [ fhir:value "ANC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Account number Creditor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ANC" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Account number Creditor" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ConceptMap.group.element.code [ fhir:value "AND" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Account number debitor" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AND" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Account number debitor" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:ConceptMap.group.element.code [ fhir:value "ANT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Temporary Account Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ANT" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Temporary Account Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:ConceptMap.group.element.code [ fhir:value "APRN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Advanced Practice Registered Nurse number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "APRN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Advanced Practice Registered Nurse number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:ConceptMap.group.element.code [ fhir:value "ASID" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Ancestor Specimen ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ASID" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Ancestor Specimen ID" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:ConceptMap.group.element.code [ fhir:value "BA" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Bank Account Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "BA" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Bank Account Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:ConceptMap.group.element.code [ fhir:value "BC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Bank Card Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "BC" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Bank Card Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:ConceptMap.group.element.code [ fhir:value "BCT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Birth Certificate" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "BCT" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Birth Certificate" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:ConceptMap.group.element.code [ fhir:value "BR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Birth registry number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "BR" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Birth registry number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:ConceptMap.group.element.code [ fhir:value "BRN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Breed Registry Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "BRN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Breed Registry Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:ConceptMap.group.element.code [ fhir:value "BSNR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Primary physician office number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "BSNR" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Primary physician office number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:ConceptMap.group.element.code [ fhir:value "CC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Cost Center number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "CC" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Cost Center number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:ConceptMap.group.element.code [ fhir:value "CONM" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Change of Name Document" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "CONM" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Change of Name Document" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:ConceptMap.group.element.code [ fhir:value "CZ" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Citizenship Card" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "CZ" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Citizenship Card" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:ConceptMap.group.element.code [ fhir:value "CY" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "County number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "CY" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "County number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:ConceptMap.group.element.code [ fhir:value "DDS" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Dentist license number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DDS" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Dentist license number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:ConceptMap.group.element.code [ fhir:value "DEA" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Drug Enforcement Administration registration number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DEA" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Drug Enforcement Administration registration number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:ConceptMap.group.element.code [ fhir:value "DI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Diner’s Club card" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Diner’s Club card" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:ConceptMap.group.element.code [ fhir:value "DFN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Drug Furnishing or prescriptive authority Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DFN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Drug Furnishing or prescriptive authority Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:ConceptMap.group.element.code [ fhir:value "DL" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Driver’s license number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DL" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Driver’s license number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:ConceptMap.group.element.code [ fhir:value "DN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Doctor number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Doctor number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 26;
+       fhir:ConceptMap.group.element.code [ fhir:value "DO" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Osteopathic License number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DO" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Osteopathic License number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:ConceptMap.group.element.code [ fhir:value "DP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Diplomatic Passport" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DP" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Diplomatic Passport" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:ConceptMap.group.element.code [ fhir:value "DPM" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Podiatrist license number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DPM" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Podiatrist license number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 29;
+       fhir:ConceptMap.group.element.code [ fhir:value "DR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Donor Registration Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DR" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Donor Registration Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 30;
+       fhir:ConceptMap.group.element.code [ fhir:value "DS" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Discover Card" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "DS" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Discover Card" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 31;
+       fhir:ConceptMap.group.element.code [ fhir:value "EI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Employee number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "EI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Employee number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 32;
+       fhir:ConceptMap.group.element.code [ fhir:value "EN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Employer number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "EN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Employer number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 33;
+       fhir:ConceptMap.group.element.code [ fhir:value "ESN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Staff Enterprise Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ESN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Staff Enterprise Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 34;
+       fhir:ConceptMap.group.element.code [ fhir:value "FI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Facility ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Facility ID" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 35;
+       fhir:ConceptMap.group.element.code [ fhir:value "GI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Guarantor internal identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "GI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Guarantor internal identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 36;
+       fhir:ConceptMap.group.element.code [ fhir:value "GL" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "General ledger number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "GL" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "General ledger number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 37;
+       fhir:ConceptMap.group.element.code [ fhir:value "GN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Guarantor external identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "GN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Guarantor external identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 38;
+       fhir:ConceptMap.group.element.code [ fhir:value "HC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Health Card Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "HC" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Health Card Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 39;
+       fhir:ConceptMap.group.element.code [ fhir:value "JHN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Jurisdictional health number (Canada)" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "JHN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Jurisdictional health number (Canada)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 40;
+       fhir:ConceptMap.group.element.code [ fhir:value "IND" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Indigenous/Aboriginal" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "IND" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Indigenous/Aboriginal" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 41;
+       fhir:ConceptMap.group.element.code [ fhir:value "LACSN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Laboratory Accession ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LACSN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Laboratory Accession ID" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 42;
+       fhir:ConceptMap.group.element.code [ fhir:value "LANR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Lifelong physician number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LANR" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Lifelong physician number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 43;
+       fhir:ConceptMap.group.element.code [ fhir:value "LI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Labor and industries number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Labor and industries number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 44;
+       fhir:ConceptMap.group.element.code [ fhir:value "LN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "License number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "License number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 45;
+       fhir:ConceptMap.group.element.code [ fhir:value "LR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Local Registry ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "LR" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Local Registry ID" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 46;
+       fhir:ConceptMap.group.element.code [ fhir:value "MA" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient Medicaid number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MA" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Patient Medicaid number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 47;
+       fhir:ConceptMap.group.element.code [ fhir:value "MB" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Member Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MB" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Member Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 48;
+       fhir:ConceptMap.group.element.code [ fhir:value "MC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient’s Medicare number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MC" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Patient’s Medicare number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 49;
+       fhir:ConceptMap.group.element.code [ fhir:value "MCD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Practitioner Medicaid number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MCD" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Practitioner Medicaid number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 50;
+       fhir:ConceptMap.group.element.code [ fhir:value "MCN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Microchip Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MCN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Microchip Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 51;
+       fhir:ConceptMap.group.element.code [ fhir:value "MCR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Practitioner Medicare number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MCR" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Practitioner Medicare number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 52;
+       fhir:ConceptMap.group.element.code [ fhir:value "MCT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Marriage Certificate" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MCT" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Marriage Certificate" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 53;
+       fhir:ConceptMap.group.element.code [ fhir:value "MD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Medical License number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MD" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Medical License number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 54;
+       fhir:ConceptMap.group.element.code [ fhir:value "MI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Military ID number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Military ID number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 55;
+       fhir:ConceptMap.group.element.code [ fhir:value "MR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Medical record number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MR" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Medical record number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 56;
+       fhir:ConceptMap.group.element.code [ fhir:value "MRT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Temporary Medical Record Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MRT" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Temporary Medical Record Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 57;
+       fhir:ConceptMap.group.element.code [ fhir:value "MS" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "MasterCard" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "MS" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "MasterCard" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 58;
+       fhir:ConceptMap.group.element.code [ fhir:value "NBSNR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Secondary physician office number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "NBSNR" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Secondary physician office number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 59;
+       fhir:ConceptMap.group.element.code [ fhir:value "NCT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Naturalization Certificate" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "NCT" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Naturalization Certificate" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 60;
+       fhir:ConceptMap.group.element.code [ fhir:value "NE" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "National employer identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "NE" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "National employer identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 61;
+       fhir:ConceptMap.group.element.code [ fhir:value "NH" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "National Health Plan Identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "NH" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "National Health Plan Identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 62;
+       fhir:ConceptMap.group.element.code [ fhir:value "NI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "National unique individual identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "NI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "National unique individual identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 63;
+       fhir:ConceptMap.group.element.code [ fhir:value "NII" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "National Insurance Organization Identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "NII" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "National Insurance Organization Identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 64;
+       fhir:ConceptMap.group.element.code [ fhir:value "NIIP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "National Insurance Payor Identifier (Payor)" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "NIIP" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "National Insurance Payor Identifier (Payor)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 65;
+       fhir:ConceptMap.group.element.code [ fhir:value "NNxxx" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "NNxxx" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 66;
+       fhir:ConceptMap.group.element.code [ fhir:value "NP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Nurse practitioner number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "NP" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Nurse practitioner number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 67;
+       fhir:ConceptMap.group.element.code [ fhir:value "NPI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "National provider identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "NPI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "National provider identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 68;
+       fhir:ConceptMap.group.element.code [ fhir:value "OD" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Optometrist license number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "OD" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Optometrist license number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 69;
+       fhir:ConceptMap.group.element.code [ fhir:value "PA" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Physician Assistant number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PA" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Physician Assistant number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 70;
+       fhir:ConceptMap.group.element.code [ fhir:value "PC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Parole Card" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PC" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Parole Card" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 71;
+       fhir:ConceptMap.group.element.code [ fhir:value "PCN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Penitentiary/correctional institution Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PCN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Penitentiary/correctional institution Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 72;
+       fhir:ConceptMap.group.element.code [ fhir:value "PE" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Living Subject Enterprise Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PE" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Living Subject Enterprise Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 73;
+       fhir:ConceptMap.group.element.code [ fhir:value "PEN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Pension Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PEN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Pension Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 74;
+       fhir:ConceptMap.group.element.code [ fhir:value "PI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient internal identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Patient internal identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 75;
+       fhir:ConceptMap.group.element.code [ fhir:value "PN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Person number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Person number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 76;
+       fhir:ConceptMap.group.element.code [ fhir:value "PNT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Temporary Living Subject Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PNT" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Temporary Living Subject Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 77;
+       fhir:ConceptMap.group.element.code [ fhir:value "PPIN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Medicare/CMS Performing Provider Identification Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PPIN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Medicare/CMS Performing Provider Identification Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 78;
+       fhir:ConceptMap.group.element.code [ fhir:value "PPN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Passport number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PPN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Passport number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 79;
+       fhir:ConceptMap.group.element.code [ fhir:value "PRC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Permanent Resident Card Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PRC" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Permanent Resident Card Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 80;
+       fhir:ConceptMap.group.element.code [ fhir:value "PRN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Provider number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PRN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Provider number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 81;
+       fhir:ConceptMap.group.element.code [ fhir:value "PT" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Patient external identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PT" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Patient external identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 82;
+       fhir:ConceptMap.group.element.code [ fhir:value "QA" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "QA number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "QA" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "QA number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 83;
+       fhir:ConceptMap.group.element.code [ fhir:value "RI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Resource identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Resource identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 84;
+       fhir:ConceptMap.group.element.code [ fhir:value "RPH" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Pharmacist license number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RPH" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Pharmacist license number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 85;
+       fhir:ConceptMap.group.element.code [ fhir:value "RN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Registered Nurse Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Registered Nurse Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 86;
+       fhir:ConceptMap.group.element.code [ fhir:value "RR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Railroad Retirement number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RR" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Railroad Retirement number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 87;
+       fhir:ConceptMap.group.element.code [ fhir:value "RRI" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Regional registry ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RRI" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Regional registry ID" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 88;
+       fhir:ConceptMap.group.element.code [ fhir:value "RRP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Railroad Retirement Provider" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RRP" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Railroad Retirement Provider" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 89;
+       fhir:ConceptMap.group.element.code [ fhir:value "SID" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Specimen ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "SID" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Specimen ID" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 90;
+       fhir:ConceptMap.group.element.code [ fhir:value "SL" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "State license" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "SL" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "State license" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 91;
+       fhir:ConceptMap.group.element.code [ fhir:value "SN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Subscriber Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "SN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Subscriber Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 92;
+       fhir:ConceptMap.group.element.code [ fhir:value "SP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Study Permit" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "SP" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Study Permit" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 93;
+       fhir:ConceptMap.group.element.code [ fhir:value "SR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "State registry ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "SR" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "State registry ID" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 94;
+       fhir:ConceptMap.group.element.code [ fhir:value "SS" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Social Security number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "SS" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Social Security number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 95;
+       fhir:ConceptMap.group.element.code [ fhir:value "TAX" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Tax ID number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "TAX" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Tax ID number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 96;
+       fhir:ConceptMap.group.element.code [ fhir:value "TN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Treaty Number/ (Canada)" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "TN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Treaty Number/ (Canada)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 97;
+       fhir:ConceptMap.group.element.code [ fhir:value "TPR" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Temporary Permanent Resident (Canada)" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "TPR" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Temporary Permanent Resident (Canada)" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 98;
+       fhir:ConceptMap.group.element.code [ fhir:value "U" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Unspecified identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "U" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Unspecified identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 99;
+       fhir:ConceptMap.group.element.code [ fhir:value "UPIN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Medicare/CMS (formerly HCFA)’s Universal Physician Identification numbers" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "UPIN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Medicare/CMS (formerly HCFA)’s Universal Physician Identification numbers" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 100;
+       fhir:ConceptMap.group.element.code [ fhir:value "USID" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Unique Specimen ID" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "USID" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Unique Specimen ID" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 101;
+       fhir:ConceptMap.group.element.code [ fhir:value "VN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Visit number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "VN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Visit number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 102;
+       fhir:ConceptMap.group.element.code [ fhir:value "VP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Visitor Permit" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "VP" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Visitor Permit" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 103;
+       fhir:ConceptMap.group.element.code [ fhir:value "VS" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "VISA" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "VS" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "VISA" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 104;
+       fhir:ConceptMap.group.element.code [ fhir:value "WC" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "WIC identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "WC" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "WIC identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 105;
+       fhir:ConceptMap.group.element.code [ fhir:value "WCN" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Workers’ Comp Number" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "WCN" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Workers’ Comp Number" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 106;
+       fhir:ConceptMap.group.element.code [ fhir:value "WP" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Work Permit" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "WP" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Work Permit" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 107;
+       fhir:ConceptMap.group.element.code [ fhir:value "XX" ];
+       fhir:ConceptMap.group.element.display [ fhir:value "Organization identifier" ];
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "XX" ];
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Organization identifier" ];
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/v2-tofhir/ConceptMap/conceptmap-v2-0203-to-id-type.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/v2-tofhir/ConceptMap/conceptmap-v2-0203-to-id-type.ttl> .
+
+# -------------------------------------------------------------------------------------
+

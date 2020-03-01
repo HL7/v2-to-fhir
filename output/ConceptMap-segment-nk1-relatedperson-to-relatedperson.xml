@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="segment-nk1-relatedperson-to-relatedperson"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Segment_NK1!RelatedPerson_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href="mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href="mailto:kboone@ainq.com">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 NK1!RelatedPerson Segment to the FHIR RelatedPerson Resource representing that segment.</p>
+</div><br/><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td><td><b>Comment</b></td></tr><tr><td>NK1-2</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.name</td><td/></tr><tr><td>NK1-3</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.relationship</td><td>Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.
+See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPersonfor further discussion</td></tr><tr><td>NK1-4</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.address[1]</td><td/></tr><tr><td>NK1-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.telecom[1]</td><td>ContactPoint.use would likely be &quot;home&quot; or &quot;mobile&quot;, but picked up from XTN.2</td></tr><tr><td>NK1-6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.telecom[2]</td><td/></tr><tr><td>NK1-6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.telecom[2].use</td><td/></tr><tr><td>NK1-7</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.relationship[2]</td><td>Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.
+RelatedPerson.relationship is allowed to repeat and so can accept values from both NK1-3 and NK1-7
+See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPerson for further discussion</td></tr><tr><td>NK1-8</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.period.start</td><td/></tr><tr><td>NK1-9</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.period.end</td><td/></tr><tr><td>NK1-12</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.identifier</td><td/></tr><tr><td>NK1-15</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.gender</td><td/></tr><tr><td>NK1-16</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.birthDate</td><td/></tr><tr><td>NK1-20</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.communication.language</td><td/></tr><tr><td>NK1-30</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.name</td><td>Do we need a way in RelatedPerson to distinguish between a &quot;next of kin&quot; and a &quot;contact Person&quot;?</td></tr><tr><td>NK1-31</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.telecom[3]</td><td/></tr><tr><td>NK1-32</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.address[2]</td><td/></tr><tr><td>NK1-33</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.identifier</td><td/></tr><tr><td>NK1-37</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.identifier</td><td/></tr><tr><td>NK1-40</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.telecom[4]</td><td/></tr><tr><td>NK1-41</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>RelatedPerson.telecom[5]</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/v2-tofhir"/>
+  <version value="0.1.0"/>
+  <name value="Segment_NK1!RelatedPerson_Map"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2020-03-01T00:00:00-05:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Orders and Observations Workgroup"/>
+    <telecom>
+      <system value="email"/>
+      <value value="https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <description value="This ConceptMap represents the mapping from the HL7 V2 NK1!RelatedPerson Segment to the FHIR RelatedPerson Resource representing that segment."/>
+  <copyright value="Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."/>
+  <sourceUri value="https://www.hl7.org/v2"/>
+  <targetUri value="https://www.hl7.org/fhir"/>
+  <group>
+    <element>
+      <code value="NK1-2"/>
+      <display value="Name"/>
+      <target>
+        <code value="RelatedPerson.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-3"/>
+      <display value="Relationship"/>
+      <target>
+        <code value="RelatedPerson.relationship"/>
+        <equivalence value="equivalent"/>
+        <comment value="Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.&#xA;See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPersonfor further discussion"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-4"/>
+      <display value="Address"/>
+      <target>
+        <code value="RelatedPerson.address[1]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-5"/>
+      <display value="Phone Number"/>
+      <target>
+        <code value="RelatedPerson.telecom[1]"/>
+        <equivalence value="equivalent"/>
+        <comment value="ContactPoint.use would likely be &quot;home&quot; or &quot;mobile&quot;, but picked up from XTN.2"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-6"/>
+      <display value="Business Phone Number"/>
+      <target>
+        <code value="RelatedPerson.telecom[2]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-6"/>
+      <display value="Business Phone Number"/>
+      <target>
+        <code value="RelatedPerson.telecom[2].use"/>
+        <display value="= &quot;work&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-7"/>
+      <display value="Contact Role"/>
+      <target>
+        <code value="RelatedPerson.relationship[2]"/>
+        <equivalence value="equivalent"/>
+        <comment value="Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.&#xA;RelatedPerson.relationship is allowed to repeat and so can accept values from both NK1-3 and NK1-7&#xA;See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPerson for further discussion"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-8"/>
+      <display value="Start Date"/>
+      <target>
+        <code value="RelatedPerson.period.start"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-9"/>
+      <display value="End Date"/>
+      <target>
+        <code value="RelatedPerson.period.end"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-12"/>
+      <display value="Next of Kin / Associated Parties Employee Number"/>
+      <target>
+        <code value="RelatedPerson.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-15"/>
+      <display value="Administrative Sex"/>
+      <target>
+        <code value="RelatedPerson.gender"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-16"/>
+      <display value="Date/Time of Birth"/>
+      <target>
+        <code value="RelatedPerson.birthDate"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-20"/>
+      <display value="Primary Language"/>
+      <target>
+        <code value="RelatedPerson.communication.language"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-30"/>
+      <display value="Contact Person&#39;s Name"/>
+      <target>
+        <code value="RelatedPerson.name"/>
+        <equivalence value="equivalent"/>
+        <comment value="Do we need a way in RelatedPerson to distinguish between a &quot;next of kin&quot; and a &quot;contact Person&quot;?"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-31"/>
+      <display value="Contact Person&#39;s Telephone Number"/>
+      <target>
+        <code value="RelatedPerson.telecom[3]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-32"/>
+      <display value="Contact Person&#39;s Address"/>
+      <target>
+        <code value="RelatedPerson.address[2]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-33"/>
+      <display value="Next of Kin/Associated Party&#39;s Identifiers"/>
+      <target>
+        <code value="RelatedPerson.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-37"/>
+      <display value="Contact Person Social Security Number"/>
+      <target>
+        <code value="RelatedPerson.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-40"/>
+      <display value="Next of Kin Telecommunication Information"/>
+      <target>
+        <code value="RelatedPerson.telecom[4]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="NK1-41"/>
+      <display value="Contact Person&#39;s Telecommunication Information"/>
+      <target>
+        <code value="RelatedPerson.telecom[5]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,116 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-al1-to-allergyintolerance",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 AL1 Segment to the FHIR AllergyIntolerance Resource representing that segment.",
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "1.0",
+  "name": "Segment_AL1_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "https://www.hl7.org/v2",
+  "targetUri": "https://www.hl7.org/fhir",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "AL1-2",
+          "display": "Allergen Type Code",
+          "target": [
+            {
+              "comment": "The FHIR table has a \"required\" binding. Do we need to expand the values in the FHIR table?\n\nCould other be used for:\nMiscellaneous allergy\nMiscellaneous contraindication\nAnimal Allergy\n\nHL70127 is a user defined table",
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.category"
+            }
+          ]
+        },
+        {
+          "code": "AL1-2",
+          "display": "Allergen Type Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.type"
+            }
+          ]
+        },
+        {
+          "code": "AL1-3",
+          "display": "Allergen Code/Mnemonic/Description",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.code"
+            }
+          ]
+        },
+        {
+          "code": "AL1-4",
+          "display": "Allergy Severity Code",
+          "target": [
+            {
+              "comment": "HL70128 is a user defined table\nConsider using AllergyIntolerance.criticality",
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.reaction.severity"
+            }
+          ]
+        },
+        {
+          "code": "AL1-4",
+          "display": "Allergy Severity Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.reaction.severity.extension-data-absent-reason",
+              "display": "= \"unknown\""
+            }
+          ]
+        },
+        {
+          "code": "AL1-4",
+          "display": "Allergy Severity Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.criticality"
+            }
+          ]
+        },
+        {
+          "code": "AL1-5",
+          "display": "Allergy Reaction Code",
+          "target": [
+            {
+              "comment": "AllergyIntolerance.reaction can repeat, presumably to capture both multiple manifestations of the reaction (rash and nausea) as well as reactions to independent exposures (last week and last month) - we may want to confirm this understanding.\n\n\n\n",
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.reaction.manifestation.text"
+            }
+          ]
+        },
+        {
+          "code": "AL1-6",
+          "display": "Identification Date",
+          "target": [
+            {
+              "comment": "Withdrawn as of 2.7, Refer to IAM-11 Onset or IAM-13 Reported Date",
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance.onsetDateTime"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

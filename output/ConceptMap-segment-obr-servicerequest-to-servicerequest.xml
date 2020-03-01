@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="segment-obr-servicerequest-to-servicerequest"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Segment_OBR!ServiceRequest_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir</p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href="mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href="mailto:kboone@ainq.com">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 OBR!ServiceRequest Segment to the FHIR ServiceRequest Resource representing that segment.</p>
+</div><br/><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Destination Code</b></td></tr><tr><td>OBR-2</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.identifier</td></tr><tr><td>OBR-2</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.identifier.type.coding.code</td></tr><tr><td>OBR-2</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.identifier.type.coding.system</td></tr><tr><td>OBR-3</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.identifier</td></tr><tr><td>OBR-3</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.identifier.type.coding.code</td></tr><tr><td>OBR-3</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.identifier.type.coding.system</td></tr><tr><td>OBR-4</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.code</td></tr><tr><td>OBR-5</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.priority</td></tr><tr><td>OBR-6</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.occurrenceDateTime</td></tr><tr><td>OBR-9</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.specimen[1](Specimen.collection.quantity)</td></tr><tr><td>OBR-10</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.specimen[1](Specimen.collection.collector(Practitioner))</td></tr><tr><td>OBR-11</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.intent</td></tr><tr><td>OBR-11</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.intent</td></tr><tr><td>OBR-14</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.specimen[1](Specimen.receivedTime)</td></tr><tr><td>OBR-15</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.specimen[1](Specimen)</td></tr><tr><td>OBR-16</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.requester(Practitioner)</td></tr><tr><td>OBR-27</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.quantity</td></tr><tr><td>OBR-29</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.basedOn.identifier</td></tr><tr><td>OBR-29</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.basedOn.type</td></tr><tr><td>OBR-29</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.basedOn.identifier</td></tr><tr><td>OBR-29</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.basedOn.type</td></tr><tr><td>OBR-31</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.reasonCode</td></tr><tr><td>OBR-39</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>SpecimenRequest.specimen[1](Specimen.note)</td></tr><tr><td>OBR-46</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.orderDetail[1]??</td></tr><tr><td>OBR-47</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.orderDetail[2]??</td></tr><tr><td>OBR-53</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.identifier</td></tr><tr><td>OBR-53</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.identifier.type.coding.code</td></tr><tr><td>OBR-53</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent">is equivalent to</a></td><td>ServiceRequest.identifier.type.coding.system</td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/v2-tofhir"/>
+  <version value="0.1.0"/>
+  <name value="Segment_OBR!ServiceRequest_Map"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2020-03-01T00:00:00-05:00"/>
+  <publisher value="HL7 International"/>
+  <contact>
+    <name value="HL7 Orders and Observations Workgroup"/>
+    <telecom>
+      <system value="email"/>
+      <value value="https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Keith W. Boone"/>
+    <telecom>
+      <system value="email"/>
+      <value value="kboone@ainq.com"/>
+    </telecom>
+  </contact>
+  <description value="This ConceptMap represents the mapping from the HL7 V2 OBR!ServiceRequest Segment to the FHIR ServiceRequest Resource representing that segment."/>
+  <copyright value="Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."/>
+  <sourceUri value="https://www.hl7.org/v2"/>
+  <targetUri value="https://www.hl7.org/fhir"/>
+  <group>
+    <element>
+      <code value="OBR-2"/>
+      <display value="Placer Order Number"/>
+      <target>
+        <code value="ServiceRequest.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-2"/>
+      <display value="Placer Order Number"/>
+      <target>
+        <code value="ServiceRequest.identifier.type.coding.code"/>
+        <display value="= &quot;PLAC&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-2"/>
+      <display value="Placer Order Number"/>
+      <target>
+        <code value="ServiceRequest.identifier.type.coding.system"/>
+        <display value="= &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-3"/>
+      <display value="Filler Order Number"/>
+      <target>
+        <code value="ServiceRequest.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-3"/>
+      <display value="Filler Order Number"/>
+      <target>
+        <code value="ServiceRequest.identifier.type.coding.code"/>
+        <display value="= &quot;FILL&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-3"/>
+      <display value="Filler Order Number"/>
+      <target>
+        <code value="ServiceRequest.identifier.type.coding.system"/>
+        <display value="= &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-4"/>
+      <display value="Universal Service Identifier"/>
+      <target>
+        <code value="ServiceRequest.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-5"/>
+      <display value="Priority"/>
+      <target>
+        <code value="ServiceRequest.priority"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-6"/>
+      <display value="Requested Date/Time"/>
+      <target>
+        <code value="ServiceRequest.occurrenceDateTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-9"/>
+      <display value="Collection Volume"/>
+      <target>
+        <code value="ServiceRequest.specimen[1](Specimen.collection.quantity)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-10"/>
+      <display value="Collector Identifier"/>
+      <target>
+        <code value="ServiceRequest.specimen[1](Specimen.collection.collector(Practitioner))"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-11"/>
+      <display value="Specimen Action Code"/>
+      <target>
+        <code value="ServiceRequest.intent"/>
+        <display value="= &quot;reflex-order&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-11"/>
+      <display value="Specimen Action Code"/>
+      <target>
+        <code value="ServiceRequest.intent"/>
+        <display value="= &quot;order&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-14"/>
+      <display value="Specimen Received Date/Time *"/>
+      <target>
+        <code value="ServiceRequest.specimen[1](Specimen.receivedTime)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-15"/>
+      <display value="Specimen Source"/>
+      <target>
+        <code value="ServiceRequest.specimen[1](Specimen)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-16"/>
+      <display value="Ordering Provider"/>
+      <target>
+        <code value="ServiceRequest.requester(Practitioner)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-27"/>
+      <display value="Quantity/Timing"/>
+      <target>
+        <code value="ServiceRequest.quantity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-29"/>
+      <display value="ParentResults Observation Identifier"/>
+      <target>
+        <code value="ServiceRequest.basedOn.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-29"/>
+      <display value="ParentResults Observation Identifier"/>
+      <target>
+        <code value="ServiceRequest.basedOn.type"/>
+        <display value="= &quot;ServiceRequest&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-29"/>
+      <display value="ParentResults Observation Identifier"/>
+      <target>
+        <code value="ServiceRequest.basedOn.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-29"/>
+      <display value="ParentResults Observation Identifier"/>
+      <target>
+        <code value="ServiceRequest.basedOn.type"/>
+        <display value="= &quot;ServiceRequest&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-31"/>
+      <display value="Reason for Study"/>
+      <target>
+        <code value="ServiceRequest.reasonCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-39"/>
+      <display value="Collector&#39;s Comment *"/>
+      <target>
+        <code value="SpecimenRequest.specimen[1](Specimen.note)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-46"/>
+      <display value="Placer Supplemental Service Information"/>
+      <target>
+        <code value="ServiceRequest.orderDetail[1]??"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-47"/>
+      <display value="Filler Supplemental Service Information"/>
+      <target>
+        <code value="ServiceRequest.orderDetail[2]??"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-53"/>
+      <display value="Alternate Placer Order Number"/>
+      <target>
+        <code value="ServiceRequest.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-53"/>
+      <display value="Alternate Placer Order Number"/>
+      <target>
+        <code value="ServiceRequest.identifier.type.coding.code"/>
+        <display value="= &quot;PLAC&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="OBR-53"/>
+      <display value="Alternate Placer Order Number"/>
+      <target>
+        <code value="ServiceRequest.identifier.type.coding.system"/>
+        <display value="= &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

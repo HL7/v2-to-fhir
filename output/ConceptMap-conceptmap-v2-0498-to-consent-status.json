@@ -1,0 +1,109 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "conceptmap-v2-0498-to-consent-status",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ConceptMap_v2-0498_Map (http://hl7.org/fhir/v2-tofhir)</h2><p>Mapping from <a href=\"http://hl7.org/fhir/R4/v2/0498/index.html\">http://terminology.hl7.org/CodeSystem/v2-0498</a> to <a href=\"http://hl7.org/fhir/R4/codesystem-consent-state-codes.html\">http://hl7.org/fhir/consent-state-codes</a></p><p>ACTIVE (not intended for production usage). Published on Mar 1, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: <a href=\"mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\">https://confluence.hl7.org/display/OO/v2-to-FHIR+IG</a>, Keith W. Boone: <a href=\"mailto:kboone@ainq.com\">kboone@ainq.com</a>). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.</p><div><p>This ConceptMap represents the mapping from the HL7 V2 Table v2-0498 to the FHIR Consent Status Value Set.</p>\n</div><br/><table class=\"grid\"><tr><td colspan=\"1\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"1\"><b>Destination Concept Details</b></td></tr><tr><td><b>Code</b> from </td><td/><td><b>Code</b> from </td></tr><tr><td>A</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>active</td></tr><tr><td>L</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>active</td></tr><tr><td>R</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>rejected</td></tr><tr><td>P</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>proposed</td></tr><tr><td>X</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\">is equivalent to</a></td><td>inactive</td></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/v2-tofhir",
+  "version": "0.1.0",
+  "name": "ConceptMap_v2-0498_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-01T00:00:00-05:00",
+  "publisher": "HL7 International",
+  "contact": [
+    {
+      "name": "HL7 Orders and Observations Workgroup",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
+        }
+      ]
+    },
+    {
+      "name": "Keith W. Boone",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table v2-0498 to the FHIR Consent Status Value Set.",
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "http://terminology.hl7.org/CodeSystem/v2-0498",
+  "targetUri": "http://hl7.org/fhir/consent-state-codes",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "A",
+          "display": "Active – Consent has been granted",
+          "target": [
+            {
+              "code": "active",
+              "display": "Active",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "L",
+          "display": "Limited – Consent has been granted with limitations",
+          "target": [
+            {
+              "code": "active",
+              "display": "Active",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "R",
+          "display": "Refused – Consent has been refused",
+          "target": [
+            {
+              "code": "rejected",
+              "display": "Rejected",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "P",
+          "display": "Pending – Consent has not yet been sought",
+          "target": [
+            {
+              "code": "proposed",
+              "display": "Proposed",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "X",
+          "display": "Rescinded – Consent was initially granted, but was subsequently revoked or ended.",
+          "target": [
+            {
+              "code": "inactive",
+              "display": "Inactivated",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "display": "Bypassed (Consent not sought)",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

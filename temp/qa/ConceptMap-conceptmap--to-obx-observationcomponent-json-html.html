@@ -1,0 +1,612 @@
+﻿<html>
+<head>
+  <title>ConceptMap-conceptmap--to-obx-observationcomponent-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap">resourceType</a>" : "ConceptMap",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.id">id</a>" : "conceptmap--to-obx-observationcomponent",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Segment_OBX!ObservationComponent_Map (http://hl7.org/fhir/v2-tofhir)&lt;/h2&gt;&lt;p&gt;Mapping from https://www.hl7.org/v2 to https://www.hl7.org/fhir&lt;/p&gt;&lt;p&gt;ACTIVE (not intended for production usage). Published on Feb 29, 2020, 12:00:00 AM by HL7 International (HL7 Orders and Observations Workgroup: &lt;a href=\&quot;mailto:https://confluence.hl7.org/display/OO/v2-to-FHIR+IG\&quot;&gt;https://confluence.hl7.org/display/OO/v2-to-FHIR+IG&lt;/a&gt;, Keith W. Boone: &lt;a href=\&quot;mailto:kboone@ainq.com\&quot;&gt;kboone@ainq.com&lt;/a&gt;). Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.&lt;/p&gt;&lt;br/&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td colspan=\&quot;1\&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=\&quot;1\&quot;&gt;&lt;b&gt;Destination Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt; from &lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt; from &lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-3&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.code&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-3&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[each].code&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[each].valueQuantity&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[each].valueString&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[each].valueCodeableConcept&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valueCodeableConcept&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valuePeriod&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valueDateTime&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valueRange&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valueString&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valueTime&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valueRatio&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valueRange&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valueString&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-5&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valueQuantity&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-6&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valueQuantity&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-6&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].valueQuantity&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-6&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component.valueRange.low&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-6&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component.valueRange.high&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-6&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component.valueRatio.numerator&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-6&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component.valueRatio.denominator&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-7&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.component[all].referenceRange.text&lt;/td&gt;&lt;td&gt;If OBX-7 is sufficiently parseable, then the low, high, type, appliesTo, and/or age may be used.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-8&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.nterpretation&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-11&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.status&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-14&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.effectiveDateTime&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-16&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.performer[1](PractitionerRole.practitioner(Practitioner))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-16&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.performer[1](PractitionerRole.code&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-17&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.method&lt;/td&gt;&lt;td&gt;The cardinality of Observation.method is 0..1 while the source allows for multiple methods.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-18&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.device(Device.identifier)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-20&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.bodySite&lt;/td&gt;&lt;td&gt;The cardinality of Observation.bodySite is 0..1 while the source allows for multiple body sites.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-21&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.identifier&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-21&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.identifier.type.coding.code&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-23&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.performer[2](Organization)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-23&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.performer[3](PractitionerRole.organization(Organization))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-24&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.performer[2](Organization.address)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-24&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.performer[3](PractitionerRole.organization(Organization.address))&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-25&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.performer[3](PractitionerRole)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OBX-25&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Observation.performer[3](PractitionerRole.code&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">url</a>" : "http://hl7.org/fhir/v2-tofhir",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">version</a>" : "0.1.0",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.name">name</a>" : "Segment_OBX!ObservationComponent_Map",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.experimental">experimental</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">date</a>" : "2020-02-29T00:00:00-05:00",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.publisher">publisher</a>" : "HL7 International",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "HL7 Orders and Observations Workgroup",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://confluence.hl7.org/display/OO/v2-to-FHIR+IG"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Keith W. Boone",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "kboone@ainq.com"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.copyright">copyright</a>" : "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.source[x]">sourceUri</a>" : "https://www.hl7.org/v2",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.target[x]">targetUri</a>" : "https://www.hl7.org/fhir",
+  "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-1",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Set ID – OBX",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-2",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Value Type",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-3",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Identifier",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-3",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Identifier",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[each].code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-4",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Sub-ID",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[each].valueQuantity",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[each].valueString",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[each].valueCodeableConcept",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valueCodeableConcept",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valuePeriod",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valueDateTime",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valueRange",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valueString",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= OBX-5.1+\&quot;-\&quot;+OBX-5.2",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valueTime",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valueRatio",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valueRange",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valueString",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= OBX-5.1+\&quot; \&quot;+OBX-5.2+\&quot; \&quot;+OBX-5.3+\&quot; \&quot;+OBX-5.4",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valueQuantity",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-5",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Value",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-6",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Units",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valueQuantity",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-6",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Units",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].valueQuantity",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-6",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Units",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component.valueRange.low",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-6",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Units",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component.valueRange.high",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-6",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Units",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component.valueRatio.numerator",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-6",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Units",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component.valueRatio.denominator",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-7",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "References Range",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.component[all].referenceRange.text",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "If OBX-7 is sufficiently parseable, then the low, high, type, appliesTo, and/or age may be used."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-8",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Interpretation Codes",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.nterpretation",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-9",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Probability",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-10",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Nature of Abnormal Test",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-11",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Result Status",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.status",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-12",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Effective Date of Reference Range",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-13",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "User Defined Access Checks",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-14",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Date/Time of the Observation",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.effectiveDateTime",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-15",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Producer's ID",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-16",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Responsible Observer",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.performer[1](PractitionerRole.practitioner(Practitioner))",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-16",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Responsible Observer",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.performer[1](PractitionerRole.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;#ext-responsibleObserver#\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-17",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Method",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.method",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "The cardinality of Observation.method is 0..1 while the source allows for multiple methods.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-18",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Equipment Instance Identifier",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.device(Device.identifier)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-19",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Date/Time of the Analysis",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-20",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Site",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.bodySite",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "The cardinality of Observation.bodySite is 0..1 while the source allows for multiple body sites.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-21",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Instance Identifier",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.identifier",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-21",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Instance Identifier",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.identifier.type.coding.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;FILL\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-22",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Mood Code",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-23",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Performing Organization Name",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.performer[2](Organization)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-23",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Performing Organization Name",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.performer[3](PractitionerRole.organization(Organization))",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-24",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Performing Organization Address",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.performer[2](Organization.address)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-24",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Performing Organization Address",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.performer[3](PractitionerRole.organization(Organization.address))",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-25",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Performing Organization Medical Director",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.performer[3](PractitionerRole)",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-25",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Performing Organization Medical Director",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "Observation.performer[3](PractitionerRole.code",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "= \&quot;#ext-LabMedicalDirector#\&quot;",
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-26",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Patient Results Release Category",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-27",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Root Cause",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-28",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Local Process Control",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-29",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Type",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>" : "OBX-30",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.display">display</a>" : "Observation Sub-Type",
+          "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a>" : "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</pre>
+</body>
+</html>
