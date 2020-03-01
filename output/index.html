@@ -72,8 +72,10 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-      <li><a name="d1062236-27fe-44a1-b3ba-0e91278d17b5">​</a><a href="introduction.html">Introduction</a></li>
-	  <li><a href="overview.html">Overview</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+	  <li><a name="5bc5be1c-7bb6-4d3d-ae1a-025dbb5935a5">​</a><a href="overview.html">Overview</a></li>
+      <li><a href="mappingguidelines.html">Mapping Guidelines</a></li>
+      <li><a href="questions.html">Questions for Ballot Review</a></li>
       <li><a href="glossary.html">Glossary</a></li>
       <li><a href="acknowledgements.html">Acknowledgments</a></li>
     </ul>
@@ -84,10 +86,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-          <a href="mappingguidelines.html">Mapping Guidelines</a>
-      </li>
-      <li><a name="3cb2286e-30f7-4690-a058-218c06bad644">​</a>
-          <a href="mapindex.html">Map Index</a>
+          <a href="mappingoutputs.html">Map Index</a>
       </li>
       <li>
         <a href="messagemaps.html">Messages</a>
@@ -158,38 +157,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 
 </div>
-<p>The {org} {Profile.title} {Profile.id} profile supports the selection
-of assessment instruments from a repository and the integration of those instruments
-into a provider workflow for the capture of assessment data for a given patient.</p>
+<p>The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages
+segments, datatypes and vocabulary to HL7 FHIR Release 4.0 Bundles, Resources, Data
+Types and Coding Systems.</p>
 
-<p>This implementation guide provides the FHIR Implementation materials associated with
-this {org} profile.  This guide includes content from the {org} {Profile.id} Profile Supplement,
-however, the {org} published PDF content for this supplement is considered to be the
-normative content.</p>
+<p>This implementation guide provides the Concept Maps and references to the Spreadsheets
+used to generate them, as well as additional information and material to support validation
+and testing of implementations.</p>
 
 <p>This guide is organized into three main sections:</p>
 
 <ol>
-  <li>Volume I: <a href="overview.html">Overview</a>
-    <ol>
-      <li><a name="65c26ac9-e7cf-4b13-a0ce-8dcf28f844f5">​</a><a href="actorsandtransactions.html">Actors and Transactions</a></li>
-      <li><a name="fdf5e8f7-be99-4a4e-864e-64805535f33a">​</a><a href="profileoptions.html">Profile Options</a></li>
-      <li><a name="a1941d7a-f08a-421a-9fcf-42b995440f17">​</a><a href="securityconsiderations.html">Security Considerations</a></li>
-      <li><a name="63bf7df5-6c94-4da7-9d97-00c07f36c9f7">​</a><a href="crossprofileconsiderations.html">Cross Profile Considerations</a></li>
-    </ol>
-  </li>
-  <li><a name="beaf9236-b15e-4ada-9bb1-747f3bc45376">​</a>Volume II: <a href="transactions.html">Transactions</a>
-{ for-each Profile.transaction T }
-    <ol>
-      <li><a name="060e52ac-a558-4fbb-9255-d53b5a47e12e">​</a><a href="transaction-{T.id}.html}">[{T.id}] {T.name}</a></li>
-    </ol>
-  </li>
-  <li><a name="883ee05b-dffe-4b91-bea7-6ab86a608774">​</a>Volume III: <a href="contentprofiles.html">Content Profiles</a>
-{ for-each Profile.content C }
-    <ol>
-      <li><a name="374d51c9-2797-433c-ba4a-d63c6b190c08">​</a><a href="StructureDefinition-{org}-{Profile.id}-{C.id}.html">{C.name} FHIR Profile</a></li>
-    </ol>
-  </li>
+  <li><a href="introduction.html">Introduction</a>
+This section provides an overview of the project, and explains how mapping is performed.</li>
+  <li><a href="mappingoutputs.html">Mappings</a>
+This section provides an index to the mappings produced by this project, organized
+by message, segment, datatype, or vocabulary mapping.</li>
+  <li><a name="f02fcf96-fe55-490c-80b5-1f177224b64b">​</a><a href="null">Implementation and Use</a>
+This section covers implementation considerations and validation, and provides
+example test conversions.</li>
 </ol>
 
 <p>Click on any of the links above, head on over the <a href="toc.html">table of contents</a>, or
@@ -199,11 +185,11 @@ if you are looking for a specific artifact, check out the <a href="artifacts.htm
 
 <ul>
   <li><a href="full-ig.zip">this entire guide</a>,</li>
-  <li><a name="a16c7a89-99b2-4e41-9ee6-c470dd38baf1">​</a>the definition resources in <a href="definitions.json.zip">json</a>, <a href="definitions.xml.zip">xml</a>, <a href="definitions.ttl.zip">ttl</a>, or <a href="csvs.zip">csv</a> format, or</li>
+  <li><a name="dd662ac9-bed8-4cd4-b34d-c6826e785e50">​</a>the definition resources in <a href="definitions.json.zip">json</a>, <a href="definitions.xml.zip">xml</a>, <a href="definitions.ttl.zip">ttl</a>, or <a href="csvs.zip">csv</a> format, or</li>
   <li>the example resources in <a href="examples.json.zip">json</a>, <a href="examples.xml.zip">xml</a> or <a href="examples.ttl.zip">ttl</a> format.</li>
 </ul>
 
-<p>The source code for this Implementation Guide can be found on <a href="https://github.com/{org}/{Profile.id}">https://github.com/{org}/{Profile.id}</a>.</p>
+<p>The source code for this Implementation Guide can be found on <a href="https://github.com/HL7https://github.com/HL7/v2-to-fhir/">https://github.com/HL7https://github.com/HL7/v2-to-fhir/</a>.</p>
 
 
 </div>
@@ -217,7 +203,7 @@ if you are looking for a specific artifact, check out the <a href="artifacts.htm
     <div class="container">    <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/OO/v2-to-FHIR+IG">HL7 International</a>.  Package v2-tofhir#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 1, 2020 02:41-0500">2020-03-01</span>
+          IG &copy; 2020+ <a style="color: #81BEF7" href="https://confluence.hl7.org/display/OO/v2-to-FHIR+IG">HL7 International</a>.  Package v2-tofhir#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Mar 1, 2020 04:02-0500">2020-03-01</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

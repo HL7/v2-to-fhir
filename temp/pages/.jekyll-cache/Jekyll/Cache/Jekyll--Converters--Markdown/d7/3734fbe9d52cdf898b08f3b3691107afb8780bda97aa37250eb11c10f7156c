@@ -1,0 +1,32 @@
+I"6	
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#chapter-2---control" id="markdown-toc-chapter-2---control">Chapter 2 - Control</a></li>
+  <li><a href="#chapter-3---patient-administration" id="markdown-toc-chapter-3---patient-administration">Chapter 3 - Patient Administration</a></li>
+  <li><a href="#chapter-44a---orders" id="markdown-toc-chapter-44a---orders">Chapter 4/4A - Orders</a></li>
+  <li><a href="#chapter-7---observations" id="markdown-toc-chapter-7---observations">Chapter 7 - Observations</a></li>
+</ul>
+
+</div>
+<p>The proposed v2-to-FHIR mappings are maintained in spreadsheets (the ultimate format of the maps will be concept maps). As the v2 Message is the primary endpoint, below all mapped messages are linked below, organized by v2 Chapter.  If you like to review specific v2-to-FHIR mappings to:</p>
+
+<p><a href="https://github.com/HL7/v2-to-fhir/blob/master/mappings/messages">Messages</a>
+<a href="https://github.com/HL7/v2-to-fhir/blob/master/mappings/segments">Segments</a>
+<a href="https://github.com/HL7/v2-to-fhir/blob/master/mappings/datatypes">DataTypes</a>
+<a href="https://github.com/HL7/v2-to-fhir/blob/master/mappings/codesystems">Vocabulary</a></p>
+
+<p>As well, there is a separate <a href="https://github.com/HL7/v2-to-fhir/blob/master/mappings/extensions">Extensions</a> spreadsheet which contains the details of proposed standard extension being created by this project.</p>
+
+<h3 id="chapter-2---control">Chapter 2 - Control</h3>
+<p><a href="https://github.com/HL7/v2-to-fhir/blob/master/mappings/messages/HL7 Message+-+FHIR+R4_+ACK+-+Sheet1.csv">ACK</a> - General Acknowledgement</p>
+
+<h3 id="chapter-3---patient-administration">Chapter 3 - Patient Administration</h3>
+<p><a href="https://github.com/HL7/v2-to-fhir/blob/master/mappings/messages/HL7 Message+-+FHIR+R4_+ADT_A01+-+Sheet1.csv">ADT_A01</a> - AdmitVisit Notification (Events: A01, A04, A08, A13)</p>
+
+<h3 id="chapter-44a---orders">Chapter 4/4A - Orders</h3>
+<p><a href="https://github.com/HL7/v2-to-fhir/blob/master/mappings/messages/HL7 Message+-+FHIR+R4_+VXU_V04+-+Sheet1.csv">VXU_V04</a> - Immunization</p>
+
+<h3 id="chapter-7---observations">Chapter 7 - Observations</h3>
+<p><a href="https://github.com/HL7/v2-to-fhir/blob/master/mappings/messages/HL7 Message+-+FHIR+R4_+ORU_R01+-+Sheet1.csv">ORU_R01</a> - Unsolicited Observation</p>
+
+:ET

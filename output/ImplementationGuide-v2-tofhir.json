@@ -10,7 +10,7 @@
   "name": "HL7Version2toFHIR",
   "title": "HL7 Version 2 to FHIR",
   "status": "active",
-  "date": "2020-03-01T02:41:42-05:00",
+  "date": "2020-03-01T04:02:25-05:00",
   "publisher": "HL7 International",
   "contact": [
     {
@@ -1542,8 +1542,18 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "introduction.html",
+          "title": "Introduction",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "mappingguidelines.html",
           "title": "Mappingguidelines",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "mappingoutputs.html",
+          "title": "Mappingoutputs",
           "generation": "markdown"
         },
         {
@@ -1552,13 +1562,13 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "overview.html",
-          "title": "Overview",
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
           "generation": "markdown"
         },
         {
-          "nameUrl": "profiles.html",
-          "title": "Profiles",
+          "nameUrl": "questions.html",
+          "title": "Questions",
           "generation": "markdown"
         },
         {
