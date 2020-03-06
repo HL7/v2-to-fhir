@@ -1,12 +1,10 @@
-<div style=”border: 1px solid maroon; background-color: gold; padding: 5px;”>   
----
-   
+Start @Keith Boone Note - This needs to be a text box that has background color like this page http://hl7.org/fhir/uv/livd/2019Sep/ the section on top in reddish glow.
+<p>   
 Review Note:
 <br>The purpose of this Peer Review is primarily to solicit feedback on the structure, navigation, and general content topics of the v2-to-FHIR Guide.  Specific questions are provided [here](questions.html) in the <b>Impact/Scope</b> and <b>Infrastructure</b> sections.  Feedback on the accuracy and completeness of the mappings included is secondary, that will be the focus of the Ballot cycles, but any feedback on an of the mappings is welcome, including the question in the <b>Mapping Content</b> on our questions page.
-
----
-</div>
-
+<br>
+End @Keith Boone Note
+<p>
 The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages
 segments, datatypes and vocabulary to HL7 FHIR Release 4.0 Bundles, Resources, Data
 Types and Coding Systems.
