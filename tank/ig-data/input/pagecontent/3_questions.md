@@ -1,4 +1,4 @@
-The v2-to-FHIR Project Team is soliciting general comments from reviewers as well as specific comments in a number of areas (see below). Any comments may be entered on the Enter Comments Confluence page. We are asking reviewers to enter comments in the table provided on that page rather than making Jira tickets at this time.
+The v2-to-FHIR Project Team is soliciting general comments from reviewers as well as specific comments in a number of areas (see below). Any comments may be entered on the comments section under each of the implementation guide page where they apply rather than making Jira tickets at this time.
 
 ### Impact/Scope:
 * We are looking to gather case studies from reviewers as to how they could see this project impacting the work they are currently doing in the v2/FHIR space
