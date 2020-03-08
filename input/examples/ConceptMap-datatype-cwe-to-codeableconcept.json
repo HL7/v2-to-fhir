@@ -1,0 +1,174 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "datatype-cwe-to-codeableconcept",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "url": "http://hl7.org/fhir/v2-tofhir/datatype-cwe-to-codeableconcept",
+  "version": "1.0",
+  "name": "Datatype_CWE_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "CWE",
+  "targetUri": "CodeableConcept",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "CWE.1",
+          "display": "Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[1].code",
+              "display": "CodeableConcept.coding[1].code"
+            }
+          ]
+        },
+        {
+          "code": "CWE.2",
+          "display": "Text",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[1].display",
+              "display": "CodeableConcept.coding[1].display"
+            }
+          ]
+        },
+        {
+          "code": "CWE.3",
+          "display": "Name of Coding System",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[1].system",
+              "display": "CodeableConcept.coding[1].system"
+            }
+          ]
+        },
+        {
+          "code": "CWE.4",
+          "display": "Alternate Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[2].code",
+              "display": "CodeableConcept.coding[2].code"
+            }
+          ]
+        },
+        {
+          "code": "CWE.5",
+          "display": "Alternate Text",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[2].display",
+              "display": "CodeableConcept.coding[2].display"
+            }
+          ]
+        },
+        {
+          "code": "CWE.6",
+          "display": "Name of Alternate Coding System",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[2].system",
+              "display": "CodeableConcept.coding[2].system"
+            }
+          ]
+        },
+        {
+          "code": "CWE.7",
+          "display": "Coding System Version ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[1].version",
+              "display": "CodeableConcept.coding[1].version"
+            }
+          ]
+        },
+        {
+          "code": "CWE.8",
+          "display": "Alternate Coding System Version ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[2].version",
+              "display": "CodeableConcept.coding[2].version"
+            }
+          ]
+        },
+        {
+          "code": "CWE.9",
+          "display": "Original Text",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.text",
+              "display": "CodeableConcept.text"
+            }
+          ]
+        },
+        {
+          "code": "CWE.10",
+          "display": "Second Alternate Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[3].code",
+              "display": "CodeableConcept.coding[3].code"
+            }
+          ]
+        },
+        {
+          "code": "CWE.11",
+          "display": "Second Alternate Text",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[3].display",
+              "display": "CodeableConcept.coding[3].display"
+            }
+          ]
+        },
+        {
+          "code": "CWE.12",
+          "display": "Name of Second Alternate Coding System",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[3].system",
+              "display": "CodeableConcept.coding[3].system"
+            }
+          ]
+        },
+        {
+          "code": "CWE.13",
+          "display": "Second Alternate Coding System Version ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CodeableConcept.coding[3].version",
+              "display": "CodeableConcept.coding[3].version"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

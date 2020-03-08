@@ -1,0 +1,47 @@
+Instance: SegmentARVtoResource
+InstanceOf: ConceptMap
+Title: "Segment ARV to Resource Map"
+* description = "This ConceptMap represents the mapping from the HL7 V2 ARV Segment to the FHIR Resource Resource."
+* id = "segment-arv-to-resource"
+* url = "http://hl7.org/fhir/v2-tofhir/segment-arv-to-resource"
+* version = "1.0"
+* name = "Segment_ARV_Map"
+* status = #active
+* experimental = true
+* date = "2020-03-08"
+* publisher = "HL7 International, Inc"
+* contact.telecom.system = #email
+* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
+* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
+* sourceUri = "ARV"
+* targetUri = "Resource"
+* group.element[0].code = #ARV-3
+* group.element[0].display = "Access Restriction Value"
+* group.element[0].target.equivalence = #equivalent
+* group.element[0].target.code = #Resource.meta.security[1]
+* group.element[0].target.display = "Resource.meta.security[1]"
+* group.element[1].code = #ARV-4
+* group.element[1].display = "Access Restriction Reason"
+* group.element[1].target.equivalence = #equivalent
+* group.element[1].target.code = #Resource.meta.security[2]
+* group.element[1].target.display = "Resource.meta.security[2]"
+* group.element[2].code = #ARV-5
+* group.element[2].display = "Special Access Restriction Instructions"
+* group.element[2].target.equivalence = #equivalent
+* group.element[2].target.code = #Resource.meta.security[3].display
+* group.element[2].target.display = "Resource.meta.security[3].display"
+* group.element[3].code = #ARV-7
+* group.element[3].display = "Security Classification Tag"
+* group.element[3].target.equivalence = #equivalent
+* group.element[3].target.code = #Resource.meta.security[4]
+* group.element[3].target.display = "Resource.meta.security[4]"
+* group.element[4].code = #ARV-8
+* group.element[4].display = "Security Handling Instructions"
+* group.element[4].target.equivalence = #equivalent
+* group.element[4].target.code = #Resource.meta.security[5]
+* group.element[4].target.display = "Resource.meta.security[5]"
+* group.element[5].code = #ARV-10
+* group.element[5].display = "Access Restriction Instance Identifier"
+* group.element[5].target.equivalence = #equivalent
+* group.element[5].target.code = #Resource.meta.tag
+* group.element[5].target.display = "Resource.meta.tag"

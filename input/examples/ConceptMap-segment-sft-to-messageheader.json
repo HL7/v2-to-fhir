@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-sft-to-messageheader",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 SFT Segment to the FHIR MessageHeader Resource representing that segment.",
-  "url": "http://hl7.org/fhir/v2-tofhir",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 SFT Segment to the FHIR MessageHeader Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-sft-to-messageheader",
   "version": "1.0",
   "name": "Segment_SFT_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-01",
+  "date": "2020-03-08",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -20,8 +20,8 @@
     }
   ],
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
-  "sourceUri": "https://www.hl7.org/v2",
-  "targetUri": "https://www.hl7.org/fhir",
+  "sourceUri": "SFT",
+  "targetUri": "MessageHeader",
   "group": [
     {
       "element": [
@@ -31,7 +31,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "MessageHeader.source.version"
+              "code": "MessageHeader.source.version",
+              "display": "MessageHeader.source.version"
             }
           ]
         },
@@ -41,7 +42,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "MessageHeader.source.software"
+              "code": "MessageHeader.source.software",
+              "display": "MessageHeader.source.software"
             }
           ]
         }

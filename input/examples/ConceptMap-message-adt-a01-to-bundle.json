@@ -1,0 +1,389 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "message-adt-a01-to-bundle",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 ADT_A01 Message to the FHIR Message Bundle.",
+  "url": "http://hl7.org/fhir/v2-tofhir/message-adt-a01-to-bundle",
+  "version": "1.0",
+  "name": "Message_ADT_A01_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "ADT_A01",
+  "targetUri": "Bundle",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "ADT_A01.MSH",
+          "display": "Message Header",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MessageHeader[1]",
+              "display": "MessageHeader[1]"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.MSH",
+          "display": "Message Header",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance[1]",
+              "display": "Provenance[1]"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.MSH",
+          "display": "Message Header",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance[2]",
+              "display": "Provenance[2]"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.SFT",
+          "display": "Software Segment",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MessageHeader[1]",
+              "display": "MessageHeader[1]"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.PID",
+          "display": "Patient Identification",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.PD1",
+          "display": "Additional Demographics",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01:follow:PID.ARV",
+          "display": "Access Restrictions",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ARV-1 IN (\"PID\", \"PD1\") AND ARV-3 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01:follow:PID.ROL",
+          "display": "Role",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1].generalPractitioner",
+              "display": "Patient[1].generalPractitioner",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "(element(\"3.1\")=\"PP\")and(element(\"3.3\")=\"HL70443\")\n# IF ROL-3.1 EQUALS \"PP\" AND ROL-3.3 EQUALS \"HL70443\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.PID.ROL",
+          "display": "Role",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson[1]",
+              "display": "RelatedPerson[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "While most likely all other HL70443 values go to RelatedPerson, the implementation needs to determine whether that is fully accurate."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.NK1",
+          "display": "Next of Kin / Associated Parties",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson[2]",
+              "display": "RelatedPerson[2]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.NK1",
+          "display": "Next of Kin / Associated Parties",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.PV1",
+          "display": "Patient Visit",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter[1]",
+              "display": "Encounter[1]"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.PV2",
+          "display": "Patient Visit - Additional Info.",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter[1]",
+              "display": "Encounter[1]"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01:follow:PV1.ARV",
+          "display": "Access Restrictions",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter[1]",
+              "display": "Encounter[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ARV-1 IN (\"PV1\", \"PV2\") AND ARV-3 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01:follow:PV1.ROL",
+          "display": "Role",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter[1]",
+              "display": "Encounter[1]"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.OBX",
+          "display": "Observation/Result",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation",
+              "display": "Observation",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.OBX",
+          "display": "Observation/Result",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation",
+              "display": "Observation",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.AL1",
+          "display": "Allergy Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance",
+              "display": "AllergyIntolerance"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.DG1",
+          "display": "Diagnosis Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition",
+              "display": "Condition",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If in context of the patient"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.DG1",
+          "display": "Diagnosis Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition[1]",
+              "display": "Condition[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF DG1-6 EQUALS \"admitting\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.DG1",
+          "display": "Diagnosis Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition[1]",
+              "display": "Condition[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If in context of an encounter"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.DG1",
+          "display": "Diagnosis Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition[1]",
+              "display": "Condition[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If in context of a episode of care"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.PROCEDURE.PR1",
+          "display": "Procedures",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure",
+              "display": "Procedure"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.INSURANCE.IN1",
+          "display": "Insurance",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Coverage",
+              "display": "Coverage"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.INSURANCE.IN2",
+          "display": "Insurance Additional Info.",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Coverage",
+              "display": "Coverage"
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.INSURANCE.IN3",
+          "display": "Insurance Additional Info - Cert.",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Coverage",
+              "display": "Coverage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

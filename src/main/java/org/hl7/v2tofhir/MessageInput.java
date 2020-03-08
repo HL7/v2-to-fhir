@@ -1,29 +1,62 @@
 package org.hl7.v2tofhir;
 
+import org.apache.commons.lang3.StringUtils;
+import org.hl7.v2tofhir.ConverterImpl.Row;
+
 import com.opencsv.bean.CsvBindByPosition;
 
-public class MessageInput {
+public class MessageInput implements Cloneable, Convertible {
     /** The V2 coding system */
     @CsvBindByPosition(position=0)
-    String v2Code;
+    String v2Sort;
     @CsvBindByPosition(position=1)
-    String v2Text;
+    String v2Code;
     @CsvBindByPosition(position=2)
-    String v2CodeSystem;
+    String v2Message;
     @CsvBindByPosition(position=3)
-    String conditionANTLR;
+    String v2Name;
     @CsvBindByPosition(position=4)
-    String conditionfhirPath;
+    String v2Min;
     @CsvBindByPosition(position=5)
-    String conditionNarrative;
+    String v2Max;
     @CsvBindByPosition(position=6)
-    String fhirCode;
+    String conditionANTLR;
     @CsvBindByPosition(position=7)
-    String fhirExtension;
+    String conditionfhirPath;
     @CsvBindByPosition(position=8)
-    String fhirDisplay;
+    String conditionNarrative;
     @CsvBindByPosition(position=9)
-    String fhirCodeSystem;
+    String fhirCode;
     @CsvBindByPosition(position=10)
+    String segmentMap;
+    @CsvBindByPosition(position=11)
+    String reference;
+    @CsvBindByPosition(position=12)
     String comments;
+    public MessageInput copy() {
+        try {
+            return (MessageInput) clone();
+        } catch (CloneNotSupportedException e) {
+            // Won't happen
+        }
+        return null;
+    }
+    @Override
+    public Row convert() {
+        Row r = new Row();
+        r.condition = getCondition(this.conditionANTLR, this.conditionfhirPath);
+        r.conditionDisplay = StringUtils.defaultString(this.conditionNarrative);
+        r.dataType = this.v2Message;
+        r.targetCode = this.fhirCode;
+        if (StringUtils.isBlank(this.fhirCode) || r.targetCode.toLowerCase().contains("n/a")) {
+            // Discard non-applicable mappings
+            return null;
+        }
+        r.targetDisplay = this.fhirCode;
+        r.sourceCode = this.v2Code;
+        r.sourceDisplay = this.v2Name;
+        r.comments = this.comments;
+        return r;
+    }
+
 }

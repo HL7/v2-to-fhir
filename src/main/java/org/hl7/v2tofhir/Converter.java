@@ -28,4 +28,8 @@ public interface Converter {
     String getType();
     String getSourceName();
     String getTargetName();
+
+    String getHtmlFileName();
+
+    String getSourceFileName();
 }

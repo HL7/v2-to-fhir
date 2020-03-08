@@ -1,0 +1,275 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-pr1-to-procedure",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 PR1 Segment to the FHIR Procedure Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-pr1-to-procedure",
+  "version": "1.0",
+  "name": "Segment_PR1_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "PR1",
+  "targetUri": "Procedure",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "PR1-3",
+          "display": "Procedure Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.code",
+              "display": "Procedure.code"
+            }
+          ]
+        },
+        {
+          "code": "PR1-4",
+          "display": "Procedure Description",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.code.text",
+              "display": "Procedure.code.text",
+              "comment": "PR1-4 was deprecated in v2.3",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PR1-3.9 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PR1-5",
+          "display": "Procedure Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.performedDateTime",
+              "display": "Procedure.performedDateTime",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PR1-7 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PR1-5",
+          "display": "Procedure Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.performedDateTime",
+              "display": "Procedure.performedDateTime",
+              "comment": "The Procedure date/time must be at least to the granularity of minutes if a performedPeriod is to be created from PR1-5 and PR1-7",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PR1-7 VALUED AND PR1-5.5 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PR1-5",
+          "display": "Procedure Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.performedPeriod.start",
+              "display": "Procedure.performedPeriod.start",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PR1-7 VALUED AND PR1-5.5 VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PR1-6",
+          "display": "Procedure Functional Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.category",
+              "display": "Procedure.category"
+            }
+          ]
+        },
+        {
+          "code": "PR1-7",
+          "display": "Procedure Minutes",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.performedPeriod.end",
+              "display": "= Procedure.performedPeriod.start+PR1-7",
+              "comment": "The number of minutes in PR1-7 must be added to the time in PR1-5 to get the endpoint of the performedPeriod (note that other elements of the date/time (hours, date, etc) may also need to be changed depending on the length of the procedure)",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PR1-5.5 IS VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PR1-8",
+          "display": "Anesthesiologist",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.perfomer[1].actor(Practitioner)",
+              "display": "Procedure.perfomer[1].actor(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "PR1-8",
+          "display": "Anesthesiologist",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.perfomer[1].function.coding.code",
+              "display": "= \"88189002\""
+            }
+          ]
+        },
+        {
+          "code": "PR1-8",
+          "display": "Anesthesiologist",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.perfomer[1].function.coding.uri",
+              "display": "= \"http://snomed.info/sct\""
+            }
+          ]
+        },
+        {
+          "code": "PR1-11",
+          "display": "Surgeon",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.perfomer[2].actor(Practitioner)",
+              "display": "Procedure.perfomer[2].actor(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "PR1-11",
+          "display": "Surgeon",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.perfomer[2].function.coding.code",
+              "display": "= \"304292004\""
+            }
+          ]
+        },
+        {
+          "code": "PR1-11",
+          "display": "Surgeon",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.perfomer[2].function.coding.uri",
+              "display": "= \"http://snomed.info/sct\""
+            }
+          ]
+        },
+        {
+          "code": "PR1-12",
+          "display": "Procedure Practitioner",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.perfomer[3].actor(Practitioner)",
+              "display": "Procedure.perfomer[3].actor(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "PR1-12",
+          "display": "Procedure Practitioner",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.perfomer[3].function.coding.uri",
+              "display": "= \"http://snomed.info/sct\""
+            }
+          ]
+        },
+        {
+          "code": "PR1-15",
+          "display": "Associated Diagnosis Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.reasonCode",
+              "display": "Procedure.reasonCode"
+            }
+          ]
+        },
+        {
+          "code": "PR1-19",
+          "display": "Procedure Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.identifier",
+              "display": "Procedure.identifier"
+            }
+          ]
+        },
+        {
+          "code": "PR1-23",
+          "display": "Treating Organizational Unit",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.location(Location)",
+              "display": "Procedure.location(Location)",
+              "comment": "We will address >=2 cardinality if somebody raises the need."
+            }
+          ]
+        },
+        {
+          "code": "PR1-25",
+          "display": "Parent Procedure ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Procedure.partOf(Procedure)",
+              "display": "Procedure.partOf(Procedure)",
+              "comment": "Procedure.partOf should contain the reference to another Procedure resource where Procedure.identifier matches the value of PR1-25"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

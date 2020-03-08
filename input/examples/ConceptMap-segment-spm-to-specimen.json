@@ -1,0 +1,247 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-spm-to-specimen",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 SPM Segment to the FHIR Specimen Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-spm-to-specimen",
+  "version": "1.0",
+  "name": "Segment_SPM_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "SPM",
+  "targetUri": "Specimen",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "SPM-2",
+          "display": "Specimen ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.identifier[1]",
+              "display": "Specimen.identifier[1]"
+            }
+          ]
+        },
+        {
+          "code": "SPM-3",
+          "display": "Specimen Parent IDs",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.parent.identifier",
+              "display": "Specimen.parent.identifier",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "Only one of the two parent references in EIP can be mapped.  The implementation needs to choose which one."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SPM-4",
+          "display": "Specimen Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.type",
+              "display": "Specimen.type"
+            }
+          ]
+        },
+        {
+          "code": "SPM-6",
+          "display": "Specimen Additives",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.container.additiveCodeableConcept",
+              "display": "Specimen.container.additiveCodeableConcept"
+            }
+          ]
+        },
+        {
+          "code": "SPM-7",
+          "display": "Specimen Collection Method",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.collection.method",
+              "display": "Specimen.collection.method"
+            }
+          ]
+        },
+        {
+          "code": "SPM-8",
+          "display": "Specimen Source Site",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.collection.bodySite",
+              "display": "Specimen.collection.bodySite"
+            }
+          ]
+        },
+        {
+          "code": "SPM-12",
+          "display": "Specimen Collection Amount",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.collection.quantity",
+              "display": "Specimen.collection.quantity"
+            }
+          ]
+        },
+        {
+          "code": "SPM-14",
+          "display": "Specimen Description",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.note(Annotation.text)",
+              "display": "Specimen.note(Annotation.text)"
+            }
+          ]
+        },
+        {
+          "code": "SPM-17",
+          "display": "Specimen Collection Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.collection.collectedPeriod",
+              "display": "Specimen.collection.collectedPeriod",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF SPM-17.2 VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SPM-17",
+          "display": "Specimen Collection Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.collection.collectedDateTime",
+              "display": "Specimen.collection.collectedDateTime",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF SPM-17.2 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SPM-18",
+          "display": "Specimen Received Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.receivedTime",
+              "display": "Specimen.receivedTime"
+            }
+          ]
+        },
+        {
+          "code": "SPM-20",
+          "display": "Specimen Availability",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.status",
+              "display": "Specimen.status"
+            }
+          ]
+        },
+        {
+          "code": "SPM-24",
+          "display": "Specimen Condition",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.condition",
+              "display": "Specimen.condition"
+            }
+          ]
+        },
+        {
+          "code": "SPM-27",
+          "display": "Container Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.container.type",
+              "display": "Specimen.container.type"
+            }
+          ]
+        },
+        {
+          "code": "SPM-30",
+          "display": "Accession ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.accessionIdentifier",
+              "display": "Specimen.accessionIdentifier"
+            }
+          ]
+        },
+        {
+          "code": "SPM-31",
+          "display": "Other Specimen ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.identifier[2]",
+              "display": "Specimen.identifier[2]"
+            }
+          ]
+        },
+        {
+          "code": "SPM-32",
+          "display": "Shipment ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.identifier[3]",
+              "display": "Specimen.identifier[3]"
+            }
+          ]
+        },
+        {
+          "code": "SPM-32",
+          "display": "Shipment ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Specimen.identifier[3].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

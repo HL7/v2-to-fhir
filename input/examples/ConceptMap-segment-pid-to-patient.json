@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-pid-to-patient",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 PID Segment to the FHIR Patient Resource representing that segment.",
-  "url": "http://hl7.org/fhir/v2-tofhir",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 PID Segment to the FHIR Patient Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-pid-to-patient",
   "version": "1.0",
   "name": "Segment_PID_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-01",
+  "date": "2020-03-08",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -20,8 +20,8 @@
     }
   ],
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
-  "sourceUri": "https://www.hl7.org/v2",
-  "targetUri": "https://www.hl7.org/fhir",
+  "sourceUri": "PID",
+  "targetUri": "Patient",
   "group": [
     {
       "element": [
@@ -31,7 +31,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[1]"
+              "code": "Patient.identifier[1]",
+              "display": "Patient.identifier[1]"
             }
           ]
         },
@@ -41,7 +42,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[2]"
+              "code": "Patient.identifier[2]",
+              "display": "Patient.identifier[2]"
             }
           ]
         },
@@ -51,7 +53,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[3]"
+              "code": "Patient.identifier[3]",
+              "display": "Patient.identifier[3]"
             }
           ]
         },
@@ -61,7 +64,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.name[1]"
+              "code": "Patient.name[1]",
+              "display": "Patient.name[1]"
             }
           ]
         },
@@ -70,9 +74,10 @@
           "display": "Mother's Maiden Name",
           "target": [
             {
-              "comment": "This may not be the second name if there are repeats in PID-5. ext.patientMothersMaiden (string) also exists if we prefer.",
               "equivalence": "equivalent",
-              "code": "Patient.extension-mothersMaidenName"
+              "code": "Patient.extension-mothersMaidenName",
+              "display": "Patient.extension-mothersMaidenName",
+              "comment": "This may not be the second name if there are repeats in PID-5. ext.patientMothersMaiden (string) also exists if we prefer."
             }
           ]
         },
@@ -82,7 +87,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.birthdate"
+              "code": "Patient.birthdate",
+              "display": "Patient.birthdate"
             }
           ]
         },
@@ -92,7 +98,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.gender"
+              "code": "Patient.gender",
+              "display": "Patient.gender"
             }
           ]
         },
@@ -102,7 +109,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.name[2]"
+              "code": "Patient.name[2]",
+              "display": "Patient.name[2]"
             }
           ]
         },
@@ -112,7 +120,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Observation"
+              "code": "Observation",
+              "display": "Observation",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If PID-10 is for clinical purposes"
+                }
+              ]
             }
           ]
         },
@@ -123,7 +138,13 @@
             {
               "equivalence": "equivalent",
               "code": "Observation.subject.reference",
-              "display": "= Patient.id"
+              "display": "= Patient.id",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If PID-10 is for clinical purposes"
+                }
+              ]
             }
           ]
         },
@@ -133,7 +154,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.address[1]"
+              "code": "Patient.address[1]",
+              "display": "Patient.address[1]"
             }
           ]
         },
@@ -142,9 +164,10 @@
           "display": "County Code",
           "target": [
             {
-              "comment": "This may not be the second occurrence if PID-11 repeats. Because PID-11 can repeat but PID-12 cannot, it's not appropriate to include PID-12 in an iteration of .address populated from PID-11",
               "equivalence": "equivalent",
-              "code": "Patient.address[2].district"
+              "code": "Patient.address[2].district",
+              "display": "Patient.address[2].district",
+              "comment": "This may not be the second occurrence if PID-11 repeats. Because PID-11 can repeat but PID-12 cannot, it's not appropriate to include PID-12 in an iteration of .address populated from PID-11"
             }
           ]
         },
@@ -154,7 +177,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[1]"
+              "code": "Patient.telecom[1]",
+              "display": "Patient.telecom[1]"
             }
           ]
         },
@@ -174,9 +198,10 @@
           "display": "Phone Number - Business",
           "target": [
             {
-              "comment": "XTN[ContactPoint.use=\"work\"]",
               "equivalence": "equivalent",
-              "code": "Patient.telecom[2]"
+              "code": "Patient.telecom[2]",
+              "display": "Patient.telecom[2]",
+              "comment": "XTN[ContactPoint.use=\"work\"]"
             }
           ]
         },
@@ -197,7 +222,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.communication.language"
+              "code": "Patient.communication.language",
+              "display": "Patient.communication.language"
             }
           ]
         },
@@ -206,10 +232,10 @@
           "display": "Primary Language",
           "target": [
             {
-              "comment": "There is a critical question whether it is appropriate to include this specific mapping.  While it seems that \"primary\" would mean \"true\", it is unclear how this would be resolved if from other sources another language is marked as \"true\".  If not marked, it would not be clear which language to put in on the return.  Furthermore, depending on purpose, the language may change (verbal vs. written, etc.)  So not having cardinality and purpose aligned makes it hard to have a consistent, correct map.  Consequently if set to t\"true\" some are concerned it may expected to be used for, or not be used for translation purposes it is or is not intended for that purpose.  Therefore, should we or should we not leave this mapping in?",
               "equivalence": "equivalent",
               "code": "Patient.communication.preferred",
-              "display": "= \"true\""
+              "display": "= \"true\"",
+              "comment": "There is a critical question whether it is appropriate to include this specific mapping.  While it seems that \"primary\" would mean \"true\", it is unclear how this would be resolved if from other sources another language is marked as \"true\".  If not marked, it would not be clear which language to put in on the return.  Furthermore, depending on purpose, the language may change (verbal vs. written, etc.)  So not having cardinality and purpose aligned makes it hard to have a consistent, correct map.  Consequently if set to t\"true\" some are concerned it may expected to be used for, or not be used for translation purposes it is or is not intended for that purpose.  Therefore, should we or should we not leave this mapping in?"
             }
           ]
         },
@@ -219,7 +245,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.maritalStatus"
+              "code": "Patient.maritalStatus",
+              "display": "Patient.maritalStatus"
             }
           ]
         },
@@ -229,7 +256,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-religion"
+              "code": "Patient.extension-patient-religion",
+              "display": "Patient.extension-patient-religion"
             }
           ]
         },
@@ -238,9 +266,10 @@
           "display": "Patient Account Number",
           "target": [
             {
-              "comment": "Where Account.subject.Reference(Patient.identifier)=Patient.identifier",
               "equivalence": "equivalent",
-              "code": "Account[1].identifier"
+              "code": "Account[1].identifier",
+              "display": "Account[1].identifier",
+              "comment": "Where Account.subject.Reference(Patient.identifier)=Patient.identifier"
             }
           ]
         },
@@ -260,9 +289,10 @@
           "display": "SSN Number - Patient",
           "target": [
             {
-              "comment": "the value set for Identifier.type doesn't contain SSN but it does have SB (social beneficiary)",
               "equivalence": "equivalent",
-              "code": "Patient.identifier[4].value"
+              "code": "Patient.identifier[4].value",
+              "display": "Patient.identifier[4].value",
+              "comment": "the value set for Identifier.type doesn't contain SSN but it does have SB (social beneficiary)"
             }
           ]
         },
@@ -283,7 +313,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[5]"
+              "code": "Patient.identifier[5]",
+              "display": "Patient.identifier[5]"
             }
           ]
         },
@@ -292,9 +323,10 @@
           "display": "Mother's Identifier",
           "target": [
             {
-              "comment": "Where RelatedPerson.patient.Reference(Patient.identifier)=Patient.identifier\nIs this worth worrying about?",
               "equivalence": "equivalent",
-              "code": "RelatedPerson.identifier"
+              "code": "RelatedPerson.identifier",
+              "display": "RelatedPerson.identifier",
+              "comment": "Where RelatedPerson.patient.Reference(Patient.identifier)=Patient.identifier\nIs this worth worrying about?\\"
             }
           ]
         },
@@ -304,7 +336,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Observation"
+              "code": "Observation",
+              "display": "Observation",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "IF PID-22 is for clinical purposes"
+                }
+              ]
             }
           ]
         },
@@ -314,7 +353,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-birthplace.text"
+              "code": "Patient.extension-patient-birthplace.text",
+              "display": "Patient.extension-patient-birthplace.text"
             }
           ]
         },
@@ -324,7 +364,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.multipleBirthBoolean"
+              "code": "Patient.multipleBirthBoolean",
+              "display": "Patient.multipleBirthBoolean",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PID-25 NOT VALUED\\"
+                }
+              ]
             }
           ]
         },
@@ -334,7 +381,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.multipleBirthInteger"
+              "code": "Patient.multipleBirthInteger",
+              "display": "Patient.multipleBirthInteger"
             }
           ]
         },
@@ -343,9 +391,10 @@
           "display": "Citizenship",
           "target": [
             {
-              "comment": "The standard extension does not include a value set",
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-citizenship[1].code"
+              "code": "Patient.extension-patient-citizenship[1].code",
+              "display": "Patient.extension-patient-citizenship[1].code",
+              "comment": "The standard extension does not include a value set"
             }
           ]
         },
@@ -354,9 +403,10 @@
           "display": "Nationality",
           "target": [
             {
-              "comment": "The standard extension does not include a value set",
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-nationality.code"
+              "code": "Patient.extension-patient-nationality.code",
+              "display": "Patient.extension-patient-nationality.code",
+              "comment": "The standard extension does not include a value set"
             }
           ]
         },
@@ -366,7 +416,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.deceasedDateTime"
+              "code": "Patient.deceasedDateTime",
+              "display": "Patient.deceasedDateTime"
             }
           ]
         },
@@ -376,7 +427,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.deceasedBoolean"
+              "code": "Patient.deceasedBoolean",
+              "display": "Patient.deceasedBoolean",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PID-29 NOT VALUED\\"
+                }
+              ]
             }
           ]
         },
@@ -386,7 +444,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.meta.lastUpdated"
+              "code": "Patient.meta.lastUpdated",
+              "display": "Patient.meta.lastUpdated"
             }
           ]
         },
@@ -395,9 +454,10 @@
           "display": "Taxonomic Classification Code",
           "target": [
             {
-              "comment": "A voacabulary map may not be worth the lift given there is no HL7 table associated with this element",
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-animal.species"
+              "code": "Patient.extension-patient-animal.species",
+              "display": "Patient.extension-patient-animal.species",
+              "comment": "A voacabulary map may not be worth the lift given there is no HL7 table associated with this element"
             }
           ]
         },
@@ -406,9 +466,10 @@
           "display": "Breed Code",
           "target": [
             {
-              "comment": "A voacabulary map may not be worth the lift given that the associated HL7 table (HL70447) has no suggested values",
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-animal.breed"
+              "code": "Patient.extension-patient-animal.breed",
+              "display": "Patient.extension-patient-animal.breed",
+              "comment": "A voacabulary map may not be worth the lift given that the associated HL7 table (HL70447) has no suggested values"
             }
           ]
         },
@@ -417,9 +478,10 @@
           "display": "Tribal Citizenship",
           "target": [
             {
-              "comment": "The standard extension does not include a value set.  Also suggest that the extension should not be limited to \"country\".  Consider adding a .type to the extension to distinguish tribal vs. \"country\" (or whatever we call it), or otherwise add an extension for tribal citizenship to accommodate the return flow.",
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-citizenship[2].code"
+              "code": "Patient.extension-patient-citizenship[2].code",
+              "display": "Patient.extension-patient-citizenship[2].code",
+              "comment": "The standard extension does not include a value set.  Also suggest that the extension should not be limited to \"country\".  Consider adding a .type to the extension to distinguish tribal vs. \"country\" (or whatever we call it), or otherwise add an extension for tribal citizenship to accommodate the return flow."
             }
           ]
         },
@@ -429,7 +491,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[3]"
+              "code": "Patient.telecom[3]",
+              "display": "Patient.telecom[3]"
             }
           ]
         }

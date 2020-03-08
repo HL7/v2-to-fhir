@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-al1-to-allergyintolerance",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 AL1 Segment to the FHIR AllergyIntolerance Resource representing that segment.",
-  "url": "http://hl7.org/fhir/v2-tofhir",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 AL1 Segment to the FHIR AllergyIntolerance Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-al1-to-allergyintolerance",
   "version": "1.0",
   "name": "Segment_AL1_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-01",
+  "date": "2020-03-08",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -20,8 +20,8 @@
     }
   ],
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
-  "sourceUri": "https://www.hl7.org/v2",
-  "targetUri": "https://www.hl7.org/fhir",
+  "sourceUri": "AL1",
+  "targetUri": "AllergyIntolerance",
   "group": [
     {
       "element": [
@@ -30,9 +30,10 @@
           "display": "Allergen Type Code",
           "target": [
             {
-              "comment": "The FHIR table has a \"required\" binding. Do we need to expand the values in the FHIR table?\n\nCould other be used for:\nMiscellaneous allergy\nMiscellaneous contraindication\nAnimal Allergy\n\nHL70127 is a user defined table",
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.category"
+              "code": "AllergyIntolerance.category",
+              "display": "AllergyIntolerance.category",
+              "comment": "The FHIR table has a \"required\" binding. Do we need to expand the values in the FHIR table?\n\nCould other be used for:\nMiscellaneous allergy\nMiscellaneous contraindication\nAnimal Allergy\n\nHL70127 is a user defined table\\"
             }
           ]
         },
@@ -42,7 +43,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.type"
+              "code": "AllergyIntolerance.type",
+              "display": "AllergyIntolerance.type"
             }
           ]
         },
@@ -52,7 +54,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.code"
+              "code": "AllergyIntolerance.code",
+              "display": "AllergyIntolerance.code"
             }
           ]
         },
@@ -61,9 +64,16 @@
           "display": "Allergy Severity Code",
           "target": [
             {
-              "comment": "HL70128 is a user defined table\nConsider using AllergyIntolerance.criticality",
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.reaction.severity"
+              "code": "AllergyIntolerance.reaction.severity",
+              "display": "AllergyIntolerance.reaction.severity",
+              "comment": "HL70128 is a user defined table\nConsider using AllergyIntolerance.criticality\\",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "AND If severity was used equivalent to severity in FHIR"
+                }
+              ]
             }
           ]
         },
@@ -74,7 +84,13 @@
             {
               "equivalence": "equivalent",
               "code": "AllergyIntolerance.reaction.severity.extension-data-absent-reason",
-              "display": "= \"unknown\""
+              "display": "= \"unknown\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "AND If severity was used equivalent to severity in FHIR"
+                }
+              ]
             }
           ]
         },
@@ -84,7 +100,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.criticality"
+              "code": "AllergyIntolerance.criticality",
+              "display": "AllergyIntolerance.criticality",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If severity was used equivalent to criticality"
+                }
+              ]
             }
           ]
         },
@@ -93,9 +116,10 @@
           "display": "Allergy Reaction Code",
           "target": [
             {
-              "comment": "AllergyIntolerance.reaction can repeat, presumably to capture both multiple manifestations of the reaction (rash and nausea) as well as reactions to independent exposures (last week and last month) - we may want to confirm this understanding.\n\n\n\n",
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.reaction.manifestation.text"
+              "code": "AllergyIntolerance.reaction.manifestation.text",
+              "display": "AllergyIntolerance.reaction.manifestation.text",
+              "comment": "AllergyIntolerance.reaction can repeat, presumably to capture both multiple manifestations of the reaction (rash and nausea) as well as reactions to independent exposures (last week and last month) - we may want to confirm this understanding.\\"
             }
           ]
         },
@@ -104,9 +128,10 @@
           "display": "Identification Date",
           "target": [
             {
-              "comment": "Withdrawn as of 2.7, Refer to IAM-11 Onset or IAM-13 Reported Date",
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.onsetDateTime"
+              "code": "AllergyIntolerance.onsetDateTime",
+              "display": "AllergyIntolerance.onsetDateTime",
+              "comment": "Withdrawn as of 2.7, Refer to IAM-11 Onset or IAM-13 Reported Date"
             }
           ]
         }

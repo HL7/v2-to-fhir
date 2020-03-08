@@ -1,0 +1,512 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "table-hl70078-to-v3-observationinterpretation",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table HL70078 to the FHIR V3 ObservationInterpretation Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70078-to-v3-observationinterpretation",
+  "version": "1.0",
+  "name": "Table_HL70078_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "HL70078",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "< ",
+          "display": "Off scale low",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "<",
+              "display": "Off scale low"
+            }
+          ]
+        },
+        {
+          "code": "> ",
+          "display": "Off scale high",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": ">",
+              "display": "Off scale high"
+            }
+          ]
+        },
+        {
+          "code": "A",
+          "display": "Abnormal",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "A",
+              "display": "Abnormal"
+            }
+          ]
+        },
+        {
+          "code": "AA",
+          "display": "Critically abnormal",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AA",
+              "display": "Critical abnormal"
+            }
+          ]
+        },
+        {
+          "code": "AC",
+          "display": "Anti-complementary substances present",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AC",
+              "display": "Anti-complementary substances present"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "display": "Better",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "B",
+              "display": "Better"
+            }
+          ]
+        },
+        {
+          "code": "CAR",
+          "display": "Carrier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CAR",
+              "display": "Carrier"
+            }
+          ]
+        },
+        {
+          "code": "D",
+          "display": "Significant change down",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "D",
+              "display": "Significant change down"
+            }
+          ]
+        },
+        {
+          "code": "DET",
+          "display": "Detected",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DET",
+              "display": "Detected"
+            }
+          ]
+        },
+        {
+          "code": "E",
+          "display": "Equivocal",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "E",
+              "display": "Equivocal"
+            }
+          ]
+        },
+        {
+          "code": "EX",
+          "display": "outside threshold",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "EX",
+              "display": "outside threshold"
+            }
+          ]
+        },
+        {
+          "code": "EXP",
+          "display": "Expected",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "EXP",
+              "display": "Expected"
+            }
+          ]
+        },
+        {
+          "code": "H",
+          "display": "High",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "H",
+              "display": "High"
+            }
+          ]
+        },
+        {
+          "code": "HH",
+          "display": "Critically high",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "HH",
+              "display": "Critical high"
+            }
+          ]
+        },
+        {
+          "code": "HM",
+          "display": "Hold for Medical Review",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "HU",
+          "display": "Very high",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "HU",
+              "display": "Significantly high"
+            }
+          ]
+        },
+        {
+          "code": "I",
+          "display": "Intermediate",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "I",
+              "display": "Intermediate"
+            }
+          ]
+        },
+        {
+          "code": "IE",
+          "display": "Insufficient evidence",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "IE",
+              "display": "Insufficient evidence"
+            }
+          ]
+        },
+        {
+          "code": "IND",
+          "display": "Indeterminate",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "IND",
+              "display": "Indeterminate"
+            }
+          ]
+        },
+        {
+          "code": "L",
+          "display": "Low",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "L",
+              "display": "Low"
+            }
+          ]
+        },
+        {
+          "code": "LL",
+          "display": "Critically low",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "LL",
+              "display": "Critical low"
+            }
+          ]
+        },
+        {
+          "code": "LU",
+          "display": "Very low",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "LU",
+              "display": "Significantly low"
+            }
+          ]
+        },
+        {
+          "code": "MS",
+          "display": "Moderately susceptible. Indicates for microbiology susceptibilities only.",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "Normal",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "N",
+              "display": "Normal"
+            }
+          ]
+        },
+        {
+          "code": "NCL",
+          "display": "No CLSI defined breakpoint",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NCL",
+              "display": "No CLSI defined breakpoint"
+            }
+          ]
+        },
+        {
+          "code": "ND",
+          "display": "Not Detected",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ND",
+              "display": "Not detected"
+            }
+          ]
+        },
+        {
+          "code": "NEG",
+          "display": "Negative",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NEG",
+              "display": "Negative"
+            }
+          ]
+        },
+        {
+          "code": "NR",
+          "display": "Non-reactive",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NR",
+              "display": "Non-reactive"
+            }
+          ]
+        },
+        {
+          "code": "NS",
+          "display": "Non-susceptible",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NS",
+              "display": "Non-susceptible"
+            }
+          ]
+        },
+        {
+          "code": "null",
+          "display": "No range defined, or normal ranges don’t apply",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "OBX",
+          "display": "Interpretation qualifiers in separate OBX segments",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "POS",
+          "display": "Positive",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "POS",
+              "display": "Positive"
+            }
+          ]
+        },
+        {
+          "code": "QCF",
+          "display": "Quality Control Failure",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "R",
+          "display": "Resistant",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "R",
+              "display": "Resistant"
+            }
+          ]
+        },
+        {
+          "code": "RR",
+          "display": "Reactive",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RR",
+              "display": "Reactive"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "display": "Susceptible",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "S",
+              "display": "Susceptible"
+            }
+          ]
+        },
+        {
+          "code": "SDD",
+          "display": "Susceptible-dose dependent",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SDD",
+              "display": "Susceptible-dose dependent"
+            }
+          ]
+        },
+        {
+          "code": "SYN-R",
+          "display": "Synergy – resistant",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SYN-R",
+              "display": "Synergy - resistant"
+            }
+          ]
+        },
+        {
+          "code": "SYN-S",
+          "display": "Synergy – susceptible",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SYN-S",
+              "display": "Synergy - susceptible"
+            }
+          ]
+        },
+        {
+          "code": "TOX",
+          "display": "Cytotoxic substance present",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "Significant change up",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "U",
+              "display": "Significant change up"
+            }
+          ]
+        },
+        {
+          "code": "VS",
+          "display": "Very susceptible. Indicates for microbiology susceptibilities only.",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "UNE",
+          "display": "Unexpected",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "UNE",
+              "display": "Unexpected"
+            }
+          ]
+        },
+        {
+          "code": "W",
+          "display": "Worse",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "W",
+              "display": "Worse"
+            }
+          ]
+        },
+        {
+          "code": "WR",
+          "display": "Weakly reactive",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "WR",
+              "display": "Weakly reactive"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-pd1-to-patient",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 PD1 Segment to the FHIR Patient Resource representing that segment.",
-  "url": "http://hl7.org/fhir/v2-tofhir",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 PD1 Segment to the FHIR Patient Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-pd1-to-patient",
   "version": "1.0",
   "name": "Segment_PD1_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-01",
+  "date": "2020-03-08",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -20,8 +20,8 @@
     }
   ],
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
-  "sourceUri": "https://www.hl7.org/v2",
-  "targetUri": "https://www.hl7.org/fhir",
+  "sourceUri": "PD1",
+  "targetUri": "Patient",
   "group": [
     {
       "element": [
@@ -30,9 +30,10 @@
           "display": "Patient Primary Facility",
           "target": [
             {
-              "comment": "Is Patient.managingOrganization better?",
               "equivalence": "equivalent",
-              "code": "Patient.generalPractitioner(Organization)"
+              "code": "Patient.generalPractitioner(Organization)",
+              "display": "Patient.generalPractitioner(Organization)",
+              "comment": "Is Patient.managingOrganization better?"
             }
           ]
         },
@@ -42,7 +43,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.generalPractitioner(PractitionerRole)"
+              "code": "Patient.generalPractitioner(PractitionerRole)",
+              "display": "Patient.generalPractitioner(PractitionerRole)"
             }
           ]
         },
@@ -51,9 +53,10 @@
           "display": "Handicap",
           "target": [
             {
-              "comment": "The FHIR extension does not include a value set",
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-disability"
+              "code": "Patient.extension-patient-disability",
+              "display": "Patient.extension-patient-disability",
+              "comment": "The FHIR extension does not include a value set"
             }
           ]
         },
@@ -63,7 +66,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-congregation"
+              "code": "Patient.extension-patient-congregation",
+              "display": "Patient.extension-patient-congregation"
             }
           ]
         },
@@ -73,7 +77,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.active"
+              "code": "Patient.active",
+              "display": "Patient.active"
             }
           ]
         }

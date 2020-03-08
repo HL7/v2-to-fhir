@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-dg1-to-condition",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 DG1 Segment to the FHIR Condition Resource representing that segment.",
-  "url": "http://hl7.org/fhir/v2-tofhir",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 DG1 Segment to the FHIR Condition Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-dg1-to-condition",
   "version": "1.0",
   "name": "Segment_DG1_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-01",
+  "date": "2020-03-08",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -20,8 +20,8 @@
     }
   ],
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
-  "sourceUri": "https://www.hl7.org/v2",
-  "targetUri": "https://www.hl7.org/fhir",
+  "sourceUri": "DG1",
+  "targetUri": "Condition",
   "group": [
     {
       "element": [
@@ -31,7 +31,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Condition.code"
+              "code": "Condition.code",
+              "display": "Condition.code"
             }
           ]
         },
@@ -40,9 +41,10 @@
           "display": "Diagnosis Description",
           "target": [
             {
-              "comment": "Doesn't warrant mapping",
               "equivalence": "equivalent",
-              "code": "Condition.code.text"
+              "code": "Condition.code.text",
+              "display": "Condition.code.text",
+              "comment": "Doesn't warrant mapping"
             }
           ]
         },
@@ -51,9 +53,10 @@
           "display": "Diagnosis Date/Time",
           "target": [
             {
-              "comment": "Should confirm that these two concepts are equivalent. Condition.recordedDate is also available",
               "equivalence": "equivalent",
-              "code": "Condition.onsetDateTime"
+              "code": "Condition.onsetDateTime",
+              "display": "Condition.onsetDateTime",
+              "comment": "Should confirm that these two concepts are equivalent. Condition.recordedDate is also available"
             }
           ]
         },
@@ -63,7 +66,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.diagnosis.use"
+              "code": "Encounter.diagnosis.use",
+              "display": "Encounter.diagnosis.use",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF DG1-6 EQUALS \"admitting\"\\"
+                }
+              ]
             }
           ]
         },
@@ -73,7 +83,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.diagnosis.use"
+              "code": "Encounter.diagnosis.use",
+              "display": "Encounter.diagnosis.use",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If in context of an encounter"
+                }
+              ]
             }
           ]
         },
@@ -83,7 +100,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "EpisodeOfCare.diagnose.role"
+              "code": "EpisodeOfCare.diagnose.role",
+              "display": "EpisodeOfCare.diagnose.role",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If in context of an episode of care"
+                }
+              ]
             }
           ]
         },
@@ -92,9 +116,10 @@
           "display": "Diagnosing Clinician",
           "target": [
             {
-              "comment": "Condition.recorder is also an option. Neither of these fields can repeat like DG1-16 can.",
               "equivalence": "equivalent",
-              "code": "Condition.asserter(Practitioner)"
+              "code": "Condition.asserter(Practitioner)",
+              "display": "Condition.asserter(Practitioner)",
+              "comment": "Condition.recorder is also an option. Neither of these fields can repeat like DG1-16 can."
             }
           ]
         },
@@ -103,9 +128,10 @@
           "display": "Attestation Date/Time",
           "target": [
             {
-              "comment": "It is unclear whether to use recorded or asserted date.  What is your opinion?",
               "equivalence": "equivalent",
-              "code": "Condition.extension-assertedDate"
+              "code": "Condition.extension-assertedDate",
+              "display": "Condition.extension-assertedDate",
+              "comment": "It is unclear whether to use recorded or asserted date.  What is your opinion?"
             }
           ]
         },
@@ -114,9 +140,10 @@
           "display": "Attestation Date/Time",
           "target": [
             {
-              "comment": "It is unclear whether to use recorded or asserted date.  What is your opinion?",
               "equivalence": "equivalent",
-              "code": "Condition.recordedDate"
+              "code": "Condition.recordedDate",
+              "display": "Condition.recordedDate",
+              "comment": "It is unclear whether to use recorded or asserted date.  What is your opinion?"
             }
           ]
         },
@@ -125,9 +152,10 @@
           "display": "Diagnosis Identifier",
           "target": [
             {
-              "comment": "We should confirm that this is truly a unique ID before it gets used as .id. It may need to be combined with a visit ID to make it fully unique.",
               "equivalence": "equivalent",
-              "code": "Condition.identifier"
+              "code": "Condition.identifier",
+              "display": "Condition.identifier",
+              "comment": "We should confirm that this is truly a unique ID before it gets used as .id. It may need to be combined with a visit ID to make it fully unique."
             }
           ]
         },
@@ -136,10 +164,10 @@
           "display": "Diagnosis Action Code",
           "target": [
             {
-              "comment": "Other values (A and U) don't map to anything",
               "equivalence": "equivalent",
               "code": "Condition.verificationStatus.coding.code",
-              "display": "= \"entered-in-error\""
+              "display": "= \"entered-in-error\"",
+              "comment": "Other values (A and U) don't map to anything"
             }
           ]
         },
@@ -159,9 +187,10 @@
           "display": "Parent Diagnosis",
           "target": [
             {
-              "comment": "Extensions for occurredFollowing and related also exist",
               "equivalence": "equivalent",
-              "code": "Condition.extension-condition-dueTo(Condition)"
+              "code": "Condition.extension-condition-dueTo(Condition)",
+              "display": "Condition.extension-condition-dueTo(Condition)",
+              "comment": "Extensions for occurredFollowing and related also exist"
             }
           ]
         }

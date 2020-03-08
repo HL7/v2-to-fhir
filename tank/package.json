@@ -1,5 +1,5 @@
 {
-  "name": "v2-tofhir",
+  "name": "hl7.fhir.uv.v2-tofhir",
   "version": "0.1.0",
   "canonical": "http://hl7.org/fhir/v2-tofhir",
   "url": "http://hl7.org/fhir/v2-tofhir",
@@ -18,7 +18,7 @@
   "maintainers": [
     {
       "name": "HL7 Orders and Observations Workgroup",
-      "email": "v2-to-fhir@lists.hl7.org"
+      "url": "http://hl7.org/Special/committees/orders/index.html"
     },
     {
       "name": "Keith W. Boone",

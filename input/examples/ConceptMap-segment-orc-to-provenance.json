@@ -1,0 +1,309 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-orc-to-provenance",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 ORC Segment to the FHIR Provenance Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-orc-to-provenance",
+  "version": "1.0",
+  "name": "Segment_ORC_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "ORC",
+  "targetUri": "Provenance",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "ORC-1",
+          "display": "Order Control",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.activity.coding.code",
+              "display": "= \"CREATE\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-1 EQUALS \"NW\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORC-1",
+          "display": "Order Control",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.activity.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-1 EQUALS \"NW\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORC-1",
+          "display": "Order Control",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.activity.coding.code",
+              "display": "= \"UPDATE\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-1 EQUALS \"SC\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORC-1",
+          "display": "Order Control",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.activity.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-1 EQUALS \"SC\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORC-1",
+          "display": "Order Control",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.activity.coding.code",
+              "display": "= \"DELETE\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-1 IN (\"OC\", \"CA\")\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORC-1",
+          "display": "Order Control",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.activity.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-1 IN (\"OC\", \"CA\")\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORC-9",
+          "display": "Date/Time of Transaction",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.recorded",
+              "display": "Provenance.recorded"
+            }
+          ]
+        },
+        {
+          "code": "ORC-9",
+          "display": "Date/Time of Transaction",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.occurredDateTime",
+              "display": "Provenance.occurredDateTime"
+            }
+          ]
+        },
+        {
+          "code": "ORC-10",
+          "display": "Entered By",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent[1].who(Practitioner)",
+              "display": "Provenance.agent[1].who(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "ORC-10",
+          "display": "Entered By",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent[1].type.coding.code",
+              "display": "= \"enterer\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-10",
+          "display": "Entered By",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent[1].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-11",
+          "display": "Verified By",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent[2].who(Practitioner)",
+              "display": "Provenance.agent[2].who(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "ORC-11",
+          "display": "Verified By",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent[2].type.coding.code",
+              "display": "= \"verifier\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-11",
+          "display": "Verified By",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent[2].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-12",
+          "display": "Ordering Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent[3].who(Practitioner)",
+              "display": "Provenance.agent[3].who(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "ORC-12",
+          "display": "Ordering Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent[3].type.coding.code",
+              "display": "= \"author\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-12",
+          "display": "Ordering Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent[3].type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
+            }
+          ]
+        },
+        {
+          "code": "ORC-17",
+          "display": "Entering Organization",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent[1].onBehalfOf(Organization)",
+              "display": "Provenance.agent[1].onBehalfOf(Organization)"
+            }
+          ]
+        },
+        {
+          "code": "ORC-21",
+          "display": "Ordering Facility Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.location(Location[1])",
+              "display": "Provenance.location(Location[1])"
+            }
+          ]
+        },
+        {
+          "code": "ORC-22",
+          "display": "Ordering Facility Address",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.location(Location[1].address)",
+              "display": "Provenance.location(Location[1].address)"
+            }
+          ]
+        },
+        {
+          "code": "ORC-23",
+          "display": "Ordering Facility Phone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.location(Location[1].telecom)",
+              "display": "Provenance.location(Location[1].telecom)"
+            }
+          ]
+        },
+        {
+          "code": "ORC-24",
+          "display": "Ordering Provider Address",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent[3].who(Practitioner.address)",
+              "display": "Provenance.agent[3].who(Practitioner.address)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

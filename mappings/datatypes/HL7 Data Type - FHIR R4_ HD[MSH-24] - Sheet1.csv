@@ -1,0 +1,14 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Derived Mapping,,
+1,HD.1,Namespace ID,IS,0,1,,,,,MessageHeader.source.name???,string,,,,,,"Not sure whether used, and if used, what a reasonable extension name would be.  We believe that source.endpoint should be Universal ID when both Namespace ID and Universal ID are valued.",
+1,HD.1,Namespace ID,IS,0,1,IF HD.1 VALUED,,,Provenance.agent.who(Device.identifier[f1].value),,string,,,,,,"When communication goes from A to B to C where B is a hop inbetween where the transformation to FHIR occurs, then it creates a Provenance to represent original A, as well a s Provenance instance for the transformation.
+
+Provenance.agent.who(Device.identifier.system) is NOT valued.",
+1,HD.1,Namespace ID,IS,0,1,IF HD.1 VALUED,,,Provenance.target[1](MessageHeader.target=MessageHeader.id),,,,,,,,,
+2,HD.2,Universal ID,ST,0,1,"IF HD.3 EQUALS ""URI""",,,MessageHeader.source.endpoint,,string,,,,,,,
+2,HD.2,Universal ID,ST,0,1,"IF HD.3 NOT EQUALS ""URI"" ",,,,MessageHeader.source.#ext-universalID#,string,0,1,,,,Request specific ballot feedback on this vs. going down the assigner(Organization...) path.,
+2,HD.2,Universal ID,ST,0,1,"IF HD.3 IN (""ISO"", ""UUID"")",,,"Provenance.agent.who(Device.identifier[2].system=""urn:ietf:rfc:3986"")",,string,,,,,,,
+2,HD.2,Universal ID,ST,0,1,IF HD.2 VALUED,,,Provenance.target[1](MessageHeader.target=MessageHeader.id),,,,,,,,,
+3,HD.3,Universal ID Type,ID,0,1,,,,,MessageHeader.source.#ext-universalIDType#,code,0,1,Universal ID Type,,,Request specific ballot feedback on this vs. going down the assigner(Organization...) path.,
+3,HD.3,Universal ID Type,ID,0,1,,,,Provenance.agent.who(Device.identifier[2].type),,code,0,1,Universal ID Type,,,,

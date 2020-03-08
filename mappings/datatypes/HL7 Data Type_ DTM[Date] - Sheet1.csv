@@ -1,0 +1,21 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,Comments
+Display Sequence,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Component,,Data Type,Cardinality,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Derived Mapping,,
+1,DTM.(p1)(1-4),YYYY,ST,1,1,,,,dateTime.(p1)(1-4),,,,,,,,The FHIR instant/dateTime format is YYYY-MM-DDThh:mm:ss.sss+zz:zz
+2.1,DTM.(p1)(5-6),MM,ST,0,1,,,,"dateTime.(p1)(5)=""-""",,,,,,,,
+2.2,(p1)(5-6),MM,ST,0,1,,,,(p1)(6-7),,,,,,,,
+3.1,(p1)(7-8),DD,ST,0,1,,,,"(p1)(8)=""-""",,,,,,,,
+3.2,(p1)(7-8),DD,ST,0,1,,,,(p1)(9-10),,,,,,,,
+4.1,(p1)(9-10),HH,ST,0,1,,,,,,,,,,,,
+4.2,(p1)(9-10),HH,ST,0,1,,,,,,,,,,,,
+5.1,(p1)(11-12),MM,ST,0,1,,,,,,,,,,,,
+5.2,(p1)(11-12),MM,ST,0,1,,,,,,,,,,,,
+6.1,(p1)(13-14),SS,ST,0,1,,,,,,,,,,,,
+6.2,(p1)(13-14),SS,ST,0,1,,,,,,,,,,,,
+7.1,(p1)(16-18),.SSS,ST,0,1,,,,,,,,,,,,
+7.2,(p1)(16-18),.SSS,ST,0,1,,,,,,,,,,,,
+8.1,(p2)(1),+/-,ST,0,1,"IF (p2)(1)=""+""",,,,,,,,,,,
+8.2,(p2)(1),+/-,ST,0,1,"IF (p2)(1)=""-""",,,,,,,,,,,
+8.3,(p2)(2-3),ZZ,ST,0,1,,,,,,,,,,,,
+8.4,(p2)(4-5),ZZ,ST,0,1,,,,,,,,,,,,
+8.5,(p2)(4-5),ZZ,ST,0,1,,,,,,,,,,,,

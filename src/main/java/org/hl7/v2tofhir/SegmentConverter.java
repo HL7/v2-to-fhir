@@ -6,7 +6,6 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
-import org.hl7.v2tofhir.ConverterImpl.Row;
 
 public class SegmentConverter extends ConverterImpl<SegmentInput> implements Converter {
 
@@ -15,43 +14,14 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
         load(f);
     }
 
-    @Override
-    protected Row convert(SegmentInput input) {
-        Row r = new Row();
-        r.condition = String.format("%s // %s%n",
-            StringUtils.defaultString(input.conditionANTLR),
-            StringUtils.defaultString(input.conditionfhirPath));
-        r.conditionDisplay = StringUtils.defaultString(input.conditionNarrative);
-        r.dataType = null;
-        r.targetCode = input.fhirCode;
-        if (StringUtils.isBlank(input.fhirCode) || r.targetCode.toLowerCase().contains("n/a")) {
-            // Discard non-applicable mappings
-            return null;
-        }
-        r.targetDisplay = null;
-        r.sourceCode = input.v2Code;
-        r.sourceDisplay = input.v2Name;
-        r.comments = input.comments;
-        return r;
-    }
+    public void setNames() {
+        SegmentInput bean = super.getFirstMappedBean();
+        if (bean == null) return;
 
-    @Override
-    protected String getSource(SegmentInput bean) {
-        return "https://www.hl7.org/v2";
-    }
-
-    @Override
-    protected String getTarget(SegmentInput bean) {
-        return "https://www.hl7.org/fhir";
-    }
-
-    public String getSourceName(SegmentInput bean) {
-        return parts[2].replace("[","!").replace("]", "");
-    }
-
-    @Override
-    protected String getTargetName(SegmentInput bean) {
-        return StringUtils.substringBefore(bean.fhirCode, ".");
+        source = StringUtils.substringBefore(bean.v2Code, "-");
+        sourceName = source;
+        target = StringUtils.substringBefore(bean.fhirCode.replace("[", "."), ".");
+        targetName = target;
     }
 
     @Override
@@ -63,17 +33,40 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
         String heads[] = {
             "Sort Order", "Identifier", "Name", "Data Type", "Cardinality - Min", "Cardinality - Max",
             "Computable ANTLR", "Computable FHIRPath", "Narrative",
-            "FHIR Attribute", "Data Type", "Cardinality - Min", "Cardinality - Max",
+            "FHIR Attribute", "Extension", "Data Type", "Cardinality - Min", "Cardinality - Max",
             "Data Type Mapping"
         };
+        String titles[] = {
+            "Rows are listed in sequence of how they appear in the v2 standard. "
+            + "The first column, Sort Order, provides a sort order that can re-create "
+            + "the original v2 standard sequence in case one opts to re-sort/filter the rows.",
+            "Contains the formal Segment Name and Field Sequence according to the base standard using \"-\" as the delimiter.",
+            "The formal name of the field in the most current published version.",
+            "The data type of the field in the most current published version if not deprecated, otherwise "
+            + "the data type at the time it was deprecated and removed.",
+            "The V2 min cardinality expressed numerically.",
+            "The V2 max cardinality expressed numerically.",
+            "Condition in an easy to read syntax (Computable ANTLR)",
+            "Condition in FHIRPath Notation",
+            "Condition expressed in narrative form",
+            "An existing FHIR attribute in the target FHIR version.",
+            "A proposed extension. It will be expressed with #ext-……# around the proposed name. ",
+            "The FHIR attribute’s data type in the target FHIR version.",
+            "The FHIR min cardinality expressed numerically.",
+            "The FHIR max cardinality expressed numerically.",
+            "The URL to the Data Type Map that is to be used for the attribute in this segment."
+        };
+        int i = 0;
         for (String head : heads) {
             if (head.equals("Cardinality - Max") || head.equals("Narrative")) {
-                w.printf("<td style='border-right: 2px'>%s</td>", head);
+                w.printf("<td style='border-right: 2px' title='%s'>%s</td>", titles[i++], head);
             } else {
-                w.printf("<th>%s</th>", head);
+                w.printf("<th title='%s'>%s</th>", titles[i++], head);
             }
         }
-        w.println("<th colspan='3'>Vocabulary Mapping (IS, ID, CE, CNE, CWE)</th></tr></thead>");
+        w.println("<th colspan='3' "
+            + "title='The URL to the Vocabulary Map that is to be "
+            + "used for the coded element for this attribute.'>Vocabulary Mapping (IS, ID, CE, CNE, CWE)</th></tr></thead>");
         w.println("<tbody>");
 
         int count = 0;

@@ -12,14 +12,14 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.opencsv.bean.CsvToBeanBuilder;
 
-public abstract class ConverterImpl<T> implements Converter {
+public abstract class ConverterImpl<T extends Convertible> implements Converter {
     private String filename = null;
     File theSource;
     protected String parts[] = null;
     private String type;
     private List<T> beans;
     private Class<T> classType;
-    private String source, sourceName, target, targetName;
+    protected String source, sourceName, target, targetName;
 
     public static class Row {
         String sourceCode;
@@ -47,12 +47,23 @@ public abstract class ConverterImpl<T> implements Converter {
         theSource = f;
         filename = f.getName();
         parts = filename.split("\\s*[\\._\\-]\\s*");
-        if (parts[0].contains("Concept Map")) {
-            type = "ConceptMap";
-        } else if (parts[0].contains("Message")) {
+        if (filename.contains("Message")) {
             type = "Message";
-        } else if (parts[0].contains("Segment")) {
+            source = sourceName = parts[3];
+            target = targetName = "Bundle";
+        } else if (filename.contains("Segment") &&
+                  !filename.contains("Segment Action Code")  // Hack to fix the one file using the word segment that is vocab
+            ) {
             type = "Segment";
+            sourceName = StringUtils.substringBefore(parts[2], "[");
+            targetName = parts[2];
+        } else if (filename.contains("Data Type")) {
+            type = "Datatype";
+            sourceName = StringUtils.substringBefore(parts[2], "[");
+            targetName = parts[2];
+        } else if (filename.contains("Concept Map")) {
+            type = "Table";
+            sourceName = parts[1];
         } else {
         }
 
@@ -60,29 +71,35 @@ public abstract class ConverterImpl<T> implements Converter {
             beans = new CsvToBeanBuilder<T>(r).withType(classType).build().parse();
         }
 
+        setNames();
+    }
+
+    public void setNames() {
         T first = getFirstMappedBean();
 
         if (first == null) {
-            source = cleanId(filename);
-            sourceName = filename;
+            source = cleanId(sourceName);
             target = "Unknown";
-            targetName = "Unknown";
+            if (targetName == null) {
+                targetName = "Unknown";
+            }
         } else {
-            source = getSource(first);
-            sourceName = getSourceName(first);
-            target = getTarget(first);
-            targetName = getTargetName(first);
+            Row r = first.convert();
+            source = r.sourceCode;
+            sourceName = r.sourceDisplay;
+            target = r.targetCode;
+            targetName = r.targetDisplay;
         }
     }
 
-    private T getFirstMappedBean() {
+    protected final T getFirstMappedBean() {
         int count = 0;
         for (T bean : beans) {
             // skip the first two lines
             if (count++ < 2) {
                 continue;
             }
-            Row row = convert(bean);
+            Row row = bean.convert();
             // If there is no conversion, go to the next line
             if (row == null) {
                 continue;
@@ -92,31 +109,57 @@ public abstract class ConverterImpl<T> implements Converter {
         return null;
     }
 
+    public String getSourceFileName() {
+        return theSource.getPath();
+    }
+
+    public String getFishFileName() {
+        return String.format("%s %s to %s.fsh", type, sourceName, targetName);
+    }
+
+    public String getId() {
+        return cleanId(String.format("%s-%s-to-%s", type.toLowerCase(), sourceName, targetName));
+    }
+
+    public String getMdFileName(String prefix, String suffix) {
+        return prefix + "ConceptMap-" + getId() + suffix + ".md";
+    }
+
+    public String getHtmlFileName() {
+        return "ConceptMap-" + getId() + ".html";
+    }
+
     @Override
     public void store(File loc) throws IOException {
         File f;
         File intro;
-        String id = cleanId(String.format("%s-%s-to-%s", type.toLowerCase(), sourceName, targetName));
-        String output = String.format("%s %s to %s.fsh", type, sourceName, targetName);
+        File notes;
+        String id = getId();
+        String output = getFishFileName();
         if (loc.isDirectory()) {
             f = new File(loc, output);
         } else {
             f = loc;
         }
-        intro = new File("input/includes/ConceptMap-" + id + "-intro.md");
+        intro = new File(getMdFileName("input/includes/", "-intro"));
         if (!intro.getParentFile().exists()) {
             intro.getParentFile().mkdirs();
         }
+        notes = new File(getMdFileName("input/includes/", "-notes"));
+        if (!notes.getParentFile().exists()) {
+            notes.getParentFile().mkdirs();
+        }
 
         try (PrintWriter pw = new PrintWriter(new FileWriter(f));
-            PrintWriter introWriter = new PrintWriter(new FileWriter(intro));) {
+            PrintWriter introWriter = new PrintWriter(new FileWriter(intro));
+            PrintWriter notesWriter = new PrintWriter(new FileWriter(notes));) {
             pw.printf("Instance: %s%sto%s%n", type, sourceName.replaceAll(" ", ""), targetName.replaceAll(" ", ""));
             pw.println("InstanceOf: ConceptMap");
             pw.printf("Title: \"%s %s to %s Map\"%n", type, sourceName, targetName);
             pw.printf("* description = \"This ConceptMap represents the mapping from the HL7 V2 %s to the FHIR %s.\"%n",
                 getV2Description(), getFHIRDescription());
             pw.printf("* id = \"%s\"%n", id);
-            pw.printf("* url = \"%s\"%n", "http://hl7.org/fhir/v2-tofhir");
+            pw.printf("* url = \"http://hl7.org/fhir/v2-tofhir/%s\"%n", id);
             pw.println("* version = \"1.0\"");
             pw.printf("* name = \"%s_%s_Map\"%n", type, sourceName);
             pw.println("* status = #active");
@@ -138,21 +181,16 @@ public abstract class ConverterImpl<T> implements Converter {
                     continue;
                 }
                 // Convert the line
-                Row row = convert(bean);
+                Row row = bean.convert();
 
                 // If there is no conversion, go to the next line
                 if (row == null) {
                     continue;
                 }
 
-                pw.printf("* group.element[%d].code = #%s%n", mappedRows, row.sourceCode);
+                pw.printf("* group.element[%d].code = #%s%n", mappedRows, row.sourceCode.trim());
                 if (!StringUtils.isEmpty(row.sourceDisplay)) {
-                    pw.printf("* group.element[%d].display = \"%s\"%n", mappedRows, row.sourceDisplay);
-                }
-
-                if (!StringUtils.isEmpty(row.comments)) {
-                    pw.printf("* group.element[%d].target.comment = \"%s\"%n", mappedRows,
-                        escapeFshString(row.comments));
+                    pw.printf("* group.element[%d].display = \"%s\"%n", mappedRows, escapeFshString(row.sourceDisplay));
                 }
 
                 pw.printf("* group.element[%d].target.equivalence = #%s%n", mappedRows,
@@ -173,7 +211,7 @@ public abstract class ConverterImpl<T> implements Converter {
                         targetCode = parts[0];
                     }
 
-                    pw.printf("* group.element[%d].target.code = #%s%n", mappedRows, targetCode);
+                    pw.printf("* group.element[%d].target.code = #%s%n", mappedRows, targetCode.trim());
                     if (!StringUtils.isEmpty(targetDisplay)) {
                         pw.printf("* group.element[%d].target.display = \"%s\"%n", mappedRows,
                             escapeFshString(targetDisplay));
@@ -188,22 +226,56 @@ public abstract class ConverterImpl<T> implements Converter {
                         pw.printf("* group.element[%d].target.dependsOn[%d].property = \"%s\"%n", mappedRows,
                             dependencies, "ConceptMap");
                         pw.printf("* group.element[%d].target.dependsOn[%d].value = \"%s\"%n", mappedRows, dependencies,
-                            row.mapping);
+                            escapeFshString(row.mapping));
+                        dependencies++;
+                    }
+
+                    if (!StringUtils.isEmpty(row.condition) || !StringUtils.isEmpty(row.conditionDisplay)) {
+                        pw.printf("* group.element[%d].target.dependsOn[%d].property = \"%s\"%n",
+                            mappedRows, dependencies, "value");
+                        if (!StringUtils.isBlank(row.condition)) {
+                            pw.printf("* group.element[%d].target.dependsOn[%d].value = \"%s\"%n", mappedRows, dependencies,
+                                escapeFshString(row.condition));
+                        }
+                        if (!StringUtils.isBlank(row.conditionDisplay)) {
+                            pw.printf("* group.element[%d].target.dependsOn[%d].value = \"%s\"%n", mappedRows, dependencies,
+                                escapeFshString(row.conditionDisplay));
+                        }
                         dependencies++;
                     }
                 }
                 ++mappedRows;
             }
+
             if (introWriter != null) {
                 introWriter.printf(
                     "%nThis ConceptMap represents the mapping from the HL7 V2 %s to the FHIR %s. "
                         + "See also the <a href='https://github.com/HL7/v2-to-fhir/blob/master/tank/%s'>FHIR Shorthand</a> or "
-                        + "the <a href='https://github.com/HL7/v2-to-fhir/blob/master/mappings/%s'>CSV Source</a>.\"%n",
+                        + "the <a href='https://github.com/HL7/v2-to-fhir/blob/master/mappings/%s'>CSV Source</a>.%n",
                         getV2Description(),
                         getFHIRDescription(),
-                        output, StringUtils.substringAfterLast(theSource.getPath(), "mappings/"));
+                        output, StringUtils.substringAfterLast(theSource.getPath().replace("\\","/"), "mappings/"));
 
                 writeIntro(beans, introWriter);
+            }
+            if (notesWriter != null) {
+                // TBD: Address width and style hacks below
+                notesWriter.printf("<div id=\"disqus_thread\" style=\"display: block; width: 640px\"></div>%n" +
+                    "<script>%n" +
+                    "var disqus_config = function () {%n" +
+                    "this.page.url = \"http://build.fhir.org.hl7/v2-to-fhir/branches/master/%s\";  // Replace PAGE_URL with your page's canonical URL variable%n" +
+                    "this.page.identifier = \"%s\"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable%n" +
+                    "};%n" +
+                    "(function() { // DON'T EDIT BELOW THIS LINE%n" +
+                    "var d = document, s = d.createElement('script');%n" +
+                    "s.src = 'https://v2-to-fhir.disqus.com/embed.js';%n" +
+                    "s.setAttribute('data-timestamp', +new Date());%n" +
+                    "(d.head || d.body).appendChild(s);%n" +
+                    "})();%n" +
+                    "</script>%n" +
+                    "<noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>%n",
+                    getHtmlFileName(), id
+                    );
             }
         } catch (IOException ioex) {
             ioex.printStackTrace();
@@ -212,30 +284,42 @@ public abstract class ConverterImpl<T> implements Converter {
 
     private Object getFHIRDescription() {
         switch (type) {
-        case "ConceptMap":
+        case "Table":
             return String.format("%s Value Set", getTargetName());
         case "Message":
-            return String.format("Message Bundle representing that message", getTargetName());
+            return String.format("Message Bundle", getTargetName());
         case "Segment":
-            return String.format("%s Resource representing that segment", getTargetName());
+            return String.format("%s Resource", getTargetName());
+        case "Data Type":
+            return String.format("%s", getTargetName());
         }
         return null;
     }
 
     private Object getV2Description() {
         switch (type) {
-        case "ConceptMap":
+        case "Table":
             return String.format("Table %s", getSourceName());
         case "Message":
             return String.format("%s Message", getSourceName());
         case "Segment":
             return String.format("%s Segment", getSourceName());
+        case "Data Type":
+            return String.format("%s Data Type", getSourceName());
         }
         return null;
     }
 
     protected String escapeFshString(String comments) {
-        return comments.replace("\"", "\\\"");
+        String value = comments.replace("\r", "");
+        // If there is a newline, use Sushi """ syntax
+        if (value.contains("\n")) {
+            value = "\"\"\n" + value.trim() + "\\\n\"\"";
+        } else {
+            // Only do quote escaping if not in a multiline string.
+            value = value.replace("\"", "\\\"");
+        }
+        return value.trim();
     }
 
     protected String escapeHtmlString(String html) {
@@ -257,14 +341,6 @@ public abstract class ConverterImpl<T> implements Converter {
             64);
     }
 
-    protected abstract String getSource(T bean);
-
-    protected abstract String getSourceName(T bean);
-
-    protected abstract String getTarget(T bean);
-
-    protected abstract String getTargetName(T bean);
-
     @Override
     public String getSourceName() {
         return sourceName;
@@ -279,7 +355,5 @@ public abstract class ConverterImpl<T> implements Converter {
     public void store() throws IOException {
         store(new File("."));
     }
-
-    protected abstract Row convert(T input);
 
 }

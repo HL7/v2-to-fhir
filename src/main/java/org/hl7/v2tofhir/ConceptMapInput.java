@@ -1,8 +1,11 @@
 package org.hl7.v2tofhir;
 
+import org.apache.commons.lang3.StringUtils;
+import org.hl7.v2tofhir.ConverterImpl.Row;
+
 import com.opencsv.bean.CsvBindByPosition;
 
-public class ConceptMapInput {
+public class ConceptMapInput implements Convertible, Cloneable {
     // HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,
     // Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System
     // F,Female,HL70001,,,,female,,Female,http://hl7.org/fhir/administrative-gender
@@ -29,4 +32,29 @@ public class ConceptMapInput {
     String fhirCodeSystem;
     @CsvBindByPosition(position=10)
     String comments;
+    @Override
+    public Row convert() {
+        Row r = new Row();
+        if (StringUtils.isBlank(this.v2CodeSystem)) {
+            return null;
+        }
+        r.condition = getCondition(this.conditionANTLR, this.conditionfhirPath);
+        r.conditionDisplay = StringUtils.defaultString(this.conditionNarrative);
+        r.dataType = null;
+        r.targetCode = this.fhirCode;
+        r.targetDisplay = this.fhirDisplay;
+        r.sourceCode = this.v2Code;
+        r.sourceDisplay = this.v2Text;
+        r.comments = this.comments;
+        return r;
+    }
+
+    public ConceptMapInput copy() {
+        try {
+            return (ConceptMapInput) clone();
+        } catch (CloneNotSupportedException e) {
+            // Not going to happen
+            return null;
+        }
+    }
 }

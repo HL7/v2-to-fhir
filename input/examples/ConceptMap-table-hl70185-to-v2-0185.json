@@ -1,0 +1,97 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "table-hl70185-to-v2-0185",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table HL70185 to the FHIR V2 0185 Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70185-to-v2-0185",
+  "version": "1.0",
+  "name": "Table_HL70185_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "HL70185",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v2-0185",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "B",
+          "display": "Beeper Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "B",
+              "display": "Beeper Number"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "display": "Cellular Phone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "C",
+              "display": "Cellular Phone Number"
+            }
+          ]
+        },
+        {
+          "code": "E",
+          "display": "E-Mail Address (for backward compatibility)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "E",
+              "display": "E-Mail Address (for backward compatibility)"
+            }
+          ]
+        },
+        {
+          "code": "F",
+          "display": "FAX Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "F",
+              "display": "FAX Number"
+            }
+          ]
+        },
+        {
+          "code": "H",
+          "display": "Home Phone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "H",
+              "display": "Home Phone Number"
+            }
+          ]
+        },
+        {
+          "code": "O",
+          "display": "Office Phone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "O",
+              "display": "Office Phone Number"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

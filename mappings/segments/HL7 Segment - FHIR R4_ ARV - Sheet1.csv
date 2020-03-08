@@ -1,0 +1,13 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",,
+1,ARV-1,Set ID,SI,0,1,,,,N/A,,,,,,,,
+2,ARV-2,Access Restriction Action Code,CNE,1,1,,,if mapped to a restful service to progress the message.,,,,,,,Segment Action Code,,
+3,ARV-3,Access Restriction Value,CWE,1,1,,,,Resource.meta.security[1],,coding,0,-1,CWE[Coding],Access Restriction Value,,
+4,ARV-4,Access Restriction Reason,CWE,0,-1,,,,Resource.meta.security[2],,coding,0,-1,CWE[Coding],Access Restriction Reason Code,,
+5,ARV-5,Special Access Restriction Instructions,ST,0,-1,,,,Resource.meta.security[3].display,,string,0,-1,,,,
+6,ARV-6,AccessRestriction Date Range,DR,0,1,,,,,Resource.meta.security.#ext-accessRestrictionRange#,period,,,,,,
+7,ARV-7,Security Classification Tag,CWE,1,1,,,,Resource.meta.security[4],,coding,0,-1,CWE[Coding],Confidentiality Classification,,
+8,ARV-8,Security Handling Instructions,CWE,0,-1,,,,Resource.meta.security[5],,coding,0,-1,CWE[Coding],Security Label Handling Instructions,,
+9,ARV-9,Access Restriction Message Location,ERL,0,-1,,,,,,,,,ERL,,,
+10,ARV-10,Access Restriction Instance Identifier,EI,0,1,,,,Resource.meta.tag,,coding,0,-1,EI[Coding],,,

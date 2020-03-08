@@ -1,0 +1,503 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "message-vxu-v04-to-bundle",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 VXU_V04 Message to the FHIR Message Bundle.",
+  "url": "http://hl7.org/fhir/v2-tofhir/message-vxu-v04-to-bundle",
+  "version": "1.0",
+  "name": "Message_VXU_V04_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "VXU_V04",
+  "targetUri": "Bundle",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "VXU_V04.MSH",
+          "display": "Message Header Segment",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MessageHeader[1]",
+              "display": "MessageHeader[1]"
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.MSH",
+          "display": "Message Header Segment",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance[1]",
+              "display": "Provenance[1]"
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.MSH",
+          "display": "Message Header Segment",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance[2]",
+              "display": "Provenance[2]"
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.SFT",
+          "display": "Software",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MessageHeader[1]",
+              "display": "MessageHeader[1]"
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PID",
+          "display": "Patient Identification Segment",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]"
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PD1",
+          "display": "Additional Demographics",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]"
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.NK1",
+          "display": "Next of Kin/Associated Parties",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson[1]",
+              "display": "RelatedPerson[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.NK1",
+          "display": "Next of Kin/Associated Parties",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1].contact",
+              "display": "Patient[1].contact",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PATIENT_VISIT.PV1",
+          "display": "Patient Visit",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter[1]",
+              "display": "Encounter[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "Only if the system wants to know about the encounter related to the immunization event"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PATIENT_VISIT.PV2",
+          "display": "Patient Visit – Additional Info",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter[1]",
+              "display": "Encounter[1]"
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PERSON_OBSERVATION.OBX",
+          "display": "Observation/Result",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation[1]",
+              "display": "Observation[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF OBX-5 LST.count LESS THAN OR EQUALS 1\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PERSON_OBSERVATION.OBX",
+          "display": "Observation/Result",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation[1]",
+              "display": "Observation[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF OBX-5 LST.count GREATER THAN 1\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PERSON_OBSERVATION.PRT",
+          "display": "Participation (for Observation)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Device[1]",
+              "display": "Device[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PRT-10 VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PERSON_OBSERVATION.PRT",
+          "display": "Participation (for Observation)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation[1]",
+              "display": "Observation[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PRT-9 VALUED OR IF PRT-14 VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PERSON_OBSERVATION.PRT",
+          "display": "Participation (for Observation)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole[1]",
+              "display": "PractitionerRole[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PRT-5 VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PERSON_OBSERVATION.NTE",
+          "display": "Notes (Regarding Patient Observation)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation[1].note",
+              "display": "Observation[1].note"
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.ORC",
+          "display": "Common Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization[1]",
+              "display": "Immunization[1]"
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.ORC",
+          "display": "Common Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest[1]",
+              "display": "ServiceRequest[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "Only if the system wants to know about the order that lead to the immunization event"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.PRT",
+          "display": "Participation (for ORC)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole[2]",
+              "display": "PractitionerRole[2]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.PRT",
+          "display": "Participation (for ORC)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization[1].performer.function.coding.code",
+              "display": "= \"OP'\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.PRT",
+          "display": "Participation (for ORC)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization[1].performer.function.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0443\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.PRT",
+          "display": "Participation (for ORC)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole[3]",
+              "display": "PractitionerRole[3]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"AP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.PRT",
+          "display": "Participation (for ORC)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization[1].performer.function.coding.code",
+              "display": "= \"AP'\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"AP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.PRT",
+          "display": "Participation (for ORC)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization[1].performer.function.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0443\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"AP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.RXA",
+          "display": "Pharmacy Administration Segment",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization[1]",
+              "display": "Immunization[1]"
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.RXR",
+          "display": "Pharmacy Route",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization[1]",
+              "display": "Immunization[1]"
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.OBSERVATION.OBX",
+          "display": "Observation/Result",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation[2]",
+              "display": "Observation[2]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "Some observations about the immunization may map to elements within the Immuniation resource rather than an independent Observation resource. For example, funding source, patient eligibility and educational material are often sent as OBX segments but map to Immunization elements.  Specific guidance on how to map, e.g., the US CDC implementation guide on immunizations, will be provided separately at a future time TBD."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.OBSERVATION.OBX",
+          "display": "Observation/Result",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation[2]",
+              "display": "Observation[2]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "Some observations about the immunization may map to elements within the Immuniation resource rather than an independent Observation resource. For example, funding source, patient eligibility and educational material are often sent as OBX segments but map to Immunization elements.  Specific guidance on how to map, e.g., the US CDC implementation guide on immunizations, will be provided separately at a future time TBD."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.OBSERVATION.PRT",
+          "display": "Participation (for Observation)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Device[2]",
+              "display": "Device[2]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PRT-10 VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.OBSERVATION.PRT",
+          "display": "Participation (for Observation)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation[2]",
+              "display": "Observation[2]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PRT-9 VALUED OR IF PRT-14 VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.OBSERVATION.PRT",
+          "display": "Participation (for Observation)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole[4]",
+              "display": "PractitionerRole[4]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PRT-5 VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.ORDER.OBSERVATION.NTE",
+          "display": "Notes (Regarding Immunization)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation[2].note",
+              "display": "Observation[2].note"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

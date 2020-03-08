@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-pv2-to-encounter",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 PV2 Segment to the FHIR Encounter Resource representing that segment.",
-  "url": "http://hl7.org/fhir/v2-tofhir",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 PV2 Segment to the FHIR Encounter Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-pv2-to-encounter",
   "version": "1.0",
   "name": "Segment_PV2_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-01",
+  "date": "2020-03-08",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -20,8 +20,8 @@
     }
   ],
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
-  "sourceUri": "https://www.hl7.org/v2",
-  "targetUri": "https://www.hl7.org/fhir",
+  "sourceUri": "PV2",
+  "targetUri": "Encounter",
   "group": [
     {
       "element": [
@@ -30,9 +30,10 @@
           "display": "Admit Reason",
           "target": [
             {
-              "comment": "PV2-3 doesn't have an associated table so no vocabulary mapping is provided",
               "equivalence": "equivalent",
-              "code": "Encounter.reasonCode"
+              "code": "Encounter.reasonCode",
+              "display": "Encounter.reasonCode",
+              "comment": "PV2-3 doesn't have an associated table so no vocabulary mapping is provided"
             }
           ]
         },
@@ -42,7 +43,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.length.value"
+              "code": "Encounter.length.value",
+              "display": "Encounter.length.value"
             }
           ]
         },
@@ -74,7 +76,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.text.div"
+              "code": "Encounter.text.div",
+              "display": "Encounter.text.div"
             }
           ]
         },
@@ -84,7 +87,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant.individual(Practitioner|PractitionerRole)"
+              "code": "Encounter.participant.individual(Practitioner|PractitionerRole)",
+              "display": "Encounter.participant.individual(Practitioner|PractitionerRole)"
             }
           ]
         },
@@ -127,7 +131,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.priority"
+              "code": "Encounter.priority",
+              "display": "Encounter.priority"
             }
           ]
         },
@@ -137,7 +142,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.extension-encounter-modeOfArrival"
+              "code": "Encounter.extension-encounter-modeOfArrival",
+              "display": "Encounter.extension-encounter-modeOfArrival"
             }
           ]
         }

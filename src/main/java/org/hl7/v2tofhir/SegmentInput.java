@@ -1,8 +1,11 @@
 package org.hl7.v2tofhir;
 
+import org.apache.commons.lang3.StringUtils;
+import org.hl7.v2tofhir.ConverterImpl.Row;
+
 import com.opencsv.bean.CsvBindByPosition;
 
-public class SegmentInput {
+public class SegmentInput implements Cloneable, Convertible {
     /** The V2 coding system */
     @CsvBindByPosition(position=0)
     String v2Sort;
@@ -40,4 +43,29 @@ public class SegmentInput {
     String fhirEmpty;
     @CsvBindByPosition(position=17)
     String comments;
+    public SegmentInput copy() {
+        try {
+            return (SegmentInput) clone();
+        } catch (CloneNotSupportedException e) {
+            // Won't happen
+        }
+        return null;
+    }
+    @Override
+    public Row convert() {
+        Row r = new Row();
+        r.condition = getCondition(this.conditionANTLR, this.conditionfhirPath);
+        r.conditionDisplay = StringUtils.defaultString(this.conditionNarrative);
+        r.dataType = null;
+        r.targetCode = this.fhirCode.trim();
+        if (StringUtils.isBlank(this.fhirCode) || r.targetCode.toLowerCase().contains("n/a")) {
+            // Discard non-applicable mappings
+            return null;
+        }
+        r.targetDisplay = r.targetCode;
+        r.sourceCode = this.v2Code;
+        r.sourceDisplay = this.v2Name;
+        r.comments = this.comments;
+        return r;
+    }
 }

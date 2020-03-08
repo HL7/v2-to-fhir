@@ -1,0 +1,255 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-nk1-to-relatedperson",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 NK1 Segment to the FHIR RelatedPerson Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-nk1-to-relatedperson",
+  "version": "1.0",
+  "name": "Segment_NK1_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "NK1",
+  "targetUri": "RelatedPerson",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "NK1-2",
+          "display": "Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name",
+              "display": "RelatedPerson.name"
+            }
+          ]
+        },
+        {
+          "code": "NK1-3",
+          "display": "Relationship",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.relationship",
+              "display": "RelatedPerson.relationship",
+              "comment": "Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.\nSee https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPersonfor further discussion\\"
+            }
+          ]
+        },
+        {
+          "code": "NK1-4",
+          "display": "Address",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.address[1]",
+              "display": "RelatedPerson.address[1]"
+            }
+          ]
+        },
+        {
+          "code": "NK1-5",
+          "display": "Phone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.telecom[1]",
+              "display": "RelatedPerson.telecom[1]",
+              "comment": "ContactPoint.use would likely be \"home\" or \"mobile\", but picked up from XTN.2"
+            }
+          ]
+        },
+        {
+          "code": "NK1-6",
+          "display": "Business Phone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.telecom[2]",
+              "display": "RelatedPerson.telecom[2]"
+            }
+          ]
+        },
+        {
+          "code": "NK1-6",
+          "display": "Business Phone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.telecom[2].use",
+              "display": "= \"work\""
+            }
+          ]
+        },
+        {
+          "code": "NK1-7",
+          "display": "Contact Role",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.relationship[2]",
+              "display": "RelatedPerson.relationship[2]",
+              "comment": "Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.\nRelatedPerson.relationship is allowed to repeat and so can accept values from both NK1-3 and NK1-7\nSee https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPerson for further discussion\\"
+            }
+          ]
+        },
+        {
+          "code": "NK1-8",
+          "display": "Start Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.period.start",
+              "display": "RelatedPerson.period.start"
+            }
+          ]
+        },
+        {
+          "code": "NK1-9",
+          "display": "End Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.period.end",
+              "display": "RelatedPerson.period.end"
+            }
+          ]
+        },
+        {
+          "code": "NK1-12",
+          "display": "Next of Kin / Associated Parties Employee Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.identifier",
+              "display": "RelatedPerson.identifier"
+            }
+          ]
+        },
+        {
+          "code": "NK1-15",
+          "display": "Administrative Sex",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.gender",
+              "display": "RelatedPerson.gender"
+            }
+          ]
+        },
+        {
+          "code": "NK1-16",
+          "display": "Date/Time of Birth",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.birthDate",
+              "display": "RelatedPerson.birthDate"
+            }
+          ]
+        },
+        {
+          "code": "NK1-20",
+          "display": "Primary Language",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.communication.language",
+              "display": "RelatedPerson.communication.language"
+            }
+          ]
+        },
+        {
+          "code": "NK1-30",
+          "display": "Contact Person's Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name",
+              "display": "RelatedPerson.name",
+              "comment": "Do we need a way in RelatedPerson to distinguish between a \"next of kin\" and a \"contact Person\"?"
+            }
+          ]
+        },
+        {
+          "code": "NK1-31",
+          "display": "Contact Person's Telephone Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.telecom[3]",
+              "display": "RelatedPerson.telecom[3]"
+            }
+          ]
+        },
+        {
+          "code": "NK1-32",
+          "display": "Contact Person's Address",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.address[2]",
+              "display": "RelatedPerson.address[2]"
+            }
+          ]
+        },
+        {
+          "code": "NK1-33",
+          "display": "Next of Kin/Associated Party's Identifiers",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.identifier",
+              "display": "RelatedPerson.identifier"
+            }
+          ]
+        },
+        {
+          "code": "NK1-37",
+          "display": "Contact Person Social Security Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.identifier",
+              "display": "RelatedPerson.identifier"
+            }
+          ]
+        },
+        {
+          "code": "NK1-40",
+          "display": "Next of Kin Telecommunication Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.telecom[4]",
+              "display": "RelatedPerson.telecom[4]"
+            }
+          ]
+        },
+        {
+          "code": "NK1-41",
+          "display": "Contact Person's Telecommunication Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.telecom[5]",
+              "display": "RelatedPerson.telecom[5]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

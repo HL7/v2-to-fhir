@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-iam-to-allergyintolerance",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 IAM Segment to the FHIR AllergyIntolerance Resource representing that segment.",
-  "url": "http://hl7.org/fhir/v2-tofhir",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 IAM Segment to the FHIR AllergyIntolerance Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-iam-to-allergyintolerance",
   "version": "1.0",
   "name": "Segment_IAM_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-01",
+  "date": "2020-03-08",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -20,8 +20,8 @@
     }
   ],
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
-  "sourceUri": "https://www.hl7.org/v2",
-  "targetUri": "https://www.hl7.org/fhir",
+  "sourceUri": "IAM",
+  "targetUri": "AllergyIntolerance",
   "group": [
     {
       "element": [
@@ -31,7 +31,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.category"
+              "code": "AllergyIntolerance.category",
+              "display": "AllergyIntolerance.category"
             }
           ]
         },
@@ -41,7 +42,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.type"
+              "code": "AllergyIntolerance.type",
+              "display": "AllergyIntolerance.type"
             }
           ]
         },
@@ -51,7 +53,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.code[1]"
+              "code": "AllergyIntolerance.code[1]",
+              "display": "AllergyIntolerance.code[1]"
             }
           ]
         },
@@ -61,7 +64,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.reaction.severity"
+              "code": "AllergyIntolerance.reaction.severity",
+              "display": "AllergyIntolerance.reaction.severity"
             }
           ]
         },
@@ -71,7 +75,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.reaction.manifestation.text"
+              "code": "AllergyIntolerance.reaction.manifestation.text",
+              "display": "AllergyIntolerance.reaction.manifestation.text"
             }
           ]
         },
@@ -81,7 +86,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.identifier"
+              "code": "AllergyIntolerance.identifier",
+              "display": "AllergyIntolerance.identifier"
             }
           ]
         },
@@ -91,7 +97,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.onsetDateTime"
+              "code": "AllergyIntolerance.onsetDateTime",
+              "display": "AllergyIntolerance.onsetDateTime"
             }
           ]
         },
@@ -100,9 +107,16 @@
           "display": "Onset Date Text",
           "target": [
             {
-              "comment": "Cannot map to both onsetDateTime and onsetString, so take onsetDateTime if available.",
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.onsetString"
+              "code": "AllergyIntolerance.onsetString",
+              "display": "AllergyIntolerance.onsetString",
+              "comment": "Cannot map to both onsetDateTime and onsetString, so take onsetDateTime if available.",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF IAM-11 NOT VALUED\\"
+                }
+              ]
             }
           ]
         },
@@ -112,7 +126,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recordedDate"
+              "code": "AllergyIntolerance.recordedDate",
+              "display": "AllergyIntolerance.recordedDate"
             }
           ]
         },
@@ -122,7 +137,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(Practitioner.name)"
+              "code": "AllergyIntolerance.recorder.reference(Practitioner.name)",
+              "display": "AllergyIntolerance.recorder.reference(Practitioner.name)",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If IAM-15 is not valued, not always 100% clear this is a practitioner, so much review locally."
+                }
+              ]
             }
           ]
         },
@@ -132,7 +154,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(Patient[1].name)"
+              "code": "AllergyIntolerance.recorder.reference(Patient[1].name)",
+              "display": "AllergyIntolerance.recorder.reference(Patient[1].name)",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF IAM-15 EQUALS \"SEL\"\\"
+                }
+              ]
             }
           ]
         },
@@ -142,7 +171,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(RelatedPerson.name)"
+              "code": "AllergyIntolerance.recorder.reference(RelatedPerson.name)",
+              "display": "AllergyIntolerance.recorder.reference(RelatedPerson.name)",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF IAM-15 VALUED AND NOT \"SEL\"\\"
+                }
+              ]
             }
           ]
         },
@@ -152,7 +188,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(RelatedPerson.relationship)"
+              "code": "AllergyIntolerance.recorder.reference(RelatedPerson.relationship)",
+              "display": "AllergyIntolerance.recorder.reference(RelatedPerson.relationship)",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF IAM-15 VALUED AND NOT \"SEL\"\\"
+                }
+              ]
             }
           ]
         },
@@ -162,7 +205,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.clinicalStatus"
+              "code": "AllergyIntolerance.clinicalStatus",
+              "display": "AllergyIntolerance.clinicalStatus"
             }
           ]
         },
@@ -171,9 +215,10 @@
           "display": "Clinician Identified Code",
           "target": [
             {
-              "comment": "The values are added as additional .coding entries in the CodeableConcept for AllergyIntolerance.code",
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.code[1]"
+              "code": "AllergyIntolerance.code[1]",
+              "display": "AllergyIntolerance.code[1]",
+              "comment": "The values are added as additional .coding entries in the CodeableConcept for AllergyIntolerance.code"
             }
           ]
         }

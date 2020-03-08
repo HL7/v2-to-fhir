@@ -1,0 +1,154 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "table-hl70485-to-request-priority",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table HL70485 to the FHIR Request Priority Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70485-to-request-priority",
+  "version": "1.0",
+  "name": "Table_HL70485_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "HL70485",
+  "targetUri": "http://hl7.org/fhir/request-priority",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "S",
+          "display": "Stat",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "stat",
+              "display": "STAT"
+            }
+          ]
+        },
+        {
+          "code": "A",
+          "display": "ASAP",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "asap",
+              "display": "ASAP"
+            }
+          ]
+        },
+        {
+          "code": "R",
+          "display": "Routine",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "routine",
+              "display": "Routine"
+            }
+          ]
+        },
+        {
+          "code": "P",
+          "display": "Preop",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "display": "Callback",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "T",
+          "display": "Timing critical",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "TS<integer>",
+          "display": "Timing critical within <integer> seconds.",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "TM<integer>",
+          "display": "Timing critical within <integer> minutes.",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "TH<integer>",
+          "display": "Timing critical within <integer> hours.",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "TD<integer>",
+          "display": "Timing critical within <integer> days.",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "TW<integer>",
+          "display": "Timing critical within <integer> weeks.",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "TL<integer>",
+          "display": "Timing critical within <integer> months.",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "PRN",
+          "display": "As needed",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

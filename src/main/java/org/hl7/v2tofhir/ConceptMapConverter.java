@@ -6,6 +6,8 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.text.WordUtils;
+
 
 public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implements Converter {
 
@@ -15,54 +17,13 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
     }
 
     @Override
-    protected Row convert(ConceptMapInput input) {
-        Row r = new Row();
-        if (StringUtils.isBlank(input.v2CodeSystem)) {
-            return null;
-        }
-        r.condition = String.format("%s // %s%n",
-            StringUtils.defaultString(input.conditionANTLR),
-            StringUtils.defaultString(input.conditionfhirPath));
-        r.conditionDisplay = StringUtils.defaultString(input.conditionNarrative);
-        r.dataType = null;
-        r.targetCode = input.fhirCode;
-        r.targetDisplay = input.fhirDisplay;
-        r.sourceCode = input.v2Code;
-        r.sourceDisplay = input.v2Text;
-        r.comments = input.comments;
-        return r;
-    }
-
-    @Override
-    protected String getSource(ConceptMapInput row) {
-        if (row.v2CodeSystem.contains("://")) {
-            return row.v2CodeSystem;
-        }
-        return "http://terminology.hl7.org/CodeSystem/v2-" + row.v2CodeSystem.substring(3);
-    }
-
-    protected String getSourceName(ConceptMapInput row) {
-        return StringUtils.substringAfterLast(getSource(row), "/");
-    }
-
-    @Override
-    protected String getTarget(ConceptMapInput row) {
-        return row.fhirCodeSystem;
-    }
-
-    @Override
-    protected String getTargetName(ConceptMapInput bean) {
-        return parts[1];
-    }
-
-    @Override
     protected void writeIntro(List<ConceptMapInput> beans, PrintWriter w) {
         w.println("<table class='grid'><thead>");
         w.print("<tr><th colspan='3' style='border-right: 2px solid black;'>HL7 v2</th>");
         w.print("<th colspan='3' style='border-right: 2px solid black;'>Condition (IF True, args)</th>");
         w.println("<th colspan='4'>HL7 FHIR</th><th>Comments</th></tr>");
 
-        w.print("<tr><th>Code</th><th>Text</th><th>Computable ANTLR</th><th>Computable FHIRPath</th>");
+        w.print("<tr><th>Code</th><th>Text</th><th>Code System</th><th>Computable ANTLR</th><th>Computable FHIRPath</th><th>Narrative</th>");
         w.println("<th>Code</th><th>&#xA0;</th><th>Display</th><th>Code System</th><th>&#xA0;</th></tr></thead>");
 
         w.println("<tbody>");
@@ -89,6 +50,30 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
             w.println("</tr>");
         }
         w.println("</tbody></table>");
+    }
+
+    public void setNames() {
+        ConceptMapInput bean = super.getFirstMappedBean();
+        if (bean == null) {
+            target = "Unknown";
+            targetName = "Unknown";
+            return;
+        }
+
+        source = bean.v2CodeSystem;
+        sourceName = source;
+        target = bean.fhirCodeSystem;
+        if (StringUtils.isBlank(target)) {
+            target = "Unknown";
+        }
+        targetName = toFhirName(target);
+    }
+
+    private String toFhirName(String target) {
+        if (target.contains("/")) {
+            target = StringUtils.substringAfterLast(target, "/");
+        }
+        return WordUtils.capitalize(target.replace("-", " "));
     }
 
 }

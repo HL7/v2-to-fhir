@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-pv1-to-encounter",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 PV1 Segment to the FHIR Encounter Resource representing that segment.",
-  "url": "http://hl7.org/fhir/v2-tofhir",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 PV1 Segment to the FHIR Encounter Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-pv1-to-encounter",
   "version": "1.0",
   "name": "Segment_PV1_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-01",
+  "date": "2020-03-08",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -20,8 +20,8 @@
     }
   ],
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
-  "sourceUri": "https://www.hl7.org/v2",
-  "targetUri": "https://www.hl7.org/fhir",
+  "sourceUri": "PV1",
+  "targetUri": "Encounter",
   "group": [
     {
       "element": [
@@ -31,7 +31,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.class"
+              "code": "Encounter.class",
+              "display": "Encounter.class"
             }
           ]
         },
@@ -41,18 +42,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.status"
-            }
-          ]
-        },
-        {
-          "code": "PV1-3",
-          "display": "Assigned Patient Location",
-          "target": [
-            {
-              "comment": "Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included.",
-              "equivalence": "equivalent",
-              "code": "Encounter.location[1].location(Location)"
+              "code": "Encounter.status",
+              "display": "Encounter.status",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PV1-45 NOT VALUED\\"
+                }
+              ]
             }
           ]
         },
@@ -62,8 +59,9 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.location[1].status",
-              "display": "= \"active\""
+              "code": "Encounter.location[1].location(Location)",
+              "display": "Encounter.location[1].location(Location)",
+              "comment": "Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included."
             }
           ]
         },
@@ -74,7 +72,30 @@
             {
               "equivalence": "equivalent",
               "code": "Encounter.location[1].status",
-              "display": "= \"planned\""
+              "display": "= \"active\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PV1-2.1 NOT EQUALS \"P\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PV1-3",
+          "display": "Assigned Patient Location",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter.location[1].status",
+              "display": "= \"planned\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF PV1-2.1 EQUALS \"P\"\\"
+                }
+              ]
             }
           ]
         },
@@ -84,7 +105,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.type"
+              "code": "Encounter.type",
+              "display": "Encounter.type"
             }
           ]
         },
@@ -94,7 +116,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.preAdmissionIdentifier"
+              "code": "Encounter.hospitalization.preAdmissionIdentifier",
+              "display": "Encounter.hospitalization.preAdmissionIdentifier"
             }
           ]
         },
@@ -104,7 +127,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.location[2].location(Location)"
+              "code": "Encounter.location[2].location(Location)",
+              "display": "Encounter.location[2].location(Location)"
             }
           ]
         },
@@ -125,7 +149,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[1].individual(Practitioner)"
+              "code": "Encounter.participant[1].individual(Practitioner)",
+              "display": "Encounter.participant[1].individual(Practitioner)"
             }
           ]
         },
@@ -168,7 +193,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[2].individual(Practitioner)"
+              "code": "Encounter.participant[2].individual(Practitioner)",
+              "display": "Encounter.participant[2].individual(Practitioner)"
             }
           ]
         },
@@ -211,7 +237,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[3].individual(Practitioner)"
+              "code": "Encounter.participant[3].individual(Practitioner)",
+              "display": "Encounter.participant[3].individual(Practitioner)"
             }
           ]
         },
@@ -254,7 +281,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.serviceType"
+              "code": "Encounter.serviceType",
+              "display": "Encounter.serviceType"
             }
           ]
         },
@@ -264,7 +292,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.reAdmission"
+              "code": "Encounter.hospitalization.reAdmission",
+              "display": "Encounter.hospitalization.reAdmission"
             }
           ]
         },
@@ -273,9 +302,10 @@
           "display": "Admit Source",
           "target": [
             {
-              "comment": "Table 0023 doesn't have any suggested values, therefore there is no vocabulary mapping",
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.admitSource"
+              "code": "Encounter.hospitalization.admitSource",
+              "display": "Encounter.hospitalization.admitSource",
+              "comment": "Table 0023 doesn't have any suggested values, therefore there is no vocabulary mapping"
             }
           ]
         },
@@ -284,9 +314,10 @@
           "display": "VIP Indicator",
           "target": [
             {
-              "comment": "Depending on the vocabulary used in PV1-16, this may require additional mapping.",
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-importance"
+              "code": "Patient.extension-patient-importance",
+              "display": "Patient.extension-patient-importance",
+              "comment": "Depending on the vocabulary used in PV1-16, this may require additional mapping."
             }
           ]
         },
@@ -296,7 +327,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[4].individual(Practitioner)"
+              "code": "Encounter.participant[4].individual(Practitioner)",
+              "display": "Encounter.participant[4].individual(Practitioner)"
             }
           ]
         },
@@ -338,9 +370,10 @@
           "display": "Visit Number",
           "target": [
             {
-              "comment": "Propose an identifier type of \"visit number\" ",
               "equivalence": "equivalent",
-              "code": "Encounter.identifier[1]"
+              "code": "Encounter.identifier[1]",
+              "display": "Encounter.identifier[1]",
+              "comment": "Propose an identifier type of \"visit number\""
             }
           ]
         },
@@ -362,8 +395,7 @@
             {
               "equivalence": "equivalent",
               "code": "Encounter.identifier[1].type.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\"",
-              "comment": " .  "
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\""
             }
           ]
         },
@@ -374,8 +406,7 @@
             {
               "equivalence": "equivalent",
               "code": "Encounter.identifier[1].type.text",
-              "display": "= \"visit number\"",
-              "comment": " .  "
+              "display": "= \"visit number\""
             }
           ]
         },
@@ -384,9 +415,10 @@
           "display": "Discharge Disposition",
           "target": [
             {
-              "comment": "Table 0112 doesn't have any suggested values, therefore there is no vocabulary mapping",
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.dischargeDisposition"
+              "code": "Encounter.hospitalization.dischargeDisposition",
+              "display": "Encounter.hospitalization.dischargeDisposition",
+              "comment": "Table 0112 doesn't have any suggested values, therefore there is no vocabulary mapping"
             }
           ]
         },
@@ -395,9 +427,10 @@
           "display": "Discharged to Location",
           "target": [
             {
-              "comment": "Encounter.hospitalization.destination.reference=Location[1].id",
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.destination(Location)"
+              "code": "Encounter.hospitalization.destination(Location)",
+              "display": "Encounter.hospitalization.destination(Location)",
+              "comment": "Encounter.hospitalization.destination.reference=Location[1].id"
             }
           ]
         },
@@ -406,9 +439,10 @@
           "display": "Diet Type",
           "target": [
             {
-              "comment": "Table 0114 doesn't have any suggested values, therefore there is no vocabulary mapping",
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.dietPreference"
+              "code": "Encounter.hospitalization.dietPreference",
+              "display": "Encounter.hospitalization.dietPreference",
+              "comment": "Table 0114 doesn't have any suggested values, therefore there is no vocabulary mapping"
             }
           ]
         },
@@ -418,7 +452,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.period.start"
+              "code": "Encounter.period.start",
+              "display": "Encounter.period.start"
             }
           ]
         },
@@ -428,7 +463,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.period.end"
+              "code": "Encounter.period.end",
+              "display": "Encounter.period.end"
             }
           ]
         },
@@ -449,7 +485,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.identifier[2]"
+              "code": "Encounter.identifier[2]",
+              "display": "Encounter.identifier[2]"
             }
           ]
         },
@@ -459,7 +496,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[5].individual(Practitioner)"
+              "code": "Encounter.participant[5].individual(Practitioner)",
+              "display": "Encounter.participant[5].individual(Practitioner)"
             }
           ]
         },
@@ -502,7 +540,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.episodeOfCare(EpisodeOfCare.identifier.value)"
+              "code": "Encounter.episodeOfCare(EpisodeOfCare.identifier)",
+              "display": "Encounter.episodeOfCare(EpisodeOfCare.identifier)"
             }
           ]
         }

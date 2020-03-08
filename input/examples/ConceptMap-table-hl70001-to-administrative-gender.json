@@ -1,0 +1,97 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "table-hl70001-to-administrative-gender",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table HL70001 to the FHIR Administrative Gender Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70001-to-administrative-gender",
+  "version": "1.0",
+  "name": "Table_HL70001_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "HL70001",
+  "targetUri": "http://hl7.org/fhir/administrative-gender",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "F",
+          "display": "Female",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "female",
+              "display": "Female"
+            }
+          ]
+        },
+        {
+          "code": "M",
+          "display": "Male",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "male",
+              "display": "Male"
+            }
+          ]
+        },
+        {
+          "code": "O",
+          "display": "Other",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "other",
+              "display": "Other"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "Unknown",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "unknown",
+              "display": "Unknown"
+            }
+          ]
+        },
+        {
+          "code": "A",
+          "display": "Ambiguous",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "other",
+              "display": "Other"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "Not applicable",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "other",
+              "display": "Other"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

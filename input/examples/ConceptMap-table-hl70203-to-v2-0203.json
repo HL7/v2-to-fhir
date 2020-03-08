@@ -1,0 +1,1219 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "table-hl70203-to-v2-0203",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table HL70203 to the FHIR V2 0203 Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70203-to-v2-0203",
+  "version": "1.0",
+  "name": "Table_HL70203_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-08",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "HL70203",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v2-0203",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "ACSN",
+          "display": "Accession ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ACSN",
+              "display": "Accession ID"
+            }
+          ]
+        },
+        {
+          "code": "AM",
+          "display": "American Express",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AM",
+              "display": "American Express"
+            }
+          ]
+        },
+        {
+          "code": "AMA",
+          "display": "American Medical Association Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AMA",
+              "display": "American Medical Association Number"
+            }
+          ]
+        },
+        {
+          "code": "AN",
+          "display": "Account number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AN",
+              "display": "Account number"
+            }
+          ]
+        },
+        {
+          "code": "ANON",
+          "display": "Anonymous identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ANON",
+              "display": "Anonymous identifier"
+            }
+          ]
+        },
+        {
+          "code": "ANC",
+          "display": "Account number Creditor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ANC",
+              "display": "Account number Creditor"
+            }
+          ]
+        },
+        {
+          "code": "AND",
+          "display": "Account number debitor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AND",
+              "display": "Account number debitor"
+            }
+          ]
+        },
+        {
+          "code": "ANT",
+          "display": "Temporary Account Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ANT",
+              "display": "Temporary Account Number"
+            }
+          ]
+        },
+        {
+          "code": "APRN",
+          "display": "Advanced Practice Registered Nurse number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "APRN",
+              "display": "Advanced Practice Registered Nurse number"
+            }
+          ]
+        },
+        {
+          "code": "ASID",
+          "display": "Ancestor Specimen ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ASID",
+              "display": "Ancestor Specimen ID"
+            }
+          ]
+        },
+        {
+          "code": "BA",
+          "display": "Bank Account Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "BA",
+              "display": "Bank Account Number"
+            }
+          ]
+        },
+        {
+          "code": "BC",
+          "display": "Bank Card Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "BC",
+              "display": "Bank Card Number"
+            }
+          ]
+        },
+        {
+          "code": "BCT",
+          "display": "Birth Certificate",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "BCT",
+              "display": "Birth Certificate"
+            }
+          ]
+        },
+        {
+          "code": "BR",
+          "display": "Birth registry number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "BR",
+              "display": "Birth registry number"
+            }
+          ]
+        },
+        {
+          "code": "BRN",
+          "display": "Breed Registry Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "BRN",
+              "display": "Breed Registry Number"
+            }
+          ]
+        },
+        {
+          "code": "BSNR",
+          "display": "Primary physician office number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "BSNR",
+              "display": "Primary physician office number"
+            }
+          ]
+        },
+        {
+          "code": "CC",
+          "display": "Cost Center number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CC",
+              "display": "Cost Center number"
+            }
+          ]
+        },
+        {
+          "code": "CONM",
+          "display": "Change of Name Document",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CONM",
+              "display": "Change of Name Document"
+            }
+          ]
+        },
+        {
+          "code": "CZ",
+          "display": "Citizenship Card",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CZ",
+              "display": "Citizenship Card"
+            }
+          ]
+        },
+        {
+          "code": "CY",
+          "display": "County number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "CY",
+              "display": "County number"
+            }
+          ]
+        },
+        {
+          "code": "DDS",
+          "display": "Dentist license number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DDS",
+              "display": "Dentist license number"
+            }
+          ]
+        },
+        {
+          "code": "DEA",
+          "display": "Drug Enforcement Administration registration number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DEA",
+              "display": "Drug Enforcement Administration registration number"
+            }
+          ]
+        },
+        {
+          "code": "DI",
+          "display": "Diner’s Club card",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DI",
+              "display": "Diner’s Club card"
+            }
+          ]
+        },
+        {
+          "code": "DFN",
+          "display": "Drug Furnishing or prescriptive authority Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DFN",
+              "display": "Drug Furnishing or prescriptive authority Number"
+            }
+          ]
+        },
+        {
+          "code": "DL",
+          "display": "Driver’s license number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DL",
+              "display": "Driver’s license number"
+            }
+          ]
+        },
+        {
+          "code": "DN",
+          "display": "Doctor number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DN",
+              "display": "Doctor number"
+            }
+          ]
+        },
+        {
+          "code": "DO",
+          "display": "Osteopathic License number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DO",
+              "display": "Osteopathic License number"
+            }
+          ]
+        },
+        {
+          "code": "DP",
+          "display": "Diplomatic Passport",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DP",
+              "display": "Diplomatic Passport"
+            }
+          ]
+        },
+        {
+          "code": "DPM",
+          "display": "Podiatrist license number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DPM",
+              "display": "Podiatrist license number"
+            }
+          ]
+        },
+        {
+          "code": "DR",
+          "display": "Donor Registration Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DR",
+              "display": "Donor Registration Number"
+            }
+          ]
+        },
+        {
+          "code": "DS",
+          "display": "Discover Card",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DS",
+              "display": "Discover Card"
+            }
+          ]
+        },
+        {
+          "code": "EI",
+          "display": "Employee number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "EI",
+              "display": "Employee number"
+            }
+          ]
+        },
+        {
+          "code": "EN",
+          "display": "Employer number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "EN",
+              "display": "Employer number"
+            }
+          ]
+        },
+        {
+          "code": "ESN",
+          "display": "Staff Enterprise Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ESN",
+              "display": "Staff Enterprise Number"
+            }
+          ]
+        },
+        {
+          "code": "FI",
+          "display": "Facility ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "FI",
+              "display": "Facility ID"
+            }
+          ]
+        },
+        {
+          "code": "GI",
+          "display": "Guarantor internal identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "GI",
+              "display": "Guarantor internal identifier"
+            }
+          ]
+        },
+        {
+          "code": "GL",
+          "display": "General ledger number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "GL",
+              "display": "General ledger number"
+            }
+          ]
+        },
+        {
+          "code": "GN",
+          "display": "Guarantor external identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "GN",
+              "display": "Guarantor external identifier"
+            }
+          ]
+        },
+        {
+          "code": "HC",
+          "display": "Health Card Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "HC",
+              "display": "Health Card Number"
+            }
+          ]
+        },
+        {
+          "code": "JHN",
+          "display": "Jurisdictional health number (Canada)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "JHN",
+              "display": "Jurisdictional health number (Canada)"
+            }
+          ]
+        },
+        {
+          "code": "IND",
+          "display": "Indigenous/Aboriginal",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "IND",
+              "display": "Indigenous/Aboriginal"
+            }
+          ]
+        },
+        {
+          "code": "LACSN",
+          "display": "Laboratory Accession ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "LACSN",
+              "display": "Laboratory Accession ID"
+            }
+          ]
+        },
+        {
+          "code": "LANR",
+          "display": "Lifelong physician number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "LANR",
+              "display": "Lifelong physician number"
+            }
+          ]
+        },
+        {
+          "code": "LI",
+          "display": "Labor and industries number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "LI",
+              "display": "Labor and industries number"
+            }
+          ]
+        },
+        {
+          "code": "LN",
+          "display": "License number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "LN",
+              "display": "License number"
+            }
+          ]
+        },
+        {
+          "code": "LR",
+          "display": "Local Registry ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "LR",
+              "display": "Local Registry ID"
+            }
+          ]
+        },
+        {
+          "code": "MA",
+          "display": "Patient Medicaid number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MA",
+              "display": "Patient Medicaid number"
+            }
+          ]
+        },
+        {
+          "code": "MB",
+          "display": "Member Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MB",
+              "display": "Member Number"
+            }
+          ]
+        },
+        {
+          "code": "MC",
+          "display": "Patient’s Medicare number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MC",
+              "display": "Patient’s Medicare number"
+            }
+          ]
+        },
+        {
+          "code": "MCD",
+          "display": "Practitioner Medicaid number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MCD",
+              "display": "Practitioner Medicaid number"
+            }
+          ]
+        },
+        {
+          "code": "MCN",
+          "display": "Microchip Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MCN",
+              "display": "Microchip Number"
+            }
+          ]
+        },
+        {
+          "code": "MCR",
+          "display": "Practitioner Medicare number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MCR",
+              "display": "Practitioner Medicare number"
+            }
+          ]
+        },
+        {
+          "code": "MCT",
+          "display": "Marriage Certificate",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MCT",
+              "display": "Marriage Certificate"
+            }
+          ]
+        },
+        {
+          "code": "MD",
+          "display": "Medical License number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MD",
+              "display": "Medical License number"
+            }
+          ]
+        },
+        {
+          "code": "MI",
+          "display": "Military ID number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MI",
+              "display": "Military ID number"
+            }
+          ]
+        },
+        {
+          "code": "MR",
+          "display": "Medical record number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MR",
+              "display": "Medical record number"
+            }
+          ]
+        },
+        {
+          "code": "MRT",
+          "display": "Temporary Medical Record Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MRT",
+              "display": "Temporary Medical Record Number"
+            }
+          ]
+        },
+        {
+          "code": "MS",
+          "display": "MasterCard",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MS",
+              "display": "MasterCard"
+            }
+          ]
+        },
+        {
+          "code": "NBSNR",
+          "display": "Secondary physician office number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NBSNR",
+              "display": "Secondary physician office number"
+            }
+          ]
+        },
+        {
+          "code": "NCT",
+          "display": "Naturalization Certificate",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NCT",
+              "display": "Naturalization Certificate"
+            }
+          ]
+        },
+        {
+          "code": "NE",
+          "display": "National employer identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NE",
+              "display": "National employer identifier"
+            }
+          ]
+        },
+        {
+          "code": "NH",
+          "display": "National Health Plan Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NH",
+              "display": "National Health Plan Identifier"
+            }
+          ]
+        },
+        {
+          "code": "NI",
+          "display": "National unique individual identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NI",
+              "display": "National unique individual identifier"
+            }
+          ]
+        },
+        {
+          "code": "NII",
+          "display": "National Insurance Organization Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NII",
+              "display": "National Insurance Organization Identifier"
+            }
+          ]
+        },
+        {
+          "code": "NIIP",
+          "display": "National Insurance Payor Identifier (Payor)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NIIP",
+              "display": "National Insurance Payor Identifier (Payor)"
+            }
+          ]
+        },
+        {
+          "code": "NNxxx",
+          "display": "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NNxxx",
+              "display": "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code"
+            }
+          ]
+        },
+        {
+          "code": "NP",
+          "display": "Nurse practitioner number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NP",
+              "display": "Nurse practitioner number"
+            }
+          ]
+        },
+        {
+          "code": "NPI",
+          "display": "National provider identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "NPI",
+              "display": "National provider identifier"
+            }
+          ]
+        },
+        {
+          "code": "OD",
+          "display": "Optometrist license number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "OD",
+              "display": "Optometrist license number"
+            }
+          ]
+        },
+        {
+          "code": "PA",
+          "display": "Physician Assistant number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PA",
+              "display": "Physician Assistant number"
+            }
+          ]
+        },
+        {
+          "code": "PC",
+          "display": "Parole Card",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PC",
+              "display": "Parole Card"
+            }
+          ]
+        },
+        {
+          "code": "PCN",
+          "display": "Penitentiary/correctional institution Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PCN",
+              "display": "Penitentiary/correctional institution Number"
+            }
+          ]
+        },
+        {
+          "code": "PE",
+          "display": "Living Subject Enterprise Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PE",
+              "display": "Living Subject Enterprise Number"
+            }
+          ]
+        },
+        {
+          "code": "PEN",
+          "display": "Pension Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PEN",
+              "display": "Pension Number"
+            }
+          ]
+        },
+        {
+          "code": "PI",
+          "display": "Patient internal identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PI",
+              "display": "Patient internal identifier"
+            }
+          ]
+        },
+        {
+          "code": "PN",
+          "display": "Person number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PN",
+              "display": "Person number"
+            }
+          ]
+        },
+        {
+          "code": "PNT",
+          "display": "Temporary Living Subject Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PNT",
+              "display": "Temporary Living Subject Number"
+            }
+          ]
+        },
+        {
+          "code": "PPIN",
+          "display": "Medicare/CMS Performing Provider Identification Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PPIN",
+              "display": "Medicare/CMS Performing Provider Identification Number"
+            }
+          ]
+        },
+        {
+          "code": "PPN",
+          "display": "Passport number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PPN",
+              "display": "Passport number"
+            }
+          ]
+        },
+        {
+          "code": "PRC",
+          "display": "Permanent Resident Card Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PRC",
+              "display": "Permanent Resident Card Number"
+            }
+          ]
+        },
+        {
+          "code": "PRN",
+          "display": "Provider number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PRN",
+              "display": "Provider number"
+            }
+          ]
+        },
+        {
+          "code": "PT",
+          "display": "Patient external identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PT",
+              "display": "Patient external identifier"
+            }
+          ]
+        },
+        {
+          "code": "QA",
+          "display": "QA number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "QA",
+              "display": "QA number"
+            }
+          ]
+        },
+        {
+          "code": "RI",
+          "display": "Resource identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RI",
+              "display": "Resource identifier"
+            }
+          ]
+        },
+        {
+          "code": "RPH",
+          "display": "Pharmacist license number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RPH",
+              "display": "Pharmacist license number"
+            }
+          ]
+        },
+        {
+          "code": "RN",
+          "display": "Registered Nurse Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RN",
+              "display": "Registered Nurse Number"
+            }
+          ]
+        },
+        {
+          "code": "RR",
+          "display": "Railroad Retirement number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RR",
+              "display": "Railroad Retirement number"
+            }
+          ]
+        },
+        {
+          "code": "RRI",
+          "display": "Regional registry ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RRI",
+              "display": "Regional registry ID"
+            }
+          ]
+        },
+        {
+          "code": "RRP",
+          "display": "Railroad Retirement Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RRP",
+              "display": "Railroad Retirement Provider"
+            }
+          ]
+        },
+        {
+          "code": "SID",
+          "display": "Specimen ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SID",
+              "display": "Specimen ID"
+            }
+          ]
+        },
+        {
+          "code": "SL",
+          "display": "State license",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SL",
+              "display": "State license"
+            }
+          ]
+        },
+        {
+          "code": "SN",
+          "display": "Subscriber Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SN",
+              "display": "Subscriber Number"
+            }
+          ]
+        },
+        {
+          "code": "SP",
+          "display": "Study Permit",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SP",
+              "display": "Study Permit"
+            }
+          ]
+        },
+        {
+          "code": "SR",
+          "display": "State registry ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SR",
+              "display": "State registry ID"
+            }
+          ]
+        },
+        {
+          "code": "SS",
+          "display": "Social Security number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SS",
+              "display": "Social Security number"
+            }
+          ]
+        },
+        {
+          "code": "TAX",
+          "display": "Tax ID number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "TAX",
+              "display": "Tax ID number"
+            }
+          ]
+        },
+        {
+          "code": "TN",
+          "display": "Treaty Number/ (Canada)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "TN",
+              "display": "Treaty Number/ (Canada)"
+            }
+          ]
+        },
+        {
+          "code": "TPR",
+          "display": "Temporary Permanent Resident (Canada)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "TPR",
+              "display": "Temporary Permanent Resident (Canada)"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "Unspecified identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "U",
+              "display": "Unspecified identifier"
+            }
+          ]
+        },
+        {
+          "code": "UPIN",
+          "display": "Medicare/CMS (formerly HCFA)’s Universal Physician Identification numbers",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "UPIN",
+              "display": "Medicare/CMS (formerly HCFA)’s Universal Physician Identification numbers"
+            }
+          ]
+        },
+        {
+          "code": "USID",
+          "display": "Unique Specimen ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "USID",
+              "display": "Unique Specimen ID"
+            }
+          ]
+        },
+        {
+          "code": "VN",
+          "display": "Visit number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "VN",
+              "display": "Visit number"
+            }
+          ]
+        },
+        {
+          "code": "VP",
+          "display": "Visitor Permit",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "VP",
+              "display": "Visitor Permit"
+            }
+          ]
+        },
+        {
+          "code": "VS",
+          "display": "VISA",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "VS",
+              "display": "VISA"
+            }
+          ]
+        },
+        {
+          "code": "WC",
+          "display": "WIC identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "WC",
+              "display": "WIC identifier"
+            }
+          ]
+        },
+        {
+          "code": "WCN",
+          "display": "Workers’ Comp Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "WCN",
+              "display": "Workers’ Comp Number"
+            }
+          ]
+        },
+        {
+          "code": "WP",
+          "display": "Work Permit",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "WP",
+              "display": "Work Permit"
+            }
+          ]
+        },
+        {
+          "code": "XX",
+          "display": "Organization identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "XX",
+              "display": "Organization identifier"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
