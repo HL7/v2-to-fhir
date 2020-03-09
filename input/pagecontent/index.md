@@ -21,7 +21,7 @@ This guide is organized into three main sections:
       You can also find [questions to address in this ballot](questions.html), the [glossary](glossary.html)
       and [acknowledgements](acknowledgements.html).
 
-   2. [Mapping Guidelines] (mapping_guidelines.html)<br/>This section provides the rules and guidelines used to document
+   2. [Mapping Guidelines](mapping_guidelines.html)<br/>This section provides the rules and guidelines used to document
    the mappings such as identification of each HL7 v2 element with a mapping, the conditions
    under which the HL7 v2 element may map to one or more HL7 FHIR components, as well references
    to more specific mappings considering context, e.g., when to map PID data to Patient vs.
@@ -34,7 +34,7 @@ This guide is organized into three main sections:
    4. [Implementation and Use](implementation_considerations.html)<br/>This section covers implementation considerations,
       [validation](validation.html), and provides example [test conversions](test_conversions.html).
 
-   5. [Profiles] (profiles.html)<br/>This section provides the profiles for the HL7 FHIR ConceptMap
+   5. [Profiles](profiles.html)<br/>This section provides the profiles for the HL7 FHIR ConceptMap
    that describes the data maintained in Concept Maps for each of the message, segment, data type,
    and vocabulary mapping, as well as a profile for HL7 FHIR Bundle that establishes the basic
    structure/content of a HL7 FHIR message resulting from an HL7 v2 message.

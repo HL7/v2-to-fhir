@@ -21,7 +21,7 @@ This guide is organized into three main sections:
       You can also find [questions to address in this ballot](questions.html), the [glossary](glossary.html)
       and [acknowledgements](acknowledgements.html).
 
-   2. [Mapping Guidelines] (mapping_guidelines.html)<br/>This section provides the rules and guidelines used to document
+   2. [Mapping Guidelines](mapping_guidelines.html)<br/>This section provides the rules and guidelines used to document
    the mappings such as identification of each HL7 v2 element with a mapping, the conditions
    under which the HL7 v2 element may map to one or more HL7 FHIR components, as well references
    to more specific mappings considering context, e.g., when to map PID data to Patient vs.
