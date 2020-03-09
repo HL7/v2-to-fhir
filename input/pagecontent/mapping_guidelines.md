@@ -80,6 +80,23 @@ being mapped is a Message, Segment, Data Type, or Table.
 {% include segment_mapping.md %}
 
 
+There are situations where the field/attribute cardinalities between v2 and FHIR do not match.  These are highlighted in the mapping spreadsheet. Specifically, the following are causing potential challenges:
+<table>
+<tbody>
+<tr><th>v2 Cardinality</th><th>FHIR Cardinality</th><th>Guidance</th></tr></thead>
+ <tr>
+ <td>0..1</td><td>1..n</td><td>When the v2 message can empty and FHIR requires an attribute to be valued, a nullFlavor is preferred to indicate why it is absent.  The mapping will specify what the nullFavlor should be.  However, it there is nullFlavor, then the local implementation of the mapping needs to determine what value should be used.</td>
+ </tr
+ <tr>
+ <td>n..*</td><td>n..1</td><td>When the v2 messages allows for multiple values in a field and FHIR only allows for one (after also considering the cardinalities within the FHIR data type that may apply), then the local implementation needs to decide which value is included in the first level field and which should go into an extension.
+ </tr>
+ <tr>
+ <td>1..1</td><td>1..1 with conditions</td><td>When there is conditional mapping, there may be a situation that occurs where the condition(s) would yield that nothing is to be mapped, but FHIR requires a value.  If that is the result of a valid set of conditions, and there is no nullFlavor that is applicable,  then the local implementation of the mapping needs to determine what value should be used.</td>
+ </tr>
+</tbody>
+</table>
+Note generally that extensions will be pursued for those situations where we know that actual implementations would run into this challenge, but will not pursue those until somebody indicates they need that.
+
 #### Data Type Spreadsheet
 
 {% include datatype_mapping.md %}

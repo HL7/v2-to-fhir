@@ -2,9 +2,9 @@
 <b>Review Note:</b>
 <br>The purpose of this Peer Review is primarily to solicit feedback on the structure, navigation,
 and general content topics of the v2-to-FHIR Guide.  Specific questions are provided [here](questions.html)
-in the <b>Impact/Scope</b> and <b>Infrastructure</b> sections.  Feedback on the accuracy and completeness
-of the mappings included is secondary, that will be the focus of the Ballot cycles, but any feedback on
-an of the mappings is welcome, including the question in the <b>Mapping Content</b> on our questions page.
+in the <b>Impact/Scope</b> and <b>Infrastructure</b> sections.  Feedback on the accuracy and
+completeness of the mappings included is secondary, that will be the focus of the Ballot cycles,
+but any feedback on an of the mappings is welcome, including the question in the <b>Mapping Content</b> on our questions page.
 <br>
 </p>
 The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages
@@ -34,7 +34,7 @@ This guide is organized into three main sections:
    4. [Implementation and Use](implementation_considerations.html)<br/>This section covers implementation considerations,
       [validation](validation.html), and provides example [test conversions](test_conversions.html).
 
-   5. [Profiles] (profiles.html)<br/>This section provides the profiles for the HL7 FHIR ConceptMap
+   5. [Profiles](profiles.html)<br/>This section provides the profiles for the HL7 FHIR ConceptMap
    that describes the data maintained in Concept Maps for each of the message, segment, data type,
    and vocabulary mapping, as well as a profile for HL7 FHIR Bundle that establishes the basic
    structure/content of a HL7 FHIR message resulting from an HL7 v2 message.
