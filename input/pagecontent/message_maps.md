@@ -1,9 +1,8 @@
 [//]: # Content after this line will be prepended to the output of the list of messsage maps
 
+The sections below list the message mappings defined by this guide.
 Message Mapping is driven by CSV files with specific columns. The use of these columns
-is described below.
-
-{% include message_mapping.md %}
+is described in the section on [mapping](#mapping) at the bottom of this page.
 
 [//End]: # Content after this marker will be updated during generation
 
@@ -19,6 +18,8 @@ is described below.
 ### Chapter  7  Observation Reporting
 
 * [ORU_R01](ConceptMap-message-oru-r01-to-bundle.html) - Unsolicited Report Alarm
+<h2 style='--heading-prefix: ""' id='mapping'>Mapping</h2>
+{% include message_mapping.md %}
 
 <div id="disqus_thread"></div>
 <script>

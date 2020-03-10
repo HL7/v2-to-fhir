@@ -27,7 +27,7 @@ This guide is organized into three main sections:
    to more specific mappings considering context, e.g., when to map PID data to Patient vs.
    RelatedPerson, or a CWE encoded element to either CodeableConcept, Coding, or code.
 
-   3. [Mappings](mapping_outputs.html)<br/>This section provides an index to the mappings produced by this project, organized
+   3. [Mappings](mappings.html)<br/>This section provides an index to the mappings produced by this project, organized
       by [message](message_maps.html), [segment](segment_maps.html),[datatype](datatype_maps.html),
       or [vocabulary](coding_system_maps.html) mapping.
 
@@ -49,6 +49,8 @@ You can also download:
 * the example resources in [json](examples.json.zip), [xml](examples.xml.zip) or [ttl](examples.ttl.zip) format.
 
 The source code for this Implementation Guide can be found on [GitHub](https://github.com/HL7/v2-to-fhir/).
+
+You can also find [references and links to implementations](links.html).
 
 <div id="disqus_thread"></div>
 <script>

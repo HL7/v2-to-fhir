@@ -1,0 +1,417 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-obrservicerequest-to-servicerequest",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 OBR Segment to the FHIR ServiceRequest Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-obrservicerequest-to-servicerequest",
+  "version": "1.0",
+  "name": "Segment_OBR_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-09",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "OBR",
+  "targetUri": "ServiceRequest",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "OBR-2",
+          "display": "Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier",
+              "display": "ServiceRequest.identifier",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-2 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-2",
+          "display": "Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.code",
+              "display": "= \"PLAC\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-2 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-2",
+          "display": "Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-2 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-3",
+          "display": "Filler Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier",
+              "display": "ServiceRequest.identifier",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-3 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-3",
+          "display": "Filler Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.code",
+              "display": "= \"FILL\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-3 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-3",
+          "display": "Filler Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-3 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-4",
+          "display": "Universal Service Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.code",
+              "display": "ServiceRequest.code"
+            }
+          ]
+        },
+        {
+          "code": "OBR-5",
+          "display": "Priority",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.priority",
+              "display": "ServiceRequest.priority"
+            }
+          ]
+        },
+        {
+          "code": "OBR-6",
+          "display": "Requested Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.occurrenceDateTime",
+              "display": "ServiceRequest.occurrenceDateTime"
+            }
+          ]
+        },
+        {
+          "code": "OBR-9",
+          "display": "Collection Volume",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.specimen[1](Specimen.collection.quantity)",
+              "display": "ServiceRequest.specimen[1](Specimen.collection.quantity)"
+            }
+          ]
+        },
+        {
+          "code": "OBR-10",
+          "display": "Collector Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.specimen[1](Specimen.collection.collector(Practitioner))",
+              "display": "ServiceRequest.specimen[1](Specimen.collection.collector(Practitioner))"
+            }
+          ]
+        },
+        {
+          "code": "OBR-11",
+          "display": "Specimen Action Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.intent",
+              "display": "= \"reflex-order\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "element(\"11\")=\"G\"\n# IF OBR-11 EQUALS \"G\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-11",
+          "display": "Specimen Action Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.intent",
+              "display": "= \"order\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "element(\"11\")! ??IN?? (\"G\",\"A\")\n# IF OBR-11 NOT IN (\"G\",\"A\")\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-14",
+          "display": "Specimen Received Date/Time *",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.specimen[1](Specimen.receivedTime)",
+              "display": "ServiceRequest.specimen[1](Specimen.receivedTime)"
+            }
+          ]
+        },
+        {
+          "code": "OBR-15",
+          "display": "Specimen Source",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.specimen[1](Specimen)",
+              "display": "ServiceRequest.specimen[1](Specimen)"
+            }
+          ]
+        },
+        {
+          "code": "OBR-16",
+          "display": "Ordering Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.requester(Practitioner)",
+              "display": "ServiceRequest.requester(Practitioner)",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF ORC-12 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-27",
+          "display": "Quantity/Timing",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.quantity",
+              "display": "ServiceRequest.quantity"
+            }
+          ]
+        },
+        {
+          "code": "OBR-29",
+          "display": "ParentResults Observation Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.basedOn.identifier",
+              "display": "ServiceRequest.basedOn.identifier",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If OBR-29.2 is also valued, implementation needs to decide which one to use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-29",
+          "display": "ParentResults Observation Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.basedOn.type",
+              "display": "= \"ServiceRequest\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If OBR-29.2 is also valued, implementation needs to decide which one to use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-29",
+          "display": "ParentResults Observation Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.basedOn.identifier",
+              "display": "ServiceRequest.basedOn.identifier",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If OBR-29.1 is also valued, implementation needs to decide which one to use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-29",
+          "display": "ParentResults Observation Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.basedOn.type",
+              "display": "= \"ServiceRequest\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If OBR-29.1 is also valued, implementation needs to decide which one to use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-31",
+          "display": "Reason for Study",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.reasonCode",
+              "display": "ServiceRequest.reasonCode"
+            }
+          ]
+        },
+        {
+          "code": "OBR-39",
+          "display": "Collector's Comment *",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SpecimenRequest.specimen[1](Specimen.note)",
+              "display": "SpecimenRequest.specimen[1](Specimen.note)"
+            }
+          ]
+        },
+        {
+          "code": "OBR-46",
+          "display": "Placer Supplemental Service Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.orderDetail[1]??",
+              "display": "ServiceRequest.orderDetail[1]??"
+            }
+          ]
+        },
+        {
+          "code": "OBR-47",
+          "display": "Filler Supplemental Service Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.orderDetail[2]??",
+              "display": "ServiceRequest.orderDetail[2]??"
+            }
+          ]
+        },
+        {
+          "code": "OBR-53",
+          "display": "Alternate Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier",
+              "display": "ServiceRequest.identifier"
+            }
+          ]
+        },
+        {
+          "code": "OBR-53",
+          "display": "Alternate Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.code",
+              "display": "= \"PLAC\""
+            }
+          ]
+        },
+        {
+          "code": "OBR-53",
+          "display": "Alternate Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

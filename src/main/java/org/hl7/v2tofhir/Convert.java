@@ -68,31 +68,15 @@ public class Convert {
 
         // For each converted piece of content, generate the mapping outputs.
         generateMapOutputs();
+
+        ConverterImpl.printLinkData();
     }
 
     private static void generateMapOutputs() {
         String files[] = { MAP_OUTPUT_DIR + "7_message_maps.md", MAP_OUTPUT_DIR + "8_segment_maps.md", MAP_OUTPUT_DIR + "9_datatype_maps.md", MAP_OUTPUT_DIR + "10_coding_system_maps.md" };
         String types[] = { "Message", "Segment", "Datatype", "Table" };
 
-        Map<String, Map<String, Triple<String, String, String>>> m = new HashMap<>();
-
-        // Get the data about how to organize this stuff.
-        try (FileReader r = new FileReader("mappings/chapterdata.csv");
-            CSVReader r2 = new CSVReader(r);) {
-            String line[];
-            while ((line = r2.readNext()) != null) {
-                String what = line[0], where = line.length > 1 ? line[1] : "", title = line.length > 2 ? line[2] : "", id = line.length > 2 ? line[3] : "";
-                Map<String, Triple<String, String, String>> m2 = m.get(what);
-                if (m2 == null) {
-                    m2 = new HashMap<>();
-                    m.put(what, m2);
-                }
-                m2.put(id, Triple.of(where, title, id));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
+        Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap();
 
         for (int i = 0; i < files.length; i++) {
             System.out.println(types[i]);
@@ -136,7 +120,6 @@ public class Convert {
         }
 
         Chapter chapters = new Chapter();
-
         set.forEach(c -> {
             String type = c.getType();
             switch (type) {
@@ -154,6 +137,7 @@ public class Convert {
                 break;
             }
         });
+        String type = set.iterator().next().getType();
 
         // Read in the chapter data
         File cDataFile = new File(chapterDataFile);
@@ -187,6 +171,9 @@ public class Convert {
             }
         }
 
+        pw.printf("<h2 style='--heading-prefix: \"\"' id='mapping'>Mapping</h2>%n"
+            + "{%% include %s_mapping.md %%}%n", type.replace(" ", "").toLowerCase());
+
         pw.printf("%n<div id=\"disqus_thread\"></div>%n" +
             "<script>%n" +
             "var disqus_config = function () {%n" +
@@ -216,12 +203,9 @@ public class Convert {
 
     private static void createConceptMapIndex(Map<String, Map<String, Triple<String, String, String>>> m,
         Chapter chapters, Converter c) {
-        Chapter chap;
-        Chapter subchap;
-        Map<String, Triple<String, String, String>> struct;
-        Map<String, Triple<String, String, String>> title;
-        struct = m.get("Table");
-        title = m.get("Chapter");
+
+        Map<String, Triple<String, String, String>> struct = m.get("Table");
+        Map<String, Triple<String, String, String>> title = m.get("Chapter");
 
         Triple<String, String, String>
             dtData = struct.get(c.getSourceName()),
@@ -232,40 +216,34 @@ public class Convert {
             dtData = struct.get(c.getSourceName().replace("HL7", "User"));
         }
 
-        chap = chapters.get(chapData.getLeft());
-        chap.setData(chapData);
-        subchap = chap.get(c.getSourceName());
-        if (dtData == null) {
-            subchap.setData(Triple.of("Unknown",
-                c.getSourceFileName() + " to FHIR " + c.getTargetName(), c.getHtmlFileName()));
-        } else {
-            subchap.setData(Triple.of(dtData.getRight(),
-                dtData.getMiddle()  + " to FHIR [" + c.getTargetName() + "](" + getFhirLocation(m, c.getTargetName()) + ")",
-                c.getHtmlFileName()));
-        }
+        addTitlesToIndex(m, chapters, c, dtData, chapData);
     }
 
     private static void createDatatypeIndex(Map<String, Map<String, Triple<String, String, String>>> m,
         Chapter chapters, Converter c) {
-        Chapter chap;
-        Chapter subchap;
-        Map<String, Triple<String, String, String>> struct;
-        Map<String, Triple<String, String, String>> title;
-        struct = m.get("Data Type");
-        title = m.get("Chapter");
+
+        Map<String, Triple<String, String, String>> struct = m.get("Data Type");
+        Map<String, Triple<String, String, String>> title = m.get("Chapter");
 
         Triple<String, String, String>
             dtData = struct.get(c.getSourceName()),
             chapData = title.get("2A");
 
+        addTitlesToIndex(m, chapters, c, dtData, chapData);
+    }
+
+    private static void addTitlesToIndex(Map<String, Map<String, Triple<String, String, String>>> m, Chapter chapters,
+        Converter c, Triple<String, String, String> dtData, Triple<String, String, String> chapData) {
+        Chapter chap;
+        Chapter subchap;
         chap = chapters.get(chapData.getLeft());
         chap.setData(chapData);
-        subchap = chap.get(c.getSourceName());
+        subchap = chap.get(c.getSourceName() + c.getQualifier() + c.getTargetName());
         if (dtData == null) {
             subchap.setData(Triple.of("Unknown",
                 c.getSourceFileName() + " to FHIR " + c.getTargetName(), c.getHtmlFileName()));
         } else {
-            subchap.setData(Triple.of(dtData.getRight(),
+            subchap.setData(Triple.of(dtData.getRight() + c.getQualifier(),
                 dtData.getMiddle()  + " to FHIR [" + c.getTargetName() + "](" + getFhirLocation(m, c.getTargetName()) + ")",
                 c.getHtmlFileName()));
         }
@@ -273,22 +251,14 @@ public class Convert {
 
     private static void createSegmentIndex(Map<String, Map<String, Triple<String, String, String>>> m, Chapter chapters,
         Converter c) {
-        Chapter chap;
-        Chapter subchap;
-        Map<String, Triple<String, String, String>> struct;
-        Map<String, Triple<String, String, String>> title;
-        struct = m.get("Segment");
-        title = m.get("Chapter");
+
+        Map<String, Triple<String, String, String>> struct = m.get("Segment");
+        Map<String, Triple<String, String, String>> title = m.get("Chapter");
         Triple<String, String, String>
             segData = struct.get(c.getSourceName()),
             chapData = title.get(segData.getLeft());
 
-        chap = chapters.get(chapData.getLeft());
-        chap.setData(chapData);
-        subchap = chap.get(c.getSourceName());
-        subchap.setData(Triple.of(segData.getRight(),
-            segData.getMiddle()  + " to FHIR [" + c.getTargetName() + "](" + getFhirLocation(m, c.getTargetName()) + ")",
-            c.getHtmlFileName()));
+        addTitlesToIndex(m, chapters, c, segData, chapData);
     }
 
     private static String getFhirLocation(Map<String, Map<String, Triple<String, String, String>>> m, String targetName) {
@@ -311,12 +281,10 @@ public class Convert {
         Converter c) {
         Chapter chap;
         Chapter subchap;
-        Map<String, Triple<String, String, String>> struct;
-        Map<String, Triple<String, String, String>> msgtype;
-        Map<String, Triple<String, String, String>> title;
-        struct = m.get("Structure");
-        msgtype = m.get("Message Type");
-        title = m.get("Chapter");
+        Map<String, Triple<String, String, String>> struct = m.get("Structure");
+        Map<String, Triple<String, String, String>> msgtype = m.get("Message Type");
+        Map<String, Triple<String, String, String>> title = m.get("Chapter");
+
         Triple<String, String, String>
             structData = struct.get(c.getSourceName()),
             mtData = msgtype.get(StringUtils.substringBefore(structData.getLeft(),"/")),
@@ -325,7 +293,8 @@ public class Convert {
         chap = chapters.get(titleData.getLeft());
         chap.setData(titleData);
         subchap = chap.get(c.getSourceName());
-        subchap.setData(Triple.of(structData.getRight(),
+        subchap.setData(Triple.of(
+            structData.getRight() +c.getQualifier(),
             structData.getMiddle(), c.getHtmlFileName()));
     }
 
@@ -430,7 +399,7 @@ public class Convert {
                 System.err.printf("Don't know know how to convert '%s'.\n", f);
                 return;
             }
-            String output = String.format("%s %s to %s.fsh", c.getType(), c.getSourceName(), c.getTargetName());
+            String output = c.getFishFileName();
             if (output.contains("to Unknown.fsh")) {
                 System.err.printf("%s does not have any FHIR Mapping Content%n", c.getSourceFileName());
                 return;

@@ -32,8 +32,7 @@
             {
               "equivalence": "equivalent",
               "code": "dateTime.(p1)(1-4)",
-              "display": "dateTime.(p1)(1-4)",
-              "comment": "The FHIR instant/dateTime format is YYYY-MM-DDThh:mm:ss.sss+zz:zz"
+              "display": "dateTime.(p1)(1-4)"
             }
           ]
         },
@@ -49,35 +48,190 @@
           ]
         },
         {
-          "code": "(p1)(5-6)",
+          "code": "DTM.(p1)(5-6)",
           "display": "MM",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "(p1)(6-7)",
-              "display": "(p1)(6-7)"
+              "code": "dateTime.(p1)(6-7)",
+              "display": "dateTime.(p1)(6-7)"
             }
           ]
         },
         {
-          "code": "(p1)(7-8)",
+          "code": "DTM.(p1)(7-8)",
           "display": "DD",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "(p1)(8)",
+              "code": "dateTime.(p1)(8)",
               "display": "= \"-\""
             }
           ]
         },
         {
-          "code": "(p1)(7-8)",
+          "code": "DTM.(p1)(7-8)",
           "display": "DD",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "(p1)(9-10)",
-              "display": "(p1)(9-10)"
+              "code": "dateTime.(p1)(9-10)",
+              "display": "dateTime.(p1)(9-10)"
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p1)(9-10)",
+          "display": "HH",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p1)(11)",
+              "display": "= \"T\""
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p1)(9-10)",
+          "display": "HH",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p1)(12-13)",
+              "display": "dateTime.(p1)(12-13)"
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p1)(11-12)",
+          "display": "MM",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p1)(14)",
+              "display": "= \":\""
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p1)(11-12)",
+          "display": "MM",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p1)(15-16)",
+              "display": "dateTime.(p1)(15-16)"
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p1)(13-14)",
+          "display": "SS",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p1)(17)",
+              "display": "= \":\""
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p1)(13-14)",
+          "display": "SS",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p1)(18-19)",
+              "display": "dateTime.(p1)(18-19)"
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p1)(16-18)",
+          "display": ".SSS",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p1)(20)",
+              "display": "= \".\""
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p1)(16-18)",
+          "display": ".SSS",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p1)(21-23)",
+              "display": "dateTime.(p1)(21-23)"
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p2)(1)",
+          "display": "+/-",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p2)(1)",
+              "display": "= \"+\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF (p2)(1)=\"+\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p2)(1)",
+          "display": "+/-",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p2)(1)",
+              "display": "= \"-\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF (p2)(1)=\"-\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p2)(2-3)",
+          "display": "ZZ",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p2)(2-3)",
+              "display": "dateTime.(p2)(2-3)"
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p2)(4-5)",
+          "display": "ZZ",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p2)(4)",
+              "display": "= \":\""
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p2)(4-5)",
+          "display": "ZZ",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p2)(5-6)",
+              "display": "dateTime.(p2)(5-6)"
             }
           ]
         }

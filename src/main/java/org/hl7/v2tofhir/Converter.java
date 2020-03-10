@@ -32,4 +32,8 @@ public interface Converter {
     String getHtmlFileName();
 
     String getSourceFileName();
+
+    String getQualifier();
+
+    String getFishFileName();
 }

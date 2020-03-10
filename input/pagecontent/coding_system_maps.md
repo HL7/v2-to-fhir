@@ -1,9 +1,8 @@
 [//]: # Content after this line will be prepended to the output of the list of coding system maps
 
-Table mapping is driven by CSV files with specific columns. The use of these columns
-is described below.
-
-{% include table_mapping.md %}
+The sections below list the table mappings defined by this guide.
+Table Mapping is driven by CSV files with specific columns. The use of these columns
+is described in the section on [mapping](#mapping) at the bottom of this page.
 
 [//End]: # Content after this marker will be updated during generation
 
@@ -37,6 +36,8 @@ is described below.
 * [User0485](ConceptMap-table-hl70485-to-request-priority.html) - Extended Priority Codes  to FHIR [Request Priority](http://hl7.org/fhir/R4/codesystem-request-priority.html)
 * [HL70498](ConceptMap-table-hl70498-to-consent-state-codes.html) - Consent Status  to FHIR [Consent State Codes](http://hl7.org/fhir/R4/codesystem-consent-state-codes.html)
 * [HL70549](ConceptMap-table-hl70549-to-v3-rolecode.html) - NDC Codes  to FHIR [V3 RoleCode](http://hl7.org/fhir/R4/v3/RoleCode/cs.html)
+<h2 style='--heading-prefix: ""' id='mapping'>Mapping</h2>
+{% include table_mapping.md %}
 
 <div id="disqus_thread"></div>
 <script>

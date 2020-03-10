@@ -1,0 +1,159 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-prtobx-device-to-operation",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 PRT Segment to the FHIR Operation Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-prtobx-device-to-operation",
+  "version": "1.0",
+  "name": "Segment_PRT_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-09",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "PRT",
+  "targetUri": "Operation",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "PRT-2",
+          "display": "Action Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Operation",
+              "display": "Operation",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "if mapped to a restful service to progress the message."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PRT-10",
+          "display": "Device",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Device.udiCarrier[1]",
+              "display": "Device.udiCarrier[1]",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If it represents a HRF or AIDC"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PRT-10",
+          "display": "Device",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Device.identifier",
+              "display": "Device.identifier",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "If not an HRF or AIDC"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PRT-16",
+          "display": "UDI Device Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Device.udiCarrier[2]",
+              "display": "Device.udiCarrier[2]"
+            }
+          ]
+        },
+        {
+          "code": "PRT-17",
+          "display": "Device Manufacture Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Device.manufactureDate",
+              "display": "Device.manufactureDate"
+            }
+          ]
+        },
+        {
+          "code": "PRT-18",
+          "display": "Device Expiry Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Device.expirationDate",
+              "display": "Device.expirationDate"
+            }
+          ]
+        },
+        {
+          "code": "PRT-19",
+          "display": "Device Lot Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Device.lotNumber",
+              "display": "Device.lotNumber"
+            }
+          ]
+        },
+        {
+          "code": "PRT-20",
+          "display": "Device Serial Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Device.serialNumber",
+              "display": "Device.serialNumber"
+            }
+          ]
+        },
+        {
+          "code": "PRT-21",
+          "display": "Device Donation Identification",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Device.distinctIdentiifer",
+              "display": "Device.distinctIdentiifer"
+            }
+          ]
+        },
+        {
+          "code": "PRT-22",
+          "display": "Device Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Device.type",
+              "display": "Device.type"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

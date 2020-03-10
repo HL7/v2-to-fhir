@@ -28,13 +28,13 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
     protected void writeIntro(List<SegmentInput> beans, PrintWriter w) {
         w.println("<table class='grid'><thead>");
         w.print("<tr><th colspan='6'>HL7 v2</th><th colspan='3'>Condition (IF True, args)</th>");
-        w.println("<th colspan='7'>HL7 FHIR</th><th>&#xA0;</th><th>Comments</th></tr>");
+        w.println("<th colspan='7'>HL7 FHIR</th><th rowspan='2'>Comments</th></tr>");
         w.print("<tr>");
         String heads[] = {
             "Sort Order", "Identifier", "Name", "Data Type", "Cardinality - Min", "Cardinality - Max",
             "Computable ANTLR", "Computable FHIRPath", "Narrative",
             "FHIR Attribute", "Extension", "Data Type", "Cardinality - Min", "Cardinality - Max",
-            "Data Type Mapping"
+            "Data Type Mapping", "Vocabulary Mapping<br/>(IS, ID, CE, CEN, CWE)"
         };
         String titles[] = {
             "Rows are listed in sequence of how they appear in the v2 standard. "
@@ -54,7 +54,8 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
             "The FHIR attribute’s data type in the target FHIR version.",
             "The FHIR min cardinality expressed numerically.",
             "The FHIR max cardinality expressed numerically.",
-            "The URL to the Data Type Map that is to be used for the attribute in this segment."
+            "The URL to the Data Type Map that is to be used for the attribute in this segment.",
+            "The URL to the Vocabulary Map that is to be used for the coded element for this attribute."
         };
         int i = 0;
         for (String head : heads) {
@@ -64,9 +65,7 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
                 w.printf("<th title='%s'>%s</th>", titles[i++], head);
             }
         }
-        w.println("<th colspan='3' "
-            + "title='The URL to the Vocabulary Map that is to be "
-            + "used for the coded element for this attribute.'>Vocabulary Mapping (IS, ID, CE, CNE, CWE)</th></tr></thead>");
+        w.println("</tr></thead>");
         w.println("<tbody>");
 
         int count = 0;
@@ -75,21 +74,24 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
                 continue;
             }
             String cols[] = {
-                bean.v2Sort, bean.v2Code, bean.v2Name, bean.v2Datatype, bean.v2Min, bean.v2Max,
-                bean.conditionANTLR, bean.conditionfhirPath, bean.conditionNarrative,
-                bean.fhirCode, bean.fhirExtension, bean.fhirDatatype, bean.fhirMin, bean.fhirMax,
-                bean.v2DataTypeMap, bean.fhirVocab, bean.fhirEmpty, bean.comments
+                bean.v2Sort, escapeHtmlString(bean.v2Code), escapeHtmlString(bean.v2Name),
+                bean.v2Datatype, bean.v2Min, bean.v2Max,
+                escapeHtmlString(bean.conditionANTLR), escapeHtmlString(bean.conditionfhirPath), escapeHtmlString(bean.conditionNarrative),
+                makeFhirLink(bean.fhirCode), escapeHtmlString(bean.fhirExtension), makeFhirLink(bean.fhirDatatype),
+                bean.fhirMin, bean.fhirMax,
+                makeDataTypeLink(bean.v2DataTypeMap, bean.fhirDatatype), makeTableLink(bean.fhirVocab), escapeHtmlString(bean.comments)
             };
             w.print("<tr>");
             for (String col: cols) {
                 if (col == bean.v2Max || col == bean.conditionNarrative) {
                     w.printf("<td style='border-right: 2px'>%s</td>", escapeHtmlString(col));
                 } else {
-                    w.printf("<td>%s</td>", escapeHtmlString(col));
+                    w.printf("<td>%s</td>", col);
                 }
             }
             w.println("</tr>");
         }
-        w.println("</tbody></table>");
+        w.println("</tbody>\n</table>");
     }
+
 }

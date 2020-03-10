@@ -1,0 +1,213 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "datatype-xcnrelatedperson-to-relatedperson",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "url": "http://hl7.org/fhir/v2-tofhir/datatype-xcnrelatedperson-to-relatedperson",
+  "version": "1.0",
+  "name": "Datatype_XCN_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-09",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "XCN",
+  "targetUri": "RelatedPerson",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "XCN.1",
+          "display": "Person Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.identifier.value",
+              "display": "RelatedPerson.identifier.value"
+            }
+          ]
+        },
+        {
+          "code": "XCN.2",
+          "display": "Family Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name",
+              "display": "RelatedPerson.name"
+            }
+          ]
+        },
+        {
+          "code": "XCN.3",
+          "display": "Given Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.given",
+              "display": "RelatedPerson.given"
+            }
+          ]
+        },
+        {
+          "code": "XCN.4",
+          "display": "Second and Further Given Names or Initials Thereof",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name.given",
+              "display": "RelatedPerson.name.given"
+            }
+          ]
+        },
+        {
+          "code": "XCN.5",
+          "display": "Suffix (e.g., JR or III)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name.suffix",
+              "display": "RelatedPerson.name.suffix"
+            }
+          ]
+        },
+        {
+          "code": "XCN.6",
+          "display": "Prefix (e.g., DR)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name.prefix",
+              "display": "RelatedPerson.name.prefix"
+            }
+          ]
+        },
+        {
+          "code": "XCN.7",
+          "display": "Degree (e.g., MD)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name.suffix",
+              "display": "RelatedPerson.name.suffix"
+            }
+          ]
+        },
+        {
+          "code": "XCN.9",
+          "display": "Assigning Authority",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.identifier.#ext-assigningAuthority#)",
+              "display": "RelatedPerson.identifier.#ext-assigningAuthority#)"
+            }
+          ]
+        },
+        {
+          "code": "XCN.10",
+          "display": "Name Type Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name.use",
+              "display": "RelatedPerson.name.use"
+            }
+          ]
+        },
+        {
+          "code": "XCN.13",
+          "display": "Identifier Type Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.identifier.type.coding.code",
+              "display": "RelatedPerson.identifier.type.coding.code"
+            }
+          ]
+        },
+        {
+          "code": "XCN.14",
+          "display": "Assigning Facility",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.identifier.#ext-assigningFacility#)",
+              "display": "RelatedPerson.identifier.#ext-assigningFacility#)"
+            }
+          ]
+        },
+        {
+          "code": "XCN.17",
+          "display": "Name Validity Range",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name.period",
+              "display": "RelatedPerson.name.period",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF XCN.19 NOT VALUED AND XCN.20 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XCN.18",
+          "display": "Name Assembly Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name.family.extension-humanname-assembly-order)",
+              "display": "RelatedPerson.name.family.extension-humanname-assembly-order)"
+            }
+          ]
+        },
+        {
+          "code": "XCN.19",
+          "display": "Effective Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name.period.start",
+              "display": "RelatedPerson.name.period.start"
+            }
+          ]
+        },
+        {
+          "code": "XCN.20",
+          "display": "Expiration Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name.period.end",
+              "display": "RelatedPerson.name.period.end"
+            }
+          ]
+        },
+        {
+          "code": "XCN.21",
+          "display": "Professional Suffix",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson.name.suffix",
+              "display": "RelatedPerson.name.suffix"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "datatype-dtmdate-to-datetime",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "url": "http://hl7.org/fhir/v2-tofhir/datatype-dtmdate-to-datetime",
+  "version": "1.0",
+  "name": "Datatype_DTM_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-09",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "DTM",
+  "targetUri": "dateTime",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "DTM.(p1)(1-4)",
+          "display": "YYYY",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p1)(1-4)",
+              "display": "dateTime.(p1)(1-4)",
+              "comment": "The FHIR instant/dateTime format is YYYY-MM-DDThh:mm:ss.sss+zz:zz"
+            }
+          ]
+        },
+        {
+          "code": "DTM.(p1)(5-6)",
+          "display": "MM",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "dateTime.(p1)(5)",
+              "display": "= \"-\""
+            }
+          ]
+        },
+        {
+          "code": "(p1)(5-6)",
+          "display": "MM",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "(p1)(6-7)",
+              "display": "(p1)(6-7)"
+            }
+          ]
+        },
+        {
+          "code": "(p1)(7-8)",
+          "display": "DD",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "(p1)(8)",
+              "display": "= \"-\""
+            }
+          ]
+        },
+        {
+          "code": "(p1)(7-8)",
+          "display": "DD",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "(p1)(9-10)",
+              "display": "(p1)(9-10)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

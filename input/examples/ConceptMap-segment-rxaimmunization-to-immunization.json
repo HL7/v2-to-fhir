@@ -1,0 +1,235 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-rxaimmunization-to-immunization",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 RXA Segment to the FHIR Immunization Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-rxaimmunization-to-immunization",
+  "version": "1.0",
+  "name": "Segment_RXA_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-09",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "RXA",
+  "targetUri": "Immunization",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "RXA-3",
+          "display": "Date/Time Start of Administration",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.occurrenceDateTime",
+              "display": "Immunization.occurrenceDateTime"
+            }
+          ]
+        },
+        {
+          "code": "RXA-5",
+          "display": "Administered Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.vaccineCode",
+              "display": "Immunization.vaccineCode"
+            }
+          ]
+        },
+        {
+          "code": "RXA-6",
+          "display": "Administered Amount",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunzation.doseQuantity.value",
+              "display": "Immunzation.doseQuantity.value"
+            }
+          ]
+        },
+        {
+          "code": "RXA-7",
+          "display": "Administered Units",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunzation.doseQuantity",
+              "display": "Immunzation.doseQuantity"
+            }
+          ]
+        },
+        {
+          "code": "RXA-10",
+          "display": "Administering Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.performer.actor(Practitioner)",
+              "display": "Immunization.performer.actor(Practitioner)"
+            }
+          ]
+        },
+        {
+          "code": "RXA-10",
+          "display": "Administering Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.performer.function.coding.code",
+              "display": "= \"AP\""
+            }
+          ]
+        },
+        {
+          "code": "RXA-10",
+          "display": "Administering Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.performer.function.coding.system",
+              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0443\""
+            }
+          ]
+        },
+        {
+          "code": "RXA-15",
+          "display": "Substance Lot Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.lotNumber",
+              "display": "Immunization.lotNumber"
+            }
+          ]
+        },
+        {
+          "code": "RXA-16",
+          "display": "Substance Expiration Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.expirationDate",
+              "display": "Immunization.expirationDate"
+            }
+          ]
+        },
+        {
+          "code": "RXA-17",
+          "display": "Substance Manufacturer Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.manufacturer(Organization)",
+              "display": "Immunization.manufacturer(Organization)"
+            }
+          ]
+        },
+        {
+          "code": "RXA-18",
+          "display": "Substance/Treatment Refusal Reason",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.statusReason",
+              "display": "Immunization.statusReason"
+            }
+          ]
+        },
+        {
+          "code": "RXA-19",
+          "display": "Indication",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.reasonCode",
+              "display": "Immunization.reasonCode"
+            }
+          ]
+        },
+        {
+          "code": "RXA-20",
+          "display": "Completion Status",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.status",
+              "display": "Immunization.status"
+            }
+          ]
+        },
+        {
+          "code": "RXA-21",
+          "display": "Action Code – RXA",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.status",
+              "display": "= \"entered-in-error\"",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF RXA-21 EQUALS \"D\"\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "RXA-22",
+          "display": "System Entry Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.meta.lastUpdated",
+              "display": "Immunization.meta.lastUpdated"
+            }
+          ]
+        },
+        {
+          "code": "RXA-22",
+          "display": "System Entry Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.meta.versionId",
+              "display": "= next"
+            }
+          ]
+        },
+        {
+          "code": "RXA-27",
+          "display": "Administer-at",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.location[1](Location)",
+              "display": "Immunization.location[1](Location)"
+            }
+          ]
+        },
+        {
+          "code": "RXA-28",
+          "display": "Administered-at Address",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Immunization.location[1](Location.address)",
+              "display": "Immunization.location[1](Location.address)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

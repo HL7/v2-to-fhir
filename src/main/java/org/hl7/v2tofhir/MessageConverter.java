@@ -28,12 +28,12 @@ public class MessageConverter extends ConverterImpl<MessageInput> implements Con
     protected void writeIntro(List<MessageInput> beans, PrintWriter w) {
         w.println("<table class='grid'><thead>");
         w.print("<tr><th colspan='6'>HL7 v2</th><th colspan='3'>Condition (IF True, args)</th>");
-        w.println("<th colspan='4'>HL7 FHIR</th><th>Comments</th></tr>");
+        w.println("<th colspan='3'>HL7 FHIR</th><th rowspan='2' title='Comments about the mapping'>Comments</th></tr>");
         w.print("<tr>");
         String heads[] = {
             "Sort Order", "Identifier", "Syntax", "Name", "Cardinality - Min", "Cardinality - Max",
             "Computable ANTLR", "Computable FHIRPath", "Narrative",
-            "Primary Target", "Segment Map", "References", "", "Comments"
+            "Primary Target", "Segment Map", "References"
         };
 
         String titles[] = {
@@ -51,9 +51,7 @@ public class MessageConverter extends ConverterImpl<MessageInput> implements Con
             "Condition expressed in narrative form",
             "The FHIR resource that is the main resource that the v2 segment will map to.",
             "The URL to the Segment Map that is to be used for the segment in this message structure in this location.",
-            "Defines for the Primary Target resource which resource.id it needs to reference.",
-            "",
-            "Comments about the mapping."
+            "Defines for the Primary Target resource which resource.id it needs to reference."
         };
         int i = 0;
         for (String head : heads) {
@@ -72,20 +70,22 @@ public class MessageConverter extends ConverterImpl<MessageInput> implements Con
                 continue;
             }
             String cols[] = {
-                bean.v2Sort, bean.v2Code, bean.v2Message, bean.v2Name, bean.v2Min, bean.v2Max,
-                bean.conditionANTLR, bean.conditionfhirPath, bean.conditionNarrative,
-                bean.fhirCode, bean.segmentMap, bean.reference, bean.comments
+                bean.v2Sort, bean.v2Code, escapeHtmlString(bean.v2Message), escapeHtmlString(bean.v2Name), bean.v2Min, bean.v2Max,
+                escapeHtmlString(bean.conditionANTLR), escapeHtmlString(bean.conditionfhirPath), escapeHtmlString(bean.conditionNarrative),
+                makeFhirLink(bean.fhirCode), makeSegmentLink(bean.segmentMap, bean.fhirCode),
+                escapeHtmlString(bean.reference), escapeHtmlString(bean.comments)
             };
             w.print("<tr>");
             for (String col: cols) {
                 if (col == bean.v2Max || col == bean.conditionNarrative) {
-                    w.printf("<td style='border-right: 2px'>%s</td>", escapeHtmlString(col));
+                    w.printf("<td style='border-right: 2px'>%s</td>", col);
                 } else {
-                    w.printf("<td>%s</td>", escapeHtmlString(col));
+                    w.printf("<td>%s</td>", col);
                 }
             }
             w.println("</tr>");
         }
-        w.println("</tbody></table>");
+        w.println("</tbody>\n</table>");
     }
+
 }

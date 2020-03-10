@@ -1,0 +1,191 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "datatype-xcnpractitioner-to-practitioner",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "url": "http://hl7.org/fhir/v2-tofhir/datatype-xcnpractitioner-to-practitioner",
+  "version": "1.0",
+  "name": "Datatype_XCN_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-09",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "XCN",
+  "targetUri": "Practitioner",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "XCN.1",
+          "display": "Person Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.identifier.value",
+              "display": "Practitioner.identifier.value"
+            }
+          ]
+        },
+        {
+          "code": "XCN.2",
+          "display": "Family Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name",
+              "display": "Practitioner.name"
+            }
+          ]
+        },
+        {
+          "code": "XCN.3",
+          "display": "Given Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name.given[1]",
+              "display": "Practitioner.name.given[1]"
+            }
+          ]
+        },
+        {
+          "code": "XCN.4",
+          "display": "Second and Further Given Names or Initials Thereof",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name.given[2]",
+              "display": "Practitioner.name.given[2]"
+            }
+          ]
+        },
+        {
+          "code": "XCN.5",
+          "display": "Suffix (e.g., JR or III)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name.suffix[1]",
+              "display": "Practitioner.name.suffix[1]"
+            }
+          ]
+        },
+        {
+          "code": "XCN.6",
+          "display": "Prefix (e.g., DR)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name.prefix",
+              "display": "Practitioner.name.prefix"
+            }
+          ]
+        },
+        {
+          "code": "XCN.7",
+          "display": "Degree (e.g., MD)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name.suffix[2}",
+              "display": "Practitioner.name.suffix[2}"
+            }
+          ]
+        },
+        {
+          "code": "XCN.10",
+          "display": "Name Type Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name.use",
+              "display": "Practitioner.name.use"
+            }
+          ]
+        },
+        {
+          "code": "XCN.13",
+          "display": "Identifier Type Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.identifier.type.coding.code",
+              "display": "Practitioner.identifier.type.coding.code"
+            }
+          ]
+        },
+        {
+          "code": "XCN.17",
+          "display": "Name Validity Range",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name.period",
+              "display": "Practitioner.name.period",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF XCN.19 DOES NOT EXIST AND IF XCN.20 DOES NOT EXIST\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XCN.18",
+          "display": "Name Assembly Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name.family.ext-assembly-order",
+              "display": "Practitioner.name.family.ext-assembly-order"
+            }
+          ]
+        },
+        {
+          "code": "XCN.19",
+          "display": "Effective Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name.period.start",
+              "display": "Practitioner.name.period.start"
+            }
+          ]
+        },
+        {
+          "code": "XCN.20",
+          "display": "Expiration Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name.period.end",
+              "display": "Practitioner.name.period.end"
+            }
+          ]
+        },
+        {
+          "code": "XCN.21",
+          "display": "Professional Suffix",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Practitioner.name.suffix",
+              "display": "Practitioner.name.suffix"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

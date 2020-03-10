@@ -1,0 +1,169 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-prtpractitionerrole-to-operation",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 PRT Segment to the FHIR Operation Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-prtpractitionerrole-to-operation",
+  "version": "1.0",
+  "name": "Segment_PRT_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-09",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "PRT",
+  "targetUri": "Operation",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "PRT-2",
+          "display": "Action Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Operation",
+              "display": "Operation",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "if mapped to a restful service to progress the message."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PRT-4",
+          "display": "Role of Participation",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole.code",
+              "display": "PractitionerRole.code"
+            }
+          ]
+        },
+        {
+          "code": "PRT-5",
+          "display": "Person",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole",
+              "display": "PractitionerRole"
+            }
+          ]
+        },
+        {
+          "code": "PRT-6",
+          "display": "Person Provider Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole.specialty",
+              "display": "PractitionerRole.specialty"
+            }
+          ]
+        },
+        {
+          "code": "PRT-7",
+          "display": "Organization Unit Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole.organization(Organization.type)",
+              "display": "PractitionerRole.organization(Organization.type)"
+            }
+          ]
+        },
+        {
+          "code": "PRT-8",
+          "display": "Organization",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole.organization(Organization)",
+              "display": "PractitionerRole.organization(Organization)"
+            }
+          ]
+        },
+        {
+          "code": "PRT-9",
+          "display": "Location",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractionerRole.location(Location)",
+              "display": "PractionerRole.location(Location)"
+            }
+          ]
+        },
+        {
+          "code": "PRT-11",
+          "display": "Begin Date/Time (arrival time)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole.period.start",
+              "display": "PractitionerRole.period.start"
+            }
+          ]
+        },
+        {
+          "code": "PRT-12",
+          "display": "End Date/Time (departure time)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole.period.end",
+              "display": "PractitionerRole.period.end"
+            }
+          ]
+        },
+        {
+          "code": "PRT-14",
+          "display": "Address",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole.practitioner(Practitioner.address)",
+              "display": "PractitionerRole.practitioner(Practitioner.address)"
+            }
+          ]
+        },
+        {
+          "code": "PRT-15",
+          "display": "Telecommunication Address",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole.telecom",
+              "display": "PractitionerRole.telecom"
+            }
+          ]
+        },
+        {
+          "code": "PRT-24",
+          "display": "Contact Identifiers",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PractitionerRole.identifier[2]",
+              "display": "PractitionerRole.identifier[2]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

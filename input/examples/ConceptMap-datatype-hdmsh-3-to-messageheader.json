@@ -1,0 +1,132 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "datatype-hdmsh-3-to-messageheader",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "url": "http://hl7.org/fhir/v2-tofhir/datatype-hdmsh-3-to-messageheader",
+  "version": "1.0",
+  "name": "Datatype_HD_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-03-09",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "HD",
+  "targetUri": "MessageHeader",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "HD.1",
+          "display": "Namespace ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MessageHeader.source.name",
+              "display": "MessageHeader.source.name"
+            }
+          ]
+        },
+        {
+          "code": "HD.1",
+          "display": "Namespace ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent.who(Device.identifier[1].value)",
+              "display": "Provenance.agent.who(Device.identifier[1].value)",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF HD.1 VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "HD.1",
+          "display": "Namespace ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.target[1](MessageHeader.target",
+              "display": "= MessageHeader.id)"
+            }
+          ]
+        },
+        {
+          "code": "HD.2",
+          "display": "Universal ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MessageHeader.source.endpoint",
+              "display": "MessageHeader.source.endpoint",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF HD.3 EQUALS \"URI\" AND MSH-24 NOT VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "HD.2",
+          "display": "Universal ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent.who(Device.identifier[2].system",
+              "display": "= \"urn:ietf:rfc:3986\")",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF HD.3 IN (\"ISO\" ,\"UUID\")\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "HD.2",
+          "display": "Universal ID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.target[1](MessageHeader.target",
+              "display": "= MessageHeader.id)",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "# IF HD.2 VALUED\\"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "HD.3",
+          "display": "Universal ID Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance.agent.who(Device.identifier[2].type)",
+              "display": "Provenance.agent.who(Device.identifier[2].type)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

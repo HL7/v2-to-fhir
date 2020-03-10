@@ -5,21 +5,29 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.tuple.Triple;
 
 import com.opencsv.bean.CsvToBeanBuilder;
 
 public abstract class ConverterImpl<T extends Convertible> implements Converter {
+    private static final String FHIR_BASE = "https://hl7.org/fhir/R4/";
     private String filename = null;
     File theSource;
     protected String parts[] = null;
     private String type;
     private List<T> beans;
     private Class<T> classType;
-    protected String source, sourceName, target, targetName;
+    protected String source, sourceName, qualifier, target, targetName;
 
     public static class Row {
         String sourceCode;
@@ -46,6 +54,10 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     public void load(File f) throws IOException {
         theSource = f;
         filename = f.getName();
+        qualifier = StringUtils.substringBefore(StringUtils.substringAfter(filename,"["),"]");
+        if (qualifier.length() > 0) {
+            qualifier = "[" + qualifier.replace(" ", "") + "]";
+        }
         parts = filename.split("\\s*[\\._\\-]\\s*");
         if (filename.contains("Message")) {
             type = "Message";
@@ -114,11 +126,12 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     }
 
     public String getFishFileName() {
-        return String.format("%s %s to %s.fsh", type, sourceName, targetName);
+        return String.format("%s %s%s to %s.fsh", type, sourceName, qualifier, targetName);
     }
 
     public String getId() {
-        return cleanId(String.format("%s-%s-to-%s", type.toLowerCase(), sourceName, targetName));
+        return cleanId(String.format("%s-%s-to-%s",
+            type.toLowerCase(), sourceName + qualifier, targetName));
     }
 
     public String getMdFileName(String prefix, String suffix) {
@@ -322,20 +335,74 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         return value.trim();
     }
 
+    private static Pattern LINK_PATTERN = Pattern.compile("http:|https:|ftp:|mailto:");
+
     protected String escapeHtmlString(String html) {
         if (html == null) {
             return "";
         }
-        return html.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;");
+        Matcher m = LINK_PATTERN.matcher(html);
+        if (!m.find()) {
+            return simpleEscapeHtmlString(html);
+        }
+        // OK, so we have some links in text that should be made into real links.
+        StringBuilder links = new StringBuilder();
+        int start = 0;
+        while (start < html.length()) {
+            int end = m.start();
+            String chunk;
+            if (end != 0) {
+                chunk = html.substring(start, end);
+                links.append(simpleEscapeHtmlString(chunk));
+            }
+            start = end;
+            for (end = start; end < html.length(); end++) {
+                int c = html.charAt(end);
+                if (!Character.isLetterOrDigit(c) && "-+&@#/%?=~_|$!:,.;".indexOf(c) < 0)
+                    break;
+            }
+            // End is either after the last character, or the character that doesn't match a URL character
+            // NOTE: While ( and ) are legal in URLs, we are assuming they won't appear in text.
+
+            chunk = html.substring(start, end);
+            String addr = chunk;    // Assume address is same as chunk
+
+            // Fix addr for missing protocol
+            if (!addr.matches("^(http:|https:|ftp:|mailto:).*$")) {
+                if (addr.contains("@")) {
+                    addr = "mailto:" + addr;
+                } else if (addr.startsWith("www")) {
+                    addr = "http://" + addr;
+                } else if (addr.startsWith("ftp")) {
+                    addr = "ftp://" + addr;
+                } else {
+                    addr = "http://" + addr;
+                }
+            }
+            links.append("<a href='" + escapeHtmlAttr(addr) + "'>")
+                .append(simpleEscapeHtmlString(chunk))
+                .append("</a>");
+            start = end;
+            if (!m.find()) {
+                chunk = html.substring(start);
+                links.append(simpleEscapeHtmlString(chunk));
+                break;
+            }
+        }
+        return links.toString();
     }
 
     protected String escapeHtmlAttr(String attr) {
-        return escapeHtmlString(attr).replace("'", "&apos;").replace("\"", "&quot;");
+        return simpleEscapeHtmlString(attr).replace("'", "&apos;").replace("\"", "&quot;");
+    }
+
+    protected String simpleEscapeHtmlString(String html) {
+        return html.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;");
     }
 
     protected abstract void writeIntro(List<T> bean, PrintWriter introWriter);
 
-    private String cleanId(String name) {
+    private static String cleanId(String name) {
         name = name.contains("/") ? StringUtils.substringAfterLast(name, "/") : name;
         return StringUtils.truncate(StringUtils.replaceChars(name.toLowerCase(), "! _[]", "---").replaceAll("--+", "-"),
             64);
@@ -356,4 +423,157 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         store(new File("."));
     }
 
+    @Override
+    public String getQualifier() {
+        return qualifier;
+    }
+
+    static Set<String> fhirLinks = new TreeSet<>(),
+        segmentLinks = new TreeSet<>(),
+        tableLinks = new TreeSet<>(),
+        dataTypeLinks = new TreeSet<>();
+
+    protected static String makeFhirLink(String fhirCode) {
+
+        if (StringUtils.isEmpty(fhirCode) || "N/A".equals(fhirCode.trim().toUpperCase())) {
+            return fhirCode;
+        }
+
+        String fhirLinks[] = null;
+
+        // Remove everything after the equals
+        String myFhirCode = StringUtils.substringBefore(fhirCode, "=").trim();
+        // Remove everything between [] inclusive
+        myFhirCode = myFhirCode.replaceAll("\\[[^\\]]*\\]", "");
+        // Split at ( and ), removing those
+        fhirLinks = myFhirCode.split("[\\(\\)]");
+        // Create a link for every part remaining.
+        StringBuilder links = new StringBuilder();
+        String name = null;
+
+        for (String fhirLink: fhirLinks) {
+            if (fhirLink == null) {
+                continue;
+            }
+            if (isResource(fhirLink)) {
+                // If a FHIR Resource, link to fhir/R4/{resource}.html
+                links.append(makeLink(fhirLink, FHIR_BASE + fhirLink + ".html"));
+            } else if (isResourceField(fhirLink)) {
+                // If a FHIR Resource field, link to fhir/R4/{resource}-definitions.html#{field}
+                name = StringUtils.substringBefore(fhirLink, ".");
+                links.append(makeLink(fhirLink, FHIR_BASE + name + "-definitions.html#" + fhirLink));
+            } else if (isFhirDataType(fhirLink)) {
+                // If a FHIR Data Type, link to  http://hl7.org/fhir/R4/datatypes.html#{datatype}
+                links.append(makeLink(fhirLink, "https://hl7.org/fhir/R4/datatypes.html#" + fhirLink));
+            } else if (isFhirDataType(StringUtils.capitalize(fhirLink))) {
+                System.err.printf("%s used where %s is likely meant.%n", fhirLink, StringUtils.capitalize(fhirLink));
+                links.append(makeLink(StringUtils.capitalize(fhirLink), "https://hl7.org/fhir/R4/datatypes.html#" + StringUtils.capitalize(fhirLink)));
+            } else if (isFhirDataTypeField(fhirLink)) {
+                // If a FHIR Data Type field, link to fhir/R4/datatypes-definitions.html#{field}
+                links.append(makeLink(fhirLink, "https://hl7.org/fhir/R4/datatypes-definitions.html#" + fhirLink));
+            } else if (StringUtils.startsWith(fhirLink, "http://hl7.org/fhir") &&
+                       !StringUtils.startsWith(fhirLink, "http://hl7.org/fhir/R4")) {
+                // if it starts with http://hl7.org/fhir and does not contain R4, insert R4
+                // and convert to codesystem- style.
+                links.append(makeLink(fhirLink,
+                    fhirLink.replace("http://hl7.org/fhir/", "https://hl7.org/fhir/R4/codesystem-") + (fhirLink.endsWith(".html") ? "" : ".html")));
+            } else if (StringUtils.startsWith(fhirLink,  "http://terminology.hl7.org/CodeSystem/v2-")) {
+                // if it starts with  http://terminology.hl7.org/CodeSystem/v2- replace with http://hl7.org/fhir/R4/v2/
+                // and append /index.html
+                links.append(makeLink(fhirLink,
+                    fhirLink.replace("http://terminology.hl7.org/CodeSystem/v2-", "https://hl7.org/fhir/R4/v2/") + "/index.html")
+                );
+            } else if (StringUtils.startsWith(fhirLink, "http://terminology.hl7.org/CodeSystem/v3-")) {
+                // if it starts with  http://terminology.hl7.org/CodeSystem/v2- replace with http://hl7.org/fhir/R4/v2/
+                // and append /index.html
+                links.append(makeLink(fhirLink,
+                        fhirLink.replace("http://terminology.hl7.org/CodeSystem/v3-", "https://hl7.org/fhir/R4/v3/") +
+                        "/cs.html")
+                );
+            } else {
+                // Otherwise, force what is likely to be broken link, making someone go through a fix.
+                links.append(makeLink(fhirLink,"#broken"));
+            }
+        }
+        return links.toString();
+    }
+
+    private static boolean isFhirDataTypeField(String fhirLink) {
+        return fhirLink.contains(".") && isFhirDataType(StringUtils.substringBefore(fhirLink,"."));
+    }
+
+    private static boolean isFhirDataType(String fhirLink) {
+        Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap();
+        return m.get("FHIR Data Type").get(fhirLink) != null;
+    }
+
+    private static boolean isResourceField(String fhirLink) {
+        return fhirLink.contains(".") && isResource(StringUtils.substringBefore(fhirLink,"."));
+    }
+
+    private static boolean isResource(String fhirLink) {
+        Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap();
+        return m.get("FHIR Resource").get(fhirLink) != null;
+    }
+
+    protected static String makeSegmentLink(String segmentMap, String fhirCode) {
+        // if segmentMap is empty, return the value w/o a link.
+        if (StringUtils.isBlank(segmentMap)) return segmentMap;
+
+        // Replace all Reference(name) with name
+        String mySegmentMap = segmentMap.replaceAll("Reference\\(([^\\)]*)\\)","$1");
+
+        // If fhirCode ends with [1], remove it.
+        // if in the form XX- convert to ConceptMap-datatype-XX-to-XX.html
+        String myFhirCode = StringUtils.isBlank(fhirCode) ? mySegmentMap :
+            fhirCode.replaceAll("[\\[\\(][^\\]\\)]*[\\]\\)]","");
+
+        // if in the form DTNAME(name1)-name2 or DTNAME[name1]-name2 convert to ConceptMap-datatype-DTNAMEname1-to-name2.html
+            mySegmentMap = StringUtils.replaceChars(mySegmentMap,"[]{}()", "");
+
+        // if in the form DTNAME-name1 convert to ConceptMap-datatype-DTNAME-to-name1.html
+        return makeLink(segmentMap, "ConceptMap-segment-" + cleanId(String.format("%s-to-%s", mySegmentMap, myFhirCode)) + ".html");
+    }
+
+    protected static String makeTableLink(String fhirVocab) {
+        tableLinks.add(fhirVocab);
+        return fhirVocab;
+    }
+
+    protected static String makeDataTypeLink(String v2DataType, String fhirDatatype) {
+
+        // if v2DataTypeMap is empty, return the value w/o a link.
+        if (StringUtils.isBlank(v2DataType)) return v2DataType;
+
+        // Replace all Reference(name) with name
+        String myV2DataType = v2DataType.replaceAll("Reference\\(([^\\)]*)\\)","$1");
+
+        // if in the form XX- convert to ConceptMap-datatype-XX-to-XX.html
+        String myFhirDataType = StringUtils.isBlank(fhirDatatype) ? myV2DataType : fhirDatatype;
+
+        // if in the form DTNAME(name1)-name2 or DTNAME[name1]-name2 convert to ConceptMap-datatype-DTNAMEname1-to-name2.html
+        myV2DataType = StringUtils.replaceChars(myV2DataType,"[]{}()", "");
+
+        // if in the form DTNAME-name1 convert to ConceptMap-datatype-DTNAME-to-name1.html
+        return makeLink(v2DataType,
+            "ConceptMap-datatype-" + cleanId(String.format("%s-to-%s", myV2DataType, myFhirDataType)) + ".html");
+    }
+
+    static String makeLink(String text, String link) {
+        return String.format("<a href='%s'>%s</a>", link, text);
+    }
+
+    static void printLinkData() {
+        String names[] = { "FHIR", "Segments", "Tables", "Data Types" };
+
+        List<Set<String>> sets = Arrays.asList(fhirLinks, segmentLinks, tableLinks, dataTypeLinks);
+
+        for (int i = 0; i < names.length; i++) {
+            System.out.println(names[i]);
+            for (String link: sets.get(i)) {
+                System.out.print(" ");
+                System.out.println(link);
+            }
+        }
+    }
 }

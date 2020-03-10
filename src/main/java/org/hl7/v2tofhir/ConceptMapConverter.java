@@ -21,10 +21,10 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
         w.println("<table class='grid'><thead>");
         w.print("<tr><th colspan='3' style='border-right: 2px solid black;'>HL7 v2</th>");
         w.print("<th colspan='3' style='border-right: 2px solid black;'>Condition (IF True, args)</th>");
-        w.println("<th colspan='4'>HL7 FHIR</th><th>Comments</th></tr>");
+        w.println("<th colspan='4'>HL7 FHIR</th><th rowspan='2'>Comments</th></tr>");
 
         w.print("<tr><th>Code</th><th>Text</th><th>Code System</th><th>Computable ANTLR</th><th>Computable FHIRPath</th><th>Narrative</th>");
-        w.println("<th>Code</th><th>&#xA0;</th><th>Display</th><th>Code System</th><th>&#xA0;</th></tr></thead>");
+        w.println("<th>Code</th><th>Proposed Extension</th><th>Display</th><th>Code System</th></tr></thead>");
 
         w.println("<tbody>");
 
@@ -34,17 +34,18 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
                 continue;
             }
             String cols[] = {
-                bean.v2Code, bean.v2Text, bean.v2CodeSystem,
-                bean.conditionANTLR, bean.conditionfhirPath, bean.conditionNarrative,
-                bean.fhirCode, bean.fhirExtension, bean.fhirDisplay, bean.fhirCodeSystem,
-                bean.comments
+                escapeHtmlString(bean.v2Code), escapeHtmlString(bean.v2Text), escapeHtmlString(bean.v2CodeSystem),
+                escapeHtmlString(bean.conditionANTLR), escapeHtmlString(bean.conditionfhirPath), escapeHtmlString(bean.conditionNarrative),
+                escapeHtmlString(bean.fhirCode), escapeHtmlString(bean.fhirExtension), escapeHtmlString(bean.fhirDisplay),
+                makeFhirLink(bean.fhirCodeSystem),
+                escapeHtmlString(bean.comments)
             };
             w.print("<tr>");
             for (String col: cols) {
                 if (col == bean.v2CodeSystem || col == bean.conditionNarrative) {
-                    w.printf("<td style='border-right: 2px'>%s</td>", escapeHtmlString(col));
+                    w.printf("<td style='border-right: 2px'>%s</td>", col);
                 } else {
-                    w.printf("<td>%s</td>", escapeHtmlString(col));
+                    w.printf("<td>%s</td>", col);
                 }
             }
             w.println("</tr>");
