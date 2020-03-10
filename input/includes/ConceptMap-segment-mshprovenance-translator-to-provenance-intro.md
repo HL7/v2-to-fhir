@@ -33,4 +33,5 @@ This ConceptMap represents the mapping from the HL7 V2 MSH Segment to the FHIR P
 <tr><td>23</td><td>MSH-23</td><td>Receiving Responsible Organization</td><td>XON</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>24</td><td>MSH-24</td><td>Sending Network Address</td><td>HD</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>25</td><td>MSH-25</td><td>Receiving Network Address</td><td>HD</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>

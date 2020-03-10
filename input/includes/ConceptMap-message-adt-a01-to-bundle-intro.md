@@ -47,4 +47,5 @@ This ConceptMap represents the mapping from the HL7 V2 ADT_A01 Message to the FH
 <tr><td>23</td><td>ADT_A01.UB1</td><td>[ UB1 ]</td><td>Universal Bill Information</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>24</td><td>ADT_A01.UB2</td><td>[ UB2 ]</td><td>Universal Bill 92 Information</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>25</td><td>ADT_A01.PDA</td><td>[ PDA ]</td><td>Patient Death and Autopsy</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>

@@ -28,4 +28,5 @@ This ConceptMap represents the mapping from the HL7 V2 PRT Segment to the FHIR O
 <tr><td>22</td><td>PRT-22</td><td>Device Type</td><td>CNE</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>23</td><td>PRT-23</td><td>Preferred Method of Contact</td><td>CWE</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>24</td><td>PRT-24</td><td>Contact Identifiers</td><td>PLN</td><td>0</td><td style='border-right: 2px'>-1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>

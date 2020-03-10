@@ -109,4 +109,5 @@ This ConceptMap represents the mapping from the HL7 V2 OML_O21 Message to the FH
 <tr><td>6.6</td><td>OML_O21.ORDER.CTI</td><td>[{CTI}]</td><td>Clinical Trial Identification</td><td></td><td style='border-right: 2px'></td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>6.7</td><td>OML_O21.ORDER.BLG</td><td>[ BLG ]</td><td>Billing Segment</td><td></td><td style='border-right: 2px'></td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>6.8</td><td>/OML_O21.ORDER</td><td>}</td><td>--- ORDER end</td><td></td><td style='border-right: 2px'></td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>

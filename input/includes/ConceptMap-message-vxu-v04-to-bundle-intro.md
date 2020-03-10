@@ -57,4 +57,5 @@ This ConceptMap represents the mapping from the HL7 V2 VXU_V04 Message to the FH
 <tr><td>12.6.3</td><td>VXU_V04.ORDER.OBSERVATION.NTE</td><td>[{ NTE }]</td><td>Notes (Regarding Immunization)</td><td>0</td><td style='border-right: 2px'>-1</td><td></td><td></td><td style='border-right: 2px'></td><td><a href='https://hl7.org/fhir/R4/Observation-definitions.html#Observation.note'>Observation.note</a></td><td><a href='ConceptMap-segment-nteannotation-to-observation.note.html'>NTE[Annotation]</a></td><td></td><td></td></tr>
 <tr><td>12.6.4</td><td>/VXU_V04.ORDER.OBSERVATION</td><td>}]</td><td>--- OBSERVATION end</td><td></td><td style='border-right: 2px'></td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>12.7</td><td>/VXU_V04.ORDER</td><td>}]</td><td>--- ORDER end</td><td></td><td style='border-right: 2px'></td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>

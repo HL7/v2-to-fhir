@@ -76,4 +76,5 @@ This ConceptMap represents the mapping from the HL7 V2 ORU_R01 Message to the FH
 <tr><td>4.2.8</td><td>/ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION</td><td>}</td><td>--- ORDER_OBSERVATION end</td><td></td><td style='border-right: 2px'></td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>4.3</td><td>/ORU_R01.PATIENT_RESULT</td><td>}</td><td>--- PATIENT_RESULT end</td><td></td><td style='border-right: 2px'></td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>5</td><td>ORU_R01.DSC</td><td>[DSC]</td><td>Continuation Pointer</td><td></td><td style='border-right: 2px'></td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>

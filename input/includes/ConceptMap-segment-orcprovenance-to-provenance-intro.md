@@ -50,4 +50,5 @@ This ConceptMap represents the mapping from the HL7 V2 ORC Segment to the FHIR P
 <tr><td>32</td><td>ORC-32</td><td>Advanced Beneficiary Notice Date</td><td>DT</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>33</td><td>ORC-33</td><td>Alternate Placer Order Number</td><td>CX</td><td>0</td><td style='border-right: 2px'>-1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>34</td><td>ORC-34</td><td>Order Workflow Profile</td><td>CWE</td><td>0</td><td style='border-right: 2px'>-1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>

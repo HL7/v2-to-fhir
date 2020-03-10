@@ -12,4 +12,5 @@ This ConceptMap represents the mapping from the HL7 V2 NTE Segment to the FHIR A
 <tr><td>6</td><td>NTE-6</td><td>Entered Date/Time</td><td>DTM</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td><a href='https://hl7.org/fhir/R4/datatypes-definitions.html#Annotation.time'>Annotation.time</a></td><td></td><td><a href='#broken'>DateTime</a></td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
 <tr><td>7</td><td>NTE-7</td><td>Effective Start Date </td><td>DTM</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>8</td><td>NTE-8</td><td>Expiration Date</td><td>DTM</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>

@@ -26,4 +26,5 @@ This ConceptMap represents the mapping from the HL7 V2 PD1 Segment to the FHIR P
 <tr><td>20</td><td>PD1-20</td><td>Military Rank/Grade</td><td>CWE</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>21</td><td>PD1-21</td><td>Military Status</td><td>CWE</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>22</td><td>PD1-22</td><td>Advance Directive Last Verified Date</td><td>DT</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>

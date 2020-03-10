@@ -59,4 +59,5 @@ This ConceptMap represents the mapping from the HL7 V2 PV2 Segment to the FHIR E
 <tr><td>48</td><td>PV2-48</td><td>Expected Pre-admission Testing Date/Time</td><td>DTM</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>49</td><td>PV2-49</td><td>Notify Clergy Code</td><td>CWE</td><td>0</td><td style='border-right: 2px'>-1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>50</td><td>PV2-50</td><td>Advance Directive Last Verified Date</td><td>DT</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>

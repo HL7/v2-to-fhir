@@ -10,4 +10,5 @@ This ConceptMap represents the mapping from the HL7 V2 SFT Segment to the FHIR M
 <tr><td>4</td><td>SFT-4</td><td>Software Binary ID</td><td>ST</td><td>1</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td>MessageHeader.source.#ext-binaryIdentifier#</td><td><a href='https://hl7.org/fhir/R4/datatypes.html#string'>string</a></td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
 <tr><td>5</td><td>SFT-5</td><td>Software Product Information</td><td>TX</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td>MessageHeader.source.#ext-description#</td><td><a href='https://hl7.org/fhir/R4/datatypes.html#string'>string</a></td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
 <tr><td>6</td><td>SFT-6</td><td>Software Install Date</td><td>DTM</td><td>0</td><td style='border-right: 2px'>1</td><td></td><td></td><td style='border-right: 2px'></td><td></td><td>MessageHeader.source.#ext-installDate#</td><td><a href='https://hl7.org/fhir/R4/datatypes.html#dateTime'>dateTime</a></td><td>0</td><td>1</td><td></td><td></td><td></td></tr>
-</tbody></table>
+</tbody>
+</table>
