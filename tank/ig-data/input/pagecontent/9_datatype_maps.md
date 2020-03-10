@@ -9,7 +9,6 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 
 ### Chapter 2A  Control|Data Types
 
-* [CM[SpecimenSource]](ConceptMap-datatype-cmspecimensource-to-codeableconcept.html) - Composite to FHIR [CodeableConcept](http://hl7.org/fhir/R4/datatypes.html#CodeableConcept)
 * [CNE[CodeableConcept]](ConceptMap-datatype-cnecodeableconcept-to-codeableconcept.html) - Coded With No Exceptions to FHIR [CodeableConcept](http://hl7.org/fhir/R4/datatypes.html#CodeableConcept)
 * [CWE[CodeableConcept]](ConceptMap-datatype-cwecodeableconcept-to-codeableconcept.html) - Coded With Exceptions to FHIR [CodeableConcept](http://hl7.org/fhir/R4/datatypes.html#CodeableConcept)
 * [CWE[Coding]](ConceptMap-datatype-cwecoding-to-coding.html) - Coded With Exceptions to FHIR [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding)

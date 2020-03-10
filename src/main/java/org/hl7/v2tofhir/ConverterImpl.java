@@ -6,28 +6,28 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeSet;
+import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.lang3.tuple.Triple;
 
 import com.opencsv.bean.CsvToBeanBuilder;
 
 public abstract class ConverterImpl<T extends Convertible> implements Converter {
-    private static final String FHIR_BASE = "https://hl7.org/fhir/R4/";
-    private String filename = null;
-    File theSource;
-    protected String parts[] = null;
-    private String type;
-    private List<T> beans;
-    private Class<T> classType;
-    protected String source, sourceName, qualifier, target, targetName;
+
+    private static final String FHIR_BASE = "https://hl7.org/fhir/R4/", FHIR_TERM = "http://terminology.hl7.org/";
+    private static int errCount = 0, warnCount = 0;
 
     public static class Row {
         String sourceCode;
@@ -40,6 +40,38 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         String mapping;
         String comments;
     }
+
+    private static Map<String,Pair<String,String>> fhirLinks = new TreeMap<>(),
+        segmentLinks = new TreeMap<>(),
+        tableLinks = new TreeMap<>(),
+        dataTypeLinks = new TreeMap<>();
+
+    private static Map<String, String> mappedLinks  = new HashMap<>();
+    static {
+        mappedLinks.put("Reference", FHIR_BASE + "references.html");
+        mappedLinks.put("Meta", FHIR_BASE + "resource.html#Meta");
+        mappedLinks.put("xhtml", FHIR_BASE + "narrative.html#xhtml");
+        mappedLinks.put("Narrative", FHIR_BASE + "narrative.html#Narrative");
+        mappedLinks.put("Extension", FHIR_BASE + "extensibility.html#Extension");
+        mappedLinks.put("Dosage", FHIR_BASE + "dosage.html#Dosage");
+        mappedLinks.put("ContactDetail", FHIR_BASE + "metadatatypes.html#ContactDetail");
+        mappedLinks.put("Contributor", FHIR_BASE + "metadatatypes.html#Contributor");
+        mappedLinks.put("DataRequirement", FHIR_BASE + "metadatatypes.html#DataRequirement");
+        mappedLinks.put("RelatedArtifact", FHIR_BASE + "metadatatypes.html#RelatedArtifact");
+        mappedLinks.put("UsageContext", FHIR_BASE + "metadatatypes.html#UsageContext");
+        mappedLinks.put("ParameterDefinition", FHIR_BASE + "metadatatypes.html#ParameterDefinition");
+        mappedLinks.put("Expression", FHIR_BASE + "metadatatypes.html#Expression");
+        mappedLinks.put("TriggerDefinition", FHIR_BASE + "metadatatypes.html#TriggerDefinition");
+    }
+
+    protected String source, sourceName, qualifier, target, targetName;
+    protected String parts[] = null;
+
+    private String filename = null;
+    private File theSource;
+    private String type;
+    private List<T> beans;
+    private Class<T> classType;
 
     public ConverterImpl(Class<T> classType) {
         this.classType = classType;
@@ -428,12 +460,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         return qualifier;
     }
 
-    static Set<String> fhirLinks = new TreeSet<>(),
-        segmentLinks = new TreeSet<>(),
-        tableLinks = new TreeSet<>(),
-        dataTypeLinks = new TreeSet<>();
-
-    protected static String makeFhirLink(String fhirCode) {
+    protected String makeFhirLink(String fhirCode) {
 
         if (StringUtils.isEmpty(fhirCode) || "N/A".equals(fhirCode.trim().toUpperCase())) {
             return fhirCode;
@@ -445,17 +472,20 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         String myFhirCode = StringUtils.substringBefore(fhirCode, "=").trim();
         // Remove everything between [] inclusive
         myFhirCode = myFhirCode.replaceAll("\\[[^\\]]*\\]", "");
-        // Split at ( and ), removing those
+        // Split at ( and )
         fhirLinks = myFhirCode.split("[\\(\\)]");
         // Create a link for every part remaining.
         StringBuilder links = new StringBuilder();
         String name = null;
-
+        int pos = 0;
         for (String fhirLink: fhirLinks) {
             if (fhirLink == null) {
                 continue;
             }
-            if (isResource(fhirLink)) {
+            String mapped = mappedLinks.get(fhirLink);
+            if (mapped != null) {
+                links.append(makeLink(fhirLink, mapped));
+            } else if (isResource(fhirLink)) {
                 // If a FHIR Resource, link to fhir/R4/{resource}.html
                 links.append(makeLink(fhirLink, FHIR_BASE + fhirLink + ".html"));
             } else if (isResourceField(fhirLink)) {
@@ -464,35 +494,44 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                 links.append(makeLink(fhirLink, FHIR_BASE + name + "-definitions.html#" + fhirLink));
             } else if (isFhirDataType(fhirLink)) {
                 // If a FHIR Data Type, link to  http://hl7.org/fhir/R4/datatypes.html#{datatype}
-                links.append(makeLink(fhirLink, "https://hl7.org/fhir/R4/datatypes.html#" + fhirLink));
+                links.append(makeLink(fhirLink, FHIR_BASE + "datatypes.html#" + fhirLink));
             } else if (isFhirDataType(StringUtils.capitalize(fhirLink))) {
-                System.err.printf("%s used where %s is likely meant.%n", fhirLink, StringUtils.capitalize(fhirLink));
-                links.append(makeLink(StringUtils.capitalize(fhirLink), "https://hl7.org/fhir/R4/datatypes.html#" + StringUtils.capitalize(fhirLink)));
+                warn("%s used where %s is likely meant.%n", fhirLink, StringUtils.capitalize(fhirLink));
+                links.append(makeLink(StringUtils.capitalize(fhirLink), FHIR_BASE + "datatypes.html#" + StringUtils.capitalize(fhirLink)));
             } else if (isFhirDataTypeField(fhirLink)) {
                 // If a FHIR Data Type field, link to fhir/R4/datatypes-definitions.html#{field}
-                links.append(makeLink(fhirLink, "https://hl7.org/fhir/R4/datatypes-definitions.html#" + fhirLink));
+                links.append(makeLink(fhirLink, FHIR_BASE + "datatypes-definitions.html#" + fhirLink));
             } else if (StringUtils.startsWith(fhirLink, "http://hl7.org/fhir") &&
                        !StringUtils.startsWith(fhirLink, "http://hl7.org/fhir/R4")) {
                 // if it starts with http://hl7.org/fhir and does not contain R4, insert R4
                 // and convert to codesystem- style.
                 links.append(makeLink(fhirLink,
-                    fhirLink.replace("http://hl7.org/fhir/", "https://hl7.org/fhir/R4/codesystem-") + (fhirLink.endsWith(".html") ? "" : ".html")));
-            } else if (StringUtils.startsWith(fhirLink,  "http://terminology.hl7.org/CodeSystem/v2-")) {
+                    fhirLink.replace("http://hl7.org/fhir/", FHIR_BASE + "codesystem-") + (fhirLink.endsWith(".html") ? "" : ".html")));
+            } else if (StringUtils.startsWith(fhirLink,  FHIR_TERM + "CodeSystem/v2-")) {
                 // if it starts with  http://terminology.hl7.org/CodeSystem/v2- replace with http://hl7.org/fhir/R4/v2/
                 // and append /index.html
                 links.append(makeLink(fhirLink,
-                    fhirLink.replace("http://terminology.hl7.org/CodeSystem/v2-", "https://hl7.org/fhir/R4/v2/") + "/index.html")
+                    fhirLink.replace(FHIR_TERM + "CodeSystem/v2-", FHIR_BASE + "v2/") + "/index.html")
                 );
-            } else if (StringUtils.startsWith(fhirLink, "http://terminology.hl7.org/CodeSystem/v3-")) {
+            } else if (StringUtils.startsWith(fhirLink, FHIR_TERM + "CodeSystem/v3-")) {
                 // if it starts with  http://terminology.hl7.org/CodeSystem/v2- replace with http://hl7.org/fhir/R4/v2/
                 // and append /index.html
                 links.append(makeLink(fhirLink,
-                        fhirLink.replace("http://terminology.hl7.org/CodeSystem/v3-", "https://hl7.org/fhir/R4/v3/") +
+                        fhirLink.replace(FHIR_TERM + "CodeSystem/v3-", FHIR_BASE + "v3/") +
                         "/cs.html")
                 );
+            } else if (fhirLink.matches("^p?[0-9\\-]*$")) {
+                links.append(fhirLink);
             } else {
                 // Otherwise, force what is likely to be broken link, making someone go through a fix.
-                links.append(makeLink(fhirLink,"#broken"));
+                links.append(makeLink(makeBrokenLink(fhirLink),"#broken"));
+                error("Link to FHIR %s not found.%n", fhirLink);
+            }
+
+            // Append the delimiter character
+            pos += fhirLink.length();
+            if (pos < myFhirCode.length()) {
+                links.append(myFhirCode.charAt(pos++));
             }
         }
         return links.toString();
@@ -516,9 +555,11 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         return m.get("FHIR Resource").get(fhirLink) != null;
     }
 
-    protected static String makeSegmentLink(String segmentMap, String fhirCode) {
+    protected String makeSegmentLink(String segmentMap, String fhirCode) {
         // if segmentMap is empty, return the value w/o a link.
-        if (StringUtils.isBlank(segmentMap)) return segmentMap;
+        if (StringUtils.isBlank(segmentMap)) {
+            return segmentMap;
+        }
 
         // Replace all Reference(name) with name
         String mySegmentMap = segmentMap.replaceAll("Reference\\(([^\\)]*)\\)","$1");
@@ -532,48 +573,118 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             mySegmentMap = StringUtils.replaceChars(mySegmentMap,"[]{}()", "");
 
         // if in the form DTNAME-name1 convert to ConceptMap-datatype-DTNAME-to-name1.html
-        return makeLink(segmentMap, "ConceptMap-segment-" + cleanId(String.format("%s-to-%s", mySegmentMap, myFhirCode)) + ".html");
+        return makeLink("Segment", segmentMap, "ConceptMap-segment-" + cleanId(String.format("%s-to-%s", mySegmentMap, myFhirCode)) + ".html");
     }
 
-    protected static String makeTableLink(String fhirVocab) {
-        tableLinks.add(fhirVocab);
+    protected String makeTableLink(String fhirVocab) {
+        tableLinks.put(fhirVocab, Pair.of(fhirVocab, null));
         return fhirVocab;
     }
 
-    protected static String makeDataTypeLink(String v2DataType, String fhirDatatype) {
+    protected String makeDataTypeLink(String v2DataType, String fhirDatatype) {
 
         // if v2DataTypeMap is empty, return the value w/o a link.
-        if (StringUtils.isBlank(v2DataType)) return v2DataType;
+        if (StringUtils.isBlank(v2DataType)) {
+            return v2DataType;
+        }
 
-        // Replace all Reference(name) with name
-        String myV2DataType = v2DataType.replaceAll("Reference\\(([^\\)]*)\\)","$1");
+        String myV2DataType = v2DataType;
 
+        // Replace all Reference(name) with name in fhirDataType
         // if in the form XX- convert to ConceptMap-datatype-XX-to-XX.html
-        String myFhirDataType = StringUtils.isBlank(fhirDatatype) ? myV2DataType : fhirDatatype;
+        String myFhirDataType = StringUtils.isBlank(fhirDatatype) ? myV2DataType : fhirDatatype.replaceAll("Reference\\(([^\\)]*)\\)","$1").trim();
 
         // if in the form DTNAME(name1)-name2 or DTNAME[name1]-name2 convert to ConceptMap-datatype-DTNAMEname1-to-name2.html
         myV2DataType = StringUtils.replaceChars(myV2DataType,"[]{}()", "");
 
         // if in the form DTNAME-name1 convert to ConceptMap-datatype-DTNAME-to-name1.html
-        return makeLink(v2DataType,
+        return makeLink("Data Type", v2DataType,
             "ConceptMap-datatype-" + cleanId(String.format("%s-to-%s", myV2DataType, myFhirDataType)) + ".html");
     }
 
-    static String makeLink(String text, String link) {
+
+    private static String makeBrokenLink(String fhirLink) {
+        return "<span style='font-weight: bold; color: red'>" + fhirLink + "</span>";
+    }
+
+    private String makeLink(String type, String text, String link) {
+        Map<String, Pair<String, String>> target = null;
+        switch (type) {
+        case "Segment":
+            target = segmentLinks;
+            break;
+        case "Data Type":
+            target = dataTypeLinks;
+            break;
+        case "Table":
+            target = tableLinks;
+            break;
+        }
+        if (target != null) {
+            target.put(link, Pair.of(text, getSourceFileName()));
+        }
+        return makeLink(text, link);
+    }
+
+    private String makeLink(String text, String link) {
         return String.format("<a href='%s'>%s</a>", link, text);
     }
 
-    static void printLinkData() {
+    static boolean printLinkData() {
         String names[] = { "FHIR", "Segments", "Tables", "Data Types" };
 
-        List<Set<String>> sets = Arrays.asList(fhirLinks, segmentLinks, tableLinks, dataTypeLinks);
-
+        Set<String> htmlFiles = new HashSet<>();
+        Collection<File> files = FileUtils.listFiles(new File("tank"), new String[] { "fsh" }, false);
+        for (File file: files) {
+            htmlFiles.add("ConceptMap-" + cleanId(StringUtils.substringBeforeLast(file.getName(), ".fsh")) + ".html");
+        }
+        List<Map<String,Pair<String, String>>> maps = Arrays.asList(fhirLinks, segmentLinks, tableLinks, dataTypeLinks);
+        boolean allValid = true;
         for (int i = 0; i < names.length; i++) {
             System.out.println(names[i]);
-            for (String link: sets.get(i)) {
+            for (Map.Entry<String, Pair<String, String>> link: maps.get(i).entrySet()) {
                 System.out.print(" ");
-                System.out.println(link);
+                System.out.printf(" %s\t%s%n", link.getValue(), link.getKey());
+
+                // Verify the link target, and report if not valid
+                String page = link.getKey();
+                if (page.contains(".html") && !htmlFiles.contains(page)) {
+                    report(true, link.getValue().getRight(), "Link requested by %s to '%s' does not exist.%n", link.getValue().getLeft(), page);
+                    allValid = false;
+                }
             }
         }
+
+        return allValid;
+    }
+
+    protected void error(String format, Object ... args) {
+        report(true, getSourceFileName(), format, args);
+    }
+
+    protected void warn(String format, Object ... args) {
+        report(false, getSourceFileName(), format, args);
+    }
+
+    protected void info(String format, Object ... args) {
+        System.out.printf(source + ": " + format, args);
+    }
+
+    protected static void report(boolean isError, String source, String format, Object ...args) {
+        if (isError) {
+            errCount++;
+        } else {
+            warnCount++;
+        }
+        System.err.printf((isError ? "E" + errCount : "W" + warnCount) + ") " + source + ": " + format, args);
+    }
+
+
+    protected static int getErrorCount() {
+        return errCount;
+    }
+
+    protected static int getWarnCount() {
+        return warnCount;
     }
 }

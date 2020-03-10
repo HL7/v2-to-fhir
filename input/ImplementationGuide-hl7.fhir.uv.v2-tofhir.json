@@ -37,13 +37,6 @@
     "resource": [
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cmspecimensource-to-codeableconcept"
-        },
-        "name": "Datatype CM to CodeableConcept Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "ConceptMap/datatype-cnecodeableconcept-to-codeableconcept"
         },
         "name": "Datatype CNE to CodeableConcept Map",
@@ -262,6 +255,13 @@
       {
         "reference": {
           "reference": "ConceptMap/datatype-sheet1assigningauthority-to-sheet1"
+        },
+        "name": "Datatype Sheet1 to Sheet1 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-sheet1specimensource-to-sheet1"
         },
         "name": "Datatype Sheet1 to Sheet1 Map",
         "exampleBoolean": true

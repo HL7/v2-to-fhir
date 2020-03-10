@@ -1,0 +1,156 @@
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
+W1) mappings\segments\HL7 Segment - FHIR R4_ AL1 - AL1.csv: coding used where Coding is likely meant.
+W2) mappings\segments\HL7 Segment - FHIR R4_ AL1 - AL1.csv: coding used where Coding is likely meant.
+W3) mappings\segments\HL7 Segment - FHIR R4_ ARV - Sheet1.csv: coding used where Coding is likely meant.
+W4) mappings\segments\HL7 Segment - FHIR R4_ ARV - Sheet1.csv: coding used where Coding is likely meant.
+W5) mappings\segments\HL7 Segment - FHIR R4_ ARV - Sheet1.csv: period used where Period is likely meant.
+W6) mappings\segments\HL7 Segment - FHIR R4_ ARV - Sheet1.csv: coding used where Coding is likely meant.
+W7) mappings\segments\HL7 Segment - FHIR R4_ ARV - Sheet1.csv: coding used where Coding is likely meant.
+W8) mappings\segments\HL7 Segment - FHIR R4_ ARV - Sheet1.csv: coding used where Coding is likely meant.
+E1) mappings\segments\HL7 Segment - FHIR R4_ DG1 - Sheet1.csv: Link to FHIR DateTime not found.
+W9) mappings\segments\HL7 Segment - FHIR R4_ DG1 - Sheet1.csv: identifier used where Identifier is likely meant.
+W10) mappings\segments\HL7 Segment - FHIR R4_ IAM - Sheet1.csv: identifier used where Identifier is likely meant.
+W11) mappings\segments\HL7 Segment - FHIR R4_ MSH - R4.csv: coding used where Coding is likely meant.
+W12) mappings\segments\HL7 Segment - FHIR R4_ MSH - R4.csv: identifier used where Identifier is likely meant.
+W13) mappings\segments\HL7 Segment - FHIR R4_ MSH - R4.csv: coding used where Coding is likely meant.
+E2) mappings\segments\HL7 Segment - FHIR R4_ MSH - R4.csv: Link to FHIR Messageheader.source.endpoint not found.
+E3) mappings\segments\HL7 Segment - FHIR R4_ NTE[Annotation] - NTE.csv: Link to FHIR DateTime not found.
+W14) mappings\segments\HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv: simpleQuantity used where SimpleQuantity is likely meant.
+W15) mappings\segments\HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv: simpleQuantity used where SimpleQuantity is likely meant.
+W16) mappings\segments\HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv: codeableConcept used where CodeableConcept is likely meant.
+W17) mappings\segments\HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv: quantity used where Quantity is likely meant.
+E4) mappings\segments\HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv: Link to FHIR SpecimenRequest.specimen not found.
+W18) mappings\segments\HL7 Segment - FHIR R4_ OBX[ObservationComponent] - PV1.csv: quantity used where Quantity is likely meant.
+E5) mappings\segments\HL7 Segment - FHIR R4_ OBX[ObservationComponent] - PV1.csv: Link to FHIR complex not found.
+E6) mappings\segments\HL7 Segment - FHIR R4_ OBX[ObservationComponent] - PV1.csv: Link to FHIR PracitionerRole not found.
+W19) mappings\segments\HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv: quantity used where Quantity is likely meant.
+E7) mappings\segments\HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv: Link to FHIR complex not found.
+E8) mappings\segments\HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv: Link to FHIR PracitionerRole not found.
+E9) mappings\segments\HL7 Segment - FHIR R4_ ORC[DiagnosticReport] - ORC.csv: Link to FHIR DateTime not found.
+E10) mappings\segments\HL7 Segment - FHIR R4_ ORC[DiagnosticReport] - ORC.csv: Link to FHIR Codeable Concept not found.
+E11) mappings\segments\HL7 Segment - FHIR R4_ ORC[Provenance] - ORC.csv: Link to FHIR Instant not found.
+W20) mappings\segments\HL7 Segment - FHIR R4_ PID - PID.csv: identifier used where Identifier is likely meant.
+E12) mappings\segments\HL7 Segment - FHIR R4_ PRT[OBX - Location] - Sheet1.csv: Link to FHIR Operation not found.
+E13) mappings\segments\HL7 Segment - FHIR R4_ PRT[PIDPD1 - RelatedPerson] - Sheet1.csv: Link to FHIR Operation not found.
+E14) mappings\segments\HL7 Segment - FHIR R4_ PRT[PractitionerRole] - Sheet1.csv: Link to FHIR Operation not found.
+E15) mappings\segments\HL7 Segment - FHIR R4_ PRT[PractitionerRole] - Sheet1.csv: Link to FHIR PractionerRole.location not found.
+W21) mappings\segments\HL7 Segment - FHIR R4_ PRT[PractitionerRole] - Sheet1.csv: identifier used where Identifier is likely meant.
+E16) mappings\segments\HL7 Segment - FHIR R4_ PV2 - PV2.csv: Link to FHIR Practitioner|PractitionerRole not found.
+E17) mappings\segments\HL7 Segment - FHIR R4_ ROL[PIDPD1 - PractitionerRole] - Sheet1.csv: Link to FHIR Operation not found.
+W22) mappings\segments\HL7 Segment - FHIR R4_ ROL[PIDPD1-RelatedPerson] - Sheet1.csv: identifier used where Identifier is likely meant.
+E18) mappings\segments\HL7 Segment - FHIR R4_ ROL[PIDPD1-RelatedPerson] - Sheet1.csv: Link to FHIR Operation not found.
+W23) mappings\segments\HL7 Segment - FHIR R4_ ROL[PV1PV2 - PractitionerRole] - Sheet1.csv: identifier used where Identifier is likely meant.
+E19) mappings\segments\HL7 Segment - FHIR R4_ ROL[PV1PV2 - PractitionerRole] - Sheet1.csv: Link to FHIR Operation not found.
+E20) mappings\segments\HL7 Segment - FHIR R4_ ROL[PV1PV2 - PractitionerRole] - Sheet1.csv: Link to FHIR Practioner not found.
+E21) mappings\segments\HL7 Segment - FHIR R4_ RXA[Immunization] - RXA.csv: Link to FHIR Immunzation.doseQuantity.value not found.
+E22) mappings\segments\HL7 Segment - FHIR R4_ RXA[Immunization] - RXA.csv: Link to FHIR Immunzation.doseQuantity not found.
+E23) mappings\segments\HL7 Segment - FHIR R4_ RXA[Immunization] - RXA.csv: Link to FHIR system not found.
+W24) mappings\segments\HL7 Segment - FHIR R4_ SPM - SPM.csv: codeableConcept used where CodeableConcept is likely meant.
+W25) mappings\segments\HL7 Segment_ ORC[ServiceRequest] - ORC.csv: quantity used where Quantity is likely meant.
+E24) mappings\segments\HL7 Segment_ ORC[ServiceRequest] - ORC.csv: Link to FHIR Practititoner.address not found.
+E25) mappings\segments\HL7 Segment_ PRT[OBX - Device] - Sheet1.csv: Link to FHIR Operation not found.
+W26) mappings\datatypes\HL7 Data Type - FHIR R4_ HD[MSH-5] - Sheet1.csv: coding used where Coding is likely meant.
+E26) mappings\datatypes\HL7 Data Type - FHIR R4_ MSG - Sheet1.csv: Link to FHIR coding.code not found.
+E27) mappings\datatypes\HL7 Data Type - FHIR R4_ MSG - Sheet1.csv: Link to FHIR coding.system not found.
+E28) mappings\datatypes\HL7 Data Type - FHIR R4_ PL - Sheet1.csv: Link to FHIR Reference{Location not found.
+E29) mappings\datatypes\HL7 Data Type - FHIR R4_ PL - Sheet1.csv: Link to FHIR Reference{Location not found.
+E30) mappings\datatypes\HL7 Data Type - FHIR R4_ PL - Sheet1.csv: Link to FHIR Reference{Location not found.
+E31) mappings\datatypes\HL7 Data Type - FHIR R4_ PL - Sheet1.csv: Link to FHIR Reference{Location not found.
+E32) mappings\datatypes\HL7 Data Type - FHIR R4_ PL - Sheet1.csv: Link to FHIR Reference{Location not found.
+E33) mappings\datatypes\HL7 Data Type - FHIR R4_ SN[Quantity] - Sheet1.csv: Link to FHIR Quanitty.value not found.
+W27) mappings\datatypes\HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv: coding used where Coding is likely meant.
+W28) mappings\datatypes\HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv: identifier used where Identifier is likely meant.
+mappings\codesystems\HL7 Concept Map - FHIR R4_ Address Type - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Access Restriction Reason Code - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Access Restriction Value - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Allergy Category - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Allergy Type - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Collection Method Modifier - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Confidentiality Classification - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Countries - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Duration Unit - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Encounter Class - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Encounter Type  - Sheet1.csv does not have any FHIR Mapping Content
+E34) mappings\codesystems\HL7 Concept Map_ Interpretation Codes - Sheet1.csv: Link to FHIR Get the pattern/value not found.
+mappings\codesystems\HL7 Concept Map_ Language - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Name Type - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Registry Status - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Religion - Sheet1.csv does not have any FHIR Mapping Content
+E35) mappings\codesystems\HL7 Concept Map_ Role - Sheet1.csv: Link to FHIR http://terminology.hl7.org/CodeSystem/participant-type not found.
+mappings\codesystems\HL7 Concept Map_ Security Label Handling Instructions - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ Value Type - Sheet1.csv does not have any FHIR Mapping Content
+mappings\codesystems\HL7 Concept Map_ YesNo - Sheet1.csv does not have any FHIR Mapping Content
+* [Unknown](ConceptMap-datatype-sheet1assigningauthority-to-sheet1.html) - mappings\datatypes\HL7 Data Type_ HD[AssigningAuthority] - Sheet1.csv to FHIR Sheet1
+* [Unknown](ConceptMap-datatype-sheet1specimensource-to-sheet1.html) - mappings\datatypes\Data Type_ CM[Specimen Source] - Sheet1.csv to FHIR Sheet1
+E36) mappings\messages\HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv: Link requested by ARV to 'ConceptMap-segment-arv-to-encounter.html' does not exist.
+E37) mappings\messages\HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv: Link requested by ARV to 'ConceptMap-segment-arv-to-patient.html' does not exist.
+E38) mappings\messages\HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv: Link requested by IN1 to 'ConceptMap-segment-in1-to-coverage.html' does not exist.
+E39) mappings\messages\HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv: Link requested by IN2 to 'ConceptMap-segment-in2-to-coverage.html' does not exist.
+E40) mappings\messages\HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv: Link requested by IN3 to 'ConceptMap-segment-in3-to-coverage.html' does not exist.
+E41) mappings\messages\HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv: Link requested by NK1[Patient.contact] to 'ConceptMap-segment-nk1patient.contact-to-patient.contact.html' does not exist.
+E42) mappings\messages\HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv: Link requested by NTE[Annotation] to 'ConceptMap-segment-nteannotation-to-observation.note.html' does not exist.
+E43) mappings\messages\HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv: Link requested by NTE[Annotation] to 'ConceptMap-segment-nteannotation-to-servicerequest.note.html' does not exist.
+E44) mappings\messages\HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv: Link requested by ROL[PID/PD1-PractitionerRole] to 'ConceptMap-segment-pd1-practitionerrole-to-patient.generalpractitioner.html' does not exist.
+E45) mappings\messages\HL7 Message - FHIR R4_ ORU_R01 - Sheet1.csv: Link requested by PRT[PID/PD1 - RelatedPerson] to 'ConceptMap-segment-pd1-relatedperson-to-relatedperson.html' does not exist.
+E46) mappings\messages\HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv: Link requested by PRT[OBX - Device] to 'ConceptMap-segment-prtobx-device-to-device.html' does not exist.
+E47) mappings\messages\HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv: Link requested by PRT[OBX - Location] to 'ConceptMap-segment-prtobx-location-to-observation.html' does not exist.
+E48) mappings\messages\HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv: Link requested by PRT[PractitionerRole] to 'ConceptMap-segment-prtpractitionerrole-to-practitionerrole.html' does not exist.
+E49) mappings\messages\HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv: Link requested by ROL[PV1/PV2 - PractitionerRole] to 'ConceptMap-segment-pv2-practitionerrole-to-encounter.html' does not exist.
+E50) mappings\messages\HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv: Link requested by TQ1[ServiceRequest] to 'ConceptMap-segment-tq1servicerequest-to-servicerequest.html' does not exist.
+E51) mappings\messages\HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv: Link requested by TQ2[ServiceRequest] to 'ConceptMap-segment-tq2servicerequest-to-servicerequest.html' does not exist.
+E52) mappings\segments\HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv: Link requested by CM[Specimen Source] to 'ConceptMap-datatype-cmspecimen-source-to-specimen.html' does not exist.
+E53) mappings\datatypes\Data Type_ CM[Specimen Source] - Sheet1.csv: Link requested by Collection Method Modifier to 'ConceptMap-datatype-collection-method-modifier-to-0.html' does not exist.
+E54) mappings\datatypes\Data Type - FHIR R4_ TQ[ServiceRequest] - Sheet1.csv: Link requested by CQ to 'ConceptMap-datatype-cq-to-quantity.html' does not exist.
+E55) mappings\segments\HL7 Segment - FHIR R4_ SPM - SPM.csv: Link requested by CQ[Quantity] to 'ConceptMap-datatype-cqquantity-to-simplequantity.html' does not exist.
+E56) mappings\segments\HL7 Segment - FHIR R4_ AL1 - AL1.csv: Link requested by CWE[code] to 'ConceptMap-datatype-cwecode-to-coding.html' does not exist.
+E57) mappings\segments\HL7 Segment - FHIR R4_ PID - PID.csv: Link requested by CWE[Ethnicity] to 'ConceptMap-datatype-cweethnicity-to-cweethnicity.html' does not exist.
+E58) mappings\segments\HL7 Segment - FHIR R4_ RXA[Immunization] - RXA.csv: Link requested by CWE[Organization] to 'ConceptMap-datatype-cweorganization-to-organization.html' does not exist.
+E59) mappings\segments\HL7 Segment - FHIR R4_ RXA[Immunization] - RXA.csv: Link requested by CWE[Quantity] to 'ConceptMap-datatype-cwequantity-to-simplequantity.html' does not exist.
+E60) mappings\segments\HL7 Segment - FHIR R4_ PID - PID.csv: Link requested by CWE[Race] to 'ConceptMap-datatype-cwerace-to-cwerace.html' does not exist.
+E61) mappings\segments\HL7 Segment - FHIR R4_ PV1 - PV1.csv: Link requested by DLD to 'ConceptMap-datatype-dld-to-location.html' does not exist.
+E62) mappings\segments\HL7 Segment - FHIR R4_ SPM - SPM.csv: Link requested by DR to 'ConceptMap-datatype-dr-to-dr.html' does not exist.
+E63) mappings\segments\HL7 Segment - FHIR R4_ SPM - SPM.csv: Link requested by DR[dateTime] to 'ConceptMap-datatype-drdatetime-to-drdatetime.html' does not exist.
+E64) mappings\segments\HL7 Segment - FHIR R4_ PID - PID.csv: Link requested by DTM[Date] to 'ConceptMap-datatype-dtmdate-to-date.html' does not exist.
+E65) mappings\segments\HL7 Segment - FHIR R4_ MSH - R4.csv: Link requested by EI[MSH-21] to 'ConceptMap-datatype-eimsh-21-to-eimsh-21.html' does not exist.
+E66) mappings\segments\HL7 Segment_ ORC[ServiceRequest] - ORC.csv: Link requested by EIP[Filler] to 'ConceptMap-datatype-eipfiller-to-eipfiller.html' does not exist.
+E67) mappings\segments\HL7 Segment - FHIR R4_ SPM - SPM.csv: Link requested by EIP[Identifier] to 'ConceptMap-datatype-eipidentifier-to-identifier.html' does not exist.
+E68) mappings\segments\HL7 Segment_ ORC[ServiceRequest] - ORC.csv: Link requested by EIP[Placer] to 'ConceptMap-datatype-eipplacer-to-eipplacer.html' does not exist.
+E69) mappings\segments\HL7 Segment_ PRT[OBX - Device] - Sheet1.csv: Link requested by EI[udiCarrierPI] to 'ConceptMap-datatype-eiudicarrierpi-to-backboneelement.html' does not exist.
+E70) mappings\datatypes\HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv: Link requested by FN to 'ConceptMap-datatype-fn-to-fn.html' does not exist.
+E71) mappings\datatypes\HL7 Data Type - FHIR R4_ XCN[Practitioner] - Sheet1.csv: Link requested by FN to 'ConceptMap-datatype-fn-to-humanname.html' does not exist.
+E72) mappings\datatypes\HL7 Data Type - FHIR R4_ XPN - Sheet1.csv: Link requested by FN to 'ConceptMap-datatype-fn-to-string.html' does not exist.
+E73) mappings\datatypes\HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv: Link requested by HD[AssigningAuthority] to 'ConceptMap-datatype-hdassigningauthority-to-hdassigningauthority.html' does not exist.
+E74) mappings\datatypes\HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv: Link requested by HD[Location] to 'ConceptMap-datatype-hdlocation-to-location.html' does not exist.
+E75) mappings\datatypes\HL7 Data Type - FHIR R4_ PL - Sheet1.csv: Link requested by HD[Location] to 'ConceptMap-datatype-hdlocation-to-resource.html' does not exist.
+E76) mappings\segments\HL7 Segment - FHIR R4_ MSH - R4.csv: Link requested by HD[MSH-24] to 'ConceptMap-datatype-hdmsh-24-to-uri.html' does not exist.
+E77) mappings\segments\HL7 Segment - FHIR R4_ MSH - R4.csv: Link requested by HD[MSH-25] to 'ConceptMap-datatype-hdmsh-25-to-uri.html' does not exist.
+E78) mappings\segments\HL7 Segment - FHIR R4_ MSH - R4.csv: Link requested by HD[MSH-3] to 'ConceptMap-datatype-hdmsh-3-to-backboneelement.html' does not exist.
+E79) mappings\segments\HL7 Segment - FHIR R4_ MSH - R4.csv: Link requested by HD[MSH-5] to 'ConceptMap-datatype-hdmsh-5-to-backboneelement.html' does not exist.
+E80) mappings\segments\HL7 Segment - FHIR R4_ MSH - R4.csv: Link requested by HD[MSH-6] to 'ConceptMap-datatype-hdmsh-6-to-organization.html' does not exist.
+E81) mappings\datatypes\HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv: Link requested by HD[XON.8] to 'ConceptMap-datatype-hdxon.8-to-location.html' does not exist.
+E82) mappings\datatypes\HL7 Data Type - FHIR R4_ HD[Organization] - Sheet1.csv: Link requested by ID[CodeableConcept] to 'ConceptMap-datatype-idcodeableconcept-to-codeableconcept.html' does not exist.
+E83) mappings\datatypes\HL7 Data Type - FHIR R4_ HD[MSH-6] - Sheet1.csv: Link requested by ID[HL70301] to 'ConceptMap-datatype-idhl70301-to-codeableconcept.html' does not exist.
+E84) mappings\segments\HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv: Link requested by IS[Codeable Concept] to 'ConceptMap-datatype-iscodeable-concept-to-codeableconcept.html' does not exist.
+E85) mappings\segments\HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv: Link requested by NA to 'ConceptMap-datatype-na-to-complex.html' does not exist.
+E86) mappings\segments\HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv: Link requested by NDL[PractitionerRole] to 'ConceptMap-datatype-ndlpractitionerrole-to-practitionerrole.html' does not exist.
+E87) mappings\segments\HL7 Segment - FHIR R4_ PV2 - PV2.csv: Link requested by NM[Quantity] to 'ConceptMap-datatype-nmquantity-to-decimal.html' does not exist.
+E88) mappings\segments\HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv: Link requested by NM[Quantity] to 'ConceptMap-datatype-nmquantity-to-quantity.html' does not exist.
+E89) mappings\segments\HL7 Segment - FHIR R4_ RXA[Immunization] - RXA.csv: Link requested by PL to 'ConceptMap-datatype-pl-to-location.html' does not exist.
+E90) mappings\datatypes\Data Type - FHIR R4_ TQ[ServiceRequest] - Sheet1.csv: Link requested by Priority to 'ConceptMap-datatype-priority-to-code.html' does not exist.
+E91) mappings\segments\HL7 Segment - FHIR R4_ MSH - R4.csv: Link requested by PT to 'ConceptMap-datatype-pt-to-coding.html' does not exist.
+E92) mappings\datatypes\Data Type - FHIR R4_ TQ[ServiceRequest] - Sheet1.csv: Link requested by RI[Timing] to 'ConceptMap-datatype-ritiming-to-timing.html' does not exist.
+E93) mappings\datatypes\HL7 Data Type - FHIR R4_ XAD - Sheet1.csv: Link requested by SAD to 'ConceptMap-datatype-sad-to-string.html' does not exist.
+E94) mappings\segments\HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv: Link requested by SN[String] to 'ConceptMap-datatype-snstring-to-string.html' does not exist.
+E95) mappings\segments\HL7 Segment_ ORC[ServiceRequest] - ORC.csv: Link requested by TQ[ServiceRequest] to 'ConceptMap-datatype-tqservicerequest-to-quantityx.html' does not exist.
+E96) mappings\datatypes\HL7 Data Type - FHIR R4_ HD[MSH-24] - Sheet1.csv: Link requested by Universal ID Type to 'ConceptMap-datatype-universal-id-type-to-code.html' does not exist.
+E97) mappings\segments\HL7 Segment - FHIR R4_ PV1 - PV1.csv: Link requested by XCN to 'ConceptMap-datatype-xcn-to-practitioner.html' does not exist.
+E98) mappings\segments\HL7 Segment - FHIR R4_ ROL[PIDPD1 - PractitionerRole] - Sheet1.csv: Link requested by XCN[Practitioner] to 'ConceptMap-datatype-xcnpractitioner-to-domainresource.html' does not exist.
+E99) mappings\segments\HL7 Segment - FHIR R4_ ROL[PV1PV2 - PractitionerRole] - Sheet1.csv: Link requested by XCN[Practitioner] to 'ConceptMap-datatype-xcnpractitioner-to-practioner.html' does not exist.
+E100) mappings\segments\HL7 Segment - FHIR R4_ PRT[PractitionerRole] - Sheet1.csv: Link requested by XCN[PractitionerRole] to 'ConceptMap-datatype-xcnpractitionerrole-to-domainresource.html' does not exist.
+E101) mappings\segments\HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv: Link requested by XCN(PractitionerRole) to 'ConceptMap-datatype-xcnpractitionerrole-to-pracitionerrole.html' does not exist.
+E102) mappings\segments\HL7 Segment_ PD1 - PD1.csv: Link requested by XCN[PractitionerRole] to 'ConceptMap-datatype-xcnpractitionerrole-to-practitionerrole.html' does not exist.
+E103) mappings\segments\HL7 Segment - FHIR R4_ ROL[PIDPD1-RelatedPerson] - Sheet1.csv: Link requested by XCN[RelatedPerson] to 'ConceptMap-datatype-xcnrelatedperson-to-domainresource.html' does not exist.
+E104) mappings\segments\HL7 Segment_ ORC[ServiceRequest] - ORC.csv: Link requested by XON to 'ConceptMap-datatype-xon-to-organization.html' does not exist.
+E105) mappings\segments\HL7 Segment - FHIR R4_ ORC[Provenance] - ORC.csv: Link requested by XON[Location] to 'ConceptMap-datatype-xonlocation-to-location.html' does not exist.
+E106) mappings\segments\HL7 Segment_ ORC[ServiceRequest] - ORC.csv: Link requested by XTN to 'ConceptMap-datatype-xtn-to-contactpoint.html' does not exist.
+129 files processed, 106 errors, 28 warnings

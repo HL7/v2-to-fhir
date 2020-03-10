@@ -11,9 +11,6 @@
    <artifactPageExtension value="-definitions"/>
    <artifactPageExtension value="-examples"/>
    <artifactPageExtension value="-mappings"/>
-   <artifact name="Datatype CM to CodeableConcept Map"
-             key="ConceptMap-datatype-cmspecimensource-to-codeableconcept"
-             id="ConceptMap/datatype-cmspecimensource-to-codeableconcept"/>
    <artifact name="Datatype CNE to CodeableConcept Map"
              key="ConceptMap-datatype-cnecodeableconcept-to-codeableconcept"
              id="ConceptMap/datatype-cnecodeableconcept-to-codeableconcept"/>
@@ -110,6 +107,9 @@
    <artifact name="Datatype Sheet1 to Sheet1 Map"
              key="ConceptMap-datatype-sheet1assigningauthority-to-sheet1"
              id="ConceptMap/datatype-sheet1assigningauthority-to-sheet1"/>
+   <artifact name="Datatype Sheet1 to Sheet1 Map"
+             key="ConceptMap-datatype-sheet1specimensource-to-sheet1"
+             id="ConceptMap/datatype-sheet1specimensource-to-sheet1"/>
    <artifact name="Datatype SN to Quantity Map"
              key="ConceptMap-datatype-snquantity-to-quantity"
              id="ConceptMap/datatype-snquantity-to-quantity"/>

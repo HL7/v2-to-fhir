@@ -29,47 +29,64 @@ public class Convert {
 
     private static final String MAP_OUTPUT_DIR = "tank/ig-data/input/pagecontent/";
     private static final String FHIR_PREFIX = "http://hl7.org/fhir/R4";
-
+    private static int fileCount = 0;
     public static Map<String, Set<Converter>> generated = new HashMap<>();
     public static void main(String args[]) {
         String output = ".";
         String download = null;
+        boolean success = true;
         for (String arg: args) {
-            if (arg.startsWith("-e")) {
-                break; // We're done
-            }
-            if (arg.startsWith("-o")) {
-                output = arg.substring(2);
-                File dir = new File(output);
-                if (!dir.exists()) {
-                    dir.mkdirs();
+            try {
+                if (arg.startsWith("-e")) {
+                    break; // We're done
                 }
-                continue;
-            } else if (arg.startsWith("-d")) {
-                download = arg.substring(2);
-                downloadAll(download, output, true);
-                continue;
-            } else if (arg.startsWith("-r")) {
-                download = arg.substring(2);
-                downloadAll(download, output, false);
-                continue;
-            }
-            File f = new File(arg);
-            if (!f.exists()) {
-                System.err.printf("'%s' does not exist.\n", arg);
-            } else if (f.isDirectory()) {
-                for (File l : FileUtils.listFiles(f, new String[] { "csv" }, false)) {
-                    convert(l, output);
+                if (arg.startsWith("-o")) {
+                    output = arg.substring(2);
+                    File dir = new File(output);
+                    if (!dir.exists()) {
+                        dir.mkdirs();
+                    }
+                    continue;
+                } else if (arg.startsWith("-d")) {
+                    download = arg.substring(2);
+                    downloadAll(download, output, true);
+                    continue;
+                } else if (arg.startsWith("-r")) {
+                    download = arg.substring(2);
+                    downloadAll(download, output, false);
+                    continue;
                 }
-            } else {
-                convert(f, output);
+                File f = new File(arg);
+                if (!f.exists()) {
+                    ConverterImpl.report(true, arg, "'%s' does not exist.\n", arg);
+                } else if (f.isDirectory()) {
+                    for (File l : FileUtils.listFiles(f, new String[] { "csv" }, false)) {
+                        convert(l, output);
+                    }
+                } else {
+                    convert(f, output);
+                }
+            } catch (Exception e) {
+                ConverterImpl.report(true, arg, "Unexpected error during conversion of '%s'.%n", arg);
+                e.printStackTrace();
+                success = false;
             }
         }
 
         // For each converted piece of content, generate the mapping outputs.
-        generateMapOutputs();
+        try {
+            generateMapOutputs();
+        } catch (Exception e) {
+            ConverterImpl.report(true, "N/A", "Unexpected error generating map tables.");
+            e.printStackTrace();
+            success = false;
+        }
 
-        ConverterImpl.printLinkData();
+        success = success && ConverterImpl.printLinkData();
+
+        System.out.printf("%d files processed, %d errors, %d warnings%n", fileCount, ConverterImpl.getErrorCount(), ConverterImpl.getWarnCount());
+        System.err.printf("%d files processed, %d errors, %d warnings%n", fileCount, ConverterImpl.getErrorCount(), ConverterImpl.getWarnCount());
+        System.exit(success ? 0 : 1);
     }
 
     private static void generateMapOutputs() {
@@ -380,6 +397,7 @@ public class Convert {
 
     private static void convert(File f, String outputLocation) {
         String name = f.getName();
+        fileCount++;
         Converter c;
         try {
             if (name.contains("Inventory")) {
