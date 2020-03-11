@@ -1,7 +1,7 @@
 <div id="disqus_thread" style="display: block; width: 640px"></div>
 <script>
 var disqus_config = function () {
-this.page.url = "http://build.fhir.org.hl7/v2-to-fhir/branches/master/ConceptMap-table-hl70217-to-v3-actpriority.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.url = "http://build.fhir.org/hl7/v2-to-fhir/branches/master/ConceptMap-table-hl70217-to-v3-actpriority.html";  // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = "table-hl70217-to-v3-actpriority"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 (function() { // DON'T EDIT BELOW THIS LINE

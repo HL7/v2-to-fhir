@@ -58,7 +58,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = "http://build.fhir.org.hl7/v2-to-fhir/branches/master/datatype_maps.html"; // Replace PAGE_URL with your page's canonical URL variable
+this.page.url = "http://build.fhir.org/hl7/v2-to-fhir/branches/master/datatype_maps.html"; // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = this.page.url.substring(this.page.url.lastIndexOf("/")+1, this.page.url.lastIndexOf(".")); // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 (function() { // DON'T EDIT BELOW THIS LINE
