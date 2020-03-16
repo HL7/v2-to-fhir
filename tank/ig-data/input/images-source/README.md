@@ -1,0 +1,1 @@
+If you have source files which are used to generate images (e.g., A Power Point presentation, they go here.)

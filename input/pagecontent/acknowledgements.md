@@ -10,7 +10,7 @@ HL7 would like to thank the following individuals for their contributions to thi
 * [Sajjad Hussain](https://www.linkedin.com/in/contact-sajjad/) - Google
 * [Deb Markussen](https://www.linkedin.com/in/deb-markussen-7772046/) - Cerner Corporation
 * [Roman Polyanovsky](https://www.linkedin.com/in/roman-polyanovsky/) - Google
-* [Jason Suchon](https://www.linkedin.com/in/jason-suchon-5504147/)
+* [Jason Suchon](https://www.linkedin.com/in/jason-suchon-5504147/) - Metastar
 * [Caitlin Voegele](https://www.linkedin.com/in/caitlin-voegele/) - Microsoft
 * [Kathy Walsh](https://www.linkedin.com/in/katherine-walsh-15536145/) - LabCorp
 * Danny Wise - Allscripts

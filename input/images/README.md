@@ -1,0 +1,1 @@
+If you have images, they go in this folder.

@@ -9,4 +9,5 @@ REM Run it over the data
 REM Build the files from Sushi source
 call sushi tank -o .
 REM Generate the guide
-call _genonce
+call save\_genonce.bat
+REM call _genonce
