@@ -3,6 +3,10 @@ transformation project. Not all of these issues will apply to every implementati
 he entire list to assess whether or not they are relevant for the project at hand. This list is not comprehensive and other
 implementation considerations may emerge as transforms are developed, tested and implemented in a Production environment.
 
+### Message Structures in Older Versions
+In older versions, e.g., v2.3.1 the message structure in MSH-9 may have been omitted as the standard did not always include that in the message structure definition.  For example, the message definition for RDE^O01 in v2.3.1 does not include the message structure, thus implementers omitted that, even though in Table 0354 there was a structure defined RDE_O01.  When MSH-9.3 is empty, we suggest to derive the message structure to get to the proper map by using the message code and trigger event. I.e., when message code and trigger event is ABC^Nnn then use ABC_Nnn.  For RDE^O01 that would be RDE_O01.
+We will be listing any known exceptions to that rule here as we find them.
+
 ### Resource.id Generation and References
 When the v2 message is mapped into a FHIR Bundle, resources need to have a resource.id.  At the time of the mapping the actual
 Resource.id may not be known if the intent is to update or reference an existing resource.  The following guidance should be followed:
