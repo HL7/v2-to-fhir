@@ -1,8 +1,10 @@
 * HL7 v2
    * Sort Order
       * See the [General Guidelines](mapping_guidelines.html#general-format)
+      * If a FHIR attribute is required but there is no v2 element to map from, the sort order is "0".
    * Identifier
       * Contains the formal Segment Name and Field Sequence according to the base standard using "-" as the delimiter.
+      * If the Sort Order is "0" this cell will be set to "Implied".
    * Name
       * The formal name of the field in the most current published version
    * Data Type
@@ -27,3 +29,5 @@
       * There may be multiple flavors of the data type maps to support different mappings.  The flavor is appended to the end of the data type name using [] brackets, e.g., CWE[Coding].
    * Vocabulary Mapping
       * The URL to the Vocabulary Map that is to be used for the coded element for this attribute.
+   * Assignment
+      * The value that is to be assigned to the FHIR Attribute referenced.  If it is to be set to a particular string, it is uses "string".  If it is to be set to a value in a v2 element or FHIR attribute, the identifier for that element/attribute is stated, e.g., PID-3.1 or Patient.identifier.value.  Note these can be combined if multiple values need to be concatenated together.
