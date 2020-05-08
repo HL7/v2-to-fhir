@@ -33,4 +33,4 @@
    * Vocabulary Mapping
       * The URL to the Vocabulary Map that is to be used for the coded element for this attribute.
    * Assignment
-      * The value that is to be assigned to the FHIR Attribute referenced. If it is to be set to a particular string, it is uses "string". If it is to be set to a value in a v2 element or FHIR attribute, the identifier for that element/attribute is stated, e.g., PID-3.1 or Patient.identifier.value. Note these can be combined if multiple values need to be concatenated together.
+      * The value that is to be assigned to the FHIR Attribute referenced. If it is to be set to a particular string, it is uses "string". If it is to be set to a value in a v2 element or FHIR attribute, the identifier for that element/attribute is stated, e.g., CWE.4 or Patient.identifier.value. Note these can be combined if multiple values need to be concatenated together.
