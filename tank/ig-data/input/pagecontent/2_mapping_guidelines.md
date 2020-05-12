@@ -42,6 +42,7 @@ being mapped is a Message, Segment, Data Type, or Table.
         IF X NOT EQUALS
         IF X VALUED
         IF X NOT VALUED
+        IF X NOT VALUED ERROR   *** The mapper is to stop mapping of the Message and raise an error.
         IF IN ("A","B", "C")
         IF NOT IN ("A","B", "C")
         IF X expression OR Y expression
@@ -55,6 +56,7 @@ being mapped is a Message, Segment, Data Type, or Table.
         IF X LST.COUNT LESS THAN
         IF X LST.COUNT GREATER THAN OR EQUALS
         IF X LST.COUNT LESS THAN OR EQUALS
+
 ```
 
     * The [FHIRpath syntax](https://www.hl7.org/fhir/fhirpath.html) (referenced as Computable FHIRpath)
