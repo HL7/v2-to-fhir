@@ -1,8 +1,10 @@
 * HL7 v2
    * Sort Order
       * See the [General Guidelines](mapping_guidelines.html#general-format)
+      * When "0" it is to be done for the segment in general.
    * Identifier
       * Contains the formal Segment Name and Field Sequence according to the base standard using "-" as the delimiter.
+      * If it only contains the Segmnet Name, the mapping to the FHIR attribute referenced is done in the absence of a specific v2 field.
    * Name
       * The formal name of the field in the most current published version
    * Data Type
@@ -27,3 +29,5 @@
       * There may be multiple flavors of the data type maps to support different mappings.  The flavor is appended to the end of the data type name using [] brackets, e.g., CWE[Coding].
    * Vocabulary Mapping
       * The URL to the Vocabulary Map that is to be used for the coded element for this attribute.
+   * Assignment
+      * This is used when the FHIR attribute is to be set to a particular value, e.g., "home", or the value of another v2 field or FHIR attribute, e.g., PID-13.4 or Patient.identifier.value
