@@ -32,3 +32,5 @@
       * There may be multiple flavors of the data type maps to support different mappings.  The flavor is appended to the end of the data type name using [] brackets, e.g., CWE[Coding].
    * Vocabulary Mapping
       * The URL to the Vocabulary Map that is to be used for the coded element for this attribute.
+   * Assignment
+      * This is used when the FHIR attribute is to be set to a particular value, e.g., "home", or the value of another v2 field or FHIR attribute, e.g., PID-13.4 or Patient.identifier.value
