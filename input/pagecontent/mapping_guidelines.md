@@ -55,6 +55,7 @@ being mapped is a Message, Segment, Data Type, or Table.
         IF X LST.COUNT LESS THAN
         IF X LST.COUNT GREATER THAN OR EQUALS
         IF X LST.COUNT LESS THAN OR EQUALS
+        IF [any condition above] ERROR *** stop and do not finish mapping of the message in progress
 ```
 
     * The [FHIRpath syntax](https://www.hl7.org/fhir/fhirpath.html) (referenced as Computable FHIRpath)
