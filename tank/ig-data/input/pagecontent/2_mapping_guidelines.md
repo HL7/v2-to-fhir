@@ -63,7 +63,7 @@ being mapped is a Message, Segment, Data Type, or Table.
   * If not computable or in addition to the computable condition further non-computable conditions must be considered as well (referenced as Narrative).
 
 * [n] Notation
-  * Multiple v2 components may need to update the same instance of a FHIR element, or should yield a new instance of the same FHIR element.  To distinguish whether the mappings are to the same or different FHIR element instance each FHIR element at the appropriate place in the path will use the [n] notation.  Those FHIR elements with the same value in the same place in the path should apply the mapping to the same instance of that element.
+  * Multiple v2 components within the same mapping spreadsheet may need to update the same instance of a FHIR element, or should yield a new instance of the same FHIR element.  To distinguish whether the mappings are to the same or different FHIR element instance each FHIR element at the appropriate place in the path will use the [n] notation.  Those FHIR elements with the same value in the same place in the path should apply the mapping to the same instance of that element.
   * Example: PID-13 Phone Number - Home and PID-14 Phone Number - Business are both mapped to Patient.telecom.  However, they need to yield different instances.  Thus, PID-13 maps to Patient.telecom[1] and PID-14 to Patient.telecom[2].
   * Note that this does not mean that there is a first and second slot where one is kept empty if not available in v2.  Rather it just means they are to be different if both present.
   * If the mapping needs to yield multiple instances and the v2 value needs to be applied to multiple FHIR element instances, [each] is used.
@@ -72,6 +72,7 @@ being mapped is a Message, Segment, Data Type, or Table.
   * Example: [1].Contactpoint.value and [2].ContactPoint.value mapped to from the v2 XTN data type would reflect the first instance of the attribute repetition is actually used, e.g., Patient.telecom that can repeat and is mapped to from PID-13 and PID-14 which have the v2 XTN data type.
 
 * Each mapping row includes comments to document any considerations for the mapping that can aid in further refining the mappings for local use.
+* Note that a FHIR attribute may be mapped to by both a segment field or a field component from another field in that segment, e.g., ROL-1 Role Instance ID and ROL-4 Role Person.  That involves two separate spreadsheets for different compoents (segment spreadsheet and data type component) and therefore should be mapped to different instance of a FHIR attribute.  In this example RelatedPerson.identifier.
 
 #### Message Spreadsheet
 
