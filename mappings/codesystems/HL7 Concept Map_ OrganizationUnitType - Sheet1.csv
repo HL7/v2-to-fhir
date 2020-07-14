@@ -1,0 +1,9 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+H,Home,HL70406,,,,H,,Home,http://terminology.hl7.org/CodeSystem/v2-0406,,
+O,Office,HL70406,,,,O,,Office,http://terminology.hl7.org/CodeSystem/v2-0406,,
+1,Hospital,HL70406,,,,1,,Hospital,http://terminology.hl7.org/CodeSystem/v2-0406,,
+2,Physician Clinic,HL70406,,,,2,,Physician Clinic,http://terminology.hl7.org/CodeSystem/v2-0406,,
+3,Long Term Care,HL70406,,,,3,,Long Term Care,http://terminology.hl7.org/CodeSystem/v2-0406,,
+4,Acute Care,HL70406,,,,4,,Acute Care,http://terminology.hl7.org/CodeSystem/v2-0406,,
+5,Other,HL70406,,,,5,,Other,http://terminology.hl7.org/CodeSystem/v2-0406,,

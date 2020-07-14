@@ -1,0 +1,126 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "TypeInfo",
+  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+  "version": "0.1.0",
+  "name": "TypeInfo",
+  "status": "active",
+  "description": "Type information for conversion",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension:type",
+        "path": "Extension.extension",
+        "sliceName": "type",
+        "short": "Data Type of the item",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:type.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:type.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "type"
+      },
+      {
+        "id": "Extension.extension:type.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:cardinalityMin",
+        "path": "Extension.extension",
+        "sliceName": "cardinalityMin",
+        "short": "Minimum cardinality of the item",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:cardinalityMin.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:cardinalityMin.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "cardinalityMin"
+      },
+      {
+        "id": "Extension.extension:cardinalityMin.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:cardinalityMax",
+        "path": "Extension.extension",
+        "sliceName": "cardinalityMax",
+        "short": "Maximum cardinality of the item",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:cardinalityMax.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:cardinalityMax.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "cardinalityMax"
+      },
+      {
+        "id": "Extension.extension:cardinalityMax.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

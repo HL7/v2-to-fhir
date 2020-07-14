@@ -7,7 +7,7 @@
   "name": "Message_VXU_V04_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-07-14",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,86 +22,301 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "VXU_V04",
   "targetUri": "Bundle",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Message VXU:V04 to Bundle.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1_7maXDpc_qMMRzMm0x6d90-Hj6vvhGyO2kyFX0tpuZs/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
         {
           "code": "VXU_V04.MSH",
-          "display": "Message Header Segment",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Message Header",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "MessageHeader[1]",
-              "display": "MessageHeader[1]"
+              "code": "Bundle",
+              "display": "Bundle",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "MSH[Bundle]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "VXU_V04.MSH",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Message Header Segment",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MessageHeader[1]",
+              "display": "MessageHeader[1]",
+              "comment": "Processing of the MSH segment results in the creation of a new MessageHeader resource",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "MSH[General]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.MSH",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Message Header Segment",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Provenance[1]",
-              "display": "Provenance[1]"
+              "display": "Provenance[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "MSH[Provenance-Originator]"
+                },
+                {
+                  "property": "references",
+                  "value": "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "VXU_V04.MSH",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Message Header Segment",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Provenance[2]",
-              "display": "Provenance[2]"
+              "display": "Provenance[2]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "MSH[Provenance-Translator]"
+                },
+                {
+                  "property": "references",
+                  "value": "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "VXU_V04.SFT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Software",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "MessageHeader[1]",
-              "display": "MessageHeader[1]"
+              "display": "MessageHeader[1]",
+              "comment": "Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "SFT"
+                }
+              ]
             }
           ]
         },
         {
           "code": "VXU_V04.PID",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Patient Identification Segment",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Patient[1]",
-              "display": "Patient[1]"
+              "display": "Patient[1]",
+              "comment": "Processing of the PID segment results in the creation of a new Patient resource",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PID"
+                }
+              ]
             }
           ]
         },
         {
           "code": "VXU_V04.PD1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Additional Demographics",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Patient[1]",
-              "display": "Patient[1]"
+              "display": "Patient[1]",
+              "comment": "Incorporate PD1 content into the Patient created from the PID segment.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PD1"
+                }
+              ]
             }
           ]
         },
         {
           "code": "VXU_V04.NK1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Next of Kin/Associated Parties",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "RelatedPerson[1]",
               "display": "RelatedPerson[1]",
+              "comment": "Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures.",
               "dependsOn": [
                 {
-                  "property": "value",
+                  "property": "segment-map",
+                  "value": "NK1[RelatedPerson]"
+                },
+                {
+                  "property": "references",
+                  "value": "RelatedPerson.patient.reference=Patient[PID].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "narrative",
                   "value": "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
                 }
               ]
@@ -110,6 +325,21 @@
         },
         {
           "code": "VXU_V04.NK1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Next of Kin/Associated Parties",
           "target": [
             {
@@ -118,7 +348,13 @@
               "display": "Patient[1].contact",
               "dependsOn": [
                 {
-                  "property": "value",
+                  "property": "segment-map",
+                  "value": "NK1[Patient.contact]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "narrative",
                   "value": "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
                 }
               ]
@@ -127,15 +363,41 @@
         },
         {
           "code": "VXU_V04.PATIENT_VISIT.PV1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Patient Visit",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Encounter[1]",
               "display": "Encounter[1]",
+              "comment": "Processing of the PV1 segment results in the creation of a new Encounter resource",
               "dependsOn": [
                 {
-                  "property": "value",
+                  "property": "segment-map",
+                  "value": "PV1"
+                },
+                {
+                  "property": "references",
+                  "value": "Encounter.subject.reference=Patient[PID].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "narrative",
                   "value": "Only if the system wants to know about the encounter related to the immunization event"
                 }
               ]
@@ -144,27 +406,32 @@
         },
         {
           "code": "VXU_V04.PATIENT_VISIT.PV2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Patient Visit – Additional Info",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Encounter[1]",
-              "display": "Encounter[1]"
-            }
-          ]
-        },
-        {
-          "code": "VXU_V04.PERSON_OBSERVATION.OBX",
-          "display": "Observation/Result",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Observation[1]",
-              "display": "Observation[1]",
+              "display": "Encounter[1]",
+              "comment": "Incorporate PV2 content into the Encounter created from the PV1 segment.",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF OBX-5 LST.count LESS THAN OR EQUALS 1\\"
+                  "property": "segment-map",
+                  "value": "PV2"
                 }
               ]
             }
@@ -172,6 +439,21 @@
         },
         {
           "code": "VXU_V04.PERSON_OBSERVATION.OBX",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Observation/Result",
           "target": [
             {
@@ -180,8 +462,60 @@
               "display": "Observation[1]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF OBX-5 LST.count GREATER THAN 1\\"
+                  "property": "segment-map",
+                  "value": "OBX[Observation]"
+                },
+                {
+                  "property": "references",
+                  "value": "Observation.subject.reference=Patient[1].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBX-5 LST.count LESS THAN OR EQUALS 1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PERSON_OBSERVATION.OBX",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Observation/Result",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation[1]",
+              "display": "Observation[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "OBX[ObservationComponent]"
+                },
+                {
+                  "property": "references",
+                  "value": "Observation.subject.reference=Patient[1].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBX-5 LST.count GREATER THAN 1"
                 }
               ]
             }
@@ -189,6 +523,21 @@
         },
         {
           "code": "VXU_V04.PERSON_OBSERVATION.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for Observation)",
           "target": [
             {
@@ -197,8 +546,18 @@
               "display": "Device[1]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF PRT-10 VALUED\\"
+                  "property": "segment-map",
+                  "value": "PRT[OBX-Device]"
+                },
+                {
+                  "property": "references",
+                  "value": "Observation[1].device.reference=Device.id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PRT-10 VALUED"
                 }
               ]
             }
@@ -206,16 +565,38 @@
         },
         {
           "code": "VXU_V04.PERSON_OBSERVATION.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for Observation)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Observation[1]",
               "display": "Observation[1]",
+              "comment": "At this time we don't know of a use case for sending a location PRT to a patient level observations. We've provided a mapping from PRT to Location but not way to link it to other resources in the Bundle. If there is a known use case, please comment on it so that we can develop a solution.",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF PRT-9 VALUED OR IF PRT-14 VALUED\\"
+                  "property": "segment-map",
+                  "value": "PRT[OBX-Location]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PRT-9 VALUED OR IF PRT-14 VALUED"
                 }
               ]
             }
@@ -223,6 +604,21 @@
         },
         {
           "code": "VXU_V04.PERSON_OBSERVATION.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for Observation)",
           "target": [
             {
@@ -231,8 +627,18 @@
               "display": "PractitionerRole[1]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF PRT-5 VALUED\\"
+                  "property": "segment-map",
+                  "value": "PRT[PractitionerRole]"
+                },
+                {
+                  "property": "references",
+                  "value": "Observation.performer.reference=PractitionerRole[1].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PRT-5 VALUED"
                 }
               ]
             }
@@ -240,37 +646,110 @@
         },
         {
           "code": "VXU_V04.PERSON_OBSERVATION.NTE",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Notes (Regarding Patient Observation)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Observation[1].note",
-              "display": "Observation[1].note"
+              "display": "Observation[1].note",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "NTE[Annotation]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "VXU_V04.ORDER.ORC",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Common Order",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Immunization[1]",
-              "display": "Immunization[1]"
+              "display": "Immunization[1]",
+              "comment": "Processing of each ORC segment results in the creation of a new Immunization resource",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "ORC[Immunization]"
+                },
+                {
+                  "property": "references",
+                  "value": "Immunzation.patient.reference=Patient[1].id"
+                }
+              ]
             }
           ]
         },
         {
           "code": "VXU_V04.ORDER.ORC",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Common Order",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest[1]",
               "display": "ServiceRequest[1]",
+              "comment": "Processing of each ORC segment results in the creation of a new ServiceRequest resource if the receiving system wants to know about the order that lead to the immunization event",
               "dependsOn": [
                 {
-                  "property": "value",
+                  "property": "segment-map",
+                  "value": "ORC[ServiceRequest]"
+                },
+                {
+                  "property": "references",
+                  "value": "ServiceRequest.subject.reference=Patient[1].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "narrative",
                   "value": "Only if the system wants to know about the order that lead to the immunization event"
                 }
               ]
@@ -279,16 +758,46 @@
         },
         {
           "code": "VXU_V04.ORDER.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for ORC)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "PractitionerRole[2]",
               "display": "PractitionerRole[2]",
+              "comment": "Processing of each PRT segment typically results in the creation of a new Practitioner or PractitionerRole resource. \n\nThe decision between creating a Practitioner or PractitionerRole resource may depend on the availability of data related to the practitioner's role elsewhere in the message.\n\nIt may be possible to reuse a Practitioner resource in the bundle created from somewhere else in the bundle rather than creating a new resource for each PRT segment (eg, the same administering practictioner resource could be pointed to from multiple order segment groups) - if an implementer decides to do this, the system must be certain that it's the same person (same name, ID, etc) potentially even playing the same role (if the bundle uses PractitionerRole in addition to Practitioner).\\",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                  "property": "segment-map",
+                  "value": "PRT[PractitionerRole]"
+                },
+                {
+                  "property": "references",
+                  "value": "Immunization.performer.actor.reference=PractitionerRole[2].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
                 }
               ]
             }
@@ -296,16 +805,35 @@
         },
         {
           "code": "VXU_V04.ORDER.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for ORC)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Immunization[1].performer.function.coding.code",
               "display": "= \"OP'\"",
-              "dependsOn": [
+              "product": [
                 {
-                  "property": "value",
-                  "value": "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                  "property": "antlr",
+                  "value": "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
                 }
               ]
             }
@@ -313,16 +841,35 @@
         },
         {
           "code": "VXU_V04.ORDER.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for ORC)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Immunization[1].performer.function.coding.system",
               "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0443\"",
-              "dependsOn": [
+              "product": [
                 {
-                  "property": "value",
-                  "value": "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                  "property": "antlr",
+                  "value": "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
                 }
               ]
             }
@@ -330,6 +877,21 @@
         },
         {
           "code": "VXU_V04.ORDER.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for ORC)",
           "target": [
             {
@@ -338,8 +900,22 @@
               "display": "PractitionerRole[3]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"AP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                  "property": "segment-map",
+                  "value": "PRT[PractitionerRole]"
+                },
+                {
+                  "property": "references",
+                  "value": "Immunization.performer.actor.reference=PractitionerRole[3].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PRT-4.1 EQUALS \"AP\" AND PRT-4.3 EQUALS \"HL70443\""
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")"
                 }
               ]
             }
@@ -347,16 +923,35 @@
         },
         {
           "code": "VXU_V04.ORDER.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for ORC)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Immunization[1].performer.function.coding.code",
               "display": "= \"AP'\"",
-              "dependsOn": [
+              "product": [
                 {
-                  "property": "value",
-                  "value": "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"AP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                  "property": "antlr",
+                  "value": "IF PRT-4.1 EQUALS \"AP\" AND PRT-4.3 EQUALS \"HL70443\""
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")"
                 }
               ]
             }
@@ -364,16 +959,35 @@
         },
         {
           "code": "VXU_V04.ORDER.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for ORC)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Immunization[1].performer.function.coding.system",
               "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0443\"",
-              "dependsOn": [
+              "product": [
                 {
-                  "property": "value",
-                  "value": "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")\n# IF PRT-4.1 EQUALS \"AP\" AND PRT-4.3 EQUALS \"HL70443\"\\"
+                  "property": "antlr",
+                  "value": "IF PRT-4.1 EQUALS \"AP\" AND PRT-4.3 EQUALS \"HL70443\""
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")"
                 }
               ]
             }
@@ -381,28 +995,87 @@
         },
         {
           "code": "VXU_V04.ORDER.RXA",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Pharmacy Administration Segment",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Immunization[1]",
-              "display": "Immunization[1]"
+              "display": "Immunization[1]",
+              "comment": "Incorporate RXA content into the Immunization created from the ORC segment in the same segment group.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "RXA[Immunization]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "VXU_V04.ORDER.RXR",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Pharmacy Route",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Immunization[1]",
-              "display": "Immunization[1]"
+              "display": "Immunization[1]",
+              "comment": "Incorporate RXR content into the Immunization created from the ORC segment in the same segment group.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "RXR[Immunization]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "VXU_V04.ORDER.OBSERVATION.OBX",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Observation/Result",
           "target": [
             {
@@ -411,7 +1084,21 @@
               "display": "Observation[2]",
               "dependsOn": [
                 {
-                  "property": "value",
+                  "property": "segment-map",
+                  "value": "OBX[Observation]"
+                },
+                {
+                  "property": "references",
+                  "value": "Observation.subject.reference=Patient[1].id; Observation.partOf.reference=Immunization[1].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBX-5 LST.count LESS THAN OR EQUALS 1"
+                },
+                {
+                  "property": "narrative",
                   "value": "Some observations about the immunization may map to elements within the Immuniation resource rather than an independent Observation resource. For example, funding source, patient eligibility and educational material are often sent as OBX segments but map to Immunization elements.  Specific guidance on how to map, e.g., the US CDC implementation guide on immunizations, will be provided separately at a future time TBD."
                 }
               ]
@@ -420,6 +1107,21 @@
         },
         {
           "code": "VXU_V04.ORDER.OBSERVATION.OBX",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Observation/Result",
           "target": [
             {
@@ -428,7 +1130,21 @@
               "display": "Observation[2]",
               "dependsOn": [
                 {
-                  "property": "value",
+                  "property": "segment-map",
+                  "value": "OBX[ObservationComponent]"
+                },
+                {
+                  "property": "references",
+                  "value": "Observation.subject.reference=Patient[1].id; Observation.partOf.reference=Immunization[1].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBX-5 LST.count GREATER THAN 1"
+                },
+                {
+                  "property": "narrative",
                   "value": "Some observations about the immunization may map to elements within the Immuniation resource rather than an independent Observation resource. For example, funding source, patient eligibility and educational material are often sent as OBX segments but map to Immunization elements.  Specific guidance on how to map, e.g., the US CDC implementation guide on immunizations, will be provided separately at a future time TBD."
                 }
               ]
@@ -437,6 +1153,21 @@
         },
         {
           "code": "VXU_V04.ORDER.OBSERVATION.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for Observation)",
           "target": [
             {
@@ -445,8 +1176,18 @@
               "display": "Device[2]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF PRT-10 VALUED\\"
+                  "property": "segment-map",
+                  "value": "PRT[OBX-Device]"
+                },
+                {
+                  "property": "references",
+                  "value": "Observation[1].device.reference=Device.id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PRT-10 VALUED"
                 }
               ]
             }
@@ -454,6 +1195,21 @@
         },
         {
           "code": "VXU_V04.ORDER.OBSERVATION.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for Observation)",
           "target": [
             {
@@ -462,8 +1218,14 @@
               "display": "Observation[2]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF PRT-9 VALUED OR IF PRT-14 VALUED\\"
+                  "property": "segment-map",
+                  "value": "PRT[OBX-Location]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PRT-9 VALUED OR IF PRT-14 VALUED"
                 }
               ]
             }
@@ -471,6 +1233,21 @@
         },
         {
           "code": "VXU_V04.ORDER.OBSERVATION.PRT",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Participation (for Observation)",
           "target": [
             {
@@ -479,8 +1256,18 @@
               "display": "PractitionerRole[4]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF PRT-5 VALUED\\"
+                  "property": "segment-map",
+                  "value": "PRT[PractitionerRole]"
+                },
+                {
+                  "property": "references",
+                  "value": "Observation.performer.reference=PractitionerRole[1].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PRT-5 VALUED"
                 }
               ]
             }
@@ -488,12 +1275,33 @@
         },
         {
           "code": "VXU_V04.ORDER.OBSERVATION.NTE",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Notes (Regarding Immunization)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Observation[2].note",
-              "display": "Observation[2].note"
+              "display": "Observation[2].note",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "NTE[Annotation]"
+                }
+              ]
             }
           ]
         }

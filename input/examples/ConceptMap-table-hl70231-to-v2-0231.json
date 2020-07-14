@@ -7,7 +7,7 @@
   "name": "Table_HL70231_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-07-14",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,6 +22,25 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "HL70231",
   "targetUri": "http://terminology.hl7.org/CodeSystem/v2-0231",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Table HL70231 to V2 0231.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1SWVX0Uknacu8ZEJwasB7lLD9LtCALX2C01lR5XzRktU/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [

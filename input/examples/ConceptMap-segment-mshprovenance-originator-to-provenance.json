@@ -7,7 +7,7 @@
   "name": "Segment_MSH_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-07-14",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,21 +22,84 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "MSH",
   "targetUri": "Provenance",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Segment MSH[Provenance-Originator] to Provenance.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1F5aYk6tFCYTQd_qEaEc5G85ZcCm98R5B-sq2JGqUagk/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
         {
           "code": "MSH-4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Sending Facility",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Provenance.agent.who(Organization)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(Organization)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "Provenance.agent.who(Organization)",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF MSH-22 NOT VALUED\\"
+                  "property": "data-type-map",
+                  "value": "HD[Organization]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF MSH-22 NOT VALUED"
                 }
               ]
             }
@@ -44,16 +107,60 @@
         },
         {
           "code": "MSH-4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Sending Facility",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Provenance.agent.type.coding.code",
-              "display": "= \"author\"",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Provenance.agent.type.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
-                  "value": "# IF MSH-22 NOT VALUED\\"
+                  "value": "\"author\""
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF MSH-22 NOT VALUED"
                 }
               ]
             }
@@ -61,16 +168,60 @@
         },
         {
           "code": "MSH-4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Sending Facility",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Provenance.agent.type.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/provenance-participant-type\"",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Provenance.agent.type.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
-                  "value": "# IF MSH-22 NOT VALUED\\"
+                  "value": "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF MSH-22 NOT VALUED"
                 }
               ]
             }
@@ -78,56 +229,264 @@
         },
         {
           "code": "MSH-7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Date/Time of Message",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Provenance.recorded",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "instant"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "Provenance.recorded"
             }
           ]
         },
         {
           "code": "MSH-7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Date/Time of Message",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Provenance.occuredDateTime",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "Provenance.occuredDateTime"
             }
           ]
         },
         {
           "code": "MSH-22",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XON"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Sending Responsible Organization",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Provenance.agent.who(Organization)",
-              "display": "Provenance.agent.who(Organization)"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(Organization)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Provenance.agent.who(Organization)",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XON[Organization]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "MSH-22",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XON"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Sending Responsible Organization",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Provenance.agent.type.coding.code",
-              "display": "= \"author\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Provenance.agent.type.coding.code",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"author\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "MSH-22",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XON"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Sending Responsible Organization",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Provenance.agent.type.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Provenance.agent.type.coding.system",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
+                }
+              ]
             }
           ]
         }

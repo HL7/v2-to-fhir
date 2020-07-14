@@ -7,7 +7,7 @@
   "name": "Datatype_CWE_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-07-14",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,32 +22,127 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "CWE",
   "targetUri": "code",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Datatype CWE[code] to code.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1rpYMOlalOZCth8iaAF8Az7unnYuucYtz91jFhU0usKw/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
         {
           "code": "CWE.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Identifier",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "code",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "code"
             }
           ]
         },
         {
           "code": "CWE.4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Alternate Identifier",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "code",
-              "display": "code",
-              "dependsOn": [
+              "extension": [
                 {
-                  "property": "value",
-                  "value": "# IF CWE.1 NOT VALUED\\"
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "code",
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF CWE.1 NOT VALUED"
                 }
               ]
             }

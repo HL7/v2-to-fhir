@@ -1,0 +1,178 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "datatype-cweorganization-to-organization",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "url": "http://hl7.org/fhir/v2-tofhir/datatype-cweorganization-to-organization",
+  "version": "1.0",
+  "name": "Datatype_CWE_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-07-13",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "CWE",
+  "targetUri": "Organization",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "CWE.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Organization.identifier.value",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Organization.identifier.value"
+            }
+          ]
+        },
+        {
+          "code": "CWE.2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Text",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Organization.name",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Organization.name"
+            }
+          ]
+        },
+        {
+          "code": "CWE.3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Name of Coding System",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Organization.identifier.system",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Organization.identifier.system"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "datatype-cweduration-to-duration",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "url": "http://hl7.org/fhir/v2-tofhir/datatype-cweduration-to-duration",
+  "version": "1.0",
+  "name": "Datatype_CWE_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-07-13",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "CWE",
+  "targetUri": "duration",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "CWE.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "duration",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "duration"
+            }
+          ]
+        },
+        {
+          "code": "CWE.2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Text",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "duration",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "duration",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF CWE.1 IS NOT VALUED"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

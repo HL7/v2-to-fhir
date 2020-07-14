@@ -1,8 +1,9 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
-Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Resource Target,Segment Map,Resource References,,
-1,OML_O21.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH,,,Processing of the MSH segment results in the creation of a new MessageHeader resource
-1,OML_O21.MSH,MSH,Message Header,1,1,,,,Provenance[1],MSH[Provenance - Originator],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
-1,OML_O21.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance - Translator],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
+Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
+1,OML_O21.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
+1,OML_O21.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[General],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
+1,OML_O21.MSH,MSH,Message Header,1,1,,,,Provenance[1],MSH[Provenance-Originator],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
+1,OML_O21.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Translator],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
 2,OML_O21.SFT,[{SFT}],Software,0,-1,,,,MessageHeader[1],SFT,,,Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.
 3,OML_O21.UAC,[ UAC ],User Authentication Credential,0,1,,,,,,,,
 4,OML_O21.NTE,[{NTE}],Notes and Comments (for Header),0,-1,,,,,,,,
@@ -10,7 +11,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 5.1,OML_O21.PATIENT.PID,PID,Patient Identification,1,1,,,,Patient[1],PID,,,Processing of the PID segment results in the creation of a new Patient resource
 5.2,OML_O21.PATIENT.PD1,[PD1],Additional Demographics,0,1,,,,Patient[1],PD1,,,Incorporate PD1 content into the Patient created from the PID segment.
 5.3,OML_O21.PATIENT.PRT,[{PRT}],Participation (for Patient),0,-1,"IF PRT-4.1 EQUALS ""PP"" AND PRT-4.3 EQUALS ""HL70443""","(element(""4.1"")=""PP"")and(element(""4.3"")=""HL70443"")",,PractitionerRole[1],PRT[PractitionerRole],Patient[1].generalPractioner.reference=PractitionerRole[1].id,,Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data.
-5.3,OML_O21.PATIENT.PRT,[{PRT}],Participation (for Patient),0,-1,"IF PRT-4.1 NOT EQUALS ""PP"" OR PRT-4.3 NOT EQUALS ""HL70443""","(element(""4.1""!)=""PP"")or(element(""4.3"")!=""HL70443"")",,RelatedPerson[1],PRT[PID/PD1 - RelatedPerson],RelatedPerson[1].patient.reference=Patient[1].id,,
+5.3,OML_O21.PATIENT.PRT,[{PRT}],Participation (for Patient),0,-1,"IF PRT-4.1 NOT EQUALS ""PP"" OR PRT-4.3 NOT EQUALS ""HL70443""","(element(""4.1""!)=""PP"")or(element(""4.3"")!=""HL70443"")",,RelatedPerson[1],PRT[PID-PD1-RelatedPerson],RelatedPerson[1].patient.reference=Patient[1].id,,
 5.4,OML_O21.PATIENT.NTE,[{NTE}],Notes and Comments (for Patient ID),0,-1,,,,,,,,
 5.6,OML_O21.PATIENT.NK1,[{NK1}],Next of Kin/Associated Parties,0,-1,,,The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data,RelatedPerson[2],NK1[RelatedPerson],RelatedPerson[2].patient.reference=Patient[1].id,,"Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
 5.6,OML_O21.PATIENT.NK1,[{NK1}],Next of Kin/Associated Parties,0,-1,,,The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data,Patient[1].contact,NK1[Patient.contact],,,"Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
@@ -47,8 +48,8 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 6.4.7,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION,[{,--- OBSERVATION begin,0,-1,,,,,,,,
 6.4.7.1,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.OBX,OBX,Observation/Result,1,1,"IF OBX-29 IN (""QST"", ""SCI"")",,,Observation[1],OBX[Observation],ServiceRequest[1].supportingInfo.reference=Observation[1].id; Observation[1].subject.id=Patient[1].id,,
 6.4.7.1,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.OBX,OBX,Observation/Result,1,1,"IF OBX-29=""Q......",,,,,,,
-6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-10 VALUED,,,Device,PRT[OBX - Device],Observation[2].device.reference=Device.id,,
-6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[OBX - Location],,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
+6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-10 VALUED,,,Device,PRT[OBX-Device],Observation[2].device.reference=Device.id,,
+6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[OBX-Location],,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
 6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-5 VALUED,,,PractitionerRole[7],PRT[PractitionerRole],Observation[2].performer.reference=PractitionerRole[7].id,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation practitioner information.
 6.4.7.3,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.TCD,[ TCD ],Test Code Detail,0,1,,,,,,,,
 6.4.7.4,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.NTE,[{NTE}],Notes and Comments (for Results),0,-1,,,,,,,,

@@ -38,8 +38,9 @@ public class ConceptMapInput implements Convertible, Cloneable {
         if (StringUtils.isBlank(this.v2CodeSystem)) {
             return null;
         }
-        r.condition = getCondition(this.conditionANTLR, this.conditionfhirPath);
-        r.conditionDisplay = StringUtils.defaultString(this.conditionNarrative);
+        r.conditionANTLR = StringUtils.defaultString(this.conditionANTLR);
+        r.conditionFHIRPath = StringUtils.defaultString(this.conditionfhirPath);
+        r.conditionNarrative = StringUtils.defaultString(this.conditionNarrative);
         r.dataType = null;
         r.targetCode = this.fhirCode;
         r.targetDisplay = this.fhirDisplay;

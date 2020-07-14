@@ -1,6 +1,6 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
-(IS, ID, CE, CNE, CWE)",Derived Mapping,,
+(IS, ID, CE, CNE, CWE)",Assignment,,
 1,XPN.1,Family Name,FN,0,1,,,,HumanName.family,,string,0,1,FN,,,,
 2,XPN.2,Given Name,ST,0,1,,,,HumanName.given[1],,string,0,-1,,,,,"The requirement for XPN.2 being the first iteration of HumanName.given critical when it's an ""official"" name"
 3,XPN.3,Second and Further Given Names or Initials Thereof,ST,0,1,,,,HumanName.given[2],,string,0,-1,,,,,"Consideration must be given if XPN.3 contains multiple names separated by a space. Should these be a single iteration of HumanName.given or is each name an iteration? For example, if XPN.3 is ""Mary Anne"", is that one name or two?"
@@ -12,9 +12,9 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 9,XPN.9,Name Context,CWE,0,1,,,,,,,,,,,,,
 10,XPN.10,Name Validity Range,DR,0,1,IF XPN.12 NOT VALUED AND XPN.13 NOT VALUED,,,HumanName.period,,Period,0,1,DR,,,,
 11,XPN.11,Name Assembly Order,ID,0,1,,,,HumanName.family.ext-humanname-assembly-order,,code,0,1,,Name Assembly Order,,,
-12,XPN.12,Effective Date,DTM,0,1,,,,HumanName.period.start,,dateTime,0,1,,,,,
-13,XPN.13,Expiration Date,DTM,0,1,,,,HumanName.period.end,,dateTime,0,1,,,,,
+12,XPN.12,Effective Date,DTM,0,1,,,,HumanName.period.start,,dateTime,0,1,DTM,,,,
+13,XPN.13,Expiration Date,DTM,0,1,,,,HumanName.period.end,,dateTime,0,1,DTM,,,,
 14,XPN.14,Professional Suffix,ST,0,1,,,,HumanName.suffix,,string,0,-1,,,,,
 15,XPN.15,Called By,ST,0,1,,,if the resource attribute using the HumanName datatype allows for multiple names,HumanName[2].given,,string,0,-1,,,,,"One possibility is to put this in HumanName.given where HumanName.use=""usual"". When XPN.7 does not map to ""usual"" a new occurence of Patient.name should be created
 Alternative a new extension could be created for HumanName.family.#ext-called-by#"
-15,XPN.15,Called By,ST,0,1,,,if the resource attribute using the HumanName datatype allows for multiple names,"HumanName[2].use=""nickname""",,code,0,1,,,,,
+15,XPN.15,Called By,ST,0,1,,,if the resource attribute using the HumanName datatype allows for multiple names,HumanName[2].use,,code,0,1,,,"""nickname""",,

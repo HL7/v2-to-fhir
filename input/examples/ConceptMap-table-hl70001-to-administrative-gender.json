@@ -7,7 +7,7 @@
   "name": "Table_HL70001_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-07-14",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,6 +22,25 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "HL70001",
   "targetUri": "http://hl7.org/fhir/administrative-gender",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Table HL70001 to Administrative Gender.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1VxG2IpKlMJE_aC4hDB-PXKM6q2vC_E950WO2Nbctr5U/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [

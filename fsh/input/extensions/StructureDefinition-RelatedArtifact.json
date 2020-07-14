@@ -1,0 +1,226 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "RelatedArtifact",
+  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+  "version": "0.1.0",
+  "name": "RelatedArtifact",
+  "status": "active",
+  "description": "Related artifacts for a ConceptMap",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 3
+      },
+      {
+        "id": "Extension.extension:type",
+        "path": "Extension.extension",
+        "sliceName": "type",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:type.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:type.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "type"
+      },
+      {
+        "id": "Extension.extension:type.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:type.valueCode",
+        "path": "Extension.extension.valueCode",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/related-artifact-type"
+        }
+      },
+      {
+        "id": "Extension.extension:label",
+        "path": "Extension.extension",
+        "sliceName": "label",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:label.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:label.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "label"
+      },
+      {
+        "id": "Extension.extension:label.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:label.valueString",
+        "path": "Extension.extension.valueString",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:url",
+        "path": "Extension.extension",
+        "sliceName": "url",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:url.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:url.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "url"
+      },
+      {
+        "id": "Extension.extension:url.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "uri"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:url.valueUri",
+        "path": "Extension.extension.valueUri",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:description",
+        "path": "Extension.extension",
+        "sliceName": "description",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:description.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:description.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "description"
+      },
+      {
+        "id": "Extension.extension:description.value[x]",
+        "path": "Extension.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:description.valueString",
+        "path": "Extension.extension.valueString",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

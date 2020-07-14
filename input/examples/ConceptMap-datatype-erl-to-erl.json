@@ -7,7 +7,7 @@
   "name": "Datatype_ERL_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-07-14",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -21,5 +21,24 @@
   ],
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "null",
-  "targetUri": "null"
+  "targetUri": "null",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Datatype ERL to ERL.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1zgohCF9AdUx1K3l2a2OrJhg9FFKs9MIfJ0iOyOPDtUU/edit#gid=0"
+        }
+      ]
+    }
+  ]
 }

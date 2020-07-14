@@ -7,7 +7,7 @@
   "name": "Datatype_XCN_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-07-14",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,120 +22,535 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "XCN",
   "targetUri": "Practitioner",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Datatype XCN[Practitioner] to Practitioner.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1hp-FZG0jKhKmxbVddilKKCc24RLAvum6g14q8o-3frk/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
         {
           "code": "XCN.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Person Identifier",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.identifier.value",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "Practitioner.identifier.value"
             }
           ]
         },
         {
           "code": "XCN.2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "FN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Family Name",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name",
-              "display": "Practitioner.name"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "HumanName"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "Practitioner.name",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "FN"
+                }
+              ]
             }
           ]
         },
         {
           "code": "XCN.3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Given Name",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name.given[1]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
               "display": "Practitioner.name.given[1]"
             }
           ]
         },
         {
           "code": "XCN.4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Second and Further Given Names or Initials Thereof",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name.given[2]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
               "display": "Practitioner.name.given[2]"
             }
           ]
         },
         {
           "code": "XCN.5",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Suffix (e.g., JR or III)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name.suffix[1]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
               "display": "Practitioner.name.suffix[1]"
             }
           ]
         },
         {
           "code": "XCN.6",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Prefix (e.g., DR)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name.prefix",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
               "display": "Practitioner.name.prefix"
             }
           ]
         },
         {
           "code": "XCN.7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Degree (e.g., MD)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name.suffix[2}",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
               "display": "Practitioner.name.suffix[2}"
             }
           ]
         },
         {
           "code": "XCN.10",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Name Type Code",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name.use",
-              "display": "Practitioner.name.use"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Practitioner.name.use",
+              "dependsOn": [
+                {
+                  "property": "vocabulary-map",
+                  "value": "NameType"
+                }
+              ]
             }
           ]
         },
         {
           "code": "XCN.13",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Identifier Type Code",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.identifier.type.coding.code",
-              "display": "Practitioner.identifier.type.coding.code"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Practitioner.identifier.type.coding.code",
+              "dependsOn": [
+                {
+                  "property": "vocabulary-map",
+                  "value": "IDType"
+                }
+              ]
             }
           ]
         },
         {
           "code": "XCN.17",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Name Validity Range",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name.period",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Period"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "Practitioner.name.period",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF XCN.19 DOES NOT EXIST AND IF XCN.20 DOES NOT EXIST\\"
+                  "property": "data-type-map",
+                  "value": "DR"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF XCN.19 DOES NOT EXIST AND IF XCN.20 DOES NOT EXIST"
                 }
               ]
             }
@@ -143,44 +558,208 @@
         },
         {
           "code": "XCN.18",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Name Assembly Order",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name.family.ext-assembly-order",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "Practitioner.name.family.ext-assembly-order"
             }
           ]
         },
         {
           "code": "XCN.19",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Effective Date",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name.period.start",
-              "display": "Practitioner.name.period.start"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Practitioner.name.period.start",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "DTM"
+                }
+              ]
             }
           ]
         },
         {
           "code": "XCN.20",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Expiration Date",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name.period.end",
-              "display": "Practitioner.name.period.end"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Practitioner.name.period.end",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "DTM"
+                }
+              ]
             }
           ]
         },
         {
           "code": "XCN.21",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Professional Suffix",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Practitioner.name.suffix",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
               "display": "Practitioner.name.suffix"
             }
           ]

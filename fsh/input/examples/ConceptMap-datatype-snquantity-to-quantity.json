@@ -1,0 +1,129 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "datatype-snquantity-to-quantity",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "url": "http://hl7.org/fhir/v2-tofhir/datatype-snquantity-to-quantity",
+  "version": "1.0",
+  "name": "Datatype_SN_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-07-13",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "SN",
+  "targetUri": "Quantity",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "SN.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Comparator",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Quantity.comparator",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Quantity.comparator"
+            }
+          ]
+        },
+        {
+          "code": "SN.2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "NM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Num1",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Quanitty.value",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "decimal"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Quanitty.value"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

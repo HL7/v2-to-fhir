@@ -1,0 +1,875 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "message-orm-o01-to-bundle",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 ORM_O01 Message to the FHIR Message Bundle.",
+  "url": "http://hl7.org/fhir/v2-tofhir/message-orm-o01-to-bundle",
+  "version": "1.0",
+  "name": "Message_ORM_O01_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-07-14",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "ORM_O01",
+  "targetUri": "Bundle",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Message ORM:O01 to Bundle.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/19C2jjzXZ8D7Um1iB-e6NmLfZVPvyZNkgwU8IxCJiwGs/edit#gid=0"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "element": [
+        {
+          "code": "ORM_O01.MSH",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Message Header",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Bundle",
+              "display": "Bundle",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "MSH[Bundle]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.MSH",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Message Header",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MessageHeader[1]",
+              "display": "MessageHeader[1]",
+              "comment": "Processing of the MSH segment results in the creation of a new MessageHeader resource",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "MSH[General]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.MSH",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Message Header",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance[1]",
+              "display": "Provenance[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "MSH[Provenance-Originator]"
+                },
+                {
+                  "property": "references",
+                  "value": "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.MSH",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Message Header",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance[2]",
+              "display": "Provenance[2]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "MSH[Provenance-Translator]"
+                },
+                {
+                  "property": "references",
+                  "value": "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.MSH",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Message Header",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Task[1]",
+              "display": "Task[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "MSH[Task]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.PATIENT.PID",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Identification",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
+              "comment": "Processing of the PID segment results in the creation of a new Patient resource",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PID"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.PATIENT.PD1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Additional Demographics",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
+              "comment": "Incorporate PD1 content into the Patient created from the PID segment.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PD1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.PATIENT.VISIT.PV1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Visit",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter",
+              "display": "Encounter",
+              "comment": "Processing of the PV1 segment results in the creation of a new Encounter resource",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PV1"
+                },
+                {
+                  "property": "references",
+                  "value": "Encounter.subject.reference=Patient[1].id"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.PATIENT.VISIT.PV2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Visit- Additional Info",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Encounter",
+              "display": "Encounter",
+              "comment": "Incorporate PV2 content into the Encounter created from the PV1 segment.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PV2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.PATIENT.INSURANCE.IN1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Insurance",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Coverage",
+              "display": "Coverage",
+              "comment": "Processing of the IN1 segment results in the creation of a new Coverage resource",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "IN1"
+                },
+                {
+                  "property": "references",
+                  "value": "Coverage.subscriber.reference=Patient[1].id"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.PATIENT.INSURANCE.IN2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Insurance Additional Info",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Coverage",
+              "display": "Coverage",
+              "comment": "Incorporate IN2 content into the Coverage created from the IN1 segment.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "IN2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.PATIENT.INSURANCE.IN3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Insurance Add'l Info – Cert.",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Coverage",
+              "display": "Coverage",
+              "comment": "Incorporate IN3 content into the Coverage created from the IN1 segment.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "IN3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.PATIENT.AL1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Allergy Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AllergyIntolerance",
+              "display": "AllergyIntolerance",
+              "comment": "Processing of the AL1 segment results in the creation of a new AllergyIntolerance resource",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "AL1"
+                },
+                {
+                  "property": "references",
+                  "value": "AllergyIntolerance.patient.reference=Patient[1].id"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.ORDER.ORC",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Common Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest[1]",
+              "display": "ServiceRequest[1]",
+              "comment": "Processing of each ORC segment results in the creation of a new ServiceRequest resource",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "ORC[ServiceRequest]"
+                },
+                {
+                  "property": "references",
+                  "value": "ServiceRequest.subject.reference=Patient[1].id"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.ORDER.ORC",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Common Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Task[1]",
+              "display": "Task[1]",
+              "comment": "Processing of each ORC segment results in the creation of a new Task resource which is linked back to the ServiceRequest created for the same ORC segment. =*= The creation of a Task resource and its inclusion in the FHIR bundle should only happen when the receiving system is responsible for fulfillment of the ServiceRequest. Other systems may receive notification of the order, but should not receive a Task Resource if they are not the intended filler system.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "ORC[Task-New Order]"
+                },
+                {
+                  "property": "references",
+                  "value": "Task.basedOn.reference=ServiceRequest[1].id; Task.encounter.reference=Encounter[1].id; Task.for.reference=Patient[1].id; Task.reasonReference=Condition[1]id; Task.insurance.reference=Coverage[1].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC.1 EQUALS \"NW\""
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "ORC.element(\"1\")=\"NW\""
+                },
+                {
+                  "property": "narrative",
+                  "value": "If the receiving system should perform the order"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.ORDER.ORC",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Common Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Task[1]",
+              "display": "Task[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "ORC[Task-CancelOrder]"
+                },
+                {
+                  "property": "references",
+                  "value": "Task.basedOn.reference=ServiceRequest[1].id; Task.encounter.reference=Encounter[1].id; Task.for.reference=Patient[1].id; Task.reasonReference=Condition[1].id; Task.insurance.reference=Coverage[1].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC.1 EQUALS \"OC\""
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "ORC.element(\"1\")=\"OC\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.ORDER.ORC",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Common Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Provenance",
+              "display": "Provenance",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "ORC[Provenance]"
+                },
+                {
+                  "property": "references",
+                  "value": "Provenance.target=ServiceRequest[ORC]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.ORDER_DETAIL.CHOICE.OBR",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Order Detail Segment OBR, etc.",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest[1]",
+              "display": "ServiceRequest[1]",
+              "comment": "Incorporate OBR content into the ServiceRequest created from the ORC segment in the same segment group.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "OBR[ServiceRequest]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PID VALUED"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.ORDER_DETAIL.CHOICE.OBR",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Order Detail Segment OBR, etc.",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SupplyRequest[1]",
+              "display": "SupplyRequest[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "OBR[ServiceRequest]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PID NOT VALUED"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.ORDER_DETAIL.CHOICE.RXO",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Pharmacy/Treatment Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "MedicationRequest",
+              "display": "MedicationRequest",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "RXO[MedicationRequest]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.ORDER_DETAIL.CHOICE.ODS",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Dietary Orders, Supplements, and Preferences",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SupplyRequest",
+              "display": "SupplyRequest",
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PID NOT VALUED"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.ORDER_DETAIL.NTE",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Notes and Comments (for Detail)",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest[1].note",
+              "display": "ServiceRequest[1].note",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "NTE[Annotation]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORM_O01.ORDER_DETAIL.DG1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Diagnosis",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest[1].reasonReference(Condition)",
+              "display": "ServiceRequest[1].reasonReference(Condition)",
+              "comment": "Processing of the DG1 segment results in the creation of a new Condition resource which is referenced in the ServiceRequest created by the ORC segment",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "DG1[Condition]"
+                },
+                {
+                  "property": "references",
+                  "value": "ServiceRequest[1].reasonReference(Condition.subject.reference=Patient[1].id)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

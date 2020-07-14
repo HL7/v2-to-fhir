@@ -1,0 +1,828 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "datatype-xad-to-address",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "url": "http://hl7.org/fhir/v2-tofhir/datatype-xad-to-address",
+  "version": "1.0",
+  "name": "Datatype_XAD_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-07-13",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "XAD",
+  "targetUri": "Address",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "XAD.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "SAD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Street Address",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.line[1-3]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.line[1-3]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "SAD"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XAD.2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Other Designation",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.line[4]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.line[4]"
+            }
+          ]
+        },
+        {
+          "code": "XAD.3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "City",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.city",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.city"
+            }
+          ]
+        },
+        {
+          "code": "XAD.4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "State or Province",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.state",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.state"
+            }
+          ]
+        },
+        {
+          "code": "XAD.5",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Zip or Postal Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.postalCode",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.postalCode"
+            }
+          ]
+        },
+        {
+          "code": "XAD.6",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Country",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.country",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.country"
+            }
+          ]
+        },
+        {
+          "code": "XAD.7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Address Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.type",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.type",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF XAD.7 IN (\"M\", \"SH\")"
+                },
+                {
+                  "property": "vocabulary-map",
+                  "value": "AddressType"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XAD.7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Address Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.use",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.use",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF XAD.7 IN (\"BA\", \"BI\", \"C\", \"B\", \"H\", \"O\")"
+                },
+                {
+                  "property": "vocabulary-map",
+                  "value": "AddressUse"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XAD.7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Address Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.ext.iso21090-AD-use",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.ext.iso21090-AD-use",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF XAD.7 EQUALS \"HV\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XAD.9",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "County/Parish Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.district",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.district",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[string]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XAD.10",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Census Tract",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.extension-iso21090-ADXP-censusTract",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.extension-iso21090-ADXP-censusTract",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[string]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XAD.12",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DR"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Address Validity Range",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.period",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Period"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.period",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "DR"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XAD.13",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Effective Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.period.start",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.period.start",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "DTM"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XAD.14",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Expiration Date",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.period.end",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.period.end",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "DTM"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "XAD.19",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Addressee",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Address.line[5]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "Address.line[5]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

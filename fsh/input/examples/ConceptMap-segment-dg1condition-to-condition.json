@@ -1,0 +1,537 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-dg1condition-to-condition",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 DG1 Segment to the FHIR Condition Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-dg1condition-to-condition",
+  "version": "1.0",
+  "name": "Segment_DG1_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-07-13",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "DG1",
+  "targetUri": "Condition",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "DG1-3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Diagnosis Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.code",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Condition.code",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DG1-4",
+          "display": "Diagnosis Description",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.code.text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Condition.code.text"
+            }
+          ]
+        },
+        {
+          "code": "DG1-5",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Diagnosis Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.onsetDateTime",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "DateTime"
+                    }
+                  ]
+                }
+              ],
+              "display": "Condition.onsetDateTime",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "DTM"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DG1-6",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Diagnosis Type",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "EpisodeOfCare.diagnose.role",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    }
+                  ]
+                }
+              ],
+              "display": "EpisodeOfCare.diagnose.role",
+              "dependsOn": [
+                {
+                  "property": "narrative",
+                  "value": "If in context of an episode of care"
+                },
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                },
+                {
+                  "property": "vocabulary-map",
+                  "value": "Diagnosis Type"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DG1-16",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XCN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Diagnosing Clinician",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.asserter(Practitioner)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(Practitioner)"
+                    }
+                  ]
+                }
+              ],
+              "display": "Condition.asserter(Practitioner)",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XCN[Practitioner]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DG1-19",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Attestation Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.extension-assertedDate",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    }
+                  ]
+                }
+              ],
+              "display": "Condition.extension-assertedDate",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "DTM"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DG1-19",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Attestation Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.recordedDate",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    }
+                  ]
+                }
+              ],
+              "display": "Condition.recordedDate",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "DTM"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DG1-20",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Diagnosis Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.identifier",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "identifier"
+                    }
+                  ]
+                }
+              ],
+              "display": "Condition.identifier",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "EI[Identifier]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DG1-21",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Diagnosis Action Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.verificationStatus.coding.code",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    }
+                  ]
+                }
+              ],
+              "display": "Condition.verificationStatus.coding.code",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"entered-in-error\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DG1-21",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Diagnosis Action Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.verificationStatus.coding.system",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    }
+                  ]
+                }
+              ],
+              "display": "Condition.verificationStatus.coding.system",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"http://terminology.hl7.org/CodeSystem/condition-ver-status\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "DG1-22",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Parent Diagnosis",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Condition.extension-condition-dueTo(Condition)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(Condition)"
+                    }
+                  ]
+                }
+              ],
+              "display": "Condition.extension-condition-dueTo(Condition)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

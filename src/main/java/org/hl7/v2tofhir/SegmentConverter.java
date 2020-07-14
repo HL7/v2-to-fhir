@@ -9,8 +9,8 @@ import org.apache.commons.lang3.StringUtils;
 
 public class SegmentConverter extends ConverterImpl<SegmentInput> implements Converter {
 
-    public SegmentConverter(File f) throws IOException {
-        super(SegmentInput.class);
+    public SegmentConverter(File f, String sourceUrl) throws IOException {
+        super(SegmentInput.class, sourceUrl);
         load(f);
     }
 
@@ -34,7 +34,7 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
             "Sort Order", "Identifier", "Name", "Data Type", "Cardinality - Min", "Cardinality - Max",
             "Computable ANTLR", "Computable FHIRPath", "Narrative",
             "FHIR Attribute", "Extension", "Data Type", "Cardinality - Min", "Cardinality - Max",
-            "Data Type Mapping", "Vocabulary Mapping<br/>(IS, ID, CE, CEN, CWE)"
+            "Data Type Mapping", "Assignment", "Vocabulary Mapping<br/>(IS, ID, CE, CEN, CWE)"
         };
         String titles[] = {
             "Rows are listed in sequence of how they appear in the v2 standard. "
@@ -55,6 +55,7 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
             "The FHIR min cardinality expressed numerically.",
             "The FHIR max cardinality expressed numerically.",
             "The URL to the Data Type Map that is to be used for the attribute in this segment.",
+            "The fixed or computed value to assign",
             "The URL to the Vocabulary Map that is to be used for the coded element for this attribute."
         };
         int i = 0;
@@ -77,9 +78,11 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
                 bean.v2Sort, escapeHtmlString(bean.v2Code), escapeHtmlString(bean.v2Name),
                 bean.v2Datatype, bean.v2Min, bean.v2Max,
                 escapeHtmlString(bean.conditionANTLR), escapeHtmlString(bean.conditionfhirPath), escapeHtmlString(bean.conditionNarrative),
-                makeFhirLink(bean.fhirCode), escapeHtmlString(bean.fhirExtension), makeFhirLink(bean.fhirDatatype),
+                makeFhirLink(bean.fhirCode, count), escapeHtmlString(bean.fhirExtension), makeFhirLink(bean.fhirDatatype, count),
                 bean.fhirMin, bean.fhirMax,
-                makeDataTypeLink(bean.v2DataTypeMap, bean.fhirDatatype), makeTableLink(bean.fhirVocab), escapeHtmlString(bean.comments)
+                makeDataTypeLink(bean.v2DataTypeMap, bean.fhirDatatype, count), makeTableLink(bean.fhirVocab, count),
+                escapeHtmlString(bean.fhirValue),
+                escapeHtmlString(bean.comments)
             };
             w.print("<tr>");
             for (String col: cols) {

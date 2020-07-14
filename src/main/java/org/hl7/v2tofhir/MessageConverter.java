@@ -9,8 +9,8 @@ import org.apache.commons.lang3.StringUtils;
 
 public class MessageConverter extends ConverterImpl<MessageInput> implements Converter {
 
-    public MessageConverter(File f) throws IOException {
-        super(MessageInput.class);
+    public MessageConverter(File f, String sourceUrl) throws IOException {
+        super(MessageInput.class, sourceUrl);
         load(f);
     }
 
@@ -72,7 +72,7 @@ public class MessageConverter extends ConverterImpl<MessageInput> implements Con
             String cols[] = {
                 bean.v2Sort, bean.v2Code, escapeHtmlString(bean.v2Message), escapeHtmlString(bean.v2Name), bean.v2Min, bean.v2Max,
                 escapeHtmlString(bean.conditionANTLR), escapeHtmlString(bean.conditionfhirPath), escapeHtmlString(bean.conditionNarrative),
-                makeFhirLink(bean.fhirCode), makeSegmentLink(bean.segmentMap, bean.fhirCode),
+                makeFhirLink(bean.fhirCode, count), makeSegmentLink(bean.segmentMap, bean.fhirCode, count),
                 escapeHtmlString(bean.reference), escapeHtmlString(bean.comments)
             };
             w.print("<tr>");

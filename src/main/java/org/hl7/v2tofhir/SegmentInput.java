@@ -40,7 +40,7 @@ public class SegmentInput implements Cloneable, Convertible {
     @CsvBindByPosition(position=15)
     String fhirVocab;
     @CsvBindByPosition(position=16)
-    String fhirEmpty;
+    String fhirValue;
     @CsvBindByPosition(position=17)
     String comments;
     public SegmentInput copy() {
@@ -54,8 +54,9 @@ public class SegmentInput implements Cloneable, Convertible {
     @Override
     public Row convert() {
         Row r = new Row();
-        r.condition = getCondition(this.conditionANTLR, this.conditionfhirPath);
-        r.conditionDisplay = StringUtils.defaultString(this.conditionNarrative);
+        r.conditionANTLR = StringUtils.defaultString(this.conditionANTLR);
+        r.conditionFHIRPath = StringUtils.defaultString(this.conditionfhirPath);
+        r.conditionNarrative = StringUtils.defaultString(this.conditionNarrative);
         r.dataType = null;
         r.targetCode = this.fhirCode.trim();
         if (StringUtils.isBlank(this.fhirCode) || r.targetCode.toLowerCase().contains("n/a")) {
@@ -63,8 +64,17 @@ public class SegmentInput implements Cloneable, Convertible {
             return null;
         }
         r.targetDisplay = r.targetCode;
+        r.targetType = this.fhirDatatype;
+        r.targetMax = this.fhirMax;
+        r.targetMin = this.fhirMin;
         r.sourceCode = this.v2Code;
+        r.sourceType = this.v2Datatype;
+        r.sourceMax = this.v2Max;
+        r.sourceMin = this.v2Max;
         r.sourceDisplay = this.v2Name;
+        r.targetValue = this.fhirValue;
+        r.mapping = this.v2DataTypeMap;
+        r.vocab = this.fhirVocab;
         r.comments = this.comments;
         return r;
     }

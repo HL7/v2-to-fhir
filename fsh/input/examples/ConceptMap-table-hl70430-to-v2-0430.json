@@ -1,0 +1,108 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "table-hl70430-to-v2-0430",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table HL70430 to the FHIR V2 0430 Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70430-to-v2-0430",
+  "version": "1.0",
+  "name": "Table_HL70430_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-07-13",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "HL70430",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v2-0430",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "A",
+          "display": "Ambulance",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "A",
+              "display": "Ambulance"
+            }
+          ]
+        },
+        {
+          "code": "C",
+          "display": "Car",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "C",
+              "display": "Car"
+            }
+          ]
+        },
+        {
+          "code": "F",
+          "display": "On foot",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "F",
+              "display": "On foot"
+            }
+          ]
+        },
+        {
+          "code": "H",
+          "display": "Helicopter",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "H",
+              "display": "Helicopter"
+            }
+          ]
+        },
+        {
+          "code": "P",
+          "display": "Public Transport",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "P",
+              "display": "Public Transport"
+            }
+          ]
+        },
+        {
+          "code": "O",
+          "display": "Other",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "O",
+              "display": "Other"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "Unknown",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "U",
+              "display": "Unknown"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

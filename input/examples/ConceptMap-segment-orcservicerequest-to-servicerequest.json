@@ -7,7 +7,7 @@
   "name": "Segment_ORC_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-07-14",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,22 +22,88 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "ORC",
   "targetUri": "ServiceRequest",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Segment ORC[ServiceRequest] to ServiceRequest.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/11VBF5TIRJTfRwkRIK1XH-k40dZqCd3g3a0sBY-zJU4Q/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
         {
           "code": "ORC-1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Order Control",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.status",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "ServiceRequest.status",
-              "comment": "This is a complicated mapping where .status, .intent, and Task get involved that may have various localized interpretation.",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "ORC.element(\"5\").empty()\n# IF ORC-5 NOT VALUED\\"
+                  "property": "vocabulary-map",
+                  "value": "OrderControlCode[ServiceRequest.status]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC-5 NOT VALUED"
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "ORC.element(\"5\").empty()"
                 }
               ]
             }
@@ -45,27 +111,119 @@
         },
         {
           "code": "ORC-1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Order Control",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.intent",
-              "display": "= \"order\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.intent",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"order\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "ORC-2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Placer Order Number",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.identifier[1]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Identifier"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
               "display": "ServiceRequest.identifier[1]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "OBR.element(\"2\").empty()\n# IF OBR-2 NOT VALUED\\"
+                  "property": "data-type-map",
+                  "value": "EI[Identifier]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-2 NOT VALUED"
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "OBR.element(\"2\").empty()"
                 }
               ]
             }
@@ -73,16 +231,64 @@
         },
         {
           "code": "ORC-2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Placer Order Number",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.identifier[1].type.coding.code",
-              "display": "= \"PLAC\"",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier[1].type.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
-                  "value": "OBR.element(\"2\").empty()\n# IF OBR-2 NOT VALUED\\"
+                  "value": "\"PLAC\""
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-2 NOT VALUED"
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "OBR.element(\"2\").empty()"
                 }
               ]
             }
@@ -90,16 +296,64 @@
         },
         {
           "code": "ORC-2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Placer Order Number",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.identifier[1].type.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\"",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier[1].type.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
-                  "value": "OBR.element(\"2\").empty()\n# IF OBR-2 NOT VALUED\\"
+                  "value": "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-2 NOT VALUED"
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "OBR.element(\"2\").empty()"
                 }
               ]
             }
@@ -107,16 +361,64 @@
         },
         {
           "code": "ORC-3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Filler Order Number",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.identifier[2]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Identifier"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
               "display": "ServiceRequest.identifier[2]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "OBR.element(\"3\").empty()\n# IF OBR-3 NOT VALUED\\"
+                  "property": "data-type-map",
+                  "value": "EI[Identifier]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-3 NOT VALUED"
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "OBR.element(\"3\").empty()"
                 }
               ]
             }
@@ -124,16 +426,64 @@
         },
         {
           "code": "ORC-3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Filler Order Number",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.identifier[2].type.coding.code",
-              "display": "= \"FILL\"",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier[2].type.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
-                  "value": "OBR.element(\"3\").empty()\n# IF OBR-3 NOT VALUED\\"
+                  "value": "\"FILL\""
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-3 NOT VALUED"
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "OBR.element(\"3\").empty()"
                 }
               ]
             }
@@ -141,16 +491,64 @@
         },
         {
           "code": "ORC-3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Filler Order Number",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.identifier[2].type.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\"",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier[2].type.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
-                  "value": "OBR.element(\"3\").empty()\n# IF OBR-3 NOT VALUED\\"
+                  "value": "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-3 NOT VALUED"
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "OBR.element(\"3\").empty()"
                 }
               ]
             }
@@ -158,71 +556,339 @@
         },
         {
           "code": "ORC-4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EIP - This is EI in many versions including 2.9"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Placer Group Number",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.identifier[3]",
-              "display": "ServiceRequest.identifier[3]"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Identifier"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier[3]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "EI[Identifier]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "ORC-4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EIP - This is EI in many versions including 2.9"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Placer Group Number",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.identifier[3].type.coding.code",
-              "display": "= \"PGN\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier[3].type.coding.code",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"PGN\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "ORC-4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EIP - This is EI in many versions including 2.9"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Placer Group Number",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.identifier[3].type.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/v2-0203\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier[3].type.coding.system",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "ORC-5",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Order Status",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.status",
-              "display": "ServiceRequest.status"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.status",
+              "dependsOn": [
+                {
+                  "property": "vocabulary-map",
+                  "value": "OrderStatus"
+                }
+              ]
             }
           ]
         },
         {
           "code": "ORC-7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "TQ"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Quantity/Timing",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.quantity",
-              "display": "ServiceRequest.quantity"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "quantity[x]"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.quantity",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "TQ[ServiceRequest]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "ORC-9",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Date/Time of Transaction",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.authoredOn",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "ServiceRequest.authoredOn",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "ORC.element(\"1\")=\"NW\"\n# IF ORC.1 IS \"NW\"\\"
+                  "property": "data-type-map",
+                  "value": "DTM"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC.1 IS \"NW\""
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "ORC.element(\"1\")=\"NW\""
                 }
               ]
             }
@@ -230,27 +896,115 @@
         },
         {
           "code": "ORC-12",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XCN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Ordering Provider",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.requester(PractitionerRole)",
-              "display": "ServiceRequest.requester(PractitionerRole)"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(PractitionerRole)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.requester(PractitionerRole)",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XCN[PractitionerRole]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "ORC-16",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Order Control Code Reason",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.extension-request-statusReason",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "ServiceRequest.extension-request-statusReason",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF ORC-5 NOT VALUED\\"
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC-5 NOT VALUED"
                 }
               ]
             }
@@ -258,58 +1012,261 @@
         },
         {
           "code": "ORC-21",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XON"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Ordering Facility Name",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.requester(PractitionerRole.organization(Organization))",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(Organization)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "ServiceRequest.requester(PractitionerRole.organization(Organization))",
-              "comment": "PractitionerRole.location is an alternative mapping, we invite ballot comments on which element in PractitionerRole is best."
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XON"
+                }
+              ]
             }
           ]
         },
         {
           "code": "ORC-22",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XAD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Ordering Facility Address",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.requester(PractitionerRole.organization(Organization.address))",
-              "display": "ServiceRequest.requester(PractitionerRole.organization(Organization.address))"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Address"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.requester(PractitionerRole.organization(Organization.address))",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XAD"
+                }
+              ]
             }
           ]
         },
         {
           "code": "ORC-23",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XTN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Ordering Facility Phone Number",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.requester(PractitionerRole.organization(Organization.telecom))",
-              "display": "ServiceRequest.requester(PractitionerRole.organization(Organization.telecom))"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "ContactPoint"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.requester(PractitionerRole.organization(Organization.telecom))",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XTN"
+                }
+              ]
             }
           ]
         },
         {
           "code": "ORC-24",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XAD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Ordering Provider Address",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.requester(PractitionerRole.practitioner(Practititoner.address))",
               "display": "ServiceRequest.requester(PractitionerRole.practitioner(Practititoner.address))",
-              "comment": "We request feedback on whether this address is more directly related to the Practitioner rather than the PractitionerRole"
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XAD"
+                }
+              ]
             }
           ]
         },
         {
           "code": "ORC-29",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Order Type",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "ServiceRequest.locationCode",
-              "display": "ServiceRequest.locationCode"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.locationCode",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                },
+                {
+                  "property": "vocabulary-map",
+                  "value": "OrderType"
+                }
+              ]
             }
           ]
         }

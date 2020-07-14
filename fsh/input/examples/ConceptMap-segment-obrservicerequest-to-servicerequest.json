@@ -1,0 +1,1544 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-obrservicerequest-to-servicerequest",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 OBR Segment to the FHIR ServiceRequest Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-obrservicerequest-to-servicerequest",
+  "version": "1.0",
+  "name": "Segment_OBR_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-07-13",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "OBR",
+  "targetUri": "ServiceRequest",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "OBR",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.intent",
+              "display": "ServiceRequest.intent",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"order\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Identifier"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC-2 NOT VALUED"
+                },
+                {
+                  "property": "data-type-map",
+                  "value": "EI[Identifier]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.code",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier.type.coding.code",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC-2 NOT VALUED"
+                },
+                {
+                  "property": "value",
+                  "value": "\"PLAC\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.system",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier.type.coding.system",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC-2 NOT VALUED"
+                },
+                {
+                  "property": "value",
+                  "value": "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Filler Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Identifier"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC-3 NOT VALUED"
+                },
+                {
+                  "property": "data-type-map",
+                  "value": "EI[Identifier]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Filler Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.code",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "= \"FILL\"",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC-3 NOT VALUED"
+                },
+                {
+                  "property": "value",
+                  "value": "\"FILL\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Filler Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.system",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier.type.coding.system",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC-3 NOT VALUED"
+                },
+                {
+                  "property": "value",
+                  "value": "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Universal Service Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.code",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.code",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-5",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Priority",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.priority",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.priority",
+              "dependsOn": [
+                {
+                  "property": "vocabulary-map",
+                  "value": "Priority"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-6",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "TS"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Requested Date/Time",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.occurrenceDateTime",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.occurrenceDateTime"
+            }
+          ]
+        },
+        {
+          "code": "OBR-9",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CQ"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Collection Volume",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.specimen[1](Specimen.collection.quantity)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "simpleQuantity"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.specimen[1](Specimen.collection.quantity)",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CQ[Quantity]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-10",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XCN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Collector Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.specimen[1](Specimen.collection.collector(Practitioner))",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(Practitioner)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.specimen[1](Specimen.collection.collector(Practitioner))",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XCN"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-11",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Specimen Action Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.intent",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.intent",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-11 EQUALS \"G\""
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "element(\"11\")=\"G\""
+                },
+                {
+                  "property": "value",
+                  "value": "\"reflex-order\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-11",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Specimen Action Code",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.intent",
+              "display": "ServiceRequest.intent",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-11 NOT IN (\"G\",\"A\")"
+                },
+                {
+                  "property": "fhirpath",
+                  "value": "element(\"11\")! IN (\"G\",\"A\")"
+                },
+                {
+                  "property": "value",
+                  "value": "\"order\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-14",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "TS"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Specimen Received Date/Time *",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.specimen[1](Specimen.receivedTime)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.specimen[1](Specimen.receivedTime)",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "TS"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-15",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Specimen Source",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.specimen[1](Specimen)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(Specimen)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.specimen[1](Specimen)",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CM[SpecimenSource]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-16",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XCN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Ordering Provider",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.requester(Practitioner)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(Practitioner)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.requester(Practitioner)",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF ORC-12 NOT VALUED"
+                },
+                {
+                  "property": "data-type-map",
+                  "value": "XCN"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-27",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "TQ"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Quantity/Timing",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.quantity",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "quantity[x]"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.quantity",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "TQ[ServiceRequest]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-29",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EIP"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "ParentResults Observation Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.basedOn.identifier",
+              "display": "ServiceRequest.basedOn.identifier",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-29.1 VALUED AND OBR-50 NOT VALUED"
+                },
+                {
+                  "property": "narrative",
+                  "value": "If OBR-29.2 is also valued, implementation needs to decide which one to use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-29",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EIP"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "ParentResults Observation Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.basedOn.type",
+              "display": "= \"ServiceRequest\"",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-29.1 VALUED AND OBR-50 NOT VALUED"
+                },
+                {
+                  "property": "narrative",
+                  "value": "If OBR-29.2 is also valued, implementation needs to decide which one to use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-29",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EIP"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "ParentResults Observation Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.basedOn.identifier",
+              "display": "ServiceRequest.basedOn.identifier",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-29.2 VALUED AND OBR-50 NOT VALUED"
+                },
+                {
+                  "property": "narrative",
+                  "value": "If OBR-29.1 is also valued, implementation needs to decide which one to use."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-29",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EIP"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "ParentResults Observation Identifier",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.basedOn.type",
+              "display": "ServiceRequest.basedOn.type",
+              "dependsOn": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBR-29.2 VALUED AND OBR-50 NOT VALUED"
+                },
+                {
+                  "property": "narrative",
+                  "value": "If OBR-29.1 is also valued, implementation needs to decide which one to use."
+                },
+                {
+                  "property": "value",
+                  "value": "\"ServiceRequest\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-31",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Reason for Study",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.reasonCode",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.reasonCode",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-39",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Collector's Comment *",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SpecimenRequest.specimen[1](Specimen.note)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Annotation"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "SpecimenRequest.specimen[1](Specimen.note)"
+            }
+          ]
+        },
+        {
+          "code": "OBR-46",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Placer Supplemental Service Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.orderDetail[1]??",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.orderDetail[1]??",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-47",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Filler Supplemental Service Information",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.orderDetail[2]??",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.orderDetail[2]??",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-53",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CX"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Alternate Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Identifier"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "EI[Identifier]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-53",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CX"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Alternate Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.code",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier.type.coding.code",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"PLAC\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-53",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CX"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Alternate Placer Order Number",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ServiceRequest.identifier.type.coding.system",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "ServiceRequest.identifier.type.coding.system",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

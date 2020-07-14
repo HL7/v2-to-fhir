@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 import org.apache.commons.lang3.tuple.Triple;
 
@@ -20,7 +21,7 @@ public class ConverterMap {
     }
 
     static void load() {
-        m = new HashMap<>();
+        m = new TreeMap<>();
         // Get the data about how to organize this stuff.
         try (FileReader r = new FileReader("mappings/chapterdata.csv");
             CSVReader r2 = new CSVReader(r);) {
@@ -32,7 +33,10 @@ public class ConverterMap {
                     m2 = new HashMap<>();
                     m.put(what, m2);
                 }
-                m2.put(id, Triple.of(where, title, id));
+                Triple<String, String, String> t = Triple.of(where, title, id);
+                m2.put(id, t);
+                // Also map for case correction issues in input.
+                m2.put(id.toLowerCase(), t);
             }
         } catch (IOException e) {
             e.printStackTrace();

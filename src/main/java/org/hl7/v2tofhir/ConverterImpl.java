@@ -28,20 +28,31 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
     private static final String FHIR_BASE = "https://hl7.org/fhir/R4/", FHIR_TERM = "http://terminology.hl7.org/";
     private static int errCount = 0, warnCount = 0;
-
+    private final String sourceUrl;
     public static class Row {
         String sourceCode;
         String sourceDisplay;
+        String sourceType;
+        String sourceMin;
+        String sourceMax;
         String targetCode;
+        String targetType;
         String targetDisplay;
-        String condition;
-        String conditionDisplay;
+        String targetMin;
+        String targetMax;
+        String conditionFHIRPath;
+        String conditionANTLR;
+        String conditionNarrative;
         String dataType;
         String mapping;
         String comments;
+        String targetValue;
+        String vocab;
+        String segmentMap;
+        String references;
     }
 
-    private static Map<String,Pair<String,String>> fhirLinks = new TreeMap<>(),
+    private static Map<String,Triple<String,Integer,String>> fhirLinks = new TreeMap<>(),
         segmentLinks = new TreeMap<>(),
         tableLinks = new TreeMap<>(),
         dataTypeLinks = new TreeMap<>();
@@ -73,8 +84,9 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     private List<T> beans;
     private Class<T> classType;
 
-    public ConverterImpl(Class<T> classType) {
+    public ConverterImpl(Class<T> classType, String sourceUrl) {
         this.classType = classType;
+        this.sourceUrl = sourceUrl;
     }
 
     @Override
@@ -216,7 +228,16 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             pw.println("* copyright = \"Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.\"");
             pw.printf("* sourceUri = \"%s\"%n", source);
             pw.printf("* targetUri = \"%s\"%n", target);
-
+            if (sourceUrl != null) {
+                pw.printf("* extension[0].url = \"http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact\"%n");
+                pw.printf("* extension[0].extension[0].url = \"type\"%n");
+                pw.printf("* extension[0].extension[0].valueCode = #derived-from%n");
+                String name = StringUtils.substringBeforeLast(f.getName(), " - ").replace("_",":");
+                pw.printf("* extension[0].extension[1].url = \"label\"%n");
+                pw.printf("* extension[0].extension[1].valueString = \"%s\"%n", name);
+                pw.printf("* extension[0].extension[2].url = \"url\"%n");
+                pw.printf("* extension[0].extension[2].valueUri = \"%s\"%n", sourceUrl);
+            }
             int count = 0;
             int mappedRows = 0;
 
@@ -233,7 +254,14 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                     continue;
                 }
 
+                if (StringUtils.isBlank(row.sourceCode)) {
+                    warn("Missing source for mapping", count);
+                    continue;
+                }
+
                 pw.printf("* group.element[%d].code = #%s%n", mappedRows, row.sourceCode.trim());
+                addConstraints(pw, "* group.element[%d]", mappedRows, row.sourceType, row.sourceMin, row.sourceMax);
+
                 if (!StringUtils.isEmpty(row.sourceDisplay)) {
                     pw.printf("* group.element[%d].display = \"%s\"%n", mappedRows, escapeFshString(row.sourceDisplay));
                 }
@@ -257,6 +285,10 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                     }
 
                     pw.printf("* group.element[%d].target.code = #%s%n", mappedRows, targetCode.trim());
+
+                    addConstraints(pw, "* group.element[%d].target", mappedRows, row.targetType, row.targetMin, row.targetMax);
+
+
                     if (!StringUtils.isEmpty(targetDisplay)) {
                         pw.printf("* group.element[%d].target.display = \"%s\"%n", mappedRows,
                             escapeFshString(targetDisplay));
@@ -266,28 +298,33 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                             escapeFshString(comments));
                     }
 
-                    int dependencies = 0;
-                    if (!StringUtils.isEmpty(row.mapping)) {
-                        pw.printf("* group.element[%d].target.dependsOn[%d].property = \"%s\"%n", mappedRows,
-                            dependencies, "ConceptMap");
-                        pw.printf("* group.element[%d].target.dependsOn[%d].value = \"%s\"%n", mappedRows, dependencies,
-                            escapeFshString(row.mapping));
-                        dependencies++;
-                    }
+                    int dependencies = 0, products = 0;
+//                    if (!StringUtils.isEmpty(row.mapping)) {
+//                        pw.printf("* group.element[%d].target.dependsOn[%d].property = \"%s\"%n", mappedRows,
+//                            dependencies, "ConceptMap");
+//                        pw.printf("* group.element[%d].target.dependsOn[%d].value = \"%s\"%n", mappedRows, dependencies,
+//                            escapeFshString(row.mapping));
+//                        dependencies++;
+//                    }
 
-                    if (!StringUtils.isEmpty(row.condition) || !StringUtils.isEmpty(row.conditionDisplay)) {
-                        pw.printf("* group.element[%d].target.dependsOn[%d].property = \"%s\"%n",
-                            mappedRows, dependencies, "value");
-                        if (!StringUtils.isBlank(row.condition)) {
-                            pw.printf("* group.element[%d].target.dependsOn[%d].value = \"%s\"%n", mappedRows, dependencies,
-                                escapeFshString(row.condition));
-                        }
-                        if (!StringUtils.isBlank(row.conditionDisplay)) {
-                            pw.printf("* group.element[%d].target.dependsOn[%d].value = \"%s\"%n", mappedRows, dependencies,
-                                escapeFshString(row.conditionDisplay));
-                        }
-                        dependencies++;
-                    }
+                    String[][] depValues = {
+                        // target.dependsOn.property="value" needs to be separated into
+                        // "antlr", "fhirpath", "narrative", "segment-map", "references", "data-type-map", and "vocabulary-map".
+                        { "antlr", row.conditionANTLR },
+                        { "fhirpath", row.conditionFHIRPath },
+                        { "narrative", row.conditionNarrative }
+                    };
+                    String[][] prodValues = {
+                        { "value", row.targetValue },
+                        { "data-type-map", row.mapping },
+                        { "vocabulary-map", row.vocab },
+                        { "segment-map", row.segmentMap },
+                        { "references", row.references }
+                    };
+
+                    dependencies = getProductOrDependency(pw, mappedRows, prodValues, true);
+                    products = getProductOrDependency(pw, mappedRows, depValues, false);
+
                 }
                 ++mappedRows;
             }
@@ -324,6 +361,40 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             }
         } catch (IOException ioex) {
             ioex.printStackTrace();
+        }
+    }
+
+    private int getProductOrDependency(PrintWriter pw, int mappedRows, String[][] depValues, boolean isDependsOn) {
+        int count = 0;
+        String s = isDependsOn ? "dependsOn" : "product";
+        for (String[] depValue : depValues) {
+            if (!StringUtils.isEmpty(depValue[1])) {
+                pw.printf("* group.element[%d].target.%s[%d].property = \"%s\"%n", mappedRows, s, count, depValue[0]);
+                pw.printf("* group.element[%d].target.%s[%d].value = \"%s\"%n", mappedRows, s, count,
+                    escapeFshString(depValue[1]));
+                count++;
+            }
+        }
+        return count;
+    }
+
+    private void addConstraints(PrintWriter pw, String string, int row, String dataType, String min, String max) {
+        if (!StringUtils.isAllBlank(dataType, min, max)) {
+            pw.printf(string + ".extension[0].url = \"http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo\"%n", row);
+
+            int parts = 0;
+            if (!StringUtils.isBlank(dataType)) {
+                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", row, parts, "type");
+                pw.printf(string + ".extension[0].extension[%d].valueCode = #\"%s\"%n", row, parts++, dataType);
+            }
+            if (!StringUtils.isBlank(min)) {
+                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", row, parts, "cardinalityMin");
+                pw.printf(string + ".extension[0].extension[%d].valueInteger = %s%n", row, parts++, min);
+            }
+            if (!StringUtils.isBlank(max)) {
+                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", row, parts, "cardinalityMax");
+                pw.printf(string + ".extension[0].extension[%d].valueInteger = %s%n", row, parts++, max);
+            }
         }
     }
 
@@ -460,7 +531,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         return qualifier;
     }
 
-    protected String makeFhirLink(String fhirCode) {
+    protected String makeFhirLink(String fhirCode, int count) {
 
         if (StringUtils.isEmpty(fhirCode) || "N/A".equals(fhirCode.trim().toUpperCase())) {
             return fhirCode;
@@ -473,7 +544,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         // Remove everything between [] inclusive
         myFhirCode = myFhirCode.replaceAll("\\[[^\\]]*\\]", "");
         // Split at ( and )
-        fhirLinks = myFhirCode.split("[\\(\\)]");
+        fhirLinks = myFhirCode.split("[\\(\\{\\}\\)]");
         // Create a link for every part remaining.
         StringBuilder links = new StringBuilder();
         String name = null;
@@ -482,37 +553,15 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             if (fhirLink == null) {
                 continue;
             }
-            String mapped = mappedLinks.get(fhirLink);
+            String mapped = mappedLinks.get(fhirLink), link = null;
             if (mapped != null) {
                 links.append(makeLink(fhirLink, mapped));
-            } else if (isResource(fhirLink)) {
-                // If a FHIR Resource, link to fhir/R4/{resource}.html
-                links.append(makeLink(fhirLink, FHIR_BASE + fhirLink + ".html"));
-            } else if (isResourceField(fhirLink)) {
-                // If a FHIR Resource field, link to fhir/R4/{resource}-definitions.html#{field}
-                name = StringUtils.substringBefore(fhirLink, ".");
-                links.append(makeLink(fhirLink, FHIR_BASE + name + "-definitions.html#" + fhirLink));
-            } else if (isFhirDataType(fhirLink)) {
-                // If a FHIR Data Type, link to  http://hl7.org/fhir/R4/datatypes.html#{datatype}
-                links.append(makeLink(fhirLink, FHIR_BASE + "datatypes.html#" + fhirLink));
-            } else if (isFhirDataType(StringUtils.capitalize(fhirLink))) {
-                warn("%s used where %s is likely meant.%n", fhirLink, StringUtils.capitalize(fhirLink));
-                links.append(makeLink(StringUtils.capitalize(fhirLink), FHIR_BASE + "datatypes.html#" + StringUtils.capitalize(fhirLink)));
-            } else if (isFhirDataTypeField(fhirLink)) {
-                // If a FHIR Data Type field, link to fhir/R4/datatypes-definitions.html#{field}
-                links.append(makeLink(fhirLink, FHIR_BASE + "datatypes-definitions.html#" + fhirLink));
             } else if (StringUtils.startsWith(fhirLink, "http://hl7.org/fhir") &&
-                       !StringUtils.startsWith(fhirLink, "http://hl7.org/fhir/R4")) {
+                !StringUtils.startsWith(fhirLink, "http://hl7.org/fhir/R4")) {
                 // if it starts with http://hl7.org/fhir and does not contain R4, insert R4
                 // and convert to codesystem- style.
                 links.append(makeLink(fhirLink,
                     fhirLink.replace("http://hl7.org/fhir/", FHIR_BASE + "codesystem-") + (fhirLink.endsWith(".html") ? "" : ".html")));
-            } else if (StringUtils.startsWith(fhirLink,  FHIR_TERM + "CodeSystem/v2-")) {
-                // if it starts with  http://terminology.hl7.org/CodeSystem/v2- replace with http://hl7.org/fhir/R4/v2/
-                // and append /index.html
-                links.append(makeLink(fhirLink,
-                    fhirLink.replace(FHIR_TERM + "CodeSystem/v2-", FHIR_BASE + "v2/") + "/index.html")
-                );
             } else if (StringUtils.startsWith(fhirLink, FHIR_TERM + "CodeSystem/v3-")) {
                 // if it starts with  http://terminology.hl7.org/CodeSystem/v2- replace with http://hl7.org/fhir/R4/v2/
                 // and append /index.html
@@ -520,12 +569,35 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                         fhirLink.replace(FHIR_TERM + "CodeSystem/v3-", FHIR_BASE + "v3/") +
                         "/cs.html")
                 );
+            } else if (StringUtils.startsWith(fhirLink,  FHIR_TERM + "CodeSystem/v2-")) {
+                // if it starts with  http://terminology.hl7.org/CodeSystem/v2- replace with http://hl7.org/fhir/R4/v2/
+                // and append /index.html
+                links.append(makeLink(fhirLink,
+                    fhirLink.replace(FHIR_TERM + "CodeSystem/v2-", FHIR_BASE + "v2/") + "/index.html")
+                );
+            } else if (StringUtils.startsWith(fhirLink,  FHIR_TERM + "CodeSystem/")) {
+                links.append(makeLink(fhirLink, fhirLink + ".html"));
+            } else if ((link = isResource(fhirLink, count)) != null) {
+                // If a FHIR Resource, link to fhir/R4/{resource}.html
+                links.append(makeLink(link, FHIR_BASE + link + ".html"));
+            } else if ((link = isResourceField(fhirLink, count)) != null) {
+                // If a FHIR Resource field, link to fhir/R4/{resource}-definitions.html#{field}
+                name = StringUtils.substringBefore(link, ".");
+                links.append(makeLink(link, FHIR_BASE + name + "-definitions.html#" + link));
+            } else if (isMetaField(fhirLink)) {
+                links.append(makeLink(fhirLink, FHIR_BASE + "resource.html#Meta"));
+            } else if ((link = isFhirDataType(fhirLink, count)) != null) {
+                // If a FHIR Data Type, link to  http://hl7.org/fhir/R4/datatypes.html#{datatype}
+                links.append(makeLink(link, FHIR_BASE + "datatypes.html#" + link));
+            } else if ((link = isFhirDataTypeField(fhirLink, count)) != null) {
+                // If a FHIR Data Type field, link to fhir/R4/datatypes-definitions.html#{field}
+                links.append(makeLink(link, FHIR_BASE + "datatypes-definitions.html#" + link));
             } else if (fhirLink.matches("^p?[0-9\\-]*$")) {
                 links.append(fhirLink);
             } else {
                 // Otherwise, force what is likely to be broken link, making someone go through a fix.
-                links.append(makeLink(makeBrokenLink(fhirLink),"#broken"));
-                error("Link to FHIR %s not found.%n", fhirLink);
+                links.append(makeLink(makeBrokenLink(fhirLink, count),"#broken"));
+                error("Link to %s not found.%n", count+1, fhirLink);
             }
 
             // Append the delimiter character
@@ -537,25 +609,59 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         return links.toString();
     }
 
-    private static boolean isFhirDataTypeField(String fhirLink) {
-        return fhirLink.contains(".") && isFhirDataType(StringUtils.substringBefore(fhirLink,"."));
+    private String isFhirDataTypeField(String fhirLink, int count) {
+        String link = null;
+        if (fhirLink.contains(".") && (link = isFhirDataType(StringUtils.substringBefore(fhirLink,"."), 0)) != null) {
+            link += "." + StringUtils.substringAfter(fhirLink,".");
+            if (!link.equals(fhirLink)) {
+                warn("%s used where %s meant.%n", count, fhirLink, link);
+            }
+            return link;
+        }
+        return null;
     }
 
-    private static boolean isFhirDataType(String fhirLink) {
+    private String isFhirDataType(String fhirLink, int count) {
         Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap();
-        return m.get("FHIR Data Type").get(fhirLink) != null;
+        Triple<String, String, String> t = null;
+        if ((t = m.get("FHIR Data Type").get(fhirLink.toLowerCase())) != null) {
+            if (!t.getRight().equals(fhirLink) && count != 0) {
+                warn("%s used where %s meant.%n", count, fhirLink, t.getRight());
+            }
+            return t.getRight();
+        }
+        return null;
     }
 
-    private static boolean isResourceField(String fhirLink) {
-        return fhirLink.contains(".") && isResource(StringUtils.substringBefore(fhirLink,"."));
+    private String isResourceField(String fhirLink, int count) {
+        String link = null;
+        if (fhirLink.contains(".") && (link = isResource(StringUtils.substringBefore(fhirLink,"."), 0)) != null) {
+            link += "." + StringUtils.substringAfter(fhirLink, ".");
+            if (!link.equals(fhirLink) && count != 0) {
+                warn("%s used where %s meant.%n", count, fhirLink, link);
+            }
+            return link;
+        }
+        return null;
     }
 
-    private static boolean isResource(String fhirLink) {
+    private static boolean isMetaField(String fhirLink) {
+        return fhirLink.contains("meta.");
+    }
+
+    private String isResource(String fhirLink, int count) {
         Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap();
-        return m.get("FHIR Resource").get(fhirLink) != null;
+        Triple<String, String, String> t = null;
+        if ((t = m.get("FHIR Resource").get(fhirLink.toLowerCase())) != null) {
+            if (!t.getRight().equals(fhirLink)) {
+                warn("%s used where %s meant.%n", count, fhirLink, t.getRight());
+            }
+            return t.getRight();
+        }
+        return null;
     }
 
-    protected String makeSegmentLink(String segmentMap, String fhirCode) {
+    protected String makeSegmentLink(String segmentMap, String fhirCode, int count) {
         // if segmentMap is empty, return the value w/o a link.
         if (StringUtils.isBlank(segmentMap)) {
             return segmentMap;
@@ -573,15 +679,16 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             mySegmentMap = StringUtils.replaceChars(mySegmentMap,"[]{}()", "");
 
         // if in the form DTNAME-name1 convert to ConceptMap-datatype-DTNAME-to-name1.html
-        return makeLink("Segment", segmentMap, "ConceptMap-segment-" + cleanId(String.format("%s-to-%s", mySegmentMap, myFhirCode)) + ".html");
+        return makeLink("Segment", segmentMap, "ConceptMap-segment-" + cleanId(String.format("%s-to-%s", mySegmentMap, myFhirCode)) + ".html", count);
     }
 
-    protected String makeTableLink(String fhirVocab) {
-        tableLinks.put(fhirVocab, Pair.of(fhirVocab, null));
+    protected String makeTableLink(String fhirVocab, int count) {
+        if (!StringUtils.isBlank(fhirVocab))
+            tableLinks.put(fhirVocab, Triple.of(fhirVocab, count, null));
         return fhirVocab;
     }
 
-    protected String makeDataTypeLink(String v2DataType, String fhirDatatype) {
+    protected String makeDataTypeLink(String v2DataType, String fhirDatatype, int count) {
 
         // if v2DataTypeMap is empty, return the value w/o a link.
         if (StringUtils.isBlank(v2DataType)) {
@@ -592,23 +699,31 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
         // Replace all Reference(name) with name in fhirDataType
         // if in the form XX- convert to ConceptMap-datatype-XX-to-XX.html
-        String myFhirDataType = StringUtils.isBlank(fhirDatatype) ? myV2DataType : fhirDatatype.replaceAll("Reference\\(([^\\)]*)\\)","$1").trim();
+        String myFhirDataType = StringUtils.isBlank(fhirDatatype) ? myV2DataType : fhirDatatype.replaceAll("Reference[\\(\\{]([^\\)\\}]*)[\\)\\}]","$1").trim();
 
         // if in the form DTNAME(name1)-name2 or DTNAME[name1]-name2 convert to ConceptMap-datatype-DTNAMEname1-to-name2.html
         myV2DataType = StringUtils.replaceChars(myV2DataType,"[]{}()", "");
 
         // if in the form DTNAME-name1 convert to ConceptMap-datatype-DTNAME-to-name1.html
-        return makeLink("Data Type", v2DataType,
-            "ConceptMap-datatype-" + cleanId(String.format("%s-to-%s", myV2DataType, myFhirDataType)) + ".html");
+        String result = makeLink("Data Type", v2DataType,
+            "ConceptMap-datatype-" + cleanId(String.format("%s-to-%s", myV2DataType, myFhirDataType)) + ".html", count);
+
+//        if (myV2DataType.equals(myFhirDataType)) {
+//            System.err.printf("Got here from %s-to-%s%n", v2DataType, fhirDatatype);
+//        } else if ("0".equals(myFhirDataType)) {
+//            System.err.printf("Got here 0 from %s-to-%s%n", v2DataType, fhirDatatype);
+//        }
+
+        return result;
     }
 
 
-    private static String makeBrokenLink(String fhirLink) {
+    private static String makeBrokenLink(String fhirLink, int count) {
         return "<span style='font-weight: bold; color: red'>" + fhirLink + "</span>";
     }
 
-    private String makeLink(String type, String text, String link) {
-        Map<String, Pair<String, String>> target = null;
+    private String makeLink(String type, String text, String link, int count) {
+        Map<String, Triple<String, Integer, String>> target = null;
         switch (type) {
         case "Segment":
             target = segmentLinks;
@@ -621,7 +736,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             break;
         }
         if (target != null) {
-            target.put(link, Pair.of(text, getSourceFileName()));
+            target.put(link, Triple.of(text, count, getSourceFileName()));
         }
         return makeLink(text, link);
     }
@@ -634,22 +749,23 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         String names[] = { "FHIR", "Segments", "Tables", "Data Types" };
 
         Set<String> htmlFiles = new HashSet<>();
-        Collection<File> files = FileUtils.listFiles(new File("tank"), new String[] { "fsh" }, false);
+        Collection<File> files = FileUtils.listFiles(new File("fsh"), new String[] { "fsh" }, false);
         for (File file: files) {
             htmlFiles.add("ConceptMap-" + cleanId(StringUtils.substringBeforeLast(file.getName(), ".fsh")) + ".html");
         }
-        List<Map<String,Pair<String, String>>> maps = Arrays.asList(fhirLinks, segmentLinks, tableLinks, dataTypeLinks);
+        List<Map<String,Triple<String, Integer, String>>> maps = Arrays.asList(fhirLinks, segmentLinks, tableLinks, dataTypeLinks);
         boolean allValid = true;
         for (int i = 0; i < names.length; i++) {
             System.out.println(names[i]);
-            for (Map.Entry<String, Pair<String, String>> link: maps.get(i).entrySet()) {
+            for (Map.Entry<String, Triple<String, Integer, String>> link: maps.get(i).entrySet()) {
                 System.out.print(" ");
                 System.out.printf(" %s\t%s%n", link.getValue(), link.getKey());
 
                 // Verify the link target, and report if not valid
                 String page = link.getKey();
                 if (page.contains(".html") && !htmlFiles.contains(page)) {
-                    report(true, link.getValue().getRight(), "Link requested by %s to '%s' does not exist.%n", link.getValue().getLeft(), page);
+                    report(true, link.getValue().getRight(), link.getValue().getMiddle(), "Link requested from %s:%d to [%s](%s) does not exist.%n",
+                        link.getValue().getRight(), link.getValue().getMiddle(), link.getValue().getLeft(), page);
                     allValid = false;
                 }
             }
@@ -658,25 +774,25 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         return allValid;
     }
 
-    protected void error(String format, Object ... args) {
-        report(true, getSourceFileName(), format, args);
+    protected void error(String format, int line, Object ... args) {
+        report(true, getSourceFileName(), line, format, args);
     }
 
-    protected void warn(String format, Object ... args) {
-        report(false, getSourceFileName(), format, args);
+    protected void warn(String format, int line, Object ... args) {
+        report(false, getSourceFileName(), line, format, args);
     }
 
-    protected void info(String format, Object ... args) {
+    protected void info(String format, int line, Object ... args) {
         System.out.printf(source + ": " + format, args);
     }
 
-    protected static void report(boolean isError, String source, String format, Object ...args) {
+    protected static void report(boolean isError, String source, int line, String format, Object ...args) {
         if (isError) {
             errCount++;
         } else {
             warnCount++;
         }
-        System.err.printf((isError ? "E" + errCount : "W" + warnCount) + ") " + source + ": " + format, args);
+        System.err.printf((isError ? "E" + errCount : "W" + warnCount) + ") " + format + "\tat "+ StringUtils.substringBeforeLast(source, "\\").replace("\\", ".") +"(" + StringUtils.substringAfterLast(source, "\\") + ":" + line + ")\n", args);
     }
 
 

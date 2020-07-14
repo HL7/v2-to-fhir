@@ -1,0 +1,251 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "segment-pd1-to-patient",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 PD1 Segment to the FHIR Patient Resource.",
+  "url": "http://hl7.org/fhir/v2-tofhir/segment-pd1-to-patient",
+  "version": "1.0",
+  "name": "Segment_PD1_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-07-13",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "PD1",
+  "targetUri": "Patient",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "PD1-3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XON"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Primary Facility",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.generalPractitioner(Organization)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(Organization)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "Patient.generalPractitioner(Organization)",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XON[Organization]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PD1-4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XCN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Primary Care Provider Name & ID No.",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.generalPractitioner(PractitionerRole)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(PractitionerRole)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "Patient.generalPractitioner(PractitionerRole)",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XCN[PractitionerRole]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PD1-6",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Handicap",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.extension-patient-disability",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "Patient.extension-patient-disability",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PD1-14",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XON"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Place of Worship",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient.extension-patient-congregation",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Patient.extension-patient-congregation",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XON[string]"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

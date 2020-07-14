@@ -5,10 +5,16 @@ and using File|Download|Comma-separate values (.csv - current sheet) in Google S
 The easy way to download these is to use Convert
 
 Download the Code System, Data Type, Message, and Segment tabs of the master list into
-individual CSV files. Rename these files to .lst and put them in the mappings folder.
+individual CSV files in the mappings folder.  Then download all the links to CSV files
+using Convert as follows:
 
-java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Code System.lst"
-java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Data Type.lst"
-java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Message.lst"
-java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Segment.lst"
-java org.hl7.v2toFHIR.Convert mappings
+    java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Code System.csv"
+    java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Data Type.csv"
+    java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Message.csv"
+    java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Segment.csv"
+
+Note: To downlooad only those that are ready, change -d to -r in the above command.
+
+Next, generate the mappings using Convert as follows:
+
+    java org.hl7.v2toFHIR.Convert mappings

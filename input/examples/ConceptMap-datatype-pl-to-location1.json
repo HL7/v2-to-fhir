@@ -7,7 +7,7 @@
   "name": "Datatype_PL_Map",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-07-14",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,32 +22,131 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "PL",
   "targetUri": "Location[1]",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Datatype PL to Location[1].fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/17b4wqJOzGieNBSdHYZt3ymKucsRDd_h8leaiz_umG7E/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
         {
           "code": "PL.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Point of Care",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[1]",
-              "display": "Location[1]"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Resource"
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[1]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "HD[Location]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Point of Care",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[1].status",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "Location[1].status",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF PL.5 VALUED\\"
+                  "property": "data-type-map",
+                  "value": "CWE[code]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PL.5 VALUED"
                 }
               ]
             }
@@ -55,49 +154,109 @@
         },
         {
           "code": "PL.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Point of Care",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[1].mode",
-              "display": "= \"instance\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[1].mode",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"instance\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Point of Care",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[1].physicalType.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/location-physical-type\""
-            }
-          ]
-        },
-        {
-          "code": "PL.2",
-          "display": "Room",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Location[2]",
-              "display": "Location[2]"
-            }
-          ]
-        },
-        {
-          "code": "PL.2",
-          "display": "Room",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Location[2].status",
-              "display": "Location[2].status",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[1].physicalType.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
-                  "value": "# IF PL.5 VALUED\\"
+                  "value": "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
                 }
               ]
             }
@@ -105,71 +264,368 @@
         },
         {
           "code": "PL.2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Room",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Location[2]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Resource"
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[2]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "HD[Location]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PL.2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Room",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Location[2].status",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[2].status",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[code]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PL.5 VALUED"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PL.2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Room",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[2].mode",
-              "display": "= \"instance\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[2].mode",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"instance\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Room",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[2].physicalType.coding.code",
-              "display": "= \"ro\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[2].physicalType.coding.code",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"ro\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Room",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[2].physicalType.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/location-physical-type\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[2].physicalType.coding.system",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Room",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[2].partOf.reference",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference{Location)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "= Location[1].id"
             }
           ]
         },
         {
           "code": "PL.3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Bed",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[3]",
-              "display": "Location[3]"
-            }
-          ]
-        },
-        {
-          "code": "PL.3",
-          "display": "Bed",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Location[3].status",
-              "display": "Location[3].status",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Resource"
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[3]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF PL.5 VALUED\\"
+                  "property": "data-type-map",
+                  "value": "HD[Location]"
                 }
               ]
             }
@@ -177,126 +633,541 @@
         },
         {
           "code": "PL.3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Bed",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Location[3].status",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[3].status",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[code]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PL.5 VALUED"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PL.3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Bed",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[3].mode",
-              "display": "= \"instance\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[3].mode",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"instance\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Bed",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[3].physicalType.coding.code",
-              "display": "= \"bd\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[3].physicalType.coding.code",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"bd\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Bed",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[3].physicalType.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/location-physical-type\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[3].physicalType.coding.system",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Bed",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[3].partOf.reference",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference{Location)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "= Location[2].id"
             }
           ]
         },
         {
           "code": "PL.4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Facility",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[4]",
-              "display": "Location[4]"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Resource"
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[4]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "HD[Location]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Facility",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[4].status",
-              "display": "Location[4].status"
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[4].status",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[code]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Facility",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[4].mode",
-              "display": "= \"instance\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[4].mode",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"instance\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Facility",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[4].physicalType.coding.code",
-              "display": "= \"si\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[4].physicalType.coding.code",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"si\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Facility",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[4].physicalType.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/location-physical-type\""
-            }
-          ]
-        },
-        {
-          "code": "PL.7",
-          "display": "Building",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Location[5]",
-              "display": "Location[5]"
-            }
-          ]
-        },
-        {
-          "code": "PL.7",
-          "display": "Building",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Location[5].status",
-              "display": "Location[5].status",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[4].physicalType.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
-                  "value": "# IF PL.5 VALUED\\"
+                  "value": "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
                 }
               ]
             }
@@ -304,71 +1175,368 @@
         },
         {
           "code": "PL.7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Building",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Location[5]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Resource"
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[5]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "HD[Location]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PL.7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Building",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Location[5].status",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[5].status",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[code]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PL.5 VALUED"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PL.7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Building",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[5].mode",
-              "display": "= \"instance\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[5].mode",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"instance\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Building",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[5].physicalType.coding.code",
-              "display": "= \"bu\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[5].physicalType.coding.code",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"bu\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Building",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[5].physicalType.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/location-physical-type\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[5].physicalType.coding.system",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Building",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[5].partOf.reference",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference{Location)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "= Location[4].id"
             }
           ]
         },
         {
           "code": "PL.8",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Floor",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[6]",
-              "display": "Location[6]"
-            }
-          ]
-        },
-        {
-          "code": "PL.8",
-          "display": "Floor",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Location[6].status",
-              "display": "Location[6].status",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Resource"
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[6]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF PL.5 VALUED\\"
+                  "property": "data-type-map",
+                  "value": "HD[Location]"
                 }
               ]
             }
@@ -376,44 +1544,275 @@
         },
         {
           "code": "PL.8",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Floor",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Location[6].status",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[6].status",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[code]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PL.5 VALUED"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PL.8",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Floor",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[6].mode",
-              "display": "= \"instance\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[6].mode",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"instance\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.8",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Floor",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[6].physicalType.coding.code",
-              "display": "= \"lvl\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[6].physicalType.coding.code",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"lvl\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.8",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Floor",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[6].physicalType.coding.system",
-              "display": "= \"http://terminology.hl7.org/CodeSystem/location-physical-type\""
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "Location[6].physicalType.coding.system",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PL.8",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Floor",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "Location[6].partOf.reference",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference{Location)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
               "display": "= Location[5].id"
             }
           ]
