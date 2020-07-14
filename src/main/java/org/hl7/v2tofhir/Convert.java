@@ -318,7 +318,7 @@ public class Convert {
             return FHIR_PREFIX + "/datatypes.html#" + targetName;
         }
         if (targetName.contains("V2")) {
-            return FHIR_PREFIX + "/" + targetName.replace("/V2/", "/v2/").replace(" ", "/") + "/index.html";
+            return FHIR_PREFIX + "/" + targetName.replace(" ", "/").replace("/V2/", "/v2/") + "/index.html";
         }
         if (targetName.contains("V3")) {
             return FHIR_PREFIX + targetName.replace("V3", "/v3/").replace(" ", "") + "/cs.html";
