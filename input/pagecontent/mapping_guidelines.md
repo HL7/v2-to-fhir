@@ -76,7 +76,12 @@ Examples:
         IF X LST.COUNT LESS THAN
         IF X LST.COUNT GREATER THAN OR EQUALS
         IF X LST.COUNT LESS THAN OR EQUALS
-
+        IF X LENGTH ***LENGTH is the physical length of the value
+        IF X LENGTH NOT EQUALS
+        IF X LENGTH GREATER THAN
+        IF X LENGTH LESS THAN
+        IF X LENGTH GREATER THAN OR EQUALS
+        IF X LENGTH LESS THAN OR EQUALS
 ```
 
     * The [FHIRpath syntax](https://www.hl7.org/fhir/fhirpath.html) (referenced as Computable FHIRpath)
