@@ -128,7 +128,7 @@ There are situations where the field/attribute cardinalities between v2 and FHIR
 
 Note generally that extensions will be pursued for those situations where we know that actual implementations would run into this challenge, but will not pursue those until somebody indicates they need that.
 
-Data Type mapping spreadsheets are only provided for complex v2 data types, not primitive v2 data types.  In the case of v2 date and time data types (DTM, TM, ) the mapping is more complex as the format in v2 is not the same as in FHIR.  One must use ISO 8601 to understand the variances and may use platform specific reformatting utilities/services to reformat the values.  This would cover DTM=>dateTime, DTM=>date, DTM=>instant, DT=>dateTime, DT=>date, DT=>instant, and TM=>time
+Data Type mapping spreadsheets are only provided for complex v2 data types, not primitive v2 data types.  In the case of v2 date and time data types (DTM, TM, ) the mapping is more complex as the format in v2 is not the same as in FHIR.  One must use ISO 8601 (https://www.iso.org/iso-8601-date-and-time-format.html) to understand the variances and may use platform specific reformatting utilities/services to reformat the values.  This would cover DTM=>dateTime, DTM=>date, DTM=>instant, DT=>dateTime, DT=>date, DT=>instant, and TM=>time
 
 #### Data Type Spreadsheet
 
