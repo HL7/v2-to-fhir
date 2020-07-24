@@ -1,10 +1,6 @@
 <p id="publish-box">
 <b>Review Note:</b>
-<br>The purpose of this Peer Review is primarily to solicit feedback on the structure, navigation,
-and general content topics of the v2-to-FHIR Guide.  Specific questions are provided [here](questions.html)
-in the <b>Impact/Scope</b> and <b>Infrastructure</b> sections.  Feedback on the accuracy and
-completeness of the mappings included is secondary, that will be the focus of the Ballot cycles,
-but any feedback on an of the mappings is welcome, including the question in the <b>Mapping Content</b> on our questions page.
+<br>The focus of this first HL7 v2-to-FHIR STU Ballot is on an initial set of messages, segments, data types, and vocabulary to establish the foundation on which to expand and cover the full range of HL7 v2 messages in actual use.  The purpose is primarily to solicit feedback on the accuracy of the proposed mappings.  Secondary is to solicit feedback on structure and navigation.  Suggestions on additional messages, segments, data types, and vocabulary to prioritize supporting real-world use are welcome as well and should be marked as A-S in the ballot spreadsheet.  Lastly, specific questions are provided [here](questions.html).
 <br>
 </p>
 The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages
