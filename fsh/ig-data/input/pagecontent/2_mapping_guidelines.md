@@ -8,6 +8,17 @@ The following provides a review for each of the types of spreadsheets the mappin
 Mapping is authored using CSV files.  The format of the mapping files varies depending on whether the V2 artifact
 being mapped is a Message, Segment, Data Type, or Table.
 
+The spreadsheet title has a defined format to enable conversion from .csv into FHIR ConceptMap:
+
+"HL7 {Message|Segment|Data Type|Code System} "- FHIR" {R4|R5}":" {v2 Message Type|v2 Segment|v2 Data Type|v2 Table}"["{FHIR Resource|FHIR Data Type|FHIR Metadata Data Type|FHIR Vocabulary}["-"QualifierName]"]"
+
+Examples:
+
+* HL7 Message - FHIR R4: ADT_A01
+* HL7 Segment - FHIR R4: OBR[ServiceRequest]
+* HL7 Segment - FHIR R4: OBX[Observation-Component]
+* HL7 Data Type - FHIR R4: CQ[ServiceRequest.duration]
+
 <span id="general-format"> </span>
 #### General Format/Approach
 * Regardless of the mapping spreadsheet, the spreadsheet is organized into three sections:
