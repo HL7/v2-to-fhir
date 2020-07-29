@@ -7,6 +7,9 @@ implementation considerations may emerge as transforms are developed, tested and
 In older versions, e.g., v2.3.1 the message structure in MSH-9 may have been omitted as the standard did not always include that in the message structure definition.  For example, the message definition for RDE^O01 in v2.3.1 does not include the message structure, thus implementers omitted that, even though in Table 0354 there was a structure defined RDE_O01.  When MSH-9.3 is empty, we suggest to derive the message structure to get to the proper map by using the message code and trigger event. I.e., when message code and trigger event is ABC^Nnn then use ABC_Nnn.  For RDE^O01 that would be RDE_O01.
 We will be listing any known exceptions to that rule here as we find them.
 
+### Variations in Cardinality
+In several maps, the v2 field or element has a larger maximum cardinality than the mapped FHIR attributes. That is, some v2 elements are allowed to repeat while the cognate FHIR element is not allowed to repeat. We still provide these mappings, but if your implementation allows these v2 elements to repeat, data may be lost. Implementers should evaluate the likelihood of this happening. The project team welcomes examples where this occurs in existing implementations so that we can discuss possible solutions.
+
 ### Resource.id Generation and References
 When the v2 message is mapped into a FHIR Bundle, resources need to have a resource.id.  At the time of the mapping the actual
 Resource.id may not be known if the intent is to update or reference an existing resource.  The following guidance should be followed:
