@@ -8,7 +8,7 @@ Title: "Message OML_O21 to Bundle Map"
 * name = "Message_OML_O21_Map"
 * status = #active
 * experimental = true
-* date = "2020-07-14"
+* date = "2020-07-29"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
