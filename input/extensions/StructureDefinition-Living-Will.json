@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Living-Will",
+  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/Living-Will",
+  "version": "0.1.0",
+  "name": "LivingWill",
+  "status": "active",
+  "description": "A code indicating whether or not the patient has a living will and, if so, whether a copy of the living will is on file at the healthcare facility.\nIf the patient does not have a living will, the value of this field indicates whether the patient was provided information on living wills.\nThis extension corresponds to PD1-7 of the v2 PD1 segment.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Patient"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/Living-Will"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.valueCodeableConcept",
+        "path": "Extension.valueCodeableConcept",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  }
+}

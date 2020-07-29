@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Install-Date",
+  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/Install-Date",
+  "version": "0.1.0",
+  "name": "InstallDate",
+  "status": "active",
+  "description": "The date the submitting software was installed at the sending site.\nThis extension corresponds to SFT-6 of the v2 SFT segment.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MessageHeader.source"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/Install-Date"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.valueDateTime",
+        "path": "Extension.valueDateTime",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  }
+}

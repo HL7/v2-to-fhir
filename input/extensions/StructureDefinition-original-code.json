@@ -1,0 +1,76 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "original-code",
+  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/original-code",
+  "version": "0.1.0",
+  "name": "OriginalCode",
+  "status": "active",
+  "description": "The original code populating the CWE data type.\nRetention of the original code prevents the loss of information that may occur during translation.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    },
+    {
+      "type": "element",
+      "expression": "Coding"
+    },
+    {
+      "type": "element",
+      "expression": "code"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/original-code"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.valueCoding",
+        "path": "Extension.valueCoding",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  }
+}

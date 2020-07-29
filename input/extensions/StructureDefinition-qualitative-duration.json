@@ -1,0 +1,76 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "qualitative-duration",
+  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/qualitative-duration",
+  "version": "0.1.0",
+  "name": "QualitativeDuration",
+  "status": "active",
+  "description": "Code indicating the qualitative length of time (e.g., until the next assessment, four days,\nuntil discharge, etc.) for participation  of the RelatedPerson in their role.\nThis extension corresponds to PRT-13 of the v2 PRT segment.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "RelatedPerson"
+    },
+    {
+      "type": "element",
+      "expression": "PractitionerRole"
+    },
+    {
+      "type": "element",
+      "expression": "Encounter.participant"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/qualitative-duration"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.valueCodeableConcept",
+        "path": "Extension.valueCodeableConcept",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  }
+}

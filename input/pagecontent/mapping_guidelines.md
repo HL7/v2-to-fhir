@@ -23,6 +23,7 @@ The spreadsheet title has a defined format to enable conversion from .csv into F
 "HL7 {Message|Segment|Data Type|Code System} "- FHIR" {R4|R5}":" {v2 Message Type|v2 Segment|v2 Data Type|v2 Table}"["{FHIR Resource|FHIR Data Type|FHIR Metadata Data Type|FHIR Vocabulary}["-"QualifierName]"]"
 
 Examples:
+
 * HL7 Message - FHIR R4: ADT_A01
 * HL7 Segment - FHIR R4: OBR[ServiceRequest]
 * HL7 Segment - FHIR R4: OBX[Observation-Component]
@@ -82,13 +83,15 @@ Examples:
         IF X LENGTH LESS THAN
         IF X LENGTH GREATER THAN OR EQUALS
         IF X LENGTH LESS THAN OR EQUALS
+
+
 ```
 
     * The [FHIRpath syntax](https://www.hl7.org/fhir/fhirpath.html) (referenced as Computable FHIRpath)
   * If not computable or in addition to the computable condition further non-computable conditions must be considered as well (referenced as Narrative).
 
 * [n] Notation
-  * Multiple v2 components may need to update the same instance of a FHIR element, or should yield a new instance of the same FHIR element.  To distinguish whether the mappings are to the same or different FHIR element instance each FHIR element at the appropriate place in the path will use the [n] notation.  Those FHIR elements with the same value in the same place in the path should apply the mapping to the same instance of that element.
+  * Multiple v2 components within the same mapping spreadsheet may need to update the same instance of a FHIR element, or should yield a new instance of the same FHIR element.  To distinguish whether the mappings are to the same or different FHIR element instance each FHIR element at the appropriate place in the path will use the [n] notation.  Those FHIR elements with the same value in the same place in the path should apply the mapping to the same instance of that element.
   * Example: PID-13 Phone Number - Home and PID-14 Phone Number - Business are both mapped to Patient.telecom.  However, they need to yield different instances.  Thus, PID-13 maps to Patient.telecom[1] and PID-14 to Patient.telecom[2].
   * Note that this does not mean that there is a first and second slot where one is kept empty if not available in v2.  Rather it just means they are to be different if both present.
   * If the mapping needs to yield multiple instances and the v2 value needs to be applied to multiple FHIR element instances, [each] is used.
@@ -97,6 +100,7 @@ Examples:
   * Example: [1].Contactpoint.value and [2].ContactPoint.value mapped to from the v2 XTN data type would reflect the first instance of the attribute repetition is actually used, e.g., Patient.telecom that can repeat and is mapped to from PID-13 and PID-14 which have the v2 XTN data type.
 
 * Each mapping row includes comments to document any considerations for the mapping that can aid in further refining the mappings for local use.
+* Note that a FHIR attribute may be mapped to by both a segment field or a field component from another field in that segment, e.g., ROL-1 Role Instance ID and ROL-4 Role Person.  That involves two separate spreadsheets for different compoents (segment spreadsheet and data type component) and therefore should be mapped to different instance of a FHIR attribute.  In this example RelatedPerson.identifier.
 
 #### Message Spreadsheet
 
@@ -133,7 +137,7 @@ There are situations where the field/attribute cardinalities between v2 and FHIR
 
 Note generally that extensions will be pursued for those situations where we know that actual implementations would run into this challenge, but will not pursue those until somebody indicates they need that.
 
-Data Type mapping spreadsheets are only provided for complex v2 data types, not primitive v2 data types.  In the case of v2 date and time data types (DTM, TM, ) the mapping is more complex as the format in v2 is not the same as in FHIR.  One must use ISO 8601 (https://www.iso.org/iso-8601-date-and-time-format.html) to understand the variances and may use platform specific reformatting utilities/services to reformat the values.  This would cover DTM=>dateTime, DTM=>date, DTM=>instant, DT=>dateTime, DT=>date, DT=>instant, and TM=>time
+Data Type mapping spreadsheets are only provided for complex v2 data types, not primitive v2 data types. In the case of v2 date and time data types (DTM, TM, ) the mapping is more complex as the format in v2 is not the same as in FHIR. One must use ISO 8601 (https://www.iso.org/iso-8601-date-and-time-format.html) to understand the variances and may use platform specific reformatting utilities/services to reformat the values. This would cover DTM=>dateTime, DTM=>date, DTM=>instant, DT=>dateTime, DT=>date, DT=>instant, TS=>dateTime, and TM=>time.
 
 #### Data Type Spreadsheet
 
