@@ -46,7 +46,7 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/Accept-Acknowledgement-Type"
+          "reference": "StructureDefinition/accept-acknowledgement-type"
         },
         "name": "AcceptAcknowledgementType",
         "description": "The Accept Acknowledgement Type of the v2 message that was transformed into the FHIR message Bundle. This extension is\nonly relevant when performing a v2 to FHIR transformation. This extension corresponds to MSH-15 of the original message.",
@@ -54,7 +54,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Access-Restriction-Range"
+          "reference": "StructureDefinition/access-restriction-range"
         },
         "name": "AccessRestrictionRange",
         "description": "The Access Restriction Date Range. This extension corresponds to ARV-6 of the original message.",
@@ -62,7 +62,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Admission-Level-Of-Care"
+          "reference": "StructureDefinition/admission-level-of-care"
         },
         "name": "AdmissionLevelOfCare",
         "description": "Code indicating the acuity level assigned to the patient at the time of admission.\nThis extension corresponds to PV2-40 of the v2 PV2 segment.",
@@ -70,7 +70,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Analysis-Date-Time"
+          "reference": "StructureDefinition/analysis-date-time"
         },
         "name": "AnalysisDateTime",
         "description": "The time stamp associated with generation of the analytical result by the instrument.\nThis extension corresponds to OBX-19 of the v2 OBX segment.",
@@ -78,7 +78,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Application-Acknowledgement-Type"
+          "reference": "StructureDefinition/application-acknowledgement-type"
         },
         "name": "ApplicationAcknowledgementType",
         "description": "The Application Acknowledgement Type of the v2 message that was transformed into the FHIR message Bundle. This extension is only relevant when performing a v2 to FHIR transformation.\nThis extension corresponds to MSH-15 of the original message.",
@@ -86,7 +86,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Assigning-Authority"
+          "reference": "StructureDefinition/assigning-authority"
         },
         "name": "AssigningAuthority",
         "description": "Extensions supporting the coding of HD type stored in an Identifier\nThis extension corresponds to components of the v2 HD data type.",
@@ -94,7 +94,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Binary-Identifier"
+          "reference": "StructureDefinition/binary-identifier"
         },
         "name": "BinaryIdentifier",
         "description": "Identifier issued by a vendor for the unique software version instance of the system originating the content of the transaction.\nThis extension corresponds to SFT-4 of the v2 SFT segment.",
@@ -102,21 +102,21 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Callback-Number"
+          "reference": "StructureDefinition/callback-number"
         },
         "name": "CallbackNumber",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Called-By"
+          "reference": "StructureDefinition/called-by"
         },
         "name": "CalledBy",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Check-Digit-Scheme"
+          "reference": "StructureDefinition/check-digit-scheme"
         },
         "name": "CheckDigitScheme",
         "description": "The check digit scheme",
@@ -124,14 +124,14 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Codeable"
+          "reference": "StructureDefinition/codeable"
         },
         "name": "Codeable",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Comment"
+          "reference": "StructureDefinition/comment"
         },
         "name": "Comment",
         "description": "Qualifying information regarding the identifier.\nThis may include information about locations where the identifier is valid.\nThis extension corresponds to PLN.3 of the v2 PLN data type.",
@@ -139,7 +139,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Condition"
+          "reference": "StructureDefinition/condition"
         },
         "name": "Condition",
         "description": "TODO",
@@ -147,7 +147,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Description"
+          "reference": "StructureDefinition/description"
         },
         "name": "Description",
         "description": "Software identification information supplied by a software vendor for the system originating the content of the transaction.\nThis extension corresponds to SFT-5 of the v2 SFT segment.",
@@ -155,7 +155,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Duration"
+          "reference": "StructureDefinition/duration"
         },
         "name": "Duration",
         "exampleBoolean": false
@@ -178,7 +178,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Financial-Class"
+          "reference": "StructureDefinition/financial-class"
         },
         "name": "FinancialClass",
         "description": "The financial class(es) assigned to the patient for the purpose of identifying sources of reimbursement for the encounter.\nThis extension corresponds to PV1-20 of the v2 PV1 segment.",
@@ -186,14 +186,14 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Fingerprint"
+          "reference": "StructureDefinition/fingerprint"
         },
         "name": "Fingerprint",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Identity-Unknown"
+          "reference": "StructureDefinition/identity-unknown"
         },
         "name": "IdentityUnknown",
         "description": "Indicator of whether or not the patient's identity is known.\nThis extension corresponds to PID-31 of the v2 PID segment.",
@@ -201,7 +201,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Install-Date"
+          "reference": "StructureDefinition/install-date"
         },
         "name": "InstallDate",
         "description": "The date the submitting software was installed at the sending site.\nThis extension corresponds to SFT-6 of the v2 SFT segment.",
@@ -209,14 +209,14 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Job-Status"
+          "reference": "StructureDefinition/job-status"
         },
         "name": "JobStatus",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Last-Updated-Facility"
+          "reference": "StructureDefinition/last-updated-facility"
         },
         "name": "LastUpdatedFacility",
         "description": "Reference which identifies the facility of the last update to a patient's identifying and demographic data.\nThis extension corresponds to PID-34 of the v2 PID segment",
@@ -224,7 +224,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Living-Will"
+          "reference": "StructureDefinition/living-will"
         },
         "name": "LivingWill",
         "description": "A code indicating whether or not the patient has a living will and, if so, whether a copy of the living will is on file at the healthcare facility.\nIf the patient does not have a living will, the value of this field indicates whether the patient was provided information on living wills.\nThis extension corresponds to PD1-7 of the v2 PD1 segment.",
@@ -232,7 +232,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Location"
+          "reference": "StructureDefinition/location"
         },
         "name": "Location",
         "description": "Location of the RelatedPerson acting in their role.\nThis extension corresponds to PRT-9 of the v2 PRT segment.",
@@ -248,7 +248,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Name-Type"
+          "reference": "StructureDefinition/name-type"
         },
         "name": "NameType",
         "description": "A code that represents the type of name of the Location i.e., XON.2 of the v2 XON data type.",
@@ -256,7 +256,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Nature-Of-Abnormal-Test"
+          "reference": "StructureDefinition/nature-of-abnormal-test"
         },
         "name": "NatureOfAbnormalTest",
         "description": "The nature of the abnormal test. For example, normal range values may be based on age, sex and/or race.\nThis extension corresponds to OBX-10 of the v2 OBX segment.",
@@ -264,7 +264,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Note-Type"
+          "reference": "StructureDefinition/note-type"
         },
         "name": "NoteType",
         "description": "The type of comment text in the Annotation (e.g. Patient Instructions or General Remark).\nThis extension corresponds to NTE-4 of the v2 NTE segment.",
@@ -301,7 +301,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Preferred-Method-Of-Contact"
+          "reference": "StructureDefinition/preferred-method-of-contact"
         },
         "name": "PreferredMethodOfContact",
         "description": "Code indicating the preferred method to use when communicating with the person.\nThis extension corresponds to PRT-23 of the v2 PRT segment.",
@@ -309,21 +309,21 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Producer-Identifier"
+          "reference": "StructureDefinition/producer-identifier"
         },
         "name": "ProducerIdentifier",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Provider-Type"
+          "reference": "StructureDefinition/provider-type"
         },
         "name": "ProviderType",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Publicity-Code"
+          "reference": "StructureDefinition/publicity-code"
         },
         "name": "PublicityCode",
         "description": "Code indicating the level of publicity allowed for the encounter.\nThis extension corresponds to PV2-21 of the v2 PV2 segment.",
@@ -369,7 +369,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Site-Modifier"
+          "reference": "StructureDefinition/site-modifier"
         },
         "name": "SiteModifier",
         "description": "Modifying or qualifying description about the specimen source site.\nThis extension corresponds to SPM-9 of the v2 SPM segment.",
@@ -377,7 +377,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Student-Status"
+          "reference": "StructureDefinition/student-status"
         },
         "name": "StudentStatus",
         "description": "A code indicating if the patient is currently a student or not, and whether the patient is a full_Time or a part_Time student.\nThis extension corresponds to PD1-5 of the v2 PD1 segment.",
@@ -385,7 +385,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Sub-Type"
+          "reference": "StructureDefinition/sub-type"
         },
         "name": "SubType",
         "description": "The sub type was necessary in v2 to distinguish purpose of the observation when it appears in a\nmessage in the same group (e.g., answers to ask at order entry questions with actual results ).\nWithin FHIR flagging the observation may not be necessary, but that is not yet clear.  Until then,\nwe will keep the thought of needing an extension, but not create it yet.",
@@ -401,7 +401,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Timestamp"
+          "reference": "StructureDefinition/timestamp"
         },
         "name": "Timestamp",
         "description": "The date/time that the sending system created the v2 message that was transformed into the FHIR message Bundle. This extension is only relevant when performing a v2 to FHIR transformation.\nThis extension corresponds to MSH-7 of the original message.",
@@ -409,7 +409,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Total-Adjustment"
+          "reference": "StructureDefinition/total-adjustment"
         },
         "name": "TotalAdjustment",
         "description": "The total adjustments for the encounter.\nThis extension corresponds to PV1-48 of the v2 PV1 segment.",
@@ -417,7 +417,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Total-Charges"
+          "reference": "StructureDefinition/total-charges"
         },
         "name": "TotalCharges",
         "description": "The total charges  for the encounter.\nThis extension corresponds to PV1-47 of the v2 PV1 segment.",
@@ -425,7 +425,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Total-Payments"
+          "reference": "StructureDefinition/total-payments"
         },
         "name": "TotalPayments",
         "description": "The total payments  for the encounter.\nThis extension corresponds to PV1-49 of the v2 PV1 segment.",
@@ -433,7 +433,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Type"
+          "reference": "StructureDefinition/type"
         },
         "name": "Type",
         "description": "The type was necessary in v2 to distinguish purpose of the observation when it appears in a message in the same group (e.g., answers to ask at order entry questions with actual results ).  Within FHIR flagging the observation may not be necessary, but that is not yet clear.  Until then, we will keep the thought of needing an extension, but not create it yet.",
@@ -449,7 +449,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/V2-Relationship"
+          "reference": "StructureDefinition/v2-relationship"
         },
         "name": "V2Relationship",
         "description": "Patient.contact.relationship uses the same value set as NK1-7 (contact role). There doesn't seem to be a standard element for the NK1-3 relationship in Patient.contact. An extension will likely be needed",
@@ -481,11 +481,466 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/Visit-User-Code"
+          "reference": "StructureDefinition/visit-user-code"
         },
         "name": "VisitUserCode",
         "description": "Categorization of a patient's encounter.\nThis extension corresponds to PV2-7 of the v2 PV2 segment.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cmspecimensource-to-specimen"
+        },
+        "name": "Datatype CM to Specimen Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cnecodeableconcept-to-codeableconcept"
+        },
+        "name": "Datatype CNE to CodeableConcept Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cnn-to-practitioner"
+        },
+        "name": "Datatype CNN to Practitioner Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cqquantity-to-quantity"
+        },
+        "name": "Datatype CQ to Quantity Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cqservicerequestduration-to-timing"
+        },
+        "name": "Datatype CQ to Timing Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cwecode-to-code"
+        },
+        "name": "Datatype CWE to code Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cwecodeableconcept-to-codeableconcept"
+        },
+        "name": "Datatype CWE to CodeableConcept Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cwecoding-to-coding"
+        },
+        "name": "Datatype CWE to Coding Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cweduration-to-duration"
+        },
+        "name": "Datatype CWE to duration Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cweorganization-to-organization"
+        },
+        "name": "Datatype CWE to Organization Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cwequantity-to-quantity"
+        },
+        "name": "Datatype CWE to Quantity Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cwestring-to-string"
+        },
+        "name": "Datatype CWE to string Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cwetiming.duration-to-timing"
+        },
+        "name": "Datatype CWE to Timing Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cweuri-to-uri"
+        },
+        "name": "Datatype CWE to uri Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cx-to-identifier"
+        },
+        "name": "Datatype CX to Identifier Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-dln-to-identifier"
+        },
+        "name": "Datatype DLN to Identifier Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-dr-to-period"
+        },
+        "name": "Datatype DR to Period Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-drdatetime-to-datetime"
+        },
+        "name": "Datatype DR to dateTime Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-dt-to-datetime"
+        },
+        "name": "Datatype DT to dateTime Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-dtm-to-datetime"
+        },
+        "name": "Datatype DTM to dateTime Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-dtminstant-to-instant"
+        },
+        "name": "Datatype DTM to instant Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-edattachment-to-attachment"
+        },
+        "name": "Datatype ED to Attachment Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-eicoding-to-coding"
+        },
+        "name": "Datatype EI to Coding Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-eiidentifier-to-identifier"
+        },
+        "name": "Datatype EI to Identifier Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-eipidentifier-to-identifier1"
+        },
+        "name": "Datatype EIP to Identifier[1] Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-eiprocedure-to-procedure"
+        },
+        "name": "Datatype EI to Procedure Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-eiudicarrierdi-to-device"
+        },
+        "name": "Datatype EI to Device Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-erl-to-erl"
+        },
+        "name": "Datatype ERL to ERL Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-fn-to-humanname"
+        },
+        "name": "Datatype FN to HumanName Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-hdassigningauthority-to-hdassigningauthority"
+        },
+        "name": "Datatype HD to HD[AssigningAuthority] Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-hdlocation-to-location"
+        },
+        "name": "Datatype HD to Location Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-hdmsh-4-to-messageheader"
+        },
+        "name": "Datatype HD to MessageHeader Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-hdorganization-to-organization"
+        },
+        "name": "Datatype HD to Organization Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-idcodeableconcept-to-codeableconcept"
+        },
+        "name": "Datatype ID to CodeableConcept Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-iscodeableconcept-to-codeableconcept"
+        },
+        "name": "Datatype IS to CodeableConcept Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-msg-to-coding"
+        },
+        "name": "Datatype MSG to coding Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-na-to-na"
+        },
+        "name": "Datatype NA to NA Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-ndlpractitionerrole-to-practitionerrole"
+        },
+        "name": "Datatype NDL to PractitionerRole Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-nrrange-to-range"
+        },
+        "name": "Datatype NR to Range Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-pl-to-location1"
+        },
+        "name": "Datatype PL to Location[1] Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-pln-to-identifier"
+        },
+        "name": "Datatype PLN to Identifier Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-pt-to-messageheader"
+        },
+        "name": "Datatype PT to MessageHeader Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-ptmeta-to-tag1"
+        },
+        "name": "Datatype PT to tag[1] Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-ri-1timing-to-code"
+        },
+        "name": "Datatype RI-1 to code Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-rpattachment-to-url"
+        },
+        "name": "Datatype RP to url Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-sad-to-address"
+        },
+        "name": "Datatype SAD to Address Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-sadaddressline-to-line1"
+        },
+        "name": "Datatype SAD to line[1] Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-snquantity-to-comparator"
+        },
+        "name": "Datatype SN to comparator Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-snrange-to-low"
+        },
+        "name": "Datatype SN to low Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-snratio-to-numerator"
+        },
+        "name": "Datatype SN to numerator Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-stidentifier-to-identifier"
+        },
+        "name": "Datatype ST to Identifier Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-tm-to-time"
+        },
+        "name": "Datatype TM to time Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-tqmedicationrequest-to-medicationrequest"
+        },
+        "name": "Datatype TQ to MedicationRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-tqservicerequest-to-servicerequest"
+        },
+        "name": "Datatype TQ to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-tqtask-to-task"
+        },
+        "name": "Datatype TQ to Task Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-ts-to-datetime"
+        },
+        "name": "Datatype TS to dateTime Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-xad-to-line1-3"
+        },
+        "name": "Datatype XAD to line[1-3] Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-xcnpractitioner-to-practitioner"
+        },
+        "name": "Datatype XCN to Practitioner Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-xcnpractitionerrole-to-practitionerrole"
+        },
+        "name": "Datatype XCN to PractitionerRole Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-xcnrelatedperson-to-relatedperson"
+        },
+        "name": "Datatype XCN to RelatedPerson Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-xonlocation-to-location"
+        },
+        "name": "Datatype XON to Location Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-xonorganization-to-organization"
+        },
+        "name": "Datatype XON to Organization Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-xonstring-to-string"
+        },
+        "name": "Datatype XON to string Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-xpn-to-humanname"
+        },
+        "name": "Datatype XPN to HumanName Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-xtn-to-contactpoint"
+        },
+        "name": "Datatype XTN to ContactPoint Map",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -506,6 +961,13 @@
           "reference": "ConceptMap/message-adt-a08-to-bundle"
         },
         "name": "Message ADT_A08 to Bundle Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/message-hdmessageheader-to-name"
+        },
+        "name": "Message HD to name Map",
         "exampleBoolean": true
       },
       {
@@ -541,6 +1003,426 @@
           "reference": "ConceptMap/segment-al1allergeryintolerance-to-allergyintolerance"
         },
         "name": "Segment AL1 to AllergyIntolerance Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-arv-to-meta"
+        },
+        "name": "Segment ARV to meta Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-dg1condition-to-condition"
+        },
+        "name": "Segment DG1 to Condition Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-dg1encounter-to-diagnosis"
+        },
+        "name": "Segment DG1 to diagnosis Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-dg1episodeofcare-to-episodeofcare"
+        },
+        "name": "Segment DG1 to EpisodeOfCare Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-iam-to-allergyintolerance"
+        },
+        "name": "Segment IAM to AllergyIntolerance Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-mshbundle-to-bundle"
+        },
+        "name": "Segment MSH to Bundle Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-mshgeneral-to-messageheader"
+        },
+        "name": "Segment MSH to MessageHeader Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-mshprovenance-originator-to-provenance"
+        },
+        "name": "Segment MSH to Provenance Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-nk1patient.contact-to-patient"
+        },
+        "name": "Segment NK1 to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-nk1relatedperson-to-relatedperson"
+        },
+        "name": "Segment NK1 to RelatedPerson Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-nteannotation-to-annotation"
+        },
+        "name": "Segment NTE to Annotation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-obrdiagnosticreport-to-diagnosticreport"
+        },
+        "name": "Segment OBR to DiagnosticReport Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-obrservicerequest-to-servicerequest"
+        },
+        "name": "Segment OBR to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-obxobservationcomponent-to-observation"
+        },
+        "name": "Segment OBX to Observation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-orcdiagnosticreport-to-diagnosticreport"
+        },
+        "name": "Segment ORC to DiagnosticReport Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-orcimmunization-to-immunization"
+        },
+        "name": "Segment ORC to Immunization Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-orcprovenance-to-provenance"
+        },
+        "name": "Segment ORC to Provenance Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-orcservicerequest-to-servicerequest"
+        },
+        "name": "Segment ORC to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pd1-to-patient"
+        },
+        "name": "Segment PD1 to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pid-to-patient"
+        },
+        "name": "Segment PID to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pr1-to-procedure"
+        },
+        "name": "Segment PR1 to Procedure Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-prtobx-device-to-operation"
+        },
+        "name": "Segment PRT to Operation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pv1-to-encounter"
+        },
+        "name": "Segment PV1 to Encounter Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pv2-to-encounter"
+        },
+        "name": "Segment PV2 to Encounter Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-rolpid-pd1-practitionerrole-to-patient"
+        },
+        "name": "Segment ROL to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-rolpid-pd1-relatedperson-to-relatedperson"
+        },
+        "name": "Segment ROL to RelatedPerson Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-rolpv1-pv2-practitionerrole-to-encounter"
+        },
+        "name": "Segment ROL to Encounter Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-rxaimmunization-to-immunization"
+        },
+        "name": "Segment RXA to Immunization Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-rxrimmunization-to-immunization"
+        },
+        "name": "Segment RXR to Immunization Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-sft-to-messageheader"
+        },
+        "name": "Segment SFT to MessageHeader Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-spm-to-specimen"
+        },
+        "name": "Segment SPM to Specimen Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70001-to-administrative-gender"
+        },
+        "name": "Table HL70001 to Administrative Gender Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70002-to-v3-maritalstatus"
+        },
+        "name": "Table HL70002 to V3 MaritalStatus Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70007-to-v2-0007"
+        },
+        "name": "Table HL70007 to V2 0007 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70063-to-v3-rolecode"
+        },
+        "name": "Table HL70063 to V3 RoleCode Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70078-to-v3-observationinterpretation"
+        },
+        "name": "Table HL70078 to V3 ObservationInterpretation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70085-to-observation-status"
+        },
+        "name": "Table HL70085 to Observation Status Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70092-to-v2-0092"
+        },
+        "name": "Table HL70092 to V2 0092 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70123non-queries-to-diagnostic-report-status"
+        },
+        "name": "Table HL70123 to Diagnostic Report Status Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70127-to-allergy-intolerance-category"
+        },
+        "name": "Table HL70127 to Allergy Intolerance Category Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70127-to-allergy-intolerance-type"
+        },
+        "name": "Table HL70127 to Allergy Intolerance Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70131-to-v2-0131"
+        },
+        "name": "Table HL70131 to V2 0131 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70136-to-specimen-status"
+        },
+        "name": "Table HL70136 to Specimen Status Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70155-to-messageheader-response-request"
+        },
+        "name": "Table HL70155 to Messageheader Response Request Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70185-to-v2-0185"
+        },
+        "name": "Table HL70185 to V2 0185 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70201-to-contact-point-use"
+        },
+        "name": "Table HL70201 to Contact Point Use Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70203-to-v2-0203"
+        },
+        "name": "Table HL70203 to V2 0203 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70217-to-v3-actpriority"
+        },
+        "name": "Table HL70217 to V3 ActPriority Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70231-to-v2-0231"
+        },
+        "name": "Table HL70231 to V2 0231 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70301-to-v2-0301"
+        },
+        "name": "Table HL70301 to V2 0301 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70315-to-v2-0315"
+        },
+        "name": "Table HL70315 to V2 0315 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70322-to-event-status"
+        },
+        "name": "Table HL70322 to Event Status Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70406-to-v2-0406"
+        },
+        "name": "Table HL70406 to V2 0406 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70430-to-v2-0430"
+        },
+        "name": "Table HL70430 to V2 0430 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70443-to-v3-participationtype"
+        },
+        "name": "Table HL70443 to V3 ParticipationType Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70444-to-v2-0444"
+        },
+        "name": "Table HL70444 to V2 0444 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70480-to-v3-rolecode"
+        },
+        "name": "Table HL70480 to V3 RoleCode Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70485-to-request-priority"
+        },
+        "name": "Table HL70485 to Request Priority Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70498-to-consent-state-codes"
+        },
+        "name": "Table HL70498 to Consent State Codes Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70549-to-v3-rolecode"
+        },
+        "name": "Table HL70549 to V3 RoleCode Map",
         "exampleBoolean": true
       }
     ],

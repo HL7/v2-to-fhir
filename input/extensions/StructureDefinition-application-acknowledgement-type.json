@@ -1,0 +1,51 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "application-acknowledgement-type",
+  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/application-acknowledgement-type",
+  "version": "0.1.0",
+  "name": "ApplicationAcknowledgementType",
+  "status": "active",
+  "description": "The Application Acknowledgement Type of the v2 message that was transformed into the FHIR message Bundle. This extension is only relevant when performing a v2 to FHIR transformation.\nThis extension corresponds to MSH-15 of the original message.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "MessageHeader"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/application-acknowledgement-type"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      }
+    ]
+  }
+}

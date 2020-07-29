@@ -1,7 +1,7 @@
 
 // segments/HL7 Segment - FHIR R4_ MSH[General] - R4.csv:15 MSH-15
 Extension: AcceptAcknowledgementType
-Id: Accept-Acknowledgement-Type
+Id: accept-acknowledgement-type
 Description: """
 The Accept Acknowledgement Type of the v2 message that was transformed into the FHIR message Bundle. This extension is
 only relevant when performing a v2 to FHIR transformation. This extension corresponds to MSH-15 of the original message.
@@ -12,7 +12,7 @@ only relevant when performing a v2 to FHIR transformation. This extension corres
 
 // segments/HL7 Segment - FHIR R4_ ARV - Sheet1.csv:6 ARV-6
 Extension: AccessRestrictionRange
-Id: Access-Restriction-Range
+Id: access-restriction-range
 Description: """
 The Access Restriction Date Range. This extension corresponds to ARV-6 of the original message.
 """
@@ -23,7 +23,7 @@ The Access Restriction Date Range. This extension corresponds to ARV-6 of the or
 
 // segments/HL7 Segment - FHIR R4_ PV2 - PV2.csv:40 PV2-40
 Extension: AdmissionLevelOfCare
-Id: Admission-Level-Of-Care
+Id: admission-level-of-care
 Description: """
 Code indicating the acuity level assigned to the patient at the time of admission.
 This extension corresponds to PV2-40 of the v2 PV2 segment.
@@ -36,7 +36,7 @@ This extension corresponds to PV2-40 of the v2 PV2 segment.
 // segments/HL7 Segment - FHIR R4_ OBX[ObservationComponent] - PV1.csv:19 OBX-19
 // segments/HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv:19 OBX-19
 Extension: AnalysisDateTime
-Id: Analysis-Date-Time
+Id: analysis-date-time
 Description: """
 The time stamp associated with generation of the analytical result by the instrument.
 This extension corresponds to OBX-19 of the v2 OBX segment.
@@ -48,7 +48,7 @@ This extension corresponds to OBX-19 of the v2 OBX segment.
 
 // segments/HL7 Segment - FHIR R4_ MSH[General] - R4.csv:16 MSH-16
 Extension: ApplicationAcknowledgementType
-Id: Application-Acknowledgement-Type
+Id: application-acknowledgement-type
 Description: """
 The Application Acknowledgement Type of the v2 message that was transformed into the FHIR message Bundle. This extension is only relevant when performing a v2 to FHIR transformation.
 This extension corresponds to MSH-15 of the original message.
@@ -59,7 +59,7 @@ This extension corresponds to MSH-15 of the original message.
 
 // datatypes/HL7 Data Type - FHIR R4_ CX - Sheet1.csv:4 CX.4
 Extension: AssigningAuthority
-Id: Assigning-Authority
+Id: assigning-authority
 Description: """
 Extensions supporting the coding of HD type stored in an Identifier
 This extension corresponds to components of the v2 HD data type.
@@ -92,7 +92,7 @@ This extension corresponds to components of the v2 HD data type.
 
 // segments/HL7 Segment - FHIR R4_ SFT - Sheet1.csv:4 SFT-4
 Extension: BinaryIdentifier
-Id: Binary-Identifier
+Id: binary-identifier
 Description: """
 Identifier issued by a vendor for the unique software version instance of the system originating the content of the transaction.
 This extension corresponds to SFT-4 of the v2 SFT segment.
@@ -104,7 +104,7 @@ This extension corresponds to SFT-4 of the v2 SFT segment.
 
 // segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv:17 OBR-17
 Extension: CallbackNumber
-Id: Callback-Number
+Id: callback-number
 Description: """
 """
 * ^context.type = #element
@@ -114,7 +114,7 @@ Description: """
 
 // datatypes/HL7 Data Type - FHIR R4_ XPN - Sheet1.csv:
 Extension: CalledBy
-Id: Called-By
+Id: called-by
 Description: """
 """
 * ^context.type = #element
@@ -123,7 +123,7 @@ Description: """
 
 // datatypes/HL7 Data Type - FHIR R4_ CX - Sheet1.csv:3 CX.3
 Extension: CheckDigitScheme
-Id: Check-Digit-Scheme
+Id: check-digit-scheme
 Description: """The check digit scheme
 """
 * ^context.type = #element
@@ -133,7 +133,7 @@ Description: """The check digit scheme
 
 // segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv:13 OBR-13
 Extension: Codeable
-Id: Codeable
+Id: codeable
 Description: """
 """
 * ^context.type = #element
@@ -143,7 +143,7 @@ Description: """
 
 // datatypes/HL7 Data Type - FHIR R4_ PLN - Sheet1.csv:3 PLN.3
 Extension: Comment
-Id: Comment
+Id: comment
 Description: """
 Qualifying information regarding the identifier.
 This may include information about locations where the identifier is valid.
@@ -157,7 +157,7 @@ This extension corresponds to PLN.3 of the v2 PLN data type.
 // datatypes/HL7 Data Type - FHIR R4_ TQ[ServiceRequest] - Sheet1.csv:7 TQ.7
 // datatypes/HL7 Data Type - FHRI R4_ TQ[Medication Request] - Sheet1.csv:7 TQ.7
 Extension: Condition
-Id: Condition
+Id: condition
 Description: """TODO
 """
 * ^context[0].type = #element
@@ -170,7 +170,7 @@ Description: """TODO
 
 // segments/HL7 Segment - FHIR R4_ SFT - Sheet1.csv:5 SFT-5
 Extension: Description
-Id: Description
+Id: description
 Description: """
 Software identification information supplied by a software vendor for the system originating the content of the transaction.
 This extension corresponds to SFT-5 of the v2 SFT segment.
@@ -183,7 +183,7 @@ This extension corresponds to SFT-5 of the v2 SFT segment.
 // datatypes/HL7 Data Type - FHIR R4_ TQ[ServiceRequest] - Sheet1.csv:3 TQ.3
 // datatypes/HL7 Data Type - FHRI R4_ TQ[Medication Request] - Sheet1.csv:3 TQ.3
 Extension: Duration
-Id: Duration
+Id: duration
 Description: """
 """
 * ^context.type = #element
@@ -230,7 +230,7 @@ It is measured in units of days (http://unitsofmeasure.org/#d)
 
 // segments/HL7 Segment - FHIR R4_ PV1 - PV1.csv:20 PV1-20
 Extension: FinancialClass
-Id: Financial-Class
+Id: financial-class
 Description: """
 The financial class(es) assigned to the patient for the purpose of identifying sources of reimbursement for the encounter.
 This extension corresponds to PV1-20 of the v2 PV1 segment.
@@ -242,7 +242,7 @@ This extension corresponds to PV1-20 of the v2 PV1 segment.
 
 // segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv:3 OBR-3
 Extension: Fingerprint
-Id: Fingerprint
+Id: fingerprint
 Description: """
 """
 * ^context.type = #element
@@ -252,7 +252,7 @@ Description: """
 
 // segments/HL7 Segment - FHIR R4_ PID - PID.csv:31 PID-31
 Extension: IdentityUnknown
-Id: Identity-Unknown
+Id: identity-unknown
 Description: """
 Indicator of whether or not the patient's identity is known.
 This extension corresponds to PID-31 of the v2 PID segment.
@@ -264,7 +264,7 @@ This extension corresponds to PID-31 of the v2 PID segment.
 
 // segments/HL7 Segment - FHIR R4_ SFT - Sheet1.csv:6 SFT-6
 Extension: InstallDate
-Id: Install-Date
+Id: install-date
 Description: """
 The date the submitting software was installed at the sending site.
 This extension corresponds to SFT-6 of the v2 SFT segment.
@@ -276,7 +276,7 @@ This extension corresponds to SFT-6 of the v2 SFT segment.
 
 // segments/HL7 Segment - FHIR R4_ NK1 [RelatedPerson] - Sheet1.csv:34 NK1-34
 Extension: JobStatus
-Id: Job-Status
+Id: job-status
 Description: """
 """
 * ^context.type = #element
@@ -286,7 +286,7 @@ Description: """
 
 // segments/HL7 Segment - FHIR R4_ PID - PID.csv:34 PID-34
 Extension: LastUpdatedFacility
-Id: Last-Updated-Facility
+Id: last-updated-facility
 Description: """
 Reference which identifies the facility of the last update to a patient's identifying and demographic data.
 This extension corresponds to PID-34 of the v2 PID segment
@@ -298,7 +298,7 @@ This extension corresponds to PID-34 of the v2 PID segment
 
 // segments/HL7 Segment - FHIR R4_ PD1 - PD1.csv:7 PD1-7
 Extension: LivingWill
-Id: Living-Will
+Id: living-will
 Description: """
 A code indicating whether or not the patient has a living will and, if so, whether a copy of the living will is on file at the healthcare facility.
 If the patient does not have a living will, the value of this field indicates whether the patient was provided information on living wills.
@@ -311,7 +311,7 @@ This extension corresponds to PD1-7 of the v2 PD1 segment.
 
 // segments/HL7 Segment - FHIR R4_ PRT[PIDPD1 - RelatedPerson] - Sheet1.csv:9 PRT-9
 Extension: Location
-Id: Location
+Id: location
 Description: """
 Location of the RelatedPerson acting in their role.
 This extension corresponds to PRT-9 of the v2 PRT segment.
@@ -349,7 +349,7 @@ This extension corresponds to PV1-53 of the v2 PV1 segment.
 // datatypes/HL7 Data Type - FHIR R4_ XON[Location] - Sheet1.csv:2 XON.2
 // datatypes/HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv:2 XON.2
 Extension: NameType
-Id: Name-Type
+Id: name-type
 Description: """
 A code that represents the type of name of the Location i.e., XON.2 of the v2 XON data type.
 """
@@ -363,7 +363,7 @@ A code that represents the type of name of the Location i.e., XON.2 of the v2 XO
 // segments/HL7 Segment - FHIR R4_ OBX[ObservationComponent] - PV1.csv:10 OBX-10
 // segments/HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv:10 OBX-10
 Extension: NatureOfAbnormalTest
-Id: Nature-Of-Abnormal-Test
+Id: nature-of-abnormal-test
 Description: """
 The nature of the abnormal test. For example, normal range values may be based on age, sex and/or race.
 This extension corresponds to OBX-10 of the v2 OBX segment.
@@ -378,7 +378,7 @@ This extension corresponds to OBX-10 of the v2 OBX segment.
 
 // segments/HL7 Segment - FHIR R4_ NTE[Annotation] - NTE.csv:4 NTE-4
 Extension: NoteType
-Id: Note-Type
+Id: note-type
 Description: """
 The type of comment text in the Annotation (e.g. Patient Instructions or General Remark).
 This extension corresponds to NTE-4 of the v2 NTE segment.
@@ -459,7 +459,7 @@ Description: """
 
 // segments/HL7 Segment - FHIR R4_ PRT[PIDPD1 - RelatedPerson] - Sheet1.csv:23 PRT-23
 Extension: PreferredMethodOfContact
-Id: Preferred-Method-Of-Contact
+Id: preferred-method-of-contact
 Description: """
 Code indicating the preferred method to use when communicating with the person.
 This extension corresponds to PRT-23 of the v2 PRT segment.
@@ -474,7 +474,7 @@ This extension corresponds to PRT-23 of the v2 PRT segment.
 // segments/HL7 Segment - FHIR R4_ OBX[ObservationComponent] - PV1.csv:15 OBX-15
 // segments/HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv:15 OBX-15
 Extension: ProducerIdentifier
-Id: Producer-Identifier
+Id: producer-identifier
 Description: """
 """
 * ^context.type = #element
@@ -487,7 +487,7 @@ Description: """
 // segments/HL7 Segment - FHIR R4_ PRT[PIDPD1 - RelatedPerson] - Sheet1.csv:6 PRT-6
 // segments/HL7 Segment - FHIR R4_ ROL[PID_PD1_RelatedPerson] - Sheet1.csv:9 ROL-9
 Extension: ProviderType
-Id: Provider-Type
+Id: provider-type
 Description: """
 """
 * ^context.type = #element
@@ -498,7 +498,7 @@ Description: """
 
 // segments/HL7 Segment - FHIR R4_ PV2 - PV2.csv:21 PV2-21
 Extension: PublicityCode
-Id: Publicity-Code
+Id: publicity-code
 Description: """
 Code indicating the level of publicity allowed for the encounter.
 This extension corresponds to PV2-21 of the v2 PV2 segment.
@@ -523,7 +523,7 @@ as the specimen may still be usable for other tests.
 
 // segments/HL7 Segment - FHIR R4_ SPM - SPM.csv:9 SPM-9
 Extension: SiteModifier
-Id: Site-Modifier
+Id: site-modifier
 Description: """
 Modifying or qualifying description about the specimen source site.
 This extension corresponds to SPM-9 of the v2 SPM segment.
@@ -535,7 +535,7 @@ This extension corresponds to SPM-9 of the v2 SPM segment.
 
 // segments/HL7 Segment - FHIR R4_ PD1 - PD1.csv:5 PD1-5
 Extension: StudentStatus
-Id: Student-Status
+Id: student-status
 Description: """
 A code indicating if the patient is currently a student or not, and whether the patient is a full_Time or a part_Time student.
 This extension corresponds to PD1-5 of the v2 PD1 segment.
@@ -548,7 +548,7 @@ This extension corresponds to PD1-5 of the v2 PD1 segment.
 // segments/HL7 Segment - FHIR R4_ OBX[ObservationComponent] - PV1.csv:30 OBX-30
 // segments/HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv:30 OBX-30
 Extension: SubType
-Id: Sub-Type
+Id: sub-type
 Description: """
 The sub type was necessary in v2 to distinguish purpose of the observation when it appears in a
 message in the same group (e.g., answers to ask at order entry questions with actual results ).
@@ -576,7 +576,7 @@ Boolean indicator of whether or not the Location is a temporary location.
 
 // segments/HL7 Segment - FHIR R4_ MSH[General] - R4.csv:7 MSH-7
 Extension: Timestamp
-Id: Timestamp
+Id: timestamp
 Description: """
 The date/time that the sending system created the v2 message that was transformed into the FHIR message Bundle. This extension is only relevant when performing a v2 to FHIR transformation.
 This extension corresponds to MSH-7 of the original message.
@@ -588,7 +588,7 @@ This extension corresponds to MSH-7 of the original message.
 
 // segments/HL7 Segment - FHIR R4_ PV1 - PV1.csv:48 PV1-48
 Extension: TotalAdjustment
-Id: Total-Adjustment
+Id: total-adjustment
 Description: """
 The total adjustments for the encounter.
 This extension corresponds to PV1-48 of the v2 PV1 segment.
@@ -600,7 +600,7 @@ This extension corresponds to PV1-48 of the v2 PV1 segment.
 
 // segments/HL7 Segment - FHIR R4_ PV1 - PV1.csv:47 PV1-47
 Extension: TotalCharges
-Id: Total-Charges
+Id: total-charges
 Description: """
 The total charges  for the encounter.
 This extension corresponds to PV1-47 of the v2 PV1 segment.
@@ -612,7 +612,7 @@ This extension corresponds to PV1-47 of the v2 PV1 segment.
 
 // segments/HL7 Segment - FHIR R4_ PV1 - PV1.csv:49 PV1-49
 Extension: TotalPayments
-Id: Total-Payments
+Id: total-payments
 Description: """
 The total payments  for the encounter.
 This extension corresponds to PV1-49 of the v2 PV1 segment.
@@ -626,7 +626,7 @@ This extension corresponds to PV1-49 of the v2 PV1 segment.
 // segments/HL7 Segment - FHIR R4_ OBX[ObservationComponent] - PV1.csv:29 OBX-29
 // segments/HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv:29 OBX-29
 Extension: Type
-Id: Type
+Id: type
 Description: """
 The type was necessary in v2 to distinguish purpose of the observation when it appears in a message in the same group (e.g., answers to ask at order entry questions with actual results ).  Within FHIR flagging the observation may not be necessary, but that is not yet clear.  Until then, we will keep the thought of needing an extension, but not create it yet.
 """
@@ -637,7 +637,7 @@ The type was necessary in v2 to distinguish purpose of the observation when it a
 
 // segments/HL7 Segment - FHIR R4_ NK1 [Patient.contact] - Sheet1.csv:3 NK1-3
 Extension: V2Relationship
-Id: V2-Relationship
+Id: v2-relationship
 Description: """
 Patient.contact.relationship uses the same value set as NK1-7 (contact role). There doesn't seem to be a standard element for the NK1-3 relationship in Patient.contact. An extension will likely be needed
 """
@@ -690,7 +690,7 @@ This extension corresponds to PID-27 of the v2 PID segment.
 
 // segments/HL7 Segment - FHIR R4_ PV2 - PV2.csv:7 PV2-7
 Extension: VisitUserCode
-Id: Visit-User-Code
+Id: visit-user-code
 Description: """
 Categorization of a patient's encounter.
 This extension corresponds to PV2-7 of the v2 PV2 segment.

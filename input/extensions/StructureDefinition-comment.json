@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "comment",
+  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/comment",
+  "version": "0.1.0",
+  "name": "Comment",
+  "status": "active",
+  "description": "Qualifying information regarding the identifier.\nThis may include information about locations where the identifier is valid.\nThis extension corresponds to PLN.3 of the v2 PLN data type.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Identifier"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/comment"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.valueString",
+        "path": "Extension.valueString",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "table-hl70480-to-v3-rolecode",
+  "description": "This ConceptMap represents the mapping from the HL7 V2 Table HL70480 to the FHIR V3 RoleCode Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70480-to-v3-rolecode",
+  "version": "1.0",
+  "name": "Table_HL70480_Map",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-07-29",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "HL70480",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Table HL70480 to V3 RoleCode.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1uTlF1ZBSs6GIksOREp3pcBLGNphcpxOrn5NBBEiRTd4/edit#gid=0"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "element": [
+        {
+          "code": "I",
+          "display": "Inpatient Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "HOSP",
+              "display": "Hospital"
+            }
+          ]
+        },
+        {
+          "code": "O",
+          "display": "Outpatient Order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "OF",
+              "display": "Outpatient facility"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
