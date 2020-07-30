@@ -8,7 +8,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * name = "Message_ORM_O01_Map"
 * status = #active
 * experimental = true
-* date = "2020-07-29"
+* date = "2020-07-30"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
