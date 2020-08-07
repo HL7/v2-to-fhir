@@ -1,14 +1,15 @@
+// HL7 Concept Map_ TelecomUseCode - Sheet1.csv
 Instance: TableHL70201toContactPointUse
 InstanceOf: ConceptMap
 Title: "Table HL70201 to Contact Point Use Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 Table HL70201 to the FHIR Contact Point Use Value Set."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70201 to the FHIR Contact Point Use Value Set."
 * id = "table-hl70201-to-contact-point-use"
 * url = "http://hl7.org/fhir/v2-tofhir/table-hl70201-to-contact-point-use"
 * version = "1.0"
-* name = "Table_HL70201_Map"
+* name = "TableHL70201toContactPointUse"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

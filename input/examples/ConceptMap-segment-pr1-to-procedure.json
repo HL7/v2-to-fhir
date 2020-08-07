@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-pr1-to-procedure",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 PR1 Segment to the FHIR Procedure Resource.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Segment PR1 to the FHIR Procedure Resource.",
   "url": "http://hl7.org/fhir/v2-tofhir/segment-pr1-to-procedure",
   "version": "1.0",
-  "name": "Segment_PR1_Map",
+  "name": "SegmentPR1toProcedure",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -69,7 +69,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.code",
+              "code": "code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -89,11 +89,11 @@
                   ]
                 }
               ],
-              "display": "Procedure.code",
+              "display": "code",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "CNE(CodeableConcept)"
+                  "value": "CNE[CodeableConcept]"
                 }
               ]
             }
@@ -124,7 +124,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.code.text",
+              "code": "code.text",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -144,7 +144,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.code.text",
+              "display": "code.text",
               "product": [
                 {
                   "property": "antlr",
@@ -179,7 +179,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.performedDateTime",
+              "code": "performedDateTime",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -199,13 +199,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.performedDateTime",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ],
+              "display": "performedDateTime",
               "product": [
                 {
                   "property": "antlr",
@@ -240,7 +234,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.performedDateTime",
+              "code": "performedDateTime",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -260,13 +254,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.performedDateTime",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ],
+              "display": "performedDateTime",
               "product": [
                 {
                   "property": "antlr",
@@ -301,7 +289,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.performedPeriod.start",
+              "code": "performedPeriod.start",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -321,13 +309,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.performedPeriod.start",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ],
+              "display": "performedPeriod.start",
               "product": [
                 {
                   "property": "antlr",
@@ -362,7 +344,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.category",
+              "code": "category",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -382,7 +364,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.category",
+              "display": "category",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -417,7 +399,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.performedPeriod.end",
+              "code": "performedPeriod.end",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -437,7 +419,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.performedPeriod.end",
+              "display": "performedPeriod.end",
               "dependsOn": [
                 {
                   "property": "value",
@@ -478,7 +460,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.perfomer[1].actor(Practitioner)",
+              "code": "perfomer[1].actor(Practitioner)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -498,7 +480,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.perfomer[1].actor(Practitioner)",
+              "display": "perfomer[1].actor(Practitioner)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -533,7 +515,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.perfomer[1].function.coding.code",
+              "code": "perfomer[1].function.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -553,7 +535,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.perfomer[1].function.coding.code",
+              "display": "perfomer[1].function.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
@@ -588,7 +570,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.perfomer[1].function.coding.uri",
+              "code": "perfomer[1].function.coding.uri",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -608,7 +590,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.perfomer[1].function.coding.uri",
+              "display": "perfomer[1].function.coding.uri",
               "dependsOn": [
                 {
                   "property": "value",
@@ -643,7 +625,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.perfomer[2].actor(Practitioner)",
+              "code": "perfomer[2].actor(Practitioner)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -663,7 +645,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.perfomer[2].actor(Practitioner)",
+              "display": "perfomer[2].actor(Practitioner)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -698,7 +680,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.perfomer[2].function.coding.code",
+              "code": "perfomer[2].function.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -718,7 +700,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.perfomer[2].function.coding.code",
+              "display": "perfomer[2].function.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
@@ -753,7 +735,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.perfomer[2].function.coding.uri",
+              "code": "perfomer[2].function.coding.uri",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -773,7 +755,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.perfomer[2].function.coding.uri",
+              "display": "perfomer[2].function.coding.uri",
               "dependsOn": [
                 {
                   "property": "value",
@@ -808,7 +790,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.perfomer[3].actor(Practitioner)",
+              "code": "perfomer[3].actor(Practitioner)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -828,7 +810,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.perfomer[3].actor(Practitioner)",
+              "display": "perfomer[3].actor(Practitioner)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -863,7 +845,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.perfomer[3].function.coding.uri",
+              "code": "perfomer[3].function.coding.uri",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -883,7 +865,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.perfomer[3].function.coding.uri",
+              "display": "perfomer[3].function.coding.uri",
               "dependsOn": [
                 {
                   "property": "value",
@@ -918,7 +900,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.reasonCode",
+              "code": "reasonCode",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -938,7 +920,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.reasonCode",
+              "display": "reasonCode",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -973,7 +955,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.identifier",
+              "code": "identifier",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -993,7 +975,7 @@
                   ]
                 }
               ],
-              "display": "Procedure.identifier",
+              "display": "identifier",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -1028,7 +1010,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.location(Location)",
+              "code": "location(Location)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1048,11 +1030,11 @@
                   ]
                 }
               ],
-              "display": "Procedure.location(Location)",
+              "display": "location(Location)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "PL"
+                  "value": "PL[Location]"
                 }
               ]
             }
@@ -1083,7 +1065,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Procedure.partOf(Procedure)",
+              "code": "partOf(Procedure.identifier)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1103,11 +1085,11 @@
                   ]
                 }
               ],
-              "display": "Procedure.partOf(Procedure)",
+              "display": "partOf(Procedure.identifier)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "EI[Procedure]"
+                  "value": "EI[Identifier]"
                 }
               ]
             }

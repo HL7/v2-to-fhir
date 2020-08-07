@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-pv1-to-encounter",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 PV1 Segment to the FHIR Encounter Resource.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Segment PV1 to the FHIR Encounter Resource.",
   "url": "http://hl7.org/fhir/v2-tofhir/segment-pv1-to-encounter",
   "version": "1.0",
-  "name": "Segment_PV1_Map",
+  "name": "SegmentPV1toEncounter",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -69,7 +69,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.class",
+              "code": "class",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -89,7 +89,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.class",
+              "display": "class",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -128,7 +128,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.status",
+              "code": "status",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -148,7 +148,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.status",
+              "display": "status",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -193,7 +193,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.location[1].location(Location)",
+              "code": "location[1].location(Location)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -213,11 +213,11 @@
                   ]
                 }
               ],
-              "display": "Encounter.location[1].location(Location)",
+              "display": "location[1].location(Location)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "PL"
+                  "value": "PL[Location]"
                 }
               ]
             }
@@ -248,7 +248,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.location[1].status",
+              "code": "location[1].status",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -268,7 +268,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.location[1].status",
+              "display": "location[1].status",
               "dependsOn": [
                 {
                   "property": "value",
@@ -309,7 +309,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.location[1].status",
+              "code": "location[1].status",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -329,7 +329,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.location[1].status",
+              "display": "location[1].status",
               "dependsOn": [
                 {
                   "property": "value",
@@ -370,7 +370,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.type",
+              "code": "type",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -390,7 +390,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.type",
+              "display": "type",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -429,7 +429,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.preAdmissionIdentifier",
+              "code": "hospitalization.preAdmissionIdentifier",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -449,11 +449,11 @@
                   ]
                 }
               ],
-              "display": "Encounter.hospitalization.preAdmissionIdentifier",
+              "display": "hospitalization.preAdmissionIdentifier",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "CX"
+                  "value": "CX[Identifier]"
                 }
               ]
             }
@@ -484,7 +484,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.location[2].location(Location)",
+              "code": "location[2].location(Location)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -504,11 +504,11 @@
                   ]
                 }
               ],
-              "display": "Encounter.location[2].location(Location)",
+              "display": "location[2].location(Location)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "PL"
+                  "value": "PL[Location]"
                 }
               ]
             }
@@ -539,7 +539,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.location[2].status",
+              "code": "location[2].status",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -559,7 +559,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.location[2].status",
+              "display": "location[2].status",
               "dependsOn": [
                 {
                   "property": "value",
@@ -594,7 +594,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[1].individual(Practitioner)",
+              "code": "participant[1].individual(Practitioner)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -614,7 +614,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[1].individual(Practitioner)",
+              "display": "participant[1].individual(Practitioner)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -649,7 +649,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[1].type.coding.code",
+              "code": "participant[1].type.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -669,7 +669,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[1].type.coding.code",
+              "display": "participant[1].type.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
@@ -704,7 +704,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[1].type.coding.system",
+              "code": "participant[1].type.coding.system",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -724,7 +724,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[1].type.coding.system",
+              "display": "participant[1].type.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
@@ -759,7 +759,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[1].type.coding.display",
+              "code": "participant[1].type.coding.display",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -779,7 +779,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[1].type.coding.display",
+              "display": "participant[1].type.coding.display",
               "dependsOn": [
                 {
                   "property": "value",
@@ -814,7 +814,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[2].individual(Practitioner)",
+              "code": "participant[2].individual(Practitioner)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -834,7 +834,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[2].individual(Practitioner)",
+              "display": "participant[2].individual(Practitioner)",
               "dependsOn": [
                 {
                   "property": "value",
@@ -873,7 +873,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[2].type.coding.code",
+              "code": "participant[2].type.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -893,7 +893,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[2].type.coding.code",
+              "display": "participant[2].type.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
@@ -928,7 +928,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[2].type.coding.system",
+              "code": "participant[2].type.coding.system",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -948,7 +948,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[2].type.coding.system",
+              "display": "participant[2].type.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
@@ -983,7 +983,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[2].type.text",
+              "code": "participant[2].type.text",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1003,7 +1003,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[2].type.text",
+              "display": "participant[2].type.text",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1038,7 +1038,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[3].individual(Practitioner)",
+              "code": "participant[3].individual(Practitioner)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1058,7 +1058,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[3].individual(Practitioner)",
+              "display": "participant[3].individual(Practitioner)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -1093,7 +1093,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[3].type.coding.code",
+              "code": "participant[3].type.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1113,7 +1113,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[3].type.coding.code",
+              "display": "participant[3].type.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1148,7 +1148,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[3].type.coding.system",
+              "code": "participant[3].type.coding.system",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1168,7 +1168,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[3].type.coding.system",
+              "display": "participant[3].type.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1203,7 +1203,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[3].type.text",
+              "code": "participant[3].type.text",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1223,7 +1223,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[3].type.text",
+              "display": "participant[3].type.text",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1258,7 +1258,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.serviceType",
+              "code": "serviceType",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1278,7 +1278,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.serviceType",
+              "display": "serviceType",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -1313,7 +1313,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.reAdmission",
+              "code": "hospitalization.reAdmission",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1333,7 +1333,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.hospitalization.reAdmission",
+              "display": "hospitalization.reAdmission",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -1372,7 +1372,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.admitSource",
+              "code": "hospitalization.admitSource",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1392,62 +1392,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.hospitalization.admitSource",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "CWE[CodeableConcept]"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "PV1-16",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "CWE"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": 1
-                }
-              ]
-            }
-          ],
-          "display": "VIP Indicator",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Patient.extension-patient-importance",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-                  "extension": [
-                    {
-                      "url": "type",
-                      "valueCode": "CodeableConcept"
-                    },
-                    {
-                      "url": "cardinalityMin",
-                      "valueInteger": 0
-                    },
-                    {
-                      "url": "cardinalityMax",
-                      "valueInteger": 1
-                    }
-                  ]
-                }
-              ],
-              "display": "Patient.extension-patient-importance",
+              "display": "hospitalization.admitSource",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -1482,7 +1427,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[4].individual(Practitioner)",
+              "code": "participant[4].individual(Practitioner)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1502,7 +1447,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[4].individual(Practitioner)",
+              "display": "participant[4].individual(Practitioner)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -1537,7 +1482,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[4].type.coding.code",
+              "code": "participant[4].type.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1557,7 +1502,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[4].type.coding.code",
+              "display": "participant[4].type.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1592,7 +1537,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[4].type.coding.system",
+              "code": "participant[4].type.coding.system",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1612,7 +1557,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[4].type.coding.system",
+              "display": "participant[4].type.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1647,7 +1592,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[4].type.text",
+              "code": "participant[4].type.text",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1667,7 +1612,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[4].type.text",
+              "display": "participant[4].type.text",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1702,7 +1647,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.identifier[1]",
+              "code": "identifier[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1722,11 +1667,11 @@
                   ]
                 }
               ],
-              "display": "Encounter.identifier[1]",
+              "display": "identifier[1]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "CX"
+                  "value": "CX[Identifier]"
                 }
               ]
             }
@@ -1757,7 +1702,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.identifier[1].type.coding.code",
+              "code": "identifier[1].type.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1769,7 +1714,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.identifier[1].type.coding.code",
+              "display": "identifier[1].type.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1804,7 +1749,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.identifier[1].type.coding.system",
+              "code": "identifier[1].type.coding.system",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1816,7 +1761,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.identifier[1].type.coding.system",
+              "display": "identifier[1].type.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1851,7 +1796,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.identifier[1].type.text",
+              "code": "identifier[1].type.text",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1863,7 +1808,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.identifier[1].type.text",
+              "display": "identifier[1].type.text",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1898,7 +1843,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.dischargeDisposition",
+              "code": "hospitalization.dischargeDisposition",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1918,7 +1863,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.hospitalization.dischargeDisposition",
+              "display": "hospitalization.dischargeDisposition",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -1953,7 +1898,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.destination(Location)",
+              "code": "hospitalization.destination(Location)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1973,11 +1918,11 @@
                   ]
                 }
               ],
-              "display": "Encounter.hospitalization.destination(Location)",
+              "display": "hospitalization.destination(Location)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "DLD"
+                  "value": "DLD[Location]"
                 }
               ]
             }
@@ -2008,7 +1953,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.hospitalization.dietPreference",
+              "code": "hospitalization.dietPreference",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2028,7 +1973,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.hospitalization.dietPreference",
+              "display": "hospitalization.dietPreference",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -2063,7 +2008,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.location[3].location(Location)",
+              "code": "location[3].location(Location)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2083,7 +2028,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.location[3].location(Location)",
+              "display": "location[3].location(Location)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -2118,8 +2063,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.location[3].status",
-              "display": "Encounter.location[3].status",
+              "code": "location[3].status",
+              "display": "location[3].status",
               "dependsOn": [
                 {
                   "property": "value",
@@ -2154,7 +2099,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.location[4].location(Location)",
+              "code": "location[4].location(Location)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2174,7 +2119,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.location[4].location(Location)",
+              "display": "location[4].location(Location)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -2209,8 +2154,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.location[4].status",
-              "display": "Encounter.location[4].status",
+              "code": "location[4].status",
+              "display": "location[4].status",
               "dependsOn": [
                 {
                   "property": "value",
@@ -2245,7 +2190,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.period.start",
+              "code": "period.start",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2265,13 +2210,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.period.start",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ]
+              "display": "period.start"
             }
           ]
         },
@@ -2300,7 +2239,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.period.end",
+              "code": "period.end",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2320,13 +2259,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.period.end",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ]
+              "display": "period.end"
             }
           ]
         },
@@ -2355,7 +2288,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.status",
+              "code": "status",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2410,7 +2343,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.identifier[2]",
+              "code": "identifier[2]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2430,7 +2363,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.identifier[2]",
+              "display": "identifier[2]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -2465,7 +2398,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[5].individual(Practitioner)",
+              "code": "participant[5].individual(Practitioner)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2485,7 +2418,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[5].individual(Practitioner)",
+              "display": "participant[5].individual(Practitioner)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -2520,7 +2453,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[5].type.coding.code",
+              "code": "participant[5].type.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2575,7 +2508,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[5].type.coding.system",
+              "code": "participant[5].type.coding.system",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2595,7 +2528,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.participant[5].type.coding.system",
+              "display": "participant[5].type.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
@@ -2630,7 +2563,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.participant[5].type.text",
+              "code": "participant[5].type.text",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2685,7 +2618,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Encounter.episodeOfCare(EpisodeOfCare.identifier)",
+              "code": "episodeOfCare(EpisodeOfCare.identifier)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2705,7 +2638,7 @@
                   ]
                 }
               ],
-              "display": "Encounter.episodeOfCare(EpisodeOfCare.identifier)",
+              "display": "episodeOfCare(EpisodeOfCare.identifier)",
               "dependsOn": [
                 {
                   "property": "data-type-map",

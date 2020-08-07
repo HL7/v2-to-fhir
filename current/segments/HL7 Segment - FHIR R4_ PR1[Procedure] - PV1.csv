@@ -1,0 +1,37 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,PR1-1,Set ID - PR1,SI,1,1,,,,,,,,,,,,,
+2,PR1-2,Procedure Coding Method,IS,1,-1,,,,,,,,,,,,,PR1-2 was deprecated in v2.3
+3,PR1-3,Procedure Code,CNE,1,-1,,,,code,,CodeableConcept,0,1,CNE[CodeableConcept],,,,
+4,PR1-4,Procedure Description,ST,0,-1,IF PR1-3.9 NOT VALUED,,,code.text,,string,0,1,,,,,PR1-4 was deprecated in v2.3
+5,PR1-5,Procedure Date/Time,DTM,1,1,IF PR1-7 NOT VALUED,,,performedDateTime,,dateTime,0,1,,,,,
+5,PR1-5,Procedure Date/Time,DTM,1,1,IF PR1-7 VALUED AND PR1-5.5 NOT VALUED,,,performedDateTime,,dateTime,0,1,,,,,The Procedure date/time must be at least to the granularity of minutes if a performedPeriod is to be created from PR1-5 and PR1-7
+5,PR1-5,Procedure Date/Time,DTM,1,1,IF PR1-7 VALUED AND PR1-5.5 VALUED,,,performedPeriod.start,,dateTime,0,1,,,,,
+6,PR1-6,Procedure Functional Type,CWE,0,1,,,,category,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+7,PR1-7,Procedure Minutes,NM,0,1,IF PR1-5.5 IS VALUED,,,performedPeriod.end,,dateTime,0,1,,,Procedure.performedPeriod.start+PR1-7,,"The number of minutes in PR1-7 must be added to the time in PR1-5 to get the endpoint of the performedPeriod (note that other elements of the date/time (hours, date, etc) may also need to be changed depending on the length of the procedure)"
+7,PR1-7,Procedure Minutes,NM,0,1,,,,,,,,,,,,,
+8,PR1-8,Anesthesiologist,XCN,0,-1,,,,perfomer[1].actor(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
+8,PR1-8,Anesthesiologist,XCN,0,-1,,,,perfomer[1].function.coding.code,,CodeableConcept,0,1,,,"""88189002""",,
+8,PR1-8,Anesthesiologist,XCN,0,-1,,,,perfomer[1].function.coding.uri,,uri,0,1,,,"""http://snomed.info/sct""",,
+9,PR1-9,Anesthesia Code,CWE,0,1,,,,,,,,,,,,,
+10,PR1-10,Anesthesia Minutes,NM,0,1,,,,,,,,,,,,,
+11,PR1-11,Surgeon,XCN,0,-1,,,,perfomer[2].actor(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
+11,PR1-11,Surgeon,XCN,0,-1,,,,perfomer[2].function.coding.code,,CodeableConcept,0,1,,,"""304292004""",,
+11,PR1-11,Surgeon,XCN,0,-1,,,,perfomer[2].function.coding.uri,,uri,0,1,,,"""http://snomed.info/sct""",,
+12,PR1-12,Procedure Practitioner,XCN,0,-1,,,,perfomer[3].actor(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
+12,PR1-12,Procedure Practitioner,XCN,0,-1,,,,,Procedure.perfomer[3].function.coding.code=??,CodeableConcept,0,1,,,,,
+12,PR1-12,Procedure Practitioner,XCN,0,-1,,,,perfomer[3].function.coding.uri,,uri,0,1,,,"""http://snomed.info/sct""",,
+13,PR1-13,Consent Code,CWE,0,1,,,,,,,,,,,,,
+14,PR1-14,Procedure Priority,NM,0,1,,,,,,,,,,,,,
+15,PR1-15,Associated Diagnosis Code,CWE,0,1,,,,reasonCode,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
+16,PR1-16,Procedure Code Modifier,CNE,0,-1,,,,,,,,,,,,,
+17,PR1-17,Procedure DRG Type,CWE,0,1,,,,,,,,,,,,,
+18,PR1-18,Tissue Type Code,CWE,0,-1,,,,,,,,,,,,,
+19,PR1-19,Procedure Identifier,EI,0,1,,,,identifier,,Identifier,0,-1,EI[Identifier],,,,
+20,PR1-20,Procedure Action Code,ID,0,1,,,,,,,,,,,,,
+21,PR1-21,DRG Procedure Determination Status,CWE,0,1,,,,,,,,,,,,,
+22,PR1-22,DRG Procedure Relevance,CWE,0,1,,,,,,,,,,,,,
+23,PR1-23,Treating Organizational Unit,PL,0,-1,,,,location(Location),,Reference(Location),0,1,PL[Location],,,,We will address >=2 cardinality if somebody raises the need.
+24,PR1-24,Respiratory Within Surgery,ID,0,1,,,,,,,,,,,,,
+25,PR1-25,Parent Procedure ID,EI,0,1,,,,partOf(Procedure.identifier),,Reference(Procedure),0,-1,EI[Identifier],,,,Procedure.partOf should contain the reference to another Procedure resource where Procedure.identifier matches the value of PR1-25

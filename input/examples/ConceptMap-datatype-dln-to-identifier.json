@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "datatype-dln-to-identifier",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Datatype DLN to the FHIR Identifier Data Type.",
   "url": "http://hl7.org/fhir/v2-tofhir/datatype-dln-to-identifier",
   "version": "1.0",
-  "name": "Datatype_DLN_Map",
+  "name": "DatatypeDLNtoIdentifier",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -69,7 +69,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Identifier.value",
+              "code": "value",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -89,7 +89,7 @@
                   ]
                 }
               ],
-              "display": "Identifier.value"
+              "display": "value"
             }
           ]
         },
@@ -118,7 +118,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Identifier.type.coding.code",
+              "code": "type.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -138,7 +138,7 @@
                   ]
                 }
               ],
-              "display": "Identifier.type.coding.code",
+              "display": "type.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
@@ -173,7 +173,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Identifier.system",
+              "code": "system",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -193,7 +193,7 @@
                   ]
                 }
               ],
-              "display": "Identifier.system",
+              "display": "system",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -228,7 +228,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Identifier.period.end",
+              "code": "period.end",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -248,7 +248,7 @@
                   ]
                 }
               ],
-              "display": "Identifier.period.end"
+              "display": "period.end"
             }
           ]
         }

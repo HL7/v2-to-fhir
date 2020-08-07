@@ -1,14 +1,15 @@
+// HL7 Concept Map_ EncounterPriority - Sheet1.csv
 Instance: TableHL70217toV3ActPriority
 InstanceOf: ConceptMap
 Title: "Table HL70217 to V3 ActPriority Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 Table HL70217 to the FHIR V3 ActPriority Value Set."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70217 to the FHIR V3 ActPriority Value Set."
 * id = "table-hl70217-to-v3-actpriority"
 * url = "http://hl7.org/fhir/v2-tofhir/table-hl70217-to-v3-actpriority"
 * version = "1.0"
-* name = "Table_HL70217_Map"
+* name = "TableHL70217toV3ActPriority"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

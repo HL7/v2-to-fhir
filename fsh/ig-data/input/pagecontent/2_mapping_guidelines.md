@@ -45,7 +45,7 @@ Examples:
    * When a single v2 element has multiple rows, the order of execution of the rows for that element should not be important
    * The sort order number will repeat when the v2 component is repeated to this end.  For example, if ORC-2 Placer Order Number maps to two different FHIR elements, then both rows would have the same sort order number "2".
 
-* A condition includes the following statements:
+* A <span id="condition">condition</span> includes the following statements:
    * If computable, both a condition using:
        * the following easy to read syntax (referenced as Computable ANTLR - further documented here: [ANTLR Condition Syntax](antlr_condition_syntax.html))
 ```

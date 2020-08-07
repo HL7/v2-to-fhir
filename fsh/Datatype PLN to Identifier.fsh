@@ -1,14 +1,15 @@
+// HL7 Data Type - FHIR R4_ PLN[Identifier] - Sheet1.csv
 Instance: DatatypePLNtoIdentifier
 InstanceOf: ConceptMap
 Title: "Datatype PLN to Identifier Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Datatype PLN to the FHIR Identifier Data Type."
 * id = "datatype-pln-to-identifier"
 * url = "http://hl7.org/fhir/v2-tofhir/datatype-pln-to-identifier"
 * version = "1.0"
-* name = "Datatype_PLN_Map"
+* name = "DatatypePLNtoIdentifier"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -32,7 +33,7 @@ Title: "Datatype PLN to Identifier Map"
 * group.element[0].extension[0].extension[2].valueInteger = 1
 * group.element[0].display = "ID Number"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #Identifier.value
+* group.element[0].target.code = #value
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"string"
@@ -40,7 +41,7 @@ Title: "Datatype PLN to Identifier Map"
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
-* group.element[0].target.display = "Identifier.value"
+* group.element[0].target.display = "value"
 * group.element[1].code = #PLN.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -51,7 +52,7 @@ Title: "Datatype PLN to Identifier Map"
 * group.element[1].extension[0].extension[2].valueInteger = 1
 * group.element[1].display = "Type of ID Number"
 * group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #Identifier.type
+* group.element[1].target.code = #type
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -59,7 +60,7 @@ Title: "Datatype PLN to Identifier Map"
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
-* group.element[1].target.display = "Identifier.type"
+* group.element[1].target.display = "type"
 * group.element[1].target.dependsOn[0].property = "data-type-map"
 * group.element[1].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[1].target.dependsOn[1].property = "vocabulary-map"
@@ -74,7 +75,7 @@ Title: "Datatype PLN to Identifier Map"
 * group.element[2].extension[0].extension[2].valueInteger = 1
 * group.element[2].display = "Expiration Date"
 * group.element[2].target.equivalence = #equivalent
-* group.element[2].target.code = #Identifier.period.end
+* group.element[2].target.code = #period.end
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"dateTime"
@@ -82,6 +83,4 @@ Title: "Datatype PLN to Identifier Map"
 * group.element[2].target.extension[0].extension[1].valueInteger = 1
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
-* group.element[2].target.display = "Identifier.period.end"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "DT"
+* group.element[2].target.display = "period.end"

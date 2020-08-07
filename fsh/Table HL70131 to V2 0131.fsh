@@ -1,14 +1,15 @@
+// HL7 Concept Map_ ContactRole - Sheet1.csv
 Instance: TableHL70131toV20131
 InstanceOf: ConceptMap
 Title: "Table HL70131 to V2 0131 Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 Table HL70131 to the FHIR V2 0131 Value Set."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70131 to the FHIR V2 0131 Value Set."
 * id = "table-hl70131-to-v2-0131"
 * url = "http://hl7.org/fhir/v2-tofhir/table-hl70131-to-v2-0131"
 * version = "1.0"
-* name = "Table_HL70131_Map"
+* name = "TableHL70131toV20131"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

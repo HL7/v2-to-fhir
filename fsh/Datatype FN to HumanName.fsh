@@ -1,14 +1,15 @@
+// HL7 Data Type - FHIR R4_ FN[HumanName] - Sheet1.csv
 Instance: DatatypeFNtoHumanName
 InstanceOf: ConceptMap
 Title: "Datatype FN to HumanName Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Datatype FN to the FHIR HumanName Data Type."
 * id = "datatype-fn-to-humanname"
 * url = "http://hl7.org/fhir/v2-tofhir/datatype-fn-to-humanname"
 * version = "1.0"
-* name = "Datatype_FN_Map"
+* name = "DatatypeFNtoHumanName"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -32,7 +33,7 @@ Title: "Datatype FN to HumanName Map"
 * group.element[0].extension[0].extension[2].valueInteger = 1
 * group.element[0].display = "Surname"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #HumanName.family
+* group.element[0].target.code = #family
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"string"
@@ -40,7 +41,7 @@ Title: "Datatype FN to HumanName Map"
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
-* group.element[0].target.display = "HumanName.family"
+* group.element[0].target.display = "family"
 * group.element[1].code = #FN.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -51,7 +52,7 @@ Title: "Datatype FN to HumanName Map"
 * group.element[1].extension[0].extension[2].valueInteger = 1
 * group.element[1].display = "Own Surname Prefix"
 * group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #HumanName.family.extension-humanname-own-prefix
+* group.element[1].target.code = #family.extension-humanname-own-prefix
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"string"
@@ -59,7 +60,7 @@ Title: "Datatype FN to HumanName Map"
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
-* group.element[1].target.display = "HumanName.family.extension-humanname-own-prefix"
+* group.element[1].target.display = "family.extension-humanname-own-prefix"
 * group.element[2].code = #FN.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -70,7 +71,7 @@ Title: "Datatype FN to HumanName Map"
 * group.element[2].extension[0].extension[2].valueInteger = 1
 * group.element[2].display = "Own Surname"
 * group.element[2].target.equivalence = #equivalent
-* group.element[2].target.code = #HumanName.family.extension-humanname-own-name
+* group.element[2].target.code = #family.extension-humanname-own-name
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"string"
@@ -78,7 +79,7 @@ Title: "Datatype FN to HumanName Map"
 * group.element[2].target.extension[0].extension[1].valueInteger = 1
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
-* group.element[2].target.display = "HumanName.family.extension-humanname-own-name"
+* group.element[2].target.display = "family.extension-humanname-own-name"
 * group.element[3].code = #FN.4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -89,7 +90,7 @@ Title: "Datatype FN to HumanName Map"
 * group.element[3].extension[0].extension[2].valueInteger = 1
 * group.element[3].display = "Surname Prefix from Partner/Spouse"
 * group.element[3].target.equivalence = #equivalent
-* group.element[3].target.code = #HumanName.family.extension-humanname-partner-prefix
+* group.element[3].target.code = #family.extension-humanname-partner-prefix
 * group.element[3].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"string"
@@ -97,7 +98,7 @@ Title: "Datatype FN to HumanName Map"
 * group.element[3].target.extension[0].extension[1].valueInteger = 1
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
-* group.element[3].target.display = "HumanName.family.extension-humanname-partner-prefix"
+* group.element[3].target.display = "family.extension-humanname-partner-prefix"
 * group.element[4].code = #FN.5
 * group.element[4].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -108,7 +109,7 @@ Title: "Datatype FN to HumanName Map"
 * group.element[4].extension[0].extension[2].valueInteger = 1
 * group.element[4].display = "Surname from Partner/Spouse"
 * group.element[4].target.equivalence = #equivalent
-* group.element[4].target.code = #HumanName.family.extension-humanname-partner-name
+* group.element[4].target.code = #family.extension-humanname-partner-name
 * group.element[4].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[4].target.extension[0].extension[0].url = "type"
 * group.element[4].target.extension[0].extension[0].valueCode = #"string"
@@ -116,4 +117,4 @@ Title: "Datatype FN to HumanName Map"
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
-* group.element[4].target.display = "HumanName.family.extension-humanname-partner-name"
+* group.element[4].target.display = "family.extension-humanname-partner-name"

@@ -52,34 +52,4 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
         }
         w.println("</tbody></table>");
     }
-
-    public void setNames() {
-        ConceptMapInput bean = super.getFirstMappedBean();
-        if (bean == null) {
-            target = "Unknown";
-            targetName = "Unknown";
-            return;
-        }
-
-        source = bean.v2CodeSystem;
-        String v2TermPrefix = "http://terminology.hl7.org/CodeSystem/v2-";
-        if (source.startsWith(v2TermPrefix)) {
-            sourceName = "HL7" + source.substring(v2TermPrefix.length());
-        } else {
-            sourceName = source;
-        }
-        target = bean.fhirCodeSystem;
-        if (StringUtils.isBlank(target)) {
-            target = "Unknown";
-        }
-        targetName = toFhirName(target);
-    }
-
-    private String toFhirName(String target) {
-        if (target.contains("/")) {
-            target = StringUtils.substringAfterLast(target, "/");
-        }
-        return WordUtils.capitalize(target.replace("-", " "));
-    }
-
 }

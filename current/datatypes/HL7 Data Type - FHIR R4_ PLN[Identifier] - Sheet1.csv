@@ -1,0 +1,7 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,PLN.1,ID Number,ST,1,1,,,,value,,string,0,1,,,,,
+2,PLN.2,Type of ID Number,CWE,1,1,,,,type,,CodeableConcept,0,1,CWE[CodeableConcept],HL70338,,,
+3,PLN.3,State/other Qualifying Information,ST,0,1,,,,,Identifier.#ext-comment#,string,0,1,,,,,
+4,PLN.4,Expiration Date,DT,0,1,,,,period.end,,dateTime,0,1,,,,,

@@ -1,0 +1,11 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,EVN-1,Event Type Code,ID,0,1,,,,,,,,,,,,,
+2,EVN-2,Recorded Date/Time,DTM,1,1,,,,recorded,,instant,1,1,,,,,
+3,EVN-3,Date/Time Planned Event,DTM,0,1,,,,,,,,,,,,,
+4,EVN-4,Event Reason Code,CWE,0,1,"IF ENV-4 NOT ""U""",,,reason,,CodeableConcept,0,-1,CWE[CodeableConcept],EventReason,,,
+4,EVN-4,Event Reason Code,CWE,0,1,"IF EVN-4 IS ""U""",,,reason.extension-data-absent-reason,,CodeableConcept,0,1,,,"""unknown""",,
+5,EVN-5,Operator ID,XCN,0,-1,,,,agent.who(Practitioner),,Reference(Practitioner),1,-1,XCN[Practitioner],OperatorID,,,
+6,EVN-6,Event Occurred,DTM,0,1,,,,occurredDateTime,,dateTime,0,1,,,,,
+7,EVN-7,Event Facility,HD,0,1,,,,location(Location),,,0,1,HD[Location],,,,

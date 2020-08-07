@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-spm-to-specimen",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 SPM Segment to the FHIR Specimen Resource.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Segment SPM to the FHIR Specimen Resource.",
   "url": "http://hl7.org/fhir/v2-tofhir/segment-spm-to-specimen",
   "version": "1.0",
-  "name": "Segment_SPM_Map",
+  "name": "SegmentSPMtoSpecimen",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -69,7 +69,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.identifier[1]",
+              "code": "identifier[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -89,7 +89,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.identifier[1]",
+              "display": "identifier[1]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -124,7 +124,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.parent.identifier",
+              "code": "parent.identifier",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -144,7 +144,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.parent.identifier",
+              "display": "parent.identifier",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -185,7 +185,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.type",
+              "code": "type",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -205,7 +205,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.type",
+              "display": "type",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -240,7 +240,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.container.additiveCodeableConcept",
+              "code": "container.additiveCodeableConcept",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -260,7 +260,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.container.additiveCodeableConcept",
+              "display": "container.additiveCodeableConcept",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -295,7 +295,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.collection.method",
+              "code": "collection.method",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -315,7 +315,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.collection.method",
+              "display": "collection.method",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -350,7 +350,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.collection.bodySite",
+              "code": "collection.bodySite",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -370,7 +370,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.collection.bodySite",
+              "display": "collection.bodySite",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -405,7 +405,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.collection.quantity",
+              "code": "collection.quantity",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -425,7 +425,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.collection.quantity",
+              "display": "collection.quantity",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -460,7 +460,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.note(Annotation.text)",
+              "code": "note(Annotation.text)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -480,7 +480,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.note(Annotation.text)"
+              "display": "note(Annotation.text)"
             }
           ]
         },
@@ -509,12 +509,12 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.collection.collectedPeriod",
-              "display": "Specimen.collection.collectedPeriod",
+              "code": "collection.collectedPeriod",
+              "display": "collection.collectedPeriod",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "DR"
+                  "value": "DR[Period]"
                 }
               ],
               "product": [
@@ -551,8 +551,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.collection.collectedDateTime",
-              "display": "Specimen.collection.collectedDateTime",
+              "code": "collection.collectedDateTime",
+              "display": "collection.collectedDateTime",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -593,7 +593,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.receivedTime",
+              "code": "receivedTime",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -613,13 +613,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.receivedTime",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ]
+              "display": "receivedTime"
             }
           ]
         },
@@ -648,7 +642,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.status",
+              "code": "status",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -668,7 +662,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.status",
+              "display": "status",
               "dependsOn": [
                 {
                   "property": "vocabulary-map",
@@ -703,7 +697,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.condition",
+              "code": "condition",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -723,7 +717,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.condition",
+              "display": "condition",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -758,7 +752,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.container.type",
+              "code": "container.type",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -778,7 +772,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.container.type",
+              "display": "container.type",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -813,7 +807,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.accessionIdentifier",
+              "code": "accessionIdentifier",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -833,11 +827,11 @@
                   ]
                 }
               ],
-              "display": "Specimen.accessionIdentifier",
+              "display": "accessionIdentifier",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "CX"
+                  "value": "CX[Identifier]"
                 }
               ]
             }
@@ -868,7 +862,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.identifier[2]",
+              "code": "identifier[2]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -888,11 +882,11 @@
                   ]
                 }
               ],
-              "display": "Specimen.identifier[2]",
+              "display": "identifier[2]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "CX"
+                  "value": "CX[Identifier]"
                 }
               ]
             }
@@ -923,7 +917,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.identifier[3]",
+              "code": "identifier[3]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -943,7 +937,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.identifier[3]",
+              "display": "identifier[3]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -978,7 +972,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.identifier[3].type.coding.code",
+              "code": "identifier[3].type.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -998,7 +992,7 @@
                   ]
                 }
               ],
-              "display": "Specimen.identifier[3].type.coding.code"
+              "display": "identifier[3].type.coding.code"
             }
           ]
         },
@@ -1027,7 +1021,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Specimen.identifier[3].type.coding.system",
+              "code": "identifier[3].type.coding.system",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",

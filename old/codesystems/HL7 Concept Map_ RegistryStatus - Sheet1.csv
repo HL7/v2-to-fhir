@@ -1,0 +1,9 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+A,Active,HL70441,,,,true,,,,,
+I,Inactive,HL70441,,,,false,,,,,
+L,Inactive - Lost to follow-up (cancel contract),HL70441,,,,false,,,,,
+M,Inactive - Moved or gone elsewhere (cancel contract),HL70441,,,,false,,,,,
+P,Inactive - Permanently inactive (Do not reactivate or add new entries to the record),HL70441,,,,false,,,,,
+O,Other,HL70441,,,,,,,,,
+U,Unknown,HL70441,,,,,,,,,

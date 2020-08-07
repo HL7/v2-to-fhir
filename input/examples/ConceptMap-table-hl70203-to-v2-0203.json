@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "table-hl70203-to-v2-0203",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 Table HL70203 to the FHIR V2 0203 Value Set.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Table HL70203 to the FHIR V2 0203 Value Set.",
   "url": "http://hl7.org/fhir/v2-tofhir/table-hl70203-to-v2-0203",
   "version": "1.0",
-  "name": "Table_HL70203_Map",
+  "name": "TableHL70203toV20203",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {

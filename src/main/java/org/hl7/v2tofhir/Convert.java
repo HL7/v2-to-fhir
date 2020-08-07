@@ -95,7 +95,7 @@ public class Convert {
             success = false;
         }
 
-        success = success && ConverterImpl.printLinkData();
+        success = success && ConverterImpl.printLinkData(output);
 
         System.out.printf("%d files processed, %d errors, %d warnings%n", fileCount, ConverterImpl.getErrorCount(), ConverterImpl.getWarnCount());
         System.err.printf("%d files processed, %d errors, %d warnings%n", fileCount, ConverterImpl.getErrorCount(), ConverterImpl.getWarnCount());
@@ -210,9 +210,9 @@ public class Convert {
             for (Chapter subchap: chap.parts()) {
                 String link = subchap.getData().getLeft();
                 if (link.equals("Unknown")) {
-                    System.err.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle());
+                    System.err.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle().replaceAll("/V2/", "/v2/"));
                 } else {
-                    pw.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle());
+                    pw.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle().replaceAll("/V2/", "/v2/"));
                 }
             }
         }
@@ -220,24 +220,24 @@ public class Convert {
         pw.printf("<h2 style='--heading-prefix: \"\"' id='mapping'>Mapping</h2>%n"
             + "{%% include %s_mapping.md %%}%n", type.replace(" ", "").toLowerCase());
 
-        pw.printf("%n<div id=\"disqus_thread\"></div>%n" +
-            "<script>%n" +
-            "var disqus_config = function () {%n" +
-            "this.page.url = \"http://build.fhir.org/hl7/v2-to-fhir/branches/master/%s.html\"; // Replace PAGE_URL with your page's canonical URL variable%n" +
-            "this.page.identifier = this.page.url.substring(this.page.url.lastIndexOf(\"/\")+1, this.page.url.lastIndexOf(\".\")); // Replace PAGE_IDENTIFIER with your page's unique identifier variable%n" +
-            "};%n" +
-            "(function() { // DON'T EDIT BELOW THIS LINE%n" +
-            "var d = document, s = d.createElement('script');%n" +
-            "s.src = 'https://v2-to-fhir.disqus.com/embed.js';%n" +
-            "s.setAttribute('data-timestamp', +new Date());%n" +
-            "(d.head || d.body).appendChild(s);%n" +
-            "})();%n" +
-            "</script>%n" +
-            "<noscript>%n" +
-            "    Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a>%n" +
-            "</noscript>%n" +
-            "%n" +
-            "", StringUtils.substringBeforeLast(StringUtils.substringAfter(cDataFile.getName(),"_"),"."));
+//        pw.printf("%n<div id=\"disqus_thread\"></div>%n" +
+//            "<script>%n" +
+//            "var disqus_config = function () {%n" +
+//            "this.page.url = \"http://build.fhir.org/hl7/v2-to-fhir/branches/master/%s.html\"; // Replace PAGE_URL with your page's canonical URL variable%n" +
+//            "this.page.identifier = this.page.url.substring(this.page.url.lastIndexOf(\"/\")+1, this.page.url.lastIndexOf(\".\")); // Replace PAGE_IDENTIFIER with your page's unique identifier variable%n" +
+//            "};%n" +
+//            "(function() { // DON'T EDIT BELOW THIS LINE%n" +
+//            "var d = document, s = d.createElement('script');%n" +
+//            "s.src = 'https://v2-to-fhir.disqus.com/embed.js';%n" +
+//            "s.setAttribute('data-timestamp', +new Date());%n" +
+//            "(d.head || d.body).appendChild(s);%n" +
+//            "})();%n" +
+//            "</script>%n" +
+//            "<noscript>%n" +
+//            "    Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a>%n" +
+//            "</noscript>%n" +
+//            "%n" +
+//            "", StringUtils.substringBeforeLast(StringUtils.substringAfter(cDataFile.getName(),"_"),"."));
         pw.close();
 
         try {
@@ -312,7 +312,7 @@ public class Convert {
 
     private static String getFhirLocation(Map<String, Map<String, Triple<String, String, String>>> m, String targetName) {
         if (m.get("FHIR Resource").get(targetName) != null) {
-            return FHIR_PREFIX + "/" + targetName + ".html";
+            return FHIR_PREFIX + "/" + targetName.toLowerCase() + ".html";
         }
         if (m.get("FHIR Data Type").get(targetName) != null) {
             return FHIR_PREFIX + "/datatypes.html#" + targetName;
@@ -343,12 +343,29 @@ public class Convert {
            return;
         }
         Triple<String, String, String>
-            mtData = msgtype.get(StringUtils.substringBefore(structData.getLeft(),"/")),
+            mtData = msgtype.get(StringUtils.substringBefore(structData.getLeft(),"/"));
+        if (mtData == null) {
+            ConverterImpl.report(true, "Message Type %s not recognized.", 1, "N/A", structData.getLeft());
+            return;
+        }
+        Triple<String, String, String>
             titleData = title.get(mtData.getLeft());
-
+        if (titleData == null) {
+            ConverterImpl.report(true, "Title %s not recognized.", 1, "N/A", mtData.getLeft());
+            return;
+        }
         chap = chapters.get(titleData.getLeft());
+        if (chap == null) {
+            ConverterImpl.report(true, "Chapter %s not recognized.", 1, "N/A", titleData.getLeft());
+            return;
+        }
         chap.setData(titleData);
         subchap = chap.get(c.getSourceName());
+        if (subchap == null) {
+            ConverterImpl.report(true, "Chapter Section %s not recognized.", 1, "N/A", c.getSourceName());
+            return;
+        }
+
         subchap.setData(Triple.of(
             structData.getRight() +c.getQualifier(),
             structData.getMiddle(), c.getHtmlFileName()));

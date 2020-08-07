@@ -1,14 +1,15 @@
+// HL7 Concept Map_ Priority - Sheet1.csv
 Instance: TableHL70485toRequestPriority
 InstanceOf: ConceptMap
 Title: "Table HL70485 to Request Priority Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 Table HL70485 to the FHIR Request Priority Value Set."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70485 to the FHIR Request Priority Value Set."
 * id = "table-hl70485-to-request-priority"
 * url = "http://hl7.org/fhir/v2-tofhir/table-hl70485-to-request-priority"
 * version = "1.0"
-* name = "Table_HL70485_Map"
+* name = "TableHL70485toRequestPriority"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "datatype-xpn-to-humanname",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Datatype XPN to the FHIR HumanName Data Type.",
   "url": "http://hl7.org/fhir/v2-tofhir/datatype-xpn-to-humanname",
   "version": "1.0",
-  "name": "Datatype_XPN_Map",
+  "name": "DatatypeXPNtoHumanName",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -69,7 +69,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.family",
+              "code": "family",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -89,11 +89,11 @@
                   ]
                 }
               ],
-              "display": "HumanName.family",
+              "display": "family",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "FN"
+                  "value": "FN[HumanName]"
                 }
               ]
             }
@@ -124,7 +124,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.given[1]",
+              "code": "given[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -144,7 +144,7 @@
                   ]
                 }
               ],
-              "display": "HumanName.given[1]"
+              "display": "given[1]"
             }
           ]
         },
@@ -173,7 +173,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.given[2]",
+              "code": "given[2]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -193,7 +193,7 @@
                   ]
                 }
               ],
-              "display": "HumanName.given[2]"
+              "display": "given[2]"
             }
           ]
         },
@@ -222,7 +222,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.suffix",
+              "code": "suffix[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -242,7 +242,7 @@
                   ]
                 }
               ],
-              "display": "HumanName.suffix"
+              "display": "suffix[1]"
             }
           ]
         },
@@ -271,7 +271,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.prefix",
+              "code": "prefix",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -291,7 +291,7 @@
                   ]
                 }
               ],
-              "display": "HumanName.prefix"
+              "display": "prefix"
             }
           ]
         },
@@ -316,7 +316,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.suffix",
+              "code": "suffix[2]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -336,7 +336,7 @@
                   ]
                 }
               ],
-              "display": "HumanName.suffix"
+              "display": "suffix[2]"
             }
           ]
         },
@@ -365,7 +365,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.use",
+              "code": "use",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -385,7 +385,7 @@
                   ]
                 }
               ],
-              "display": "HumanName.use",
+              "display": "use",
               "dependsOn": [
                 {
                   "property": "vocabulary-map",
@@ -420,7 +420,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.period",
+              "code": "period",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -440,11 +440,11 @@
                   ]
                 }
               ],
-              "display": "HumanName.period",
+              "display": "period",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "DR"
+                  "value": "DR[Period]"
                 }
               ],
               "product": [
@@ -481,7 +481,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.family.ext-humanname-assembly-order",
+              "code": "family.ext-humanname-assembly-order",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -501,7 +501,7 @@
                   ]
                 }
               ],
-              "display": "HumanName.family.ext-humanname-assembly-order",
+              "display": "family.ext-humanname-assembly-order",
               "dependsOn": [
                 {
                   "property": "vocabulary-map",
@@ -536,7 +536,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.period.start",
+              "code": "period.start",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -556,13 +556,7 @@
                   ]
                 }
               ],
-              "display": "HumanName.period.start",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ]
+              "display": "period.start"
             }
           ]
         },
@@ -591,7 +585,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.period.end",
+              "code": "period.end",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -611,13 +605,7 @@
                   ]
                 }
               ],
-              "display": "HumanName.period.end",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ]
+              "display": "period.end"
             }
           ]
         },
@@ -646,7 +634,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName.suffix",
+              "code": "suffix",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -666,7 +654,7 @@
                   ]
                 }
               ],
-              "display": "HumanName.suffix"
+              "display": "suffix"
             }
           ]
         },
@@ -695,7 +683,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName[2].given",
+              "code": "[2].given",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -715,7 +703,7 @@
                   ]
                 }
               ],
-              "display": "HumanName[2].given",
+              "display": "[2].given",
               "product": [
                 {
                   "property": "narrative",
@@ -750,7 +738,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "HumanName[2].use",
+              "code": "[2].use",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -770,7 +758,7 @@
                   ]
                 }
               ],
-              "display": "HumanName[2].use",
+              "display": "[2].use",
               "dependsOn": [
                 {
                   "property": "value",

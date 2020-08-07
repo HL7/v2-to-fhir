@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-pid-to-patient",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 PID Segment to the FHIR Patient Resource.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Patient Resource.",
   "url": "http://hl7.org/fhir/v2-tofhir/segment-pid-to-patient",
   "version": "1.0",
-  "name": "Segment_PID_Map",
+  "name": "SegmentPIDtoPatient",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -69,7 +69,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[1]",
+              "code": "identifier[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -89,11 +89,11 @@
                   ]
                 }
               ],
-              "display": "Patient.identifier[1]",
+              "display": "identifier[1]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "CX"
+                  "value": "CX[Identifier]"
                 }
               ]
             }
@@ -124,7 +124,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[2]",
+              "code": "identifier[2]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -144,11 +144,11 @@
                   ]
                 }
               ],
-              "display": "Patient.identifier[2]",
+              "display": "identifier[2]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "CX"
+                  "value": "CX[Identifier]"
                 }
               ]
             }
@@ -179,7 +179,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[3]",
+              "code": "identifier[3]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -199,11 +199,11 @@
                   ]
                 }
               ],
-              "display": "Patient.identifier[3]",
+              "display": "identifier[3]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "CX"
+                  "value": "CX[Identifier]"
                 }
               ]
             }
@@ -234,7 +234,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.name[1]",
+              "code": "name[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -254,11 +254,11 @@
                   ]
                 }
               ],
-              "display": "Patient.name[1]",
+              "display": "name[1]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "XPN"
+                  "value": "XPN[HumanName]"
                 }
               ]
             }
@@ -289,7 +289,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-mothersMaidenName",
+              "code": "extension-mothersMaidenName",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -309,11 +309,11 @@
                   ]
                 }
               ],
-              "display": "Patient.extension-mothersMaidenName",
+              "display": "extension-mothersMaidenName",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "XPN"
+                  "value": "XPN[HumanName]"
                 }
               ]
             }
@@ -344,7 +344,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.birthDate",
+              "code": "birthDate",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -364,13 +364,7 @@
                   ]
                 }
               ],
-              "display": "Patient.birthDate",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM[Date]"
-                }
-              ]
+              "display": "birthDate"
             }
           ]
         },
@@ -399,7 +393,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-birthTime",
+              "code": "extension-birthTime",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -419,11 +413,11 @@
                   ]
                 }
               ],
-              "display": "Patient.extension-birthTime",
+              "display": "extension-birthTime",
               "product": [
                 {
                   "property": "antlr",
-                  "value": "IF LENGTH GREATER THAN 8"
+                  "value": "IF PID-7 LENGTH GREATER THAN 8"
                 }
               ]
             }
@@ -454,7 +448,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.gender",
+              "code": "gender",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -474,7 +468,7 @@
                   ]
                 }
               ],
-              "display": "Patient.gender",
+              "display": "gender",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -513,7 +507,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.name[2]",
+              "code": "name[2]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -533,110 +527,11 @@
                   ]
                 }
               ],
-              "display": "Patient.name[2]",
+              "display": "name[2]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "XPN"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "PID-10",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "CWE"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": -1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": -1
-                }
-              ]
-            }
-          ],
-          "display": "Race",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Observation",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-                  "extension": [
-                    {
-                      "url": "cardinalityMin",
-                      "valueInteger": 0
-                    },
-                    {
-                      "url": "cardinalityMax",
-                      "valueInteger": -1
-                    }
-                  ]
-                }
-              ],
-              "display": "Observation",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "CWE[Race]"
-                }
-              ],
-              "product": [
-                {
-                  "property": "narrative",
-                  "value": "If PID-10 is for clinical purposes"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "PID-10",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "CWE"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": -1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": -1
-                }
-              ]
-            }
-          ],
-          "display": "Race",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Observation.subject.reference",
-              "display": "Observation.subject.reference",
-              "dependsOn": [
-                {
-                  "property": "value",
-                  "value": "Patient.id"
-                }
-              ],
-              "product": [
-                {
-                  "property": "narrative",
-                  "value": "If PID-10 is for clinical purposes"
+                  "value": "XPN[HumanName]"
                 }
               ]
             }
@@ -667,7 +562,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.address[1]",
+              "code": "address[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -687,11 +582,11 @@
                   ]
                 }
               ],
-              "display": "Patient.address[1]",
+              "display": "address[1]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "XAD"
+                  "value": "XAD[Address]"
                 }
               ]
             }
@@ -705,7 +600,7 @@
               "extension": [
                 {
                   "url": "type",
-                  "valueCode": "IS"
+                  "valueCode": "ID"
                 },
                 {
                   "url": "cardinalityMin",
@@ -722,7 +617,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.address[1].district",
+              "code": "address[1].district",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -742,11 +637,11 @@
                   ]
                 }
               ],
-              "display": "Patient.address[1].district",
+              "display": "address[1].district",
               "product": [
                 {
                   "property": "antlr",
-                  "value": "IF PID-11.9 IS NOT VALUED"
+                  "value": "IF PID-11 LST.COUNT EQUALS 1 AND PID-11.9 IS NOT VALUED"
                 }
               ]
             }
@@ -777,7 +672,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[1]",
+              "code": "telecom[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -797,11 +692,11 @@
                   ]
                 }
               ],
-              "display": "Patient.telecom[1]",
+              "display": "telecom[1]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "XTN"
+                  "value": "XTN[ContactPoint]"
                 }
               ]
             }
@@ -832,8 +727,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[1].use",
-              "display": "Patient.telecom[1].use",
+              "code": "telecom[1].use",
+              "display": "telecom[1].use",
               "dependsOn": [
                 {
                   "property": "value",
@@ -874,7 +769,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[2]",
+              "code": "telecom[2]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -894,11 +789,11 @@
                   ]
                 }
               ],
-              "display": "Patient.telecom[2]",
+              "display": "telecom[2]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "XTN"
+                  "value": "XTN[ContactPoint]"
                 }
               ]
             }
@@ -929,8 +824,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[2].use",
-              "display": "Patient.telecom[2].use",
+              "code": "telecom[2].use",
+              "display": "telecom[2].use",
               "dependsOn": [
                 {
                   "property": "value",
@@ -940,7 +835,7 @@
               "product": [
                 {
                   "property": "antlr",
-                  "value": "IF PID-13.2 IS NOT VALUED"
+                  "value": "IF PID-14.2 IS NOT VALUED"
                 }
               ]
             }
@@ -971,7 +866,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.communication.language",
+              "code": "communication.language",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -991,7 +886,7 @@
                   ]
                 }
               ],
-              "display": "Patient.communication.language",
+              "display": "communication.language",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -1030,7 +925,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.maritalStatus",
+              "code": "maritalStatus",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1050,7 +945,7 @@
                   ]
                 }
               ],
-              "display": "Patient.maritalStatus",
+              "display": "maritalStatus",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -1089,7 +984,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-religion",
+              "code": "extension-patient-religion",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1109,7 +1004,7 @@
                   ]
                 }
               ],
-              "display": "Patient.extension-patient-religion",
+              "display": "extension-patient-religion",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -1118,97 +1013,6 @@
                 {
                   "property": "vocabulary-map",
                   "value": "Religion"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "PID-18",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "CX"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": 1
-                }
-              ]
-            }
-          ],
-          "display": "Patient Account Number",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Account[1].identifier",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-                  "extension": [
-                    {
-                      "url": "type",
-                      "valueCode": "Identifier"
-                    },
-                    {
-                      "url": "cardinalityMin",
-                      "valueInteger": 0
-                    },
-                    {
-                      "url": "cardinalityMax",
-                      "valueInteger": -1
-                    }
-                  ]
-                }
-              ],
-              "display": "Account[1].identifier",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "CX"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "PID-18",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "CX"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": 1
-                }
-              ]
-            }
-          ],
-          "display": "Patient Account Number",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Account[1].subject",
-              "display": "Account[1].subject",
-              "dependsOn": [
-                {
-                  "property": "value",
-                  "value": "Patient.id"
                 }
               ]
             }
@@ -1239,7 +1043,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[4].value",
+              "code": "identifier[4].value",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1259,7 +1063,7 @@
                   ]
                 }
               ],
-              "display": "Patient.identifier[4].value"
+              "display": "identifier[4].value"
             }
           ]
         },
@@ -1288,7 +1092,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[4].type.coding.code",
+              "code": "identifier[4].type.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1308,7 +1112,7 @@
                   ]
                 }
               ],
-              "display": "Patient.identifier[4].type.coding.code",
+              "display": "identifier[4].type.coding.code",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1343,7 +1147,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[4].type.coding.system",
+              "code": "identifier[4].type.coding.system",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1363,7 +1167,7 @@
                   ]
                 }
               ],
-              "display": "Patient.identifier[4].type.coding.system",
+              "display": "identifier[4].type.coding.system",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1398,7 +1202,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[4].system",
+              "code": "identifier[4].system",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1418,7 +1222,7 @@
                   ]
                 }
               ],
-              "display": "Patient.identifier[4].system",
+              "display": "identifier[4].system",
               "dependsOn": [
                 {
                   "property": "value",
@@ -1449,7 +1253,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[5]",
+              "code": "identifier[5]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1469,254 +1273,11 @@
                   ]
                 }
               ],
-              "display": "Patient.identifier[5]",
+              "display": "identifier[5]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "DLN"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "PID-21",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "CX"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": -1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": -1
-                }
-              ]
-            }
-          ],
-          "display": "Mother's Identifier",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "RelatedPerson.identifier",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-                  "extension": [
-                    {
-                      "url": "type",
-                      "valueCode": "Identifier"
-                    },
-                    {
-                      "url": "cardinalityMin",
-                      "valueInteger": 0
-                    },
-                    {
-                      "url": "cardinalityMax",
-                      "valueInteger": -1
-                    }
-                  ]
-                }
-              ],
-              "display": "RelatedPerson.identifier",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "CX"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "PID-21",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "CX"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": -1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": -1
-                }
-              ]
-            }
-          ],
-          "display": "Mother's Identifier",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "RelatedPerson.patient.reference",
-              "display": "RelatedPerson.patient.reference",
-              "dependsOn": [
-                {
-                  "property": "value",
-                  "value": "Patient.id"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "PID-21",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "CX"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": -1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": -1
-                }
-              ]
-            }
-          ],
-          "display": "Mother's Identifier",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "RelatedPerson.relationship.coding.code",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-                  "extension": [
-                    {
-                      "url": "type",
-                      "valueCode": "code"
-                    },
-                    {
-                      "url": "cardinalityMin",
-                      "valueInteger": 0
-                    },
-                    {
-                      "url": "cardinalityMax",
-                      "valueInteger": 1
-                    }
-                  ]
-                }
-              ],
-              "display": "RelatedPerson.relationship.coding.code",
-              "dependsOn": [
-                {
-                  "property": "value",
-                  "value": "\"MTH\""
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "PID-21",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "CX"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": -1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": -1
-                }
-              ]
-            }
-          ],
-          "display": "Mother's Identifier",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "RelatedPerson.relationship.coding.system",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-                  "extension": [
-                    {
-                      "url": "type",
-                      "valueCode": "uri"
-                    },
-                    {
-                      "url": "cardinalityMin",
-                      "valueInteger": 0
-                    },
-                    {
-                      "url": "cardinalityMax",
-                      "valueInteger": 1
-                    }
-                  ]
-                }
-              ],
-              "display": "RelatedPerson.relationship.coding.system",
-              "dependsOn": [
-                {
-                  "property": "value",
-                  "value": "\"http://terminology.hl7.org/CodeSystem/v3-RoleCode\""
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "PID-22",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "CWE"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": -1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": -1
-                }
-              ]
-            }
-          ],
-          "display": "Ethnic Group",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Observation",
-              "display": "Observation",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "CWE[Ethnicity]"
-                }
-              ],
-              "product": [
-                {
-                  "property": "narrative",
-                  "value": "IF PID-22 is for clinical purposes"
+                  "value": "DLN[Identifier]"
                 }
               ]
             }
@@ -1747,7 +1308,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-birthplace.text",
+              "code": "extension-patient-birthplace.text",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1767,7 +1328,7 @@
                   ]
                 }
               ],
-              "display": "Patient.extension-patient-birthplace.text"
+              "display": "extension-patient-birthplace.text"
             }
           ]
         },
@@ -1796,7 +1357,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.multipleBirthBoolean",
+              "code": "multipleBirthBoolean",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1816,7 +1377,7 @@
                   ]
                 }
               ],
-              "display": "Patient.multipleBirthBoolean",
+              "display": "multipleBirthBoolean",
               "dependsOn": [
                 {
                   "property": "vocabulary-map",
@@ -1857,7 +1418,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.multipleBirthInteger",
+              "code": "multipleBirthInteger",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1877,7 +1438,7 @@
                   ]
                 }
               ],
-              "display": "Patient.multipleBirthInteger"
+              "display": "multipleBirthInteger"
             }
           ]
         },
@@ -1906,7 +1467,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-citizenship[1].code",
+              "code": "extension-patient-citizenship[1].code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1926,7 +1487,7 @@
                   ]
                 }
               ],
-              "display": "Patient.extension-patient-citizenship[1].code",
+              "display": "extension-patient-citizenship[1].code",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -1961,7 +1522,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-nationality.code",
+              "code": "extension-patient-nationality.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -1981,7 +1542,7 @@
                   ]
                 }
               ],
-              "display": "Patient.extension-patient-nationality.code",
+              "display": "extension-patient-nationality.code",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -2016,7 +1577,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.deceasedDateTime",
+              "code": "deceasedDateTime",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2036,13 +1597,7 @@
                   ]
                 }
               ],
-              "display": "Patient.deceasedDateTime",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ]
+              "display": "deceasedDateTime"
             }
           ]
         },
@@ -2071,7 +1626,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.deceasedBoolean",
+              "code": "deceasedBoolean",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2091,7 +1646,7 @@
                   ]
                 }
               ],
-              "display": "Patient.deceasedBoolean",
+              "display": "deceasedBoolean",
               "dependsOn": [
                 {
                   "property": "vocabulary-map",
@@ -2132,7 +1687,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.meta.lastUpdated",
+              "code": "meta.lastUpdated",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2152,7 +1707,7 @@
                   ]
                 }
               ],
-              "display": "Patient.meta.lastUpdated"
+              "display": "meta.lastUpdated"
             }
           ]
         },
@@ -2181,7 +1736,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-animal.species",
+              "code": "extension-patient-animal.species",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2201,7 +1756,7 @@
                   ]
                 }
               ],
-              "display": "Patient.extension-patient-animal.species",
+              "display": "extension-patient-animal.species",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -2236,7 +1791,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-animal.breed",
+              "code": "extension-patient-animal.breed",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2256,7 +1811,7 @@
                   ]
                 }
               ],
-              "display": "Patient.extension-patient-animal.breed",
+              "display": "extension-patient-animal.breed",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -2291,7 +1846,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-citizenship[2].code",
+              "code": "extension-patient-citizenship[2].code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2311,7 +1866,7 @@
                   ]
                 }
               ],
-              "display": "Patient.extension-patient-citizenship[2].code",
+              "display": "extension-patient-citizenship[2].code",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -2346,7 +1901,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[3]",
+              "code": "telecom[3]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -2366,11 +1921,11 @@
                   ]
                 }
               ],
-              "display": "Patient.telecom[3]",
+              "display": "telecom[3]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "XTN"
+                  "value": "XTN[ContactPoint]"
                 }
               ]
             }

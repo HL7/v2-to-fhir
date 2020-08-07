@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "datatype-xtn-to-contactpoint",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Datatype XTN to the FHIR ContactPoint Data Type.",
   "url": "http://hl7.org/fhir/v2-tofhir/datatype-xtn-to-contactpoint",
   "version": "1.0",
-  "name": "Datatype_XTN_Map",
+  "name": "DatatypeXTNtoContactPoint",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -69,7 +69,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.value",
+              "code": "value",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -89,7 +89,13 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.value"
+              "display": "value",
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF XTN.3 NOT IN (\"Internet\", \"X.400\") AND XTN.7 AND XTN.12 NOT VALUED"
+                }
+              ]
             }
           ]
         },
@@ -118,7 +124,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.use",
+              "code": "use",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -138,11 +144,11 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.use",
+              "display": "use",
               "dependsOn": [
                 {
                   "property": "vocabulary-map",
-                  "value": "Telecom Use Code"
+                  "value": "TelecomUseCode"
                 }
               ]
             }
@@ -173,7 +179,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.system",
+              "code": "system",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -193,11 +199,11 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.system",
+              "display": "system",
               "dependsOn": [
                 {
                   "property": "vocabulary-map",
-                  "value": "Telecom Equip Type"
+                  "value": "TelecomEquipType"
                 }
               ]
             }
@@ -228,7 +234,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.value",
+              "code": "value",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -248,7 +254,13 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.value"
+              "display": "value",
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF XTN.3 IN (\"Internet\", \"X.400\")"
+                }
+              ]
             }
           ]
         },
@@ -277,7 +289,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.extension-contactpoint-country",
+              "code": "extension-contactpoint-country",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -297,7 +309,7 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.extension-contactpoint-country"
+              "display": "extension-contactpoint-country"
             }
           ]
         },
@@ -326,7 +338,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.extension-contactpoint-area",
+              "code": "extension-contactpoint-area",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -346,7 +358,7 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.extension-contactpoint-area"
+              "display": "extension-contactpoint-area"
             }
           ]
         },
@@ -375,7 +387,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.extension-contactpoint-local",
+              "code": "extension-contactpoint-local",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -395,7 +407,13 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.extension-contactpoint-local"
+              "display": "extension-contactpoint-local",
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF XTN.3 NOT IN (\"Internet\", \"X.400\")"
+                }
+              ]
             }
           ]
         },
@@ -424,7 +442,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.extension-contactpoint-extension",
+              "code": "extension-contactpoint-extension",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -444,7 +462,7 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.extension-contactpoint-extension"
+              "display": "extension-contactpoint-extension"
             }
           ]
         },
@@ -473,7 +491,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.value",
+              "code": "value",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -493,7 +511,13 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.value"
+              "display": "value",
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF XTN.3 NOT IN (\"Internet\", \"X.400\")"
+                }
+              ]
             }
           ]
         },
@@ -522,7 +546,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.period.start",
+              "code": "period.start",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -542,13 +566,7 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.period.start",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ]
+              "display": "period.start"
             }
           ]
         },
@@ -577,7 +595,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.period.end",
+              "code": "period.end",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -597,13 +615,7 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.period.end",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ]
+              "display": "period.end"
             }
           ]
         },
@@ -632,7 +644,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "ContactPoint.rank",
+              "code": "rank",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -652,7 +664,7 @@
                   ]
                 }
               ],
-              "display": "ContactPoint.rank"
+              "display": "rank"
             }
           ]
         }

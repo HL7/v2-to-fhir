@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "message-oru-r01-to-bundle",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 ORU_R01 Message to the FHIR Message Bundle.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Message ORU_R01 to the FHIR Message Bundle.",
   "url": "http://hl7.org/fhir/v2-tofhir/message-oru-r01-to-bundle",
   "version": "1.0",
-  "name": "Message_ORU_R01_Map",
+  "name": "MessageORU_R01toBundle",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -103,7 +103,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "MSH[General]"
+                  "value": "MSH[MessageHeader]"
                 }
               ]
             }
@@ -135,43 +135,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "MSH[Provenance-Originator]"
-                },
-                {
-                  "property": "references",
-                  "value": "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "ORU_R01.MSH",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": 1
-                }
-              ]
-            }
-          ],
-          "display": "Message Header",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Provenance[2]",
-              "display": "Provenance[2]",
-              "dependsOn": [
-                {
-                  "property": "segment-map",
-                  "value": "MSH[Provenance-Translator]"
+                  "value": "MSH[Provenance]"
                 },
                 {
                   "property": "references",
@@ -208,7 +172,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "SFT"
+                  "value": "SFT[MessageHeader]"
                 }
               ]
             }
@@ -241,7 +205,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PID"
+                  "value": "PID[Patient]"
                 }
               ]
             }
@@ -274,7 +238,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PD1"
+                  "value": "PD1[Patient]"
                 }
               ]
             }
@@ -311,7 +275,7 @@
                 },
                 {
                   "property": "references",
-                  "value": "Patient[1].generalPractioner.reference=PractitionerRole[1].id"
+                  "value": "Patient[1].generalPractitioner.reference=PractitionerRole[1].id"
                 }
               ],
               "product": [
@@ -353,7 +317,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PRT[PID-PD1-RelatedPerson]"
+                  "value": "PRT[RelatedPerson]"
                 },
                 {
                   "property": "references",
@@ -437,13 +401,13 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient[1].contact",
-              "display": "Patient[1].contact",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
               "comment": "Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures.",
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "NK1[Patient.contact]"
+                  "value": "NK1[Patient]"
                 }
               ],
               "product": [
@@ -523,7 +487,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "OBX[OBservationComponent]"
+                  "value": "OBX[Observation-Component]"
                 }
               ],
               "product": [
@@ -561,7 +525,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PRT[OBX-Device]"
+                  "value": "PRT[Device]"
                 },
                 {
                   "property": "references",
@@ -603,7 +567,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PRT[OBX-Location]"
+                  "value": "PRT[Observation-Location]"
                 }
               ],
               "product": [
@@ -684,11 +648,43 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PV1"
+                  "value": "PV1[Encounter]"
                 },
                 {
                   "property": "references",
                   "value": "Encounter.subject.reference=Patient[1].id"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Visit",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PV1[Patient]"
                 }
               ]
             }
@@ -721,7 +717,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PV2"
+                  "value": "PV2[Encounter]"
                 }
               ]
             }
@@ -1209,7 +1205,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "OBX[ObservationComponent]"
+                  "value": "OBX[Observation-Component]"
                 },
                 {
                   "property": "references",
@@ -1251,7 +1247,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PRT[OBX-Device]"
+                  "value": "PRT[Device]"
                 },
                 {
                   "property": "references",
@@ -1294,7 +1290,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PRT[OBX-Location]"
+                  "value": "PRT[Observation-Location]"
                 }
               ],
               "product": [
@@ -1407,7 +1403,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "SPM"
+                  "value": "SPM[Specimen]"
                 },
                 {
                   "property": "references",

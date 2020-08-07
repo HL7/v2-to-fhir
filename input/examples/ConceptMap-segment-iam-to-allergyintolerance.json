@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-iam-to-allergyintolerance",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 IAM Segment to the FHIR AllergyIntolerance Resource.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Segment IAM to the FHIR AllergyIntolerance Resource.",
   "url": "http://hl7.org/fhir/v2-tofhir/segment-iam-to-allergyintolerance",
   "version": "1.0",
-  "name": "Segment_IAM_Map",
+  "name": "SegmentIAMtoAllergyIntolerance",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -69,7 +69,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.category",
+              "code": "category",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -89,7 +89,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.category",
+              "display": "category",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -128,7 +128,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.type",
+              "code": "type",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -148,7 +148,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.type",
+              "display": "type",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -187,7 +187,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.code[1]",
+              "code": "code[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -207,7 +207,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.code[1]",
+              "display": "code[1]",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -242,7 +242,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.reaction.severity",
+              "code": "reaction.severity",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -262,7 +262,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.reaction.severity",
+              "display": "reaction.severity",
               "dependsOn": [
                 {
                   "property": "vocabulary-map",
@@ -297,7 +297,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.reaction.manifestation.text",
+              "code": "reaction.manifestation.text",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -317,7 +317,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.reaction.manifestation.text",
+              "display": "reaction.manifestation.text",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -352,7 +352,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.identifier",
+              "code": "identifier",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -372,7 +372,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.identifier",
+              "display": "identifier",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -407,7 +407,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.onsetDateTime",
+              "code": "onsetDateTime",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -427,7 +427,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.onsetDateTime"
+              "display": "onsetDateTime"
             }
           ]
         },
@@ -456,7 +456,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.onsetString",
+              "code": "onsetString",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -476,7 +476,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.onsetString",
+              "display": "onsetString",
               "product": [
                 {
                   "property": "antlr",
@@ -511,7 +511,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recordedDate",
+              "code": "recordedDate",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -531,13 +531,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.recordedDate",
-              "dependsOn": [
-                {
-                  "property": "data-type-map",
-                  "value": "DTM"
-                }
-              ]
+              "display": "recordedDate"
             }
           ]
         },
@@ -566,7 +560,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(Practitioner.name)",
+              "code": "recorder.reference(Practitioner.name)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -586,7 +580,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.recorder.reference(Practitioner.name)",
+              "display": "recorder.reference(Practitioner.name)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -631,7 +625,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(Patient[1].name)",
+              "code": "recorder.reference(Patient[1].name)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -651,7 +645,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.recorder.reference(Patient[1].name)",
+              "display": "recorder.reference(Patient[1].name)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -692,7 +686,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(RelatedPerson.name)",
+              "code": "recorder.reference(RelatedPerson.name)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -712,7 +706,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.recorder.reference(RelatedPerson.name)",
+              "display": "recorder.reference(RelatedPerson.name)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -753,7 +747,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(RelatedPerson.relationship)",
+              "code": "recorder.reference(RelatedPerson.relationship)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -773,7 +767,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.recorder.reference(RelatedPerson.relationship)",
+              "display": "recorder.reference(RelatedPerson.relationship)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -818,7 +812,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.clinicalStatus",
+              "code": "clinicalStatus",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -838,7 +832,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.clinicalStatus",
+              "display": "clinicalStatus",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -873,7 +867,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.code[1]",
+              "code": "code[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -885,7 +879,7 @@
                   ]
                 }
               ],
-              "display": "AllergyIntolerance.code[1]",
+              "display": "code[1]",
               "dependsOn": [
                 {
                   "property": "data-type-map",

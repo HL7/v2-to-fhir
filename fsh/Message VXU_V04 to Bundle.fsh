@@ -1,14 +1,15 @@
+// HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv
 Instance: MessageVXU_V04toBundle
 InstanceOf: ConceptMap
 Title: "Message VXU_V04 to Bundle Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 VXU_V04 Message to the FHIR Message Bundle."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Message VXU_V04 to the FHIR Message Bundle."
 * id = "message-vxu-v04-to-bundle"
 * url = "http://hl7.org/fhir/v2-tofhir/message-vxu-v04-to-bundle"
 * version = "1.0"
-* name = "Message_VXU_V04_Map"
+* name = "MessageVXU_V04toBundle"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -46,7 +47,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[1].target.display = "MessageHeader[1]"
 * group.element[1].target.comment = "Processing of the MSH segment results in the creation of a new MessageHeader resource"
 * group.element[1].target.dependsOn[0].property = "segment-map"
-* group.element[1].target.dependsOn[0].value = "MSH[General]"
+* group.element[1].target.dependsOn[0].value = "MSH[MessageHeader]"
 * group.element[2].code = #VXU_V04.MSH
 * group.element[2].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "cardinalityMin"
@@ -58,62 +59,65 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[2].target.code = #Provenance[1]
 * group.element[2].target.display = "Provenance[1]"
 * group.element[2].target.dependsOn[0].property = "segment-map"
-* group.element[2].target.dependsOn[0].value = "MSH[Provenance-Originator]"
+* group.element[2].target.dependsOn[0].value = "MSH[Provenance]"
 * group.element[2].target.dependsOn[1].property = "references"
 * group.element[2].target.dependsOn[1].value = "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
-* group.element[3].code = #VXU_V04.MSH
+* group.element[3].code = #VXU_V04.SFT
 * group.element[3].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "cardinalityMin"
-* group.element[3].extension[0].extension[0].valueInteger = 1
+* group.element[3].extension[0].extension[0].valueInteger = 0
 * group.element[3].extension[0].extension[1].url = "cardinalityMax"
-* group.element[3].extension[0].extension[1].valueInteger = 1
-* group.element[3].display = "Message Header Segment"
+* group.element[3].extension[0].extension[1].valueInteger = -1
+* group.element[3].display = "Software"
 * group.element[3].target.equivalence = #equivalent
-* group.element[3].target.code = #Provenance[2]
-* group.element[3].target.display = "Provenance[2]"
+* group.element[3].target.code = #MessageHeader[1]
+* group.element[3].target.display = "MessageHeader[1]"
+* group.element[3].target.comment = "Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment."
 * group.element[3].target.dependsOn[0].property = "segment-map"
-* group.element[3].target.dependsOn[0].value = "MSH[Provenance-Translator]"
-* group.element[3].target.dependsOn[1].property = "references"
-* group.element[3].target.dependsOn[1].value = "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
-* group.element[4].code = #VXU_V04.SFT
+* group.element[3].target.dependsOn[0].value = "SFT[MessageHeader]"
+* group.element[4].code = #VXU_V04.PID
 * group.element[4].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "cardinalityMin"
-* group.element[4].extension[0].extension[0].valueInteger = 0
+* group.element[4].extension[0].extension[0].valueInteger = 1
 * group.element[4].extension[0].extension[1].url = "cardinalityMax"
-* group.element[4].extension[0].extension[1].valueInteger = -1
-* group.element[4].display = "Software"
+* group.element[4].extension[0].extension[1].valueInteger = 1
+* group.element[4].display = "Patient Identification Segment"
 * group.element[4].target.equivalence = #equivalent
-* group.element[4].target.code = #MessageHeader[1]
-* group.element[4].target.display = "MessageHeader[1]"
-* group.element[4].target.comment = "Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment."
+* group.element[4].target.code = #Patient[1]
+* group.element[4].target.display = "Patient[1]"
+* group.element[4].target.comment = "Processing of the PID segment results in the creation of a new Patient resource"
 * group.element[4].target.dependsOn[0].property = "segment-map"
-* group.element[4].target.dependsOn[0].value = "SFT"
-* group.element[5].code = #VXU_V04.PID
+* group.element[4].target.dependsOn[0].value = "PID[Patient]"
+* group.element[5].code = #VXU_V04.PD1
 * group.element[5].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "cardinalityMin"
-* group.element[5].extension[0].extension[0].valueInteger = 1
+* group.element[5].extension[0].extension[0].valueInteger = 0
 * group.element[5].extension[0].extension[1].url = "cardinalityMax"
 * group.element[5].extension[0].extension[1].valueInteger = 1
-* group.element[5].display = "Patient Identification Segment"
+* group.element[5].display = "Additional Demographics"
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #Patient[1]
 * group.element[5].target.display = "Patient[1]"
-* group.element[5].target.comment = "Processing of the PID segment results in the creation of a new Patient resource"
+* group.element[5].target.comment = "Incorporate PD1 content into the Patient created from the PID segment."
 * group.element[5].target.dependsOn[0].property = "segment-map"
-* group.element[5].target.dependsOn[0].value = "PID"
-* group.element[6].code = #VXU_V04.PD1
+* group.element[5].target.dependsOn[0].value = "PD1[Patient]"
+* group.element[6].code = #VXU_V04.NK1
 * group.element[6].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "cardinalityMin"
 * group.element[6].extension[0].extension[0].valueInteger = 0
 * group.element[6].extension[0].extension[1].url = "cardinalityMax"
-* group.element[6].extension[0].extension[1].valueInteger = 1
-* group.element[6].display = "Additional Demographics"
+* group.element[6].extension[0].extension[1].valueInteger = -1
+* group.element[6].display = "Next of Kin/Associated Parties"
 * group.element[6].target.equivalence = #equivalent
-* group.element[6].target.code = #Patient[1]
-* group.element[6].target.display = "Patient[1]"
-* group.element[6].target.comment = "Incorporate PD1 content into the Patient created from the PID segment."
+* group.element[6].target.code = #RelatedPerson[1]
+* group.element[6].target.display = "RelatedPerson[1]"
+* group.element[6].target.comment = "Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
 * group.element[6].target.dependsOn[0].property = "segment-map"
-* group.element[6].target.dependsOn[0].value = "PD1"
+* group.element[6].target.dependsOn[0].value = "NK1[RelatedPerson]"
+* group.element[6].target.dependsOn[1].property = "references"
+* group.element[6].target.dependsOn[1].value = "RelatedPerson.patient.reference=Patient[PID].id"
+* group.element[6].target.product[0].property = "narrative"
+* group.element[6].target.product[0].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
 * group.element[7].code = #VXU_V04.NK1
 * group.element[7].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "cardinalityMin"
@@ -122,29 +126,29 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[7].extension[0].extension[1].valueInteger = -1
 * group.element[7].display = "Next of Kin/Associated Parties"
 * group.element[7].target.equivalence = #equivalent
-* group.element[7].target.code = #RelatedPerson[1]
-* group.element[7].target.display = "RelatedPerson[1]"
-* group.element[7].target.comment = "Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
+* group.element[7].target.code = #Patient[1]
+* group.element[7].target.display = "Patient[1]"
 * group.element[7].target.dependsOn[0].property = "segment-map"
-* group.element[7].target.dependsOn[0].value = "NK1[RelatedPerson]"
-* group.element[7].target.dependsOn[1].property = "references"
-* group.element[7].target.dependsOn[1].value = "RelatedPerson.patient.reference=Patient[PID].id"
+* group.element[7].target.dependsOn[0].value = "NK1[Patient]"
 * group.element[7].target.product[0].property = "narrative"
 * group.element[7].target.product[0].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
-* group.element[8].code = #VXU_V04.NK1
+* group.element[8].code = #VXU_V04.PATIENT_VISIT.PV1
 * group.element[8].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
-* group.element[8].extension[0].extension[0].valueInteger = 0
+* group.element[8].extension[0].extension[0].valueInteger = 1
 * group.element[8].extension[0].extension[1].url = "cardinalityMax"
-* group.element[8].extension[0].extension[1].valueInteger = -1
-* group.element[8].display = "Next of Kin/Associated Parties"
+* group.element[8].extension[0].extension[1].valueInteger = 1
+* group.element[8].display = "Patient Visit"
 * group.element[8].target.equivalence = #equivalent
-* group.element[8].target.code = #Patient[1].contact
-* group.element[8].target.display = "Patient[1].contact"
+* group.element[8].target.code = #Encounter[1]
+* group.element[8].target.display = "Encounter[1]"
+* group.element[8].target.comment = "Processing of the PV1 segment results in the creation of a new Encounter resource"
 * group.element[8].target.dependsOn[0].property = "segment-map"
-* group.element[8].target.dependsOn[0].value = "NK1[Patient.contact]"
+* group.element[8].target.dependsOn[0].value = "PV1[Encounter]"
+* group.element[8].target.dependsOn[1].property = "references"
+* group.element[8].target.dependsOn[1].value = "Encounter.subject.reference=Patient[PID].id"
 * group.element[8].target.product[0].property = "narrative"
-* group.element[8].target.product[0].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
+* group.element[8].target.product[0].value = "Only if the system wants to know about the encounter related to the immunization event"
 * group.element[9].code = #VXU_V04.PATIENT_VISIT.PV1
 * group.element[9].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "cardinalityMin"
@@ -153,15 +157,10 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[9].extension[0].extension[1].valueInteger = 1
 * group.element[9].display = "Patient Visit"
 * group.element[9].target.equivalence = #equivalent
-* group.element[9].target.code = #Encounter[1]
-* group.element[9].target.display = "Encounter[1]"
-* group.element[9].target.comment = "Processing of the PV1 segment results in the creation of a new Encounter resource"
+* group.element[9].target.code = #Patient[1]
+* group.element[9].target.display = "Patient[1]"
 * group.element[9].target.dependsOn[0].property = "segment-map"
-* group.element[9].target.dependsOn[0].value = "PV1"
-* group.element[9].target.dependsOn[1].property = "references"
-* group.element[9].target.dependsOn[1].value = "Encounter.subject.reference=Patient[PID].id"
-* group.element[9].target.product[0].property = "narrative"
-* group.element[9].target.product[0].value = "Only if the system wants to know about the encounter related to the immunization event"
+* group.element[9].target.dependsOn[0].value = "PV1[Patient]"
 * group.element[10].code = #VXU_V04.PATIENT_VISIT.PV2
 * group.element[10].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "cardinalityMin"
@@ -174,7 +173,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[10].target.display = "Encounter[1]"
 * group.element[10].target.comment = "Incorporate PV2 content into the Encounter created from the PV1 segment."
 * group.element[10].target.dependsOn[0].property = "segment-map"
-* group.element[10].target.dependsOn[0].value = "PV2"
+* group.element[10].target.dependsOn[0].value = "PV2[Encounter]"
 * group.element[11].code = #VXU_V04.PERSON_OBSERVATION.OBX
 * group.element[11].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
@@ -202,7 +201,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[12].target.code = #Observation[1]
 * group.element[12].target.display = "Observation[1]"
 * group.element[12].target.dependsOn[0].property = "segment-map"
-* group.element[12].target.dependsOn[0].value = "OBX[ObservationComponent]"
+* group.element[12].target.dependsOn[0].value = "OBX[Observation-Component]"
 * group.element[12].target.dependsOn[1].property = "references"
 * group.element[12].target.dependsOn[1].value = "Observation.subject.reference=Patient[1].id"
 * group.element[12].target.product[0].property = "antlr"
@@ -218,7 +217,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[13].target.code = #Device[1]
 * group.element[13].target.display = "Device[1]"
 * group.element[13].target.dependsOn[0].property = "segment-map"
-* group.element[13].target.dependsOn[0].value = "PRT[OBX-Device]"
+* group.element[13].target.dependsOn[0].value = "PRT[Observation-Device]"
 * group.element[13].target.dependsOn[1].property = "references"
 * group.element[13].target.dependsOn[1].value = "Observation[1].device.reference=Device.id"
 * group.element[13].target.product[0].property = "antlr"
@@ -235,7 +234,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[14].target.display = "Observation[1]"
 * group.element[14].target.comment = "At this time we don't know of a use case for sending a location PRT to a patient level observations. We've provided a mapping from PRT to Location but not way to link it to other resources in the Bundle. If there is a known use case, please comment on it so that we can develop a solution."
 * group.element[14].target.dependsOn[0].property = "segment-map"
-* group.element[14].target.dependsOn[0].value = "PRT[OBX-Location]"
+* group.element[14].target.dependsOn[0].value = "PRT[Observation-Location]"
 * group.element[14].target.product[0].property = "antlr"
 * group.element[14].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[15].code = #VXU_V04.PERSON_OBSERVATION.PRT
@@ -309,7 +308,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[19].target.code = #PractitionerRole[2]
 * group.element[19].target.display = "PractitionerRole[2]"
 * group.element[19].target.comment = """
-Processing of each PRT segment typically results in the creation of a new Practitioner or PractitionerRole resource. 
+Processing of each PRT segment typically results in the creation of a new Practitioner or PractitionerRole resource.
 
 The decision between creating a Practitioner or PractitionerRole resource may depend on the availability of data related to the practitioner's role elsewhere in the message.
 
@@ -452,7 +451,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[28].target.code = #Observation[2]
 * group.element[28].target.display = "Observation[2]"
 * group.element[28].target.dependsOn[0].property = "segment-map"
-* group.element[28].target.dependsOn[0].value = "OBX[ObservationComponent]"
+* group.element[28].target.dependsOn[0].value = "OBX[Observation-Component]"
 * group.element[28].target.dependsOn[1].property = "references"
 * group.element[28].target.dependsOn[1].value = "Observation.subject.reference=Patient[1].id; Observation.partOf.reference=Immunization[1].id"
 * group.element[28].target.product[0].property = "antlr"
@@ -470,7 +469,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[29].target.code = #Device[2]
 * group.element[29].target.display = "Device[2]"
 * group.element[29].target.dependsOn[0].property = "segment-map"
-* group.element[29].target.dependsOn[0].value = "PRT[OBX-Device]"
+* group.element[29].target.dependsOn[0].value = "PRT[Observation-Device]"
 * group.element[29].target.dependsOn[1].property = "references"
 * group.element[29].target.dependsOn[1].value = "Observation[1].device.reference=Device.id"
 * group.element[29].target.product[0].property = "antlr"
@@ -486,7 +485,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[30].target.code = #Observation[2]
 * group.element[30].target.display = "Observation[2]"
 * group.element[30].target.dependsOn[0].property = "segment-map"
-* group.element[30].target.dependsOn[0].value = "PRT[OBX-Location]"
+* group.element[30].target.dependsOn[0].value = "PRT[Observation-Location]"
 * group.element[30].target.product[0].property = "antlr"
 * group.element[30].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[31].code = #VXU_V04.ORDER.OBSERVATION.PRT

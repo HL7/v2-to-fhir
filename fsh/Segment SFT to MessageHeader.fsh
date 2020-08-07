@@ -1,14 +1,15 @@
+// HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv
 Instance: SegmentSFTtoMessageHeader
 InstanceOf: ConceptMap
 Title: "Segment SFT to MessageHeader Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 SFT Segment to the FHIR MessageHeader Resource."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Segment SFT to the FHIR MessageHeader Resource."
 * id = "segment-sft-to-messageheader"
 * url = "http://hl7.org/fhir/v2-tofhir/segment-sft-to-messageheader"
 * version = "1.0"
-* name = "Segment_SFT_Map"
+* name = "SegmentSFTtoMessageHeader"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -24,39 +25,27 @@ Title: "Segment SFT to MessageHeader Map"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1XsVWY6amPZPo_zDxRywAxAJqX1_BzD8-7gt729NKdH4/edit#gid=0"
 * group.element[0].code = #SFT-2
 * group.element[0].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
-* group.element[0].extension[0].extension[0].url = "type"
-* group.element[0].extension[0].extension[0].valueCode = #"ST"
-* group.element[0].extension[0].extension[1].url = "cardinalityMin"
+* group.element[0].extension[0].extension[0].url = "cardinalityMin"
+* group.element[0].extension[0].extension[0].valueInteger = 1
+* group.element[0].extension[0].extension[1].url = "cardinalityMax"
 * group.element[0].extension[0].extension[1].valueInteger = 1
-* group.element[0].extension[0].extension[2].url = "cardinalityMax"
-* group.element[0].extension[0].extension[2].valueInteger = 1
-* group.element[0].display = "Software Certified Version or Release Number"
+* group.element[0].display = "ST"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #MessageHeader.source.version
-* group.element[0].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
-* group.element[0].target.extension[0].extension[0].url = "type"
-* group.element[0].target.extension[0].extension[0].valueCode = #"string"
-* group.element[0].target.extension[0].extension[1].url = "cardinalityMin"
-* group.element[0].target.extension[0].extension[1].valueInteger = 0
-* group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
-* group.element[0].target.extension[0].extension[2].valueInteger = 1
-* group.element[0].target.display = "MessageHeader.source.version"
+* group.element[0].target.code = #source.version
+* group.element[0].target.display = "source.version"
+* group.element[0].target.comment = "1"
+* group.element[0].target.dependsOn[0].property = "references"
+* group.element[0].target.dependsOn[0].value = "string"
 * group.element[1].code = #SFT-3
 * group.element[1].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
-* group.element[1].extension[0].extension[0].url = "type"
-* group.element[1].extension[0].extension[0].valueCode = #"ST"
-* group.element[1].extension[0].extension[1].url = "cardinalityMin"
+* group.element[1].extension[0].extension[0].url = "cardinalityMin"
+* group.element[1].extension[0].extension[0].valueInteger = 1
+* group.element[1].extension[0].extension[1].url = "cardinalityMax"
 * group.element[1].extension[0].extension[1].valueInteger = 1
-* group.element[1].extension[0].extension[2].url = "cardinalityMax"
-* group.element[1].extension[0].extension[2].valueInteger = 1
-* group.element[1].display = "Software Product Name"
+* group.element[1].display = "ST"
 * group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #MessageHeader.source.software
-* group.element[1].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
-* group.element[1].target.extension[0].extension[0].url = "type"
-* group.element[1].target.extension[0].extension[0].valueCode = #"string"
-* group.element[1].target.extension[0].extension[1].url = "cardinalityMin"
-* group.element[1].target.extension[0].extension[1].valueInteger = 0
-* group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
-* group.element[1].target.extension[0].extension[2].valueInteger = 1
-* group.element[1].target.display = "MessageHeader.source.software"
+* group.element[1].target.code = #source.software
+* group.element[1].target.display = "source.software"
+* group.element[1].target.comment = "1"
+* group.element[1].target.dependsOn[0].property = "references"
+* group.element[1].target.dependsOn[0].value = "string"

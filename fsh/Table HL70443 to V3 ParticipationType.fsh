@@ -1,14 +1,15 @@
+// HL7 Concept Map_ Role - Sheet1.csv
 Instance: TableHL70443toV3ParticipationType
 InstanceOf: ConceptMap
 Title: "Table HL70443 to V3 ParticipationType Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 Table HL70443 to the FHIR V3 ParticipationType Value Set."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70443 to the FHIR V3 ParticipationType Value Set."
 * id = "table-hl70443-to-v3-participationtype"
 * url = "http://hl7.org/fhir/v2-tofhir/table-hl70443-to-v3-participationtype"
 * version = "1.0"
-* name = "Table_HL70443_Map"
+* name = "TableHL70443toV3ParticipationType"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -66,7 +67,9 @@ Title: "Table HL70443 to V3 ParticipationType Map"
 * group.element[11].target.equivalence = #unmatched
 * group.element[12].code = #PP
 * group.element[12].display = "Primary Care Provider"
-* group.element[12].target.equivalence = #unmatched
+* group.element[12].target.equivalence = #equivalent
+* group.element[12].target.code = #446050000
+* group.element[12].target.display = "PCP - Primary care physician"
 * group.element[13].code = #RO
 * group.element[13].display = "Responsible Observer"
 * group.element[13].target.equivalence = #unmatched

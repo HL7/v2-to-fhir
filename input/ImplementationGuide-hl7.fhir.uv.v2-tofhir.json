@@ -489,14 +489,14 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cmspecimensource-to-specimen"
+          "reference": "ConceptMap/datatype-cmsource-to-specimen"
         },
         "name": "Datatype CM to Specimen Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cnecodeableconcept-to-codeableconcept"
+          "reference": "ConceptMap/datatype-cne-to-codeableconcept"
         },
         "name": "Datatype CNE to CodeableConcept Map",
         "exampleBoolean": true
@@ -510,77 +510,84 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cqquantity-to-quantity"
+          "reference": "ConceptMap/datatype-cq-to-quantity"
         },
         "name": "Datatype CQ to Quantity Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cqservicerequestduration-to-timing"
+          "reference": "ConceptMap/datatype-cq-to-servicerequest.occurencetiming"
         },
-        "name": "Datatype CQ to Timing Map",
+        "name": "Datatype CQ to ServiceRequest.occurenceTiming Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cwecode-to-code"
+          "reference": "ConceptMap/datatype-cwe-to-annotation"
+        },
+        "name": "Datatype CWE to Annotation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-cwe-to-code"
         },
         "name": "Datatype CWE to code Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cwecodeableconcept-to-codeableconcept"
+          "reference": "ConceptMap/datatype-cwe-to-codeableconcept"
         },
         "name": "Datatype CWE to CodeableConcept Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cwecoding-to-coding"
+          "reference": "ConceptMap/datatype-cwe-to-coding"
         },
         "name": "Datatype CWE to Coding Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cweduration-to-duration"
+          "reference": "ConceptMap/datatype-cwe-to-duration"
         },
-        "name": "Datatype CWE to duration Map",
+        "name": "Datatype CWE to Duration Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cweorganization-to-organization"
+          "reference": "ConceptMap/datatype-cwe-to-organization"
         },
         "name": "Datatype CWE to Organization Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cwequantity-to-quantity"
+          "reference": "ConceptMap/datatype-cwe-to-quantity"
         },
         "name": "Datatype CWE to Quantity Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cwestring-to-string"
+          "reference": "ConceptMap/datatype-cwe-to-string"
         },
         "name": "Datatype CWE to string Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cwetiming.duration-to-timing"
+          "reference": "ConceptMap/datatype-cwe-to-timing.duration"
         },
-        "name": "Datatype CWE to Timing Map",
+        "name": "Datatype CWE to Timing.duration Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-cweuri-to-uri"
+          "reference": "ConceptMap/datatype-cwe-to-uri"
         },
         "name": "Datatype CWE to uri Map",
         "exampleBoolean": true
@@ -594,9 +601,23 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/datatype-dld-to-location"
+        },
+        "name": "Datatype DLD to Location Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/datatype-dln-to-identifier"
         },
         "name": "Datatype DLN to Identifier Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-dr-to-datetime"
+        },
+        "name": "Datatype DR to DateTime Map",
         "exampleBoolean": true
       },
       {
@@ -608,79 +629,65 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-drdatetime-to-datetime"
-        },
-        "name": "Datatype DR to dateTime Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/datatype-dt-to-datetime"
-        },
-        "name": "Datatype DT to dateTime Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/datatype-dtm-to-datetime"
-        },
-        "name": "Datatype DTM to dateTime Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/datatype-dtminstant-to-instant"
-        },
-        "name": "Datatype DTM to instant Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/datatype-edattachment-to-attachment"
+          "reference": "ConceptMap/datatype-ed-to-attachment"
         },
         "name": "Datatype ED to Attachment Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-eicoding-to-coding"
+          "reference": "ConceptMap/datatype-ei-to-coding"
         },
         "name": "Datatype EI to Coding Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-eiidentifier-to-identifier"
+          "reference": "ConceptMap/datatype-ei-to-identifier"
         },
         "name": "Datatype EI to Identifier Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-eipidentifier-to-identifier1"
-        },
-        "name": "Datatype EIP to Identifier[1] Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/datatype-eiprocedure-to-procedure"
+          "reference": "ConceptMap/datatype-ei-to-procedure"
         },
         "name": "Datatype EI to Procedure Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-eiudicarrierdi-to-device"
+          "reference": "ConceptMap/datatype-eip-to-identifier"
         },
-        "name": "Datatype EI to Device Map",
+        "name": "Datatype EIP to Identifier Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-erl-to-erl"
+          "reference": "ConceptMap/datatype-eipfillerassignedidentifer-to-identifier"
         },
-        "name": "Datatype ERL to ERL Map",
+        "name": "Datatype EIP to Identifier Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-eipfillerassignedidentifier-to-identifier"
+        },
+        "name": "Datatype EIP to Identifier Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-eipplacerassignedidentifier-to-identifier"
+        },
+        "name": "Datatype EIP to Identifier Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-eiudicarrier-to-device"
+        },
+        "name": "Datatype EI to Device Map",
         "exampleBoolean": true
       },
       {
@@ -692,42 +699,77 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-hdassigningauthority-to-hdassigningauthority"
+          "reference": "ConceptMap/datatype-hd-to-assigningauthority"
         },
-        "name": "Datatype HD to HD[AssigningAuthority] Map",
+        "name": "Datatype HD to AssigningAuthority Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-hdlocation-to-location"
+          "reference": "ConceptMap/datatype-hd-to-device"
+        },
+        "name": "Datatype HD to Device Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-hd-to-location"
         },
         "name": "Datatype HD to Location Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-hdmsh-4-to-messageheader"
+          "reference": "ConceptMap/datatype-hd-to-messageheader.destination"
         },
-        "name": "Datatype HD to MessageHeader Map",
+        "name": "Datatype HD to MessageHeader.destination Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-hdorganization-to-organization"
+          "reference": "ConceptMap/datatype-hd-to-messageheader.source"
+        },
+        "name": "Datatype HD to MessageHeader.source Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-hd-to-organization"
         },
         "name": "Datatype HD to Organization Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-idcodeableconcept-to-codeableconcept"
+          "reference": "ConceptMap/datatype-hd-to-uri"
+        },
+        "name": "Datatype HD to uri Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-id-to-codeableconcept"
         },
         "name": "Datatype ID to CodeableConcept Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-iscodeableconcept-to-codeableconcept"
+          "reference": "ConceptMap/datatype-id-to-coding"
+        },
+        "name": "Datatype ID to Coding Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-iduniversalid-to-codeableconcept"
+        },
+        "name": "Datatype ID to CodeableConcept Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-is-to-codeableconcept"
         },
         "name": "Datatype IS to CodeableConcept Map",
         "exampleBoolean": true
@@ -736,35 +778,63 @@
         "reference": {
           "reference": "ConceptMap/datatype-msg-to-coding"
         },
-        "name": "Datatype MSG to coding Map",
+        "name": "Datatype MSG to Coding Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-na-to-na"
+          "reference": "ConceptMap/datatype-msg-to-messageheader"
         },
-        "name": "Datatype NA to NA Map",
+        "name": "Datatype MSG to MessageHeader Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-ndlpractitionerrole-to-practitionerrole"
+          "reference": "ConceptMap/datatype-na-to-sampleddata"
+        },
+        "name": "Datatype NA to SampledData Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-nacomponent-to-observation"
+        },
+        "name": "Datatype NA to Observation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-ndl-to-practitionerrole"
         },
         "name": "Datatype NDL to PractitionerRole Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-nrrange-to-range"
+          "reference": "ConceptMap/datatype-nm-to-money"
+        },
+        "name": "Datatype NM to Money Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-nm-to-quantity"
+        },
+        "name": "Datatype NM to Quantity Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-nr-to-range"
         },
         "name": "Datatype NR to Range Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-pl-to-location1"
+          "reference": "ConceptMap/datatype-pl-to-location"
         },
-        "name": "Datatype PL to Location[1] Map",
+        "name": "Datatype PL to Location Map",
         "exampleBoolean": true
       },
       {
@@ -776,30 +846,30 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-pt-to-messageheader"
+          "reference": "ConceptMap/datatype-pln-to-location"
         },
-        "name": "Datatype PT to MessageHeader Map",
+        "name": "Datatype PLN to Location Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-ptmeta-to-tag1"
+          "reference": "ConceptMap/datatype-pt-to-meta"
         },
-        "name": "Datatype PT to tag[1] Map",
+        "name": "Datatype PT to Meta Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-ri-1timing-to-code"
+          "reference": "ConceptMap/datatype-ri-to-timing"
         },
-        "name": "Datatype RI-1 to code Map",
+        "name": "Datatype RI to Timing Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-rpattachment-to-url"
+          "reference": "ConceptMap/datatype-rp-to-attachment"
         },
-        "name": "Datatype RP to url Map",
+        "name": "Datatype RP to Attachment Map",
         "exampleBoolean": true
       },
       {
@@ -811,119 +881,98 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-sadaddressline-to-line1"
+          "reference": "ConceptMap/datatype-sn-to-quantity"
         },
-        "name": "Datatype SAD to line[1] Map",
+        "name": "Datatype SN to Quantity Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-snquantity-to-comparator"
+          "reference": "ConceptMap/datatype-sn-to-range"
         },
-        "name": "Datatype SN to comparator Map",
+        "name": "Datatype SN to Range Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-snrange-to-low"
+          "reference": "ConceptMap/datatype-sn-to-ratio"
         },
-        "name": "Datatype SN to low Map",
+        "name": "Datatype SN to Ratio Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-snratio-to-numerator"
-        },
-        "name": "Datatype SN to numerator Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/datatype-stidentifier-to-identifier"
+          "reference": "ConceptMap/datatype-st-to-identifier"
         },
         "name": "Datatype ST to Identifier Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-tm-to-time"
-        },
-        "name": "Datatype TM to time Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/datatype-tqmedicationrequest-to-medicationrequest"
+          "reference": "ConceptMap/datatype-tq-to-medicationrequest"
         },
         "name": "Datatype TQ to MedicationRequest Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-tqservicerequest-to-servicerequest"
+          "reference": "ConceptMap/datatype-tq-to-servicerequest"
         },
         "name": "Datatype TQ to ServiceRequest Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-tqtask-to-task"
+          "reference": "ConceptMap/datatype-tqexecutionperiod-to-task"
         },
         "name": "Datatype TQ to Task Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-ts-to-datetime"
+          "reference": "ConceptMap/datatype-xad-to-address"
         },
-        "name": "Datatype TS to dateTime Map",
+        "name": "Datatype XAD to Address Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-xad-to-line1-3"
-        },
-        "name": "Datatype XAD to line[1-3] Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/datatype-xcnpractitioner-to-practitioner"
+          "reference": "ConceptMap/datatype-xcn-to-practitioner"
         },
         "name": "Datatype XCN to Practitioner Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-xcnpractitionerrole-to-practitionerrole"
+          "reference": "ConceptMap/datatype-xcn-to-practitionerrole"
         },
         "name": "Datatype XCN to PractitionerRole Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-xcnrelatedperson-to-relatedperson"
+          "reference": "ConceptMap/datatype-xcn-to-relatedperson"
         },
         "name": "Datatype XCN to RelatedPerson Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-xonlocation-to-location"
+          "reference": "ConceptMap/datatype-xon-to-location"
         },
         "name": "Datatype XON to Location Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-xonorganization-to-organization"
+          "reference": "ConceptMap/datatype-xon-to-organization"
         },
         "name": "Datatype XON to Organization Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/datatype-xonstring-to-string"
+          "reference": "ConceptMap/datatype-xon-to-string"
         },
         "name": "Datatype XON to string Map",
         "exampleBoolean": true
@@ -965,13 +1014,6 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/message-hdmessageheader-to-name"
-        },
-        "name": "Message HD to name Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "ConceptMap/message-oml-o21-to-bundle"
         },
         "name": "Message OML_O21 to Bundle Map",
@@ -1000,37 +1042,51 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-al1allergeryintolerance-to-allergyintolerance"
+          "reference": "ConceptMap/segment-al1-to-allergyintolerance"
         },
         "name": "Segment AL1 to AllergyIntolerance Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-arv-to-meta"
+          "reference": "ConceptMap/segment-arv-to-encounter"
         },
-        "name": "Segment ARV to meta Map",
+        "name": "Segment ARV to Encounter Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-dg1condition-to-condition"
+          "reference": "ConceptMap/segment-arv-to-patient"
+        },
+        "name": "Segment ARV to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-dg1-to-condition"
         },
         "name": "Segment DG1 to Condition Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-dg1encounter-to-diagnosis"
+          "reference": "ConceptMap/segment-dg1-to-encounter"
         },
-        "name": "Segment DG1 to diagnosis Map",
+        "name": "Segment DG1 to Encounter Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-dg1episodeofcare-to-episodeofcare"
+          "reference": "ConceptMap/segment-dg1-to-episodeofcare"
         },
         "name": "Segment DG1 to EpisodeOfCare Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-evn-to-provenance"
+        },
+        "name": "Segment EVN to Provenance Map",
         "exampleBoolean": true
       },
       {
@@ -1042,93 +1098,156 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-mshbundle-to-bundle"
+          "reference": "ConceptMap/segment-in1-to-coverage"
+        },
+        "name": "Segment IN1 to Coverage Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-in2-to-coverage"
+        },
+        "name": "Segment IN2 to Coverage Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-in3-to-coverage"
+        },
+        "name": "Segment IN3 to Coverage Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-msh-to-bundle"
         },
         "name": "Segment MSH to Bundle Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-mshgeneral-to-messageheader"
+          "reference": "ConceptMap/segment-msh-to-messageheader"
         },
         "name": "Segment MSH to MessageHeader Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-mshprovenance-originator-to-provenance"
+          "reference": "ConceptMap/segment-msh-to-provenance"
         },
         "name": "Segment MSH to Provenance Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-nk1patient.contact-to-patient"
+          "reference": "ConceptMap/segment-msh-to-task"
+        },
+        "name": "Segment MSH to Task Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-nk1-to-patient"
         },
         "name": "Segment NK1 to Patient Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-nk1relatedperson-to-relatedperson"
+          "reference": "ConceptMap/segment-nk1-to-relatedperson"
         },
         "name": "Segment NK1 to RelatedPerson Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-nteannotation-to-annotation"
+          "reference": "ConceptMap/segment-nte-to-annotation"
         },
         "name": "Segment NTE to Annotation Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-obrdiagnosticreport-to-diagnosticreport"
+          "reference": "ConceptMap/segment-nte-to-observation"
+        },
+        "name": "Segment NTE to Observation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-nte-to-servicerequest"
+        },
+        "name": "Segment NTE to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-obr-to-diagnosticreport"
         },
         "name": "Segment OBR to DiagnosticReport Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-obrservicerequest-to-servicerequest"
+          "reference": "ConceptMap/segment-obr-to-servicerequest"
         },
         "name": "Segment OBR to ServiceRequest Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-obxobservationcomponent-to-observation"
+          "reference": "ConceptMap/segment-obx-to-observation"
         },
         "name": "Segment OBX to Observation Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-orcdiagnosticreport-to-diagnosticreport"
+          "reference": "ConceptMap/segment-obxcomponent-to-observation"
+        },
+        "name": "Segment OBX to Observation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-orc-to-diagnosticreport"
         },
         "name": "Segment ORC to DiagnosticReport Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-orcimmunization-to-immunization"
+          "reference": "ConceptMap/segment-orc-to-immunization"
         },
         "name": "Segment ORC to Immunization Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-orcprovenance-to-provenance"
+          "reference": "ConceptMap/segment-orc-to-provenance"
         },
         "name": "Segment ORC to Provenance Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-orcservicerequest-to-servicerequest"
+          "reference": "ConceptMap/segment-orc-to-servicerequest"
         },
         "name": "Segment ORC to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-orccancelorder-to-task"
+        },
+        "name": "Segment ORC to Task Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-orcnew-order-to-task"
+        },
+        "name": "Segment ORC to Task Map",
         "exampleBoolean": true
       },
       {
@@ -1140,9 +1259,37 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/segment-pid-to-account"
+        },
+        "name": "Segment PID to Account Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/segment-pid-to-patient"
         },
         "name": "Segment PID to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pidethnicgroup-to-observation"
+        },
+        "name": "Segment PID to Observation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pidmother-to-relatedperson"
+        },
+        "name": "Segment PID to RelatedPerson Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-pidrace-to-observation"
+        },
+        "name": "Segment PID to Observation Map",
         "exampleBoolean": true
       },
       {
@@ -1154,9 +1301,37 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-prtobx-device-to-operation"
+          "reference": "ConceptMap/segment-prt-to-device"
         },
-        "name": "Segment PRT to Operation Map",
+        "name": "Segment PRT to Device Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-prt-to-practitionerrole"
+        },
+        "name": "Segment PRT to PractitionerRole Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-prt-to-relatedperson"
+        },
+        "name": "Segment PRT to RelatedPerson Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-prtdevice-to-observation"
+        },
+        "name": "Segment PRT to Observation Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-prtlocation-to-observation"
+        },
+        "name": "Segment PRT to Observation Map",
         "exampleBoolean": true
       },
       {
@@ -1168,6 +1343,13 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/segment-pv1-to-patient"
+        },
+        "name": "Segment PV1 to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/segment-pv2-to-encounter"
         },
         "name": "Segment PV2 to Encounter Map",
@@ -1175,35 +1357,42 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-rolpid-pd1-practitionerrole-to-patient"
-        },
-        "name": "Segment ROL to Patient Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/segment-rolpid-pd1-relatedperson-to-relatedperson"
+          "reference": "ConceptMap/segment-rol-to-relatedperson"
         },
         "name": "Segment ROL to RelatedPerson Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-rolpv1-pv2-practitionerrole-to-encounter"
+          "reference": "ConceptMap/segment-rolpractitionerrole-to-encounter"
         },
         "name": "Segment ROL to Encounter Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-rxaimmunization-to-immunization"
+          "reference": "ConceptMap/segment-rolpractitionerrole-to-patient"
+        },
+        "name": "Segment ROL to Patient Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-rxa-to-immunization"
         },
         "name": "Segment RXA to Immunization Map",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "ConceptMap/segment-rxrimmunization-to-immunization"
+          "reference": "ConceptMap/segment-rxo-to-medicationrequest"
+        },
+        "name": "Segment RXO to MedicationRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-rxr-to-immunization"
         },
         "name": "Segment RXR to Immunization Map",
         "exampleBoolean": true
@@ -1220,6 +1409,20 @@
           "reference": "ConceptMap/segment-spm-to-specimen"
         },
         "name": "Segment SPM to Specimen Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-tq1-to-servicerequest"
+        },
+        "name": "Segment TQ1 to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-tq2-to-servicerequest"
+        },
+        "name": "Segment TQ2 to ServiceRequest Map",
         "exampleBoolean": true
       },
       {
@@ -1241,6 +1444,13 @@
           "reference": "ConceptMap/table-hl70007-to-v2-0007"
         },
         "name": "Table HL70007 to V2 0007 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70062-to-v3-actreason"
+        },
+        "name": "Table HL70062 to V3 ActReason Map",
         "exampleBoolean": true
       },
       {
@@ -1273,7 +1483,7 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/table-hl70123non-queries-to-diagnostic-report-status"
+          "reference": "ConceptMap/table-hl70123queries-to-diagnostic-report-status"
         },
         "name": "Table HL70123 to Diagnostic Report Status Map",
         "exampleBoolean": true

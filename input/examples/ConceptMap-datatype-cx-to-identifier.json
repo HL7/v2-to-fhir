@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "datatype-cx-to-identifier",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Datatype CX to the FHIR Identifier Data Type.",
   "url": "http://hl7.org/fhir/v2-tofhir/datatype-cx-to-identifier",
   "version": "1.0",
-  "name": "Datatype_CX_Map",
+  "name": "DatatypeCXtoIdentifier",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -69,7 +69,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Identifier.value",
+              "code": "value",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -89,7 +89,129 @@
                   ]
                 }
               ],
-              "display": "Identifier.value"
+              "display": "value"
+            }
+          ]
+        },
+        {
+          "code": "CX.4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Assigning Authority",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "assigner(Organization)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(Organization)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "assigner(Organization)",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "HD[Organization]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "narrative",
+                  "value": "If organization"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "CX.4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "HD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Assigning Authority",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "system",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "system",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "HD[uri]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "narrative",
+                  "value": "If system"
+                }
+              ]
             }
           ]
         },
@@ -118,7 +240,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Identifier.type.coding.code",
+              "code": "type.coding.code",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -138,7 +260,7 @@
                   ]
                 }
               ],
-              "display": "Identifier.type.coding.code",
+              "display": "type.coding.code",
               "dependsOn": [
                 {
                   "property": "vocabulary-map",
@@ -173,7 +295,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Identifier.period.start",
+              "code": "period.start",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -193,7 +315,7 @@
                   ]
                 }
               ],
-              "display": "Identifier.period.start"
+              "display": "period.start"
             }
           ]
         },
@@ -222,7 +344,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Identifier.period.end",
+              "code": "period.end",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -242,7 +364,7 @@
                   ]
                 }
               ],
-              "display": "Identifier.period.end"
+              "display": "period.end"
             }
           ]
         }

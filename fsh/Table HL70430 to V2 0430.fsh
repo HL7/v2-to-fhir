@@ -1,14 +1,15 @@
+// HL7 Concept Map_ ModeOfArrival - Sheet1.csv
 Instance: TableHL70430toV20430
 InstanceOf: ConceptMap
 Title: "Table HL70430 to V2 0430 Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 Table HL70430 to the FHIR V2 0430 Value Set."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70430 to the FHIR V2 0430 Value Set."
 * id = "table-hl70430-to-v2-0430"
 * url = "http://hl7.org/fhir/v2-tofhir/table-hl70430-to-v2-0430"
 * version = "1.0"
-* name = "Table_HL70430_Map"
+* name = "TableHL70430toV20430"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

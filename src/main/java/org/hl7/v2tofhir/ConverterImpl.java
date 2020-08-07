@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
@@ -21,14 +22,19 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.lang3.tuple.Triple;
+import org.apache.commons.text.WordUtils;
 
 import com.opencsv.bean.CsvToBeanBuilder;
 
 public abstract class ConverterImpl<T extends Convertible> implements Converter {
 
     private static final String FHIR_BASE = "https://hl7.org/fhir/R4/", FHIR_TERM = "http://terminology.hl7.org/";
+    private static boolean reportErrorsOnly = true;
     private static int errCount = 0, warnCount = 0;
+    private static File errorOutput = new File(".", "ConvertErrors.log");
+    private static PrintWriter log = null;
     private final String sourceUrl;
+    private String fhirPart;
     public static class Row {
         String sourceCode;
         String sourceDisplay;
@@ -57,6 +63,10 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         tableLinks = new TreeMap<>(),
         dataTypeLinks = new TreeMap<>();
 
+    private static String KNOWN_CODESYSTEM_URLS[] = {
+        "http://snomed.info/sct"
+    };
+
     private static Map<String, String> mappedLinks  = new HashMap<>();
     static {
         mappedLinks.put("Reference", FHIR_BASE + "references.html");
@@ -75,8 +85,12 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         mappedLinks.put("TriggerDefinition", FHIR_BASE + "metadatatypes.html#TriggerDefinition");
     }
 
-    protected String source, sourceName, qualifier, target, targetName;
-    protected String parts[] = null;
+    private String source;
+    private String sourceName;
+    private String qualifier;
+    private String target;
+    private String targetName;
+    private String parts[] = null;
 
     private String filename = null;
     private File theSource;
@@ -98,54 +112,85 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     public void load(File f) throws IOException {
         theSource = f;
         filename = f.getName();
+        fhirPart = StringUtils.substringBefore(
+            StringUtils.substringBefore(StringUtils.substringAfter(filename, "["), "]"), "-").trim();
+
         qualifier = StringUtils.substringBefore(StringUtils.substringAfter(filename,"["),"]");
+        target = null;
         if (qualifier.length() > 0) {
-            qualifier = "[" + qualifier.replace(" ", "") + "]";
+            qualifier = qualifier.replace(" ", "");
+            if (qualifier.contains("-")) {
+                target = StringUtils.substringBefore(qualifier, "-");
+                qualifier = "[" + StringUtils.substringAfter(qualifier, "-") + "]";
+            } else {
+                target = qualifier;
+                qualifier = "";
+            }
         }
+
         parts = filename.split("\\s*[\\._\\-]\\s*");
-        if (filename.contains("Message")) {
-            type = "Message";
-            source = sourceName = parts[3];
-            target = targetName = "Bundle";
-        } else if (filename.contains("Segment") &&
-                  !filename.contains("Segment Action Code")  // Hack to fix the one file using the word segment that is vocab
-            ) {
-            type = "Segment";
-            sourceName = StringUtils.substringBefore(parts[2], "[");
-            targetName = parts[2];
-        } else if (filename.contains("Data Type")) {
-            type = "Datatype";
-            sourceName = StringUtils.substringBefore(parts[2], "[");
-            targetName = parts[2];
-        } else if (filename.contains("Concept Map")) {
-            type = "Table";
-            sourceName = parts[1];
-        } else {
-        }
+        sourceName = source = StringUtils.substringBefore(parts[2], "[");
+        targetName = target;
+
 
         try (FileReader r = new FileReader(f)) {
             beans = new CsvToBeanBuilder<T>(r).withType(classType).build().parse();
         }
 
-        setNames();
+        if (filename.contains("HL7 Concept Map")) {
+            type = "Table";
+            sourceName = parts[1];
+            setTableNames();
+        } else if (filename.contains("HL7 Segment")) {
+            type = "Segment";
+        } else if (filename.contains("HL7 Data Type")) {
+            type = "Datatype";
+        } else if (filename.contains("HL7 Message")) {
+            type = "Message";
+            target = targetName = "Bundle";
+            sourceName = source = parts[2] + "_" + parts[3];
+        }
     }
 
-    public void setNames() {
+    public void setTableNames() {
         T first = getFirstMappedBean();
 
         if (first == null) {
-            source = cleanId(sourceName);
-            target = "Unknown";
+            source = makeId(sourceName);
+            if (target == null) {
+                target = "Unknown";
+            }
             if (targetName == null) {
                 targetName = "Unknown";
             }
-        } else {
-            Row r = first.convert();
-            source = r.sourceCode;
-            sourceName = r.sourceDisplay;
-            target = r.targetCode;
-            targetName = r.targetDisplay;
         }
+
+        ConceptMapInput bean = (ConceptMapInput)first;
+        if (bean == null) {
+            target = "Unknown";
+            targetName = "Unknown";
+            return;
+        }
+
+        source = bean.v2CodeSystem;
+        String v2TermPrefix = "http://terminology.hl7.org/CodeSystem/v2-";
+        if (source.startsWith(v2TermPrefix)) {
+            sourceName = "HL7" + source.substring(v2TermPrefix.length());
+        } else {
+            sourceName = source;
+        }
+        target = bean.fhirCodeSystem;
+        if (StringUtils.isBlank(target)) {
+            target = "Unknown";
+        }
+        targetName = toFhirName(target);
+    }
+
+    private String toFhirName(String target) {
+        if (target.contains("/")) {
+            target = StringUtils.substringAfterLast(target, "/");
+        }
+        return WordUtils.capitalize(target.replace("-", " "));
     }
 
     protected final T getFirstMappedBean() {
@@ -174,8 +219,11 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     }
 
     public String getId() {
-        return cleanId(String.format("%s-%s-to-%s",
-            type.toLowerCase(), sourceName + qualifier, targetName));
+        return makeId(getFishFileName());
+    }
+
+    private static String makeName(String fishFileName) {
+        return fishFileName.replace(".fsh","").replace("[", "").replace("]", "").replace(" ","");
     }
 
     public String getMdFileName(String prefix, String suffix) {
@@ -191,7 +239,6 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         File f;
         File intro;
         File notes;
-        String id = getId();
         String output = getFishFileName();
         if (loc.isDirectory()) {
             f = new File(loc, output);
@@ -209,25 +256,9 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
         try (PrintWriter pw = new PrintWriter(new FileWriter(f));
             PrintWriter introWriter = new PrintWriter(new FileWriter(intro));
-            PrintWriter notesWriter = new PrintWriter(new FileWriter(notes));) {
-            pw.printf("Instance: %s%sto%s%n", type, sourceName.replaceAll(" ", ""), targetName.replaceAll(" ", ""));
-            pw.println("InstanceOf: ConceptMap");
-            pw.printf("Title: \"%s %s to %s Map\"%n", type, sourceName, targetName);
-            pw.printf("* description = \"This ConceptMap represents the mapping from the HL7 V2 %s to the FHIR %s.\"%n",
-                getV2Description(), getFHIRDescription());
-            pw.printf("* id = \"%s\"%n", id);
-            pw.printf("* url = \"http://hl7.org/fhir/v2-tofhir/%s\"%n", id);
-            pw.println("* version = \"1.0\"");
-            pw.printf("* name = \"%s_%s_Map\"%n", type, sourceName);
-            pw.println("* status = #active");
-            pw.println("* experimental = true");
-            pw.printf("* date = \"%tF\"%n", new Date());
-            pw.println("* publisher = \"HL7 International, Inc\"");
-            pw.println("* contact.telecom.system = #email");
-            pw.println("* contact.telecom.value = \"v2-to-fhir@lists.hl7.org\"");
-            pw.println("* copyright = \"Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.\"");
-            pw.printf("* sourceUri = \"%s\"%n", source);
-            pw.printf("* targetUri = \"%s\"%n", target);
+            PrintWriter notesWriter = new PrintWriter(new FileWriter(notes));
+            ) {
+            writeHeader(loc.getName(), pw, filename, type, sourceName, targetName, getFHIRDescription(), source, target);
             if (sourceUrl != null) {
                 pw.printf("* extension[0].url = \"http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact\"%n");
                 pw.printf("* extension[0].extension[0].url = \"type\"%n");
@@ -342,25 +373,54 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             }
             if (notesWriter != null) {
                 // TBD: Address width and style hacks below
-                notesWriter.printf("<div id=\"disqus_thread\" style=\"display: block; width: 640px\"></div>%n" +
-                    "<script>%n" +
-                    "var disqus_config = function () {%n" +
-                    "this.page.url = \"http://build.fhir.org/hl7/v2-to-fhir/branches/master/%s\";  // Replace PAGE_URL with your page's canonical URL variable%n" +
-                    "this.page.identifier = \"%s\"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable%n" +
-                    "};%n" +
-                    "(function() { // DON'T EDIT BELOW THIS LINE%n" +
-                    "var d = document, s = d.createElement('script');%n" +
-                    "s.src = 'https://v2-to-fhir.disqus.com/embed.js';%n" +
-                    "s.setAttribute('data-timestamp', +new Date());%n" +
-                    "(d.head || d.body).appendChild(s);%n" +
-                    "})();%n" +
-                    "</script>%n" +
-                    "<noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>%n",
-                    getHtmlFileName(), id
-                    );
+//                notesWriter.printf("<div id=\"disqus_thread\" style=\"display: block; width: 640px\"></div>%n" +
+//                    "<script>%n" +
+//                    "var disqus_config = function () {%n" +
+//                    "this.page.url = \"http://build.fhir.org/hl7/v2-to-fhir/branches/master/%s\";  // Replace PAGE_URL with your page's canonical URL variable%n" +
+//                    "this.page.identifier = \"%s\"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable%n" +
+//                    "};%n" +
+//                    "(function() { // DON'T EDIT BELOW THIS LINE%n" +
+//                    "var d = document, s = d.createElement('script');%n" +
+//                    "s.src = 'https://v2-to-fhir.disqus.com/embed.js';%n" +
+//                    "s.setAttribute('data-timestamp', +new Date());%n" +
+//                    "(d.head || d.body).appendChild(s);%n" +
+//                    "})();%n" +
+//                    "</script>%n" +
+//                    "<noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>%n",
+//                    getHtmlFileName(), id
+//                    );
             }
         } catch (IOException ioex) {
             ioex.printStackTrace();
+        }
+    }
+
+    private static void writeHeader(String filename, PrintWriter pw,
+        String sourceFilename, String type, String sourceName, String targetName, String fhirType,
+        String source, String target
+    ) {
+        pw.printf("// %s%n", sourceFilename);
+        pw.printf("Instance: %s%n", makeName(filename));
+        pw.println("InstanceOf: ConceptMap");
+        pw.printf("Title: \"%s %s to %s Map\"%n", type, sourceName, targetName);
+        pw.printf("* description = \"This ConceptMap represents a mapping from the HL7 V2 %s %s to the FHIR %s.%s\"%n",
+            type, sourceName, fhirType, source == null ? " It is not yet supported." : "");
+        pw.printf("* id = \"%s\"%n", makeId(filename));
+        pw.printf("* url = \"http://hl7.org/fhir/v2-tofhir/%s\"%n", makeId(filename));
+        pw.println("* version = \"1.0\"");
+        pw.printf("* name = \"%s\"%n", makeName(filename));
+        pw.println("* status = #active");
+        pw.println("* experimental = true");
+        pw.printf("* date = \"%tF\"%n", new Date());
+        pw.println("* publisher = \"HL7 International, Inc\"");
+        pw.println("* contact.telecom.system = #email");
+        pw.println("* contact.telecom.value = \"v2-to-fhir@lists.hl7.org\"");
+        pw.println("* copyright = \"Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.\"");
+        if (source != null) {
+            pw.printf("* sourceUri = \"%s\"%n", source);
+        }
+        if (target != null) {
+            pw.printf("* targetUri = \"%s\"%n", target);
         }
     }
 
@@ -398,21 +458,21 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         }
     }
 
-    private Object getFHIRDescription() {
+    private String getFHIRDescription() {
+        String target = getTargetName();
         switch (type) {
         case "Table":
-            return String.format("%s Value Set", getTargetName());
+            return String.format("%s Value Set", target);
         case "Message":
-            return String.format("Message Bundle", getTargetName());
+            return String.format("Message Bundle", target);
         case "Segment":
-            return String.format("%s Resource", getTargetName());
-        case "Data Type":
-            return String.format("%s", getTargetName());
+        case "Datatype":
+            return String.format("%s %s", target, isResource(target, 0) != null ? "Resource" : "Data Type");
         }
         return null;
     }
 
-    private Object getV2Description() {
+    private String getV2Description() {
         switch (type) {
         case "Table":
             return String.format("Table %s", getSourceName());
@@ -420,7 +480,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             return String.format("%s Message", getSourceName());
         case "Segment":
             return String.format("%s Segment", getSourceName());
-        case "Data Type":
+        case "Datatype":
             return String.format("%s Data Type", getSourceName());
         }
         return null;
@@ -505,8 +565,11 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
     protected abstract void writeIntro(List<T> bean, PrintWriter introWriter);
 
-    private static String cleanId(String name) {
+    private static String makeId(String name) {
         name = name.contains("/") ? StringUtils.substringAfterLast(name, "/") : name;
+        if (name.endsWith(".fsh")) {
+            name = name.substring(0, name.length()-4);
+        }
         return StringUtils.truncate(StringUtils.replaceChars(name.toLowerCase(), "! _[]", "---").replaceAll("--+", "-"),
             64);
     }
@@ -577,21 +640,28 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                 );
             } else if (StringUtils.startsWith(fhirLink,  FHIR_TERM + "CodeSystem/")) {
                 links.append(makeLink(fhirLink, fhirLink + ".html"));
-            } else if ((link = isResource(fhirLink, count)) != null) {
-                // If a FHIR Resource, link to fhir/R4/{resource}.html
-                links.append(makeLink(link, FHIR_BASE + link + ".html"));
-            } else if ((link = isResourceField(fhirLink, count)) != null) {
-                // If a FHIR Resource field, link to fhir/R4/{resource}-definitions.html#{field}
-                name = StringUtils.substringBefore(link, ".");
-                links.append(makeLink(link, FHIR_BASE + name + "-definitions.html#" + link));
+            } else if (Arrays.asList(KNOWN_CODESYSTEM_URLS).contains(fhirLink)) {
+                links.append(makeLink(fhirLink, fhirLink));
             } else if (isMetaField(fhirLink)) {
                 links.append(makeLink(fhirLink, FHIR_BASE + "resource.html#Meta"));
+            } else if (((link = isFhirDataTypeField(fhirPart + "." + fhirLink, count)) != null)) {
+                links.append(makeLink(link, FHIR_BASE + "datatypes-definitions.html#" + fhirPart + "." + link));
+            } else if ((link = isResourceField(fhirPart + "." + fhirLink, count)) != null) {
+                name = StringUtils.substringBefore(link, ".");
+                links.append(makeLink(link, FHIR_BASE + fhirPart + "." + name + "-definitions.html#" + link));
             } else if ((link = isFhirDataType(fhirLink, count)) != null) {
                 // If a FHIR Data Type, link to  http://hl7.org/fhir/R4/datatypes.html#{datatype}
                 links.append(makeLink(link, FHIR_BASE + "datatypes.html#" + link));
             } else if ((link = isFhirDataTypeField(fhirLink, count)) != null) {
                 // If a FHIR Data Type field, link to fhir/R4/datatypes-definitions.html#{field}
                 links.append(makeLink(link, FHIR_BASE + "datatypes-definitions.html#" + link));
+            } else if ((link = isResource(fhirLink, count)) != null) {
+                // If a FHIR Resource, link to fhir/R4/{resource}.html
+                links.append(makeLink(link, FHIR_BASE + link.toLowerCase() + ".html"));
+            } else if ((link = isResourceField(fhirLink, count)) != null) {
+                // If a FHIR Resource field, link to fhir/R4/{resource}-definitions.html#{field}
+                name = StringUtils.substringBefore(link, ".");
+                links.append(makeLink(link, FHIR_BASE + name.toLowerCase() + "-definitions.html#" + link));
             } else if (fhirLink.matches("^p?[0-9\\-]*$")) {
                 links.append(fhirLink);
             } else {
@@ -667,19 +737,8 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             return segmentMap;
         }
 
-        // Replace all Reference(name) with name
-        String mySegmentMap = segmentMap.replaceAll("Reference\\(([^\\)]*)\\)","$1");
-
-        // If fhirCode ends with [1], remove it.
-        // if in the form XX- convert to ConceptMap-datatype-XX-to-XX.html
-        String myFhirCode = StringUtils.isBlank(fhirCode) ? mySegmentMap :
-            fhirCode.replaceAll("[\\[\\(][^\\]\\)]*[\\]\\)]","");
-
-        // if in the form DTNAME(name1)-name2 or DTNAME[name1]-name2 convert to ConceptMap-datatype-DTNAMEname1-to-name2.html
-            mySegmentMap = StringUtils.replaceChars(mySegmentMap,"[]{}()", "");
-
         // if in the form DTNAME-name1 convert to ConceptMap-datatype-DTNAME-to-name1.html
-        return makeLink("Segment", segmentMap, "ConceptMap-segment-" + cleanId(String.format("%s-to-%s", mySegmentMap, myFhirCode)) + ".html", count);
+        return makeLink("Segment", segmentMap, "ConceptMap-segment-" + parseMap(segmentMap, fhirCode) + ".html", count);
     }
 
     protected String makeTableLink(String fhirVocab, int count) {
@@ -695,28 +754,43 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             return v2DataType;
         }
 
-        String myV2DataType = v2DataType;
-
-        // Replace all Reference(name) with name in fhirDataType
-        // if in the form XX- convert to ConceptMap-datatype-XX-to-XX.html
-        String myFhirDataType = StringUtils.isBlank(fhirDatatype) ? myV2DataType : fhirDatatype.replaceAll("Reference[\\(\\{]([^\\)\\}]*)[\\)\\}]","$1").trim();
-
-        // if in the form DTNAME(name1)-name2 or DTNAME[name1]-name2 convert to ConceptMap-datatype-DTNAMEname1-to-name2.html
-        myV2DataType = StringUtils.replaceChars(myV2DataType,"[]{}()", "");
-
-        // if in the form DTNAME-name1 convert to ConceptMap-datatype-DTNAME-to-name1.html
         String result = makeLink("Data Type", v2DataType,
-            "ConceptMap-datatype-" + cleanId(String.format("%s-to-%s", myV2DataType, myFhirDataType)) + ".html", count);
-
-//        if (myV2DataType.equals(myFhirDataType)) {
-//            System.err.printf("Got here from %s-to-%s%n", v2DataType, fhirDatatype);
-//        } else if ("0".equals(myFhirDataType)) {
-//            System.err.printf("Got here 0 from %s-to-%s%n", v2DataType, fhirDatatype);
-//        }
+            "ConceptMap-datatype-" + parseMap(v2DataType, fhirDatatype) + ".html", count);
 
         return result;
     }
 
+
+    private String parseMap(String map, String fhirCode) {
+        // TODO Auto-generated method stub
+
+
+        // Replace all Reference(name) with name
+        String myMap = map.replaceAll("Reference\\(([^\\)]*)\\)","$1");
+
+        // if in the form DTNAME[FhirType-other], convert to ConceptMap-datatype-XX[other]-to-XX
+        if (myMap.matches("[A-Z0-9]{2,3}\\[[^\\]]*\\]")) {
+            String prefix = StringUtils.substringBefore(map, "[");
+            String fhirPart = StringUtils.substringBefore(StringUtils.substringAfter(myMap, "["), "]");
+            String other = StringUtils.substringAfter(fhirPart,"-");
+            if (other.length() != 0) {
+                myMap = prefix + "[" + other + "]";
+            } else {
+                myMap = prefix;
+            }
+            if (StringUtils.isBlank(fhirCode) || true) {
+                fhirCode = StringUtils.substringBefore(fhirPart,"-");;
+            }
+        }
+
+        // If fhirCode ends with [1], remove it.
+        // if in the form XX- convert to ConceptMap-datatype-XX-to-XX.html
+        String myFhirCode = fhirCode.replaceAll("Reference\\(([^\\)]*)\\)","$1")
+                                    .replaceAll("[\\[\\(][^\\]\\)]*[\\]\\)]","");
+
+
+        return makeId(String.format("%s-to-%s", myMap, myFhirCode));
+    }
 
     private static String makeBrokenLink(String fhirLink, int count) {
         return "<span style='font-weight: bold; color: red'>" + fhirLink + "</span>";
@@ -745,33 +819,138 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         return String.format("<a href='%s'>%s</a>", link, text);
     }
 
-    static boolean printLinkData() {
+    static boolean printLinkData(String output) {
         String names[] = { "FHIR", "Segments", "Tables", "Data Types" };
 
         Set<String> htmlFiles = new HashSet<>();
         Collection<File> files = FileUtils.listFiles(new File("fsh"), new String[] { "fsh" }, false);
         for (File file: files) {
-            htmlFiles.add("ConceptMap-" + cleanId(StringUtils.substringBeforeLast(file.getName(), ".fsh")) + ".html");
+            htmlFiles.add("ConceptMap-" + makeId(file.getName()) + ".html");
         }
         List<Map<String,Triple<String, Integer, String>>> maps = Arrays.asList(fhirLinks, segmentLinks, tableLinks, dataTypeLinks);
         boolean allValid = true;
         for (int i = 0; i < names.length; i++) {
             System.out.println(names[i]);
             for (Map.Entry<String, Triple<String, Integer, String>> link: maps.get(i).entrySet()) {
-                System.out.print(" ");
-                System.out.printf(" %s\t%s%n", link.getValue(), link.getKey());
+                //System.out.print(" ");
+                //System.out.printf(" %s\t%s%n", link.getValue(), link.getKey());
 
                 // Verify the link target, and report if not valid
                 String page = link.getKey();
                 if (page.contains(".html") && !htmlFiles.contains(page)) {
-                    report(true, link.getValue().getRight(), link.getValue().getMiddle(), "Link requested from %s:%d to [%s](%s) does not exist.%n",
-                        link.getValue().getRight(), link.getValue().getMiddle(), link.getValue().getLeft(), page);
+                    report(true, link.getValue().getRight(), link.getValue().getMiddle(), "%s%n",
+                        explainProblem(link.getValue(), output));
                     allValid = false;
                 }
             }
         }
 
         return allValid;
+    }
+
+    /**
+     * Diagnose the problem in a link.
+     * @param triple  The link string.
+     * @param output
+     * @return  A string describing the problem with it.
+     */
+    protected static String explainProblem(Triple<String, Integer, String> triple, String output) {
+        String link = triple.getLeft();
+        String type = StringUtils.substringBefore(link, "[");
+        String qual = StringUtils.substringBefore(StringUtils.substringAfter(link, "["), "]");
+        String qualParts[] = qual.split("[^A-Za-z0-9.]", 2);
+        String typeFound = null;
+        if (StringUtils.isAllEmpty(type)) {
+            return String.format("%s is missing the V2 artifact.", link);
+        }
+
+        if (type.contains(".#ext-")) {
+            return String.format("Extensions not supported yet for %s", type);
+        }
+
+        boolean found = false;
+        for (Map.Entry<String, Map<String, Triple<String, String, String>>> e: ConverterMap.getMap().entrySet()) {
+            if (Arrays.asList("Data Type", "Message Type", "Table", "Segment").contains(e.getKey())) {
+                if (e.getValue().get(type) != null) {
+                    found = true;
+                    switch (e.getKey()) {
+                    case "Data Type":
+                        typeFound = "Datatype";
+                        break;
+                    case "Message Type":
+                        typeFound = "Message";
+                        break;
+                    case "Table":
+                    case "Segment":
+                        typeFound = e.getKey();
+                        break;
+                    }
+                    break;
+                }
+            }
+        }
+        if (!found) {
+            return String.format("%s is not a recognized V2 artifact", type);
+        }
+
+        if (qualParts.length < 1 || qualParts[0].length() < 1) {
+            return String.format("%s has no FHIR Structure Specified", link);
+        }
+
+        found = false;
+        for (Map.Entry<String, Map<String, Triple<String, String, String>>> e: ConverterMap.getMap().entrySet()) {
+            if (Arrays.asList("FHIR Data Type", "FHIR Resource").contains(e.getKey())) {
+                if (e.getValue().get(qualParts[0]) != null) {
+                    found = true;
+                    break;
+                }
+            }
+        }
+        if (!found) {
+            return String.format("%s is not a recognized FHIR artifact", qualParts[0]);
+        }
+
+        String fshFilename = qualParts.length > 1 ?
+            String.format("%s %s[%s] to %s.fsh", typeFound, type, qualParts[1], qualParts[0]) :
+            String.format("%s %s to %s.fsh", typeFound, type, qualParts[0]);
+        String filename = null;
+        switch (typeFound) {
+        case "Datatype":
+            filename = qualParts.length > 1 ?
+                String.format("HL7 Data Type - FHIR R4_ %s[%s-%s] - Sheet1.csv", type, qualParts[0], qualParts[1]) :
+                String.format("HL7 Data Type - FHIR R4_ %s[%s] - Sheet1.csv", type, qualParts[0]);
+            break;
+        case "Message":
+            filename = qualParts.length > 1 ?
+                String.format("HL7 Message - FHIR R4_ %s[%s-%s] - Sheet1.csv", type, qualParts[0], qualParts[1]) :
+                String.format("HL7 Message - FHIR R4_ %s[%s] - Sheet1.csv", type, qualParts[0]);
+            break;
+        case "Segment":
+            filename = qualParts.length > 1 ?
+                String.format("HL7 Segment - FHIR R4_ %s[%s-%s] - Sheet1.csv", type, qualParts[0], qualParts[1]) :
+                String.format("HL7 Segment - FHIR R4_ %s[%s] - Sheet1.csv", type, qualParts[0]);
+            break;
+        case "Table":
+            filename = String.format("HL7 Concept Map - FHIR R4_ %s - Sheet1.csv", type);
+            break;
+        }
+
+        createMissingFish(output, fshFilename, typeFound, triple.getRight() + ":" + triple.getMiddle(), type, qualParts[0]);
+        return String.format("No mapping for %s. Missing file: %s", triple.getLeft(), filename);
+    }
+
+    protected static void createMissingFish(String output, String fshFilename, String typeFound,
+        String sourceFileName, String v2Type, String fhirType) {
+
+        File f = new File(output, "Unsupported " + fshFilename);
+        if (!f.exists() || f.lastModified() - System.currentTimeMillis() > 20000) {
+            try (FileWriter fw = new FileWriter(f);
+                PrintWriter pw = new PrintWriter(fw);) {
+                writeHeader(fshFilename, pw, sourceFileName, typeFound, v2Type, fhirType, fhirType, null, null);
+            } catch (Exception e) {
+                e.printStackTrace(log);
+            }
+        }
     }
 
     protected void error(String format, int line, Object ... args) {
@@ -792,9 +971,32 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         } else {
             warnCount++;
         }
-        System.err.printf((isError ? "E" + errCount : "W" + warnCount) + ") " + format + "\tat "+ StringUtils.substringBeforeLast(source, "\\").replace("\\", ".") +"(" + StringUtils.substringAfterLast(source, "\\") + ":" + line + ")\n", args);
+
+        if (log == null) {
+            try {
+                log = new PrintWriter(new FileWriter(errorOutput));
+            } catch (IOException e) {
+            }
+        }
+        String message = String.format((isError ? "E" + errCount : "W" + warnCount) + ") " + format + "\tat "+ StringUtils.substringBeforeLast(source, "\\").replace("\\", ".") +"(" + StringUtils.substringAfterLast(source, "\\") + ":" + line + ")\n", args);
+        if (!reportErrorsOnly || isError) {
+            System.err.print(message);
+            log.print(message);
+        }
+        if (line > 0 && source.length() > 5) {
+            System.err.printf("\tnear: %s%n", message = getLine(source, line));
+            log.printf("\tnear: %s%n", message);
+        }
     }
 
+
+    private static String getLine(String source, int line) {
+        try {
+            return FileUtils.readFileToString(new File(source), StandardCharsets.UTF_8).split("\r\n")[line-1];
+        } catch (IOException e) {
+            return e.getMessage();
+        }
+    }
 
     protected static int getErrorCount() {
         return errCount;

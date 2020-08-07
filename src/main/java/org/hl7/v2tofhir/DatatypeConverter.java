@@ -40,7 +40,7 @@ public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements C
                 "Condition in FHIRPath Notation",
                 "Condition expressed in narrative form",
                 "An existing FHIR attribute in the target FHIR version.",
-                "The FHIR attribute’s data type in the target FHIR version.",
+                "The FHIR attribute's data type in the target FHIR version.",
                 "The proposed FHIR Extension.",
                 "The FHIR min cardinality expressed numerically.",
                 "The FHIR max cardinality expressed numerically.",
@@ -51,9 +51,9 @@ public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements C
         int i = 0;
         for (String head : heads) {
             if (head.equals("Cardinality - Max") || head.equals("Narrative")) {
-                w.printf("<th title='%s' style='border-right: 2px'>%s</th>", titles[i++], head);
+                w.printf("<th title='%s' style='border-right: 2px'>%s</th>", escapeHtmlAttr(titles[i++]), head);
             } else {
-                w.printf("<th title='%s'>%s</th>", titles[i++], head);
+                w.printf("<th title='%s'>%s</th>", escapeHtmlAttr(titles[i++]), head);
             }
         }
         w.println("</tr></thead>");
@@ -88,15 +88,5 @@ public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements C
             w.println("</tr>");
         }
         w.println("</tbody></table>");
-    }
-
-    public void setNames() {
-        DatatypeInput bean = super.getFirstMappedBean();
-        if (bean == null) return;
-
-        source = StringUtils.substringBefore(bean.v2Code, ".");
-        sourceName = source;
-        target = StringUtils.substringBefore(bean.fhirCode, ".");
-        targetName = target;
     }
 }

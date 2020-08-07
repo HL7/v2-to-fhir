@@ -1,0 +1,83 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "table-hl70062-to-v3-actreason",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Table HL70062 to the FHIR V3 ActReason Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70062-to-v3-actreason",
+  "version": "1.0",
+  "name": "TableHL70062toV3ActReason",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-08-06",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "HL70062",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "1",
+          "display": "Patient request",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PATRQT",
+              "display": "patient requested"
+            }
+          ]
+        },
+        {
+          "code": "2",
+          "display": "Physician/health practitioner order",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "TREAT",
+              "display": "treatment"
+            }
+          ]
+        },
+        {
+          "code": "3",
+          "display": "Census management",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "HOPERAT",
+              "display": "healthcare operations"
+            }
+          ]
+        },
+        {
+          "code": "O",
+          "display": "Other",
+          "target": [
+            {
+              "equivalence": "unmatched"
+            }
+          ]
+        },
+        {
+          "code": "U",
+          "display": "Unknown",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "unknown"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

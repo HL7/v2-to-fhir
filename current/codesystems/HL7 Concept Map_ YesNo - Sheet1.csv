@@ -1,0 +1,6 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+Y,Yes,HL70136,,,,true,,,,,
+N,No,HL70136,,,,false,,,,,
+Y,Yes,HL70532,,,,true,,,,,
+N,No,HL70532,,,,false,,,,,

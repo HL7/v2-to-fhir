@@ -1,14 +1,15 @@
+// HL7 Concept Map_ Relationship - Sheet1.csv
 Instance: TableHL70063toV3RoleCode
 InstanceOf: ConceptMap
 Title: "Table HL70063 to V3 RoleCode Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 Table HL70063 to the FHIR V3 RoleCode Value Set."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70063 to the FHIR V3 RoleCode Value Set."
 * id = "table-hl70063-to-v3-rolecode"
 * url = "http://hl7.org/fhir/v2-tofhir/table-hl70063-to-v3-rolecode"
 * version = "1.0"
-* name = "Table_HL70063_Map"
+* name = "TableHL70063toV3RoleCode"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

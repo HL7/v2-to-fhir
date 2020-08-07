@@ -1,0 +1,5 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,RI-1,Repeat Pattern,IS,0,1,,,,code,,CodeableConcept,0,1,,,,,
+1,RI-2,Explicit Time Interval,ST,0,1,,,,repeat.timeOfDay,,time,0,-1,,,,,"The format of this field in the v2 data type is HHMM,HHMM,HHMM,.… and thus functionally contains repeats even though the element is technically not allowed to repeat"

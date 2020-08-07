@@ -1,14 +1,15 @@
+// HL7 Data Type - FHIR R4_ DR[Period] - Sheet1.csv
 Instance: DatatypeDRtoPeriod
 InstanceOf: ConceptMap
 Title: "Datatype DR to Period Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Datatype DR to the FHIR Period Data Type."
 * id = "datatype-dr-to-period"
 * url = "http://hl7.org/fhir/v2-tofhir/datatype-dr-to-period"
 * version = "1.0"
-* name = "Datatype_DR_Map"
+* name = "DatatypeDRtoPeriod"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -32,7 +33,7 @@ Title: "Datatype DR to Period Map"
 * group.element[0].extension[0].extension[2].valueInteger = 1
 * group.element[0].display = "Range Start Date/Time"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #Period.start
+* group.element[0].target.code = #start
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"dateTime"
@@ -40,9 +41,7 @@ Title: "Datatype DR to Period Map"
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
-* group.element[0].target.display = "Period.start"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "DTM"
+* group.element[0].target.display = "start"
 * group.element[1].code = #DR.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -53,7 +52,7 @@ Title: "Datatype DR to Period Map"
 * group.element[1].extension[0].extension[2].valueInteger = 1
 * group.element[1].display = "Range End Date/Time"
 * group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #Period.end
+* group.element[1].target.code = #end
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"dateTime"
@@ -61,6 +60,4 @@ Title: "Datatype DR to Period Map"
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
-* group.element[1].target.display = "Period.end"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "DTM"
+* group.element[1].target.display = "end"

@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "message-adt-a01-to-bundle",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 ADT_A01 Message to the FHIR Message Bundle.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Message ADT_A01 to the FHIR Message Bundle.",
   "url": "http://hl7.org/fhir/v2-tofhir/message-adt-a01-to-bundle",
   "version": "1.0",
-  "name": "Message_ADT_A01_Map",
+  "name": "MessageADT_A01toBundle",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -103,7 +103,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "MSH[General]"
+                  "value": "MSH[MessageHeader]"
                 }
               ]
             }
@@ -135,43 +135,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "MSH[Provenance-Originator]"
-                },
-                {
-                  "property": "references",
-                  "value": "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "ADT_A01.MSH",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": 1
-                }
-              ]
-            }
-          ],
-          "display": "Message Header",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Provenance[2]",
-              "display": "Provenance[2]",
-              "dependsOn": [
-                {
-                  "property": "segment-map",
-                  "value": "MSH[Provenance-Translator]"
+                  "value": "MSH[Provenance]"
                 },
                 {
                   "property": "references",
@@ -208,7 +172,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "SFT"
+                  "value": "SFT[MessageHeader]"
                 }
               ]
             }
@@ -235,12 +199,12 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Provenance[3]",
-              "display": "Provenance[3]",
+              "code": "Provenance[2]",
+              "display": "Provenance[2]",
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "EVN"
+                  "value": "EVN[Provenance]"
                 },
                 {
                   "property": "references",
@@ -277,7 +241,163 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PID"
+                  "value": "PID[Patient]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.PID",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Identification",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation[1]",
+              "display": "Observation[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PID[Observation-Race]"
+                },
+                {
+                  "property": "references",
+                  "value": "Observation.subject.reference=Patient[1].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "narrative",
+                  "value": "If PID-10 is for clinical purposes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.PID",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Identification",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Observation[2]",
+              "display": "Observation[2]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PID[Observation-EthnicGroup]"
+                },
+                {
+                  "property": "references",
+                  "value": "Obsevation.subject.reference=Patient[1].id"
+                }
+              ],
+              "product": [
+                {
+                  "property": "narrative",
+                  "value": "IF PID-22 is for clinical purposes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.PID",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Identification",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RelatedPerson",
+              "display": "RelatedPerson",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PID[RelatedPerson-Mother]"
+                },
+                {
+                  "property": "references",
+                  "value": "RelatedPerson.patient.reference=Patient[1].id"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.PID",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Identification",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Account",
+              "display": "Account",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PID[Account]"
+                },
+                {
+                  "property": "references",
+                  "value": "Account.subject.reference=Patient[1].id"
                 }
               ]
             }
@@ -310,7 +430,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PD1"
+                  "value": "PD1[Patient]"
                 }
               ]
             }
@@ -343,7 +463,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ARV"
+                  "value": "ARV[Patient]"
                 },
                 {
                   "property": "references",
@@ -380,12 +500,12 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient[1].generalPractitioner",
-              "display": "Patient[1].generalPractitioner",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ROL[PID-PD1-PractitionerRole]"
+                  "value": "ROL[Patient-PractitionerRole]"
                 }
               ],
               "product": [
@@ -427,7 +547,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ROL[PID-PD1-RelatedPerson]"
+                  "value": "ROL[RelatedPerson]"
                 },
                 {
                   "property": "references",
@@ -487,8 +607,12 @@
               ],
               "product": [
                 {
+                  "property": "antlr",
+                  "value": "IF NK1-3.1 NOT IN (\"EMR\", \"E\", \"F\", \"I\", \"S\")"
+                },
+                {
                   "property": "narrative",
-                  "value": "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data."
+                  "value": "It further depends on the nature of the data being exchanged and how the systems use next of kin data."
                 }
               ]
             }
@@ -520,13 +644,55 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "NK1[Patient.contact]"
+                  "value": "NK1[Patient]"
                 }
               ],
               "product": [
                 {
+                  "property": "antlr",
+                  "value": "IF NK1-3.1 NOT IN (\"EMR\", \"E\", \"F\", \"I\", \"S\")"
+                },
+                {
                   "property": "narrative",
                   "value": "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data.  If you need more data than availabe in the Patient.contact Backbone Element we suggest to map to RelatedPerson."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.NK1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Next of Kin / Associated Parties",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "NK1[Patient]"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF NK1-3.1 IN (\"EMR\", \"E\", \"F\", \"I\", \"S\")"
                 }
               ]
             }
@@ -559,11 +725,43 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PV1"
+                  "value": "PV1[Encounter]"
                 },
                 {
                   "property": "references",
                   "value": "Encounter[1].subject.reference=Patient[1].id"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A01.PV1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Visit",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PV1[Patient]"
                 }
               ]
             }
@@ -596,7 +794,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PV2"
+                  "value": "PV2[Encounter]"
                 }
               ]
             }
@@ -629,7 +827,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ARV"
+                  "value": "ARV[Encounter]"
                 },
                 {
                   "property": "references",
@@ -639,7 +837,7 @@
               "product": [
                 {
                   "property": "antlr",
-                  "value": "IF ARV-1 IN (\"PV1\", \"PV2\") AND ARV-3 NOT VALUED"
+                  "value": "IF  ARV-3 NOT VALUED"
                 }
               ]
             }
@@ -671,7 +869,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ROL[PV1-PV2-PractitionerRole]"
+                  "value": "ROL[Encounter-PractitionerRole]"
                 }
               ]
             }
@@ -698,8 +896,8 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Observation",
-              "display": "Observation",
+              "code": "Observation[2]",
+              "display": "Observation[2]",
               "dependsOn": [
                 {
                   "property": "segment-map",
@@ -740,12 +938,12 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Observation",
-              "display": "Observation",
+              "code": "Observation[2]",
+              "display": "Observation[2]",
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "OBX[ObservationComponent]"
+                  "value": "OBX[Observation-Component]"
                 },
                 {
                   "property": "references",
@@ -788,7 +986,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "AL1"
+                  "value": "AL1[AllergyIntolerance]"
                 },
                 {
                   "property": "references",
@@ -836,48 +1034,6 @@
                 {
                   "property": "narrative",
                   "value": "If in context of the patient"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "ADT_A01.DG1",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": 0
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": -1
-                }
-              ]
-            }
-          ],
-          "display": "Diagnosis Information",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Encounter[1]",
-              "display": "Encounter[1]",
-              "dependsOn": [
-                {
-                  "property": "segment-map",
-                  "value": "DG1[Encounter]"
-                },
-                {
-                  "property": "references",
-                  "value": "Encounter[1].diagnosis.reference=Condition[1].id"
-                }
-              ],
-              "product": [
-                {
-                  "property": "antlr",
-                  "value": "IF DG1-6 EQUALS \"admitting\""
                 }
               ]
             }
@@ -993,7 +1149,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PR1"
+                  "value": "PR1[Procedure]"
                 },
                 {
                   "property": "references",
@@ -1024,10 +1180,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Coverage",
-              "display": "Coverage",
+              "code": "Coverage[1]",
+              "display": "Coverage[1]",
               "comment": "Processing of the IN1 segment results in the creation of a new Coverage resource",
               "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "IN1[Coverage]"
+                },
                 {
                   "property": "references",
                   "value": "Coverage.subscriber.reference=Patient[1].id"
@@ -1057,9 +1217,15 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Coverage",
-              "display": "Coverage",
-              "comment": "Incorporate IN2 content into the Coverage created from the IN1 segment."
+              "code": "Coverage[1]",
+              "display": "Coverage[1]",
+              "comment": "Incorporate IN2 content into the Coverage created from the IN1 segment.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "IN2[Coverage]"
+                }
+              ]
             }
           ]
         },
@@ -1084,9 +1250,15 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Coverage",
-              "display": "Coverage",
-              "comment": "Incorporate IN3 content into the Coverage created from the IN1 segment."
+              "code": "Coverage[1]",
+              "display": "Coverage[1]",
+              "comment": "Incorporate IN3 content into the Coverage created from the IN1 segment.",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "IN3[Coverage]"
+                }
+              ]
             }
           ]
         }

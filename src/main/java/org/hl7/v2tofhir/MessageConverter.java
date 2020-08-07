@@ -14,16 +14,6 @@ public class MessageConverter extends ConverterImpl<MessageInput> implements Con
         load(f);
     }
 
-    public void setNames() {
-        MessageInput bean = super.getFirstMappedBean();
-        if (bean == null) return;
-
-        source = StringUtils.substringBefore(bean.v2Code.replace("[", "."), ".");
-        sourceName = source;
-        target = "Bundle";
-        targetName = target;
-    }
-
     @Override
     protected void writeIntro(List<MessageInput> beans, PrintWriter w) {
         w.println("<table class='grid'><thead>");
@@ -56,9 +46,9 @@ public class MessageConverter extends ConverterImpl<MessageInput> implements Con
         int i = 0;
         for (String head : heads) {
             if (head.equals("Cardinality - Max") || head.equals("Narrative")) {
-                w.printf("<td style='border-right: 2px' title='%s'>%s</td>", titles[i++], head);
+                w.printf("<td style='border-right: 2px' title='%s'>%s</td>", escapeHtmlAttr(titles[i++]), head);
             } else {
-                w.printf("<th title='%s'>%s</th>", titles[i++], head);
+                w.printf("<th title='%s'>%s</th>", escapeHtmlAttr(titles[i++]), head);
             }
         }
         w.println("</thead>");

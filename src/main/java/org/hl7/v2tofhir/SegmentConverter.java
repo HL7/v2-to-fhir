@@ -14,17 +14,6 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
         load(f);
     }
 
-    public void setNames() {
-        SegmentInput bean = super.getFirstMappedBean();
-        if (bean == null)
-            return;
-
-        source = StringUtils.substringBefore(bean.v2Code, "-");
-        sourceName = source;
-        target = StringUtils.substringBefore(bean.fhirCode.replace("[", "."), ".");
-        targetName = target;
-    }
-
     @Override
     protected void writeIntro(List<SegmentInput> beans, PrintWriter w) {
         w.println("<table class='grid'><thead>");
@@ -46,8 +35,8 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
             "The V2 min cardinality expressed numerically.", "The V2 max cardinality expressed numerically.",
             "Condition in an easy to read syntax (Computable ANTLR)", "Condition in FHIRPath Notation",
             "Condition expressed in narrative form", "An existing FHIR attribute in the target FHIR version.",
-            "A proposed extension. It will be expressed with #ext-……# around the proposed name. ",
-            "The FHIR attribute’s data type in the target FHIR version.",
+            "A proposed extension. It will be expressed with #ext-...# around the proposed name. ",
+            "The FHIR attribute's data type in the target FHIR version.",
             "The FHIR min cardinality expressed numerically.", "The FHIR max cardinality expressed numerically.",
             "The URL to the Data Type Map that is to be used for the attribute in this segment.",
             "The fixed or computed value to assign",
@@ -55,9 +44,9 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
         int i = 0;
         for (String head : heads) {
             if (head.equals("Cardinality - Max") || head.equals("Narrative")) {
-                w.printf("<td style='border-right: 2px' title='%s'>%s</td>", titles[i++], head);
+                w.printf("<td style='border-right: 2px' title='%s'>%s</td>", escapeHtmlAttr(titles[i++]), head);
             } else {
-                w.printf("<th title='%s'>%s</th>", titles[i++], head);
+                w.printf("<th title='%s'>%s</th>", escapeHtmlAttr(titles[i++]), head);
             }
         }
         w.println("</tr></thead>");

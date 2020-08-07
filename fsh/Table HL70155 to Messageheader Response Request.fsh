@@ -1,14 +1,15 @@
+// HL7 Concept Map_ Acknowledgements - Sheet1.csv
 Instance: TableHL70155toMessageheaderResponseRequest
 InstanceOf: ConceptMap
 Title: "Table HL70155 to Messageheader Response Request Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 Table HL70155 to the FHIR Messageheader Response Request Value Set."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70155 to the FHIR Messageheader Response Request Value Set."
 * id = "table-hl70155-to-messageheader-response-request"
 * url = "http://hl7.org/fhir/v2-tofhir/table-hl70155-to-messageheader-response-request"
 * version = "1.0"
-* name = "Table_HL70155_Map"
+* name = "TableHL70155toMessageheaderResponseRequest"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

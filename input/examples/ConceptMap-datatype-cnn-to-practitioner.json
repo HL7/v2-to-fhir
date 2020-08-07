@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "datatype-cnn-to-practitioner",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 null to the FHIR null.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Datatype CNN to the FHIR Practitioner Resource.",
   "url": "http://hl7.org/fhir/v2-tofhir/datatype-cnn-to-practitioner",
   "version": "1.0",
-  "name": "Datatype_CNN_Map",
+  "name": "DatatypeCNNtoPractitioner",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -69,7 +69,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Practitioner.identifier.value",
+              "code": "dentifier.value",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -89,7 +89,7 @@
                   ]
                 }
               ],
-              "display": "Practitioner.identifier.value"
+              "display": "dentifier.value"
             }
           ]
         },
@@ -118,7 +118,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Practitioner.name.family",
+              "code": "name.family",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -138,7 +138,7 @@
                   ]
                 }
               ],
-              "display": "Practitioner.name.family"
+              "display": "name.family"
             }
           ]
         },
@@ -167,7 +167,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Practitioner.name.given[1]",
+              "code": "name.given[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -187,7 +187,7 @@
                   ]
                 }
               ],
-              "display": "Practitioner.name.given[1]"
+              "display": "name.given[1]"
             }
           ]
         },
@@ -216,7 +216,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Practitioner.name.given[2]",
+              "code": "name.given[2]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -236,7 +236,7 @@
                   ]
                 }
               ],
-              "display": "Practitioner.name.given[2]"
+              "display": "name.given[2]"
             }
           ]
         },
@@ -265,7 +265,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Practitioner.name.suffix[1]",
+              "code": "name.suffix[1]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -285,7 +285,7 @@
                   ]
                 }
               ],
-              "display": "Practitioner.name.suffix[1]"
+              "display": "name.suffix[1]"
             }
           ]
         },
@@ -314,7 +314,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Practitioner.name.prefix",
+              "code": "name.prefix",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -334,7 +334,7 @@
                   ]
                 }
               ],
-              "display": "Practitioner.name.prefix"
+              "display": "name.prefix"
             }
           ]
         },
@@ -363,7 +363,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Practitioner.name.suffix[2]",
+              "code": "name.suffix[2]",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -383,7 +383,7 @@
                   ]
                 }
               ],
-              "display": "Practitioner.name.suffix[2]"
+              "display": "name.suffix[2]"
             }
           ]
         }

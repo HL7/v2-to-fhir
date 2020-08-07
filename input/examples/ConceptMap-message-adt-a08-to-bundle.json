@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "message-adt-a08-to-bundle",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 ADT_A08 Message to the FHIR Message Bundle.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Message ADT_A08 to the FHIR Message Bundle.",
   "url": "http://hl7.org/fhir/v2-tofhir/message-adt-a08-to-bundle",
   "version": "1.0",
-  "name": "Message_ADT_A08_Map",
+  "name": "MessageADT_A08toBundle",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -102,7 +102,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "MSH[General]"
+                  "value": "MSH[MessageHeader]"
                 }
               ]
             }
@@ -134,43 +134,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "MSH[Provenance-Originator]"
-                },
-                {
-                  "property": "references",
-                  "value": "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "ADT_A08.MSH",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": 1
-                }
-              ]
-            }
-          ],
-          "display": "Message Header",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Provenance[2]",
-              "display": "Provenance[2]",
-              "dependsOn": [
-                {
-                  "property": "segment-map",
-                  "value": "MSH[Provenance-Translator]"
+                  "value": "MSH[Provenance]"
                 },
                 {
                   "property": "references",
@@ -206,7 +170,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "SFT"
+                  "value": "SFT[MessageHeader]"
                 }
               ]
             }
@@ -233,12 +197,12 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Provenance[3]",
-              "display": "Provenance[3]",
+              "code": "Provenance[2]",
+              "display": "Provenance[2]",
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "EVN"
+                  "value": "EVN[Provenance]"
                 },
                 {
                   "property": "references",
@@ -274,7 +238,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PID"
+                  "value": "PID[Patient]"
                 }
               ]
             }
@@ -306,7 +270,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PD1"
+                  "value": "PD1[Patient]"
                 }
               ]
             }
@@ -338,7 +302,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ARV"
+                  "value": "ARV[Patient]"
                 },
                 {
                   "property": "references",
@@ -375,12 +339,12 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient[1].generalPractitioner",
-              "display": "Patient[1].generalPractitioner",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ROL[PID/PD1-PractitionerRole]"
+                  "value": "ROL[Patient-PractitionerRole]"
                 }
               ],
               "product": [
@@ -422,7 +386,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ROL[PID/PD1-RelatedPerson]"
+                  "value": "ROL[RelatedPerson]"
                 },
                 {
                   "property": "references",
@@ -514,7 +478,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "NK1[Patient.contact]"
+                  "value": "NK1[Patient]"
                 }
               ],
               "product": [
@@ -552,11 +516,43 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PV1"
+                  "value": "PV1[Encounter]"
                 },
                 {
                   "property": "references",
                   "value": "Encounter[1].subject.reference=Patient[1].id"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ADT_A08.PV1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Visit",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PV1[Patient]"
                 }
               ]
             }
@@ -588,7 +584,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PV2"
+                  "value": "PV2[Encounter]"
                 }
               ]
             }
@@ -620,7 +616,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ARV"
+                  "value": "ARV[Encounter]"
                 },
                 {
                   "property": "references",
@@ -662,7 +658,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ROL[PV1/PV2 - PractitionerRole]"
+                  "value": "ROL[Encounter-PractitionerRole]"
                 }
               ]
             }
@@ -730,7 +726,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "OBX[ObservationComponent]"
+                  "value": "OBX[Observation-Component]"
                 },
                 {
                   "property": "references",
@@ -766,7 +762,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "AL1"
+                  "value": "AL1[AllergyIntolerance]"
                 },
                 {
                   "property": "references",
@@ -802,7 +798,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "DG1"
+                  "value": "DG1[Condition]"
                 },
                 {
                   "property": "references",
@@ -844,7 +840,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "DG1"
+                  "value": "DG1[Condition]"
                 },
                 {
                   "property": "references",
@@ -886,7 +882,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "DG1"
+                  "value": "DG1[Condition]"
                 },
                 {
                   "property": "references",
@@ -1001,9 +997,13 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Coverage",
-              "display": "Coverage",
+              "code": "Coverage[1]",
+              "display": "Coverage[1]",
               "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "IN1[Coverage]"
+                },
                 {
                   "property": "references",
                   "value": "Coverage.subscriber.reference=Patient[1].id"
@@ -1033,8 +1033,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Coverage",
-              "display": "Coverage"
+              "code": "Coverage[1]",
+              "display": "Coverage[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "IN2[Coverage]"
+                }
+              ]
             }
           ]
         },
@@ -1059,8 +1065,14 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Coverage",
-              "display": "Coverage"
+              "code": "Coverage[1]",
+              "display": "Coverage[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "IN3[Coverage]"
+                }
+              ]
             }
           ]
         }

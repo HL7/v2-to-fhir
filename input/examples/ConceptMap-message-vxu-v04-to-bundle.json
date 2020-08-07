@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "message-vxu-v04-to-bundle",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 VXU_V04 Message to the FHIR Message Bundle.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Message VXU_V04 to the FHIR Message Bundle.",
   "url": "http://hl7.org/fhir/v2-tofhir/message-vxu-v04-to-bundle",
   "version": "1.0",
-  "name": "Message_VXU_V04_Map",
+  "name": "MessageVXU_V04toBundle",
   "status": "active",
   "experimental": true,
-  "date": "2020-07-30",
+  "date": "2020-08-06",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -103,7 +103,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "MSH[General]"
+                  "value": "MSH[MessageHeader]"
                 }
               ]
             }
@@ -135,43 +135,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "MSH[Provenance-Originator]"
-                },
-                {
-                  "property": "references",
-                  "value": "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "VXU_V04.MSH",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": 1
-                }
-              ]
-            }
-          ],
-          "display": "Message Header Segment",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Provenance[2]",
-              "display": "Provenance[2]",
-              "dependsOn": [
-                {
-                  "property": "segment-map",
-                  "value": "MSH[Provenance-Translator]"
+                  "value": "MSH[Provenance]"
                 },
                 {
                   "property": "references",
@@ -208,7 +172,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "SFT"
+                  "value": "SFT[MessageHeader]"
                 }
               ]
             }
@@ -241,7 +205,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PID"
+                  "value": "PID[Patient]"
                 }
               ]
             }
@@ -274,7 +238,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PD1"
+                  "value": "PD1[Patient]"
                 }
               ]
             }
@@ -344,12 +308,12 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient[1].contact",
-              "display": "Patient[1].contact",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "NK1[Patient.contact]"
+                  "value": "NK1[Patient]"
                 }
               ],
               "product": [
@@ -388,7 +352,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PV1"
+                  "value": "PV1[Encounter]"
                 },
                 {
                   "property": "references",
@@ -399,6 +363,38 @@
                 {
                   "property": "narrative",
                   "value": "Only if the system wants to know about the encounter related to the immunization event"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "VXU_V04.PATIENT_VISIT.PV1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Visit",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "Patient[1]",
+              "display": "Patient[1]",
+              "dependsOn": [
+                {
+                  "property": "segment-map",
+                  "value": "PV1[Patient]"
                 }
               ]
             }
@@ -431,7 +427,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PV2"
+                  "value": "PV2[Encounter]"
                 }
               ]
             }
@@ -505,7 +501,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "OBX[ObservationComponent]"
+                  "value": "OBX[Observation-Component]"
                 },
                 {
                   "property": "references",
@@ -547,7 +543,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PRT[OBX-Device]"
+                  "value": "PRT[Observation-Device]"
                 },
                 {
                   "property": "references",
@@ -590,7 +586,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PRT[OBX-Location]"
+                  "value": "PRT[Observation-Location]"
                 }
               ],
               "product": [
@@ -779,7 +775,7 @@
               "equivalence": "equivalent",
               "code": "PractitionerRole[2]",
               "display": "PractitionerRole[2]",
-              "comment": "Processing of each PRT segment typically results in the creation of a new Practitioner or PractitionerRole resource. \n\nThe decision between creating a Practitioner or PractitionerRole resource may depend on the availability of data related to the practitioner's role elsewhere in the message.\n\nIt may be possible to reuse a Practitioner resource in the bundle created from somewhere else in the bundle rather than creating a new resource for each PRT segment (eg, the same administering practictioner resource could be pointed to from multiple order segment groups) - if an implementer decides to do this, the system must be certain that it's the same person (same name, ID, etc) potentially even playing the same role (if the bundle uses PractitionerRole in addition to Practitioner).\\",
+              "comment": "Processing of each PRT segment typically results in the creation of a new Practitioner or PractitionerRole resource.\n\nThe decision between creating a Practitioner or PractitionerRole resource may depend on the availability of data related to the practitioner's role elsewhere in the message.\n\nIt may be possible to reuse a Practitioner resource in the bundle created from somewhere else in the bundle rather than creating a new resource for each PRT segment (eg, the same administering practictioner resource could be pointed to from multiple order segment groups) - if an implementer decides to do this, the system must be certain that it's the same person (same name, ID, etc) potentially even playing the same role (if the bundle uses PractitionerRole in addition to Practitioner).\\",
               "dependsOn": [
                 {
                   "property": "segment-map",
@@ -1131,7 +1127,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "OBX[ObservationComponent]"
+                  "value": "OBX[Observation-Component]"
                 },
                 {
                   "property": "references",
@@ -1177,7 +1173,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PRT[OBX-Device]"
+                  "value": "PRT[Observation-Device]"
                 },
                 {
                   "property": "references",
@@ -1219,7 +1215,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PRT[OBX-Location]"
+                  "value": "PRT[Observation-Location]"
                 }
               ],
               "product": [

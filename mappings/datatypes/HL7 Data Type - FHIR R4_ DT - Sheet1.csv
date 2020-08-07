@@ -1,8 +1,0 @@
-HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments,
-Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
-(IS, ID, CE, CNE, CWE)",Assignment,,,
-1,DT.(p1)(1-4),YYYY,ST,1,1,,,,dateTime.(p1)(1-4),,,1,1,,,,,,The FHIR instant/dateTime format is YYYY-MM-DDThh:mm:ss.sss+zz:zz
-2,DT.(p1)(5-6),MM,ST,0,1,,,,dateTime.(p1)(5),,,0,1,,,"""-""",,,
-2,DT.(p1)(5-6),MM,ST,0,1,,,,dateTime.(p1)(6-7),,,0,1,,,,,,
-3,DT.(p1)(7-8),DD,ST,0,1,,,,dateTime.(p1)(8),,,0,1,,,"""-""",,,
-3,DT.(p1)(7-8),DD,ST,0,1,,,,dateTime.(p1)(9-10),,,0,1,,,,,,

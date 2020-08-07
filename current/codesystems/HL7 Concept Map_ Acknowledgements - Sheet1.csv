@@ -1,0 +1,6 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+AL,Always,HL70155,,,,always,,Always,http://hl7.org/fhir/messageheader-response-request,,
+NE,Never,HL70155,,,,never,,Never,http://hl7.org/fhir/messageheader-response-request,,
+ER,Error/reject conditions only,HL70155,,,,on-error,,Error/reject conditions only,http://hl7.org/fhir/messageheader-response-request,,
+SU,Successful completion only,HL70155,,,,on-success,,Successful completion only,http://hl7.org/fhir/messageheader-response-request,,

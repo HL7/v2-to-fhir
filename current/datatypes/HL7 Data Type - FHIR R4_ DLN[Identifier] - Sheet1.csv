@@ -1,0 +1,7 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,DLN.1,License Number,ST,1,1,,,,value,,string,0,1,,,,,
+1,DLN.1,License Number,ST,1,1,,,,type.coding.code,,CodeableConcept,0,1,,,"""DL""",,
+2,DLN.2,"Issuing State, Province, Country",CWE,0,1,,,,system,,uri,0,1,CWE[uri],,,,
+3,DLN.3,Expiration Date,DT,0,1,,,,period.end,,dateTime,0,1,,,,,

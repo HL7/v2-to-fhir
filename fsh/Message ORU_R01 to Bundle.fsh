@@ -1,14 +1,15 @@
+// HL7 Message - FHIR R4_ ORU_R01 - Sheet1.csv
 Instance: MessageORU_R01toBundle
 InstanceOf: ConceptMap
 Title: "Message ORU_R01 to Bundle Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 ORU_R01 Message to the FHIR Message Bundle."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Message ORU_R01 to the FHIR Message Bundle."
 * id = "message-oru-r01-to-bundle"
 * url = "http://hl7.org/fhir/v2-tofhir/message-oru-r01-to-bundle"
 * version = "1.0"
-* name = "Message_ORU_R01_Map"
+* name = "MessageORU_R01toBundle"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -46,7 +47,7 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[1].target.display = "MessageHeader[1]"
 * group.element[1].target.comment = "Processing of the MSH segment results in the creation of a new MessageHeader resource"
 * group.element[1].target.dependsOn[0].property = "segment-map"
-* group.element[1].target.dependsOn[0].value = "MSH[General]"
+* group.element[1].target.dependsOn[0].value = "MSH[MessageHeader]"
 * group.element[2].code = #ORU_R01.MSH
 * group.element[2].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "cardinalityMin"
@@ -58,62 +59,67 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[2].target.code = #Provenance[1]
 * group.element[2].target.display = "Provenance[1]"
 * group.element[2].target.dependsOn[0].property = "segment-map"
-* group.element[2].target.dependsOn[0].value = "MSH[Provenance-Originator]"
+* group.element[2].target.dependsOn[0].value = "MSH[Provenance]"
 * group.element[2].target.dependsOn[1].property = "references"
 * group.element[2].target.dependsOn[1].value = "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
-* group.element[3].code = #ORU_R01.MSH
+* group.element[3].code = #ORU_R01.SFT
 * group.element[3].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "cardinalityMin"
-* group.element[3].extension[0].extension[0].valueInteger = 1
+* group.element[3].extension[0].extension[0].valueInteger = 0
 * group.element[3].extension[0].extension[1].url = "cardinalityMax"
-* group.element[3].extension[0].extension[1].valueInteger = 1
-* group.element[3].display = "Message Header"
+* group.element[3].extension[0].extension[1].valueInteger = -1
+* group.element[3].display = "Software Segment"
 * group.element[3].target.equivalence = #equivalent
-* group.element[3].target.code = #Provenance[2]
-* group.element[3].target.display = "Provenance[2]"
+* group.element[3].target.code = #MessageHeader[1]
+* group.element[3].target.display = "MessageHeader[1]"
+* group.element[3].target.comment = "Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment."
 * group.element[3].target.dependsOn[0].property = "segment-map"
-* group.element[3].target.dependsOn[0].value = "MSH[Provenance-Translator]"
-* group.element[3].target.dependsOn[1].property = "references"
-* group.element[3].target.dependsOn[1].value = "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
-* group.element[4].code = #ORU_R01.SFT
+* group.element[3].target.dependsOn[0].value = "SFT[MessageHeader]"
+* group.element[4].code = #ORU_R01.PATIENT_RESULT.PATIENT.PID
 * group.element[4].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "cardinalityMin"
-* group.element[4].extension[0].extension[0].valueInteger = 0
+* group.element[4].extension[0].extension[0].valueInteger = 1
 * group.element[4].extension[0].extension[1].url = "cardinalityMax"
-* group.element[4].extension[0].extension[1].valueInteger = -1
-* group.element[4].display = "Software Segment"
+* group.element[4].extension[0].extension[1].valueInteger = 1
+* group.element[4].display = "Patient Identification"
 * group.element[4].target.equivalence = #equivalent
-* group.element[4].target.code = #MessageHeader[1]
-* group.element[4].target.display = "MessageHeader[1]"
-* group.element[4].target.comment = "Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment."
+* group.element[4].target.code = #Patient[1]
+* group.element[4].target.display = "Patient[1]"
+* group.element[4].target.comment = "Processing of the PID segment results in the creation of a new Patient resource"
 * group.element[4].target.dependsOn[0].property = "segment-map"
-* group.element[4].target.dependsOn[0].value = "SFT"
-* group.element[5].code = #ORU_R01.PATIENT_RESULT.PATIENT.PID
+* group.element[4].target.dependsOn[0].value = "PID[Patient]"
+* group.element[5].code = #ORU_R01.PATIENT_RESULT.PATIENT.PD1
 * group.element[5].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "cardinalityMin"
-* group.element[5].extension[0].extension[0].valueInteger = 1
+* group.element[5].extension[0].extension[0].valueInteger = 0
 * group.element[5].extension[0].extension[1].url = "cardinalityMax"
 * group.element[5].extension[0].extension[1].valueInteger = 1
-* group.element[5].display = "Patient Identification"
+* group.element[5].display = "Additional Demographics"
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #Patient[1]
 * group.element[5].target.display = "Patient[1]"
-* group.element[5].target.comment = "Processing of the PID segment results in the creation of a new Patient resource"
+* group.element[5].target.comment = "Incorporate PD1 content into the Patient created from the PID segment."
 * group.element[5].target.dependsOn[0].property = "segment-map"
-* group.element[5].target.dependsOn[0].value = "PID"
-* group.element[6].code = #ORU_R01.PATIENT_RESULT.PATIENT.PD1
+* group.element[5].target.dependsOn[0].value = "PD1[Patient]"
+* group.element[6].code = #ORU_R01.PATIENT_RESULT.PATIENT.PRT
 * group.element[6].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "cardinalityMin"
 * group.element[6].extension[0].extension[0].valueInteger = 0
 * group.element[6].extension[0].extension[1].url = "cardinalityMax"
-* group.element[6].extension[0].extension[1].valueInteger = 1
-* group.element[6].display = "Additional Demographics"
+* group.element[6].extension[0].extension[1].valueInteger = -1
+* group.element[6].display = "Participation (for Patient)"
 * group.element[6].target.equivalence = #equivalent
-* group.element[6].target.code = #Patient[1]
-* group.element[6].target.display = "Patient[1]"
-* group.element[6].target.comment = "Incorporate PD1 content into the Patient created from the PID segment."
+* group.element[6].target.code = #PractitionerRole[1]
+* group.element[6].target.display = "PractitionerRole[1]"
+* group.element[6].target.comment = "Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data."
 * group.element[6].target.dependsOn[0].property = "segment-map"
-* group.element[6].target.dependsOn[0].value = "PD1"
+* group.element[6].target.dependsOn[0].value = "PRT[PractitionerRole]"
+* group.element[6].target.dependsOn[1].property = "references"
+* group.element[6].target.dependsOn[1].value = "Patient[1].generalPractitioner.reference=PractitionerRole[1].id"
+* group.element[6].target.product[0].property = "antlr"
+* group.element[6].target.product[0].value = "IF PRT-4.1 EQUALS \"PP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[6].target.product[1].property = "fhirpath"
+* group.element[6].target.product[1].value = "(PRT.element(4.1)=\"PP\")and(PRT.element(4.3)=\"HL70443\")"
 * group.element[7].code = #ORU_R01.PATIENT_RESULT.PATIENT.PRT
 * group.element[7].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "cardinalityMin"
@@ -122,35 +128,33 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[7].extension[0].extension[1].valueInteger = -1
 * group.element[7].display = "Participation (for Patient)"
 * group.element[7].target.equivalence = #equivalent
-* group.element[7].target.code = #PractitionerRole[1]
-* group.element[7].target.display = "PractitionerRole[1]"
-* group.element[7].target.comment = "Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data."
+* group.element[7].target.code = #RelatedPerson[1]
+* group.element[7].target.display = "RelatedPerson[1]"
 * group.element[7].target.dependsOn[0].property = "segment-map"
-* group.element[7].target.dependsOn[0].value = "PRT[PractitionerRole]"
+* group.element[7].target.dependsOn[0].value = "PRT[RelatedPerson]"
 * group.element[7].target.dependsOn[1].property = "references"
-* group.element[7].target.dependsOn[1].value = "Patient[1].generalPractioner.reference=PractitionerRole[1].id"
+* group.element[7].target.dependsOn[1].value = "RelatedPerson.patient.reference=Patient[1].id"
 * group.element[7].target.product[0].property = "antlr"
-* group.element[7].target.product[0].value = "IF PRT-4.1 EQUALS \"PP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[7].target.product[0].value = "IF PRT-4.1 NOT EQUALS \"PP\" OR PRT-4.3 NOT EQUALS \"HL70443\""
 * group.element[7].target.product[1].property = "fhirpath"
-* group.element[7].target.product[1].value = "(PRT.element(4.1)=\"PP\")and(PRT.element(4.3)=\"HL70443\")"
-* group.element[8].code = #ORU_R01.PATIENT_RESULT.PATIENT.PRT
+* group.element[7].target.product[1].value = "(PRT.element(4.1)!=\"PP\")or(PRT.element(4.3)!=\"HL70443\")"
+* group.element[8].code = #ORU_R01.PATIENT_RESULT.PATIENT.NK1
 * group.element[8].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
 * group.element[8].extension[0].extension[0].valueInteger = 0
 * group.element[8].extension[0].extension[1].url = "cardinalityMax"
 * group.element[8].extension[0].extension[1].valueInteger = -1
-* group.element[8].display = "Participation (for Patient)"
+* group.element[8].display = "Next of Kin/Associated Parties"
 * group.element[8].target.equivalence = #equivalent
-* group.element[8].target.code = #RelatedPerson[1]
-* group.element[8].target.display = "RelatedPerson[1]"
+* group.element[8].target.code = #RelatedPerson[2]
+* group.element[8].target.display = "RelatedPerson[2]"
+* group.element[8].target.comment = "Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
 * group.element[8].target.dependsOn[0].property = "segment-map"
-* group.element[8].target.dependsOn[0].value = "PRT[PID-PD1-RelatedPerson]"
+* group.element[8].target.dependsOn[0].value = "NK1[RelatedPerson]"
 * group.element[8].target.dependsOn[1].property = "references"
 * group.element[8].target.dependsOn[1].value = "RelatedPerson.patient.reference=Patient[1].id"
-* group.element[8].target.product[0].property = "antlr"
-* group.element[8].target.product[0].value = "IF PRT-4.1 NOT EQUALS \"PP\" OR PRT-4.3 NOT EQUALS \"HL70443\""
-* group.element[8].target.product[1].property = "fhirpath"
-* group.element[8].target.product[1].value = "(PRT.element(4.1)!=\"PP\")or(PRT.element(4.3)!=\"HL70443\")"
+* group.element[8].target.product[0].property = "narrative"
+* group.element[8].target.product[0].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
 * group.element[9].code = #ORU_R01.PATIENT_RESULT.PATIENT.NK1
 * group.element[9].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "cardinalityMin"
@@ -159,30 +163,29 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[9].extension[0].extension[1].valueInteger = -1
 * group.element[9].display = "Next of Kin/Associated Parties"
 * group.element[9].target.equivalence = #equivalent
-* group.element[9].target.code = #RelatedPerson[2]
-* group.element[9].target.display = "RelatedPerson[2]"
+* group.element[9].target.code = #Patient[1]
+* group.element[9].target.display = "Patient[1]"
 * group.element[9].target.comment = "Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
 * group.element[9].target.dependsOn[0].property = "segment-map"
-* group.element[9].target.dependsOn[0].value = "NK1[RelatedPerson]"
-* group.element[9].target.dependsOn[1].property = "references"
-* group.element[9].target.dependsOn[1].value = "RelatedPerson.patient.reference=Patient[1].id"
+* group.element[9].target.dependsOn[0].value = "NK1[Patient]"
 * group.element[9].target.product[0].property = "narrative"
 * group.element[9].target.product[0].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
-* group.element[10].code = #ORU_R01.PATIENT_RESULT.PATIENT.NK1
+* group.element[10].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.OBX
 * group.element[10].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "cardinalityMin"
-* group.element[10].extension[0].extension[0].valueInteger = 0
+* group.element[10].extension[0].extension[0].valueInteger = 1
 * group.element[10].extension[0].extension[1].url = "cardinalityMax"
-* group.element[10].extension[0].extension[1].valueInteger = -1
-* group.element[10].display = "Next of Kin/Associated Parties"
+* group.element[10].extension[0].extension[1].valueInteger = 1
+* group.element[10].display = "Observation (for Patient ID)"
 * group.element[10].target.equivalence = #equivalent
-* group.element[10].target.code = #Patient[1].contact
-* group.element[10].target.display = "Patient[1].contact"
-* group.element[10].target.comment = "Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
+* group.element[10].target.code = #Observation[1]
+* group.element[10].target.display = "Observation[1]"
 * group.element[10].target.dependsOn[0].property = "segment-map"
-* group.element[10].target.dependsOn[0].value = "NK1[Patient.contact]"
-* group.element[10].target.product[0].property = "narrative"
-* group.element[10].target.product[0].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
+* group.element[10].target.dependsOn[0].value = "OBX[Observation]"
+* group.element[10].target.dependsOn[1].property = "references"
+* group.element[10].target.dependsOn[1].value = "Observation.subject.reference=Patient[1].id"
+* group.element[10].target.product[0].property = "antlr"
+* group.element[10].target.product[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1"
 * group.element[11].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.OBX
 * group.element[11].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
@@ -194,25 +197,25 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[11].target.code = #Observation[1]
 * group.element[11].target.display = "Observation[1]"
 * group.element[11].target.dependsOn[0].property = "segment-map"
-* group.element[11].target.dependsOn[0].value = "OBX[Observation]"
-* group.element[11].target.dependsOn[1].property = "references"
-* group.element[11].target.dependsOn[1].value = "Observation.subject.reference=Patient[1].id"
+* group.element[11].target.dependsOn[0].value = "OBX[Observation-Component]"
 * group.element[11].target.product[0].property = "antlr"
-* group.element[11].target.product[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1"
-* group.element[12].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.OBX
+* group.element[11].target.product[0].value = "IF OBX-5 LST.count GREATER THAN 1"
+* group.element[12].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT
 * group.element[12].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "cardinalityMin"
-* group.element[12].extension[0].extension[0].valueInteger = 1
+* group.element[12].extension[0].extension[0].valueInteger = 0
 * group.element[12].extension[0].extension[1].url = "cardinalityMax"
-* group.element[12].extension[0].extension[1].valueInteger = 1
-* group.element[12].display = "Observation (for Patient ID)"
+* group.element[12].extension[0].extension[1].valueInteger = -1
+* group.element[12].display = "Participation (Observation Participation)"
 * group.element[12].target.equivalence = #equivalent
-* group.element[12].target.code = #Observation[1]
-* group.element[12].target.display = "Observation[1]"
+* group.element[12].target.code = #Device
+* group.element[12].target.display = "Device"
 * group.element[12].target.dependsOn[0].property = "segment-map"
-* group.element[12].target.dependsOn[0].value = "OBX[OBservationComponent]"
+* group.element[12].target.dependsOn[0].value = "PRT[Device]"
+* group.element[12].target.dependsOn[1].property = "references"
+* group.element[12].target.dependsOn[1].value = "Observation[1].device.reference=Device.id"
 * group.element[12].target.product[0].property = "antlr"
-* group.element[12].target.product[0].value = "IF OBX-5 LST.count GREATER THAN 1"
+* group.element[12].target.product[0].value = "IF PRT-10 VALUED"
 * group.element[13].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT
 * group.element[13].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
@@ -221,14 +224,12 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[13].extension[0].extension[1].valueInteger = -1
 * group.element[13].display = "Participation (Observation Participation)"
 * group.element[13].target.equivalence = #equivalent
-* group.element[13].target.code = #Device
-* group.element[13].target.display = "Device"
+* group.element[13].target.code = #Observation[1]
+* group.element[13].target.display = "Observation[1]"
 * group.element[13].target.dependsOn[0].property = "segment-map"
-* group.element[13].target.dependsOn[0].value = "PRT[OBX-Device]"
-* group.element[13].target.dependsOn[1].property = "references"
-* group.element[13].target.dependsOn[1].value = "Observation[1].device.reference=Device.id"
+* group.element[13].target.dependsOn[0].value = "PRT[Observation-Location]"
 * group.element[13].target.product[0].property = "antlr"
-* group.element[13].target.product[0].value = "IF PRT-10 VALUED"
+* group.element[13].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[14].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT
 * group.element[14].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "cardinalityMin"
@@ -237,28 +238,29 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[14].extension[0].extension[1].valueInteger = -1
 * group.element[14].display = "Participation (Observation Participation)"
 * group.element[14].target.equivalence = #equivalent
-* group.element[14].target.code = #Observation[1]
-* group.element[14].target.display = "Observation[1]"
+* group.element[14].target.code = #PractitionerRole[1]
+* group.element[14].target.display = "PractitionerRole[1]"
 * group.element[14].target.dependsOn[0].property = "segment-map"
-* group.element[14].target.dependsOn[0].value = "PRT[OBX-Location]"
+* group.element[14].target.dependsOn[0].value = "PRT[PractitionerRole]"
+* group.element[14].target.dependsOn[1].property = "references"
+* group.element[14].target.dependsOn[1].value = "Observation.performer.reference=PractitionerRole[1].id"
 * group.element[14].target.product[0].property = "antlr"
-* group.element[14].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
-* group.element[15].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT
+* group.element[14].target.product[0].value = "IF PRT-5 VALUED"
+* group.element[15].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1
 * group.element[15].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "cardinalityMin"
-* group.element[15].extension[0].extension[0].valueInteger = 0
+* group.element[15].extension[0].extension[0].valueInteger = 1
 * group.element[15].extension[0].extension[1].url = "cardinalityMax"
-* group.element[15].extension[0].extension[1].valueInteger = -1
-* group.element[15].display = "Participation (Observation Participation)"
+* group.element[15].extension[0].extension[1].valueInteger = 1
+* group.element[15].display = "Patient Visit"
 * group.element[15].target.equivalence = #equivalent
-* group.element[15].target.code = #PractitionerRole[1]
-* group.element[15].target.display = "PractitionerRole[1]"
+* group.element[15].target.code = #Encounter[1]
+* group.element[15].target.display = "Encounter[1]"
+* group.element[15].target.comment = "Processing of the PV1 segment results in the creation of a new Encounter resource"
 * group.element[15].target.dependsOn[0].property = "segment-map"
-* group.element[15].target.dependsOn[0].value = "PRT[PractitionerRole]"
+* group.element[15].target.dependsOn[0].value = "PV1[Encounter]"
 * group.element[15].target.dependsOn[1].property = "references"
-* group.element[15].target.dependsOn[1].value = "Observation.performer.reference=PractitionerRole[1].id"
-* group.element[15].target.product[0].property = "antlr"
-* group.element[15].target.product[0].value = "IF PRT-5 VALUED"
+* group.element[15].target.dependsOn[1].value = "Encounter.subject.reference=Patient[1].id"
 * group.element[16].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1
 * group.element[16].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "cardinalityMin"
@@ -267,13 +269,10 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[16].extension[0].extension[1].valueInteger = 1
 * group.element[16].display = "Patient Visit"
 * group.element[16].target.equivalence = #equivalent
-* group.element[16].target.code = #Encounter[1]
-* group.element[16].target.display = "Encounter[1]"
-* group.element[16].target.comment = "Processing of the PV1 segment results in the creation of a new Encounter resource"
+* group.element[16].target.code = #Patient[1]
+* group.element[16].target.display = "Patient[1]"
 * group.element[16].target.dependsOn[0].property = "segment-map"
-* group.element[16].target.dependsOn[0].value = "PV1"
-* group.element[16].target.dependsOn[1].property = "references"
-* group.element[16].target.dependsOn[1].value = "Encounter.subject.reference=Patient[1].id"
+* group.element[16].target.dependsOn[0].value = "PV1[Patient]"
 * group.element[17].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV2
 * group.element[17].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "cardinalityMin"
@@ -286,7 +285,7 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[17].target.display = "Encounter[1]"
 * group.element[17].target.comment = "Incorporate PV2 content into the Encounter created from the PV1 segment."
 * group.element[17].target.dependsOn[0].property = "segment-map"
-* group.element[17].target.dependsOn[0].value = "PV2"
+* group.element[17].target.dependsOn[0].value = "PV2[Encounter]"
 * group.element[18].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PRT
 * group.element[18].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "cardinalityMin"
@@ -478,7 +477,7 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[29].target.display = "Observation[2]"
 * group.element[29].target.comment = "Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation. When multiple OBX segments are tranformed into Observation components in a single Observation resource, implementers should consider how the metadata associated with the result (eg performer, status, date/time, etc) are populated. If the OBX segments being combined into a single resource contain different metadata, it must be considered whether or not the use of components is appropriate."
 * group.element[29].target.dependsOn[0].property = "segment-map"
-* group.element[29].target.dependsOn[0].value = "OBX[ObservationComponent]"
+* group.element[29].target.dependsOn[0].value = "OBX[Observation-Component]"
 * group.element[29].target.dependsOn[1].property = "references"
 * group.element[29].target.dependsOn[1].value = "DiagnosticReport.result.reference=Observation[2].id"
 * group.element[29].target.product[0].property = "antlr"
@@ -494,7 +493,7 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[30].target.code = #Device
 * group.element[30].target.display = "Device"
 * group.element[30].target.dependsOn[0].property = "segment-map"
-* group.element[30].target.dependsOn[0].value = "PRT[OBX-Device]"
+* group.element[30].target.dependsOn[0].value = "PRT[Device]"
 * group.element[30].target.dependsOn[1].property = "references"
 * group.element[30].target.dependsOn[1].value = "Observation[2].device.reference=Device.id"
 * group.element[30].target.product[0].property = "antlr"
@@ -511,7 +510,7 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[31].target.display = "Observation[2]"
 * group.element[31].target.comment = "Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information."
 * group.element[31].target.dependsOn[0].property = "segment-map"
-* group.element[31].target.dependsOn[0].value = "PRT[OBX-Location]"
+* group.element[31].target.dependsOn[0].value = "PRT[Observation-Location]"
 * group.element[31].target.product[0].property = "antlr"
 * group.element[31].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[32].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
@@ -554,6 +553,6 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[34].target.code = #Specimen[1]
 * group.element[34].target.display = "Specimen[1]"
 * group.element[34].target.dependsOn[0].property = "segment-map"
-* group.element[34].target.dependsOn[0].value = "SPM"
+* group.element[34].target.dependsOn[0].value = "SPM[Specimen]"
 * group.element[34].target.dependsOn[1].property = "references"
 * group.element[34].target.dependsOn[1].value = "DiagnosticReport[1].specimen.reference=Specimen[SPM].id"

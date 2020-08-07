@@ -1,14 +1,15 @@
+// HL7 Segment - FHIR R4_ PD1[Patient] - PD1.csv
 Instance: SegmentPD1toPatient
 InstanceOf: ConceptMap
 Title: "Segment PD1 to Patient Map"
-* description = "This ConceptMap represents the mapping from the HL7 V2 PD1 Segment to the FHIR Patient Resource."
+* description = "This ConceptMap represents a mapping from the HL7 V2 Segment PD1 to the FHIR Patient Resource."
 * id = "segment-pd1-to-patient"
 * url = "http://hl7.org/fhir/v2-tofhir/segment-pd1-to-patient"
 * version = "1.0"
-* name = "Segment_PD1_Map"
+* name = "SegmentPD1toPatient"
 * status = #active
 * experimental = true
-* date = "2020-07-30"
+* date = "2020-08-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -32,7 +33,7 @@ Title: "Segment PD1 to Patient Map"
 * group.element[0].extension[0].extension[2].valueInteger = -1
 * group.element[0].display = "Patient Primary Facility"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #Patient.generalPractitioner(Organization)
+* group.element[0].target.code = #generalPractitioner[1](Organization)
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"Reference(Organization)"
@@ -40,7 +41,7 @@ Title: "Segment PD1 to Patient Map"
 * group.element[0].target.extension[0].extension[1].valueInteger = 0
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
-* group.element[0].target.display = "Patient.generalPractitioner(Organization)"
+* group.element[0].target.display = "generalPractitioner[1](Organization)"
 * group.element[0].target.dependsOn[0].property = "data-type-map"
 * group.element[0].target.dependsOn[0].value = "XON[Organization]"
 * group.element[1].code = #PD1-4
@@ -53,17 +54,17 @@ Title: "Segment PD1 to Patient Map"
 * group.element[1].extension[0].extension[2].valueInteger = -1
 * group.element[1].display = "Patient Primary Care Provider Name & ID No."
 * group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #Patient.generalPractitioner(PractitionerRole)
+* group.element[1].target.code = #generalPractitioner[2](Practitioner)
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
-* group.element[1].target.extension[0].extension[0].valueCode = #"Reference(PractitionerRole)"
+* group.element[1].target.extension[0].extension[0].valueCode = #"Reference(Practitioner)"
 * group.element[1].target.extension[0].extension[1].url = "cardinalityMin"
 * group.element[1].target.extension[0].extension[1].valueInteger = 0
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
-* group.element[1].target.display = "Patient.generalPractitioner(PractitionerRole)"
+* group.element[1].target.display = "generalPractitioner[2](Practitioner)"
 * group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "XCN[PractitionerRole]"
+* group.element[1].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[2].code = #PD1-6
 * group.element[2].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -74,7 +75,7 @@ Title: "Segment PD1 to Patient Map"
 * group.element[2].extension[0].extension[2].valueInteger = 1
 * group.element[2].display = "Handicap"
 * group.element[2].target.equivalence = #equivalent
-* group.element[2].target.code = #Patient.extension-patient-disability
+* group.element[2].target.code = #extension-patient-disability
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -82,7 +83,7 @@ Title: "Segment PD1 to Patient Map"
 * group.element[2].target.extension[0].extension[1].valueInteger = 0
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
-* group.element[2].target.display = "Patient.extension-patient-disability"
+* group.element[2].target.display = "extension-patient-disability"
 * group.element[2].target.dependsOn[0].property = "data-type-map"
 * group.element[2].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[3].code = #PD1-14
@@ -95,7 +96,7 @@ Title: "Segment PD1 to Patient Map"
 * group.element[3].extension[0].extension[2].valueInteger = -1
 * group.element[3].display = "Place of Worship"
 * group.element[3].target.equivalence = #equivalent
-* group.element[3].target.code = #Patient.extension-patient-congregation
+* group.element[3].target.code = #extension-patient-congregation
 * group.element[3].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"string"
@@ -103,6 +104,6 @@ Title: "Segment PD1 to Patient Map"
 * group.element[3].target.extension[0].extension[1].valueInteger = 0
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
-* group.element[3].target.display = "Patient.extension-patient-congregation"
+* group.element[3].target.display = "extension-patient-congregation"
 * group.element[3].target.dependsOn[0].property = "data-type-map"
 * group.element[3].target.dependsOn[0].value = "XON[string]"

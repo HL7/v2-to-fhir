@@ -1,0 +1,11 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+E,Emergency,HL70004,,,,EMER,emergency,http://terminology.hl7.org/CodeSystem/v3-ActCode,,,
+I,Inpatient,HL70004,,,,IMP,inpatient encounter,http://terminology.hl7.org/CodeSystem/v3-ActCode,,,
+O,Outpatient,HL70004,,,,AMB,ambulatory,http://terminology.hl7.org/CodeSystem/v3-ActCode,,,
+P,Preadmit,HL70004,,,,PRENC,pre-admission,http://terminology.hl7.org/CodeSystem/v3-ActCode,,,
+R,Recurring patient,HL70004,,,,,,,,,
+B,Obstetrics,HL70004,,,,,,,,,
+C,Commercial Account,HL70004,,,,,,,,,
+N,Not Applicable,HL70004,,,,,,,,,
+U,Unknown,HL70004,,,,,,,,,
