@@ -1,5 +1,5 @@
 Data Type,Status,Owner,Comment,Link
-HL7 Data Type - FHIR R4: CM[Specimen Source],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1z_uMkI5txS3zB5YlhNdrrLULdaeW-mchihfO-sDiG5k/edit#gid=0
+HL7 Data Type - FHIR R4: CM[Specimen-Source],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1z_uMkI5txS3zB5YlhNdrrLULdaeW-mchihfO-sDiG5k/edit#gid=0
 HL7 Data Type - FHIR R4: CNE[CodeableConcept],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1N7hrAWsVEsXG4kYonykU2gQXbnfla8GVlwyLKzHX0ww/edit#gid=0
 HL7 Data Type - FHIR R4: CNN[Practitioner],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/10RIiHor6MGnmIBrj1tKkhW2kkrgvODeTjDpJAj3R40Q/edit#gid=0
 HL7 Data Type - FHIR R4: CQ[Quanity],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1Hb0fSXbCl6EUvwRSOjAz0TdYTvgphzcfkc6iQjGPLGo/edit#gid=0
@@ -52,11 +52,14 @@ HL7 Data Type - FHIR R4: SN[Range],Ready for Ballot,,,https://docs.google.com/sp
 HL7 Data Type - FHIR R4: SN[Ratio],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/19t5jrwRcmXNXjXcAXW0SEHlRGnBpMdm014C7CtIZ2XE/edit#gid=0
 HL7 Data Type - FHIR R4: ST[Identifier],Ready for Ballot,,where is this used?,https://docs.google.com/spreadsheets/d/1mtqV8SQ9eqsVe9kvrkTjWLEj9Adpnc5-iIb2B2oiqfM/edit#gid=0
 HL7 Data Type - FHIR R4: TQ[MedicationRequest],Ready for Ballot,Efi,,https://docs.google.com/spreadsheets/d/1lAit5IsCkpdWAJarDdkr2obW-dnabpOPwYos72ac8FY/edit#gid=0
-HL7 Data Type - FHIR R4: TQ[ServiceRequest],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1cti6hPf-05Z2fziWk7lScLq6RHgspA4gMorBS6m4J3o/edit#gid=0
+HL7 Data Type - FHIR R4: TQ[ServiceRequest-occurrenceTiming],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1cti6hPf-05Z2fziWk7lScLq6RHgspA4gMorBS6m4J3o/edit#gid=0
+HL7 Data Type - FHIR R4: TQ[ServiceRequest-quantityQuantity],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1yu8E1nybqGMU42LLFArMjveWgMQC6W0pn_KXQNgd5nY/edit#gid=0
+HL7 Data Type - FHIR R4: TQ[ServiceRequest-priority],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1xjv4jwzg69A0NetLovrPeaFKanRoJ-0v9lSTkT3oAnM/edit#gid=0
+HL7 Data Type - FHIR R4: TQ[ServiceRequest-note],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1zf73IywbamsAPQgLD1njZ7V8F0TRbIkG4iCyc9rWAWU/edit#gid=0
 HL7 Data Type - FHIR R4: TQ[Task],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1f4PcY0fzBbcg7ewW67TpNGPKDZHMtA8AKRHuRVLrzqc/edit#gid=0
 HL7 Data Type - FHIR R4: XAD[Address],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1hSTEur557TIKPEKZRoprVw-uNpw12JZtri-iQsc4uQ0/edit#gid=0
 HL7 Data Type - FHIR R4: XCN[Practitioner],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1hp-FZG0jKhKmxbVddilKKCc24RLAvum6g14q8o-3frk/edit#gid=0
-HL7 Data Type - FHIR R4: XCN[PractitionerRole],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1IXMRcpSKosDeviTGPb-v0FJ1OAYgBzRft5H-tGcFUgk/edit#gid=0
+HL7 Data Type - FHIR R4: XCN[PractitionerRole],Ready for Ballot,,where is this used? May be obsolete,https://docs.google.com/spreadsheets/d/1IXMRcpSKosDeviTGPb-v0FJ1OAYgBzRft5H-tGcFUgk/edit#gid=0
 HL7 Data Type - FHIR R4: XCN[RelatedPerson],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1Ecs9dRMCkOSeTlRj8G7PyL_uuv-32UZ_J7fD-JqC5ws/edit#gid=0
 HL7 Data Type - FHIR R4: XON[Location],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/15vjDyAgfFhWqnY9ssdePYpUOV5TGeuf6mFUof55xulo/edit#gid=0
 HL7 Data Type - FHIR R4: XON[Organization],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1-cdMWepRbnqJOVVZ-y70Qv9Ub7evClmbX9gYO0kHmpo/edit#gid=0
