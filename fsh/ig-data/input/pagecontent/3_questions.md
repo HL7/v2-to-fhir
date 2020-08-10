@@ -10,7 +10,7 @@ The v2-to-FHIR Project Team is soliciting general comments from reviewers as wel
 ### Infrastructure:
 * We invite feedback on the best way to document the mappings. Currently we provide content in tabular form and as ConceptMap resources. Is there a preferred format? Is there an alternative format we should be considering?
 * Should the original v2 message be included in the FHIR Bundle? One option is a DocumentReference or something pointed to in a Provenance record.
-* We are looking for feedback on the implementation of Provenance. Currently every message includes the creation of Provenance resources for the message source. As well selected messages (eg OML) also include Provenance for specific segments (eg ORC contents fields related to the provenance of the ServiceRequest). We are interested in the appropriateness of the existing mappings and any other mappings that should be added. 
+* We are looking for feedback on the implementation of Provenance. Currently every message includes the creation of Provenance resources for the message source. As well selected messages (eg OML) also include Provenance for specific segments (eg ORC contents fields related to the provenance of the ServiceRequest). We are interested in the appropriateness of the existing mappings and any other mappings that should be added.
 * Some mappings are such that the v2 field is allowed to repeat but the cognate FHIR attribute is not. This can lead to a potential loss of data as the FHIR resource is not capable of holding all of the information conveyed in the v2 message. We are looking for input on how to handle these mismatches.
 
 ### Mapping Content:
@@ -35,18 +35,3 @@ Specific content mapping questions:
 #### XAD segment
 * XAD-8 has no clear mapping, but we could use Address.line.  Would that be acceptable?  It would have to be clear from the value that it is a geographic designation that could be used for analytics
 
-
-<div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-this.page.url = "http://build.fhir.org.hl7/v2-to-fhir/branches/master/questions.html"; // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = this.page.url.substring(this.page.url.lastIndexOf("/")+1, this.page.url.lastIndexOf(".")); // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://v2-to-fhir.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
