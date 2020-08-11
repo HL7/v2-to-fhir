@@ -7,7 +7,7 @@
   "name": "MessageVXU_V04toBundle",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-06",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -277,12 +277,6 @@
                   "property": "references",
                   "value": "RelatedPerson.patient.reference=Patient[PID].id"
                 }
-              ],
-              "product": [
-                {
-                  "property": "narrative",
-                  "value": "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
-                }
               ]
             }
           ]
@@ -314,12 +308,6 @@
                 {
                   "property": "segment-map",
                   "value": "NK1[Patient]"
-                }
-              ],
-              "product": [
-                {
-                  "property": "narrative",
-                  "value": "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
                 }
               ]
             }
@@ -775,7 +763,7 @@
               "equivalence": "equivalent",
               "code": "PractitionerRole[2]",
               "display": "PractitionerRole[2]",
-              "comment": "Processing of each PRT segment typically results in the creation of a new Practitioner or PractitionerRole resource.\n\nThe decision between creating a Practitioner or PractitionerRole resource may depend on the availability of data related to the practitioner's role elsewhere in the message.\n\nIt may be possible to reuse a Practitioner resource in the bundle created from somewhere else in the bundle rather than creating a new resource for each PRT segment (eg, the same administering practictioner resource could be pointed to from multiple order segment groups) - if an implementer decides to do this, the system must be certain that it's the same person (same name, ID, etc) potentially even playing the same role (if the bundle uses PractitionerRole in addition to Practitioner).\\",
+              "comment": "Processing of each PRT segment typically results in the creation of a new Practitioner or PractitionerRole resource. \n\nThe decision between creating a Practitioner or PractitionerRole resource may depend on the availability of data related to the practitioner's role elsewhere in the message.\n\nIt may be possible to reuse a Practitioner resource in the bundle created from somewhere else in the bundle rather than creating a new resource for each PRT segment (eg, the same administering practictioner resource could be pointed to from multiple order segment groups) - if an implementer decides to do this, the system must be certain that it's the same person (same name, ID, etc) potentially even playing the same role (if the bundle uses PractitionerRole in addition to Practitioner).\\",
               "dependsOn": [
                 {
                   "property": "segment-map",
@@ -1173,7 +1161,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PRT[Observation-Device]"
+                  "value": "PRT[OBX-Device]"
                 },
                 {
                   "property": "references",
@@ -1215,7 +1203,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "PRT[Observation-Location]"
+                  "value": "PRT[OBX-Location]"
                 }
               ],
               "product": [

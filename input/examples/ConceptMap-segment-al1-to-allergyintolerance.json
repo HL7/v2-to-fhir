@@ -7,7 +7,7 @@
   "name": "SegmentAL1toAllergyIntolerance",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-06",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,6 +22,25 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "AL1",
   "targetUri": "AllergyIntolerance",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Segment AL1 to AllergyIntolerance.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/10aUgY2Kw3sYlbaw-QHykWri8J3Fb3J_Xc7DvCY_nzyE/edit?usp=sharing"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
@@ -258,46 +277,6 @@
                 {
                   "property": "antlr",
                   "value": "IF AL1-4 IN HL70128 OR \"INDUSTRY STANDARD\" AND NOT EQUALS 'U' with hl70128"
-                },
-                {
-                  "property": "narrative",
-                  "value": "AND If severity was used equivalent to reaction severity in FHIR"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "code": "AL1-4",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "CWE"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": 1
-                }
-              ]
-            }
-          ],
-          "display": "Allergy Severity Code",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "WARNING",
-              "display": "WARNING",
-              "product": [
-                {
-                  "property": "antlr",
-                  "value": "IF AL1-4 NOT IN HL70128"
                 },
                 {
                   "property": "narrative",

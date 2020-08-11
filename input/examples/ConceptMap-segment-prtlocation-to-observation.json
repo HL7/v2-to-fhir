@@ -7,7 +7,7 @@
   "name": "SegmentPRTLocationtoObservation",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-06",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -44,48 +44,6 @@
   "group": [
     {
       "element": [
-        {
-          "code": "PRT-2",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
-              "extension": [
-                {
-                  "url": "type",
-                  "valueCode": "ID"
-                },
-                {
-                  "url": "cardinalityMin",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "cardinalityMax",
-                  "valueInteger": 1
-                }
-              ]
-            }
-          ],
-          "display": "Action Code",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Operation",
-              "display": "Operation",
-              "dependsOn": [
-                {
-                  "property": "vocabulary-map",
-                  "value": "Operation"
-                }
-              ],
-              "product": [
-                {
-                  "property": "narrative",
-                  "value": "if mapped to a restful service to progress the message."
-                }
-              ]
-            }
-          ]
-        },
         {
           "code": "PRT-9",
           "extension": [

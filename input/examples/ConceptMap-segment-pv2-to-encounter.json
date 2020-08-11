@@ -7,7 +7,7 @@
   "name": "SegmentPV2toEncounter",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-06",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -527,7 +527,7 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "participant.individual(Practitioner|PractitionerRole)",
+              "code": "participant.individual(Practitioner)",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
@@ -547,7 +547,7 @@
                   ]
                 }
               ],
-              "display": "participant.individual(Practitioner|PractitionerRole)",
+              "display": "participant.individual(Practitioner)",
               "dependsOn": [
                 {
                   "property": "data-type-map",
@@ -754,7 +754,7 @@
                   "extension": [
                     {
                       "url": "type",
-                      "valueCode": "coding"
+                      "valueCode": "Coding"
                     },
                     {
                       "url": "cardinalityMin",

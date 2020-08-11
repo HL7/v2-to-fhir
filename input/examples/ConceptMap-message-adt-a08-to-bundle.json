@@ -7,7 +7,7 @@
   "name": "MessageADT_A08toBundle",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-06",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -302,7 +302,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ARV[Patient]"
+                  "value": "ARV"
                 },
                 {
                   "property": "references",
@@ -616,7 +616,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "ARV[Encounter]"
+                  "value": "ARV"
                 },
                 {
                   "property": "references",
@@ -798,7 +798,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "DG1[Condition]"
+                  "value": "DG1"
                 },
                 {
                   "property": "references",
@@ -840,7 +840,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "DG1[Condition]"
+                  "value": "DG1"
                 },
                 {
                   "property": "references",
@@ -882,7 +882,7 @@
               "dependsOn": [
                 {
                   "property": "segment-map",
-                  "value": "DG1[Condition]"
+                  "value": "DG1"
                 },
                 {
                   "property": "references",

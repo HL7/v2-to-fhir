@@ -7,7 +7,7 @@
   "name": "MessageADT_A01toBundle",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-06",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -609,10 +609,6 @@
                 {
                   "property": "antlr",
                   "value": "IF NK1-3.1 NOT IN (\"EMR\", \"E\", \"F\", \"I\", \"S\")"
-                },
-                {
-                  "property": "narrative",
-                  "value": "It further depends on the nature of the data being exchanged and how the systems use next of kin data."
                 }
               ]
             }
@@ -651,10 +647,6 @@
                 {
                   "property": "antlr",
                   "value": "IF NK1-3.1 NOT IN (\"EMR\", \"E\", \"F\", \"I\", \"S\")"
-                },
-                {
-                  "property": "narrative",
-                  "value": "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data.  If you need more data than availabe in the Patient.contact Backbone Element we suggest to map to RelatedPerson."
                 }
               ]
             }

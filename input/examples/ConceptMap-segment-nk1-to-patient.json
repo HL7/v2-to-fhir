@@ -7,7 +7,7 @@
   "name": "SegmentNK1toPatient",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-06",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,6 +22,25 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "NK1",
   "targetUri": "Patient",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Segment NK1 to Patient.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1h9Z67WhrMJ5Va4CEY1UV_Fowy_mPHGJK-OvN6fW0GIk/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
@@ -184,7 +203,7 @@
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "XTN"
+                  "value": "XTN[ContactPoint]"
                 }
               ]
             }
@@ -239,7 +258,7 @@
               "dependsOn": [
                 {
                   "property": "data-type-map",
-                  "value": "XTN"
+                  "value": "XTN[ContactPoint]"
                 }
               ]
             }

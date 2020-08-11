@@ -7,7 +7,7 @@
   "name": "SegmentOBXComponenttoObservation",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-06",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -922,6 +922,61 @@
                 {
                   "property": "antlr",
                   "value": "IF OBX-2 EQUALS \"SN\" and OBX-5.3 NOT IN (\":\", \"/\", \"-\", \"+\")"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBX-5",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "varies"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Observation Value",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "component[forEachOBX-5Instance].valueSampledData",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "SampledData"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "component[forEachOBX-5Instance].valueSampledData",
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF OBX-2 EQUALS \"NA\""
                 }
               ]
             }

@@ -7,7 +7,7 @@
   "name": "TableHL70301toV20301",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-06",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -46,45 +46,45 @@
       "element": [
         {
           "code": "DNS",
-          "display": "An Internet host name, in accordance with RFC 1035; or an IP address. Either in ASCII or as integers, with periods between components (\"dotted\" notation).",
+          "display": "An Internet host name, in accordance with RFC 1035; or an IP address. Either in ASCII or as integers, with periods between components (“dotted�? notation).",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "DNS",
-              "display": "An Internet host name, in accordance with RFC 1035; or an IP address. Either in ASCII or as integers, with periods between components (\"dotted\" notation)."
+              "display": "An Internet host name, in accordance with RFC 1035; or an IP address. Either in ASCII or as integers, with periods between components (“dotted�? notation)."
             }
           ]
         },
         {
           "code": "EUI64",
-          "display": "IEEE 64-bit Extended Unique Identifier is comprised of a 24-bit company identifier and a 40-bit instance identifier. The value shall be formatted as 16 ASCII HEX digits, for example, \"AABBCC1122334455\". The 24-bit company identifier, formally known as Organizationally Unique Identifier (OUI-24), is guaranteed to be globally unique. The 40-bit extensions are assigned by manufacturers. This identifier is often used in equipment interfaces (e.g., \"MAC\" address format for IPv4 & IPv6). [See http://standards.ieee.org/regauth/oui/tutorials/EUI64.html for a detailed explanation of the format.]",
+          "display": "IEEE 64-bit Extended Unique Identifier is comprised of a 24-bit company identifier and a 40-bit instance identifier. The value shall be formatted as 16 ASCII HEX digits, for example, “AABBCC1122334455�?. The 24-bit company identifier, formally known as Organizationally Unique Identifier (OUI-24), is guaranteed to be globally unique. The 40-bit extensions are assigned by manufacturers. This identifier is often used in equipment interfaces (e.g., “MAC�? address format for IPv4 & IPv6). [See http://standards.ieee.org/regauth/oui/tutorials/EUI64.html for a detailed explanation of the format.]",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "EUI64",
-              "display": "IEEE 64-bit Extended Unique Identifier is comprised of a 24-bit company identifier and a 40-bit instance identifier. The value shall be formatted as 16 ASCII HEX digits, for example, \"AABBCC1122334455\". The 24-bit company identifier, formally known as Organizationally Unique Identifier (OUI-24), is guaranteed to be globally unique. The 40-bit extensions are assigned by manufacturers. This identifier is often used in equipment interfaces (e.g., \"MAC\" address format for IPv4 & IPv6). [See http://standards.ieee.org/regauth/oui/tutorials/EUI64.html for a detailed explanation of the format.]"
+              "display": "IEEE 64-bit Extended Unique Identifier is comprised of a 24-bit company identifier and a 40-bit instance identifier. The value shall be formatted as 16 ASCII HEX digits, for example, “AABBCC1122334455�?. The 24-bit company identifier, formally known as Organizationally Unique Identifier (OUI-24), is guaranteed to be globally unique. The 40-bit extensions are assigned by manufacturers. This identifier is often used in equipment interfaces (e.g., “MAC�? address format for IPv4 & IPv6). [See http://standards.ieee.org/regauth/oui/tutorials/EUI64.html for a detailed explanation of the format.]"
             }
           ]
         },
         {
           "code": "CLIA",
-          "display": "Clinical Laboratory Improvement Amendments. Allows for the ability to designate organization identifier as a \"CLIA\" assigned number (for labs)",
+          "display": "Clinical Laboratory Improvement Amendments. Allows for the ability to designate organization identifier as a “CLIA�? assigned number (for labs)",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "CLIA",
-              "display": "Clinical Laboratory Improvement Amendments. Allows for the ability to designate organization identifier as a \"CLIA\" assigned number (for labs)"
+              "display": "Clinical Laboratory Improvement Amendments. Allows for the ability to designate organization identifier as a “CLIA�? assigned number (for labs)"
             }
           ]
         },
         {
           "code": "CLIP",
-          "display": "Clinical laboratory Improvement Program. Allows for the ability to designate organization identifier as a \"CLIP\" assigned number (for labs). Used by US Department of Defense.",
+          "display": "Clinical laboratory Improvement Program. Allows for the ability to designate organization identifier as a “CLIP�? assigned number (for labs). Used by US Department of Defense.",
           "target": [
             {
               "equivalence": "equivalent",
               "code": "CLIP",
-              "display": "Clinical laboratory Improvement Program. Allows for the ability to designate organization identifier as a \"CLIP\" assigned number (for labs). Used by US Department of Defense."
+              "display": "Clinical laboratory Improvement Program. Allows for the ability to designate organization identifier as a “CLIP�? assigned number (for labs). Used by US Department of Defense."
             }
           ]
         },

@@ -7,7 +7,7 @@
   "name": "SegmentOBRtoServiceRequest",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-06",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -617,7 +617,7 @@
                   "extension": [
                     {
                       "url": "type",
-                      "valueCode": "simpleQuantity"
+                      "valueCode": "SimpleQuantity"
                     },
                     {
                       "url": "cardinalityMin",
@@ -996,14 +996,65 @@
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "quantity",
+              "code": "quantity[x]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "quantity[x]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "TQ[ServiceRequest]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-27",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "TQ"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Quantity/Timing",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "occurrenceTiming",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
-                      "valueCode": "quantity[x]"
+                      "valueCode": "Timing"
                     },
                     {
                       "url": "cardinalityMin",
@@ -1016,7 +1067,117 @@
                   ]
                 }
               ],
-              "display": "quantity",
+              "display": "occurrenceTiming",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "TQ[ServiceRequest]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-27",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "TQ"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Quantity/Timing",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "priority",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "priority",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "TQ[ServiceRequest]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OBR-27",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "TQ"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Quantity/Timing",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "note",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Annotation"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "note",
               "dependsOn": [
                 {
                   "property": "data-type-map",

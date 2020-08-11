@@ -55,7 +55,7 @@ Examples:
    * When a single v2 element has multiple rows, the order of execution of the rows for that element should not be important
    * The sort order number will repeat when the v2 component is repeated to this end.  For example, if ORC-2 Placer Order Number maps to two different FHIR elements, then both rows would have the same sort order number "2".
 
-* A condition includes the following statements:
+* A <span id="condition">condition</span> includes the following statements:
    * If computable, both a condition using:
        * the following easy to read syntax (referenced as Computable ANTLR - further documented here: [ANTLR Condition Syntax](antlr_condition_syntax.html))
 ```
@@ -147,17 +147,3 @@ Data Type mapping spreadsheets are only provided for complex v2 data types, not 
 
 {% include table_mapping.md %}
 
-<div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-this.page.url = "http://build.fhir.org.hl7/v2-to-fhir/branches/master/mapping_guidelines.html"; // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = this.page.url.substring(this.page.url.lastIndexOf("/")+1, this.page.url.lastIndexOf(".")); // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://v2-to-fhir.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

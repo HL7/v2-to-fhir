@@ -18,6 +18,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 
 ### Chapter  2  Control
 
+* [MSA](ConceptMap-segment-msa-to-messageheader.html) - Message Acknowledgment to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
 * [MSH](ConceptMap-segment-msh-to-bundle.html) - Message Header to FHIR [Bundle](http://hl7.org/fhir/R4/bundle.html)
 * [MSH](ConceptMap-segment-msh-to-messageheader.html) - Message Header to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
 * [MSH](ConceptMap-segment-msh-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
@@ -58,6 +59,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 
 ### Chapter  6  Financial Management
 
+* [DG1](ConceptMap-segment-dg1-to-condition.html) - Diagnosis to FHIR [Condition](http://hl7.org/fhir/R4/condition.html)
 * [DG1](ConceptMap-segment-dg1-to-encounter.html) - Diagnosis to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 * [DG1](ConceptMap-segment-dg1-to-episodeofcare.html) - Diagnosis to FHIR [EpisodeOfCare](http://hl7.org/fhir/R4/episodeofcare.html)
 * [PR1](ConceptMap-segment-pr1-to-procedure.html) - Procedures to FHIR [Procedure](http://hl7.org/fhir/R4/procedure.html)
