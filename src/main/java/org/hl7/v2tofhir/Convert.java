@@ -2,6 +2,7 @@ package org.hl7.v2tofhir;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -15,10 +16,12 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 import java.util.TreeMap;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOCase;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Triple;
@@ -27,10 +30,13 @@ import com.opencsv.CSVReader;
 
 public class Convert {
 
-    private static final String MAP_OUTPUT_DIR = "tank/ig-data/input/pagecontent/";
+    private static String MAP_OUTPUT_DIR = "tank/ig-data/input/pagecontent/";
     private static final String FHIR_PREFIX = "http://hl7.org/fhir/R4";
+    private static final String FILE_TO_URLMAP = "filetourl.properties";
     private static int fileCount = 0;
     public static Map<String, Set<Converter>> generated = new HashMap<>();
+    public static Map<String, String> outputFileMap = new HashMap<>();
+
     public static void main(String args[]) {
         String output = ".";
         String download = null;
@@ -46,19 +52,26 @@ public class Convert {
                     if (!dir.exists()) {
                         dir.mkdirs();
                     }
+                    MAP_OUTPUT_DIR = new File(dir, "ig-data/input/pagecontent").getPath() + "/";
                     continue;
                 } else if (arg.startsWith("-d")) {
                     download = arg.substring(2);
+                    outputFileMap.clear();
+                    outputFileMap.put(".", new File(output).getPath());
                     downloadAll(download, output, true);
+                    writeFileToUrlMap(output);
                     continue;
                 } else if (arg.startsWith("-r")) {
                     download = arg.substring(2);
+                    outputFileMap.clear();
+                    outputFileMap.put(".", new File(output).getPath());
                     downloadAll(download, output, false);
+                    writeFileToUrlMap(output);
                     continue;
                 }
                 File f = new File(arg);
                 if (!f.exists()) {
-                    ConverterImpl.report(true, arg, "'%s' does not exist.\n", arg);
+                    ConverterImpl.report(true, arg, 1, "'%s' does not exist.\n", arg);
                 } else if (f.isDirectory()) {
                     for (File l : FileUtils.listFiles(f, new String[] { "csv" }, false)) {
                         convert(l, output);
@@ -67,7 +80,7 @@ public class Convert {
                     convert(f, output);
                 }
             } catch (Exception e) {
-                ConverterImpl.report(true, arg, "Unexpected error during conversion of '%s'.%n", arg);
+                ConverterImpl.report(true, arg, 1, "Unexpected error during conversion of '%s'.%n", arg);
                 e.printStackTrace();
                 success = false;
             }
@@ -77,16 +90,32 @@ public class Convert {
         try {
             generateMapOutputs();
         } catch (Exception e) {
-            ConverterImpl.report(true, "N/A", "Unexpected error generating map tables.");
+            ConverterImpl.report(true, "N/A", 1, "Unexpected error generating map tables.");
             e.printStackTrace();
             success = false;
         }
 
-        success = success && ConverterImpl.printLinkData();
+        success = success && ConverterImpl.printLinkData(output);
 
         System.out.printf("%d files processed, %d errors, %d warnings%n", fileCount, ConverterImpl.getErrorCount(), ConverterImpl.getWarnCount());
         System.err.printf("%d files processed, %d errors, %d warnings%n", fileCount, ConverterImpl.getErrorCount(), ConverterImpl.getWarnCount());
         System.exit(success ? 0 : 1);
+    }
+
+    /**
+     * Write a map of files to URLs for mapping during
+     * generation stage.
+     * @param output    The folder in which to put the map.
+     */
+    private static void writeFileToUrlMap(String output) {
+        File f = new File(output, FILE_TO_URLMAP);
+        try (FileWriter w = new FileWriter(f)) {
+            Properties p = new Properties();
+            p.putAll(outputFileMap);
+            p.store(w, null);
+        } catch (Exception ex) {
+            ConverterImpl.report(true, f.getPath(), 0, "Cannot store file map: %s%n", f.getPath(), ex);
+        }
     }
 
     private static void generateMapOutputs() {
@@ -181,9 +210,9 @@ public class Convert {
             for (Chapter subchap: chap.parts()) {
                 String link = subchap.getData().getLeft();
                 if (link.equals("Unknown")) {
-                    System.err.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle());
+                    System.err.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle().replaceAll("/V2/", "/v2/"));
                 } else {
-                    pw.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle());
+                    pw.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle().replaceAll("/V2/", "/v2/"));
                 }
             }
         }
@@ -191,24 +220,24 @@ public class Convert {
         pw.printf("<h2 style='--heading-prefix: \"\"' id='mapping'>Mapping</h2>%n"
             + "{%% include %s_mapping.md %%}%n", type.replace(" ", "").toLowerCase());
 
-        pw.printf("%n<div id=\"disqus_thread\"></div>%n" +
-            "<script>%n" +
-            "var disqus_config = function () {%n" +
-            "this.page.url = \"http://build.fhir.org/hl7/v2-to-fhir/branches/master/%s.html\"; // Replace PAGE_URL with your page's canonical URL variable%n" +
-            "this.page.identifier = this.page.url.substring(this.page.url.lastIndexOf(\"/\")+1, this.page.url.lastIndexOf(\".\")); // Replace PAGE_IDENTIFIER with your page's unique identifier variable%n" +
-            "};%n" +
-            "(function() { // DON'T EDIT BELOW THIS LINE%n" +
-            "var d = document, s = d.createElement('script');%n" +
-            "s.src = 'https://v2-to-fhir.disqus.com/embed.js';%n" +
-            "s.setAttribute('data-timestamp', +new Date());%n" +
-            "(d.head || d.body).appendChild(s);%n" +
-            "})();%n" +
-            "</script>%n" +
-            "<noscript>%n" +
-            "    Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a>%n" +
-            "</noscript>%n" +
-            "%n" +
-            "", StringUtils.substringBeforeLast(StringUtils.substringAfter(cDataFile.getName(),"_"),"."));
+//        pw.printf("%n<div id=\"disqus_thread\"></div>%n" +
+//            "<script>%n" +
+//            "var disqus_config = function () {%n" +
+//            "this.page.url = \"http://build.fhir.org/hl7/v2-to-fhir/branches/master/%s.html\"; // Replace PAGE_URL with your page's canonical URL variable%n" +
+//            "this.page.identifier = this.page.url.substring(this.page.url.lastIndexOf(\"/\")+1, this.page.url.lastIndexOf(\".\")); // Replace PAGE_IDENTIFIER with your page's unique identifier variable%n" +
+//            "};%n" +
+//            "(function() { // DON'T EDIT BELOW THIS LINE%n" +
+//            "var d = document, s = d.createElement('script');%n" +
+//            "s.src = 'https://v2-to-fhir.disqus.com/embed.js';%n" +
+//            "s.setAttribute('data-timestamp', +new Date());%n" +
+//            "(d.head || d.body).appendChild(s);%n" +
+//            "})();%n" +
+//            "</script>%n" +
+//            "<noscript>%n" +
+//            "    Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a>%n" +
+//            "</noscript>%n" +
+//            "%n" +
+//            "", StringUtils.substringBeforeLast(StringUtils.substringAfter(cDataFile.getName(),"_"),"."));
         pw.close();
 
         try {
@@ -271,22 +300,25 @@ public class Convert {
 
         Map<String, Triple<String, String, String>> struct = m.get("Segment");
         Map<String, Triple<String, String, String>> title = m.get("Chapter");
-        Triple<String, String, String>
-            segData = struct.get(c.getSourceName()),
-            chapData = title.get(segData.getLeft());
+        Triple<String, String, String> segData = struct.get(c.getSourceName());
+        if (segData == null) {
+            ConverterImpl.report(true, c.getSourceFileName(), 1, "Missing data for %s", c.getSourceName());
+            return;
+        }
+        Triple<String, String, String> chapData = title.get(segData.getLeft());
 
         addTitlesToIndex(m, chapters, c, segData, chapData);
     }
 
     private static String getFhirLocation(Map<String, Map<String, Triple<String, String, String>>> m, String targetName) {
         if (m.get("FHIR Resource").get(targetName) != null) {
-            return FHIR_PREFIX + "/" + targetName + ".html";
+            return FHIR_PREFIX + "/" + targetName.toLowerCase() + ".html";
         }
         if (m.get("FHIR Data Type").get(targetName) != null) {
             return FHIR_PREFIX + "/datatypes.html#" + targetName;
         }
         if (targetName.contains("V2")) {
-            return FHIR_PREFIX + "/" + targetName.replace(" ", "/") + "/index.html";
+            return FHIR_PREFIX + "/" + targetName.replace(" ", "/").replace("/V2/", "/v2/") + "/index.html";
         }
         if (targetName.contains("V3")) {
             return FHIR_PREFIX + targetName.replace("V3", "/v3/").replace(" ", "") + "/cs.html";
@@ -302,14 +334,38 @@ public class Convert {
         Map<String, Triple<String, String, String>> msgtype = m.get("Message Type");
         Map<String, Triple<String, String, String>> title = m.get("Chapter");
 
+        if (struct == null || c == null) {
+            System.err.println("Got here");
+        }
+        Triple<String, String, String> structData = struct.get(c.getSourceName());
+        if (structData == null) {
+           ConverterImpl.report(true, "Structure %s not recognized.", 1, "N/A", c.getSourceName());
+           return;
+        }
         Triple<String, String, String>
-            structData = struct.get(c.getSourceName()),
-            mtData = msgtype.get(StringUtils.substringBefore(structData.getLeft(),"/")),
+            mtData = msgtype.get(StringUtils.substringBefore(structData.getLeft(),"/"));
+        if (mtData == null) {
+            ConverterImpl.report(true, "Message Type %s not recognized.", 1, "N/A", structData.getLeft());
+            return;
+        }
+        Triple<String, String, String>
             titleData = title.get(mtData.getLeft());
-
+        if (titleData == null) {
+            ConverterImpl.report(true, "Title %s not recognized.", 1, "N/A", mtData.getLeft());
+            return;
+        }
         chap = chapters.get(titleData.getLeft());
+        if (chap == null) {
+            ConverterImpl.report(true, "Chapter %s not recognized.", 1, "N/A", titleData.getLeft());
+            return;
+        }
         chap.setData(titleData);
         subchap = chap.get(c.getSourceName());
+        if (subchap == null) {
+            ConverterImpl.report(true, "Chapter Section %s not recognized.", 1, "N/A", c.getSourceName());
+            return;
+        }
+
         subchap.setData(Triple.of(
             structData.getRight() +c.getQualifier(),
             structData.getMiddle(), c.getHtmlFileName()));
@@ -323,7 +379,7 @@ public class Convert {
             return;
         }
         try (CSVReader reader = new CSVReader(new FileReader(download));) {
-            String [] nextLine;
+            String nextLine[], theUrl = null;
             int count = 0;
             while ((nextLine = reader.readNext()) != null) {
                 if (++count == 1) {
@@ -340,7 +396,7 @@ public class Convert {
                     //Relationship,HL70063,,,,https://docs.google.com/spreadsheets/d/1BDbtJ9kKKpDXIG8GAaRyqpb_iUKBaaU4b0bcxHo0KoI/edit#gid=0
                     // 1 = FHIR, 2 = V2, 3-5, 6 = URL
 
-                    String theUrl = null;
+                    theUrl = null;
                     for (int i = 3; i < 6 && i < nextLine.length; i++) {
                         if (nextLine[i].startsWith("https")) {
                             theUrl = nextLine[i];
@@ -356,14 +412,23 @@ public class Convert {
                         // Set a default value for the output file name.
                         String outputFn = getOutputFilename(nextLine, fn);
                         System.out.printf("Downloading: from %s to %s%n", StringUtils.substringBeforeLast(theUrl,"/"), outputFn);
-                        FileUtils.copyInputStreamToFile(s, new File(output, outputFn));
+                        String content = IOUtils.toString(s, StandardCharsets.UTF_8);
+                        if (content.contains("DOCTYPE") || content.contains("<html")) {
+                            ConverterImpl.report(true, outputFn, 1, "Cannot access content for '%s'.%n", outputFn);
+                        } else {
+                            File outputFile = new File(output, outputFn);
+                            FileUtils.writeStringToFile(outputFile, content, StandardCharsets.UTF_8);
+                            outputFileMap.put(outputFile.getName(), theUrl);
+                        }
                     }
 
                 } catch (IOException ioex) {
+                    System.err.printf("Failure downloading %s to %s.csv%n", theUrl, nextLine[0]);
                     ioex.printStackTrace();
                 }
             }
         } catch (IOException ioex) {
+            System.err.printf("Failure reading from %s%n", download);
             ioex.printStackTrace();
         }
     }
@@ -397,6 +462,8 @@ public class Convert {
 
     private static void convert(File f, String outputLocation) {
         String name = f.getName();
+        ensureFileMapLoaded(f);
+        String sourceUrl = outputFileMap.get(name);
         fileCount++;
         Converter c;
         try {
@@ -404,22 +471,20 @@ public class Convert {
                 // This is one of the inventory lists, skip it.
                 return;
             } else if (name.contains("Data Type")) {
-                c = new DatatypeConverter(f);
+                c = new DatatypeConverter(f, sourceUrl);
             } else if (name.contains("Message")) {
-                c = new MessageConverter(f);
-            } else if (name.contains("Segment") &&
-                !name.contains("Segment Action Code")  // Hack to deal with Segment Action Code Vocabulary
-            ) {
-                c = new SegmentConverter(f);
+                c = new MessageConverter(f, sourceUrl);
             } else if (name.contains("Concept Map")) {
-                c = new ConceptMapConverter(f);
-            } else {
+                c = new ConceptMapConverter(f, sourceUrl);
+            } else if (name.contains("Segment")) {
+                c = new SegmentConverter(f, sourceUrl);
+            }  else {
                 System.err.printf("Don't know know how to convert '%s'.\n", f);
                 return;
             }
             String output = c.getFishFileName();
             if (output.contains("to Unknown.fsh")) {
-                System.err.printf("%s does not have any FHIR Mapping Content%n", c.getSourceFileName());
+                ConverterImpl.report(false, c.getSourceFileName(), 1, "%s does not have any FHIR Mapping Content%n", c.getSourceFileName());
                 return;
             }
             File out = new File(outputLocation, output);
@@ -434,6 +499,27 @@ public class Convert {
 
         } catch (IOException ex) {
             ex.printStackTrace();
+        }
+    }
+
+    /**
+     * For a given file, ensure that the FILE_TO_URLMAP associated with it is
+     * loaded.
+     * @param f The file.
+     */
+    private static void ensureFileMapLoaded(File f) {
+        File folder = f.getParentFile();
+        String filename = StringUtils.defaultString(outputFileMap.get("."));
+        if (filename.length() == 0 || !folder.getPath().endsWith(filename)) {
+            File mapFile = new File(folder, FILE_TO_URLMAP);
+            try (FileReader r = new FileReader(mapFile)) {
+                Properties p = new Properties();
+                p.load(r);
+                outputFileMap.clear();
+                p.forEach((k, v) -> outputFileMap.put((String)k, (String)v));
+            } catch (Exception ex) {
+
+            }
         }
     }
 }

@@ -1,0 +1,60 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,OBX-1,Set ID – OBX,SI,0,1,,,,,,,,,,,,,
+2,OBX-2,Value Type,ID,0,1,,,,,,,,,,ValueType,,,OBX-2 determines the flavor of Observation.value[x] is used in OBX-5
+3,OBX-3,Observation Identifier,CWE,1,1,,,,code,,CodeableConcept,1,1,CWE[CodeableConcept],,,,
+4,OBX-4,Observation Sub-ID,ST,0,1,,,If OBX does represent a component.  See implementation guide where sub-id is used for additional guidance,,Observation.component or Observation.partOf or Observation.hasMember or Observation.DerivedFrom,,,,,,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NM""",,,valueQuantity.value,,quantity,0,1,NM[Quantity],,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 IN (""ST"", ""FT"", ""TX"")",,"Any markup in ST, FT or TX data may not present properly given that valueString is a string data type",valueString,,string,0,1,,,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 IN (""CF"", ""CNE"", ""CWE"", ""CE"")",,,valueCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""IS""",,,valueCodeableConcept,,CodeableConcept,0,1,IS[CodeableConcept],,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""DR""",,,valuePeriod,,Period,0,1,DR[Period],,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 IN (""DTM"", ""DT"")",,,valueDateTime,,dateTime,0,1,,,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NR""",,,valueRange,,Range,0,1,NR[Range],,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""VR""",,,valueString,,string,0,1,,,"OBX-5.1+""-""+OBX-5.2",,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""TM""",,,valueTime,,time,0,1,,,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF (OBX-2 EQUALS ""SN"" AND OBX-5.3 IN ("":"", ""/"")",,,valueRatio,,Ratio,0,1,SN[Ratio],,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" and OBX-5.3 EQUALS ""-""",,,valueRange,,Range,0,1,SN[Range],,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" and OBX-5.3 EQUALS ""+""",,,valueString,,string,0,1,,,"OBX-5.1+"" ""+OBX-5.2+"" ""+OBX-5.3+"" ""+OBX-5.4",,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" and OBX-5.3 NOT IN ("":"", ""/"", ""-"", ""+"")",,,valueQuantity,,Quantity,0,1,SN[Quantity],,,,Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type.
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NA""",,,valueSampledData,,SampledData,,,,,,,Need to add text on converting NA to SampledData
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""ED"" AND IF OBX-5.4 EQUALS ""Base64""",,,,Observation.#ext-valueAttachment#,Attachment,0,1,ED[Attachment],,,,"We are for now addressing Base64 that cover .pdf, pictures and other binaries.  If somebody does this, we will address those."
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""EI""",,,,,,,,,,,,"Requires more work to properly map.  Use case: An OBX under OBR that points to the calibration/quality control/etc. settings/values/result/etc. that the other OBX-s under the OBR would be ""subject"" to."
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""RP""",,,,Observation.#ext-valueAttachment#,Attachment,0,1,RP[Attachment],,,,To be resolved when we resolve DocumentReference and valueAttachment
+6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" and OBX-5.3 NOT IN ("":"", ""/"", ""-"", ""+"")",,,valueQuantity,,Quantity,,,CWE[Quantity],,,,Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type.
+6,OBX-6,Units,CWE,0,1,"IF OBX-2 IN (""NA"", ""NM"")",,,valueQuantity,,Quantity,,,CWE[Quantity],,,,Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type.
+6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.3 EQUALS ""-""",,,valueRange.low,,SimpleQuantity,,,CWE[Quantity],,,,
+6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.3 EQUALS ""-""",,,valueRange.high,,SimpleQuantity,,,CWE[Quantity],,,,
+6,OBX-6,Units,CWE,0,1,"IF (OBX-2 EQUALS ""SN"" AND (OBX-5.3 IN ("":"", ""/""))",,,valueRatio.numerator,,Quantity,,,CWE[Quantity],,,,
+6,OBX-6,Units,CWE,0,1,"IF (OBX-2 EQUALS ""SN"" AND (OBX-5.3 IN ("":"", ""/""))",,,valueRatio.denominator,,Quantity,,,CWE[Quantity],,,,
+7,OBX-7,References Range,ST,0,1,,,,referenceRange.text ,,string,0,-1,,,,,"If OBX-7 is sufficiently parseable, then the low, high, type, appliesTo, and/or age may be used."
+8,OBX-8,Interpretation Codes,CWE,0,-1,,,,interpretation,,CodeableConcept,0,-1,CWE[CodeableConcept],InterpretationCode,,,
+9,OBX-9,Probability,NM,0,1,,,,,,,,,,,,,
+10,OBX-10,Nature of Abnormal Test,ID,0,-1,,,,,Observation.#ext-natureOfAbnormalTest#,CodeableConcept,0,-1,CWE[CodeableConcept],NatureOfAbnormalTesting,,,
+11,OBX-11,Observation Result Status,ID,1,1,,,,status,,code,1,1,,ObservationStatus,,,
+12,OBX-12,Effective Date of Reference Range,DTM,0,1,,,,,,,,,,,,,
+13,OBX-13,User Defined Access Checks,ST,0,1,,,,,,,,,,,,,
+14,OBX-14,Date/Time of the Observation,DTM,0,1,,,,effectiveDateTime,,dateTime,0,1,,,,,
+15,OBX-15,Producer's ID,CWE,0,1,,,,,Observation.#ext-producerIdentifier#,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+16,OBX-16,Responsible Observer,XCN,0,-1,,,,performer[1](PractitionerRole.practitioner(Practitioner))  ,,Reference(PractitionerRole),0,-1,XCN[Practitioner],,,,
+16,OBX-16,Responsible Observer,XCN,0,-1,,,,performer[1](PractitionerRole.code),"""#assign-code-responsibleObserver#""",CodeableConcept,0,-1,,,,,
+16,OBX-16,Responsible Observer,XCN,0,-1,,,,performer[1](PractitionerRole.system),"""#assign-system-abc#""",CodeableConcept,0,-1,,,,,
+17,OBX-17,Observation Method,CWE,0,-1,,,,method,,CodeableConcept,0,1,CWE[CodeableConcept],,,,"The cardinality of Observation.method is 0..1 while the source allows for multiple methods.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide."
+18,OBX-18,Equipment Instance Identifier,EI,0,-1,,,,device(Device.identifier),,Identifier,0,-1,EI[Identifier],,,,
+19,OBX-19,Date/Time of the Analysis,DTM,0,1,,,,,Observation.#ext-analysisDateTime#,dateTime,0,1,,,,,
+20,OBX-20,Observation Site,CWE,0,-1,,,,bodySite,,CodeableConcept,0,1,CWE[CodeableConcept],,,,"The cardinality of Observation.bodySite is 0..1 while the source allows for multiple body sites.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide."
+21,OBX-21,Observation Instance Identifier,EI,0,1,,,,identifier,,Identifier,0,-1,EI[Identifier],,,,
+21,OBX-21,Observation Instance Identifier,EI,0,1,,,,identifier.type.coding.code,,code,0,1,,,"""FILL""",,
+22,OBX-22,Mood Code,CNE,0,1,,,,,,,,,,,,,
+23,OBX-23,Performing Organization Name,XON,0,1,,,,performer[2](Organization),,Reference(Organization),0,-1,XON[Organization],,,,
+23,OBX-23,Performing Organization Name,XON,0,1,IF OBX-25 VALUED,,,performer[3](PractitionerRole.organization(Organization)),,Reference(Organization),0,-1,XON[Organization],,,,
+24,OBX-24,Performing Organization Address,XAD,0,1,,,,performer[2](Organization.address),,Address,0,-1,XAD[Address],,,,
+24,OBX-24,Performing Organization Address,XAD,0,1,IF OBX-25 VALUED,,,performer[3](PractitionerRole.organization(Organization.address)),,Address,0,-1,XAD[Address],,,,
+25,OBX-25,Performing Organization Medical Director,XCN,0,1,,,,performer[3](PractitionerRole),,Reference(PractitionerRole),0,1,XCN[PractitionerRole],,,,
+25,OBX-25,Performing Organization Medical Director,XCN,0,1,,,,performer[3](PractitionerRole.code),"""#assign-code-LabMedicalDirector#""",code,,,,,,,
+26,OBX-26,Patient Results Release Category,ID,0,1,,,,,,,,,,,,,
+27,OBX-27,Root Cause,CWE,0,1,,,,,,,,,,,,,
+28,OBX-28,Local Process Control,CWE,0,-1,,,,,,,,,,,,,
+29,OBX-29,Observation Type,ID,0,1,,,,,Observation.#ext-type#,code,0,1,,,,,"The type was necessary in v2 to distinguish purpose of the observation when it appears in a message in the same group (e.g., answers to ask at order entry questions with actual results ).  Within FHIR flagging the observation may not be necessary, but that is not yet clear.  Until then, we will keep the thought of needing an extension, but not create it yet."
+30,OBX-30,Observation Sub-Type,ID,0,1,,,,,Observation.#ext-subType#,code,0,1,,,,,"The sub type was necessary in v2 to distinguish purpose of the observation when it appears in a message in the same group (e.g., answers to ask at order entry questions with actual results ).  Within FHIR flagging the observation may not be necessary, but that is not yet clear.  Until then, we will keep the thought of needing an extension, but not create it yet."

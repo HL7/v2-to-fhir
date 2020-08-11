@@ -31,7 +31,7 @@ public class MessageInput implements Cloneable, Convertible {
     String segmentMap;
     @CsvBindByPosition(position=11)
     String reference;
-    @CsvBindByPosition(position=12)
+    @CsvBindByPosition(position=13)
     String comments;
     public MessageInput copy() {
         try {
@@ -44,8 +44,9 @@ public class MessageInput implements Cloneable, Convertible {
     @Override
     public Row convert() {
         Row r = new Row();
-        r.condition = getCondition(this.conditionANTLR, this.conditionfhirPath);
-        r.conditionDisplay = StringUtils.defaultString(this.conditionNarrative);
+        r.conditionANTLR = StringUtils.defaultString(this.conditionANTLR);
+        r.conditionFHIRPath = StringUtils.defaultString(this.conditionfhirPath);
+        r.conditionNarrative = StringUtils.defaultString(this.conditionNarrative);
         r.dataType = this.v2Message;
         r.targetCode = this.fhirCode;
         if (StringUtils.isBlank(this.fhirCode) || r.targetCode.toLowerCase().contains("n/a")) {
@@ -55,7 +56,11 @@ public class MessageInput implements Cloneable, Convertible {
         r.targetDisplay = this.fhirCode;
         r.sourceCode = this.v2Code;
         r.sourceDisplay = this.v2Name;
+        r.sourceMin = this.v2Min;
+        r.sourceMax = this.v2Max;
         r.comments = this.comments;
+        r.segmentMap = this.segmentMap;
+        r.references = this.reference;
         return r;
     }
 

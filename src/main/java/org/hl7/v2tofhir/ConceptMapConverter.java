@@ -11,8 +11,8 @@ import org.apache.commons.text.WordUtils;
 
 public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implements Converter {
 
-    public ConceptMapConverter(File f) throws IOException {
-        super(ConceptMapInput.class);
+    public ConceptMapConverter(File f, String sourceUrl) throws IOException {
+        super(ConceptMapInput.class, sourceUrl);
         load(f);
     }
 
@@ -37,7 +37,7 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
                 escapeHtmlString(bean.v2Code), escapeHtmlString(bean.v2Text), escapeHtmlString(bean.v2CodeSystem),
                 escapeHtmlString(bean.conditionANTLR), escapeHtmlString(bean.conditionfhirPath), escapeHtmlString(bean.conditionNarrative),
                 escapeHtmlString(bean.fhirCode), escapeHtmlString(bean.fhirExtension), escapeHtmlString(bean.fhirDisplay),
-                makeFhirLink(bean.fhirCodeSystem),
+                makeFhirLink(bean.fhirCodeSystem, count),
                 escapeHtmlString(bean.comments)
             };
             w.print("<tr>");
@@ -52,29 +52,4 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
         }
         w.println("</tbody></table>");
     }
-
-    public void setNames() {
-        ConceptMapInput bean = super.getFirstMappedBean();
-        if (bean == null) {
-            target = "Unknown";
-            targetName = "Unknown";
-            return;
-        }
-
-        source = bean.v2CodeSystem;
-        sourceName = source;
-        target = bean.fhirCodeSystem;
-        if (StringUtils.isBlank(target)) {
-            target = "Unknown";
-        }
-        targetName = toFhirName(target);
-    }
-
-    private String toFhirName(String target) {
-        if (target.contains("/")) {
-            target = StringUtils.substringAfterLast(target, "/");
-        }
-        return WordUtils.capitalize(target.replace("-", " "));
-    }
-
 }

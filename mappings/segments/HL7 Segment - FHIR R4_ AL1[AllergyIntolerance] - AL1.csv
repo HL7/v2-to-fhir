@@ -1,0 +1,29 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,AL1-1,Set ID - AL1,SI,1,1,,,,,,,,,,,,,"This field doesn't warrant mapping
+"
+2,AL1-2,Allergen Type Code,CWE,0,1,,,,category,,code,0,-1,CWE[code],AllergyCategory,,,"The FHIR table has a ""required"" binding. Do we need to expand the values in the FHIR table?
+
+Could other be used for:
+Miscellaneous allergy
+Miscellaneous contraindication
+Animal Allergy
+
+HL70127 is a user defined table"
+2,AL1-2,Allergen Type Code,CWE,0,1,,,,,AllergyIntolerance.category.#ext-originalCode#,Coding,0,1,CWE[Coding],,,,
+2,AL1-2,Allergen Type Code,CWE,0,1,,,,type,,code,0,1,CWE[code],AllergyType,,,
+3,AL1-3,Allergen Code/Mnemonic/Description,CWE,1,1,,,,code,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+,AL1-4,Allergy Severity Code,CWE,0,1,"IF AL1-4 IN HL70128 OR ""INDUSTRY STANDARD"" AND NOT EQUALS 'U' with hl70128",,AND If severity was used equivalent to reaction severity in FHIR,reaction.severity,,code,0,1,CWE[code],AllergySeverity,,,"HL70128 is a user defined table
+Consider using AllergyIntolerance.criticality"
+4,AL1-4,Allergy Severity Code,CWE,0,1,IF AL1-4 NOT IN HL70128,,AND If severity was used equivalent to reaction severity in FHIR,,AllergyIntolerance.reaction.severity.#ext-originalCode#,Coding,0,1,CWE[code],,,,Do we prefer an extension?
+4,AL1-4,Allergy Severity Code,CWE,0,1,IF AL1-4 NOT IN HL70128,,AND If severity was used equivalent to reaction severity in FHIR,,WARNING,,,,,,,,Or raise a warning?
+4,AL1-4,Allergy Severity Code,CWE,0,1,If AL1-4 EQUALS 'U',,AND If severity was used equivalent to reaction severity in FHIR,AllergyIntolerance.reaction.severity.extension-data-absent-reason,,code,0,1,,,"""unknown""",,
+4,AL1-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality,,code,0,1,CWE[code],AllergyCriticality,,,
+4,AL1-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,,AllergyIntolerance.criticality.#ext-originalCode#,Coding,0,1,,,,,
+5,AL1-5,Allergy Reaction Code,ST,0,-1,,,,reaction.manifestation.text,,CodeableConcept,0,1,CWE[CodeableConcept],,,,"AllergyIntolerance.reaction can repeat, presumably to capture both multiple manifestations of the reaction (rash and nausea) as well as reactions to independent exposures (last week and last month) - we may want to confirm this understanding.
+
+
+
+"
+6,AL1-6,Identification Date,DT,1,1,,,,onsetDateTime,,dateTime,0,1,,,,,"Withdrawn as of 2.7, Refer to IAM-11 Onset or IAM-13 Reported Date"

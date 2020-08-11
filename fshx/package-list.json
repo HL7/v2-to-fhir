@@ -1,0 +1,25 @@
+{
+  "package-id": "hl7.fhir.uv.v2-tofhir",
+  "canonical": "http://hl7.org/fhir/v2-tofhir",
+  "title": "HL7 Version 2 to FHIR",
+  "introduction": "asdf",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://build.fhir.org/ig/example/example-ig",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "0.0.1",
+      "date": "2099-01-01",
+      "desc": "Initial STU ballot (Mmm yyyy Ballot)",
+      "path": "http://example.org/fhir/STU1",
+      "status": "ballot",
+      "sequence": "STU 1",
+      "fhirversion": "4.0.1",
+      "current": true
+    }
+  ]
+}

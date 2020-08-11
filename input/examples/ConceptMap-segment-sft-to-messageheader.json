@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-sft-to-messageheader",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 SFT Segment to the FHIR MessageHeader Resource.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Segment SFT to the FHIR MessageHeader Resource.",
   "url": "http://hl7.org/fhir/v2-tofhir/segment-sft-to-messageheader",
   "version": "1.0",
-  "name": "Segment_SFT_Map",
+  "name": "SegmentSFTtoMessageHeader",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,28 +22,91 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "SFT",
   "targetUri": "MessageHeader",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Segment SFT to MessageHeader.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1XsVWY6amPZPo_zDxRywAxAJqX1_BzD8-7gt729NKdH4/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
         {
           "code": "SFT-2",
-          "display": "Software Certified Version or Release Number",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "ST",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "MessageHeader.source.version",
-              "display": "MessageHeader.source.version"
+              "code": "source.version",
+              "display": "source.version",
+              "comment": "1",
+              "dependsOn": [
+                {
+                  "property": "references",
+                  "value": "string"
+                }
+              ]
             }
           ]
         },
         {
           "code": "SFT-3",
-          "display": "Software Product Name",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "ST",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "MessageHeader.source.software",
-              "display": "MessageHeader.source.software"
+              "code": "source.software",
+              "display": "source.software",
+              "comment": "1",
+              "dependsOn": [
+                {
+                  "property": "references",
+                  "value": "string"
+                }
+              ]
             }
           ]
         }

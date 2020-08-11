@@ -1,0 +1,38 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,SPM-1,Set ID - SPM,SI,0,1,,,,,,,,,,,,,
+2,SPM-2,Specimen ID,EIP,0,1,,,,identifier[1],,Identifier,0,-1,EIP[Identifier],,,,
+3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,Only one of the two parent references in EIP can be mapped.  The implementation needs to choose which one.,parent.identifier,,Identifier,0,1,EIP[Identifier],,,,"Note that Specimen.parent can repeat, i.e., match the SPM-3 cardinality, but Specimen.parent.identifier does not.  Therefore, while a specimen can have multiple parents, putting placer and filler parent identifiers in separate parent instances is not appropriate."
+4,SPM-4,Specimen Type,CWE,1,1,,,,type,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+5,SPM-5,Specimen Type Modifier,CWE,0,-1,,,,,,,,,,,,,
+6,SPM-6,Specimen Additives,CWE,0,-1,,,,container.additiveCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+7,SPM-7,Specimen Collection Method,CWE,0,1,,,,collection.method,,CodeableConcept,0,1,CWE[CodeableConcept],,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)
+8,SPM-8,Specimen Source Site,CWE,0,1,,,,collection.bodySite,,CodeableConcept,0,1,CWE[CodeableConcept],,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)
+9,SPM-9,Specimen Source Site Modifier,CWE,0,-1,,,,,Specimen.collection.#ext-siteModifier#,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
+10,SPM-10,Specimen Collection Site,CWE,0,1,,,,,,,,,,,,,
+11,SPM-11,Specimen Role,CWE,0,-1,,,,,,,,,,,,,
+12,SPM-12,Specimen Collection Amount,CQ,0,1,,,,collection.quantity,,SimpleQuantity,0,1,CQ[Quantity],,,,
+13,SPM-13,Grouped Specimen Count,NM,0,1,,,,,,,,,,,,,
+14,SPM-14,Specimen Description,ST,0,-1,,,,note(Annotation.text),,markdown,1,1,,,,,
+15,SPM-15,Specimen Handling Code,CWE,0,-1,,,,,,,,,,,,,
+16,SPM-16,Specimen Risk Code,CWE,0,-1,,,,,,,,,,,,,
+17,SPM-17,Specimen Collection Date/Time,DR,0,1,IF SPM-17.2 VALUED,,,collection.collectedPeriod,,,,,DR[Period],,,,
+17,SPM-17,Specimen Collection Date/Time,DR,0,1,IF SPM-17.2 NOT VALUED,,,collection.collectedDateTime,,,,,DR[dateTime],,,,
+18,SPM-18,Specimen Received Date/Time,DTM,0,1,,,,receivedTime,,dateTime,0,1,,,,,
+19,SPM-19,Specimen Expiration Date/Time,DTM,0,1,,,,,,,,,,,,,
+20,SPM-20,Specimen Availability,ID,0,1,,,,status,,code,0,1,,SpecimenAvailability,,,
+21,SPM-21,Specimen Reject Reason,CWE,0,-1,,,,,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,This provides the mechanism to map SPM-21 to a CodeableConcept but the mapping to the ServiceRequest data element is contained in the message map
+22,SPM-22,Specimen Quality,CWE,0,1,,,,,,,,,,,,,
+23,SPM-23,Specimen Appropriateness,CWE,0,1,,,,,,,,,,,,,
+24,SPM-24,Specimen Condition,CWE,0,-1,,,,condition,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
+25,SPM-25,Specimen Current Quantity,CQ,0,1,,,,,,,,,,,,,
+26,SPM-26,Number of Specimen Containers,NM,0,1,,,,,,,,,,,,,
+27,SPM-27,Container Type,CWE,0,1,,,,container.type,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+28,SPM-28,Container Condition,CWE,0,1,,,,,,,,,,,,,
+29,SPM-29,Specimen Child Role,CWE,0,1,,,,,,,,,,,,,
+30,SPM-30,Accession ID,CX,0,-1,,,,accessionIdentifier,,Identifier,0,1,CX[Identifier],,,,
+31,SPM-31,Other Specimen ID,CX,0,-1,,,,identifier[2],,Identifier,0,-1,CX[Identifier],,,,
+32,SPM-32,Shipment ID,EI,0,1,,,,identifier[3],,Identifier,0,-1,EI[Identifier],,,,
+32,SPM-32,Shipment ID,EI,0,1,,,,identifier[3].type.coding.code,"assign: ""SHIP""",code,0,1,,,,,
+32,SPM-32,Shipment ID,EI,0,1,,,,"identifier[3].type.coding.system=""http://terminology.hl7.org/CodeSystem/v2-0203""",,uri,0,1,,,,,

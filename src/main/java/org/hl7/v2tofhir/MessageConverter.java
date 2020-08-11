@@ -9,19 +9,9 @@ import org.apache.commons.lang3.StringUtils;
 
 public class MessageConverter extends ConverterImpl<MessageInput> implements Converter {
 
-    public MessageConverter(File f) throws IOException {
-        super(MessageInput.class);
+    public MessageConverter(File f, String sourceUrl) throws IOException {
+        super(MessageInput.class, sourceUrl);
         load(f);
-    }
-
-    public void setNames() {
-        MessageInput bean = super.getFirstMappedBean();
-        if (bean == null) return;
-
-        source = StringUtils.substringBefore(bean.v2Code.replace("[", "."), ".");
-        sourceName = source;
-        target = "Bundle";
-        targetName = target;
     }
 
     @Override
@@ -56,9 +46,9 @@ public class MessageConverter extends ConverterImpl<MessageInput> implements Con
         int i = 0;
         for (String head : heads) {
             if (head.equals("Cardinality - Max") || head.equals("Narrative")) {
-                w.printf("<td style='border-right: 2px' title='%s'>%s</td>", titles[i++], head);
+                w.printf("<td style='border-right: 2px' title='%s'>%s</td>", escapeHtmlAttr(titles[i++]), head);
             } else {
-                w.printf("<th title='%s'>%s</th>", titles[i++], head);
+                w.printf("<th title='%s'>%s</th>", escapeHtmlAttr(titles[i++]), head);
             }
         }
         w.println("</thead>");
@@ -72,7 +62,7 @@ public class MessageConverter extends ConverterImpl<MessageInput> implements Con
             String cols[] = {
                 bean.v2Sort, bean.v2Code, escapeHtmlString(bean.v2Message), escapeHtmlString(bean.v2Name), bean.v2Min, bean.v2Max,
                 escapeHtmlString(bean.conditionANTLR), escapeHtmlString(bean.conditionfhirPath), escapeHtmlString(bean.conditionNarrative),
-                makeFhirLink(bean.fhirCode), makeSegmentLink(bean.segmentMap, bean.fhirCode),
+                makeFhirLink(bean.fhirCode, count), makeSegmentLink(bean.segmentMap, bean.fhirCode, count),
                 escapeHtmlString(bean.reference), escapeHtmlString(bean.comments)
             };
             w.print("<tr>");

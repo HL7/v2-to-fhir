@@ -25,15 +25,43 @@ public interface Converter {
      */
     void store() throws IOException;
 
+    /**
+     * Get the type of converter (Table, Message, Segment or Datatype)
+     * @return the type of converter.
+     */
     String getType();
+    /**
+     * Get the name of the source object
+     * @return  The name of the source object.
+     */
     String getSourceName();
+    /**
+     * Get the name of the target object
+     * @return  The name of the target object.
+     */
     String getTargetName();
 
+    /**
+     * Get the name of the HTML File that will be produced
+     * @return  the name of the HTML File that will be produced
+     */
     String getHtmlFileName();
 
+    /**
+     * Get the name of the Source File that was read
+     * @return  the name of the Source File that was read
+     */
     String getSourceFileName();
 
+    /**
+     * Get any qualifier associated with the conversion
+     * @return  the qualifier associated with the conversion
+     */
     String getQualifier();
 
+    /**
+     * Get the name of the FHIR Shorthand File that will be produced
+     * @return  the name of the FHIR Shorthand File that will be produced
+     */
     String getFishFileName();
 }

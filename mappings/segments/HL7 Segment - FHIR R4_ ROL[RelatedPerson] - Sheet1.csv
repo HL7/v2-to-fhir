@@ -1,0 +1,17 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,ROL-1,Role Instance ID,EI,0,1,,,,Identifier,,Identifier,0,-1,EI[Identifier],,,,
+2,ROL-2,Action Code,ID,1,1,,,if mapped to a restful service to progress the message.,,,,,,,,,,
+3,ROL-3,Role-ROL,CWE,1,1,,,,relationship,,CodeableConcept,0,-1,CWE[CodeableConcept],Role,,,
+4,ROL-4,Role Person,XCN,1,-1,,,,,,,,,XCN[RelatedPerson],,,,"A given ROL segment should create a single RelatedPerson resource, with the name coming from ROL-4 via the Data Type Map provided here and other attributes (eg. address, phone number) from other ROL fields."
+5,ROL-5,Role Begin Date/Time,DTM,0,1,,,,period.start,,dateTime,0,1,,,,,
+6,ROL-6,Role End Date/Time,DTM,0,1,,,,period.end,,dateTime,0,1,,,,,
+7,ROL-7,Role Duration,CWE,0,1,,,,,RelatedPerson.#ext-duration#,code,0,1,CWE[code],,,,
+8,ROL-8,Role Action Reason,CWE,0,1,,,,,,,,,,,,,
+9,ROL-9,Provider Type,CWE,0,-1,,,,,RelatedPerson.#ext-providerType#,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
+10,ROL-10,Organization Unit Type,CWE,0,1,,,,,RelatedPerson.#ext-organizationType#,CodeableConcept,0,1,CWE[CodeableConcept],OrganizationUnitType,,,
+11,ROL-11,Office/Home Address/Birthplace,XAD,0,-1,,,,address,,Address,0,-1,XAD[Address],,,,
+12,ROL-12,Phone,XTN,0,-1,,,,telecom,,ContactPoint,0,-1,XTN[ContactPoint],,,,
+13,ROL-13,Person's Location,PL,0,1,,,,,RelatedPerson.#ext-location(Location)#,Reference(Location),0,1,PL[Location],,,,
+14,ROL-14,Organization,XON,0,1,,,,,RelatedPerson.#ext-organization(Organization)#,Reference(Organization),0,1,XON[Organization],,,,

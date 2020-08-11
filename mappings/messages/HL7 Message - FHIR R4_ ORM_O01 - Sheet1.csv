@@ -1,0 +1,56 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
+Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
+1,ORM_O01.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
+1,ORM_O01.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
+1,ORM_O01.MSH,MSH,Message Header,1,1,,,,Provenance[1],MSH[Provenance],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
+1,ORM_O01.MSH,MSH,Message Header,1,1,,,,Task[1],MSH[Task],,,
+2,ORM_O01.NTE,[{ NTE }],Notes and Comments (for Header),0,-1,,,,,,,,Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.
+3,ORM_O01.PATIENT,[ ,PATIENT begin,0,1,,,,,,,,
+3.1,ORM_O01.PATIENT.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
+3.2,ORM_O01.PATIENT.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
+3.3,ORM_O01.PATIENT.NTE,[{ NTE }],Notes and Comments (for Patient ID),0,-1,,,,,,,,
+3.4,ORM_O01.PATIENT.VISIT,[,PATIENT_VISIT begin,0,1,,,,,,,,
+3.4.1,ORM_O01.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,,,,Encounter,PV1[Encounter],Encounter.subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
+3.4.1,ORM_O01.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
+3.4.2,ORM_O01.PATIENT.VISIT.PV2,[ PV2 ],Patient Visit- Additional Info,0,1,,,,Encounter,PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.
+3.4.3,/ORM_O01.PATIENT.VISIT,],PATIENT_VISIT end,,,,,,,,,,
+3.5,ORM_O01.PATIENT.INSURANCE,[{,INSURANCE begin,0,-1,,,,,,,,
+3.5.1,ORM_O01.PATIENT.INSURANCE.IN1,IN1,Insurance,1,1,,,,Coverage,IN1[Coverage],Coverage.subscriber.reference=Patient[1].id,,Processing of the IN1 segment results in the creation of a new Coverage resource
+3.5.2,ORM_O01.PATIENT.INSURANCE.IN2,[ IN2 ],Insurance Additional Info,0,1,,,,Coverage,IN2[Coverage],,,Incorporate IN2 content into the Coverage created from the IN1 segment.
+3.5.3,ORM_O01.PATIENT.INSURANCE.IN3,[ IN3 ],Insurance Add'l Info – Cert.,0,1,,,,Coverage,IN3[Coverage],,,Incorporate IN3 content into the Coverage created from the IN1 segment.
+3.5.4,/ORM_O01.PATIENT.INSURANCE,}],INSURANCE end,,,,,,,,,,
+3.6,ORM_O01.PATIENT.GT1,[ GT1 ],Guarantor,0,1,,,,,,,,
+3.7,ORM_O01.PATIENT.AL1,[{ AL1 }],Allergy Information,0,-1,,,,AllergyIntolerance,AL1,AllergyIntolerance.patient.reference=Patient[1].id,,Processing of the AL1 segment results in the creation of a new AllergyIntolerance resource
+3.8,/ORM_O01.PATIENT,],PATIENT end,,,,,,,,,,
+4,ORM_O01.ORDER,{,ORDER begin,1,-1,,,,,,,,
+4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,,,,ServiceRequest[1],ORC[ServiceRequest],ServiceRequest.subject.reference=Patient[1].id,,Processing of each ORC segment results in the creation of a new ServiceRequest resource
+4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,"IF ORC.1 EQUALS ""NW""","ORC.element(""1"")=""NW""",If the receiving system should perform the order,Task[1],ORC[Task-New Order],Task.basedOn.reference=ServiceRequest[1].id; Task.encounter.reference=Encounter[1].id; Task.for.reference=Patient[1].id; Task.reasonReference=Condition[1]id; Task.insurance.reference=Coverage[1].id,,"Processing of each ORC segment results in the creation of a new Task resource which is linked back to the ServiceRequest created for the same ORC segment. =*= The creation of a Task resource and its inclusion in the FHIR bundle should only happen when the receiving system is responsible for fulfillment of the ServiceRequest. Other systems may receive notification of the order, but should not receive a Task Resource if they are not the intended filler system."
+4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,"IF ORC.1 EQUALS ""OC""","ORC.element(""1"")=""OC""",,Task[1],ORC[Task-CancelOrder],Task.basedOn.reference=ServiceRequest[1].id; Task.encounter.reference=Encounter[1].id; Task.for.reference=Patient[1].id; Task.reasonReference=Condition[1].id; Task.insurance.reference=Coverage[1].id,,
+4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,,,,Provenance,ORC[Provenance],Provenance.target=ServiceRequest[ORC],,
+4.2.begin,ORM_O01.ORDER_DETAIL,[,ORDER_DETAIL begin,0,1,,,,,,,,
+4.2.1.begin,ORM_O01.ORDER_DETAIL.CHOICE,<,,,,,,,,,,,
+4.2.1.1,ORM_O01.ORDER_DETAIL.CHOICE.OBR,OBR,"Order Detail Segment OBR, etc.",0,1,IF PID VALUED,,,ServiceRequest[1],OBR[ServiceRequest],,,Incorporate OBR content into the ServiceRequest created from the ORC segment in the same segment group.
+4.2.1.1,ORM_O01.ORDER_DETAIL.CHOICE.OBR,OBR,"Order Detail Segment OBR, etc.",0,1,IF PID NOT VALUED,,,SupplyRequest[1],OBR[ServiceRequest],,,
+4.2.1.2,ORM_O01.ORDER_DETAIL.CHOICE,|,,,,,,,,,,,
+4.2.1.3,ORM_O01.ORDER_DETAIL.CHOICE.RQD,RQD,Requisition Detail,0,1,,,,,,,,
+4.2.1.4,ORM_O01.ORDER_DETAIL.CHOICE,|,,,,,,,,,,,
+4.2.1.5,ORM_O01.ORDER_DETAIL.CHOICE.RQ1,RQ1,Requisition Detail-1,0,1,,,,,,,,
+4.2.1.6,ORM_O01.ORDER_DETAIL.CHOICE,|,,,,,,,,,,,
+4.2.1.7,ORM_O01.ORDER_DETAIL.CHOICE.RXO,RXO,Pharmacy/Treatment Order,0,1,,,,MedicationRequest,RXO[MedicationRequest],,,
+4.2.1.8,ORM_O01.ORDER_DETAIL.CHOICE,|,,,,,,,,,,,
+4.2.1.9,ORM_O01.ORDER_DETAIL.CHOICE.ODS,ODS,"Dietary Orders, Supplements, and Preferences",0,1,IF PID NOT VALUED,,,SupplyRequest,,,,
+4.2.1.10,ORM_O01.ORDER_DETAIL.CHOICE,|,,,,,,,,,,,
+4.2.1.11,ORM_O01.ORDER_DETAIL.CHOICE.ODT,ODT,Diet Tray Instructions,0,1,,,,,,,,
+4.2.1.12,/ORM_O01.ORDER_DETAIL.CHOICE,>,,,,,,,,,,,
+4.2.2,ORM_O01.ORDER_DETAIL.NTE,[{ NTE }],Notes and Comments (for Detail),0,-1,,,,ServiceRequest[1].note,NTE[Annotation],,,
+4.2.3,ORM_O01.ORDER_DETAIL.CTD,[ CTD ],Contact Data 1,0,1,,,,,,,,
+4.2.4,ORM_O01.ORDER_DETAIL.DG1,[{ DG1 }],Diagnosis,0,-1,,,,ServiceRequest[1].reasonReference(Condition),DG1[Condition],ServiceRequest[1].reasonReference(Condition.subject.reference=Patient[1].id),,Processing of the DG1 segment results in the creation of a new Condition resource which is referenced in the ServiceRequest created by the ORC segment
+4.2.5,ORM_O01.ORDER_DETAIL.OBSERVATION,[{,OBSERVATION begin,0,-1,,,,,,,,
+4.2.5.1,ORM_O01.ORDER_DETAIL.OBSERVATION.OBX,OBX,Observation/Result,1,1,,,,,,,,
+4.2.5.2,ORM_O01.ORDER_DETAIL.OBSERVATION.NTE,[{ NTE }],Notes and Comments (for Results),0,-1,,,,,,,,
+4.2.5.3,/ORM_O01.ORDER_DETAIL.OBSERVATION,}],OBSERVATION end,,,,,,,,,,
+4.2.6,/ORM_O01.ORDER_DETAIL,],ORDER_DETAIL end,,,,,,,,,,
+4.3,ORM_O01.ORDER.FT1,[{ FT1 }],Financial Transaction,0,-1,,,,,,,,
+4.4,ORM_O01.ORDER.CTI,[{ CTI }],Clinical Trial Identification,0,-1,,,,,,,,
+4.5,ORM_O01.ORDER.BLG,[ BLG ],Billing Segment,0,1,,,,,,,,
+4.6,/ORM_O01.ORDER,},ORDER end,,,,,,,,,,

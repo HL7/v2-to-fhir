@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-pid-to-patient",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 PID Segment to the FHIR Patient Resource.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Patient Resource.",
   "url": "http://hl7.org/fhir/v2-tofhir/segment-pid-to-patient",
   "version": "1.0",
-  "name": "Segment_PID_Map",
+  "name": "SegmentPIDtoPatient",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,127 +22,516 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "PID",
   "targetUri": "Patient",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Segment PID to Patient.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1_MOAJOykRWct_9cBG-EcPcWSpSObQFLboPB579DIoAI/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
         {
           "code": "PID-2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CX"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Patient ID",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[1]",
-              "display": "Patient.identifier[1]"
-            }
-          ]
-        },
-        {
-          "code": "PID-3",
-          "display": "Patient Identifier List",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Patient.identifier[2]",
-              "display": "Patient.identifier[2]"
-            }
-          ]
-        },
-        {
-          "code": "PID-4",
-          "display": "Alternate Patient ID - PID",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Patient.identifier[3]",
-              "display": "Patient.identifier[3]"
-            }
-          ]
-        },
-        {
-          "code": "PID-5",
-          "display": "Patient Name",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Patient.name[1]",
-              "display": "Patient.name[1]"
-            }
-          ]
-        },
-        {
-          "code": "PID-6",
-          "display": "Mother's Maiden Name",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Patient.extension-mothersMaidenName",
-              "display": "Patient.extension-mothersMaidenName",
-              "comment": "This may not be the second name if there are repeats in PID-5. ext.patientMothersMaiden (string) also exists if we prefer."
-            }
-          ]
-        },
-        {
-          "code": "PID-7",
-          "display": "Date/Time of Birth",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Patient.birthdate",
-              "display": "Patient.birthdate"
-            }
-          ]
-        },
-        {
-          "code": "PID-8",
-          "display": "Administrative Sex",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Patient.gender",
-              "display": "Patient.gender"
-            }
-          ]
-        },
-        {
-          "code": "PID-9",
-          "display": "Patient Alias",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Patient.name[2]",
-              "display": "Patient.name[2]"
-            }
-          ]
-        },
-        {
-          "code": "PID-10",
-          "display": "Race",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Observation",
-              "display": "Observation",
+              "code": "identifier[1]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Identifier"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "identifier[1]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "If PID-10 is for clinical purposes"
+                  "property": "data-type-map",
+                  "value": "CX[Identifier]"
                 }
               ]
             }
           ]
         },
         {
-          "code": "PID-10",
-          "display": "Race",
+          "code": "PID-3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CX"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Identifier List",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Observation.subject.reference",
-              "display": "= Patient.id",
+              "code": "identifier[2]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Identifier"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "identifier[2]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "If PID-10 is for clinical purposes"
+                  "property": "data-type-map",
+                  "value": "CX[Identifier]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PID-4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CX"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Alternate Patient ID - PID",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "identifier[3]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Identifier"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "identifier[3]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CX[Identifier]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PID-5",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XPN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "name[1]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "HumanName"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "name[1]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XPN[HumanName]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PID-6",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XPN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Mother's Maiden Name",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "extension-mothersMaidenName",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "HumanName"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "extension-mothersMaidenName",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XPN[HumanName]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PID-7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Date/Time of Birth",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "birthDate",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "date"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "birthDate"
+            }
+          ]
+        },
+        {
+          "code": "PID-7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Date/Time of Birth",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "extension-birthTime",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "extension-birthTime",
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PID-7 LENGTH GREATER THAN 8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PID-8",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Administrative Sex",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "gender",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "gender",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[code]"
+                },
+                {
+                  "property": "vocabulary-map",
+                  "value": "Gender"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PID-9",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XPN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
+          "display": "Patient Alias",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "name[2]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "HumanName"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "name[2]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XPN[HumanName]"
                 }
               ]
             }
@@ -150,198 +539,745 @@
         },
         {
           "code": "PID-11",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XAD"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Patient Address",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.address[1]",
-              "display": "Patient.address[1]"
+              "code": "address[1]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Address"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "address[1]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XAD[Address]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-12",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "County Code",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.address[2].district",
-              "display": "Patient.address[2].district",
-              "comment": "This may not be the second occurrence if PID-11 repeats. Because PID-11 can repeat but PID-12 cannot, it's not appropriate to include PID-12 in an iteration of .address populated from PID-11"
+              "code": "address[1].district",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "address[1].district",
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PID-11 LST.COUNT EQUALS 1 AND PID-11.9 IS NOT VALUED"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-13",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XTN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Phone Number - Home",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[1]",
-              "display": "Patient.telecom[1]"
+              "code": "telecom[1]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "ContactPoint"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "telecom[1]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XTN[ContactPoint]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-13",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XTN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Phone Number - Home",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[1].use",
-              "display": "= \"home\""
+              "code": "telecom[1].use",
+              "display": "telecom[1].use",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"home\""
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PID-13.2 IS NOT VALUED"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-14",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XTN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Phone Number - Business",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[2]",
-              "display": "Patient.telecom[2]",
-              "comment": "XTN[ContactPoint.use=\"work\"]"
+              "code": "telecom[2]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "ContactPoint"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "telecom[2]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XTN[ContactPoint]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-14",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XTN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Phone Number - Business",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[2].use",
-              "display": "= \"work\""
+              "code": "telecom[2].use",
+              "display": "telecom[2].use",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"work\""
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PID-14.2 IS NOT VALUED"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-15",
-          "display": "Primary Language",
-          "target": [
+          "extension": [
             {
-              "equivalence": "equivalent",
-              "code": "Patient.communication.language",
-              "display": "Patient.communication.language"
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "code": "PID-15",
+          ],
           "display": "Primary Language",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.communication.preferred",
-              "display": "= \"true\"",
-              "comment": "There is a critical question whether it is appropriate to include this specific mapping.  While it seems that \"primary\" would mean \"true\", it is unclear how this would be resolved if from other sources another language is marked as \"true\".  If not marked, it would not be clear which language to put in on the return.  Furthermore, depending on purpose, the language may change (verbal vs. written, etc.)  So not having cardinality and purpose aligned makes it hard to have a consistent, correct map.  Consequently if set to t\"true\" some are concerned it may expected to be used for, or not be used for translation purposes it is or is not intended for that purpose.  Therefore, should we or should we not leave this mapping in?"
+              "code": "communication.language",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "communication.language",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                },
+                {
+                  "property": "vocabulary-map",
+                  "value": "Language"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-16",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Marital Status",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.maritalStatus",
-              "display": "Patient.maritalStatus"
+              "code": "maritalStatus",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "maritalStatus",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                },
+                {
+                  "property": "vocabulary-map",
+                  "value": "MaritalStatus"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-17",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Religion",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-religion",
-              "display": "Patient.extension-patient-religion"
-            }
-          ]
-        },
-        {
-          "code": "PID-18",
-          "display": "Patient Account Number",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Account[1].identifier",
-              "display": "Account[1].identifier",
-              "comment": "Where Account.subject.Reference(Patient.identifier)=Patient.identifier"
-            }
-          ]
-        },
-        {
-          "code": "PID-18",
-          "display": "Patient Account Number",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Account[1].subject",
-              "display": "= Patient.id"
-            }
-          ]
-        },
-        {
-          "code": "PID-19",
-          "display": "SSN Number - Patient",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Patient.identifier[4].value",
-              "display": "Patient.identifier[4].value",
-              "comment": "the value set for Identifier.type doesn't contain SSN but it does have SB (social beneficiary)"
+              "code": "extension-patient-religion",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "extension-patient-religion",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                },
+                {
+                  "property": "vocabulary-map",
+                  "value": "Religion"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-19",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "SSN Number - Patient",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[4].type",
-              "display": "= \"SB\""
+              "code": "identifier[4].value",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "identifier[4].value"
+            }
+          ]
+        },
+        {
+          "code": "PID-19",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "SSN Number - Patient",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "identifier[4].type.coding.code",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "identifier[4].type.coding.code",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"SB\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PID-19",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "SSN Number - Patient",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "identifier[4].type.coding.system",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "identifier[4].type.coding.system",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "PID-19",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "SSN Number - Patient",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "identifier[4].system",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "uri"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "identifier[4].system",
+              "dependsOn": [
+                {
+                  "property": "value",
+                  "value": "\"http://hl7.org/fhir/sid/us-ssn.\""
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-20",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Driver's License Number - Patient",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.identifier[5]",
-              "display": "Patient.identifier[5]"
-            }
-          ]
-        },
-        {
-          "code": "PID-21",
-          "display": "Mother's Identifier",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "RelatedPerson.identifier",
-              "display": "RelatedPerson.identifier",
-              "comment": "Where RelatedPerson.patient.Reference(Patient.identifier)=Patient.identifier\nIs this worth worrying about?\\"
-            }
-          ]
-        },
-        {
-          "code": "PID-22",
-          "display": "Ethnic Group",
-          "target": [
-            {
-              "equivalence": "equivalent",
-              "code": "Observation",
-              "display": "Observation",
+              "code": "identifier[5]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Identifier"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "identifier[5]",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "IF PID-22 is for clinical purposes"
+                  "property": "data-type-map",
+                  "value": "DLN[Identifier]"
                 }
               ]
             }
@@ -349,27 +1285,109 @@
         },
         {
           "code": "PID-23",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Birth Place",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-birthplace.text",
-              "display": "Patient.extension-patient-birthplace.text"
+              "code": "extension-patient-birthplace.text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "extension-patient-birthplace.text"
             }
           ]
         },
         {
           "code": "PID-24",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Multiple Birth Indicator",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.multipleBirthBoolean",
-              "display": "Patient.multipleBirthBoolean",
+              "code": "multipleBirthBoolean",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "boolean"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "multipleBirthBoolean",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF PID-25 NOT VALUED\\"
+                  "property": "vocabulary-map",
+                  "value": "Yes/No"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PID-25 NOT VALUED"
                 }
               ]
             }
@@ -377,62 +1395,268 @@
         },
         {
           "code": "PID-25",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "NM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Birth Order",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.multipleBirthInteger",
-              "display": "Patient.multipleBirthInteger"
+              "code": "multipleBirthInteger",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "integer"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "multipleBirthInteger"
             }
           ]
         },
         {
           "code": "PID-26",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Citizenship",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-citizenship[1].code",
-              "display": "Patient.extension-patient-citizenship[1].code",
-              "comment": "The standard extension does not include a value set"
+              "code": "extension-patient-citizenship[1].code",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "extension-patient-citizenship[1].code",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-28",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Nationality",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-nationality.code",
-              "display": "Patient.extension-patient-nationality.code",
-              "comment": "The standard extension does not include a value set"
+              "code": "extension-patient-nationality.code",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "extension-patient-nationality.code",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-29",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Patient Death Date and Time",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.deceasedDateTime",
-              "display": "Patient.deceasedDateTime"
+              "code": "deceasedDateTime",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "deceasedDateTime"
             }
           ]
         },
         {
           "code": "PID-30",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ID"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Patient Death Indicator",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.deceasedBoolean",
-              "display": "Patient.deceasedBoolean",
+              "code": "deceasedBoolean",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "boolean"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "deceasedBoolean",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF PID-29 NOT VALUED\\"
+                  "property": "vocabulary-map",
+                  "value": "Yes/No"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF PID-29 NOT VALUED"
                 }
               ]
             }
@@ -440,59 +1664,270 @@
         },
         {
           "code": "PID-33",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Last Update Date/Time",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.meta.lastUpdated",
-              "display": "Patient.meta.lastUpdated"
+              "code": "meta.lastUpdated",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "instant"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "meta.lastUpdated"
             }
           ]
         },
         {
           "code": "PID-35",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Taxonomic Classification Code",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-animal.species",
-              "display": "Patient.extension-patient-animal.species",
-              "comment": "A voacabulary map may not be worth the lift given there is no HL7 table associated with this element"
+              "code": "extension-patient-animal.species",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "extension-patient-animal.species",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-36",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Breed Code",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-animal.breed",
-              "display": "Patient.extension-patient-animal.breed",
-              "comment": "A voacabulary map may not be worth the lift given that the associated HL7 table (HL70447) has no suggested values"
+              "code": "extension-patient-animal.breed",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "extension-patient-animal.breed",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-39",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Tribal Citizenship",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.extension-patient-citizenship[2].code",
-              "display": "Patient.extension-patient-citizenship[2].code",
-              "comment": "The standard extension does not include a value set.  Also suggest that the extension should not be limited to \"country\".  Consider adding a .type to the extension to distinguish tribal vs. \"country\" (or whatever we call it), or otherwise add an extension for tribal citizenship to accommodate the return flow."
+              "code": "extension-patient-citizenship[2].code",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "extension-patient-citizenship[2].code",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "PID-40",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XTN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": -1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": -1
+                }
+              ]
+            }
+          ],
           "display": "Patient Telecommunication Information",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "Patient.telecom[3]",
-              "display": "Patient.telecom[3]"
+              "code": "telecom[3]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "ContactPoint"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "telecom[3]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "XTN[ContactPoint]"
+                }
+              ]
             }
           ]
         }

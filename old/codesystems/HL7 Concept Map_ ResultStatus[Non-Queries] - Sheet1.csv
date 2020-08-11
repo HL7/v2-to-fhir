@@ -1,0 +1,13 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+O,Order received; specimen not yet received,HL70123,,,,registered,,Registered,http://hl7.org/fhir/diagnostic-report-status,,
+I,"No results available; specimen received, procedure incomplete",HL70123,,,,registered,,Registered,http://hl7.org/fhir/diagnostic-report-status,,
+S,"No results available; procedure scheduled,but not done",HL70123,,,,registered,,Registered,http://hl7.org/fhir/diagnostic-report-status,,
+A,"Some, but not all, results available",HL70123,,,,partial,,Partial,http://hl7.org/fhir/diagnostic-report-status,,
+P,"Preliminary: A verified early result is available, final results not yet obtained",HL70123,,,,preliminary,,Preliminary,http://hl7.org/fhir/diagnostic-report-status,,
+C,Correction to results,HL70123,,,,corrected,,Corrected,http://hl7.org/fhir/diagnostic-report-status,,
+R,Results stored; not yet verified,HL70123,,,,partial,,Partial,http://hl7.org/fhir/diagnostic-report-status,,
+F,Final results; results stored and verified.Can only be changed with a corrected result.,HL70123,,,,final,,Final,http://hl7.org/fhir/diagnostic-report-status,,
+X,No results available; Order canceled.,HL70123,,,,cancelled,,Cancelled,http://hl7.org/fhir/diagnostic-report-status,,
+Y,No order on record for this test.(Used only on queries),HL70123,IF NOT MAPPED ERROR,,,,,,,,
+Z,No record of this patient. (Used only on queries),HL70123,IF NOT MAPPED ERROR,,,,,,,,

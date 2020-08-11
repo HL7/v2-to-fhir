@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "table-hl70078-to-v3-observationinterpretation",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 Table HL70078 to the FHIR V3 ObservationInterpretation Value Set.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Table HL70078 to the FHIR V3 ObservationInterpretation Value Set.",
   "url": "http://hl7.org/fhir/v2-tofhir/table-hl70078-to-v3-observationinterpretation",
   "version": "1.0",
-  "name": "Table_HL70078_Map",
+  "name": "TableHL70078toV3ObservationInterpretation",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,11 +22,30 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "HL70078",
   "targetUri": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Table HL70078 to V3 ObservationInterpretation.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1mxMfcCgpRM2gH6QBOxndzjZcy22MzlskspqEmNADLp8/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
         {
-          "code": "< ",
+          "code": "<",
           "display": "Off scale low",
           "target": [
             {
@@ -37,7 +56,7 @@
           ]
         },
         {
-          "code": "> ",
+          "code": ">",
           "display": "Off scale high",
           "target": [
             {

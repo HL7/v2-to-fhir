@@ -1,0 +1,2 @@
+REM Download the data (assumes source already built, see build.bat)
+"%JAVA_HOME%\bin\java" -cp target\v2-to-fhir.jar;target\lib\* org.hl7.v2tofhir.Convert -ocompare/segments "-rmappings\v2-to-FHIR Map Inventory - Segment.csv" -ocompare/datatypes "-rmappings\v2-to-FHIR Map Inventory - Data Type.csv" -ocompare/messages "-rmappings\v2-to-FHIR Map Inventory - Message.csv" -ocompare/codesystems "-dmappings\v2-to-FHIR Map Inventory - Code System.csv"

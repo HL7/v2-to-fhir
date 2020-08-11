@@ -1,0 +1,5 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+1,Emergency,HL70217,,,,EM,,emergency,http://terminology.hl7.org/CodeSystem/v3-ActPriority,,
+2,Urgent,HL70217,,,,UR,,urgent,http://terminology.hl7.org/CodeSystem/v3-ActPriority,,
+3,Elective,HL70217,,,,EL,,elective,http://terminology.hl7.org/CodeSystem/v3-ActPriority,,

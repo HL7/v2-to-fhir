@@ -1,0 +1,376 @@
+Only in current/codesystems: HL7 Concept Map_ Event Reason - Sheet1.csv
+Only in old/codesystems: HL7 ConceptMap_ Event Reason - Sheet1.csv
+
+diff -r "current/codesystems/HL7 Concept Map_ InterpretationCodes - Sheet1.csv" "old/codesystems/HL7 Concept Map_ InterpretationCodes - Sheet1.csv"
+7c7
+< AC,Anti-complementary substances present,HL70078,,,,AC,,Anti-complementary substances present,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,
+---
+> AC,Anti-complementary substances present,HL70078,,,,AC,,Anti-complementary substances present,Get the pattern/value,,
+12c12
+diff -r "current/datatypes/HL7 Data Type - FHIR R4_ CM[Specimen-Source] - Sheet1.csv" "old/datatypes/HL7 Data Type - FHIR R4_ CM[Specimen-Source] - Sheet1.csv"
+2c2,3
+< Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping (IS, ID, CE, CNE, CWE)",Assignment,,
+---
+> Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+> (IS, ID, CE, CNE, CWE)",Assignment,,
+
+Only in old/datatypes: HL7 Data Type - FHIR R4_ NA - Sheet1.csv
+
+Only in current/datatypes: HL7 Data Type - FHIR R4_ TQ[MedicationRequest] - Sheet1.csv
+Only in old/datatypes: HL7 Data Type - FHRI R4_ TQ[Medication Request] - Sheet1.csv
+
+diff -r "current/datatypes/HL7 Data Type - FHIR R4_ TQ[ServiceRequest] - Sheet1.csv" "old/datatypes/HL7 Data Type - FHIR R4_ TQ[ServiceRequest] - Sheet1.csv"
+14c14
+< 6,TQ.6,Priority,ST,0,1,,,,priority,,code,0,1,,Priority,,,A translation from the text priority in the v2 message to a coded value in the request-priority value set will be required.
+---
+> 6,TQ.6,Priority,ST,0,1,,,,priority,,code,0,1,Priority,,,,A translation from the text priority in the v2 message to a coded value in the request-priority value set will be required.
+Only in current/datatypes: HL7 Data Type - FHIR R4_ TQ[Task-ExecutionPeriod] - Sheet1.csv
+Only in old/datatypes: HL7 Data Type - FHIR R4_ TQ[TaskExecutionPeriod] - Sheet1.csv
+
+diff -r "current/datatypes/HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv" "old/datatypes/HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv"
+5c5
+< 2,XCN.2,Family Name,FN,0,1,,,,name,,HumanName,,,FN[HumanName],,,,
+---
+> 2,XCN.2,Family Name,FN,0,1,,,,name,,,,,FN,,,,
+
+diff -r "current/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv" "old/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv"
+15,16c15,16
+< 7,ADT_A01:follow:PID.ARV,[{ ARV }],Access Restrictions,0,-1,"IF ARV-1 IN (""PID"", ""PD1"") AND ARV-3 NOT VALUED",,,Patient[1],ARV[Patient],Resource=Patient[1],,"FHIR does not yet support field level security tags.  The ARV, when located with the PID/PD1 in the v2 message, is meant to only apply to the patient.  However, technically it could point to other places in the messageas as well.  That is considered out of scope as."
+< 8,ADT_A01:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[Patient-PractitionerRole],,,
+---
+> 7,ADT_A01:follow:PID.ARV,[{ ARV }],Access Restrictions,0,-1,"IF ARV-1 IN (""PID"", ""PD1"") AND ARV-3 NOT VALUED",,,Patient[1],ARV,Resource=Patient[1],,"FHIR does not yet support field level security tags.  The ARV, when located with the PID/PD1 in the v2 message, is meant to only apply to the patient.  However, technically it could point to other places in the messageas as well.  That is considered out of scope as."
+> 8,ADT_A01:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[PatientPractitionerRole],,,
+18,19c18,19
+< 9,ADT_A01.NK1,[{ NK1 }],Next of Kin / Associated Parties,0,-1,"IF NK1-3.1 NOT IN (""EMR"", ""E"", ""F"", ""I"", ""S"")",,It further depends on the nature of the data being exchanged and how the systems use next of kin data.,RelatedPerson[2],NK1[RelatedPerson],RelatedPerson[2].patient.reference=Patient[1].id,,"Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
+< 9,ADT_A01.NK1,[{ NK1 }],Next of Kin / Associated Parties,0,-1,"IF NK1-3.1 NOT IN (""EMR"", ""E"", ""F"", ""I"", ""S"")",,The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data.  If you need more data than availabe in the Patient.contact Backbone Element we suggest to map to RelatedPerson.,Patient[1],NK1[Patient],,,
+---
+> 9,ADT_A01.NK1,[{ NK1 }],Next of Kin / Associated Parties,0,-1,"IF NK1-3.1 NOT IN (""EMR"", ""E"", ""F"", ""I"", ""S"")",,,RelatedPerson[2],NK1[RelatedPerson],RelatedPerson[2].patient.reference=Patient[1].id,,"Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
+> 9,ADT_A01.NK1,[{ NK1 }],Next of Kin / Associated Parties,0,-1,"IF NK1-3.1 NOT IN (""EMR"", ""E"", ""F"", ""I"", ""S"")",,,Patient[1],NK1[Patient],,,
+24,25c24,25
+< 12,ADT_A01:follow:PV1.ARV,[{ ARV }],Access Restrictions,0,-1,IF  ARV-3 NOT VALUED,,,Encounter[1],ARV[Encounter],Resource=Encounter[1],,"FHIR does not yet support field level security tags.  The ARV, when located with the PV1/PV2 in the v2 message, is meant to only apply to the encounter.  However, technically it could point to other places in the messageas as well.  That is considered out of scope as."
+< 13,ADT_A01:follow:PV1.ROL,[{ ROL }],Role,0,-1,,,,Encounter[1],ROL[Encounter-PractitionerRole],,,
+---
+> 12,ADT_A01:follow:PV1.ARV,[{ ARV }],Access Restrictions,0,-1,IF  ARV-3 NOT VALUED,,,Encounter[1],ARV,Resource=Encounter[1],,"FHIR does not yet support field level security tags.  The ARV, when located with the PV1/PV2 in the v2 message, is meant to only apply to the encounter.  However, technically it could point to other places in the messageas as well.  That is considered out of scope as."
+> 13,ADT_A01:follow:PV1.ROL,[{ ROL }],Role,0,-1,,,,Encounter[1],ROL[EncounterPractitionerRole],,,
+28c28
+< 15,ADT_A01.OBX,[{ OBX }],Observation/Result,0,-1,,,"Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet.",Observation[2],OBX[Observation-Component],Observation.subject.reference=Patient[1].id; Observation.encounter.reference=Encounter[1].id,,
+---
+> 15,ADT_A01.OBX,[{ OBX }],Observation/Result,0,-1,,,"Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet.",Observation[2],OBX[ObservationComponent],Observation.subject.reference=Patient[1].id; Observation.encounter.reference=Encounter[1].id,,
+35c35
+< 19.1,ADT_A01.PROCEDURE.PR1,PR1,Procedures,1,1,,,,Procedure,PR1[Procedure],Procedure.subject.reference=Patient[1].id,,
+---
+> 19.1,ADT_A01.PROCEDURE.PR1,PR1,Procedures,1,1,,,,Procedure,PR1,Procedure.subject.reference=Patient[1].id,,
+
+diff -r "current/messages/HL7 Message - FHIR R4_ ADT_A04 - Sheet1.csv" "old/messages/HL7 Message - FHIR R4_ ADT_A04 - Sheet1.csv"
+17c17
+< 13,ADT_A04:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[Patient-PractitionerRole],,,
+---
+> 13,ADT_A04:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[PatientPractitionerRole],,,
+diff -r "current/messages/HL7 Message - FHIR R4_ ADT_A08 - Sheet1.csv" "old/messages/HL7 Message - FHIR R4_ ADT_A08 - Sheet1.csv"
+16,17c16,17
+< 12,ADT_A08:follow:PID.ARV,[{ ARV }],Access Restrictions,0,-1,"IF ARV-1 IN (""PID"", ""PD1"") AND ARV-3 NOT VALUED",,,Patient[1],ARV[Patient],Resource=Patient[1],,
+< 13,ADT_A08:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[Patient-PractitionerRole],,,
+---
+> 12,ADT_A08:follow:PID.ARV,[{ ARV }],Access Restrictions,0,-1,"IF ARV-1 IN (""PID"", ""PD1"") AND ARV-3 NOT VALUED",,,Patient[1],ARV,Resource=Patient[1],,
+> 13,ADT_A08:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[PatientPractitionerRole],,,
+29,30c29,30
+< 18,ADT_A08:follow:PV1.ARV,[{ ARV }],Access Restrictions,0,-1,"IF ARV-1 IN (""PV1"", ""PV2"") AND ARV-3 NOT VALUED",,,Encounter[1],ARV[Encounter],Resource=Encounter[1],,
+< 19,ADT_A08:follow:PV1.ROL,[{ ROL }],Role,0,-1,,,,Encounter[1],ROL[Encounter-PractitionerRole],,,
+---
+> 18,ADT_A08:follow:PV1.ARV,[{ ARV }],Access Restrictions,0,-1,"IF ARV-1 IN (""PV1"", ""PV2"") AND ARV-3 NOT VALUED",,,Encounter[1],ARV,Resource=Encounter[1],,
+> 19,ADT_A08:follow:PV1.ROL,[{ ROL }],Role,0,-1,,,,Encounter[1],ROL[EncounterPractitionerRole],,,
+35c35
+< 22.1,ADT_A08.OBSERVATION.OBX,OBX,Observation/Result,1,1,,,,Observation,OBX[Observation-Component],Observation.subject.reference=Patient[1].id,,
+---
+> 22.1,ADT_A08.OBSERVATION.OBX,OBX,Observation/Result,1,1,,,,Observation,OBX[ObservationComponent],Observation.subject.reference=Patient[1].id,,
+40,42c40,42
+< 25,ADT_A08.DG1,[{ DG1 }],Diagnosis Information,0,-1,,,If in context of the patient,Condition,DG1[Condition],Condition.subject.reference=Patient[1].id,,
+< 25,ADT_A08.DG1,[{ DG1 }],Diagnosis Information,0,-1,"IF DG1-6 EQUALS ""admitting""",,,Encounter[1],DG1[Condition],Encounter[1].diagnosis.reference=Condition[1].id,,
+< 25,ADT_A08.DG1,[{ DG1 }],Diagnosis Information,0,-1,,,If in context of an encounter,Encounter[1],DG1[Condition],Encounter[1].diagnosis.reference=Condition[1].id,,
+---
+> 25,ADT_A08.DG1,[{ DG1 }],Diagnosis Information,0,-1,,,If in context of the patient,Condition,DG1,Condition.subject.reference=Patient[1].id,,
+> 25,ADT_A08.DG1,[{ DG1 }],Diagnosis Information,0,-1,"IF DG1-6 EQUALS ""admitting""",,,Encounter[1],DG1,Encounter[1].diagnosis.reference=Condition[1].id,,
+> 25,ADT_A08.DG1,[{ DG1 }],Diagnosis Information,0,-1,,,If in context of an encounter,Encounter[1],DG1,Encounter[1].diagnosis.reference=Condition[1].id,,
+
+diff -r "current/messages/HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv" "old/messages/HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv"
+12c12
+< 5.3,OML_O21.PATIENT.PRT,[{PRT}],Participation (for Patient),0,-1,"IF PRT-4.1 EQUALS ""PP"" AND PRT-4.3 EQUALS ""HL70443""","(element(""4.1"")=""PP"")and(element(""4.3"")=""HL70443"")",,PractitionerRole[1],PRT[PractitionerRole],Patient[1].generalPractitioner.reference=PractitionerRole[1].id,,Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data.
+---
+> 5.3,OML_O21.PATIENT.PRT,[{PRT}],Participation (for Patient),0,-1,"IF PRT-4.1 EQUALS ""PP"" AND PRT-4.3 EQUALS ""HL70443""","(element(""4.1"")=""PP"")and(element(""4.3"")=""HL70443"")",,PractitionerRole[1],PRT[PractitionerRole],Patient[1].generalPractioner.reference=PractitionerRole[1].id,,Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data.
+52c52
+< 6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[Observation-Location],,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
+---
+> 6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[ObservationLocation],,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
+diff -r "current/messages/HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv" "old/messages/HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv"
+27,28c27,28
+< 4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,"IF ORC.1 EQUALS ""NW""","ORC.element(""1"")=""NW""",If the receiving system should perform the order,Task[1],ORC[Task-New Order],Task.basedOn.reference=ServiceRequest[1].id; Task.encounter.reference=Encounter[1].id; Task.for.reference=Patient[1].id; Task.reasonReference=Condition[1]id; Task.insurance.reference=Coverage[1].id,,"Processing of each ORC segment results in the creation of a new Task resource which is linked back to the ServiceRequest created for the same ORC segment. =*= The creation of a Task resource and its inclusion in the FHIR bundle should only happen when the receiving system is responsible for fulfillment of the ServiceRequest. Other systems may receive notification of the order, but should not receive a Task Resource if they are not the intended filler system."
+< 4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,"IF ORC.1 EQUALS ""OC""","ORC.element(""1"")=""OC""",,Task[1],ORC[Task-CancelOrder],Task.basedOn.reference=ServiceRequest[1].id; Task.encounter.reference=Encounter[1].id; Task.for.reference=Patient[1].id; Task.reasonReference=Condition[1].id; Task.insurance.reference=Coverage[1].id,,
+---
+> 4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,"IF ORC.1 EQUALS ""NW""","ORC.element(""1"")=""NW""",If the receiving system should perform the order,Task[1],ORC[TaskNew Order],Task.basedOn.reference=ServiceRequest[1].id; Task.encounter.reference=Encounter[1].id; Task.for.reference=Patient[1].id; Task.reasonReference=Condition[1]id; Task.insurance.reference=Coverage[1].id,,"Processing of each ORC segment results in the creation of a new Task resource which is linked back to the ServiceRequest created for the same ORC segment. =*= The creation of a Task resource and its inclusion in the FHIR bundle should only happen when the receiving system is responsible for fulfillment of the ServiceRequest. Other systems may receive notification of the order, but should not receive a Task Resource if they are not the intended filler system."
+> 4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,"IF ORC.1 EQUALS ""OC""","ORC.element(""1"")=""OC""",,Task[1],ORC[TaskCancelOrder],Task.basedOn.reference=ServiceRequest[1].id; Task.encounter.reference=Encounter[1].id; Task.for.reference=Patient[1].id; Task.reasonReference=Condition[1].id; Task.insurance.reference=Coverage[1].id,,
+
+diff -r "current/messages/HL7 Message - FHIR R4_ ORU_R01 - Sheet1.csv" "old/messages/HL7 Message - FHIR R4_ ORU_R01 - Sheet1.csv"
+12c12
+< 4.1.3,ORU_R01.PATIENT_RESULT.PATIENT.PRT,[{PRT}],Participation (for Patient),0,-1,"IF PRT-4.1 EQUALS ""PP"" AND PRT-4.3 EQUALS ""HL70443""","(PRT.element(4.1)=""PP"")and(PRT.element(4.3)=""HL70443"")",,PractitionerRole[1],PRT[PractitionerRole],Patient[1].generalPractitioner.reference=PractitionerRole[1].id,,Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data.
+---
+> 4.1.3,ORU_R01.PATIENT_RESULT.PATIENT.PRT,[{PRT}],Participation (for Patient),0,-1,"IF PRT-4.1 EQUALS ""PP"" AND PRT-4.3 EQUALS ""HL70443""","(PRT.element(4.1)=""PP"")and(PRT.element(4.3)=""HL70443"")",,PractitionerRole[1],PRT[PractitionerRole],Patient[1].generalPractioner.reference=PractitionerRole[1].id,,Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data.
+20c20
+< 4.1.7.1,ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.OBX,OBX,Observation (for Patient ID),1,1,IF OBX-5 LST.count GREATER THAN 1,,,Observation[1],OBX[Observation-Component],,,
+---
+> 4.1.7.1,ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.OBX,OBX,Observation (for Patient ID),1,1,IF OBX-5 LST.count GREATER THAN 1,,,Observation[1],OBX[ObservationComponent],,,
+22c22
+< 4.1.7.2,ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT,[{PRT}],Participation (Observation Participation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[1],PRT[Observation-Location],,,
+---
+> 4.1.7.2,ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT,[{PRT}],Participation (Observation Participation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[1],PRT[ObservationLocation],,,
+57c57
+< 4.2.4.3.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX,OBX,Observation related to OBR,1,1,IF OBX-5 LST.count GREATER THAN 1,,,Observation[2],OBX[Observation-Component],DiagnosticReport.result.reference=Observation[2].id,,"Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation. When multiple OBX segments are tranformed into Observation components in a single Observation resource, implementers should consider how the metadata associated with the result (eg performer, status, date/time, etc) are populated. If the OBX segments being combined into a single resource contain different metadata, it must be considered whether or not the use of components is appropriate."
+---
+> 4.2.4.3.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX,OBX,Observation related to OBR,1,1,IF OBX-5 LST.count GREATER THAN 1,,,Observation[2],OBX[ObservationComponent],DiagnosticReport.result.reference=Observation[2].id,,"Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation. When multiple OBX segments are tranformed into Observation components in a single Observation resource, implementers should consider how the metadata associated with the result (eg performer, status, date/time, etc) are populated. If the OBX segments being combined into a single resource contain different metadata, it must be considered whether or not the use of components is appropriate."
+59c59
+< 4.2.4.3.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT,[{PRT}],Participation (Observation Participation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[Observation-Location],,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
+---
+> 4.2.4.3.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT,[{PRT}],Participation (Observation Participation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[ObservationLocation],,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
+
+diff -r "current/messages/HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv" "old/messages/HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv"
+11c11
+< 6,VXU_V04.NK1,[{ NK1 }],Next of Kin/Associated Parties,0,-1,,,The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data,Patient[1],NK1[Patient],,,
+---
+> 6,VXU_V04.NK1,[{ NK1 }],Next of Kin/Associated Parties,0,-1,,,The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data,Patient[1].contact,NK1[Patient],,,
+13c13
+< 8,VXU_V04.PATIENT_VISIT,[,#NAME?,0,1,,,,,,,,
+---
+> 8,VXU_V04.PATIENT_VISIT,[,--- PATIENT_VISIT begin,0,1,,,,,,,,
+18c18
+< 8.4,/VXU_V04.PATIENT_VISIT,],#NAME?,,,,,,,,,,
+---
+> 8.4,/VXU_V04.PATIENT_VISIT,],--- PATIENT_VISIT end,,,,,,,,,,
+20c20
+< 10,VXU_V04.INSURANCE,[{,#NAME?,0,-1,,,,,,,,
+---
+> 10,VXU_V04.INSURANCE,[{,--- INSURANCE begin,0,-1,,,,,,,,
+24,25c24,25
+< 10.4,/VXU_V04.INSURANCE,}],#NAME?,,,,,,,,,,
+< 11,VXU_V04.PERSON_OBSERVATION,[{,#NAME?,0,-1,,,,,,,,
+---
+> 10.4,/VXU_V04.INSURANCE,}],--- INSURANCE end,,,,,,,,,,
+> 11,VXU_V04.PERSON_OBSERVATION,[{,--- PERSON_OBSERVATION begin,0,-1,,,,,,,,
+27,29c27,29
+< 11.1,VXU_V04.PERSON_OBSERVATION.OBX,OBX,Observation/Result,1,1,IF OBX-5 LST.count GREATER THAN 1,,,Observation[1],OBX[Observation-Component],Observation.subject.reference=Patient[1].id,,
+< 11.2,VXU_V04.PERSON_OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-10 VALUED,,,Device[1],PRT[Observation-Device],Observation[1].device.reference=Device.id,,
+< 11.2,VXU_V04.PERSON_OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[1],PRT[Observation-Location],,,"At this time we don't know of a use case for sending a location PRT to a patient level observations. We've provided a mapping from PRT to Location but not way to link it to other resources in the Bundle. If there is a known use case, please comment on it so that we can develop a solution."
+---
+> 11.1,VXU_V04.PERSON_OBSERVATION.OBX,OBX,Observation/Result,1,1,IF OBX-5 LST.count GREATER THAN 1,,,Observation[1],OBX[ObservationComponent],Observation.subject.reference=Patient[1].id,,
+> 11.2,VXU_V04.PERSON_OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-10 VALUED,,,Device[1],PRT[OBX-Device],Observation[1].device.reference=Device.id,,
+> 11.2,VXU_V04.PERSON_OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[1],PRT[OBX-Location],,,"At this time we don't know of a use case for sending a location PRT to a patient level observations. We've provided a mapping from PRT to Location but not way to link it to other resources in the Bundle. If there is a known use case, please comment on it so that we can develop a solution."
+32,33c32,33
+< 11.4,/VXU_V04.PERSON_OBSERVATION,}],#NAME?,,,,,,,,,,
+< 12,VXU_V04.ORDER,[{,#NAME?,0,-1,,,,,,,,
+---
+> 11.4,/VXU_V04.PERSON_OBSERVATION,}],--- PERSON_OBSERVATION end,,,,,,,,,,
+> 12,VXU_V04.ORDER,[{,--- ORDER begin,0,-1,,,,,,,,
+36c36
+< 12.2,VXU_V04.ORDER.PRT,[{PRT}],Participation (for ORC),0,-1,"IF PRT-4.1 EQUALS ""OP"" AND PRT-4.3 EQUALS ""HL70443""","(element(""4.1"")=""OP"")and(element(""4.3"")=""HL70443"")",,PractitionerRole[2],PRT[PractitionerRole],Immunization.performer.actor.reference=PractitionerRole[2].id,,"Processing of each PRT segment typically results in the creation of a new Practitioner or PractitionerRole resource.
+---
+> 12.2,VXU_V04.ORDER.PRT,[{PRT}],Participation (for ORC),0,-1,"IF PRT-4.1 EQUALS ""OP"" AND PRT-4.3 EQUALS ""HL70443""","(element(""4.1"")=""OP"")and(element(""4.3"")=""HL70443"")",,PractitionerRole[2],PRT[PractitionerRole],Immunization.performer.actor.reference=PractitionerRole[2].id,,"Processing of each PRT segment typically results in the creation of a new Practitioner or PractitionerRole resource. 
+46c46
+< 12.3,VXU_V04.ORDER.TIMING,[{,#NAME?,0,-1,,,,,,,,
+---
+> 12.3,VXU_V04.ORDER.TIMING,[{,--- TIMING begin,0,-1,,,,,,,,
+49c49
+< 12.3.3,/VXU_V04.ORDER.TIMING,}],#NAME?,,,,,,,,,,
+---
+> 12.3.3,/VXU_V04.ORDER.TIMING,}],--- TIMING end,,,,,,,,,,
+52c52
+< 12.6,VXU_V04.ORDER.OBSERVATION,[{,#NAME?,0,-1,,,,,,,,
+---
+> 12.6,VXU_V04.ORDER.OBSERVATION,[{,--- OBSERVATION begin,0,-1,,,,,,,,
+54,56c54,56
+< 12.6.1,VXU_V04.ORDER.OBSERVATION.OBX,OBX,Observation/Result,1,1,IF OBX-5 LST.count GREATER THAN 1,,"Some observations about the immunization may map to elements within the Immuniation resource rather than an independent Observation resource. For example, funding source, patient eligibility and educational material are often sent as OBX segments but map to Immunization elements.  Specific guidance on how to map, e.g., the US CDC implementation guide on immunizations, will be provided separately at a future time TBD.",Observation[2],OBX[Observation-Component],Observation.subject.reference=Patient[1].id; Observation.partOf.reference=Immunization[1].id,,
+< 12.6.2,VXU_V04.ORDER.OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-10 VALUED,,,Device[2],PRT[Observation-Device],Observation[1].device.reference=Device.id,,
+< 12.6.2,VXU_V04.ORDER.OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[Observation-Location],,,
+---
+> 12.6.1,VXU_V04.ORDER.OBSERVATION.OBX,OBX,Observation/Result,1,1,IF OBX-5 LST.count GREATER THAN 1,,"Some observations about the immunization may map to elements within the Immuniation resource rather than an independent Observation resource. For example, funding source, patient eligibility and educational material are often sent as OBX segments but map to Immunization elements.  Specific guidance on how to map, e.g., the US CDC implementation guide on immunizations, will be provided separately at a future time TBD.",Observation[2],OBX[ObservationComponent],Observation.subject.reference=Patient[1].id; Observation.partOf.reference=Immunization[1].id,,
+> 12.6.2,VXU_V04.ORDER.OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-10 VALUED,,,Device[2],PRT[OBX-Device],Observation[1].device.reference=Device.id,,
+> 12.6.2,VXU_V04.ORDER.OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[OBX-Location],,,
+59,60c59,60
+< 12.6.4,/VXU_V04.ORDER.OBSERVATION,}],#NAME?,,,,,,,,,,
+< 12.7,/VXU_V04.ORDER,}],#NAME?,,,,,,,,,,
+---
+> 12.6.4,/VXU_V04.ORDER.OBSERVATION,}],--- OBSERVATION end,,,,,,,,,,
+> 12.7,/VXU_V04.ORDER,}],--- ORDER end,,,,,,,,,,
+\ No newline at end of file
+
+diff -r current/messages/filetourl.properties old/messages/filetourl.properties
+1c1
+< #Tue Aug 04 10:45:59 EDT 2020
+---
+> #Thu Aug 06 14:44:52 EDT 2020
+6c6
+< .=mappings\\messages
+---
+> .=compare\\messages
+Only in old/segments: HL7 Segment - FHIR R4_ AL1[AllergeryIntolerance] - AL1.csv
+Only in current/segments: HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv
+
+Only in old/segments: HL7 Segment - FHIR R4_ MSA[MessageHeader] - Sheet1.csv
+
+Only in old/segments: HL7 Segment - FHIR R4_ NK1 [Patient] - Sheet1.csv
+Only in current/segments: HL7 Segment - FHIR R4_ NK1[Patient] - Sheet1.csv
+
+Only in old/segments: HL7 Segment - FHIR R4_ NK1 [RelatedPerson] - Sheet1.csv
+Only in current/segments: HL7 Segment - FHIR R4_ NK1[RelatedPerson] - Sheet1.csv
+
+diff -r "current/segments/HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv" "old/segments/HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv"
+23c23
+< 15,OBR-15,Specimen Source,CM,0,1,,,,basedOn.reference(ServiceRequest.specimen[1](Specimen)),,Reference(Specimen),0,1,CM[Specimen-Source],,,,
+---
+> 15,OBR-15,Specimen Source,CM,0,1,,,,basedOn.reference(ServiceRequest.specimen[1](Specimen)),,Reference(Specimen),0,1,CM[SpecimenSource],,,,
+diff -r "current/segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv" "old/segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv"
+26c26
+< 15,OBR-15,Specimen Source,CM,0,1,,,,specimen[1](Specimen),,Reference(Specimen),0,1,CM[Specimen-Source],,,,
+---
+> 15,OBR-15,Specimen Source,CM,0,1,,,,specimen[1](Specimen),,Reference(Specimen),0,1,CM[SpecimenSource],,,,
+diff -r "current/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv" "old/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv"
+22c22
+< 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NA""",,,,Observation.component[forEachOBX-5Instance].#ext-valueNumericArray#,complex,0,1,NA[Observation-Component],,,,
+---
+> 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NA""",,,,Observation.component[forEachOBX-5Instance].#ext-valueNumericArray#,complex,0,1,NA,,,,
+54c54
+< 25,OBX-25,Performing Organization Medical Director,XCN,0,1,,,,performer[3](PractitionerRole),,Reference(PractitionerRole),0,1,XCN[PractitionerRole],,,,
+---
+> 25,OBX-25,Performing Organization Medical Director,XCN,0,1,,,,performer[3](PractitionerRole),,Reference(PracitionerRole),0,1,XCN[PractitionerRole],,,,
+60c60
+< 30,OBX-30,Observation Sub-Type,ID,0,1,,,,,Observation.#ext-subType#,code,0,1,,,,,
+---
+> 30,OBX-30,Observation Sub-Type,ID,0,1,,,,,Observation.#ext-subType#,code,0,1,,,,,
+\ No newline at end of file
+diff -r "current/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv" "old/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv"
+21c21
+< 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NA""",,,,valueSampledData,SampledData,0,1,NA[SampledData],,,,
+---
+> 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NA""",,,,Observation.#ext-valueNumericArray#,complex,,,NA,,,,
+40c40
+< 16,OBX-16,Responsible Observer,XCN,0,-1,,,,performer[1](PractitionerRole.practitioner(Practitioner))  ,,Reference(PractitionerRole),0,-1,XCN[Practitioner],,,,
+---
+> 16,OBX-16,Responsible Observer,XCN,0,-1,,,,performer[1](PractitionerRole.practitioner(Practitioner))  ,,Reference(PractitionerRole),0,-1,XCN(Practitioner),,,,
+44c44
+< 18,OBX-18,Equipment Instance Identifier,EI,0,-1,,,,device(Device.identifier),,Identifier,0,-1,EI[Identifier],,,,
+---
+> 18,OBX-18,Equipment Instance Identifier,EI,0,-1,,,,device(Device.identifier),,Identifier,0,-1,EI(Identifier),,,,
+47c47
+< 21,OBX-21,Observation Instance Identifier,EI,0,1,,,,identifier,,Identifier,0,-1,EI[Identifier],,,,
+---
+> 21,OBX-21,Observation Instance Identifier,EI,0,1,,,,identifier,,Identifier,0,-1,EI(Identifier),,,,
+51c51
+< 23,OBX-23,Performing Organization Name,XON,0,1,IF OBX-25 VALUED,,,performer[3](PractitionerRole.organization(Organization)),,Reference(Organization),0,-1,XON[Organization],,,,
+---
+> 23,OBX-23,Performing Organization Name,XON,0,1,IF OBX-25 VALUED,,,performer[3](PractitionerRole.organization(Organization)),,Reference(Organization),0,-1,XON[Organization,,,,
+54c54
+< 25,OBX-25,Performing Organization Medical Director,XCN,0,1,,,,performer[3](PractitionerRole),,Reference(PractitionerRole),0,1,XCN[PractitionerRole],,,,
+---
+> 25,OBX-25,Performing Organization Medical Director,XCN,0,1,,,,performer[3](PractitionerRole),,Reference(PracitionerRole),0,1,XCN[PractitionerRole],,,,
+60c60
+< 30,OBX-30,Observation Sub-Type,ID,0,1,,,,,Observation.#ext-subType#,code,0,1,,,,,"The sub type was necessary in v2 to distinguish purpose of the observation when it appears in a message in the same group (e.g., answers to ask at order entry questions with actual results ).  Within FHIR flagging the observation may not be necessary, but that is not yet clear.  Until then, we will keep the thought of needing an extension, but not create it yet."
+---
+> 30,OBX-30,Observation Sub-Type,ID,0,1,,,,,Observation.#ext-subType#,code,0,1,,,,,"The sub type was necessary in v2 to distinguish purpose of the observation when it appears in a message in the same group (e.g., answers to ask at order entry questions with actual results ).  Within FHIR flagging the observation may not be necessary, but that is not yet clear.  Until then, we will keep the thought of needing an extension, but not create it yet."
+\ No newline at end of file
+diff -r "current/segments/HL7 Segment - FHIR R4_ ORC[Provenance] - ORC.csv" "old/segments/HL7 Segment - FHIR R4_ ORC[Provenance] - ORC.csv"
+32c32
+< 17,ORC-17,Entering Organization,CWE,0,1,,,,agent[1].onBehalfOf(Organization),,Reference(Organization),0,1,CWE[Organization],,,,
+---
+> 17,ORC-17,Entering Organization,CWE,0,1,,,,agent[1].onBehalfOf(Organization),,Reference(Organization),0,1,CWE[Organization},,,,
+
+diff -r "current/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv" "old/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv"
+17,18c17,18
+< 8,ORC-8,Parent Order,EIP,0,1,,,,,ServiceRequest.basedOn[1].#ext-parent.placer#,,,,EIP[Identifier-PlacerAssignedIdentifier],,ORC-8.1,,
+< 8,ORC-8,Parent Order,EIP,0,1,,,,,ServiceRequest.basedOn[1].#ext-parent.filler#,,,,EIP[Identifier-FillerAssignedIdentifier],,ORC-8.2,,
+---
+> 8,ORC-8,Parent Order,EIP,0,1,,,,,ServiceRequest.basedOn[1].#ext-parent.placer#,,,,EIP[Placer],,ORC-8.1,,
+> 8,ORC-8,Parent Order,EIP,0,1,,,,,ServiceRequest.basedOn[1].#ext-parent.filler#,,,,EIP[Filler],,ORC-8.2,,
+
+diff -r "current/segments/HL7 Segment - FHIR R4_ PR1[Procedure] - PV1.csv" "old/segments/HL7 Segment - FHIR R4_ PR1[Procedure] - PV1.csv"
+6c6
+< 3,PR1-3,Procedure Code,CNE,1,-1,,,,code,,CodeableConcept,0,1,CNE[CodeableConcept],,,,
+---
+> 3,PR1-3,Procedure Code,CNE,1,-1,,,,code,,CodeableConcept,0,1,CNE(CodeableConcept),,,,
+
+diff -r "current/segments/HL7 Segment - FHIR R4_ PRT[Device] - Sheet1.csv" "old/segments/HL7 Segment - FHIR R4_ PRT[Device] - Sheet1.csv"
+13c13
+< 10,PRT-10,Device,EI,0,-1,,,If it represents a HRF or AIDC,udiCarrier[1],,BackboneElement,0,-1,EI[Device-UDICarrier],,,,
+---
+> 10,PRT-10,Device,EI,0,-1,,,If it represents a HRF or AIDC,udiCarrier[1],,BackboneElement,0,-1,EI[udiCarrier],,,,
+20c20
+< 16,PRT-16,UDI Device Identifier,EI,0,1,,,,udiCarrier[2],,BackboneElement,0,-1,EI[Device-udiCarrier],,,,
+---
+> 16,PRT-16,UDI Device Identifier,EI,0,1,,,,udiCarrier[2],,BackboneElement,0,-1,EI[udiCarrier],,,,
+
+diff -r "current/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv" "old/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv"
+60c60
+< 37,PV1-37,Discharged to Location,DLD,0,1,,,,hospitalization.destination(Location),,Reference(Location),0,1,DLD[Location],,,,Encounter.hospitalization.destination.reference=Location[1].id
+---
+> 37,PV1-37,Discharged to Location,DLD,0,1,,,,hospitalization.destination(Location),,Reference(Location),0,1,DLD,,,,Encounter.hospitalization.destination.reference=Location[1].id
+71,72c71,72
+< 44,PV1-44,Admit Date/Time,DTM,0,1,,,,period.start,,dateTime,0,1,,,,,
+< 45,PV1-45,Discharge Date/Time,DTM,0,1,,,,period.end,,dateTime,0,1,,,,,
+---
+> 44,PV1-44,Admit Date/Time,DTM,0,1,,,,period.start,,dateTime,0,1,DTM,,,,
+> 45,PV1-45,Discharge Date/Time,DTM,0,1,,,,period.end,,dateTime,0,1,DTM,,,,
+
+diff -r "current/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv" "old/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv"
+15c15
+< 10,PV2-10,Estimated Length of Inpatient Stay,NM,0,1,,,,,Encounter.#ext-estimatedLength#,Quantity,,,NM[Quantity],,,,
+---
+> 10,PV2-10,Estimated Length of Inpatient Stay,NM,0,1,,,,,Encounter.#ext-estimatedLength#,quanitity,,,NM[Quantity],,,,
+
+diff -r "current/segments/HL7 Segment - FHIR R4_ ROL[Encounter-PractitionerRole] - Sheet1.csv" "old/segments/HL7 Segment - FHIR R4_ ROL[Encounter-PractitionerRole] - Sheet1.csv"
+8c8
+< 4,ROL-4,Role Person,XCN,1,-1,,,,participant[1].individual(PractitionerRole.practitioner),,Reference(Practitioner),,,XCN[Practitioner],,,,
+---
+> 4,ROL-4,Role Person,XCN,1,-1,,,,participant[1].individual(PractitionerRole.practitioner),,Reference(Practioner),,,XCN[Practitioner],,,,
+15c15
+< 11,ROL-11,Office/Home Address/Birthplace,XAD,0,-1,,,,participant[1].individual(PractitionerRole.Practitioner(Practitioner.address)),,Address,0,-1,XAD[Address],,,,
+---
+> 11,ROL-11,Office/Home Address/Birthplace,XAD,0,-1,,,,participant[1].individual(PractitionerRole.practioner(Practitioner.address)),,Address,0,-1,XAD[Address],,,,
+
+diff -r "current/segments/HL7 Segment - FHIR R4_ ROL[Patient-PractitionerRole] - Sheet1.csv" "old/segments/HL7 Segment - FHIR R4_ ROL[Patient-PractitionerRole] - Sheet1.csv"
+4c4
+< 1,ROL-1,Role Instance ID,EI,0,1,,,,generalPractitioner(PractitionerRole.identifier),,Identifier,0,-1,EI[Identifier],,,,
+---
+> 1,ROL-1,Role Instance ID,EI,0,1,,,,generalPractioner(PractitionerRole.identifier),,Identifier,0,-1,EI[Identifier],,,,
+6,9c6,9
+< 3,ROL-3,Role-ROL,CWE,1,1,,,,generalPractitioner(PractitionerRole.code),,CodeableConcept,,,CWE[CodeableConcept],Role,,,
+< 4,ROL-4,Role Person,XCN,1,-1,,,,generalPractitioner(PractitionerRole.practitioner),,Reference(Practitioner),,,XCN[Practitioner],,,,
+< 5,ROL-5,Role Begin Date/Time,DTM,0,1,,,,generalPractitioner(PractitionerRole.period.start),,dateTime,,,,,,,
+< 6,ROL-6,Role End Date/Time,DTM,0,1,,,,generalPractitioner(PractitionerRole.period.end),,dateTime,,,,,,,
+---
+> 3,ROL-3,Role-ROL,CWE,1,1,,,,generalPractioner(PractitionerRole.code),,CodeableConcept,,,CWE[CodeableConcept],Role,,,
+> 4,ROL-4,Role Person,XCN,1,-1,,,,generalPractitioner(PractitionerRole.practitioner),,Reference(Practioner),,,XCN[Practitioner],,,,
+> 5,ROL-5,Role Begin Date/Time,DTM,0,1,,,,generalPractioner(PractitionerRole.period.start),,dateTime,,,,,,,
+> 6,ROL-6,Role End Date/Time,DTM,0,1,,,,generalPractioner(PractitionerRole.period.end),,dateTime,,,,,,,
+14,16c14,16
+< 11,ROL-11,Office/Home Address/Birthplace,XAD,0,-1,"IF XAD.7 IN (""N"",""BDL"",""F"",""H"",""P"",""BR"",""V"")",,,generalPractitioner(PractitionerRole.Practitioner(Practitioner.address)),,Address,0,-1,XAD[Address],,,,
+< 11,ROL-11,Office/Home Address/Birthplace,XAD,0,-1,"IF XAD.7 IN (""M"",""O"",""S"",""SH"",""TM"")",,,generalPractitioner(PractitionerRole.location(Location.address)),,Address,0,-1,XAD[Address],,,,"We seek feedback whether we actually should vary this based on ROL-13 being valued.  If not valued, then put it in Patient.generalPractitioner(PractitionerRole.Practitioner(Practitioner.address[2]))"
+< 11,ROL-11,Office/Home Address/Birthplace,XAD,0,-1,"IF XAD.7 IN (""B"",""BI"",""L"")",,,generalPractitioner(PractitionerRole.organization.(Organization.address)),,Address,0,-1,XAD[Address],,,,
+---
+> 11,ROL-11,Office/Home Address/Birthplace,XAD,0,-1,"IF XAD.7 IN (""N"",""BDL"",""F"",""H"",""P"",""BR"",""V"")",,,generalPractioner(PractitionerRole.Practioner(Practitioner.address)),,Address,0,-1,XAD[Address],,,,
+> 11,ROL-11,Office/Home Address/Birthplace,XAD,0,-1,"IF XAD.7 IN (""M"",""O"",""S"",""SH"",""TM"")",,,generalPractioner(PractitionerRole.location(Location.address)),,Address,0,-1,XAD[Address],,,,"We seek feedback whether we actually should vary this based on ROL-13 being valued.  If not valued, then put it in Patient.generalPractioner(PractitionerRole.Practioner(Practitioner.address[2]))"
+> 11,ROL-11,Office/Home Address/Birthplace,XAD,0,-1,"IF XAD.7 IN (""B"",""BI"",""L"")",,,generalPractioner(PractitionerRole.organization.(Organization.address)),,Address,0,-1,XAD[Address],,,,
+18,20c18,20
+< 12,ROL-12,Phone,XTN,0,-1,,,,generalPractitioner(PractitionerRole.telecom),,ContactPoint,0,-1,XTN[ContactPoint],,,,
+< 13,ROL-13,Person's Locatioxn,PL,0,1,,,,generalPractitioner(PractitionerRole.location(Location)),,Reference(Location),0,1,PL[Location],,,,We seek more information on how this is mapped/merged with ROL-11.
+< 14,ROL-14,Organization,XON,0,1,,,,generalPractitioner(PractitionerRole.organization.(Organization)),,Reference(Organization),0,1,XON[Organization],,,,We seek more information on how this is mapped/merged with ROL-11.
+\ No newline at end of file
+---
+> 12,ROL-12,Phone,XTN,0,-1,,,,generalPractioner(PractitionerRole.telecom),,ContactPoint,0,-1,XTN[ContactPoint],,,,
+> 13,ROL-13,Person's Location,PL,0,1,,,,generalPractioner(PractitionerRole.location(Location)),,Reference(Location),0,1,PL[Location],,,,We seek more information on how this is mapped/merged with ROL-11.
+> 14,ROL-14,Organization,XON,0,1,,,,generalPractioner(PractitionerRole.organization.(Organization)),,Reference(Organization),0,1,XON[Organization],,,,We seek more information on how this is mapped/merged with ROL-11.
+\ No newline at end of file
+
+diff -r "current/segments/HL7 Segment - FHIR R4_ ROL[RelatedPerson] - Sheet1.csv" "old/segments/HL7 Segment - FHIR R4_ ROL[RelatedPerson] - Sheet1.csv"
+7c7
+< 4,ROL-4,Role Person,XCN,1,-1,,,,,,,,,XCN[RelatedPerson],,,,
+---
+> 4,ROL-4,Role Person,XCN,1,-1,,,,,,,,,XCN[RelatedPerson],,,,"A given ROL segment should create a single RelatedPerson resource, with the name coming from ROL-4 via the Data Type Map provided here and other attributes (eg. address, phone number) from other ROL fields."
+
+
+

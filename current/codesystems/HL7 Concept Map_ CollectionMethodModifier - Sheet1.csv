@@ -1,0 +1,5 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+F,Frozen,,,,,FROZ,,Frozen,http://terminology.hl7.org/CodeSystem/v2-0493,,
+R,Refrigerated,,,,,COOL,,Cool,http://terminology.hl7.org/CodeSystem/v2-0493,,
+<blank>,,,,,,ROOM,,Room temperature,http://terminology.hl7.org/CodeSystem/v2-0493,,

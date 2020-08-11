@@ -1,0 +1,5 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+F,Full-time student,HL70231,,,,F,,Full-time student,http://terminology.hl7.org/CodeSystem/v2-0231,,
+P,Part-time student,HL70231,,,,P,,Part-time student,http://terminology.hl7.org/CodeSystem/v2-0231,,
+N,Not a student,HL70231,,,,N,,Not a student,http://terminology.hl7.org/CodeSystem/v2-0231,,

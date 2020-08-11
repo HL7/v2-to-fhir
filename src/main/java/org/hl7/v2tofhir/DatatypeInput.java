@@ -40,23 +40,37 @@ public class DatatypeInput implements Convertible, Cloneable {
     @CsvBindByPosition(position=15)
     String fhirVocab;
     @CsvBindByPosition(position=16)
-    String fhirEmpty;
+    String fhirValue;
     @CsvBindByPosition(position=17)
     String comments;
     @Override
     public Row convert() {
         Row r = new Row();
-        r.condition = getCondition(this.conditionANTLR, this.conditionfhirPath);
-        r.conditionDisplay = StringUtils.defaultString(this.conditionNarrative);
+        r.conditionANTLR = StringUtils.defaultString(this.conditionANTLR);
+        r.conditionFHIRPath = StringUtils.defaultString(this.conditionfhirPath);
+        r.conditionNarrative = StringUtils.defaultString(this.conditionNarrative);
         r.dataType = null;
-        r.targetCode = this.fhirCode.trim();
-        if (StringUtils.isBlank(this.fhirCode) || r.targetCode.toLowerCase().contains("n/a")) {
+        if (StringUtils.isBlank(this.fhirCode) || this.fhirCode.toLowerCase().contains("n/a")) {
             // Discard non-applicable mappings
             return null;
         }
+        r.targetCode = this.fhirCode.trim();
         r.targetDisplay = r.targetCode;
+        r.targetType = this.fhirDatatype;
+        r.targetMax = this.fhirMax;
+        r.targetMin = this.fhirMin;
+        r.dataType = this.v2Datatype;
         r.sourceCode = this.v2Code;
         r.sourceDisplay = this.v2Name;
+        r.sourceType = this.v2Datatype;
+        r.sourceMin = this.v2Min;
+        r.sourceMax = this.v2Max;
+        r.targetValue = this.fhirValue;
+        r.mapping = this.v2DataTypeMap;
+        r.vocab = this.fhirVocab;
+        r.targetType = this.fhirDatatype;
+        r.targetMin = this.fhirMax;
+        r.targetMax = this.fhirMax;
         r.comments = this.comments;
         return r;
     }

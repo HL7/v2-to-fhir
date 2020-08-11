@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "table-hl70444-to-v2-0444",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 Table HL70444 to the FHIR V2 0444 Value Set.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Table HL70444 to the FHIR V2 0444 Value Set.",
   "url": "http://hl7.org/fhir/v2-tofhir/table-hl70444-to-v2-0444",
   "version": "1.0",
-  "name": "Table_HL70444_Map",
+  "name": "TableHL70444toV20444",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,6 +22,25 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "HL70444",
   "targetUri": "http://terminology.hl7.org/CodeSystem/v2-0444",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Table HL70444 to V2 0444.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1d1PTZpzWZPTQ6Ke3fJeirYxfuQu9t1BetnUHq26UDgA/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [

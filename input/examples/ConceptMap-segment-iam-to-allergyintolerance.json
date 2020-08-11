@@ -1,13 +1,13 @@
 {
   "resourceType": "ConceptMap",
   "id": "segment-iam-to-allergyintolerance",
-  "description": "This ConceptMap represents the mapping from the HL7 V2 IAM Segment to the FHIR AllergyIntolerance Resource.",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Segment IAM to the FHIR AllergyIntolerance Resource.",
   "url": "http://hl7.org/fhir/v2-tofhir/segment-iam-to-allergyintolerance",
   "version": "1.0",
-  "name": "Segment_IAM_Map",
+  "name": "SegmentIAMtoAllergyIntolerance",
   "status": "active",
   "experimental": true,
-  "date": "2020-03-16",
+  "date": "2020-08-10",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,99 +22,465 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "IAM",
   "targetUri": "AllergyIntolerance",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Segment IAM to AllergyIntolerance.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1oN0BuBRmIfVQHHU6DuwnL1ZL60h6BvnXISJQ7D6akbU/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
         {
           "code": "IAM-2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Allergen Type Code",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.category",
-              "display": "AllergyIntolerance.category"
+              "code": "category",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "category",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[Code]"
+                },
+                {
+                  "property": "vocabulary-map",
+                  "value": "AllergyCategory"
+                }
+              ]
             }
           ]
         },
         {
           "code": "IAM-2",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Allergen Type Code",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.type",
-              "display": "AllergyIntolerance.type"
+              "code": "type",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "type",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[Code]"
+                },
+                {
+                  "property": "vocabulary-map",
+                  "value": "AllergyType"
+                }
+              ]
             }
           ]
         },
         {
           "code": "IAM-3",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Allergen Code/Mnemonic/Description",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.code[1]",
-              "display": "AllergyIntolerance.code[1]"
+              "code": "code[1]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "code[1]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "IAM-4",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Allergy Severity Code",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.reaction.severity",
-              "display": "AllergyIntolerance.reaction.severity"
+              "code": "reaction.severity",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "reaction.severity",
+              "dependsOn": [
+                {
+                  "property": "vocabulary-map",
+                  "value": "AllergySeverity"
+                }
+              ]
             }
           ]
         },
         {
           "code": "IAM-5",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Allergy Reaction Code",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.reaction.manifestation.text",
-              "display": "AllergyIntolerance.reaction.manifestation.text"
+              "code": "reaction.manifestation.text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "reaction.manifestation.text",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "IAM-7",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "EI"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Allergy Unique Identifier",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.identifier",
-              "display": "AllergyIntolerance.identifier"
+              "code": "identifier",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "identifier"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "identifier",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "EI[Identifier]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "IAM-11",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DT"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Onset Date",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.onsetDateTime",
-              "display": "AllergyIntolerance.onsetDateTime"
+              "code": "onsetDateTime",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "onsetDateTime"
             }
           ]
         },
         {
           "code": "IAM-12",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Onset Date Text",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.onsetString",
-              "display": "AllergyIntolerance.onsetString",
-              "comment": "Cannot map to both onsetDateTime and onsetString, so take onsetDateTime if available.",
-              "dependsOn": [
+              "code": "onsetString",
+              "extension": [
                 {
-                  "property": "value",
-                  "value": "# IF IAM-11 NOT VALUED\\"
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "string"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "onsetString",
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF IAM-11 NOT VALUED"
                 }
               ]
             }
@@ -122,26 +488,112 @@
         },
         {
           "code": "IAM-13",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "DTM"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Reported Date/Time",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recordedDate",
-              "display": "AllergyIntolerance.recordedDate"
+              "code": "recordedDate",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "dateTime"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "recordedDate"
             }
           ]
         },
         {
           "code": "IAM-14",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XPN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Reported By",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(Practitioner.name)",
-              "display": "AllergyIntolerance.recorder.reference(Practitioner.name)",
+              "code": "recorder.reference(Practitioner.name)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "HumanName"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "recorder.reference(Practitioner.name)",
               "dependsOn": [
                 {
-                  "property": "value",
+                  "property": "data-type-map",
+                  "value": "XPN"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF IAM-15 NOT VALUED"
+                },
+                {
+                  "property": "narrative",
                   "value": "If IAM-15 is not valued, not always 100% clear this is a practitioner, so much review locally."
                 }
               ]
@@ -150,16 +602,60 @@
         },
         {
           "code": "IAM-14",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XPN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Reported By",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(Patient[1].name)",
-              "display": "AllergyIntolerance.recorder.reference(Patient[1].name)",
+              "code": "recorder.reference(Patient[1].name)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "HumanName"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "recorder.reference(Patient[1].name)",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF IAM-15 EQUALS \"SEL\"\\"
+                  "property": "data-type-map",
+                  "value": "XPN"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF IAM-15 EQUALS \"SEL\""
                 }
               ]
             }
@@ -167,16 +663,60 @@
         },
         {
           "code": "IAM-14",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "XPN"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Reported By",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(RelatedPerson.name)",
-              "display": "AllergyIntolerance.recorder.reference(RelatedPerson.name)",
+              "code": "recorder.reference(RelatedPerson.name)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "HumanName"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "recorder.reference(RelatedPerson.name)",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF IAM-15 VALUED AND NOT \"SEL\"\\"
+                  "property": "data-type-map",
+                  "value": "XPN"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF IAM-15 VALUED AND NOT \"SEL\""
                 }
               ]
             }
@@ -184,16 +724,64 @@
         },
         {
           "code": "IAM-15",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Relationship to Patient",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.recorder.reference(RelatedPerson.relationship)",
-              "display": "AllergyIntolerance.recorder.reference(RelatedPerson.relationship)",
+              "code": "recorder.reference(RelatedPerson.relationship)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "recorder.reference(RelatedPerson.relationship)",
               "dependsOn": [
                 {
-                  "property": "value",
-                  "value": "# IF IAM-15 VALUED AND NOT \"SEL\"\\"
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                },
+                {
+                  "property": "vocabulary-map",
+                  "value": "Relationship"
+                }
+              ],
+              "product": [
+                {
+                  "property": "antlr",
+                  "value": "IF IAM-15 VALUED AND NOT \"SEL\""
                 }
               ]
             }
@@ -201,24 +789,103 @@
         },
         {
           "code": "IAM-17",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Allergy Clinical Status",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.clinicalStatus",
-              "display": "AllergyIntolerance.clinicalStatus"
+              "code": "clinicalStatus",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 0
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "clinicalStatus",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
             }
           ]
         },
         {
           "code": "IAM-27",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CWE"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
           "display": "Clinician Identified Code",
           "target": [
             {
               "equivalence": "equivalent",
-              "code": "AllergyIntolerance.code[1]",
-              "display": "AllergyIntolerance.code[1]",
-              "comment": "The values are added as additional .coding entries in the CodeableConcept for AllergyIntolerance.code"
+              "code": "code[1]",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "CodeableConcept"
+                    }
+                  ]
+                }
+              ],
+              "display": "code[1]",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CWE[CodeableConcept]"
+                }
+              ]
             }
           ]
         }

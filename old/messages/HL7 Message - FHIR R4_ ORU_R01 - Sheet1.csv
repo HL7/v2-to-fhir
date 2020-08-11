@@ -1,0 +1,75 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
+Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
+1,ORU_R01.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
+1,ORU_R01.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
+1,ORU_R01.MSH,MSH,Message Header,1,1,,,,Provenance[1],MSH[Provenance],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
+2,ORU_R01.SFT,[{ SFT }],Software Segment,0,-1,,,,MessageHeader[1],SFT[MessageHeader],,,Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.
+3,ORU_R01.UAC,[UAC],User Authentication Credential,0,1,,,,,,,,
+4,ORU_R01.PATIENT_RESULT,{,--- PATIENT_RESULT begin,1,-1,,,,,,,,
+4.1,ORU_R01.PATIENT_RESULT.PATIENT,[,--- PATIENT begin,0,1,,,,,,,,
+4.1.1,ORU_R01.PATIENT_RESULT.PATIENT.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
+4.1.2,ORU_R01.PATIENT_RESULT.PATIENT.PD1,[PD1],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
+4.1.3,ORU_R01.PATIENT_RESULT.PATIENT.PRT,[{PRT}],Participation (for Patient),0,-1,"IF PRT-4.1 EQUALS ""PP"" AND PRT-4.3 EQUALS ""HL70443""","(PRT.element(4.1)=""PP"")and(PRT.element(4.3)=""HL70443"")",,PractitionerRole[1],PRT[PractitionerRole],Patient[1].generalPractioner.reference=PractitionerRole[1].id,,Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data.
+4.1.3,ORU_R01.PATIENT_RESULT.PATIENT.PRT,[{PRT}],Participation (for Patient),0,-1,"IF PRT-4.1 NOT EQUALS ""PP"" OR PRT-4.3 NOT EQUALS ""HL70443""","(PRT.element(4.1)!=""PP"")or(PRT.element(4.3)!=""HL70443"")",,RelatedPerson[1],PRT[RelatedPerson],RelatedPerson.patient.reference=Patient[1].id,,
+4.1.4,ORU_R01.PATIENT_RESULT.PATIENT.NTE,[{NTE}],Notes and Comments,0,-1,,,,,,,,
+4.1.5,ORU_R01.PATIENT_RESULT.PATIENT.NK1,[{NK1}],Next of Kin/Associated Parties,0,-1,,,The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data,RelatedPerson[2],NK1[RelatedPerson],RelatedPerson.patient.reference=Patient[1].id,,"Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
+4.1.5,ORU_R01.PATIENT_RESULT.PATIENT.NK1,[{NK1}],Next of Kin/Associated Parties,0,-1,,,The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data,Patient[1],NK1[Patient],,,"Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
+4.1.6,ORU_R01.PATIENT_RESULT.PATIENT.ARV,[{ARV}],Access Restrictions,0,-1,,,,,,,,
+4.1.7,ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION,[{,--- PATIENT_OBSERVATION begin,0,-1,,,,,,,,
+4.1.7.1,ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.OBX,OBX,Observation (for Patient ID),1,1,IF OBX-5 LST.count LESS THAN OR EQUALS 1,,,Observation[1],OBX[Observation],Observation.subject.reference=Patient[1].id,,
+4.1.7.1,ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.OBX,OBX,Observation (for Patient ID),1,1,IF OBX-5 LST.count GREATER THAN 1,,,Observation[1],OBX[ObservationComponent],,,
+4.1.7.2,ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT,[{PRT}],Participation (Observation Participation),0,-1,IF PRT-10 VALUED,,,Device,PRT[Device],Observation[1].device.reference=Device.id,,
+4.1.7.2,ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT,[{PRT}],Participation (Observation Participation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[1],PRT[ObservationLocation],,,
+4.1.7.2,ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT,[{PRT}],Participation (Observation Participation),0,-1,IF PRT-5 VALUED,,,PractitionerRole[1],PRT[PractitionerRole],Observation.performer.reference=PractitionerRole[1].id,,
+4.1.7.3,/ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION,}],--- PATIENT_OBSERVATION end,,,,,,,,,,
+4.1.8,ORU_R01.PATIENT_RESULT.PATIENT.VISIT,[,--- VISIT begin,0,1,,,,,,,,
+4.1.8.1,ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter.subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
+4.1.8.1,ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
+4.1.8.2,ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV2,[PV2],Patient Visit - Additional Info,0,1,,,,Encounter[1],PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.
+4.1.8.3,ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PRT,[{PRT}],Participation (for Patient Visit),0,-1,,,,PractitionerRole[2],PRT[PractitionerRole],Encounter[1].participant.individual.reference=PractitionerRole[2].id,,Incorporate PRT content into the Encounter created from the PV1 segment.
+4.1.8.4,/ORU_R01.PATIENT_RESULT.PATIENT.VISIT,],--- VISIT end,,,,,,,,,,
+4.1.9,/ORU_R01.PATIENT_RESULT.PATIENT,],--- PATIENT end,,,,,,,,,,
+4.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION,{,--- ORDER_OBSERVATION begin,1,-1,,,,,,,,
+4.2.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER,[,--- COMMON_ORDER begin,0,1,,,,,,,,
+4.2.1.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.ORC,ORC,Order common,1,1,,,,DiagnosticReport[1],ORC[DiagnosticReport],DiagnosticReport[1].encounter.reference=Encounter[1].id,,Processing of each ORC segment results in the creation of a new DiagnosticReport resource
+4.2.1.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.ORC,ORC,Order common,1,1,,,,ServiceRequest[1],ORC[ServiceRequest],DiagnosticReport[1].basedOn.reference=ServiceRequest[1].id,,
+4.2.1.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.PRT,[{PRT}],Participation (for Observation),0,-1,"IF PRT-4.1 EQUALS ""OP"" AND PRT-4.3 EQUALS ""HL70443""","(element(""4.1"")=""OP"")and(element(""4.3"")=""HL70443"")",,PractitionerRole[3],PRT[PractitionerRole],DiagnosticReport[1].requester.reference=PractitionerRole[3].id,,
+4.2.1.3,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.ORDER_DOCUMENT,[,--- ORDER_DOCUMENT begin,0,1,,,,,,,,Will be addressed with FHIR R5.
+4.2.1.3.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.ORDER_DOCUMENT.OBX,OBX,Observation containing Document,1,1,,,,,,,,
+4.2.1.3.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.ORDER_DOCUMENT.PRT,[{PRT}],Participation,0,-1,,,,,,,,
+4.2.1.3.3,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.ORDER_DOCUMENT.TXA,TXA,Transcription Document Header,1,1,,,,,,,,
+4.2.1.3.4,/ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.ORDER_DOCUMENT,],--- ORDER DOCUMENT end,,,,,,,,,,
+4.2.1.4,/ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER,],--- COMMON ORDER end,,,,,,,,,,
+4.2.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR,OBR,Observations Request,1,1,,,,DiagnosticReport[1],OBR[DiagnosticReport],,,Incorporate OBR content into the DiagnosticReport created from the ORC segment in the same segment group.
+4.2.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR,OBR,Observations Request,1,1,,,If a ServiceRequest needs to be created for the receiver.,ServiceRequest[1],OBR[ServiceRequest],,,Mapping to ServiceRequest as well is needed if the receiver is not the originator of the order to which this results message responds.  This mapping will be completed once OMG/OML mapping is sufficiently completed.  We will add the other segment mappings below to ServiceRequest then as well.
+4.2.3,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.NTE,{[NTE]},Notes and comments,0,-1,,,,,,,,
+4.2.4,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT,[{PRT}],Participation (for Observation),0,-1,"IF PRT-4.1 IN (""ARI"",""TN"",""TR"") AND PRT-4.3 EQUALS ""HL70443""","PRT.element(4.1) in (""ARI"",""TN"", ""TR"")and(PRT.element(4.3)=""HL70443"")",,PractitionerRole[4],PRT[PractitionerRole],DiagnosticReport[1].performer.reference=PractitionerRole[4].id,,
+4.2.4,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT,[{PRT}],Participation (for Observation),0,-1,"IF PRT-4.1 EQUALS ""PRI"" AND PRT-4.3 EQUALS ""HL70443""","(PRT.element(4.1)=""PRI"")and(PRT.element(4.3)=""HL70443"")",,PractitionerRole[5],PRT[PractitionerRole],DiagnosticReport[1].resultsInterpreter.reference=PractitionerRole[5].id,,
+4.2.4,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT,[{PRT}],Participation (for Observation),0,-1,"IF PRT-4.1 EQUALS ""SC"" AND PRT-4.3 EQUALS ""HL70443""","(element(""4.1"")=""SC"")and(element(""4.3"")=""HL70443"")",,PractitionerRole[6],PRT[PractitionerRole],DiagnosticReport[1].specimen[1](Specimen.collection.collector.reference)=PractitionerRole[6].id,,
+4.2.4,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT,[{PRT}],Participation (for Observation),0,-1,"IF PRT-4.1 EQUALS ""OP"" AND PRT-4.3 EQUALS ""HL70443""","(element(""4.1"")=""OP"")and(element(""4.3"")=""HL70443"")",,PractitionerRole[3],PRT[PractitionerRole],DiagnosticReport[1].requester.reference=PractitionerRole[3].id,,
+4.2.4.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.TIMING_QTY,[{,--- TIMING_QTY begin,0,-1,,,,,,,,
+4.2.4.1.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.TIMING_QTY.TQ1,TQ1,Timing/Quantity,1,1,,,,,,,,
+4.2.4.1.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.TIMING_QTY.TQ2,[{TQ2}],Timing/Quantity Order Sequence,0,-1,,,,,,,,
+4.2.4.1.3,/ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.TIMING_QTY,}],--- TIMING_QTY end,,,,,,,,,,
+4.2.4.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.CTD,[CTD],Contact Data,0,1,,,,,,,,
+4.2.4.3,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION,[{,--- OBSERVATION begin,0,-1,,,,,,,,
+4.2.4.3.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX,OBX,Observation related to OBR,1,1,IF OBX-5 LST.count LESS THAN OR EQUALS 1,,,Observation[2],OBX[Observation],DiagnosticReport.result.reference=Observation[2].id,,"Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation."
+4.2.4.3.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX,OBX,Observation related to OBR,1,1,IF OBX-5 LST.count GREATER THAN 1,,,Observation[2],OBX[ObservationComponent],DiagnosticReport.result.reference=Observation[2].id,,"Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation. When multiple OBX segments are tranformed into Observation components in a single Observation resource, implementers should consider how the metadata associated with the result (eg performer, status, date/time, etc) are populated. If the OBX segments being combined into a single resource contain different metadata, it must be considered whether or not the use of components is appropriate."
+4.2.4.3.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT,[{PRT}],Participation (Observation Participation),0,-1,IF PRT-10 VALUED,,,Device,PRT[Device],Observation[2].device.reference=Device.id,,
+4.2.4.3.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT,[{PRT}],Participation (Observation Participation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[ObservationLocation],,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
+4.2.4.3.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT,[{PRT}],Participation (Observation Participation),0,-1,IF PRT-5 VALUED,,,PractitionerRole[7],PRT[PractitionerRole],Observation[2].performer.reference=PractitionerRole[7].id,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation practitioner information.
+4.2.4.3.3,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.NTE,{[NTE]},Notes and comments,0,-1,,,,Observation[2].note,NTE[Annotation],,,
+4.2.4.3,/ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION,}],--- OBSERVATION end,,,,,,,,,,
+4.2.5,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.FT1,[{FT1}],Financial Transaction,0,-1,,,,,,,,
+4.2.6,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.CTI,{[CTI]},Clinical Trial Identification,0,-1,,,,,,,,
+4.2.7,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN,[{,--- SPECIMEN begin,0,-1,,,,,,,,
+4.2.7.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPM,SPM,Specimen,1,1,,,,Specimen[1],SPM[Specimen],DiagnosticReport[1].specimen.reference=Specimen[SPM].id,,
+4.2.7.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION,[{,--- SPECIMEN_OBSERVATION begin,0,-1,,,,,,,,
+4.2.7.2.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION.OBX,OBX,Observation (for Patient ID),1,1,IF OBX-5 LST.count LESS THAN OR EQUALS 1,,,,,,,
+4.2.7.2.1,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION.OBX,OBX,Observation (for Patient ID),1,1,IF OBX-5 LST.count GREATER THAN 1,,,,,,,
+4.2.7.2.2,ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION.PRT,[{PRT}],Participation (Observation Participation),0,-1,,,,,,,,
+4.2.7.2.3,/ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION,}],--- SPECIMEN_OBSERVATION end,,,,,,,,,,
+4.2.7.3,/ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN,}],--- SPECIMEN end,,,,,,,,,,
+4.2.8,/ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION,},--- ORDER_OBSERVATION end,,,,,,,,,,
+4.3,/ORU_R01.PATIENT_RESULT,},--- PATIENT_RESULT end,,,,,,,,,,
+5,ORU_R01.DSC,[DSC],Continuation Pointer,,,,,,,,,,

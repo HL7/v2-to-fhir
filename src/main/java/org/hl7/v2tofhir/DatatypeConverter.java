@@ -9,8 +9,8 @@ import org.apache.commons.lang3.StringUtils;
 
 public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements Converter {
 
-    public DatatypeConverter(File f) throws IOException {
-        super(DatatypeInput.class);
+    public DatatypeConverter(File f, String sourceUrl) throws IOException {
+        super(DatatypeInput.class, sourceUrl);
         load(f);
     }
 
@@ -24,7 +24,7 @@ public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements C
             "Sort Order", "Identifier", "Name", "Data Type", "Cardinality - Min", "Cardinality - Max",
             "Computable ANTLR", "Computable FHIRPath", "Narrative",
             "FHIR Attribute", "Proposed Extension", "Data Type", "Cardinality - Min", "Cardinality - Max",
-            "Data Type Mapping", "Vocabulary"
+            "Data Type Mapping", "Assignment", "Vocabulary"
         };
         String titles[] = {
             "Rows are listed in sequence of how they appear in the v2 standard. "
@@ -40,19 +40,20 @@ public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements C
                 "Condition in FHIRPath Notation",
                 "Condition expressed in narrative form",
                 "An existing FHIR attribute in the target FHIR version.",
-                "The FHIR attribute’s data type in the target FHIR version.",
+                "The FHIR attribute's data type in the target FHIR version.",
                 "The proposed FHIR Extension.",
                 "The FHIR min cardinality expressed numerically.",
                 "The FHIR max cardinality expressed numerically.",
                 "The URL to the Data Type Map that is to be used for the attribute in this segment.",
+                "The fixed or computed value to assign.",
                 "Mapping for terminology tables."
         };
         int i = 0;
         for (String head : heads) {
             if (head.equals("Cardinality - Max") || head.equals("Narrative")) {
-                w.printf("<th title='%s' style='border-right: 2px'>%s</th>", titles[i++], head);
+                w.printf("<th title='%s' style='border-right: 2px'>%s</th>", escapeHtmlAttr(titles[i++]), head);
             } else {
-                w.printf("<th title='%s'>%s</th>", titles[i++], head);
+                w.printf("<th title='%s'>%s</th>", escapeHtmlAttr(titles[i++]), head);
             }
         }
         w.println("</tr></thead>");
@@ -69,9 +70,12 @@ public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements C
                 escapeHtmlString(bean.conditionANTLR),
                 escapeHtmlString(bean.conditionfhirPath),
                 escapeHtmlString(bean.conditionNarrative),
-                makeFhirLink(bean.fhirCode), escapeHtmlString(bean.fhirExtension),
-                makeFhirLink(bean.fhirDatatype), bean.fhirMin, bean.fhirMax,
-                makeDataTypeLink(bean.v2DataTypeMap, bean.fhirDatatype), makeTableLink(bean.fhirVocab), escapeHtmlString(bean.comments)
+                makeFhirLink(bean.fhirCode, count), escapeHtmlString(bean.fhirExtension),
+                makeFhirLink(bean.fhirDatatype, count), bean.fhirMin, bean.fhirMax,
+                makeDataTypeLink(bean.v2DataTypeMap, bean.fhirDatatype, count),
+                makeTableLink(bean.fhirVocab, count),
+                escapeHtmlString(bean.fhirValue),
+                escapeHtmlString(bean.comments)
             };
             w.print("<tr>");
             for (String col: cols) {
@@ -84,15 +88,5 @@ public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements C
             w.println("</tr>");
         }
         w.println("</tbody></table>");
-    }
-
-    public void setNames() {
-        DatatypeInput bean = super.getFirstMappedBean();
-        if (bean == null) return;
-
-        source = StringUtils.substringBefore(bean.v2Code, ".");
-        sourceName = source;
-        target = StringUtils.substringBefore(bean.fhirCode, ".");
-        targetName = target;
     }
 }

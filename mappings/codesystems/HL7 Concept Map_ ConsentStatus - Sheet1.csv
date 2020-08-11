@@ -1,0 +1,8 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+A,Active – Consent has been granted,HL70498,,,,active,,Active,http://hl7.org/fhir/consent-state-codes,,
+L,Limited – Consent has been granted with limitations,HL70498,,,,active,,Active,http://hl7.org/fhir/consent-state-codes,,
+R,Refused – Consent has been refused,HL70498,,,,rejected,,Rejected,http://hl7.org/fhir/consent-state-codes,,
+P,Pending – Consent has not yet been sought,HL70498,,,,proposed,,Proposed,http://hl7.org/fhir/consent-state-codes,,
+X,"Rescinded – Consent was initially granted, but was subsequently revoked or ended.",HL70498,,,,inactive,,Inactivated,http://hl7.org/fhir/consent-state-codes,,
+B,Bypassed (Consent not sought),HL70498,,,,,??,,,,

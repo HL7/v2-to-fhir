@@ -1,0 +1,9 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+A,Ambulance,HL70430,,,,A,,Ambulance,http://terminology.hl7.org/CodeSystem/v2-0430,,
+C,Car,HL70430,,,,C,,Car,http://terminology.hl7.org/CodeSystem/v2-0430,,
+F,On foot,HL70430,,,,F,,On foot,http://terminology.hl7.org/CodeSystem/v2-0430,,
+H,Helicopter,HL70430,,,,H,,Helicopter,http://terminology.hl7.org/CodeSystem/v2-0430,,
+P,Public Transport,HL70430,,,,P,,Public Transport,http://terminology.hl7.org/CodeSystem/v2-0430,,
+O,Other,HL70430,,,,O,,Other,http://terminology.hl7.org/CodeSystem/v2-0430,,
+U,Unknown,HL70430,,,,U,,Unknown,http://terminology.hl7.org/CodeSystem/v2-0430,,
