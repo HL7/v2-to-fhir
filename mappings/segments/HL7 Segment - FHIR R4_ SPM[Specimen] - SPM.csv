@@ -22,7 +22,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 18,SPM-18,Specimen Received Date/Time,DTM,0,1,,,,receivedTime,,dateTime,0,1,,,,,
 19,SPM-19,Specimen Expiration Date/Time,DTM,0,1,,,,,,,,,,,,,
 20,SPM-20,Specimen Availability,ID,0,1,,,,status,,code,0,1,,SpecimenAvailability,,,
-21,SPM-21,Specimen Reject Reason,CWE,0,-1,,,,,,codeableConcept,0,-1,CWE[CodeableConcept],,,,This provides the mechanism to map SPM-21 to a CodeableConcept but the mapping to the ServiceRequest data element is contained in the message map
+21,SPM-21,Specimen Reject Reason,CWE,0,-1,,,,,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,This provides the mechanism to map SPM-21 to a CodeableConcept but the mapping to the ServiceRequest data element is contained in the message map
 22,SPM-22,Specimen Quality,CWE,0,1,,,,,,,,,,,,,
 23,SPM-23,Specimen Appropriateness,CWE,0,1,,,,,,,,,,,,,
 24,SPM-24,Specimen Condition,CWE,0,-1,,,,condition,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,

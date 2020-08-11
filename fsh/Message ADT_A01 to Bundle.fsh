@@ -9,7 +9,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * name = "MessageADT_A01toBundle"
 * status = #active
 * experimental = true
-* date = "2020-08-06"
+* date = "2020-08-10"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -245,8 +245,6 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[14].target.dependsOn[1].value = "RelatedPerson[2].patient.reference=Patient[1].id"
 * group.element[14].target.product[0].property = "antlr"
 * group.element[14].target.product[0].value = "IF NK1-3.1 NOT IN (\"EMR\", \"E\", \"F\", \"I\", \"S\")"
-* group.element[14].target.product[1].property = "narrative"
-* group.element[14].target.product[1].value = "It further depends on the nature of the data being exchanged and how the systems use next of kin data."
 * group.element[15].code = #ADT_A01.NK1
 * group.element[15].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "cardinalityMin"
@@ -261,8 +259,6 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[15].target.dependsOn[0].value = "NK1[Patient]"
 * group.element[15].target.product[0].property = "antlr"
 * group.element[15].target.product[0].value = "IF NK1-3.1 NOT IN (\"EMR\", \"E\", \"F\", \"I\", \"S\")"
-* group.element[15].target.product[1].property = "narrative"
-* group.element[15].target.product[1].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data.  If you need more data than availabe in the Patient.contact Backbone Element we suggest to map to RelatedPerson."
 * group.element[16].code = #ADT_A01.NK1
 * group.element[16].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "cardinalityMin"

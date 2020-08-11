@@ -9,13 +9,20 @@ Title: "Segment NK1 to Patient Map"
 * name = "SegmentNK1toPatient"
 * status = #active
 * experimental = true
-* date = "2020-08-06"
+* date = "2020-08-10"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "NK1"
 * targetUri = "Patient"
+* extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact"
+* extension[0].extension[0].url = "type"
+* extension[0].extension[0].valueCode = #derived-from
+* extension[0].extension[1].url = "label"
+* extension[0].extension[1].valueString = "Segment NK1 to Patient.fsh"
+* extension[0].extension[2].url = "url"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1h9Z67WhrMJ5Va4CEY1UV_Fowy_mPHGJK-OvN6fW0GIk/edit#gid=0"
 * group.element[0].code = #NK1-2
 * group.element[0].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "type"
@@ -78,7 +85,7 @@ Title: "Segment NK1 to Patient Map"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "contact.telecom[1]"
 * group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "XTN"
+* group.element[2].target.dependsOn[0].value = "XTN[ContactPoint]"
 * group.element[3].code = #NK1-6
 * group.element[3].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -99,7 +106,7 @@ Title: "Segment NK1 to Patient Map"
 * group.element[3].target.extension[0].extension[2].valueInteger = -1
 * group.element[3].target.display = "contact.telecom[2]"
 * group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "XTN"
+* group.element[3].target.dependsOn[0].value = "XTN[ContactPoint]"
 * group.element[4].code = #NK1-7
 * group.element[4].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"

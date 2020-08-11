@@ -2,7 +2,7 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,PRT-1,Participation Instance ID,EI,0,1,,,,,,,,,,,,,
-2,PRT-2,Action Code,ID,1,1,,,if mapped to a restful service to progress the message.,,,,,,,,,,
+2,PRT-2,Action Code,ID,1,1,,,if mapped to a restful service to progress the message.,,,,,,,,,,Need to address Operation
 3,PRT-3,Action Reason,CWE,0,1,,,,,,,,,,,,,
 4,PRT-4,Role of Participation,CWE,1,1,,,,code,,CodeableConcept,0,-1,CWE[CodeableConcept],Participation,,,
 5,PRT-5,Person,XCN,0,-1,,,,,,,,,XCN[PractitionerRole],,,,
@@ -24,4 +24,4 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 21,PRT-21,Device Donation Identification,EI,0,1,,,,,,,,,,,,,
 22,PRT-22,Device Type,CNE,0,1,,,,,,,,,,,,,
 23,PRT-23,Preferred Method of Contact,CWE,0,1,,,,,PractitionerRole.#ext-preferredMethodOfContact#,CodeableConcept,0,1,CWE[CodeableConcept],PreferredMethodOfContact,,,
-24,PRT-24,Contact Identifiers,PLN,0,-1,,,,identifier[2],,identifier,0,-1,PLN[Identifier],,,,
+24,PRT-24,Contact Identifiers,PLN,0,-1,,,,identifier[2],,Identifier,0,-1,PLN[Identifier],,,,

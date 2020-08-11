@@ -930,6 +930,34 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/datatype-tqnote-to-servicerequest"
+        },
+        "name": "Datatype TQ to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-tqoccurrencetiming-to-servicerequest"
+        },
+        "name": "Datatype TQ to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-tqpriority-to-servicerequest"
+        },
+        "name": "Datatype TQ to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/datatype-tqquantityquantity-to-servicerequest"
+        },
+        "name": "Datatype TQ to ServiceRequest Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/datatype-xad-to-address"
         },
         "name": "Datatype XAD to Address Map",
@@ -1115,6 +1143,13 @@
           "reference": "ConceptMap/segment-in3-to-coverage"
         },
         "name": "Segment IN3 to Coverage Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/segment-msa-to-messageheader"
+        },
+        "name": "Segment MSA to MessageHeader Map",
         "exampleBoolean": true
       },
       {

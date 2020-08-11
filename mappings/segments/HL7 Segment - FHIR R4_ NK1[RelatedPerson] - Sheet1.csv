@@ -38,7 +38,7 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 31,NK1-31,Contact Person's Telephone Number,XTN,0,-1,,,,telecom[3],,ContactPoint,0,-1,XTN[ContactPoint],,,,
 32,NK1-32,Contact Person's Address,XAD,0,-1,,,,address[2],,Address,0,-1,XAD[Address],,,,
 33,NK1-33,Next of Kin/Associated Party's Identifiers,CX,0,-1,,,,identifier[2]       ,,Identifier,0,-1,CX[Identifier],,,,
-34,NK1-34,Job Status,CWE,0,1,,,,,RelatedPerson.#ext-jobStatus#,CodableConcept,0,1,CWE[CodeableConcept],,,,
+34,NK1-34,Job Status,CWE,0,1,,,,,RelatedPerson.#ext-jobStatus#,CodeableConcept,0,1,CWE[CodeableConcept],,,,
 35,NK1-35,Race,CWE,0,-1,,,"Use your local extension, e.g., US = US Core Race Extension, AUS = indiginous extension.",,,,,,,,,,
 36,NK1-36,Handicap,CWE,0,1,,,,,,,,,,,,,
 37,NK1-37,Contact Person Social Security Number,ST,0,1,,,,identifier[3].value,,Identifier,0,-1,,,,,

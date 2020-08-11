@@ -9,7 +9,7 @@ Title: "Segment PV2 to Encounter Map"
 * name = "SegmentPV2toEncounter"
 * status = #active
 * experimental = true
-* date = "2020-08-06"
+* date = "2020-08-10"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -209,7 +209,7 @@ Title: "Segment PV2 to Encounter Map"
 * group.element[9].extension[0].extension[2].valueInteger = -1
 * group.element[9].display = "Referral Source Code"
 * group.element[9].target.equivalence = #equivalent
-* group.element[9].target.code = #participant.individual(Practitioner|PractitionerRole)
+* group.element[9].target.code = #participant.individual(Practitioner)
 * group.element[9].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[9].target.extension[0].extension[0].url = "type"
 * group.element[9].target.extension[0].extension[0].valueCode = #"Reference(Practitioner)"
@@ -217,7 +217,7 @@ Title: "Segment PV2 to Encounter Map"
 * group.element[9].target.extension[0].extension[1].valueInteger = 0
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
-* group.element[9].target.display = "participant.individual(Practitioner|PractitionerRole)"
+* group.element[9].target.display = "participant.individual(Practitioner)"
 * group.element[9].target.dependsOn[0].property = "data-type-map"
 * group.element[9].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[10].code = #PV2-13
@@ -296,7 +296,7 @@ Title: "Segment PV2 to Encounter Map"
 * group.element[13].target.code = #meta.security
 * group.element[13].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[13].target.extension[0].extension[0].url = "type"
-* group.element[13].target.extension[0].extension[0].valueCode = #"coding"
+* group.element[13].target.extension[0].extension[0].valueCode = #"Coding"
 * group.element[13].target.extension[0].extension[1].url = "cardinalityMin"
 * group.element[13].target.extension[0].extension[1].valueInteger = 0
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"

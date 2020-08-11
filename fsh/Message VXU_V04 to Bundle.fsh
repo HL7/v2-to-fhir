@@ -9,7 +9,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * name = "MessageVXU_V04toBundle"
 * status = #active
 * experimental = true
-* date = "2020-08-06"
+* date = "2020-08-10"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -116,8 +116,6 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[6].target.dependsOn[0].value = "NK1[RelatedPerson]"
 * group.element[6].target.dependsOn[1].property = "references"
 * group.element[6].target.dependsOn[1].value = "RelatedPerson.patient.reference=Patient[PID].id"
-* group.element[6].target.product[0].property = "narrative"
-* group.element[6].target.product[0].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
 * group.element[7].code = #VXU_V04.NK1
 * group.element[7].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "cardinalityMin"
@@ -130,8 +128,6 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[7].target.display = "Patient[1]"
 * group.element[7].target.dependsOn[0].property = "segment-map"
 * group.element[7].target.dependsOn[0].value = "NK1[Patient]"
-* group.element[7].target.product[0].property = "narrative"
-* group.element[7].target.product[0].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
 * group.element[8].code = #VXU_V04.PATIENT_VISIT.PV1
 * group.element[8].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
@@ -469,7 +465,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[29].target.code = #Device[2]
 * group.element[29].target.display = "Device[2]"
 * group.element[29].target.dependsOn[0].property = "segment-map"
-* group.element[29].target.dependsOn[0].value = "PRT[Observation-Device]"
+* group.element[29].target.dependsOn[0].value = "PRT[Device]"
 * group.element[29].target.dependsOn[1].property = "references"
 * group.element[29].target.dependsOn[1].value = "Observation[1].device.reference=Device.id"
 * group.element[29].target.product[0].property = "antlr"
@@ -485,7 +481,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[30].target.code = #Observation[2]
 * group.element[30].target.display = "Observation[2]"
 * group.element[30].target.dependsOn[0].property = "segment-map"
-* group.element[30].target.dependsOn[0].value = "PRT[Observation-Location]"
+* group.element[30].target.dependsOn[0].value = "PRT[Location]"
 * group.element[30].target.product[0].property = "antlr"
 * group.element[30].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[31].code = #VXU_V04.ORDER.OBSERVATION.PRT

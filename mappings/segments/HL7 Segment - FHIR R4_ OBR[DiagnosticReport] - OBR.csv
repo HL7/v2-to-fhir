@@ -14,7 +14,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 7,OBR-7,Observation Date/Time,DTM,0,1,IF OBR-8 NOT VALUED,,,effectiveDateTime,,dateTime,0,1,,,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)
 7,OBR-7,Observation Date/Time,DTM,0,1,IF OBR-8 VALUED,,,effectivePeriod.start,,dateTime,0,1,,,,,
 8,OBR-8,Observation End Date/Time,DTM,0,1,,,,effectivePeriod.end,,dateTime,0,1,,,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)
-9,OBR-9,Collection Volume,CQ,0,1,,,,specimen[1](Specimen.collection.quantity),,simpleQuantity,0,1,CQ[Quantity],,,,
+9,OBR-9,Collection Volume,CQ,0,1,,,,specimen[1](Specimen.collection.quantity),,SimpleQuantity,0,1,CQ[Quantity],,,,
 10,OBR-10,Collector Identifier,XCN,0,-1,,,,specimen[1](Specimen.collection.collector(Practitioner)),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
 11,OBR-11,Specimen Action Code,ID,0,1,,,,,,,,,,,,,
 12,OBR-12,Danger Code,CWE,0,1,,,,,,,,,,,,,

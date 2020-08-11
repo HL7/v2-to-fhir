@@ -9,7 +9,7 @@ Title: "Segment NTE to Observation Map"
 * name = "SegmentNTEtoObservation"
 * status = #active
 * experimental = true
-* date = "2020-08-06"
+* date = "2020-08-10"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -76,7 +76,7 @@ Title: "Segment NTE to Observation Map"
 * group.element[2].target.code = #note.time
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
-* group.element[2].target.extension[0].extension[0].valueCode = #"DateTime"
+* group.element[2].target.extension[0].extension[0].valueCode = #"dateTime"
 * group.element[2].target.extension[0].extension[1].url = "cardinalityMin"
 * group.element[2].target.extension[0].extension[1].valueInteger = 0
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"

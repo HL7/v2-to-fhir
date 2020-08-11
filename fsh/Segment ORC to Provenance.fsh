@@ -9,7 +9,7 @@ Title: "Segment ORC to Provenance Map"
 * name = "SegmentORCtoProvenance"
 * status = #active
 * experimental = true
-* date = "2020-08-06"
+* date = "2020-08-10"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -172,7 +172,7 @@ Title: "Segment ORC to Provenance Map"
 * group.element[6].target.code = #recorded
 * group.element[6].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[6].target.extension[0].extension[0].url = "type"
-* group.element[6].target.extension[0].extension[0].valueCode = #"Instant"
+* group.element[6].target.extension[0].extension[0].valueCode = #"instant"
 * group.element[6].target.extension[0].extension[1].url = "cardinalityMin"
 * group.element[6].target.extension[0].extension[1].valueInteger = 1
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"

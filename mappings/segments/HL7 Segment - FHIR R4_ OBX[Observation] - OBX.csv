@@ -18,7 +18,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" and OBX-5.3 EQUALS ""-""",,,valueRange,,Range,0,1,SN[Range],,,,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" and OBX-5.3 EQUALS ""+""",,,valueString,,string,0,1,,,"OBX-5.1+"" ""+OBX-5.2+"" ""+OBX-5.3+"" ""+OBX-5.4",,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" and OBX-5.3 NOT IN ("":"", ""/"", ""-"", ""+"")",,,valueQuantity,,Quantity,0,1,SN[Quantity],,,,Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type.
-5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NA""",,,,valueSampledData,SampledData,0,1,NA[SampledData],,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NA""",,,valueSampledData,,SampledData,,,,,,,Need to add text on converting NA to SampledData
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""ED"" AND IF OBX-5.4 EQUALS ""Base64""",,,,Observation.#ext-valueAttachment#,Attachment,0,1,ED[Attachment],,,,"We are for now addressing Base64 that cover .pdf, pictures and other binaries.  If somebody does this, we will address those."
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""EI""",,,,,,,,,,,,"Requires more work to properly map.  Use case: An OBX under OBR that points to the calibration/quality control/etc. settings/values/result/etc. that the other OBX-s under the OBR would be ""subject"" to."
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""RP""",,,,Observation.#ext-valueAttachment#,Attachment,0,1,RP[Attachment],,,,To be resolved when we resolve DocumentReference and valueAttachment

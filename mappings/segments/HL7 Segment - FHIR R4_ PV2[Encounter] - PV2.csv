@@ -3,7 +3,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,PV2-1,Prior Pending Location,PL,0,1,,,,location[5].location(Location),,Reference(Location),0,-1,PL,,,,
 1,PV2-1,Prior Pending Location,PL,0,1,,,,location[5].status,,,,,,,"""planned""",,
-1,PV2-1,Prior Pending Location,PL,0,1,,,,,Encounter.location[5].#ext-temporaryLocation#,Boolean,0,1,,,"""false""",,
+1,PV2-1,Prior Pending Location,PL,0,1,,,,,Encounter.location[5].#ext-temporaryLocation#,boolean,0,1,,,"""false""",,
 2,PV2-2,Accommodation Code,CWE,0,1,,,,,,,,,,,,,Please comment on the use of this field and suggest a FHIR mapping.
 3,PV2-3,Admit Reason,CWE,0,1,,,,reasonCode[1],,CodeableConcept,0,-1,CWE[CodeableConcept],,,,PV2-3 doesn't have an associated table so no vocabulary mapping is provided
 4,PV2-4,Transfer Reason,CWE,0,1,,,,,,,,,,,,,Please comment on the use of this field and suggest a FHIR mapping.
@@ -19,7 +19,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 11,PV2-11,Actual Length of Inpatient Stay,NM,0,1,,,,length.unit,,string,0,1,,,"""d""",,
 11,PV2-11,Actual Length of Inpatient Stay,NM,0,1,,,,length.system,,uri,0,1,,,"""http://unitsofmeasure.org/""",,
 12,PV2-12,Visit Description,ST,0,1,,,,text.div,,xhtml,0,1,,,,,
-13,PV2-13,Referral Source Code,XCN,0,-1,,,,participant.individual(Practitioner|PractitionerRole),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
+13,PV2-13,Referral Source Code,XCN,0,-1,,,,participant.individual(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
 13,PV2-13,Referral Source Code,XCN,0,-1,,,,participant.type.coding.code,,code,0,1,,,"""REF""",,
 13,PV2-13,Referral Source Code,XCN,0,-1,,,,participant.type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v3-ParticipationType""",,
 13,PV2-13,Referral Source Code,XCN,0,-1,,,,participant.type.text,,string,0,1,,,"""referrer""",,
@@ -31,7 +31,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 19,PV2-19,Retention Indicator,ID,0,1,,,,,,,,,,,,,
 20,PV2-20,Expected Number of Insurance Plans,NM,0,1,,,,,,,,,,,,,
 21,PV2-21,Visit Publicity Code,CWE,0,1,,,,,Encounter.#ext-publicityCode#,CodeableConcept,0,1,CWE[CodeableConcept],VisitPublicityCode,,,
-22,PV2-22,Visit Protection Indicator,ID,0,1,,,,meta.security,,coding,0,-1,ID[Coding],,,,
+22,PV2-22,Visit Protection Indicator,ID,0,1,,,,meta.security,,Coding,0,-1,ID[Coding],,,,
 23,PV2-23,Clinic Organization Name,XON,0,-1,,,,,,,,,,,,,
 24,PV2-24,Patient Status Code,CWE,0,1,,,,,,,,,,,,,
 25,PV2-25,Visit Priority Code,CWE,0,1,,,,priority,,CodeableConcept,0,1,CWE[CodeableConcept],EncounterPriority,,,

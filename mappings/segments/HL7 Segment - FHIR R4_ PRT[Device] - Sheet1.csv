@@ -10,7 +10,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 7,PRT-7,Organization Unit Type,CWE,0,1,,,,,,,,,,,,,
 8,PRT-8,Organization,XON,0,-1,,,,,,,,,,,,,
 9,PRT-9,Location,PL,0,-1,,,,,,,,,,,,,
-10,PRT-10,Device,EI,0,-1,,,If it represents a HRF or AIDC,udiCarrier[1],,BackboneElement,0,-1,EI[Device-UDICarrier],,,,
+10,PRT-10,Device,EI,0,-1,,,If it represents a HRF or AIDC,udiCarrier[1],,BackboneElement,0,-1,EI[Device-udiCarrier],,,,
 10,PRT-10,Device,EI,0,-1,,,If not an HRF or AIDC,identifier,,Identifier,0,-1,EI[Identifier],,,,
 11,PRT-11,Begin Date/Time (arrival time),DTM,0,1,,,,,,,,,,,,,
 12,PRT-12,End Date/Time (departure time),DTM,0,1,,,,,,,,,,,,,

@@ -9,7 +9,7 @@ Title: "Message ADT_A04 to Bundle Map"
 * name = "MessageADT_A04toBundle"
 * status = #active
 * experimental = true
-* date = "2020-08-06"
+* date = "2020-08-10"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -122,7 +122,7 @@ Title: "Message ADT_A04 to Bundle Map"
 * group.element[7].target.code = #Patient[1]
 * group.element[7].target.display = "Patient[1]"
 * group.element[7].target.dependsOn[0].property = "segment-map"
-* group.element[7].target.dependsOn[0].value = "ARV"
+* group.element[7].target.dependsOn[0].value = "ARV[Patient]"
 * group.element[7].target.dependsOn[1].property = "references"
 * group.element[7].target.dependsOn[1].value = "Resource=Patient[1]"
 * group.element[7].target.product[0].property = "antlr"
@@ -242,7 +242,7 @@ Title: "Message ADT_A04 to Bundle Map"
 * group.element[15].target.code = #Encounter[1]
 * group.element[15].target.display = "Encounter[1]"
 * group.element[15].target.dependsOn[0].property = "segment-map"
-* group.element[15].target.dependsOn[0].value = "ARV"
+* group.element[15].target.dependsOn[0].value = "ARV[Encounter]"
 * group.element[15].target.dependsOn[1].property = "references"
 * group.element[15].target.dependsOn[1].value = "Resource=Encounter[1]"
 * group.element[15].target.product[0].property = "antlr"

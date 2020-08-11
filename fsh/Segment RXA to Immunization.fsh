@@ -9,7 +9,7 @@ Title: "Segment RXA to Immunization Map"
 * name = "SegmentRXAtoImmunization"
 * status = #active
 * experimental = true
-* date = "2020-08-06"
+* date = "2020-08-10"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -154,7 +154,7 @@ Title: "Segment RXA to Immunization Map"
 * group.element[6].target.code = #performer.function.coding.system
 * group.element[6].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[6].target.extension[0].extension[0].url = "type"
-* group.element[6].target.extension[0].extension[0].valueCode = #"system"
+* group.element[6].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[6].target.display = "performer.function.coding.system"
 * group.element[6].target.dependsOn[0].property = "value"
 * group.element[6].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0443\""

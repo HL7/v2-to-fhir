@@ -2,7 +2,7 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,PRT-1,Participation Instance ID,EI,0,1,,,,,,,,,,,,,
-2,PRT-2,Action Code,ID,1,1,,,if mapped to a restful service to progress the message.,Operation,,,,,,Operation,,,
+2,PRT-2,Action Code,ID,1,1,,,if mapped to a restful service to progress the message.,,operation,,,,,Operation,,,
 3,PRT-3,Action Reason,CWE,0,1,,,,,,,,,,,,,
 4,PRT-4,Role of Participation,CWE,1,1,,,,,,,,,,,,,
 5,PRT-5,Person,XCN,0,-1,,,,,,,,,,,,,

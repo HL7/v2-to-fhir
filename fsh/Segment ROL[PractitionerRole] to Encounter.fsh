@@ -9,7 +9,7 @@ Title: "Segment ROL to Encounter Map"
 * name = "SegmentROLPractitionerRoletoEncounter"
 * status = #active
 * experimental = true
-* date = "2020-08-06"
+* date = "2020-08-10"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -36,7 +36,7 @@ Title: "Segment ROL to Encounter Map"
 * group.element[0].target.code = #participant[1].individual.reference
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
-* group.element[0].target.extension[0].extension[0].valueCode = #"identifier"
+* group.element[0].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[0].target.extension[0].extension[1].url = "cardinalityMin"
 * group.element[0].target.extension[0].extension[1].valueInteger = 0
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
@@ -144,7 +144,7 @@ Title: "Segment ROL to Encounter Map"
 * group.element[6].extension[0].extension[2].valueInteger = -1
 * group.element[6].display = "Office/Home Address/Birthplace"
 * group.element[6].target.equivalence = #equivalent
-* group.element[6].target.code = #participant[1].individual(PractitionerRole.Practitioner(Practitioner.address))
+* group.element[6].target.code = #participant[1].individual(PractitionerRole.practioner(Practitioner.address))
 * group.element[6].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[6].target.extension[0].extension[0].url = "type"
 * group.element[6].target.extension[0].extension[0].valueCode = #"Address"
@@ -152,7 +152,7 @@ Title: "Segment ROL to Encounter Map"
 * group.element[6].target.extension[0].extension[1].valueInteger = 0
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = -1
-* group.element[6].target.display = "participant[1].individual(PractitionerRole.Practitioner(Practitioner.address))"
+* group.element[6].target.display = "participant[1].individual(PractitionerRole.practioner(Practitioner.address))"
 * group.element[6].target.dependsOn[0].property = "data-type-map"
 * group.element[6].target.dependsOn[0].value = "XAD[Address]"
 * group.element[7].code = #ROL-12

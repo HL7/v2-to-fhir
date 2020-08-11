@@ -6,6 +6,6 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 3,NTE-3,Comment,FT,0,1,,,,note.text,,markdown,1,1,,,,,
 4,NTE-4,Comment Type,CWE,0,1,,,,,Annotation.#ext-noteType#,CodeableConcept,0,1,CWE[CodeableConcept],CommentType,,,
 5,NTE-5,Entered By,XCN,0,1,,,,note.authorReference(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
-6,NTE-6,Entered Date/Time,DTM,0,1,,,,note.time,,DateTime,0,1,,,,,
+6,NTE-6,Entered Date/Time,DTM,0,1,,,,note.time,,dateTime,0,1,,,,,
 7,NTE-7,Effective Start Date ,DTM,0,1,,,,,,,,,,,,,
 8,NTE-8,Expiration Date,DTM,0,1,,,,,,,,,,,,,

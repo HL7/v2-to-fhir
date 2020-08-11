@@ -9,13 +9,20 @@ Title: "Segment NK1 to RelatedPerson Map"
 * name = "SegmentNK1toRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2020-08-06"
+* date = "2020-08-10"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "NK1"
 * targetUri = "RelatedPerson"
+* extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact"
+* extension[0].extension[0].url = "type"
+* extension[0].extension[0].valueCode = #derived-from
+* extension[0].extension[1].url = "label"
+* extension[0].extension[1].valueString = "Segment NK1 to RelatedPerson.fsh"
+* extension[0].extension[2].url = "url"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ATQBezpmTFj-ClJ2qMfAiz8sG6d_EGj3mInQl7RSlts/edit#gid=0"
 * group.element[0].code = #NK1-2
 * group.element[0].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "type"
