@@ -1,0 +1,9 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+A,An age-based population,HL70080,,,,A,,An age-based population,http://terminology.hl7.org/CodeSystem/v2-0080,,
+N,None – generic normal range,HL70080,,,,N,,None – generic normal range,http://terminology.hl7.org/CodeSystem/v2-0080,,
+R,A race-based population,HL70080,,,,R,,A race-based population,http://terminology.hl7.org/CodeSystem/v2-0080,,
+S,A sex-based population,HL70080,,,,S,,A sex-based population,http://terminology.hl7.org/CodeSystem/v2-0080,,
+SP,Species,HL70080,,,,SP,,Species,http://terminology.hl7.org/CodeSystem/v2-0080,,
+B,Breed,HL70080,,,,B,,Breed,http://terminology.hl7.org/CodeSystem/v2-0080,,
+ST,Strain,HL70080,,,,ST,,Strain,http://terminology.hl7.org/CodeSystem/v2-0080,,

@@ -1343,6 +1343,13 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/segment-prt-to-location"
+        },
+        "name": "Segment PRT to Location Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/segment-prt-to-practitionerrole"
         },
         "name": "Segment PRT to PractitionerRole Map",
@@ -1504,6 +1511,13 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/table-hl70080-to-v2-0080"
+        },
+        "name": "Table HL70080 to V2 0080 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/table-hl70085-to-observation-status"
         },
         "name": "Table HL70085 to Observation Status Map",
@@ -1535,6 +1549,13 @@
           "reference": "ConceptMap/table-hl70127-to-allergy-intolerance-type"
         },
         "name": "Table HL70127 to Allergy Intolerance Type Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70130-to-v2-0130"
+        },
+        "name": "Table HL70130 to V2 0130 Map",
         "exampleBoolean": true
       },
       {
@@ -1581,6 +1602,20 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/table-hl70204-to-v2-0204"
+        },
+        "name": "Table HL70204 to V2 0204 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70215-to-v2-0215"
+        },
+        "name": "Table HL70215 to V2 0215 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/table-hl70217-to-v3-actpriority"
         },
         "name": "Table HL70217 to V3 ActPriority Map",
@@ -1616,6 +1651,13 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/table-hl70364-to-v2-0364"
+        },
+        "name": "Table HL70364 to V2 0364 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/table-hl70406-to-v2-0406"
         },
         "name": "Table HL70406 to V2 0406 Map",
@@ -1626,6 +1668,13 @@
           "reference": "ConceptMap/table-hl70430-to-v2-0430"
         },
         "name": "Table HL70430 to V2 0430 Map",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/table-hl70432-to-v2-0432"
+        },
+        "name": "Table HL70432 to V2 0432 Map",
         "exampleBoolean": true
       },
       {

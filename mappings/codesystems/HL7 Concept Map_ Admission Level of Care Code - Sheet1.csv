@@ -1,0 +1,8 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+AC,Acute,HL70432,,,,AC,,Acute,http://terminology.hl7.org/CodeSystem/v2-0432,,
+CH,Chronic,HL70432,,,,CH,,Chronic,http://terminology.hl7.org/CodeSystem/v2-0432,,
+CO,Comatose,HL70432,,,,CO,,Comatose,http://terminology.hl7.org/CodeSystem/v2-0432,,
+CR,Critical,HL70432,,,,CR,,Critical,http://terminology.hl7.org/CodeSystem/v2-0432,,
+IM,Improved,HL70432,,,,IM,,Improved,http://terminology.hl7.org/CodeSystem/v2-0432,,
+MO,Moribund,HL70432,,,,MO,,Moribund,http://terminology.hl7.org/CodeSystem/v2-0432,,

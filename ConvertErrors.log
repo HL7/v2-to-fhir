@@ -1,23 +1,23 @@
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
 	near: 1,DR.1,Range Start Date/Time,DTM,0,1,,,,dateTime,,dateTime,0,1,,,,,
 	near: 1,DR.1,Range Start Date/Time,DTM,0,1,,,,dateTime,,dateTime,0,1,,,,,
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
 E1) ARV has no FHIR Structure Specified
 	at mappings.messages(HL7 Message - FHIR R4_ ADT_A08 - Sheet1.csv:29)
 	near: 18,ADT_A08:follow:PV1.ARV,[{ ARV }],Access Restrictions,0,-1,"IF ARV-1 IN (""PV1"", ""PV2"") AND ARV-3 NOT VALUED",,,Encounter[1],ARV,Resource=Encounter[1],,
@@ -32,7 +32,7 @@ E4) No mapping for IN2[Coverage]. Missing file: HL7 Segment - FHIR R4_ IN2[Cover
 	near: 3.5.2,ORM_O01.PATIENT.INSURANCE.IN2,[ IN2 ],Insurance Additional Info,0,1,,,,Coverage,IN2[Coverage],,,Incorporate IN2 content into the Coverage created from the IN1 segment.
 E5) No mapping for IN3[Coverage]. Missing file: HL7 Segment - FHIR R4_ IN3[Coverage] - Sheet1.csv
 	at mappings.messages(HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv:20)
-	near: 3.5.3,ORM_O01.PATIENT.INSURANCE.IN3,[ IN3 ],Insurance Add'l Info â€“ Cert.,0,1,,,,Coverage,IN3[Coverage],,,Incorporate IN3 content into the Coverage created from the IN1 segment.
+	near: 3.5.3,ORM_O01.PATIENT.INSURANCE.IN3,[ IN3 ],Insurance Add'l Info – Cert.,0,1,,,,Coverage,IN3[Coverage],,,Incorporate IN3 content into the Coverage created from the IN1 segment.
 E6) Extensions not supported yet for MessageHeader.#ext-acceptAcknowledgementType#
 	at mappings.segments(HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv:19)
 	near: 15,MSH-15,Accept Acknowledgment Type,ID,0,1,,,,,MessageHeader.#ext-acceptAcknowledgementType#,,,,,Acknowledgements,,,"Check what LRI/LOI terminology is and use that.
@@ -45,7 +45,7 @@ E8) Extensions not supported yet for MessageHeader.#ext-timestamp#
 	at mappings.segments(HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv:10)
 	near: 7,MSH-7,Date/Time of Message,DTM,1,1,,,,,MessageHeader.#ext-timestamp#,dateTime,,,,,,,"If a message is always conveyed in a Bundle, then Bundle.timestamp could work. However, Bundle.timestamp may be better used to reflect the conversion.
 
-SeeÂ https://chat.fhir.org/#narrow/stream/179188-v2-to.20FHIR/topic/MessageHeader.2EtimestampÂ for a discussion on this topic."
+See https://chat.fhir.org/#narrow/stream/179188-v2-to.20FHIR/topic/MessageHeader.2Etimestamp for a discussion on this topic."
 E9) Extensions not supported yet for MessageHeader.#ext-v2ProfileID#
 	at mappings.segments(HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv:25)
 	near: 21,MSH-21,Message Profile Identifier,EI,0,-1,,,,,MessageHeader.#ext-v2ProfileID#,Identifier,0,-1,EI[Identifier],,,,"Need to support multiple profiles. Also, comment on implicitRules is highly idealistic."
@@ -73,6 +73,7 @@ E16) No mapping for ORC[Task-CancelOrder]. Missing file: HL7 Segment - FHIR R4_ 
 E17) No mapping for ORC[Task-New Order]. Missing file: HL7 Segment - FHIR R4_ ORC[Task-New Order] - Sheet1.csv
 	at mappings.messages(HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv:27)
 	near: 4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,"IF ORC.1 EQUALS ""NW""","ORC.element(""1"")=""NW""",If the receiving system should perform the order,Task[1],ORC[Task-New Order],Task.basedOn.reference=ServiceRequest[1].id; Task.encounter.reference=Encounter[1].id; Task.for.reference=Patient[1].id; Task.reasonReference=Condition[1]id; Task.insurance.reference=Coverage[1].id,,"Processing of each ORC segment results in the creation of a new Task resource which is linked back to the ServiceRequest created for the same ORC segment. =*= The creation of a Task resource and its inclusion in the FHIR bundle should only happen when the receiving system is responsible for fulfillment of the ServiceRequest. Other systems may receive notification of the order, but should not receive a Task Resource if they are not the intended filler system."
-E18) No mapping for PRT[Location]. Missing file: HL7 Segment - FHIR R4_ PRT[Location] - Sheet1.csv
-	at mappings.messages(HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv:52)
-	near: 12.6.2,VXU_V04.ORDER.OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[Location],
+E18) No mapping for RXO[MedicationRequest]. Missing file: HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv
+	at mappings.messages(HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv:39)
+	near: 4.2.1.7,ORM_O01.ORDER_DETAIL.CHOICE.RXO,RXO,Pharmacy/Treatment Order,0,1,,,,MedicationRequest,RXO[MedicationRequest],,,
+E19) No mapping 

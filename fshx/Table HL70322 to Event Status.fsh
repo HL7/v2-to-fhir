@@ -9,7 +9,7 @@ Title: "Table HL70322 to Event Status Map"
 * name = "TableHL70322toEventStatus"
 * status = #active
 * experimental = true
-* date = "2020-08-10"
+* date = "2020-08-11"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

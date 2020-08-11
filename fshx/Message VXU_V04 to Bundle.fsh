@@ -9,7 +9,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * name = "MessageVXU_V04toBundle"
 * status = #active
 * experimental = true
-* date = "2020-08-10"
+* date = "2020-08-11"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -213,7 +213,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[13].target.code = #Device[1]
 * group.element[13].target.display = "Device[1]"
 * group.element[13].target.dependsOn[0].property = "segment-map"
-* group.element[13].target.dependsOn[0].value = "PRT[Observation-Device]"
+* group.element[13].target.dependsOn[0].value = "PRT[Device]"
 * group.element[13].target.dependsOn[1].property = "references"
 * group.element[13].target.dependsOn[1].value = "Observation[1].device.reference=Device.id"
 * group.element[13].target.product[0].property = "antlr"
@@ -304,7 +304,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[19].target.code = #PractitionerRole[2]
 * group.element[19].target.display = "PractitionerRole[2]"
 * group.element[19].target.comment = """
-Processing of each PRT segment typically results in the creation of a new Practitioner or PractitionerRole resource.
+Processing of each PRT segment typically results in the creation of a new Practitioner or PractitionerRole resource. 
 
 The decision between creating a Practitioner or PractitionerRole resource may depend on the availability of data related to the practitioner's role elsewhere in the message.
 
@@ -481,7 +481,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[30].target.code = #Observation[2]
 * group.element[30].target.display = "Observation[2]"
 * group.element[30].target.dependsOn[0].property = "segment-map"
-* group.element[30].target.dependsOn[0].value = "PRT[Location]"
+* group.element[30].target.dependsOn[0].value = "PRT[Observation-Location]"
 * group.element[30].target.product[0].property = "antlr"
 * group.element[30].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[31].code = #VXU_V04.ORDER.OBSERVATION.PRT

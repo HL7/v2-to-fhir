@@ -1,0 +1,127 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "table-hl70080-to-v2-0080",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Table HL70080 to the FHIR V2 0080 Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70080-to-v2-0080",
+  "version": "1.0",
+  "name": "TableHL70080toV20080",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-08-11",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "HL70080",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v2-0080",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Table HL70080 to V2 0080.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1xwKH-TZTVdS5-CrBlJ6nPE-EvH2bUlYPpeoT-v794q8/edit#gid=0"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "element": [
+        {
+          "code": "A",
+          "display": "An age-based population",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "A",
+              "display": "An age-based population"
+            }
+          ]
+        },
+        {
+          "code": "N",
+          "display": "None – generic normal range",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "N",
+              "display": "None – generic normal range"
+            }
+          ]
+        },
+        {
+          "code": "R",
+          "display": "A race-based population",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "R",
+              "display": "A race-based population"
+            }
+          ]
+        },
+        {
+          "code": "S",
+          "display": "A sex-based population",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "S",
+              "display": "A sex-based population"
+            }
+          ]
+        },
+        {
+          "code": "SP",
+          "display": "Species",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "SP",
+              "display": "Species"
+            }
+          ]
+        },
+        {
+          "code": "B",
+          "display": "Breed",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "B",
+              "display": "Breed"
+            }
+          ]
+        },
+        {
+          "code": "ST",
+          "display": "Strain",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "ST",
+              "display": "Strain"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

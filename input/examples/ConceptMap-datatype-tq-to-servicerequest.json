@@ -7,7 +7,7 @@
   "name": "DatatypeTQtoServiceRequest",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-10",
+  "date": "2020-08-11",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -22,9 +22,83 @@
   "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
   "sourceUri": "TQ",
   "targetUri": "ServiceRequest",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Datatype TQ to ServiceRequest.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1cti6hPf-05Z2fziWk7lScLq6RHgspA4gMorBS6m4J3o/edit#gid=0"
+        }
+      ]
+    }
+  ],
   "group": [
     {
       "element": [
+        {
+          "code": "TQ.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "CQ"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Quantity",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "quantityQuantity",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Quantity"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "quantityQuantity",
+              "dependsOn": [
+                {
+                  "property": "data-type-map",
+                  "value": "CQ[Quantity]"
+                }
+              ]
+            }
+          ]
+        },
         {
           "code": "TQ.2",
           "extension": [
@@ -342,6 +416,110 @@
                 }
               ],
               "display": "occurrenceTiming.repeat.boundsPeriod.end"
+            }
+          ]
+        },
+        {
+          "code": "TQ.6",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "ST"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Priority",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "priority",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "code"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": 1
+                    }
+                  ]
+                }
+              ],
+              "display": "priority",
+              "dependsOn": [
+                {
+                  "property": "vocabulary-map",
+                  "value": "Priority"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "TQ.8",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "extension": [
+                {
+                  "url": "type",
+                  "valueCode": "TX"
+                },
+                {
+                  "url": "cardinalityMin",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "cardinalityMax",
+                  "valueInteger": 1
+                }
+              ]
+            }
+          ],
+          "display": "Text",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "note(Annotation.text)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "extension": [
+                    {
+                      "url": "type",
+                      "valueCode": "Reference(Annotation)"
+                    },
+                    {
+                      "url": "cardinalityMin",
+                      "valueInteger": -1
+                    },
+                    {
+                      "url": "cardinalityMax",
+                      "valueInteger": -1
+                    }
+                  ]
+                }
+              ],
+              "display": "note(Annotation.text)"
             }
           ]
         },

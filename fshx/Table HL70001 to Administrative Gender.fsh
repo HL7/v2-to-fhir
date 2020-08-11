@@ -9,7 +9,7 @@ Title: "Table HL70001 to Administrative Gender Map"
 * name = "TableHL70001toAdministrativeGender"
 * status = #active
 * experimental = true
-* date = "2020-08-10"
+* date = "2020-08-11"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

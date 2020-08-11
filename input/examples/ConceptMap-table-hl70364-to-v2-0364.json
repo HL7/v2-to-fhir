@@ -1,0 +1,138 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "table-hl70364-to-v2-0364",
+  "description": "This ConceptMap represents a mapping from the HL7 V2 Table HL70364 to the FHIR V2 0364 Value Set.",
+  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70364-to-v2-0364",
+  "version": "1.0",
+  "name": "TableHL70364toV20364",
+  "status": "active",
+  "experimental": true,
+  "date": "2020-08-11",
+  "publisher": "HL7 International, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "v2-to-fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.",
+  "sourceUri": "HL70364",
+  "targetUri": "http://terminology.hl7.org/CodeSystem/v2-0364",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "derived-from"
+        },
+        {
+          "url": "label",
+          "valueString": "Table HL70364 to V2 0364.fsh"
+        },
+        {
+          "url": "url",
+          "valueUri": "https://docs.google.com/spreadsheets/d/1kpfJ4WKuc_Gc6sSIUgnTMTpjiAvDRrtP_V4_ylfHxDQ/edit#gid=0"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "element": [
+        {
+          "code": "PI",
+          "display": "Patient Instructions",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "PI",
+              "display": "Patient Instructions"
+            }
+          ]
+        },
+        {
+          "code": "AI",
+          "display": "Ancillary Instructions",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "AI",
+              "display": "Ancillary Instructions"
+            }
+          ]
+        },
+        {
+          "code": "GI",
+          "display": "General Instructions",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "GI",
+              "display": "General Instructions"
+            }
+          ]
+        },
+        {
+          "code": "1R",
+          "display": "Primary Reason",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "1R",
+              "display": "Primary Reason"
+            }
+          ]
+        },
+        {
+          "code": "2R",
+          "display": "Secondary Reason",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "2R",
+              "display": "Secondary Reason"
+            }
+          ]
+        },
+        {
+          "code": "GR",
+          "display": "General Reason",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "GR",
+              "display": "General Reason"
+            }
+          ]
+        },
+        {
+          "code": "RE",
+          "display": "Remark",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "RE",
+              "display": "Remark"
+            }
+          ]
+        },
+        {
+          "code": "DR",
+          "display": "Duplicate/Interaction Reason",
+          "target": [
+            {
+              "equivalence": "equivalent",
+              "code": "DR",
+              "display": "Duplicate/Interaction Reason"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
