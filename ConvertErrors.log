@@ -32,7 +32,7 @@ E4) No mapping for IN2[Coverage]. Missing file: HL7 Segment - FHIR R4_ IN2[Cover
 	near: 3.5.2,ORM_O01.PATIENT.INSURANCE.IN2,[ IN2 ],Insurance Additional Info,0,1,,,,Coverage,IN2[Coverage],,,Incorporate IN2 content into the Coverage created from the IN1 segment.
 E5) No mapping for IN3[Coverage]. Missing file: HL7 Segment - FHIR R4_ IN3[Coverage] - Sheet1.csv
 	at mappings.messages(HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv:20)
-	near: 3.5.3,ORM_O01.PATIENT.INSURANCE.IN3,[ IN3 ],Insurance Add'l Info – Cert.,0,1,,,,Coverage,IN3[Coverage],,,Incorporate IN3 content into the Coverage created from the IN1 segment.
+	near: 3.5.3,ORM_O01.PATIENT.INSURANCE.IN3,[ IN3 ],Insurance Add'l Info â€“ Cert.,0,1,,,,Coverage,IN3[Coverage],,,Incorporate IN3 content into the Coverage created from the IN1 segment.
 E6) Extensions not supported yet for MessageHeader.#ext-acceptAcknowledgementType#
 	at mappings.segments(HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv:19)
 	near: 15,MSH-15,Accept Acknowledgment Type,ID,0,1,,,,,MessageHeader.#ext-acceptAcknowledgementType#,,,,,Acknowledgements,,,"Check what LRI/LOI terminology is and use that.
@@ -45,7 +45,7 @@ E8) Extensions not supported yet for MessageHeader.#ext-timestamp#
 	at mappings.segments(HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv:10)
 	near: 7,MSH-7,Date/Time of Message,DTM,1,1,,,,,MessageHeader.#ext-timestamp#,dateTime,,,,,,,"If a message is always conveyed in a Bundle, then Bundle.timestamp could work. However, Bundle.timestamp may be better used to reflect the conversion.
 
-See https://chat.fhir.org/#narrow/stream/179188-v2-to.20FHIR/topic/MessageHeader.2Etimestamp for a discussion on this topic."
+SeeÂ https://chat.fhir.org/#narrow/stream/179188-v2-to.20FHIR/topic/MessageHeader.2EtimestampÂ for a discussion on this topic."
 E9) Extensions not supported yet for MessageHeader.#ext-v2ProfileID#
 	at mappings.segments(HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv:25)
 	near: 21,MSH-21,Message Profile Identifier,EI,0,-1,,,,,MessageHeader.#ext-v2ProfileID#,Identifier,0,-1,EI[Identifier],,,,"Need to support multiple profiles. Also, comment on implicitRules is highly idealistic."
@@ -76,4 +76,4 @@ E17) No mapping for ORC[Task-New Order]. Missing file: HL7 Segment - FHIR R4_ OR
 E18) No mapping for RXO[MedicationRequest]. Missing file: HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv
 	at mappings.messages(HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv:39)
 	near: 4.2.1.7,ORM_O01.ORDER_DETAIL.CHOICE.RXO,RXO,Pharmacy/Treatment Order,0,1,,,,MedicationRequest,RXO[MedicationRequest],,,
-E19) No mapping 
+E19) No mapp

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               url="http://hl7.org/fhir/v2-tofhir"
-               ciUrl="http://build.fhir.org/ig/example/example-ig"
-               defaultWorkgroup=""
+               url="http://hl7.org/fhir/uv/v2mappings"
+               ciUrl="http://build.fhir.org/ig/HL7/v2-to-fhir"
+               defaultWorkgroup="Orders and Observations"
                defaultVersion="current"
                xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
                ballotUrl="http://example.org/fhir/STU1">
-   <version code="current" url="http://build.fhir.org/ig/example/example-ig"/>
+   <version code="current" url="http://build.fhir.org/ig/HL7/v2-to-fhir"/>
    <version code="0.0.1" url="http://example.org/fhir/STU1"/>
    <artifactPageExtension value="-definitions"/>
    <artifactPageExtension value="-examples"/>

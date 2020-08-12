@@ -17,6 +17,7 @@ name: HL7Version2toFHIR
 title: HL7 Version 2 to FHIR
 status: active
 publisher: HL7 International
+author: HL7 International
 contact:
   - name: HL7 Orders and Observations Workgroup
     telecom:
@@ -48,7 +49,7 @@ releaseLabel: CI Build
 # │  To use a provided ig-data/package-list.json file, delete the "history" property below.        │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 history:
-  current: http://build.fhir.org/ig/example/example-ig
+  current: http://build.fhir.org/ig/HL7/v2-to-fhir
   0.0.1:
     fhirversion: 4.0.1
     date: 2099-01-01

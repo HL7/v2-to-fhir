@@ -1,10 +1,10 @@
 {
-  "name": "hl7.fhir.uv.v2-tofhir",
+  "name": "hl7.fhir.uv.v2mappings",
   "version": "0.1.0",
-  "canonical": "http://hl7.org/fhir/v2-tofhir",
-  "url": "http://hl7.org/fhir/v2-tofhir",
+  "canonical": "http://hl7.org/fhir/uv/v2mappings",
+  "url": "http://hl7.org/fhir/uv/v2mappings",
   "title": "HL7 Version 2 to FHIR",
-  "description": "asdf",
+  "description": "The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages segments, datatypes and vocabulary to HL7 FHIR Release 4.0 Bundles, Resources, Data Types and Coding Systems.",
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1"
   },
