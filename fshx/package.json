@@ -1,8 +1,8 @@
 {
-  "name": "hl7.fhir.uv.v2-tofhir",
+  "name": "hl7.fhir.uv.v2mappings",
   "version": "0.1.0",
-  "canonical": "http://hl7.org/fhir/v2-tofhir",
-  "url": "http://hl7.org/fhir/v2-tofhir",
+  "canonical": "http://hl7.org/fhir/uv/v2mappings",
+  "url": "http://hl7.org/fhir/uv/v2mappings",
   "title": "HL7 Version 2 to FHIR",
   "description": "asdf",
   "dependencies": {
@@ -15,10 +15,11 @@
   ],
   "language": "en",
   "author": "HL7 International",
+  "publisher": "HL7 International",
   "maintainers": [
     {
       "name": "HL7 Orders and Observations Workgroup",
-      "url": "http://hl7.org/Special/committees/orders/index.html"
+      "url": "http://hl7.org/Special/committees/orders/index.cfm"
     },
     {
       "name": "Keith W. Boone",
