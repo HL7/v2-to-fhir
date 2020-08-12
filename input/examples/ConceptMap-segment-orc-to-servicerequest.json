@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "segment-orc-to-servicerequest",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Segment ORC to the FHIR ServiceRequest Resource.",
-  "url": "http://hl7.org/fhir/v2-tofhir/segment-orc-to-servicerequest",
+  "url": "http://hl7.org/fhir/uv/v2mappings/segment-orc-to-servicerequest",
   "version": "1.0",
   "name": "SegmentORCtoServiceRequest",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "ServiceRequest",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",
@@ -48,7 +48,7 @@
           "code": "ORC-1",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -72,7 +72,7 @@
               "code": "status",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -113,7 +113,7 @@
           "code": "ORC-1",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -137,7 +137,7 @@
               "code": "intent",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -168,7 +168,7 @@
           "code": "ORC-2",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -192,7 +192,7 @@
               "code": "identifier[1]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -233,7 +233,7 @@
           "code": "ORC-2",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -257,7 +257,7 @@
               "code": "identifier[1].type.coding.code",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -298,7 +298,7 @@
           "code": "ORC-2",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -322,7 +322,7 @@
               "code": "identifier[1].type.coding.system",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -363,7 +363,7 @@
           "code": "ORC-3",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -387,7 +387,7 @@
               "code": "identifier[2]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -428,7 +428,7 @@
           "code": "ORC-3",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -452,7 +452,7 @@
               "code": "identifier[2].type.coding.code",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -493,7 +493,7 @@
           "code": "ORC-3",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -517,7 +517,7 @@
               "code": "identifier[2].type.coding.system",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -558,7 +558,7 @@
           "code": "ORC-4",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -582,7 +582,7 @@
               "code": "identifier[3]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -613,7 +613,7 @@
           "code": "ORC-4",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -637,7 +637,7 @@
               "code": "identifier[4]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -660,7 +660,7 @@
           "code": "ORC-5",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -684,7 +684,7 @@
               "code": "status",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -715,7 +715,7 @@
           "code": "ORC-7",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -751,7 +751,7 @@
           "code": "ORC-9",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -775,7 +775,7 @@
               "code": "authoredOn",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -810,7 +810,7 @@
           "code": "ORC-12",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -834,7 +834,7 @@
               "code": "requester(PractitionerRole.practitioner)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -865,7 +865,7 @@
           "code": "ORC-16",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -889,7 +889,7 @@
               "code": "extension-request-statusReason",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -926,7 +926,7 @@
           "code": "ORC-21",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -950,7 +950,7 @@
               "code": "requester(PractitionerRole.organization(Organization))",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -981,7 +981,7 @@
           "code": "ORC-22",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1005,7 +1005,7 @@
               "code": "requester(PractitionerRole.organization(Organization.address))",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1036,7 +1036,7 @@
           "code": "ORC-23",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1060,7 +1060,7 @@
               "code": "requester(PractitionerRole.organization(Organization.telecom))",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1091,7 +1091,7 @@
           "code": "ORC-24",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1127,7 +1127,7 @@
           "code": "ORC-29",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1151,7 +1151,7 @@
               "code": "locationCode",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",

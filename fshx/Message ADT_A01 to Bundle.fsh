@@ -4,19 +4,19 @@ InstanceOf: ConceptMap
 Title: "Message ADT_A01 to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message ADT_A01 to the FHIR Message Bundle."
 * id = "message-adt-a01-to-bundle"
-* url = "http://hl7.org/fhir/v2-tofhir/message-adt-a01-to-bundle"
+* url = "http://hl7.org/fhir/uv/v2mappings/message-adt-a01-to-bundle"
 * version = "1.0"
 * name = "MessageADT_A01toBundle"
 * status = #active
 * experimental = true
-* date = "2020-08-11"
+* date = "2020-08-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "ADT_A01"
 * targetUri = "Bundle"
-* extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact"
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
@@ -24,7 +24,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kPOewgrlY4Mpi8W3HyLzb5J-tuZnUBAzgsXuhX5lcGo/edit#gid=0"
 * group.element[0].code = #ADT_A01.MSH
-* group.element[0].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "cardinalityMin"
 * group.element[0].extension[0].extension[0].valueInteger = 1
 * group.element[0].extension[0].extension[1].url = "cardinalityMax"
@@ -36,7 +36,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[0].target.dependsOn[0].property = "segment-map"
 * group.element[0].target.dependsOn[0].value = "MSH[Bundle]"
 * group.element[1].code = #ADT_A01.MSH
-* group.element[1].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "cardinalityMin"
 * group.element[1].extension[0].extension[0].valueInteger = 1
 * group.element[1].extension[0].extension[1].url = "cardinalityMax"
@@ -49,7 +49,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[1].target.dependsOn[0].property = "segment-map"
 * group.element[1].target.dependsOn[0].value = "MSH[MessageHeader]"
 * group.element[2].code = #ADT_A01.MSH
-* group.element[2].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "cardinalityMin"
 * group.element[2].extension[0].extension[0].valueInteger = 1
 * group.element[2].extension[0].extension[1].url = "cardinalityMax"
@@ -63,7 +63,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[2].target.dependsOn[1].property = "references"
 * group.element[2].target.dependsOn[1].value = "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
 * group.element[3].code = #ADT_A01.SFT
-* group.element[3].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "cardinalityMin"
 * group.element[3].extension[0].extension[0].valueInteger = 0
 * group.element[3].extension[0].extension[1].url = "cardinalityMax"
@@ -76,7 +76,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[3].target.dependsOn[0].property = "segment-map"
 * group.element[3].target.dependsOn[0].value = "SFT[MessageHeader]"
 * group.element[4].code = #ADT_A01.EVN
-* group.element[4].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "cardinalityMin"
 * group.element[4].extension[0].extension[0].valueInteger = 1
 * group.element[4].extension[0].extension[1].url = "cardinalityMax"
@@ -90,7 +90,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[4].target.dependsOn[1].property = "references"
 * group.element[4].target.dependsOn[1].value = "Provenance.target=Bundle; Provenance.target=MessageHeader"
 * group.element[5].code = #ADT_A01.PID
-* group.element[5].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "cardinalityMin"
 * group.element[5].extension[0].extension[0].valueInteger = 1
 * group.element[5].extension[0].extension[1].url = "cardinalityMax"
@@ -103,7 +103,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[5].target.dependsOn[0].property = "segment-map"
 * group.element[5].target.dependsOn[0].value = "PID[Patient]"
 * group.element[6].code = #ADT_A01.PID
-* group.element[6].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "cardinalityMin"
 * group.element[6].extension[0].extension[0].valueInteger = 1
 * group.element[6].extension[0].extension[1].url = "cardinalityMax"
@@ -119,7 +119,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[6].target.product[0].property = "narrative"
 * group.element[6].target.product[0].value = "If PID-10 is for clinical purposes"
 * group.element[7].code = #ADT_A01.PID
-* group.element[7].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "cardinalityMin"
 * group.element[7].extension[0].extension[0].valueInteger = 1
 * group.element[7].extension[0].extension[1].url = "cardinalityMax"
@@ -135,7 +135,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[7].target.product[0].property = "narrative"
 * group.element[7].target.product[0].value = "IF PID-22 is for clinical purposes"
 * group.element[8].code = #ADT_A01.PID
-* group.element[8].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
 * group.element[8].extension[0].extension[0].valueInteger = 1
 * group.element[8].extension[0].extension[1].url = "cardinalityMax"
@@ -149,7 +149,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[8].target.dependsOn[1].property = "references"
 * group.element[8].target.dependsOn[1].value = "RelatedPerson.patient.reference=Patient[1].id"
 * group.element[9].code = #ADT_A01.PID
-* group.element[9].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "cardinalityMin"
 * group.element[9].extension[0].extension[0].valueInteger = 1
 * group.element[9].extension[0].extension[1].url = "cardinalityMax"
@@ -163,7 +163,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[9].target.dependsOn[1].property = "references"
 * group.element[9].target.dependsOn[1].value = "Account.subject.reference=Patient[1].id"
 * group.element[10].code = #ADT_A01.PD1
-* group.element[10].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "cardinalityMin"
 * group.element[10].extension[0].extension[0].valueInteger = 0
 * group.element[10].extension[0].extension[1].url = "cardinalityMax"
@@ -176,7 +176,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[10].target.dependsOn[0].property = "segment-map"
 * group.element[10].target.dependsOn[0].value = "PD1[Patient]"
 * group.element[11].code = #ADT_A01:follow:PID.ARV
-* group.element[11].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
 * group.element[11].extension[0].extension[0].valueInteger = 0
 * group.element[11].extension[0].extension[1].url = "cardinalityMax"
@@ -193,7 +193,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[11].target.product[0].property = "antlr"
 * group.element[11].target.product[0].value = "IF ARV-1 IN (\"PID\", \"PD1\") AND ARV-3 NOT VALUED"
 * group.element[12].code = #ADT_A01:follow:PID.ROL
-* group.element[12].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "cardinalityMin"
 * group.element[12].extension[0].extension[0].valueInteger = 0
 * group.element[12].extension[0].extension[1].url = "cardinalityMax"
@@ -209,7 +209,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[12].target.product[1].property = "fhirpath"
 * group.element[12].target.product[1].value = "(element(\"3.1\")=\"PP\")and(element(\"3.3\")=\"HL70443\")"
 * group.element[13].code = #ADT_A01:follow:PID.ROL
-* group.element[13].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
 * group.element[13].extension[0].extension[0].valueInteger = 0
 * group.element[13].extension[0].extension[1].url = "cardinalityMax"
@@ -229,7 +229,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[13].target.product[2].property = "narrative"
 * group.element[13].target.product[2].value = "While most likely all other HL70443 values go to RelatedPerson, the implementation needs to determine whether that is fully accurate."
 * group.element[14].code = #ADT_A01.NK1
-* group.element[14].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "cardinalityMin"
 * group.element[14].extension[0].extension[0].valueInteger = 0
 * group.element[14].extension[0].extension[1].url = "cardinalityMax"
@@ -246,7 +246,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[14].target.product[0].property = "antlr"
 * group.element[14].target.product[0].value = "IF NK1-3.1 NOT IN (\"EMR\", \"E\", \"F\", \"I\", \"S\")"
 * group.element[15].code = #ADT_A01.NK1
-* group.element[15].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "cardinalityMin"
 * group.element[15].extension[0].extension[0].valueInteger = 0
 * group.element[15].extension[0].extension[1].url = "cardinalityMax"
@@ -260,7 +260,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[15].target.product[0].property = "antlr"
 * group.element[15].target.product[0].value = "IF NK1-3.1 NOT IN (\"EMR\", \"E\", \"F\", \"I\", \"S\")"
 * group.element[16].code = #ADT_A01.NK1
-* group.element[16].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "cardinalityMin"
 * group.element[16].extension[0].extension[0].valueInteger = 0
 * group.element[16].extension[0].extension[1].url = "cardinalityMax"
@@ -274,7 +274,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[16].target.product[0].property = "antlr"
 * group.element[16].target.product[0].value = "IF NK1-3.1 IN (\"EMR\", \"E\", \"F\", \"I\", \"S\")"
 * group.element[17].code = #ADT_A01.PV1
-* group.element[17].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "cardinalityMin"
 * group.element[17].extension[0].extension[0].valueInteger = 1
 * group.element[17].extension[0].extension[1].url = "cardinalityMax"
@@ -289,7 +289,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[17].target.dependsOn[1].property = "references"
 * group.element[17].target.dependsOn[1].value = "Encounter[1].subject.reference=Patient[1].id"
 * group.element[18].code = #ADT_A01.PV1
-* group.element[18].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "cardinalityMin"
 * group.element[18].extension[0].extension[0].valueInteger = 1
 * group.element[18].extension[0].extension[1].url = "cardinalityMax"
@@ -301,7 +301,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[18].target.dependsOn[0].property = "segment-map"
 * group.element[18].target.dependsOn[0].value = "PV1[Patient]"
 * group.element[19].code = #ADT_A01.PV2
-* group.element[19].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "cardinalityMin"
 * group.element[19].extension[0].extension[0].valueInteger = 0
 * group.element[19].extension[0].extension[1].url = "cardinalityMax"
@@ -314,7 +314,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[19].target.dependsOn[0].property = "segment-map"
 * group.element[19].target.dependsOn[0].value = "PV2[Encounter]"
 * group.element[20].code = #ADT_A01:follow:PV1.ARV
-* group.element[20].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "cardinalityMin"
 * group.element[20].extension[0].extension[0].valueInteger = 0
 * group.element[20].extension[0].extension[1].url = "cardinalityMax"
@@ -331,7 +331,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[20].target.product[0].property = "antlr"
 * group.element[20].target.product[0].value = "IF  ARV-3 NOT VALUED"
 * group.element[21].code = #ADT_A01:follow:PV1.ROL
-* group.element[21].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "cardinalityMin"
 * group.element[21].extension[0].extension[0].valueInteger = 0
 * group.element[21].extension[0].extension[1].url = "cardinalityMax"
@@ -343,7 +343,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[21].target.dependsOn[0].property = "segment-map"
 * group.element[21].target.dependsOn[0].value = "ROL[Encounter-PractitionerRole]"
 * group.element[22].code = #ADT_A01.OBX
-* group.element[22].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "cardinalityMin"
 * group.element[22].extension[0].extension[0].valueInteger = 0
 * group.element[22].extension[0].extension[1].url = "cardinalityMax"
@@ -359,7 +359,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[22].target.product[0].property = "narrative"
 * group.element[22].target.product[0].value = "Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet."
 * group.element[23].code = #ADT_A01.OBX
-* group.element[23].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].extension[0].extension[0].url = "cardinalityMin"
 * group.element[23].extension[0].extension[0].valueInteger = 0
 * group.element[23].extension[0].extension[1].url = "cardinalityMax"
@@ -375,7 +375,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[23].target.product[0].property = "narrative"
 * group.element[23].target.product[0].value = "Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet."
 * group.element[24].code = #ADT_A01.AL1
-* group.element[24].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[24].extension[0].extension[0].url = "cardinalityMin"
 * group.element[24].extension[0].extension[0].valueInteger = 0
 * group.element[24].extension[0].extension[1].url = "cardinalityMax"
@@ -390,7 +390,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[24].target.dependsOn[1].property = "references"
 * group.element[24].target.dependsOn[1].value = "AllergyIntolerance.patient.reference=Patient[1].id"
 * group.element[25].code = #ADT_A01.DG1
-* group.element[25].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[25].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[25].extension[0].extension[0].url = "cardinalityMin"
 * group.element[25].extension[0].extension[0].valueInteger = 0
 * group.element[25].extension[0].extension[1].url = "cardinalityMax"
@@ -407,7 +407,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[25].target.product[0].property = "narrative"
 * group.element[25].target.product[0].value = "If in context of the patient"
 * group.element[26].code = #ADT_A01.DG1
-* group.element[26].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[26].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[26].extension[0].extension[0].url = "cardinalityMin"
 * group.element[26].extension[0].extension[0].valueInteger = 0
 * group.element[26].extension[0].extension[1].url = "cardinalityMax"
@@ -423,7 +423,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[26].target.product[0].property = "narrative"
 * group.element[26].target.product[0].value = "If in context of an encounter"
 * group.element[27].code = #ADT_A01.DG1
-* group.element[27].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[27].extension[0].extension[0].url = "cardinalityMin"
 * group.element[27].extension[0].extension[0].valueInteger = 0
 * group.element[27].extension[0].extension[1].url = "cardinalityMax"
@@ -439,7 +439,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[27].target.product[0].property = "narrative"
 * group.element[27].target.product[0].value = "If in context of a episode of care"
 * group.element[28].code = #ADT_A01.PROCEDURE.PR1
-* group.element[28].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[28].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[28].extension[0].extension[0].url = "cardinalityMin"
 * group.element[28].extension[0].extension[0].valueInteger = 1
 * group.element[28].extension[0].extension[1].url = "cardinalityMax"
@@ -453,7 +453,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[28].target.dependsOn[1].property = "references"
 * group.element[28].target.dependsOn[1].value = "Procedure.subject.reference=Patient[1].id"
 * group.element[29].code = #ADT_A01.INSURANCE.IN1
-* group.element[29].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[29].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[29].extension[0].extension[0].url = "cardinalityMin"
 * group.element[29].extension[0].extension[0].valueInteger = 1
 * group.element[29].extension[0].extension[1].url = "cardinalityMax"
@@ -468,7 +468,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[29].target.dependsOn[1].property = "references"
 * group.element[29].target.dependsOn[1].value = "Coverage.subscriber.reference=Patient[1].id"
 * group.element[30].code = #ADT_A01.INSURANCE.IN2
-* group.element[30].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[30].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[30].extension[0].extension[0].url = "cardinalityMin"
 * group.element[30].extension[0].extension[0].valueInteger = 0
 * group.element[30].extension[0].extension[1].url = "cardinalityMax"
@@ -481,7 +481,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[30].target.dependsOn[0].property = "segment-map"
 * group.element[30].target.dependsOn[0].value = "IN2[Coverage]"
 * group.element[31].code = #ADT_A01.INSURANCE.IN3
-* group.element[31].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[31].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[31].extension[0].extension[0].url = "cardinalityMin"
 * group.element[31].extension[0].extension[0].valueInteger = 0
 * group.element[31].extension[0].extension[1].url = "cardinalityMax"

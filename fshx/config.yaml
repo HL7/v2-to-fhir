@@ -5,13 +5,13 @@
 # │  configuration from now on. You may delete your package.json as it is no longer needed.        │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-# ╭─────────────────────────ImplementationGuide-hl7.fhir.uv.v2-tofhir.json─────────────────────────╮
+# ╭─────────────────────────ImplementationGuide-hl7.fhir.uv.v2mappings.json────────────────────────╮
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see:                                                                    │
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.uv.v2-tofhir
-canonical: http://hl7.org/fhir/v2-tofhir
+id: hl7.fhir.uv.v2mappings
+canonical: http://hl7.org/fhir/uv/v2mappings
 version: 0.1.0
 name: HL7Version2toFHIR
 title: HL7 Version 2 to FHIR

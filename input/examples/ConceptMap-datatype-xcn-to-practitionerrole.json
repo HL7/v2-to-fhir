@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "datatype-xcn-to-practitionerrole",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Datatype XCN to the FHIR PractitionerRole Resource.",
-  "url": "http://hl7.org/fhir/v2-tofhir/datatype-xcn-to-practitionerrole",
+  "url": "http://hl7.org/fhir/uv/v2mappings/datatype-xcn-to-practitionerrole",
   "version": "1.0",
   "name": "DatatypeXCNtoPractitionerRole",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "PractitionerRole",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",
@@ -48,7 +48,7 @@
           "code": "XCN.1",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -72,7 +72,7 @@
               "code": "practitioner(Practitioner.identifier.value)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -97,7 +97,7 @@
           "code": "XCN.2",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -133,7 +133,7 @@
           "code": "XCN.3",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -157,7 +157,7 @@
               "code": "practitioner(Practitioner.name.given)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -182,7 +182,7 @@
           "code": "XCN.4",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -206,7 +206,7 @@
               "code": "practitioner(Practitioner.name.given)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -231,7 +231,7 @@
           "code": "XCN.5",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -255,7 +255,7 @@
               "code": "practitioner(Practitioner.name.suffix)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -280,7 +280,7 @@
           "code": "XCN.6",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -304,7 +304,7 @@
               "code": "practitioner(Practitioner.name.prefix)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -329,7 +329,7 @@
           "code": "XCN.7",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -349,7 +349,7 @@
               "code": "practitioner(Practitioner.name.suffix)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -374,7 +374,7 @@
           "code": "XCN.9",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -410,7 +410,7 @@
           "code": "XCN.10",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -434,7 +434,7 @@
               "code": "practitioner(Practitioner.name.use)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -465,7 +465,7 @@
           "code": "XCN.13",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -489,7 +489,7 @@
               "code": "practitioner(Practitioner.identifier.type.coding.code)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -520,7 +520,7 @@
           "code": "XCN.17",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -540,7 +540,7 @@
               "code": "practitioner(Practitioner.name.period)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -577,7 +577,7 @@
           "code": "XCN.18",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -601,7 +601,7 @@
               "code": "PractitionerRole.practitioner(Practitioner.name.family.extension-humanname-assembly-order)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -626,7 +626,7 @@
           "code": "XCN.19",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -650,7 +650,7 @@
               "code": "practitioner(Practitioner.name.period.start)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -675,7 +675,7 @@
           "code": "XCN.20",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -699,7 +699,7 @@
               "code": "practitioner(Practitioner.name.period.end)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -724,7 +724,7 @@
           "code": "XCN.21",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -748,7 +748,7 @@
               "code": "practitioner(Practitioner.name.suffix)",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",

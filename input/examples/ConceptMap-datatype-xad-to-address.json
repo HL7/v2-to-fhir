@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "datatype-xad-to-address",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Datatype XAD to the FHIR Address Data Type.",
-  "url": "http://hl7.org/fhir/v2-tofhir/datatype-xad-to-address",
+  "url": "http://hl7.org/fhir/uv/v2mappings/datatype-xad-to-address",
   "version": "1.0",
   "name": "DatatypeXADtoAddress",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "Address",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",
@@ -48,7 +48,7 @@
           "code": "XAD.1",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -72,7 +72,7 @@
               "code": "line[1-3]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -103,7 +103,7 @@
           "code": "XAD.2",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -127,7 +127,7 @@
               "code": "line[4]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -152,7 +152,7 @@
           "code": "XAD.3",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -176,7 +176,7 @@
               "code": "city",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -201,7 +201,7 @@
           "code": "XAD.4",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -225,7 +225,7 @@
               "code": "state",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -250,7 +250,7 @@
           "code": "XAD.5",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -274,7 +274,7 @@
               "code": "postalCode",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -299,7 +299,7 @@
           "code": "XAD.6",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -323,7 +323,7 @@
               "code": "country",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -348,7 +348,7 @@
           "code": "XAD.7",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -372,7 +372,7 @@
               "code": "type",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -409,7 +409,7 @@
           "code": "XAD.7",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -433,7 +433,7 @@
               "code": "use",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -470,7 +470,7 @@
           "code": "XAD.7",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -494,7 +494,7 @@
               "code": "ext.iso21090-AD-use",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -525,7 +525,7 @@
           "code": "XAD.9",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -549,7 +549,7 @@
               "code": "district",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -580,7 +580,7 @@
           "code": "XAD.10",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -604,7 +604,7 @@
               "code": "extension-iso21090-ADXP-censusTract",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -635,7 +635,7 @@
           "code": "XAD.12",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -659,7 +659,7 @@
               "code": "period",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -690,7 +690,7 @@
           "code": "XAD.13",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -714,7 +714,7 @@
               "code": "period.start",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -739,7 +739,7 @@
           "code": "XAD.14",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -763,7 +763,7 @@
               "code": "period.end",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -788,7 +788,7 @@
           "code": "XAD.19",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -812,7 +812,7 @@
               "code": "line[5]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",

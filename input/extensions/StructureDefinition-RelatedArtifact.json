@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "RelatedArtifact",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
   "version": "0.1.0",
   "name": "RelatedArtifact",
   "status": "active",
@@ -224,7 +224,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
       },
       {
         "id": "Extension.value[x]",

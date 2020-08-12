@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "location",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/location",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/location",
   "version": "0.1.0",
   "name": "Location",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/location"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/location"
       },
       {
         "id": "Extension.value[x]",
@@ -55,7 +55,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/v2-tofhir/StructureDefinition/location"
+              "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/location"
             ]
           }
         ]

@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "datatype-tqexecutionperiod-to-task",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Datatype TQ to the FHIR Task Resource.",
-  "url": "http://hl7.org/fhir/v2-tofhir/datatype-tqexecutionperiod-to-task",
+  "url": "http://hl7.org/fhir/uv/v2mappings/datatype-tqexecutionperiod-to-task",
   "version": "1.0",
   "name": "DatatypeTQExecutionPeriodtoTask",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -29,7 +29,7 @@
           "code": "TQ.4",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -53,7 +53,7 @@
               "code": "executionPeriod.start",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -78,7 +78,7 @@
           "code": "TQ.5",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -102,7 +102,7 @@
               "code": "executionPeriod.end",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",

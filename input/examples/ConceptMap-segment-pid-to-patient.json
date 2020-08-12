@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "segment-pid-to-patient",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Patient Resource.",
-  "url": "http://hl7.org/fhir/v2-tofhir/segment-pid-to-patient",
+  "url": "http://hl7.org/fhir/uv/v2mappings/segment-pid-to-patient",
   "version": "1.0",
   "name": "SegmentPIDtoPatient",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "Patient",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",
@@ -48,7 +48,7 @@
           "code": "PID-2",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -72,7 +72,7 @@
               "code": "identifier[1]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -103,7 +103,7 @@
           "code": "PID-3",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -127,7 +127,7 @@
               "code": "identifier[2]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -158,7 +158,7 @@
           "code": "PID-4",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -182,7 +182,7 @@
               "code": "identifier[3]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -213,7 +213,7 @@
           "code": "PID-5",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -237,7 +237,7 @@
               "code": "name[1]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -268,7 +268,7 @@
           "code": "PID-6",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -292,7 +292,7 @@
               "code": "extension-mothersMaidenName",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -323,7 +323,7 @@
           "code": "PID-7",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -347,7 +347,7 @@
               "code": "birthDate",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -372,7 +372,7 @@
           "code": "PID-7",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -396,7 +396,7 @@
               "code": "extension-birthTime",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -427,7 +427,7 @@
           "code": "PID-8",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -451,7 +451,7 @@
               "code": "gender",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -486,7 +486,7 @@
           "code": "PID-9",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -510,7 +510,7 @@
               "code": "name[2]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -541,7 +541,7 @@
           "code": "PID-11",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -565,7 +565,7 @@
               "code": "address[1]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -596,7 +596,7 @@
           "code": "PID-12",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -620,7 +620,7 @@
               "code": "address[1].district",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -651,7 +651,7 @@
           "code": "PID-13",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -675,7 +675,7 @@
               "code": "telecom[1]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -706,7 +706,7 @@
           "code": "PID-13",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -748,7 +748,7 @@
           "code": "PID-14",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -772,7 +772,7 @@
               "code": "telecom[2]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -803,7 +803,7 @@
           "code": "PID-14",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -845,7 +845,7 @@
           "code": "PID-15",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -869,7 +869,7 @@
               "code": "communication.language",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -904,7 +904,7 @@
           "code": "PID-16",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -928,7 +928,7 @@
               "code": "maritalStatus",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -963,7 +963,7 @@
           "code": "PID-17",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -987,7 +987,7 @@
               "code": "extension-patient-religion",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1022,7 +1022,7 @@
           "code": "PID-19",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1046,7 +1046,7 @@
               "code": "identifier[4].value",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1071,7 +1071,7 @@
           "code": "PID-19",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1095,7 +1095,7 @@
               "code": "identifier[4].type.coding.code",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1126,7 +1126,7 @@
           "code": "PID-19",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1150,7 +1150,7 @@
               "code": "identifier[4].type.coding.system",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1181,7 +1181,7 @@
           "code": "PID-19",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1205,7 +1205,7 @@
               "code": "identifier[4].system",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1236,7 +1236,7 @@
           "code": "PID-20",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -1256,7 +1256,7 @@
               "code": "identifier[5]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1287,7 +1287,7 @@
           "code": "PID-23",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1311,7 +1311,7 @@
               "code": "extension-patient-birthplace.text",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1336,7 +1336,7 @@
           "code": "PID-24",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1360,7 +1360,7 @@
               "code": "multipleBirthBoolean",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1397,7 +1397,7 @@
           "code": "PID-25",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1421,7 +1421,7 @@
               "code": "multipleBirthInteger",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1446,7 +1446,7 @@
           "code": "PID-26",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1470,7 +1470,7 @@
               "code": "extension-patient-citizenship[1].code",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1501,7 +1501,7 @@
           "code": "PID-28",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1525,7 +1525,7 @@
               "code": "extension-patient-nationality.code",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1556,7 +1556,7 @@
           "code": "PID-29",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1580,7 +1580,7 @@
               "code": "deceasedDateTime",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1605,7 +1605,7 @@
           "code": "PID-30",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1629,7 +1629,7 @@
               "code": "deceasedBoolean",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1666,7 +1666,7 @@
           "code": "PID-33",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1690,7 +1690,7 @@
               "code": "meta.lastUpdated",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1715,7 +1715,7 @@
           "code": "PID-35",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1739,7 +1739,7 @@
               "code": "extension-patient-animal.species",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1770,7 +1770,7 @@
           "code": "PID-36",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1794,7 +1794,7 @@
               "code": "extension-patient-animal.breed",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1825,7 +1825,7 @@
           "code": "PID-39",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1849,7 +1849,7 @@
               "code": "extension-patient-citizenship[2].code",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",
@@ -1880,7 +1880,7 @@
           "code": "PID-40",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -1904,7 +1904,7 @@
               "code": "telecom[3]",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",

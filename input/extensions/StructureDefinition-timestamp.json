@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "timestamp",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/timestamp",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/timestamp",
   "version": "0.1.0",
   "name": "Timestamp",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/timestamp"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/timestamp"
       },
       {
         "id": "Extension.value[x]",

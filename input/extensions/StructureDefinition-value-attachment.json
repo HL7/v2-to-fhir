@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "value-attachment",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/value-attachment",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/value-attachment",
   "version": "0.1.0",
   "name": "ValueAttachment",
   "status": "active",
@@ -39,7 +39,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/value-attachment"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/value-attachment"
       },
       {
         "id": "Extension.value[x]",

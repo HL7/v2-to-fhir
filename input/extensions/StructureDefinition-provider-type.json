@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "provider-type",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/provider-type",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/provider-type",
   "version": "0.1.0",
   "name": "ProviderType",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/provider-type"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/provider-type"
       },
       {
         "id": "Extension.value[x]",

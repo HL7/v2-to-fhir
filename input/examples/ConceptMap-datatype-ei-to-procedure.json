@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "datatype-ei-to-procedure",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Datatype EI to the FHIR Procedure Resource.",
-  "url": "http://hl7.org/fhir/v2-tofhir/datatype-ei-to-procedure",
+  "url": "http://hl7.org/fhir/uv/v2mappings/datatype-ei-to-procedure",
   "version": "1.0",
   "name": "DatatypeEItoProcedure",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "Procedure",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",
@@ -48,7 +48,7 @@
           "code": "EI.1",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -72,7 +72,7 @@
               "code": "identifier.value",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "cardinalityMin",

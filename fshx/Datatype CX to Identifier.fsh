@@ -4,12 +4,12 @@ InstanceOf: ConceptMap
 Title: "Datatype CX to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CX to the FHIR Identifier Data Type."
 * id = "datatype-cx-to-identifier"
-* url = "http://hl7.org/fhir/v2-tofhir/datatype-cx-to-identifier"
+* url = "http://hl7.org/fhir/uv/v2mappings/datatype-cx-to-identifier"
 * version = "1.0"
 * name = "DatatypeCXtoIdentifier"
 * status = #active
 * experimental = true
-* date = "2020-08-11"
+* date = "2020-08-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -17,7 +17,7 @@ Title: "Datatype CX to Identifier Map"
 * sourceUri = "CX"
 * targetUri = "Identifier"
 * group.element[0].code = #CX.1
-* group.element[0].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "type"
 * group.element[0].extension[0].extension[0].valueCode = #"ST"
 * group.element[0].extension[0].extension[1].url = "cardinalityMin"
@@ -27,7 +27,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[0].display = "ID Number"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #value
-* group.element[0].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"string"
 * group.element[0].target.extension[0].extension[1].url = "cardinalityMin"
@@ -36,7 +36,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "value"
 * group.element[1].code = #CX.4
-* group.element[1].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
 * group.element[1].extension[0].extension[0].valueCode = #"HD"
 * group.element[1].extension[0].extension[1].url = "cardinalityMin"
@@ -46,7 +46,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[1].display = "Assigning Authority"
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #assigner(Organization)
-* group.element[1].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"Reference(Organization)"
 * group.element[1].target.extension[0].extension[1].url = "cardinalityMin"
@@ -59,7 +59,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[1].target.product[0].property = "narrative"
 * group.element[1].target.product[0].value = "If organization"
 * group.element[2].code = #CX.4
-* group.element[2].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
 * group.element[2].extension[0].extension[0].valueCode = #"HD"
 * group.element[2].extension[0].extension[1].url = "cardinalityMin"
@@ -69,7 +69,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[2].display = "Assigning Authority"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #system
-* group.element[2].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[2].target.extension[0].extension[1].url = "cardinalityMin"
@@ -82,7 +82,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[2].target.product[0].property = "narrative"
 * group.element[2].target.product[0].value = "If system"
 * group.element[3].code = #CX.5
-* group.element[3].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
 * group.element[3].extension[0].extension[0].valueCode = #"ID"
 * group.element[3].extension[0].extension[1].url = "cardinalityMin"
@@ -92,7 +92,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[3].display = "Identifier Type Code"
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #type.coding.code
-* group.element[3].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"code"
 * group.element[3].target.extension[0].extension[1].url = "cardinalityMin"
@@ -103,7 +103,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[3].target.dependsOn[0].property = "vocabulary-map"
 * group.element[3].target.dependsOn[0].value = "IDType"
 * group.element[4].code = #CX.7
-* group.element[4].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
 * group.element[4].extension[0].extension[0].valueCode = #"DT"
 * group.element[4].extension[0].extension[1].url = "cardinalityMin"
@@ -113,7 +113,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[4].display = "Effective Date"
 * group.element[4].target.equivalence = #equivalent
 * group.element[4].target.code = #period.start
-* group.element[4].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[4].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].target.extension[0].extension[0].url = "type"
 * group.element[4].target.extension[0].extension[0].valueCode = #"dateTime"
 * group.element[4].target.extension[0].extension[1].url = "cardinalityMin"
@@ -122,7 +122,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "period.start"
 * group.element[5].code = #CX.8
-* group.element[5].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
 * group.element[5].extension[0].extension[0].valueCode = #"DT"
 * group.element[5].extension[0].extension[1].url = "cardinalityMin"
@@ -132,7 +132,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[5].display = "Expiration Date"
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #period.end
-* group.element[5].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"dateTime"
 * group.element[5].target.extension[0].extension[1].url = "cardinalityMin"

@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "message-orm-o01-to-bundle",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Message ORM_O01 to the FHIR Message Bundle.",
-  "url": "http://hl7.org/fhir/v2-tofhir/message-orm-o01-to-bundle",
+  "url": "http://hl7.org/fhir/uv/v2mappings/message-orm-o01-to-bundle",
   "version": "1.0",
   "name": "MessageORM_O01toBundle",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "Bundle",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",
@@ -48,7 +48,7 @@
           "code": "ORM_O01.MSH",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -80,7 +80,7 @@
           "code": "ORM_O01.MSH",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -113,7 +113,7 @@
           "code": "ORM_O01.MSH",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -149,7 +149,7 @@
           "code": "ORM_O01.MSH",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -181,7 +181,7 @@
           "code": "ORM_O01.PATIENT.PID",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -214,7 +214,7 @@
           "code": "ORM_O01.PATIENT.PD1",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -247,7 +247,7 @@
           "code": "ORM_O01.PATIENT.VISIT.PV1",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -284,7 +284,7 @@
           "code": "ORM_O01.PATIENT.VISIT.PV1",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -316,7 +316,7 @@
           "code": "ORM_O01.PATIENT.VISIT.PV2",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -349,7 +349,7 @@
           "code": "ORM_O01.PATIENT.INSURANCE.IN1",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -386,7 +386,7 @@
           "code": "ORM_O01.PATIENT.INSURANCE.IN2",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -419,7 +419,7 @@
           "code": "ORM_O01.PATIENT.INSURANCE.IN3",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -452,7 +452,7 @@
           "code": "ORM_O01.PATIENT.AL1",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -489,7 +489,7 @@
           "code": "ORM_O01.ORDER.ORC",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -526,7 +526,7 @@
           "code": "ORM_O01.ORDER.ORC",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -577,7 +577,7 @@
           "code": "ORM_O01.ORDER.ORC",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -623,7 +623,7 @@
           "code": "ORM_O01.ORDER.ORC",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -659,7 +659,7 @@
           "code": "ORM_O01.ORDER_DETAIL.CHOICE.OBR",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -698,7 +698,7 @@
           "code": "ORM_O01.ORDER_DETAIL.CHOICE.OBR",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -736,7 +736,7 @@
           "code": "ORM_O01.ORDER_DETAIL.CHOICE.RXO",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -768,7 +768,7 @@
           "code": "ORM_O01.ORDER_DETAIL.CHOICE.ODS",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -800,7 +800,7 @@
           "code": "ORM_O01.ORDER_DETAIL.NTE",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -832,7 +832,7 @@
           "code": "ORM_O01.ORDER_DETAIL.DG1",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",

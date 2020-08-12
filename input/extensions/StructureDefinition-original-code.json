@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "original-code",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/original-code",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/original-code",
   "version": "0.1.0",
   "name": "OriginalCode",
   "status": "active",
@@ -43,7 +43,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/original-code"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/original-code"
       },
       {
         "id": "Extension.value[x]",

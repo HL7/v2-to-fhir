@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "location-period",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/location-period",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/location-period",
   "version": "0.1.0",
   "name": "LocationPeriod",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/location-period"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/location-period"
       },
       {
         "id": "Extension.value[x]",

@@ -4,19 +4,19 @@ InstanceOf: ConceptMap
 Title: "Segment MSH to MessageHeader Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment MSH to the FHIR MessageHeader Resource."
 * id = "segment-msh-to-messageheader"
-* url = "http://hl7.org/fhir/v2-tofhir/segment-msh-to-messageheader"
+* url = "http://hl7.org/fhir/uv/v2mappings/segment-msh-to-messageheader"
 * version = "1.0"
 * name = "SegmentMSHtoMessageHeader"
 * status = #active
 * experimental = true
-* date = "2020-08-11"
+* date = "2020-08-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "MSH"
 * targetUri = "MessageHeader"
-* extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact"
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
@@ -24,7 +24,7 @@ Title: "Segment MSH to MessageHeader Map"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13pgda5xl-PwCgB9j0axyymwwv7RJVcrIzY8Ah1y1Y1M/edit#gid=0"
 * group.element[0].code = #MSH-3
-* group.element[0].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "cardinalityMin"
 * group.element[0].extension[0].extension[0].valueInteger = 0
 * group.element[0].extension[0].extension[1].url = "cardinalityMax"
@@ -39,7 +39,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[0].target.product[0].property = "antlr"
 * group.element[0].target.product[0].value = "IF MSH-24 NOT VALUED"
 * group.element[1].code = #MSH-4
-* group.element[1].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "cardinalityMin"
 * group.element[1].extension[0].extension[0].valueInteger = 0
 * group.element[1].extension[0].extension[1].url = "cardinalityMax"
@@ -52,7 +52,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[1].target.dependsOn[0].property = "references"
 * group.element[1].target.dependsOn[0].value = "Reference(Organization)"
 * group.element[2].code = #MSH-5
-* group.element[2].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "cardinalityMin"
 * group.element[2].extension[0].extension[0].valueInteger = 0
 * group.element[2].extension[0].extension[1].url = "cardinalityMax"
@@ -67,7 +67,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[2].target.product[0].property = "antlr"
 * group.element[2].target.product[0].value = "IF MSH-25 NOT VALUED"
 * group.element[3].code = #MSH-6
-* group.element[3].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "cardinalityMin"
 * group.element[3].extension[0].extension[0].valueInteger = 0
 * group.element[3].extension[0].extension[1].url = "cardinalityMax"
@@ -79,7 +79,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[3].target.product[0].property = "antlr"
 * group.element[3].target.product[0].value = "IF MSH-6 VALUED AND MSH-5 NOT VALUED AND MSH-25 NOT VALUED"
 * group.element[4].code = #MSH-6
-* group.element[4].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "cardinalityMin"
 * group.element[4].extension[0].extension[0].valueInteger = 0
 * group.element[4].extension[0].extension[1].url = "cardinalityMax"
@@ -92,7 +92,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[4].target.dependsOn[0].property = "references"
 * group.element[4].target.dependsOn[0].value = "Reference(Organization)"
 * group.element[5].code = #MSH-8
-* group.element[5].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "cardinalityMin"
 * group.element[5].extension[0].extension[0].valueInteger = 0
 * group.element[5].extension[0].extension[1].url = "cardinalityMax"
@@ -105,7 +105,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[5].target.dependsOn[0].property = "references"
 * group.element[5].target.dependsOn[0].value = "string"
 * group.element[6].code = #MSH-9
-* group.element[6].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "cardinalityMin"
 * group.element[6].extension[0].extension[0].valueInteger = 1
 * group.element[6].extension[0].extension[1].url = "cardinalityMax"
@@ -118,7 +118,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[6].target.dependsOn[0].property = "references"
 * group.element[6].target.dependsOn[0].value = "Coding"
 * group.element[7].code = #MSH-11
-* group.element[7].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "cardinalityMin"
 * group.element[7].extension[0].extension[0].valueInteger = 1
 * group.element[7].extension[0].extension[1].url = "cardinalityMax"
@@ -131,7 +131,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[7].target.dependsOn[0].property = "references"
 * group.element[7].target.dependsOn[0].value = "meta"
 * group.element[8].code = #MSH-17
-* group.element[8].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
 * group.element[8].extension[0].extension[0].valueInteger = 0
 * group.element[8].extension[0].extension[1].url = "cardinalityMax"
@@ -144,7 +144,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[8].target.dependsOn[0].property = "references"
 * group.element[8].target.dependsOn[0].value = "string"
 * group.element[9].code = #MSH-19
-* group.element[9].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "cardinalityMin"
 * group.element[9].extension[0].extension[0].valueInteger = 0
 * group.element[9].extension[0].extension[1].url = "cardinalityMax"
@@ -157,7 +157,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[9].target.dependsOn[0].property = "references"
 * group.element[9].target.dependsOn[0].value = "code"
 * group.element[10].code = #MSH-22
-* group.element[10].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "cardinalityMin"
 * group.element[10].extension[0].extension[0].valueInteger = 0
 * group.element[10].extension[0].extension[1].url = "cardinalityMax"
@@ -170,7 +170,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[10].target.dependsOn[0].property = "references"
 * group.element[10].target.dependsOn[0].value = "Reference(Organization)"
 * group.element[11].code = #MSH-23
-* group.element[11].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
 * group.element[11].extension[0].extension[0].valueInteger = 0
 * group.element[11].extension[0].extension[1].url = "cardinalityMax"
@@ -183,7 +183,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[11].target.dependsOn[0].property = "references"
 * group.element[11].target.dependsOn[0].value = "Reference(Organization)"
 * group.element[12].code = #MSH-24
-* group.element[12].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "cardinalityMin"
 * group.element[12].extension[0].extension[0].valueInteger = 0
 * group.element[12].extension[0].extension[1].url = "cardinalityMax"
@@ -196,7 +196,7 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[12].target.dependsOn[0].property = "references"
 * group.element[12].target.dependsOn[0].value = "BackboneElement"
 * group.element[13].code = #MSH-25
-* group.element[13].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
 * group.element[13].extension[0].extension[0].valueInteger = 0
 * group.element[13].extension[0].extension[1].url = "cardinalityMax"

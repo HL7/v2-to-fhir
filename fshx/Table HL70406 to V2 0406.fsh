@@ -4,19 +4,19 @@ InstanceOf: ConceptMap
 Title: "Table HL70406 to V2 0406 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70406 to the FHIR V2 0406 Value Set."
 * id = "table-hl70406-to-v2-0406"
-* url = "http://hl7.org/fhir/v2-tofhir/table-hl70406-to-v2-0406"
+* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70406-to-v2-0406"
 * version = "1.0"
 * name = "TableHL70406toV20406"
 * status = #active
 * experimental = true
-* date = "2020-08-11"
+* date = "2020-08-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "HL70406"
 * targetUri = "http://terminology.hl7.org/CodeSystem/v2-0406"
-* extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact"
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"

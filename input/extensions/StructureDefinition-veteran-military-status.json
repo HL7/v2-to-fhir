@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "veteran-military-status",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/veteran-military-status",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/veteran-military-status",
   "version": "0.1.0",
   "name": "VeteranMilitaryStatus",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/veteran-military-status"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/veteran-military-status"
       },
       {
         "id": "Extension.value[x]",

@@ -4,12 +4,12 @@ InstanceOf: ConceptMap
 Title: "Table HL70062 to V3 ActReason Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70062 to the FHIR V3 ActReason Value Set."
 * id = "table-hl70062-to-v3-actreason"
-* url = "http://hl7.org/fhir/v2-tofhir/table-hl70062-to-v3-actreason"
+* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70062-to-v3-actreason"
 * version = "1.0"
 * name = "TableHL70062toV3ActReason"
 * status = #active
 * experimental = true
-* date = "2020-08-11"
+* date = "2020-08-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

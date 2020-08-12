@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "table-hl70092-to-v2-0092",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Table HL70092 to the FHIR V2 0092 Value Set.",
-  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70092-to-v2-0092",
+  "url": "http://hl7.org/fhir/uv/v2mappings/table-hl70092-to-v2-0092",
   "version": "1.0",
   "name": "TableHL70092toV20092",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "http://terminology.hl7.org/CodeSystem/v2-0092",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",

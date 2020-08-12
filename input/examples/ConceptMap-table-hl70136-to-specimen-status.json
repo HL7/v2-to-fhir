@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "table-hl70136-to-specimen-status",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Table HL70136 to the FHIR Specimen Status Value Set.",
-  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70136-to-specimen-status",
+  "url": "http://hl7.org/fhir/uv/v2mappings/table-hl70136-to-specimen-status",
   "version": "1.0",
   "name": "TableHL70136toSpecimenStatus",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "http://hl7.org/fhir/specimen-status",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",

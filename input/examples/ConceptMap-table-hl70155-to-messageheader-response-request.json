@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "table-hl70155-to-messageheader-response-request",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Table HL70155 to the FHIR Messageheader Response Request Value Set.",
-  "url": "http://hl7.org/fhir/v2-tofhir/table-hl70155-to-messageheader-response-request",
+  "url": "http://hl7.org/fhir/uv/v2mappings/table-hl70155-to-messageheader-response-request",
   "version": "1.0",
   "name": "TableHL70155toMessageheaderResponseRequest",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "http://hl7.org/fhir/messageheader-response-request",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",

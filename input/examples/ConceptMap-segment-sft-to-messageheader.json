@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "segment-sft-to-messageheader",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Segment SFT to the FHIR MessageHeader Resource.",
-  "url": "http://hl7.org/fhir/v2-tofhir/segment-sft-to-messageheader",
+  "url": "http://hl7.org/fhir/uv/v2mappings/segment-sft-to-messageheader",
   "version": "1.0",
   "name": "SegmentSFTtoMessageHeader",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "MessageHeader",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",
@@ -48,7 +48,7 @@
           "code": "SFT-2",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",
@@ -81,7 +81,7 @@
           "code": "SFT-3",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "cardinalityMin",

@@ -4,19 +4,19 @@ InstanceOf: ConceptMap
 Title: "Segment MSH to Provenance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment MSH to the FHIR Provenance Resource."
 * id = "segment-msh-to-provenance"
-* url = "http://hl7.org/fhir/v2-tofhir/segment-msh-to-provenance"
+* url = "http://hl7.org/fhir/uv/v2mappings/segment-msh-to-provenance"
 * version = "1.0"
 * name = "SegmentMSHtoProvenance"
 * status = #active
 * experimental = true
-* date = "2020-08-11"
+* date = "2020-08-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "MSH"
 * targetUri = "Provenance"
-* extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact"
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
@@ -26,7 +26,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[0].code = #MSH
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #recorded
-* group.element[0].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "cardinalityMin"
 * group.element[0].target.extension[0].extension[0].valueInteger = 1
 * group.element[0].target.extension[0].extension[1].url = "cardinalityMax"
@@ -37,7 +37,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[1].code = #MSH
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #policy
-* group.element[1].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "cardinalityMin"
 * group.element[1].target.extension[0].extension[0].valueInteger = 0
 * group.element[1].target.extension[0].extension[1].url = "cardinalityMax"
@@ -48,7 +48,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[2].code = #MSH
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #agent[1].type.coding.code
-* group.element[2].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "cardinalityMin"
 * group.element[2].target.extension[0].extension[0].valueInteger = 1
 * group.element[2].target.extension[0].extension[1].url = "cardinalityMax"
@@ -59,7 +59,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[3].code = #MSH
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #agent[1].type.coding.system
-* group.element[3].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "cardinalityMin"
 * group.element[3].target.extension[0].extension[0].valueInteger = 1
 * group.element[3].target.extension[0].extension[1].url = "cardinalityMax"
@@ -68,7 +68,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[3].target.dependsOn[0].property = "value"
 * group.element[3].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
 * group.element[4].code = #MSH-3
-* group.element[4].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
 * group.element[4].extension[0].extension[0].valueCode = #"HD"
 * group.element[4].extension[0].extension[1].url = "cardinalityMin"
@@ -78,7 +78,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[4].display = "Sending Application"
 * group.element[4].target.equivalence = #equivalent
 * group.element[4].target.code = #agent[2].who(Device)
-* group.element[4].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[4].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].target.extension[0].extension[0].url = "type"
 * group.element[4].target.extension[0].extension[0].valueCode = #"Reference(Device)"
 * group.element[4].target.display = "agent[2].who(Device)"
@@ -87,7 +87,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[4].target.product[0].property = "antlr"
 * group.element[4].target.product[0].value = "IF MSH-3 AND MSH-24 VALUED"
 * group.element[5].code = #MSH-4
-* group.element[5].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
 * group.element[5].extension[0].extension[0].valueCode = #"HD"
 * group.element[5].extension[0].extension[1].url = "cardinalityMin"
@@ -97,7 +97,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[5].display = "Sending Facility"
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #agent[3].who(Organization)
-* group.element[5].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"Reference(Organization)"
 * group.element[5].target.extension[0].extension[1].url = "cardinalityMin"
@@ -110,7 +110,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[5].target.product[0].property = "antlr"
 * group.element[5].target.product[0].value = "IF MSH-22 NOT VALUED"
 * group.element[6].code = #MSH-4
-* group.element[6].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
 * group.element[6].extension[0].extension[0].valueCode = #"HD"
 * group.element[6].extension[0].extension[1].url = "cardinalityMin"
@@ -120,7 +120,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[6].display = "Sending Facility"
 * group.element[6].target.equivalence = #equivalent
 * group.element[6].target.code = #agent[3].type.coding.code
-* group.element[6].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[6].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].target.extension[0].extension[0].url = "type"
 * group.element[6].target.extension[0].extension[0].valueCode = #"code"
 * group.element[6].target.extension[0].extension[1].url = "cardinalityMin"
@@ -133,7 +133,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[6].target.product[0].property = "antlr"
 * group.element[6].target.product[0].value = "IF MSH-22 NOT VALUED"
 * group.element[7].code = #MSH-4
-* group.element[7].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
 * group.element[7].extension[0].extension[0].valueCode = #"HD"
 * group.element[7].extension[0].extension[1].url = "cardinalityMin"
@@ -143,7 +143,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[7].display = "Sending Facility"
 * group.element[7].target.equivalence = #equivalent
 * group.element[7].target.code = #agent[3].type.coding.system
-* group.element[7].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[7].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].target.extension[0].extension[0].url = "type"
 * group.element[7].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[7].target.extension[0].extension[1].url = "cardinalityMin"
@@ -156,7 +156,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[7].target.product[0].property = "antlr"
 * group.element[7].target.product[0].value = "IF MSH-22 NOT VALUED"
 * group.element[8].code = #MSH-5
-* group.element[8].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
 * group.element[8].extension[0].extension[0].valueCode = #"HD"
 * group.element[8].extension[0].extension[1].url = "cardinalityMin"
@@ -166,7 +166,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[8].display = "Receiving Application"
 * group.element[8].target.equivalence = #equivalent
 * group.element[8].target.code = #agent[4].type.coding.code
-* group.element[8].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[8].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].target.extension[0].extension[0].url = "type"
 * group.element[8].target.extension[0].extension[0].valueCode = #"CodeableConcept"
 * group.element[8].target.display = "agent[4].type.coding.code"
@@ -175,7 +175,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[8].target.product[0].property = "antlr"
 * group.element[8].target.product[0].value = "IF MSH-5 AND MSH-25 VALUED"
 * group.element[9].code = #MSH-7
-* group.element[9].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
 * group.element[9].extension[0].extension[0].valueCode = #"DTM"
 * group.element[9].extension[0].extension[1].url = "cardinalityMin"
@@ -185,7 +185,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[9].display = "Date/Time of Message"
 * group.element[9].target.equivalence = #equivalent
 * group.element[9].target.code = #occuredDateTime
-* group.element[9].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[9].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].target.extension[0].extension[0].url = "type"
 * group.element[9].target.extension[0].extension[0].valueCode = #"dateTime"
 * group.element[9].target.extension[0].extension[1].url = "cardinalityMin"
@@ -194,7 +194,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "occuredDateTime"
 * group.element[10].code = #MSH-22
-* group.element[10].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
 * group.element[10].extension[0].extension[0].valueCode = #"XON"
 * group.element[10].extension[0].extension[1].url = "cardinalityMin"
@@ -204,7 +204,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[10].display = "Sending Responsible Organization"
 * group.element[10].target.equivalence = #equivalent
 * group.element[10].target.code = #agent[5].who(Organization)
-* group.element[10].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[10].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].target.extension[0].extension[0].url = "type"
 * group.element[10].target.extension[0].extension[0].valueCode = #"Reference(Organization)"
 * group.element[10].target.extension[0].extension[1].url = "cardinalityMin"
@@ -215,7 +215,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[10].target.dependsOn[0].property = "data-type-map"
 * group.element[10].target.dependsOn[0].value = "XON[Organization]"
 * group.element[11].code = #MSH-22
-* group.element[11].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
 * group.element[11].extension[0].extension[0].valueCode = #"XON"
 * group.element[11].extension[0].extension[1].url = "cardinalityMin"
@@ -225,7 +225,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[11].display = "Sending Responsible Organization"
 * group.element[11].target.equivalence = #equivalent
 * group.element[11].target.code = #agent[5].type.coding.code
-* group.element[11].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[11].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].target.extension[0].extension[0].url = "type"
 * group.element[11].target.extension[0].extension[0].valueCode = #"code"
 * group.element[11].target.extension[0].extension[1].url = "cardinalityMin"
@@ -236,7 +236,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[11].target.dependsOn[0].property = "value"
 * group.element[11].target.dependsOn[0].value = "\"author\""
 * group.element[12].code = #MSH-22
-* group.element[12].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
 * group.element[12].extension[0].extension[0].valueCode = #"XON"
 * group.element[12].extension[0].extension[1].url = "cardinalityMin"
@@ -246,7 +246,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[12].display = "Sending Responsible Organization"
 * group.element[12].target.equivalence = #equivalent
 * group.element[12].target.code = #agent[5].type.coding.system
-* group.element[12].target.extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[12].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].target.extension[0].extension[0].url = "type"
 * group.element[12].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[12].target.extension[0].extension[1].url = "cardinalityMin"

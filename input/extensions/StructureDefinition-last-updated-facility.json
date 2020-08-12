@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "last-updated-facility",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/last-updated-facility",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/last-updated-facility",
   "version": "0.1.0",
   "name": "LastUpdatedFacility",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/last-updated-facility"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/last-updated-facility"
       },
       {
         "id": "Extension.value[x]",

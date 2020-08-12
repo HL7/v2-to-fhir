@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "analysis-date-time",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/analysis-date-time",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/analysis-date-time",
   "version": "0.1.0",
   "name": "AnalysisDateTime",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/analysis-date-time"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/analysis-date-time"
       },
       {
         "id": "Extension.value[x]",

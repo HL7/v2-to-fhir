@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "nature-of-abnormal-test",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/nature-of-abnormal-test",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/nature-of-abnormal-test",
   "version": "0.1.0",
   "name": "NatureOfAbnormalTest",
   "status": "active",
@@ -39,7 +39,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/nature-of-abnormal-test"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/nature-of-abnormal-test"
       },
       {
         "id": "Extension.value[x]",

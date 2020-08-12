@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "name-type",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/name-type",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/name-type",
   "version": "0.1.0",
   "name": "NameType",
   "status": "active",
@@ -39,7 +39,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/name-type"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/name-type"
       },
       {
         "id": "Extension.value[x]",

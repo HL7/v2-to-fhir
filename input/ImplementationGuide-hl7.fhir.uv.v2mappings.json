@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "hl7.fhir.uv.v2-tofhir",
-  "url": "http://hl7.org/fhir/v2-tofhir/ImplementationGuide/hl7.fhir.uv.v2-tofhir",
+  "id": "hl7.fhir.uv.v2mappings",
+  "url": "http://hl7.org/fhir/uv/v2mappings/ImplementationGuide/hl7.fhir.uv.v2mappings",
   "version": "0.1.0",
   "name": "HL7Version2toFHIR",
   "title": "HL7 Version 2 to FHIR",
@@ -37,7 +37,7 @@
       ]
     }
   ],
-  "packageId": "hl7.fhir.uv.v2-tofhir",
+  "packageId": "hl7.fhir.uv.v2mappings",
   "license": "CC0-1.0",
   "fhirVersion": [
     "4.0.1"
@@ -1861,7 +1861,7 @@
       },
       {
         "code": "path-history",
-        "value": "http://hl7.org/fhir/v2-tofhir/history.html"
+        "value": "http://hl7.org/fhir/uv/v2mappings/history.html"
       }
     ]
   }

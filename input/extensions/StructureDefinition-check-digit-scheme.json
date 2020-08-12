@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "check-digit-scheme",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/check-digit-scheme",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/check-digit-scheme",
   "version": "0.1.0",
   "name": "CheckDigitScheme",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/check-digit-scheme"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/check-digit-scheme"
       },
       {
         "id": "Extension.value[x]",

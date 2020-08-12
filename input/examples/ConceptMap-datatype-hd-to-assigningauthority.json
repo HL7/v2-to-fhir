@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "datatype-hd-to-assigningauthority",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Datatype HD to the FHIR AssigningAuthority Data Type.",
-  "url": "http://hl7.org/fhir/v2-tofhir/datatype-hd-to-assigningauthority",
+  "url": "http://hl7.org/fhir/uv/v2mappings/datatype-hd-to-assigningauthority",
   "version": "1.0",
   "name": "DatatypeHDtoAssigningAuthority",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "AssigningAuthority",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",

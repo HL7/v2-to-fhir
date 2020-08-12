@@ -4,19 +4,19 @@ InstanceOf: ConceptMap
 Title: "Datatype MSG to Coding Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype MSG to the FHIR Coding Data Type."
 * id = "datatype-msg-to-coding"
-* url = "http://hl7.org/fhir/v2-tofhir/datatype-msg-to-coding"
+* url = "http://hl7.org/fhir/uv/v2mappings/datatype-msg-to-coding"
 * version = "1.0"
 * name = "DatatypeMSGtoCoding"
 * status = #active
 * experimental = true
-* date = "2020-08-11"
+* date = "2020-08-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "MSG"
 * targetUri = "Coding"
-* extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact"
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
@@ -30,7 +30,7 @@ Title: "Datatype MSG to Coding Map"
 * group.element[0].target.dependsOn[0].property = "value"
 * group.element[0].target.dependsOn[0].value = "MSG.1+\"^\"+MSG.2+\"^\"+MSG.3"
 * group.element[1].code = #MSG.1
-* group.element[1].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
 * group.element[1].extension[0].extension[0].valueCode = #"ID"
 * group.element[1].extension[0].extension[1].url = "cardinalityMin"
@@ -42,7 +42,7 @@ Title: "Datatype MSG to Coding Map"
 * group.element[1].target.code = #code
 * group.element[1].target.display = "code"
 * group.element[2].code = #MSG.1
-* group.element[2].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
 * group.element[2].extension[0].extension[0].valueCode = #"ID"
 * group.element[2].extension[0].extension[1].url = "cardinalityMin"

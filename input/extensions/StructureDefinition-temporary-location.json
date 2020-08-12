@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "temporary-location",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/temporary-location",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/temporary-location",
   "version": "0.1.0",
   "name": "TemporaryLocation",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/temporary-location"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/temporary-location"
       },
       {
         "id": "Extension.value[x]",

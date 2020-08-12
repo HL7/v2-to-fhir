@@ -29,6 +29,7 @@ import com.opencsv.bean.CsvToBeanBuilder;
 public abstract class ConverterImpl<T extends Convertible> implements Converter {
 
     private static final String FHIR_BASE = "https://hl7.org/fhir/R4/", FHIR_TERM = "http://terminology.hl7.org/";
+    private static final String IG_URL = "http://hl7.org/fhir/uv/v2mappings";
     private static boolean reportErrorsOnly = true;
     private static int errCount = 0, warnCount = 0;
     private static File errorOutput = new File(".", "ConvertErrors.log");
@@ -260,7 +261,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             ) {
             writeHeader(loc.getName(), pw, filename, type, sourceName, targetName, getFHIRDescription(), source, target);
             if (sourceUrl != null) {
-                pw.printf("* extension[0].url = \"http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact\"%n");
+                pw.printf("* extension[0].url = \"%s/StructureDefinition/RelatedArtifact\"%n", IG_URL);
                 pw.printf("* extension[0].extension[0].url = \"type\"%n");
                 pw.printf("* extension[0].extension[0].valueCode = #derived-from%n");
                 String name = StringUtils.substringBeforeLast(f.getName(), " - ").replace("_",":");
@@ -406,7 +407,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         pw.printf("* description = \"This ConceptMap represents a mapping from the HL7 V2 %s %s to the FHIR %s.%s\"%n",
             type, sourceName, fhirType, source == null ? " It is not yet supported." : "");
         pw.printf("* id = \"%s\"%n", makeId(filename));
-        pw.printf("* url = \"http://hl7.org/fhir/v2-tofhir/%s\"%n", makeId(filename));
+        pw.printf("* url = \"%s/%s\"%n", IG_URL, makeId(filename));
         pw.println("* version = \"1.0\"");
         pw.printf("* name = \"%s\"%n", makeName(filename));
         pw.println("* status = #active");
@@ -440,7 +441,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
     private void addConstraints(PrintWriter pw, String string, int row, String dataType, String min, String max) {
         if (!StringUtils.isAllBlank(dataType, min, max)) {
-            pw.printf(string + ".extension[0].url = \"http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo\"%n", row);
+            pw.printf(string + ".extension[0].url = \"%s/StructureDefinition/TypeInfo\"%n", row, IG_URL);
 
             int parts = 0;
             if (!StringUtils.isBlank(dataType)) {

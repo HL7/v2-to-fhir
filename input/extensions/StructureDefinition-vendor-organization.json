@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "vendor-organization",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/vendor-organization",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/vendor-organization",
   "version": "0.1.0",
   "name": "VendorOrganization",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/vendor-organization"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/vendor-organization"
       },
       {
         "id": "Extension.value[x]",

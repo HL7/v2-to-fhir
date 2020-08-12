@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "sub-type",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/sub-type",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/sub-type",
   "version": "0.1.0",
   "name": "SubType",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/sub-type"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/sub-type"
       },
       {
         "id": "Extension.value[x]",

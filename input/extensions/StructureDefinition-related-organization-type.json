@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "related-organization-type",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/related-organization-type",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/related-organization-type",
   "version": "0.1.0",
   "name": "RelatedOrganizationType",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/related-organization-type"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/related-organization-type"
       },
       {
         "id": "Extension.value[x]",

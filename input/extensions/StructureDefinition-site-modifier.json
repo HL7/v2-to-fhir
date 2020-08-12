@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "site-modifier",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/site-modifier",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/site-modifier",
   "version": "0.1.0",
   "name": "SiteModifier",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/site-modifier"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/site-modifier"
       },
       {
         "id": "Extension.value[x]",

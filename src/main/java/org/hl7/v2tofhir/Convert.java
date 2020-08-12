@@ -311,19 +311,30 @@ public class Convert {
     }
 
     private static String getFhirLocation(Map<String, Map<String, Triple<String, String, String>>> m, String targetName) {
+        String ucName = targetName;
+        targetName = targetName.toLowerCase();
+        if (targetName.contains(".")) {
+            String rootName = StringUtils.substringBefore(targetName, ".");
+            if (m.get("FHIR Resource").get(rootName) != null) {
+                return FHIR_PREFIX + "/" + rootName + "-definitions.html#" + targetName;
+            }
+            if (m.get("FHIR Data Type").get(rootName) != null) {
+                return  FHIR_PREFIX + "/datatypes-definitions.html#" + targetName;
+            }
+        }
         if (m.get("FHIR Resource").get(targetName) != null) {
-            return FHIR_PREFIX + "/" + targetName.toLowerCase() + ".html";
+            return FHIR_PREFIX + "/" + targetName + ".html";
         }
         if (m.get("FHIR Data Type").get(targetName) != null) {
             return FHIR_PREFIX + "/datatypes.html#" + targetName;
         }
-        if (targetName.contains("V2")) {
-            return FHIR_PREFIX + "/" + targetName.replace(" ", "/").replace("/V2/", "/v2/") + "/index.html";
+        if (targetName.contains("v2")) {
+            return FHIR_PREFIX + "/" + targetName.replace(" ", "/") + "/index.html";
         }
-        if (targetName.contains("V3")) {
-            return FHIR_PREFIX + targetName.replace("V3", "/v3/").replace(" ", "") + "/cs.html";
+        if (targetName.contains("v3")) {
+            return FHIR_PREFIX + ucName.replace("V3", "/v3/").replace(" ", "") + "/cs.html";
         }
-        return FHIR_PREFIX + "/codesystem-" + targetName.replace(" ", "-").toLowerCase() + ".html";
+        return FHIR_PREFIX + "/codesystem-" + targetName.replace(" ", "-") + ".html";
     }
 
     private static void createMessageIndex(Map<String, Map<String, Triple<String, String, String>>> m, Chapter chapters,

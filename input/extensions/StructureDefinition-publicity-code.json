@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "publicity-code",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/publicity-code",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/publicity-code",
   "version": "0.1.0",
   "name": "PublicityCode",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/publicity-code"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/publicity-code"
       },
       {
         "id": "Extension.value[x]",

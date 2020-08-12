@@ -1,6 +1,6 @@
 {
-  "package-id": "hl7.fhir.uv.v2-tofhir",
-  "canonical": "http://hl7.org/fhir/v2-tofhir",
+  "package-id": "hl7.fhir.uv.v2mappings",
+  "canonical": "http://hl7.org/fhir/uv/v2mappings",
   "title": "HL7 Version 2 to FHIR",
   "introduction": "The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages segments, datatypes and vocabulary to HL7 FHIR Release 4.0 Bundles, Resources, Data Types and Coding Systems.",
   "list": [

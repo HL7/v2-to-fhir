@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "admission-level-of-care",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/admission-level-of-care",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/admission-level-of-care",
   "version": "0.1.0",
   "name": "AdmissionLevelOfCare",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/admission-level-of-care"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/admission-level-of-care"
       },
       {
         "id": "Extension.value[x]",

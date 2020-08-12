@@ -4,19 +4,19 @@ InstanceOf: ConceptMap
 Title: "Message VXU_V04 to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message VXU_V04 to the FHIR Message Bundle."
 * id = "message-vxu-v04-to-bundle"
-* url = "http://hl7.org/fhir/v2-tofhir/message-vxu-v04-to-bundle"
+* url = "http://hl7.org/fhir/uv/v2mappings/message-vxu-v04-to-bundle"
 * version = "1.0"
 * name = "MessageVXU_V04toBundle"
 * status = #active
 * experimental = true
-* date = "2020-08-11"
+* date = "2020-08-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "VXU_V04"
 * targetUri = "Bundle"
-* extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact"
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
@@ -24,7 +24,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1_7maXDpc_qMMRzMm0x6d90-Hj6vvhGyO2kyFX0tpuZs/edit#gid=0"
 * group.element[0].code = #VXU_V04.MSH
-* group.element[0].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "cardinalityMin"
 * group.element[0].extension[0].extension[0].valueInteger = 1
 * group.element[0].extension[0].extension[1].url = "cardinalityMax"
@@ -36,7 +36,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[0].target.dependsOn[0].property = "segment-map"
 * group.element[0].target.dependsOn[0].value = "MSH[Bundle]"
 * group.element[1].code = #VXU_V04.MSH
-* group.element[1].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "cardinalityMin"
 * group.element[1].extension[0].extension[0].valueInteger = 1
 * group.element[1].extension[0].extension[1].url = "cardinalityMax"
@@ -49,7 +49,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[1].target.dependsOn[0].property = "segment-map"
 * group.element[1].target.dependsOn[0].value = "MSH[MessageHeader]"
 * group.element[2].code = #VXU_V04.MSH
-* group.element[2].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "cardinalityMin"
 * group.element[2].extension[0].extension[0].valueInteger = 1
 * group.element[2].extension[0].extension[1].url = "cardinalityMax"
@@ -63,7 +63,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[2].target.dependsOn[1].property = "references"
 * group.element[2].target.dependsOn[1].value = "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
 * group.element[3].code = #VXU_V04.SFT
-* group.element[3].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "cardinalityMin"
 * group.element[3].extension[0].extension[0].valueInteger = 0
 * group.element[3].extension[0].extension[1].url = "cardinalityMax"
@@ -76,7 +76,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[3].target.dependsOn[0].property = "segment-map"
 * group.element[3].target.dependsOn[0].value = "SFT[MessageHeader]"
 * group.element[4].code = #VXU_V04.PID
-* group.element[4].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "cardinalityMin"
 * group.element[4].extension[0].extension[0].valueInteger = 1
 * group.element[4].extension[0].extension[1].url = "cardinalityMax"
@@ -89,7 +89,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[4].target.dependsOn[0].property = "segment-map"
 * group.element[4].target.dependsOn[0].value = "PID[Patient]"
 * group.element[5].code = #VXU_V04.PD1
-* group.element[5].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "cardinalityMin"
 * group.element[5].extension[0].extension[0].valueInteger = 0
 * group.element[5].extension[0].extension[1].url = "cardinalityMax"
@@ -102,7 +102,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[5].target.dependsOn[0].property = "segment-map"
 * group.element[5].target.dependsOn[0].value = "PD1[Patient]"
 * group.element[6].code = #VXU_V04.NK1
-* group.element[6].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "cardinalityMin"
 * group.element[6].extension[0].extension[0].valueInteger = 0
 * group.element[6].extension[0].extension[1].url = "cardinalityMax"
@@ -117,7 +117,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[6].target.dependsOn[1].property = "references"
 * group.element[6].target.dependsOn[1].value = "RelatedPerson.patient.reference=Patient[PID].id"
 * group.element[7].code = #VXU_V04.NK1
-* group.element[7].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "cardinalityMin"
 * group.element[7].extension[0].extension[0].valueInteger = 0
 * group.element[7].extension[0].extension[1].url = "cardinalityMax"
@@ -129,7 +129,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[7].target.dependsOn[0].property = "segment-map"
 * group.element[7].target.dependsOn[0].value = "NK1[Patient]"
 * group.element[8].code = #VXU_V04.PATIENT_VISIT.PV1
-* group.element[8].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
 * group.element[8].extension[0].extension[0].valueInteger = 1
 * group.element[8].extension[0].extension[1].url = "cardinalityMax"
@@ -146,7 +146,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[8].target.product[0].property = "narrative"
 * group.element[8].target.product[0].value = "Only if the system wants to know about the encounter related to the immunization event"
 * group.element[9].code = #VXU_V04.PATIENT_VISIT.PV1
-* group.element[9].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "cardinalityMin"
 * group.element[9].extension[0].extension[0].valueInteger = 1
 * group.element[9].extension[0].extension[1].url = "cardinalityMax"
@@ -158,7 +158,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[9].target.dependsOn[0].property = "segment-map"
 * group.element[9].target.dependsOn[0].value = "PV1[Patient]"
 * group.element[10].code = #VXU_V04.PATIENT_VISIT.PV2
-* group.element[10].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "cardinalityMin"
 * group.element[10].extension[0].extension[0].valueInteger = 0
 * group.element[10].extension[0].extension[1].url = "cardinalityMax"
@@ -171,7 +171,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[10].target.dependsOn[0].property = "segment-map"
 * group.element[10].target.dependsOn[0].value = "PV2[Encounter]"
 * group.element[11].code = #VXU_V04.PERSON_OBSERVATION.OBX
-* group.element[11].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
 * group.element[11].extension[0].extension[0].valueInteger = 1
 * group.element[11].extension[0].extension[1].url = "cardinalityMax"
@@ -187,7 +187,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[11].target.product[0].property = "antlr"
 * group.element[11].target.product[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1"
 * group.element[12].code = #VXU_V04.PERSON_OBSERVATION.OBX
-* group.element[12].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "cardinalityMin"
 * group.element[12].extension[0].extension[0].valueInteger = 1
 * group.element[12].extension[0].extension[1].url = "cardinalityMax"
@@ -203,7 +203,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[12].target.product[0].property = "antlr"
 * group.element[12].target.product[0].value = "IF OBX-5 LST.count GREATER THAN 1"
 * group.element[13].code = #VXU_V04.PERSON_OBSERVATION.PRT
-* group.element[13].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
 * group.element[13].extension[0].extension[0].valueInteger = 0
 * group.element[13].extension[0].extension[1].url = "cardinalityMax"
@@ -219,7 +219,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[13].target.product[0].property = "antlr"
 * group.element[13].target.product[0].value = "IF PRT-10 VALUED"
 * group.element[14].code = #VXU_V04.PERSON_OBSERVATION.PRT
-* group.element[14].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "cardinalityMin"
 * group.element[14].extension[0].extension[0].valueInteger = 0
 * group.element[14].extension[0].extension[1].url = "cardinalityMax"
@@ -234,7 +234,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[14].target.product[0].property = "antlr"
 * group.element[14].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[15].code = #VXU_V04.PERSON_OBSERVATION.PRT
-* group.element[15].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "cardinalityMin"
 * group.element[15].extension[0].extension[0].valueInteger = 0
 * group.element[15].extension[0].extension[1].url = "cardinalityMax"
@@ -250,7 +250,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[15].target.product[0].property = "antlr"
 * group.element[15].target.product[0].value = "IF PRT-5 VALUED"
 * group.element[16].code = #VXU_V04.PERSON_OBSERVATION.NTE
-* group.element[16].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "cardinalityMin"
 * group.element[16].extension[0].extension[0].valueInteger = 0
 * group.element[16].extension[0].extension[1].url = "cardinalityMax"
@@ -262,7 +262,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[16].target.dependsOn[0].property = "segment-map"
 * group.element[16].target.dependsOn[0].value = "NTE[Annotation]"
 * group.element[17].code = #VXU_V04.ORDER.ORC
-* group.element[17].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "cardinalityMin"
 * group.element[17].extension[0].extension[0].valueInteger = 1
 * group.element[17].extension[0].extension[1].url = "cardinalityMax"
@@ -277,7 +277,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[17].target.dependsOn[1].property = "references"
 * group.element[17].target.dependsOn[1].value = "Immunzation.patient.reference=Patient[1].id"
 * group.element[18].code = #VXU_V04.ORDER.ORC
-* group.element[18].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "cardinalityMin"
 * group.element[18].extension[0].extension[0].valueInteger = 1
 * group.element[18].extension[0].extension[1].url = "cardinalityMax"
@@ -294,7 +294,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * group.element[18].target.product[0].property = "narrative"
 * group.element[18].target.product[0].value = "Only if the system wants to know about the order that lead to the immunization event"
 * group.element[19].code = #VXU_V04.ORDER.PRT
-* group.element[19].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "cardinalityMin"
 * group.element[19].extension[0].extension[0].valueInteger = 0
 * group.element[19].extension[0].extension[1].url = "cardinalityMax"
@@ -319,7 +319,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[19].target.product[1].property = "fhirpath"
 * group.element[19].target.product[1].value = "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
 * group.element[20].code = #VXU_V04.ORDER.PRT
-* group.element[20].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "cardinalityMin"
 * group.element[20].extension[0].extension[0].valueInteger = 0
 * group.element[20].extension[0].extension[1].url = "cardinalityMax"
@@ -333,7 +333,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[20].target.product[1].property = "fhirpath"
 * group.element[20].target.product[1].value = "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
 * group.element[21].code = #VXU_V04.ORDER.PRT
-* group.element[21].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "cardinalityMin"
 * group.element[21].extension[0].extension[0].valueInteger = 0
 * group.element[21].extension[0].extension[1].url = "cardinalityMax"
@@ -347,7 +347,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[21].target.product[1].property = "fhirpath"
 * group.element[21].target.product[1].value = "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
 * group.element[22].code = #VXU_V04.ORDER.PRT
-* group.element[22].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "cardinalityMin"
 * group.element[22].extension[0].extension[0].valueInteger = 0
 * group.element[22].extension[0].extension[1].url = "cardinalityMax"
@@ -365,7 +365,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[22].target.product[1].property = "fhirpath"
 * group.element[22].target.product[1].value = "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")"
 * group.element[23].code = #VXU_V04.ORDER.PRT
-* group.element[23].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].extension[0].extension[0].url = "cardinalityMin"
 * group.element[23].extension[0].extension[0].valueInteger = 0
 * group.element[23].extension[0].extension[1].url = "cardinalityMax"
@@ -379,7 +379,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[23].target.product[1].property = "fhirpath"
 * group.element[23].target.product[1].value = "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")"
 * group.element[24].code = #VXU_V04.ORDER.PRT
-* group.element[24].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[24].extension[0].extension[0].url = "cardinalityMin"
 * group.element[24].extension[0].extension[0].valueInteger = 0
 * group.element[24].extension[0].extension[1].url = "cardinalityMax"
@@ -393,7 +393,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[24].target.product[1].property = "fhirpath"
 * group.element[24].target.product[1].value = "(element(\"4.1\")=\"AP\")and(element(\"4.3\")=\"HL70443\")"
 * group.element[25].code = #VXU_V04.ORDER.RXA
-* group.element[25].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[25].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[25].extension[0].extension[0].url = "cardinalityMin"
 * group.element[25].extension[0].extension[0].valueInteger = 1
 * group.element[25].extension[0].extension[1].url = "cardinalityMax"
@@ -406,7 +406,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[25].target.dependsOn[0].property = "segment-map"
 * group.element[25].target.dependsOn[0].value = "RXA[Immunization]"
 * group.element[26].code = #VXU_V04.ORDER.RXR
-* group.element[26].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[26].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[26].extension[0].extension[0].url = "cardinalityMin"
 * group.element[26].extension[0].extension[0].valueInteger = 0
 * group.element[26].extension[0].extension[1].url = "cardinalityMax"
@@ -419,7 +419,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[26].target.dependsOn[0].property = "segment-map"
 * group.element[26].target.dependsOn[0].value = "RXR[Immunization]"
 * group.element[27].code = #VXU_V04.ORDER.OBSERVATION.OBX
-* group.element[27].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[27].extension[0].extension[0].url = "cardinalityMin"
 * group.element[27].extension[0].extension[0].valueInteger = 1
 * group.element[27].extension[0].extension[1].url = "cardinalityMax"
@@ -437,7 +437,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[27].target.product[1].property = "narrative"
 * group.element[27].target.product[1].value = "Some observations about the immunization may map to elements within the Immuniation resource rather than an independent Observation resource. For example, funding source, patient eligibility and educational material are often sent as OBX segments but map to Immunization elements.  Specific guidance on how to map, e.g., the US CDC implementation guide on immunizations, will be provided separately at a future time TBD."
 * group.element[28].code = #VXU_V04.ORDER.OBSERVATION.OBX
-* group.element[28].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[28].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[28].extension[0].extension[0].url = "cardinalityMin"
 * group.element[28].extension[0].extension[0].valueInteger = 1
 * group.element[28].extension[0].extension[1].url = "cardinalityMax"
@@ -455,7 +455,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[28].target.product[1].property = "narrative"
 * group.element[28].target.product[1].value = "Some observations about the immunization may map to elements within the Immuniation resource rather than an independent Observation resource. For example, funding source, patient eligibility and educational material are often sent as OBX segments but map to Immunization elements.  Specific guidance on how to map, e.g., the US CDC implementation guide on immunizations, will be provided separately at a future time TBD."
 * group.element[29].code = #VXU_V04.ORDER.OBSERVATION.PRT
-* group.element[29].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[29].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[29].extension[0].extension[0].url = "cardinalityMin"
 * group.element[29].extension[0].extension[0].valueInteger = 0
 * group.element[29].extension[0].extension[1].url = "cardinalityMax"
@@ -471,7 +471,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[29].target.product[0].property = "antlr"
 * group.element[29].target.product[0].value = "IF PRT-10 VALUED"
 * group.element[30].code = #VXU_V04.ORDER.OBSERVATION.PRT
-* group.element[30].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[30].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[30].extension[0].extension[0].url = "cardinalityMin"
 * group.element[30].extension[0].extension[0].valueInteger = 0
 * group.element[30].extension[0].extension[1].url = "cardinalityMax"
@@ -485,7 +485,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[30].target.product[0].property = "antlr"
 * group.element[30].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[31].code = #VXU_V04.ORDER.OBSERVATION.PRT
-* group.element[31].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[31].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[31].extension[0].extension[0].url = "cardinalityMin"
 * group.element[31].extension[0].extension[0].valueInteger = 0
 * group.element[31].extension[0].extension[1].url = "cardinalityMax"
@@ -501,7 +501,7 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 * group.element[31].target.product[0].property = "antlr"
 * group.element[31].target.product[0].value = "IF PRT-5 VALUED"
 * group.element[32].code = #VXU_V04.ORDER.OBSERVATION.NTE
-* group.element[32].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[32].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[32].extension[0].extension[0].url = "cardinalityMin"
 * group.element[32].extension[0].extension[0].valueInteger = 0
 * group.element[32].extension[0].extension[1].url = "cardinalityMax"

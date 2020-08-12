@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "reject-reason",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/reject-reason",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/reject-reason",
   "version": "0.1.0",
   "name": "RejectReason",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/reject-reason"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/reject-reason"
       },
       {
         "id": "Extension.value[x]",

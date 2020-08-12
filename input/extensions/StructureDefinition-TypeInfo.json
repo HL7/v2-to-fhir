@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "TypeInfo",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
   "version": "0.1.0",
   "name": "TypeInfo",
   "status": "active",
@@ -124,7 +124,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
       },
       {
         "id": "Extension.value[x]",

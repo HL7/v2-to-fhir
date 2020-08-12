@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "assigning-authority",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/assigning-authority",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/assigning-authority",
   "version": "0.1.0",
   "name": "AssigningAuthority",
   "status": "active",
@@ -214,7 +214,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/assigning-authority"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/assigning-authority"
       },
       {
         "id": "Extension.value[x]",

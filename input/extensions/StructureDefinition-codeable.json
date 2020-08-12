@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "codeable",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/codeable",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/codeable",
   "version": "0.1.0",
   "name": "Codeable",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/codeable"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/codeable"
       },
       {
         "id": "Extension.value[x]",

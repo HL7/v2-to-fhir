@@ -2,12 +2,12 @@
   "resourceType": "ConceptMap",
   "id": "segment-pv1-to-patient",
   "description": "This ConceptMap represents a mapping from the HL7 V2 Segment PV1 to the FHIR Patient Resource.",
-  "url": "http://hl7.org/fhir/v2-tofhir/segment-pv1-to-patient",
+  "url": "http://hl7.org/fhir/uv/v2mappings/segment-pv1-to-patient",
   "version": "1.0",
   "name": "SegmentPV1toPatient",
   "status": "active",
   "experimental": true,
-  "date": "2020-08-11",
+  "date": "2020-08-12",
   "publisher": "HL7 International, Inc",
   "contact": [
     {
@@ -24,7 +24,7 @@
   "targetUri": "Patient",
   "extension": [
     {
-      "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact",
+      "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact",
       "extension": [
         {
           "url": "type",
@@ -48,7 +48,7 @@
           "code": "PV1-16",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+              "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
               "extension": [
                 {
                   "url": "type",
@@ -72,7 +72,7 @@
               "code": "extension-patient-importance",
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo",
+                  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo",
                   "extension": [
                     {
                       "url": "type",

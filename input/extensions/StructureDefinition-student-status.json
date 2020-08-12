@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "student-status",
-  "url": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/student-status",
+  "url": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/student-status",
   "version": "0.1.0",
   "name": "StudentStatus",
   "status": "active",
@@ -35,7 +35,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/v2-tofhir/StructureDefinition/student-status"
+        "fixedUri": "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/student-status"
       },
       {
         "id": "Extension.value[x]",

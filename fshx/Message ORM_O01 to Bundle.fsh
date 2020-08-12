@@ -4,19 +4,19 @@ InstanceOf: ConceptMap
 Title: "Message ORM_O01 to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message ORM_O01 to the FHIR Message Bundle."
 * id = "message-orm-o01-to-bundle"
-* url = "http://hl7.org/fhir/v2-tofhir/message-orm-o01-to-bundle"
+* url = "http://hl7.org/fhir/uv/v2mappings/message-orm-o01-to-bundle"
 * version = "1.0"
 * name = "MessageORM_O01toBundle"
 * status = #active
 * experimental = true
-* date = "2020-08-11"
+* date = "2020-08-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "ORM_O01"
 * targetUri = "Bundle"
-* extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/RelatedArtifact"
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
@@ -24,7 +24,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/19C2jjzXZ8D7Um1iB-e6NmLfZVPvyZNkgwU8IxCJiwGs/edit#gid=0"
 * group.element[0].code = #ORM_O01.MSH
-* group.element[0].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "cardinalityMin"
 * group.element[0].extension[0].extension[0].valueInteger = 1
 * group.element[0].extension[0].extension[1].url = "cardinalityMax"
@@ -36,7 +36,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[0].target.dependsOn[0].property = "segment-map"
 * group.element[0].target.dependsOn[0].value = "MSH[Bundle]"
 * group.element[1].code = #ORM_O01.MSH
-* group.element[1].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "cardinalityMin"
 * group.element[1].extension[0].extension[0].valueInteger = 1
 * group.element[1].extension[0].extension[1].url = "cardinalityMax"
@@ -49,7 +49,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[1].target.dependsOn[0].property = "segment-map"
 * group.element[1].target.dependsOn[0].value = "MSH[MessageHeader]"
 * group.element[2].code = #ORM_O01.MSH
-* group.element[2].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "cardinalityMin"
 * group.element[2].extension[0].extension[0].valueInteger = 1
 * group.element[2].extension[0].extension[1].url = "cardinalityMax"
@@ -63,7 +63,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[2].target.dependsOn[1].property = "references"
 * group.element[2].target.dependsOn[1].value = "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
 * group.element[3].code = #ORM_O01.MSH
-* group.element[3].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "cardinalityMin"
 * group.element[3].extension[0].extension[0].valueInteger = 1
 * group.element[3].extension[0].extension[1].url = "cardinalityMax"
@@ -75,7 +75,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[3].target.dependsOn[0].property = "segment-map"
 * group.element[3].target.dependsOn[0].value = "MSH[Task]"
 * group.element[4].code = #ORM_O01.PATIENT.PID
-* group.element[4].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "cardinalityMin"
 * group.element[4].extension[0].extension[0].valueInteger = 1
 * group.element[4].extension[0].extension[1].url = "cardinalityMax"
@@ -88,7 +88,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[4].target.dependsOn[0].property = "segment-map"
 * group.element[4].target.dependsOn[0].value = "PID[Patient]"
 * group.element[5].code = #ORM_O01.PATIENT.PD1
-* group.element[5].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "cardinalityMin"
 * group.element[5].extension[0].extension[0].valueInteger = 0
 * group.element[5].extension[0].extension[1].url = "cardinalityMax"
@@ -101,7 +101,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[5].target.dependsOn[0].property = "segment-map"
 * group.element[5].target.dependsOn[0].value = "PD1[Patient]"
 * group.element[6].code = #ORM_O01.PATIENT.VISIT.PV1
-* group.element[6].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "cardinalityMin"
 * group.element[6].extension[0].extension[0].valueInteger = 1
 * group.element[6].extension[0].extension[1].url = "cardinalityMax"
@@ -116,7 +116,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[6].target.dependsOn[1].property = "references"
 * group.element[6].target.dependsOn[1].value = "Encounter.subject.reference=Patient[1].id"
 * group.element[7].code = #ORM_O01.PATIENT.VISIT.PV1
-* group.element[7].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "cardinalityMin"
 * group.element[7].extension[0].extension[0].valueInteger = 1
 * group.element[7].extension[0].extension[1].url = "cardinalityMax"
@@ -128,7 +128,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[7].target.dependsOn[0].property = "segment-map"
 * group.element[7].target.dependsOn[0].value = "PV1[Patient]"
 * group.element[8].code = #ORM_O01.PATIENT.VISIT.PV2
-* group.element[8].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
 * group.element[8].extension[0].extension[0].valueInteger = 0
 * group.element[8].extension[0].extension[1].url = "cardinalityMax"
@@ -141,7 +141,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[8].target.dependsOn[0].property = "segment-map"
 * group.element[8].target.dependsOn[0].value = "PV2[Encounter]"
 * group.element[9].code = #ORM_O01.PATIENT.INSURANCE.IN1
-* group.element[9].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "cardinalityMin"
 * group.element[9].extension[0].extension[0].valueInteger = 1
 * group.element[9].extension[0].extension[1].url = "cardinalityMax"
@@ -156,7 +156,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[9].target.dependsOn[1].property = "references"
 * group.element[9].target.dependsOn[1].value = "Coverage.subscriber.reference=Patient[1].id"
 * group.element[10].code = #ORM_O01.PATIENT.INSURANCE.IN2
-* group.element[10].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "cardinalityMin"
 * group.element[10].extension[0].extension[0].valueInteger = 0
 * group.element[10].extension[0].extension[1].url = "cardinalityMax"
@@ -169,7 +169,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[10].target.dependsOn[0].property = "segment-map"
 * group.element[10].target.dependsOn[0].value = "IN2[Coverage]"
 * group.element[11].code = #ORM_O01.PATIENT.INSURANCE.IN3
-* group.element[11].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
 * group.element[11].extension[0].extension[0].valueInteger = 0
 * group.element[11].extension[0].extension[1].url = "cardinalityMax"
@@ -182,7 +182,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[11].target.dependsOn[0].property = "segment-map"
 * group.element[11].target.dependsOn[0].value = "IN3[Coverage]"
 * group.element[12].code = #ORM_O01.PATIENT.AL1
-* group.element[12].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "cardinalityMin"
 * group.element[12].extension[0].extension[0].valueInteger = 0
 * group.element[12].extension[0].extension[1].url = "cardinalityMax"
@@ -197,7 +197,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[12].target.dependsOn[1].property = "references"
 * group.element[12].target.dependsOn[1].value = "AllergyIntolerance.patient.reference=Patient[1].id"
 * group.element[13].code = #ORM_O01.ORDER.ORC
-* group.element[13].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
 * group.element[13].extension[0].extension[0].valueInteger = 1
 * group.element[13].extension[0].extension[1].url = "cardinalityMax"
@@ -212,7 +212,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[13].target.dependsOn[1].property = "references"
 * group.element[13].target.dependsOn[1].value = "ServiceRequest.subject.reference=Patient[1].id"
 * group.element[14].code = #ORM_O01.ORDER.ORC
-* group.element[14].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "cardinalityMin"
 * group.element[14].extension[0].extension[0].valueInteger = 1
 * group.element[14].extension[0].extension[1].url = "cardinalityMax"
@@ -233,7 +233,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[14].target.product[2].property = "narrative"
 * group.element[14].target.product[2].value = "If the receiving system should perform the order"
 * group.element[15].code = #ORM_O01.ORDER.ORC
-* group.element[15].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "cardinalityMin"
 * group.element[15].extension[0].extension[0].valueInteger = 1
 * group.element[15].extension[0].extension[1].url = "cardinalityMax"
@@ -251,7 +251,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[15].target.product[1].property = "fhirpath"
 * group.element[15].target.product[1].value = "ORC.element(\"1\")=\"OC\""
 * group.element[16].code = #ORM_O01.ORDER.ORC
-* group.element[16].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "cardinalityMin"
 * group.element[16].extension[0].extension[0].valueInteger = 1
 * group.element[16].extension[0].extension[1].url = "cardinalityMax"
@@ -265,7 +265,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[16].target.dependsOn[1].property = "references"
 * group.element[16].target.dependsOn[1].value = "Provenance.target=ServiceRequest[ORC]"
 * group.element[17].code = #ORM_O01.ORDER_DETAIL.CHOICE.OBR
-* group.element[17].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "cardinalityMin"
 * group.element[17].extension[0].extension[0].valueInteger = 0
 * group.element[17].extension[0].extension[1].url = "cardinalityMax"
@@ -280,7 +280,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[17].target.product[0].property = "antlr"
 * group.element[17].target.product[0].value = "IF PID VALUED"
 * group.element[18].code = #ORM_O01.ORDER_DETAIL.CHOICE.OBR
-* group.element[18].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "cardinalityMin"
 * group.element[18].extension[0].extension[0].valueInteger = 0
 * group.element[18].extension[0].extension[1].url = "cardinalityMax"
@@ -294,7 +294,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[18].target.product[0].property = "antlr"
 * group.element[18].target.product[0].value = "IF PID NOT VALUED"
 * group.element[19].code = #ORM_O01.ORDER_DETAIL.CHOICE.RXO
-* group.element[19].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "cardinalityMin"
 * group.element[19].extension[0].extension[0].valueInteger = 0
 * group.element[19].extension[0].extension[1].url = "cardinalityMax"
@@ -306,7 +306,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[19].target.dependsOn[0].property = "segment-map"
 * group.element[19].target.dependsOn[0].value = "RXO[MedicationRequest]"
 * group.element[20].code = #ORM_O01.ORDER_DETAIL.CHOICE.ODS
-* group.element[20].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "cardinalityMin"
 * group.element[20].extension[0].extension[0].valueInteger = 0
 * group.element[20].extension[0].extension[1].url = "cardinalityMax"
@@ -318,7 +318,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[20].target.product[0].property = "antlr"
 * group.element[20].target.product[0].value = "IF PID NOT VALUED"
 * group.element[21].code = #ORM_O01.ORDER_DETAIL.NTE
-* group.element[21].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "cardinalityMin"
 * group.element[21].extension[0].extension[0].valueInteger = 0
 * group.element[21].extension[0].extension[1].url = "cardinalityMax"
@@ -330,7 +330,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[21].target.dependsOn[0].property = "segment-map"
 * group.element[21].target.dependsOn[0].value = "NTE[Annotation]"
 * group.element[22].code = #ORM_O01.ORDER_DETAIL.DG1
-* group.element[22].extension[0].url = "http://hl7.org/fhir/v2-tofhir/StructureDefinition/TypeInfo"
+* group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "cardinalityMin"
 * group.element[22].extension[0].extension[0].valueInteger = 0
 * group.element[22].extension[0].extension[1].url = "cardinalityMax"
