@@ -1,6 +1,0 @@
-HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-Y,Yes,HL70136,,,,available,,Available,http://hl7.org/fhir/specimen-status,,
-N,No,HL70136,,,,unavailable,,Unavailable,http://hl7.org/fhir/specimen-status,,
-,,,,,,unsatisfactory,,Unsatisfactory,http://hl7.org/fhir/specimen-status,,
-,,,,,,entered-in-error,,Entered in Error,http://hl7.org/fhir/specimen-status,,

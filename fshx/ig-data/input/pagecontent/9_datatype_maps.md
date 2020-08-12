@@ -13,7 +13,6 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [CNE](ConceptMap-datatype-cne-to-codeableconcept.html) - Coded With No Exceptions to FHIR [CodeableConcept](http://hl7.org/fhir/R4/datatypes.html#CodeableConcept)
 * [CNN](ConceptMap-datatype-cnn-to-practitioner.html) - Composite Id Number And Name Simplified to FHIR [Practitioner](http://hl7.org/fhir/R4/practitioner.html)
 * [CQ](ConceptMap-datatype-cq-to-quantity.html) - Composite Quantity With Units to FHIR [Quantity](http://hl7.org/fhir/R4/datatypes.html#Quantity)
-* [CQ](ConceptMap-datatype-cq-to-servicerequest.occurencetiming.html) - Composite Quantity With Units to FHIR [ServiceRequest.occurenceTiming](http://hl7.org/fhir/R4/codesystem-servicerequest.occurencetiming.html)
 * [CWE](ConceptMap-datatype-cwe-to-annotation.html) - Coded With Exceptions to FHIR [Annotation](http://hl7.org/fhir/R4/datatypes.html#Annotation)
 * [CWE](ConceptMap-datatype-cwe-to-codeableconcept.html) - Coded With Exceptions to FHIR [CodeableConcept](http://hl7.org/fhir/R4/datatypes.html#CodeableConcept)
 * [CWE](ConceptMap-datatype-cwe-to-coding.html) - Coded With Exceptions to FHIR [Coding](http://hl7.org/fhir/R4/datatypes.html#Coding)

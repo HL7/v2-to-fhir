@@ -1,7 +1,0 @@
-HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-A,Add/Insert,HL70206,,,,POST,,Create,,,
-D,Delete,HL70206,,,,DELETE,,Delete,,,
-U,Update,HL70206,,,local assessment,PUT,,Update/Replace,,,Both put and patch are options and we do not know what the local implementation would consider.
-U,Update,HL70206,,,local assessment,PATCH,,,,,
-X,No Change,HL70206,,,,,,,,,

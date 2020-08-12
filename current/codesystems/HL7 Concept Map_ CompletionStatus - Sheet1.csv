@@ -1,6 +1,0 @@
-HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-CP,Complete,HL70322,,,,completed,,Completed,http://hl7.org/fhir/event-status,,
-RE,Refused,HL70322,,,,not-done,,Not Done,http://hl7.org/fhir/event-status,,
-NA,Not Administered,HL70322,,,,not-done,,Not Done,http://hl7.org/fhir/event-status,,
-PA,Partially Administered,HL70322,,,,completed,,Completed,http://hl7.org/fhir/event-status,,

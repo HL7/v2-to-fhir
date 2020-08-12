@@ -1,8 +1,0 @@
-HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-F,Female,HL70001,,,,female,,Female,http://hl7.org/fhir/administrative-gender,,
-M,Male,HL70001,,,,male,,Male,http://hl7.org/fhir/administrative-gender,,
-O,Other,HL70001,,,,other,,Other,http://hl7.org/fhir/administrative-gender,,
-U,Unknown,HL70001,,,,unknown,,Unknown,http://hl7.org/fhir/administrative-gender,,
-A,Ambiguous,HL70001,,,,other,,Other,http://hl7.org/fhir/administrative-gender,,
-N,Not applicable,HL70001,,,,other,,Other,http://hl7.org/fhir/administrative-gender,,

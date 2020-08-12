@@ -104,9 +104,8 @@ This extension corresponds to SFT-4 of the v2 SFT segment.
 
 // segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv:17 OBR-17
 Extension: CallbackNumber
+Description: "Call back number"
 Id: callback-number
-Description: """
-"""
 * ^context.type = #element
 * ^context.expression = "ServiceRequest.intent"
 * value[x] only ContactPoint
@@ -114,9 +113,8 @@ Description: """
 
 // datatypes/HL7 Data Type - FHIR R4_ XPN - Sheet1.csv:
 Extension: CalledBy
+Description: "Called By"
 Id: called-by
-Description: """
-"""
 * ^context.type = #element
 * ^context.expression = "HumanName.family"
 * value[x] only string
@@ -133,9 +131,8 @@ Description: """The check digit scheme
 
 // segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv:13 OBR-13
 Extension: Codeable
+Description: "The coded value associated with supportingInfo"
 Id: codeable
-Description: """
-"""
 * ^context.type = #element
 * ^context.expression = "ServiceRequest.supportingInfo"
 * value[x] only CodeableConcept
@@ -184,8 +181,7 @@ This extension corresponds to SFT-5 of the v2 SFT segment.
 // datatypes/HL7 Data Type - FHRI R4_ TQ[Medication Request] - Sheet1.csv:3 TQ.3
 Extension: Duration
 Id: duration
-Description: """
-"""
+Description: """The during for timing"""
 * ^context.type = #element
 * ^context.expression = "Timing.repeat"
 * value[x] only string
@@ -243,8 +239,7 @@ This extension corresponds to PV1-20 of the v2 PV1 segment.
 // segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv:3 OBR-3
 Extension: Fingerprint
 Id: fingerprint
-Description: """
-"""
+Description: """Distinguishing values"""
 * ^context.type = #element
 * ^context.expression = "ServiceRequest"
 * value[x] only string
@@ -277,8 +272,7 @@ This extension corresponds to SFT-6 of the v2 SFT segment.
 // segments/HL7 Segment - FHIR R4_ NK1 [RelatedPerson] - Sheet1.csv:34 NK1-34
 Extension: JobStatus
 Id: job-status
-Description: """
-"""
+Description: """The Job Status"""
 * ^context.type = #element
 * ^context.expression = "RelatedPerson"
 * value[x] only CodeableConcept
@@ -392,8 +386,7 @@ This extension corresponds to NTE-4 of the v2 NTE segment.
 // segments/HL7 Segment - FHIR R4_ ROL[PID_PD1_RelatedPerson] - Sheet1.csv:14 ROL-14
 Extension: RelatedOrganization
 Id: related-organization
-Description: """
-"""
+Description: """Related Organization"""
 * ^context.type = #element
 * ^context.expression = "RelatedPerson"
 * value[x] only Reference(Organization)
@@ -403,8 +396,7 @@ Description: """
 // segments/HL7 Segment - FHIR R4_ ROL[PID_PD1_RelatedPerson] - Sheet1.csv:10 ROL-10
 Extension: RelatedOrganizationType
 Id: related-organization-type
-Description: """
-"""
+Description: """Type of Related Organization"""
 * ^context.type = #element
 * ^context.expression = "RelatedPerson"
 * value[x] only CodeableConcept
@@ -430,8 +422,7 @@ Retention of the original code prevents the loss of information that may occur d
 // segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv:8 ORC-8
 Extension: ParentFiller
 Id: parent-filler
-Description: """
-"""
+Description: """Filler order number of parent order"""
 * ^context.type = #element
 * ^context.expression = "ServiceRequest.basedOn"
 * value[x] only Identifier
@@ -440,8 +431,7 @@ Description: """
 // segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv:8 ORC-8
 Extension: ParentPlacer
 Id: parent-placer
-Description: """
-"""
+Description: """Pacer order number of parent order"""
 * ^context.type = #element
 * ^context.expression = "ServiceRequest.basedOn[1]"
 * value[x] only Identifier
@@ -450,8 +440,7 @@ Description: """
 // segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv:31 ORC-31
 Extension: ParentService
 Id: parent-service
-Description: """
-"""
+Description: """Parent order number"""
 * ^context.type = #element
 * ^context.expression = "ServiceRequest.basedOn[1]"
 * value[x] only CodeableConcept
@@ -475,8 +464,7 @@ This extension corresponds to PRT-23 of the v2 PRT segment.
 // segments/HL7 Segment - FHIR R4_ OBX[Observation] - PV1.csv:15 OBX-15
 Extension: ProducerIdentifier
 Id: producer-identifier
-Description: """
-"""
+Description: """Id Number created by Producer"""
 * ^context.type = #element
 * ^context.expression = "Observation"
 * ^context.type = #element
@@ -488,8 +476,7 @@ Description: """
 // segments/HL7 Segment - FHIR R4_ ROL[PID_PD1_RelatedPerson] - Sheet1.csv:9 ROL-9
 Extension: ProviderType
 Id: provider-type
-Description: """
-"""
+Description: """Provider Type"""
 * ^context.type = #element
 * ^context.expression = "RelatedPerson"
 * value[x] only CodeableConcept

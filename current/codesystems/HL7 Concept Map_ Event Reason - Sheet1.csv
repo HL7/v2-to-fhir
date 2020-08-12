@@ -1,7 +1,0 @@
-HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-1,Patient request,HL70062,,,,PATRQT,,"patient requested	",http://terminology.hl7.org/CodeSystem/v3-ActReason,,
-2,Physician/health practitioner order,HL70062,,,,TREAT,,treatment,http://terminology.hl7.org/CodeSystem/v3-ActReason,,
-3,Census management,HL70062,,,,HOPERAT,,healthcare operations,http://terminology.hl7.org/CodeSystem/v3-ActReason,,
-O,Other,HL70062,,,,,,,,,
-U,Unknown,HL70062,,,,unknown,,,http://terminology.hl7.org/CodeSystem/data-absent-reason,,

@@ -1,7 +1,0 @@
-HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
-Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
-(IS, ID, CE, CNE, CWE)",Assignment,,
-1,EI.1,Entity Identifier,ST,0,1,,,,udiCarrier.deviceIdentifier,,string,0,1,,,,,
-2,EI.2,Namespace ID,IS,0,1,,,,,Device.udiCarrier.#ext-assigningauthority.nameSpaceID#,string,0,1,,,,,
-3,EI.3,Universal ID,ST,0,1,,,,,Device.udiCarrier.#ext-assigningauthority.universalID#,string,0,1,,,,,
-4,EI.4,Universal ID Type,ID,0,1,,,,,Device.udiCarrier.#ext-assigningauthority.univeralIDType#,code,0,1,,,,,

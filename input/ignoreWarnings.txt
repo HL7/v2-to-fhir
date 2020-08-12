@@ -1,0 +1,14 @@
+== Suppressed Messages ==
+# Don't know how to fix this one.
+ERROR: There is no jira specification file defined with the expected name of FHIR-v2-tofhir in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.
+
+# Input conversion bug still being worked out.
+ERROR: C:\Users\kboone\git\v2-to-fhir\output\ConceptMap-datatype-xcn-to-practitioner.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 225, column 265: The link 'ConceptMap-datatype-hd-to-assigningauthority.html' for "HD[AssigningAuthority]" cannot be resolved
+ERROR: C:\Users\kboone\git\v2-to-fhir\output\ConceptMap-datatype-xcn-to-practitionerrole.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 225, column 587: The link 'ConceptMap-datatype-hd-to-assigningauthority.html' for "HD[AssigningAuthority]" cannot be resolved
+ERROR: C:\Users\kboone\git\v2-to-fhir\output\ConceptMap-datatype-xcn-to-relatedperson.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 225, column 267: The link 'ConceptMap-datatype-hd-to-assigningauthority.html' for "HD[AssigningAuthority]" cannot be resolved
+ERROR: C:\Users\kboone\git\v2-to-fhir\output\ConceptMap-datatype-xon-to-location.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 222, column 264: The link 'ConceptMap-datatype-hd-to-assigningauthority.html' for "HD[AssigningAuthority]" cannot be resolved
+ERROR: C:\Users\kboone\git\v2-to-fhir\output\ConceptMap-datatype-xon-to-organization.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 222, column 268: The link 'ConceptMap-datatype-hd-to-assigningauthority.html' for "HD[AssigningAuthority]" cannot be resolved
+ERROR: C:\Users\kboone\git\v2-to-fhir\output\datatype_maps.html#/html/body/div/div/div/div/div/ul/li/a at Line 204, column 106: The link 'http://hl7.org/fhir/R4/codesystem-timing.duration.html' for "Timing.duration" cannot be resolved
+ERROR: C:\Users\kboone\git\v2-to-fhir\output\datatype_maps.html#/html/body/div/div/div/div/div/ul/li/a at Line 210, column 91: The link 'http://hl7.org/fhir/R4/codesystem-datetime.html' for "DateTime" cannot be resolved
+ERROR: C:\Users\kboone\git\v2-to-fhir\output\datatype_maps.html#/html/body/div/div/div/div/div/ul/li/a at Line 221, column 114: The link 'http://hl7.org/fhir/R4/codesystem-messageheader.destination.html' for "MessageHeader.destination" cannot be resolved
+ERROR: C:\Users\kboone\git\v2-to-fhir\output\datatype_maps.html#/html/body/div/div/div/div/div/ul/li/a at Line 222, column 109: The link 'http://hl7.org/fhir/R4/codesystem-messageheader.source.html' for "MessageHeader.source" cannot be resolved

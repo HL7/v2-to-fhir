@@ -13,7 +13,7 @@ and testing of implementations.
 
 This guide is organized into three main sections:
 
-   1. [Introduction](introduction.html)<br/>This section provides an overview of the project, and explains [how mapping is performed](mapping_guidelines.md).
+   1. [Introduction](introduction.html)<br/>This section provides an overview of the project, and explains [how mapping is performed](mapping_guidelines.html).
       You can also find [questions to address in this ballot](questions.html), the [glossary](glossary.html)
       and [acknowledgements](acknowledgements.html).
 

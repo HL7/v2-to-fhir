@@ -105,6 +105,7 @@
           "reference": "StructureDefinition/callback-number"
         },
         "name": "CallbackNumber",
+        "description": "Call back number",
         "exampleBoolean": false
       },
       {
@@ -112,6 +113,7 @@
           "reference": "StructureDefinition/called-by"
         },
         "name": "CalledBy",
+        "description": "Called By",
         "exampleBoolean": false
       },
       {
@@ -127,6 +129,7 @@
           "reference": "StructureDefinition/codeable"
         },
         "name": "Codeable",
+        "description": "The coded value associated with supportingInfo",
         "exampleBoolean": false
       },
       {
@@ -158,6 +161,7 @@
           "reference": "StructureDefinition/duration"
         },
         "name": "Duration",
+        "description": "The during for timing",
         "exampleBoolean": false
       },
       {
@@ -189,6 +193,7 @@
           "reference": "StructureDefinition/fingerprint"
         },
         "name": "Fingerprint",
+        "description": "Distinguishing values",
         "exampleBoolean": false
       },
       {
@@ -212,6 +217,7 @@
           "reference": "StructureDefinition/job-status"
         },
         "name": "JobStatus",
+        "description": "The Job Status",
         "exampleBoolean": false
       },
       {
@@ -283,6 +289,7 @@
           "reference": "StructureDefinition/parent-filler"
         },
         "name": "ParentFiller",
+        "description": "Filler order number of parent order",
         "exampleBoolean": false
       },
       {
@@ -290,6 +297,7 @@
           "reference": "StructureDefinition/parent-placer"
         },
         "name": "ParentPlacer",
+        "description": "Pacer order number of parent order",
         "exampleBoolean": false
       },
       {
@@ -297,6 +305,7 @@
           "reference": "StructureDefinition/parent-service"
         },
         "name": "ParentService",
+        "description": "Parent order number",
         "exampleBoolean": false
       },
       {
@@ -312,6 +321,7 @@
           "reference": "StructureDefinition/producer-identifier"
         },
         "name": "ProducerIdentifier",
+        "description": "Id Number created by Producer",
         "exampleBoolean": false
       },
       {
@@ -319,6 +329,7 @@
           "reference": "StructureDefinition/provider-type"
         },
         "name": "ProviderType",
+        "description": "Provider Type",
         "exampleBoolean": false
       },
       {
@@ -358,6 +369,7 @@
           "reference": "StructureDefinition/related-organization"
         },
         "name": "RelatedOrganization",
+        "description": "Related Organization",
         "exampleBoolean": false
       },
       {
@@ -365,6 +377,7 @@
           "reference": "StructureDefinition/related-organization-type"
         },
         "name": "RelatedOrganizationType",
+        "description": "Type of Related Organization",
         "exampleBoolean": false
       },
       {
@@ -513,13 +526,6 @@
           "reference": "ConceptMap/datatype-cq-to-quantity"
         },
         "name": "Datatype CQ to Quantity Map",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "ConceptMap/datatype-cq-to-servicerequest.occurencetiming"
-        },
-        "name": "Datatype CQ to ServiceRequest.occurenceTiming Map",
         "exampleBoolean": true
       },
       {

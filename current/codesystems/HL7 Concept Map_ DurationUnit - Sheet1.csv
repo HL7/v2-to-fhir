@@ -1,9 +1,0 @@
-HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-,,,,,,s,,second,http://unitsofmeasure.org/,,
-,,,,,,min,,minute,http://unitsofmeasure.org/,,
-,,,,,,h,,hour,http://unitsofmeasure.org/,,
-,,,,,,d,,day,http://unitsofmeasure.org/,,
-,,,,,,wk,,week,http://unitsofmeasure.org/,,
-,,,,,,mo,,month,http://unitsofmeasure.org/,,
-,,,,,,a,,year,http://unitsofmeasure.org/,,

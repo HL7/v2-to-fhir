@@ -1,9 +1,0 @@
-HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
-Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
-(IS, ID, CE, CNE, CWE)",Assignment,,
-1,RXR-1,Route,CWE,1,1,,,,route,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
-2,RXR-2,Administration Site,CWE,0,1,,,,site,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
-3,RXR-3,Administration Device,CWE,0,1,,,,,,,,,,,,,
-4,RXR-4,Administration Method,CWE,0,1,,,,,,,,,,,,,
-5,RXR-5,Routing Instruction,CWE,0,1,,,,,,,,,,,,,
-6,RXR-6,Administration Site Modifier,CWE,0,1,,,,,,,,,,,,,

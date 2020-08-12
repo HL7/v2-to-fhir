@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "name": "ParentService",
   "status": "active",
+  "description": "Parent order number",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

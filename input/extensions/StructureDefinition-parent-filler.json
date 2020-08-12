@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "name": "ParentFiller",
   "status": "active",
+  "description": "Filler order number of parent order",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
