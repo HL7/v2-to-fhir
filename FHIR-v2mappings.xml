@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+FHIR-v2mappings.xml still has references to the template example: should start with:
+<?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                url="http://hl7.org/fhir/uv/v2mappings"
                ciUrl="http://build.fhir.org/ig/HL7/v2-to-fhir"
                defaultWorkgroup="Orders and Observations"
                defaultVersion="current"
                xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
-               ballotUrl="http://example.org/fhir/STU1">
+               ballotUrl="http://hl7.org/fhir/uv/v2mappings/2020Sep">
    <version code="current" url="http://build.fhir.org/ig/HL7/v2-to-fhir"/>
-   <version code="0.0.1" url="http://example.org/fhir/STU1"/>
+   <version code="0.1.0" url="http://hl7.org/fhir/uv/v2mappings/2020Sep"/>
    <artifactPageExtension value="-definitions"/>
    <artifactPageExtension value="-examples"/>
    <artifactPageExtension value="-mappings"/>
