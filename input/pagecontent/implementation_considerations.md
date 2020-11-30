@@ -132,3 +132,7 @@ messaging implementation guide describes how to use OBX segments to convey infor
 educational materials and vaccine funding source. While these concepts are part of the FHIR Immunization resource, the VXU mappings
 from this project do not include these transformations as they are defined by the implementation guide, not the base standard.
 Implementers should consider local variations from the base standard when developing their transformations.
+
+### Instructions on Assignments
+In the Assigmen columns for Segment and Data Type mapping, the specific assignment may not be available, but textual guidance is.  As this may be easily overseen, the following provides a list of where these instructions occur:
+* MSH[Provenance]
