@@ -28,8 +28,8 @@
      * The cardinality expressed numerically.
      * Note that "-1" is used for the max cardinality where v2 indicates it to be "*".
 
-  * Condition
-     * See the [General Guidelines](mapping_guidelines.html#condition)
+* Condition
+  * See the [General Guidelines](mapping_guidelines.html#condition)
 
 * HL7 FHIR
    * Primary Target
@@ -38,6 +38,4 @@
       * The URL to the Segment Map that is to be used for the segment in this message structure in this location.
       * There may be multiple flavors of the segment maps to support different mappings.  The flavor is appended to the end of the segment name using [] brackets, e.g., MSH[Provenance - Originator].
    * References
-      * Defines for the Primary Target resource which resource.id it needs to reference.
-      * Used to establish attributes involved in referencing the row at hand and a resource created/updated elsewhere in the message when converting the v2 message to a bundle of FHIR resources.
-
+      * An assignment that indicates for the FHIR resource being mapped to the attribute that needs to reference a particular other resource.  For example, a PV1 segement being mapped to an Encounter resource must reference the Patient resource that the PID earlier in the message was mapped to.
