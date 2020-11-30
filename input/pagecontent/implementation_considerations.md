@@ -136,3 +136,7 @@ Implementers should consider local variations from the base standard when develo
 ### Instructions on Assignments
 In the Assigmen columns for Segment and Data Type mapping, the specific assignment may not be available, but textual guidance is.  As this may be easily overseen, the following provides a list of where these instructions occur:
 * MSH[Provenance]
+
+### Provenance
+For every message, the MSH is mapped to the Provenance resource as well.  That Provenance resource may contain the original v2 message as well.
+We do not provide specific mapping guidance on how to establish specific provenance on a FHIR resource back to the exact v2 segment in the message that yielded that (updated or new) resource.  However, you may include every resource created/updated as a result of this message as well in the Provenance resource created through the MSH[PRovenance] map, particularly if you included in this Provenance resoruce the full v2 message as well.
