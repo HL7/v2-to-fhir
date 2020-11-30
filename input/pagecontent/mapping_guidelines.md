@@ -20,7 +20,7 @@ being mapped is a Message, Segment, Data Type, or Table.
 
 The spreadsheet title has a defined format to enable conversion from .csv into FHIR ConceptMap:
 
-HL7 {Message|Segment|Data Type|Code System} - FHIR {R4|R5}: {v2 Message Type|v2 Segment|v2 Data Type|v2 Table}({FHIR Resource|FHIR Data Type|FHIR Metadata Data Type|FHIR Vocabulary}-{QualifierName})
+HL7 {Message|Segment|Data Type|Code System} - FHIR {R4|R5}: {v2 Message Type|v2 Segment|v2 Data Type|v2 Table}([{FHIR Resource|FHIR Data Type|FHIR Metadata Data Type|FHIR Vocabulary}-{QualifierName}]
 
 Examples:
 
@@ -58,37 +58,33 @@ Examples:
 * A <span id="condition">condition</span> includes the following statements:
    * If computable, both a condition using:
        * the following easy to read syntax (referenced as Computable ANTLR - further documented here: [ANTLR Condition Syntax](antlr_condition_syntax.html))
-```
-        IF X EQUALS "A"
-        IF X NOT EQUALS
-        IF X VALUED
-        IF X NOT VALUED
-        IF X NOT VALUED ERROR   *** The mapper is to stop mapping of the Message and raise an error.
-        IF IN ("A","B", "C")
-        IF NOT IN ("A","B", "C")
-        IF X expression OR Y expression
-        IF NOT (X expression OR Y expression)
-        IF NOT (X expression AND Y expression)
-        IF X expression AND Y expression
-        IF ((X expression AND Y expression) OR C expression)
-        IF X LST.COUNT EQUALS  ***LST.COUNT is the count of entries in the list at hand
-        IF X LST.COUNT NOT EQUALS
-        IF X LST.COUNT GREATER THAN
-        IF X LST.COUNT LESS THAN
-        IF X LST.COUNT GREATER THAN OR EQUALS
-        IF X LST.COUNT LESS THAN OR EQUALS
-        IF X LENGTH ***LENGTH is the physical length of the value
-        IF X LENGTH NOT EQUALS
-        IF X LENGTH GREATER THAN
-        IF X LENGTH LESS THAN
-        IF X LENGTH GREATER THAN OR EQUALS
-        IF X LENGTH LESS THAN OR EQUALS
 
-
-```
-
-    * The [FHIRpath syntax](https://www.hl7.org/fhir/fhirpath.html) (referenced as Computable FHIRpath)
-  * If not computable or in addition to the computable condition further non-computable conditions must be considered as well (referenced as Narrative).
+         * IF X EQUALS "A"
+         * IF X NOT EQUALS
+         * IF X VALUED
+         * IF X NOT VALUED
+         * IF X NOT VALUED ERROR   *** The mapper is to stop mapping of the Message and raise an error.
+         * IF IN ("A","B", "C")
+         * IF NOT IN ("A","B", "C")
+         * IF X expression OR Y expression
+         * IF NOT (X expression OR Y expression)
+         * IF NOT (X expression AND Y expression)
+         * IF X expression AND Y expression
+         * IF ((X expression AND Y expression) OR C expression)
+         * IF X LST.COUNT EQUALS  ***LST.COUNT is the count of entries in the list at hand
+         * IF X LST.COUNT NOT EQUALS
+         * IF X LST.COUNT GREATER THAN
+         * IF X LST.COUNT LESS THAN
+         * IF X LST.COUNT GREATER THAN OR EQUALS
+         * IF X LST.COUNT LESS THAN OR EQUALS
+         * IF X LENGTH ***LENGTH is the physical length of the value
+         * IF X LENGTH NOT EQUALS
+         * IF X LENGTH GREATER THAN
+         * IF X LENGTH LESS THAN
+         * IF X LENGTH GREATER THAN OR EQUALS
+         * IF X LENGTH LESS THAN OR EQUALS
+      * The [FHIRpath syntax](https://www.hl7.org/fhir/fhirpath.html) (referenced as Computable FHIRpath)
+   * If not computable or in addition to the computable condition further non-computable conditions must be considered as well (referenced as Narrative).
 
 * [n] Notation
   * Multiple v2 components within the same mapping spreadsheet may need to update the same instance of a FHIR element, or should yield a new instance of the same FHIR element.  To distinguish whether the mappings are to the same or different FHIR element instance each FHIR element at the appropriate place in the path will use the [n] notation.  Those FHIR elements with the same value in the same place in the path should apply the mapping to the same instance of that element.
