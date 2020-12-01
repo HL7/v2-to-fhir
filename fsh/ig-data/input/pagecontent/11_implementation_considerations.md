@@ -56,6 +56,9 @@ data provenance that should be captured during the transformation process. At a 
 may be appropriate to capture the provenance of the message source and the v2-to-FHIR transformation process. Additional provenance
 may be captured from additional fields as appropriate for the implementation.
 
+The guide does provide minimum provenance that is recommended to establish.  For every message, the MSH is mapped to the Provenance resource as well.  That Provenance resource may contain the original v2 message as well.  We do not provide specific mapping guidance on how to establish specific provenance on a FHIR resource back to the exact v2 segment in the message that yielded that (updated or new) resource.  However, you may include every resource created/updated as a result of this message as well in the Provenance resource created through the MSH[PRovenance] map, particularly if you included in this Provenance resoruce the full v2 message as well.
+
+
 ### Security
 Under Construction.
 
@@ -122,3 +125,53 @@ messaging implementation guide describes how to use OBX segments to convey infor
 educational materials and vaccine funding source. While these concepts are part of the FHIR Immunization resource, the VXU mappings
 from this project do not include these transformations as they are defined by the implementation guide, not the base standard.
 Implementers should consider local variations from the base standard when developing their transformations.
+
+### Instructions on Assignments in Mapping Spreadsheets
+In the Assigmen columns for Segment and Data Type mapping, the specific assignment may not be available, but textual guidance is.  As this may be easily overseen, the following provides a list of where these instructions occur:
+* MSH[Provenance]
+
+### Vocabulary Mapping
+
+#### Basics
+The CWE data type can contain up to 3 “coding triplets” each of which may contain unique codes from different codes sets, however all codes must represent the same concept
+At a high level, these correspond to multiple occurrences of CodeableConcept.coding for the cognate FHIR element
+In an ideal world, each v2 CWE triplet will consist of a code, a display name and a coding system
+The combination of the code and the coding system should provide a unique key for mapping purposes
+While the v2-to-FHIR project can provide some basic vocabulary maps, it’s expected that individual implementation will need to confirm and potentially extend those maps to include non-standard values (either within a standard value set or in a custom value set)
+The project team cannot be expected to know all possible values in use by a given implementation
+Tool behavior should be driven by the configuration of the mapping files and not by unique code in the transformation engine
+
+#### Translator Logic
+For the CWE field, the translator should perform the following steps for each of the three possible triplets
+If the triplet contains data (at a minimum, the code is present in the triplet), then:
+The code and code system present in the triplet, are used to identify the relevant lines in the vocabulary map (that is the code from the triplet matches a value in Column A (Code) and the code system from the triple matches the value in Column C (Code System) for that same row
+Note that a single vocabulary map may contain multiple rows for a given code/code system pair if the implementers want to translate the code to multiple codings in the FHIR resource
+For each matching line in the vocabulary map, a new occurrence of CodeableConcept.coding is created with coding.code populated from Column G, coding.display populated from Column I and coding.system populated from Column J
+
+#### Example (Marital Status)
+* Marital Status (PID-16) uses User-defined table HL70002 which includes the code S for Single
+* Patient.maritalStatus uses an extensible value set using codes from a v3 code system
+* A given implementation my use the HL70002 table but also have a set of local codes (using the code system of “L”) including “UN” for Unmarried (a synonym of single)
+* PID-16 in a given message may look like:
+   * S^Single^HL70002^UN^Unmarried^L
+   * In this case, the first and second triplets are populated with codes from two different code systems
+* The implementers must make a decision if the base mapping of HL70002 to the FHIR value set is sufficient or if they also want to either persist one or both of the v2 codes or map either code to an alternate FHIR coding occurrence
+   * Note that as a project, we shouldn’t decide if it’s appropriate to retain the original codes or not - that is an implementation decision
+   * As well, the transformation engine shouldn’t have to coded to retain (or not retain) the original codes, this should be determined by the contents of the mapping files
+* For the remainder of this example, let’s assume that the implementers want to translate the HL70002 code to the FHIR value set and retain the original values from both triplets
+   * The implementers enhance the existing base vocabulary map to include new lines for mapping the HL70002 code to v2-0002 code system and the local code to an appropriate local FHIR value set by adding the two new rows in yellow (the rows in red font are all the rows relevant to the concept of “single” regardless of the code used to represent that concept)
+   * (Vocabulary_Mapping.png)
+   * The transformation engine takes the first triplet from PID-16 (S^Single^HL70002) and compares it to the values in Columns A and C and find 2 relevant rows (Rows 6 and 7), for each row, a new occurrence of CodeableConcept.coding is created using the content of Columns G, I and J
+   * The transformation engine then takes the second triplet from PID-16 (UN^unmarried^L) and performs the same comparison to the map and finds one relevant row (Row 10) and creates a third occurrence of CodeableConcept.coding
+* If instead the implementers had decided to only preserve the original HL70002 code and discard the local code (UN), they would not have created Row 10 and when the transformation engine searched the table, it would have found no matching row and not created an occurrence of CodeableConcept.coding
+   * It would be up to the transformation engine to determine if the lack of a matching row warrants the logging of a warning or error
+* When there is no value on the right hand side, in principle agreed that the implementer/mapping needs to determine the additional values in v2 as to where to go.
+* Question on if the FHIR side is NOT extensible AND required, is there value to an indication.   But not yet clear how to do so.
+   * If we do not have an entry for “other”, then FHIR validation will fail. We want to avoid that.
+* If we do have an entry for “other”, then FHIR validation will be find, but the implementer/mapping still needs to review the mapping as that default mapping may not be right.
+
+#### Edge Cases
+If the implementers know that the v2 CWE field will not be fully populated (eg, there will be a code but not a code system), the vocabulary map will need to be updated accordingly to include a row where Column A is populated but not Column C is not populated
+Note that in this case, column J should remain populated so that the FHIR resource that is created contains both a code and a system
+The triplet does not contain a code but does contain text (in either the text field of the triplet (eg CWE.2 or CWE.5) or the original text (CWE.9)) then it is unsuitable for discrete mapping and the text should be used to populate CodeableConcept.text
+
