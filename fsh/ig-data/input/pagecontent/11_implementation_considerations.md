@@ -177,3 +177,20 @@ If the implementers know that the v2 CWE field will not be fully populated (eg, 
 Note that in this case, column J should remain populated so that the FHIR resource that is created contains both a code and a system
 The triplet does not contain a code but does contain text (in either the text field of the triplet (eg CWE.2 or CWE.5) or the original text (CWE.9)) then it is unsuitable for discrete mapping and the text should be used to populate CodeableConcept.text
 
+<table>
+ <tr>
+  <th> HL7 v2</th>
+  <th> colspan="5">HL7 FHIR</th>
+  <tr>
+   <th> colspan="4">Codeable Concept/Coding</th>
+   <th> code</th>
+    <tr>
+     <th> Example</th>
+     <th> Preferred</th>
+     <th> Extensible</th>
+     <th> Required</th>
+     <th> Required</th>
+    </tr>
+  </tr>
+</tr>
+</table>
