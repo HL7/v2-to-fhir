@@ -180,9 +180,9 @@ The triplet does not contain a code but does contain text (in either the text fi
 <table>
  <tr>
   <th> HL7 v2</th>
-  <th> colspan="5">HL7 FHIR</th>
+  <th colspan="5">HL7 FHIR</th>
   <tr>
-   <th> colspan="4">Codeable Concept/Coding</th>
+   <th colspan="4">Codeable Concept/Coding</th>
    <th> code</th>
     <tr>
      <th> Example</th>
