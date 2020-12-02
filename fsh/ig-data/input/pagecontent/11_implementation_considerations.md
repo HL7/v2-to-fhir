@@ -215,4 +215,5 @@ The triplet does not contain a code but does contain text (in either the text fi
 <br>- If an appropriate uri is known for the code system conveyed in the CWE data type (eg CWE.3 or CWE.6), the code may carried over to CodeableConcept.coding.code and .system populated (note that depending on the capabilities of the FHIR recipient, this code may or may not be useful to the receiving system)</br>
 <br>- use the "original code" extension to preserve the code </br>
 </td>
+</tr>
 </table>
