@@ -179,18 +179,20 @@ The triplet does not contain a code but does contain text (in either the text fi
 
 <table>
  <tr>
-  <th> HL7 v2</th>
+  <th> </th>
   <th colspan="5" rowspan="3">HL7 FHIR</th>
  </tr>
  <tr>
+  <th> </th>
    <th colspan="4">Codeable Concept/Coding</th>
-   <th> code</th>
+   <th>code</th>
   </tr>
   <tr>
-   <th> Example</th>
-   <th> Preferred</th>
-   <th> Extensible</th>
-   <th> Required</th>
-   <th> Required</th>
+   <th>HL7 FHIR</th>
+   <th>Example</th>
+   <th>Preferred</th>
+   <th>Extensible</th>
+   <th>Required</th>
+   <th>Required</th>
   </tr>
  </table>
