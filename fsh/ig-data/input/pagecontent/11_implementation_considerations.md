@@ -215,5 +215,33 @@ The triplet does not contain a code but does contain text (in either the text fi
 <br>- If an appropriate uri is known for the code system conveyed in the CWE data type (eg CWE.3 or CWE.6), the code may carried over to CodeableConcept.coding.code and .system populated (note that depending on the capabilities of the FHIR recipient, this code may or may not be useful to the receiving system)</br>
 <br>- use the "original code" extension to preserve the code </br>
 </td>
+<td>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<br>- log an error (may be a warning (non-fatal) or an error (fatal)) </br>
+<br>- if the FHIR element uses CodeableConcept, a text version of the code (eg. CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve the lost of the code information) </br>
+<br>- If an appropriate uri is known for the code system conveyed in the CWE data type (eg CWE.3 or CWE.6), the code may carried over to CodeableConcept.coding.code and .system populated (note that depending on the capabilities of the FHIR recipient, this code may or may not be useful to the receiving system) </br>
+<br>- use the "original code" extension to preserve the code </br>
+</td>
+<td>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<br>- log an error (may be a warning (non-fatal) or an error (fatal))</br>
+<br>- if the FHIR element uses CodeableConcept, a text version of the code (eg. CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve the lost of the code information)</br>
+<br>- If an appropriate uri is known for the code system conveyed in the CWE data type (eg CWE.3 or CWE.6), the code may carried over to CodeableConcept.coding.code and .system populated (note that depending on the capabilities of the FHIR recipient, this code may or may not be useful to the receiving system)</br>
+<br>- use the "original code" extension to preserve the code</br> 
+</td>
+<td>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<br>- log an error (may be a warning (non-fatal) or an error (fatal)</br>
+<br>- if the FHIR element uses CodeableConcept, a text version of the code (eg. CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve the lost of the code information)</br>
+<br>- use the "original code" extension to preserve the code without violating the "required" binding of the value set</br>
+</td>
+<td>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<br>- log an error (may be a warning (non-fatal) or an error (fatal)<br>
+<br>- use the "original code" extension to preserve the code without violating the "required" binding of the value set<br>
+</td>
+</tr>
+<tr>
+ <td>Example:</td>
+ <td>Example:</td>
+ <td>Example:</td>
+ <td>Example:</td>
+ <td>Example:</td>
 </tr>
 </table>
