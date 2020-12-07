@@ -195,18 +195,18 @@ The triplet does not contain a code but does contain text (in either the text fi
   </tr>
 <tr>
  <td rowspan="4">User Defined Table</td>
- <td>Project Approach: The mapping may map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no suitable value.</td>
- <td>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no suitable value.</td>
- <td>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no suitable value.</td>
- <td>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no known use for the v2 value or there is no suitable value and FHIR is not ready to expand their list.</td>
- <td>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no known use for the v2 value or there is no suitable value and FHIR is not ready to expand their list.</td>
+ <td valign=top>Project Approach: The mapping may map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no suitable value.</td>
+ <td valign=top>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no suitable value.</td>
+ <td valign=top>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no suitable value.</td>
+ <td valign=top>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no known use for the v2 value or there is no suitable value and FHIR is not ready to expand their list.</td>
+ <td valign=top>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no known use for the v2 value or there is no suitable value and FHIR is not ready to expand their list.</td>
  </tr>
  <tr>
-  <td>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 suggested codes from the base standard and any local extensions to that list. Because the FHIR base standard only includes an example value set, the implementation team must understand what values the FHIR recipient accepts for the data element.</td>
-  <td>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 suggested codes from the base standard and any local extensions to that list. Because the FHIR base standard only includes a preferred value set, the implementation team must understand what values the FHIR recipient accepts for the data element.</td>
-  <td>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 suggested codes from the base standard and any local extensions to that list. Because the FHIR base standard includes an extensible value set, any values from the FHIR value set must be used as the target code if they are appropriate for use. If no appropriate code exists in the extensible FHIR value set, then the implementation team must identify an appropriate local extension acceptable to the FHIR recipient system.</td>
-  <td>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 suggested codes from the base standard and any local extensions to that list. Because the FHIR base standard includes a required value set, any values from the FHIR value set must be used as the target code if they are appropriate for use. If no appropriate code exists in the required FHIR value set, a local extension of the value set is NOT allowed and extensive discussion between trading partners will be required to arrive at a mutually agreeable solution.</td>
-  <td>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 suggested codes from the base standard and any local extensions to that list. Note that because some v2 data types (eg CWE) can contain mulitple triplets containing synonymous codes for the same concept, it is important that the implementation team understand if multiple codes may be sent  in a single element and map/prioritize the appropriate codes from the multiple triplets. Because the FHIR base standard includes a required value set, any values from the FHIR value set must be used as the target code if they are appropriate for use. If no appropriate code exists in the required FHIR value set, a local extension of the value set is NOT allowed and extensive discussion between trading partners will be required to arrive at a mutually agreeable solution.</td>
+  <td valign=top>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 suggested codes from the base standard and any local extensions to that list. Because the FHIR base standard only includes an example value set, the implementation team must understand what values the FHIR recipient accepts for the data element.</td>
+  <td valign=top>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 suggested codes from the base standard and any local extensions to that list. Because the FHIR base standard only includes a preferred value set, the implementation team must understand what values the FHIR recipient accepts for the data element.</td>
+  <td valign=top>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 suggested codes from the base standard and any local extensions to that list. Because the FHIR base standard includes an extensible value set, any values from the FHIR value set must be used as the target code if they are appropriate for use. If no appropriate code exists in the extensible FHIR value set, then the implementation team must identify an appropriate local extension acceptable to the FHIR recipient system.</td>
+  <td valign=top>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 suggested codes from the base standard and any local extensions to that list. Because the FHIR base standard includes a required value set, any values from the FHIR value set must be used as the target code if they are appropriate for use. If no appropriate code exists in the required FHIR value set, a local extension of the value set is NOT allowed and extensive discussion between trading partners will be required to arrive at a mutually agreeable solution.</td>
+  <td valign=top>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 suggested codes from the base standard and any local extensions to that list. Note that because some v2 data types (eg CWE) can contain mulitple triplets containing synonymous codes for the same concept, it is important that the implementation team understand if multiple codes may be sent  in a single element and map/prioritize the appropriate codes from the multiple triplets. Because the FHIR base standard includes a required value set, any values from the FHIR value set must be used as the target code if they are appropriate for use. If no appropriate code exists in the required FHIR value set, a local extension of the value set is NOT allowed and extensive discussion between trading partners will be required to arrive at a mutually agreeable solution.</td>
  </tr>
  <tr>
   <td>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
@@ -215,33 +215,84 @@ The triplet does not contain a code but does contain text (in either the text fi
 <br>- If an appropriate uri is known for the code system conveyed in the CWE data type (eg CWE.3 or CWE.6), the code may carried over to CodeableConcept.coding.code and .system populated (note that depending on the capabilities of the FHIR recipient, this code may or may not be useful to the receiving system)</br>
 <br>- use the "original code" extension to preserve the code </br>
 </td>
-<td>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<td valign=top>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
 <br>- log an error (may be a warning (non-fatal) or an error (fatal)) </br>
 <br>- if the FHIR element uses CodeableConcept, a text version of the code (eg. CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve the lost of the code information) </br>
 <br>- If an appropriate uri is known for the code system conveyed in the CWE data type (eg CWE.3 or CWE.6), the code may carried over to CodeableConcept.coding.code and .system populated (note that depending on the capabilities of the FHIR recipient, this code may or may not be useful to the receiving system) </br>
 <br>- use the "original code" extension to preserve the code </br>
 </td>
-<td>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<td valign=top>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
 <br>- log an error (may be a warning (non-fatal) or an error (fatal))</br>
 <br>- if the FHIR element uses CodeableConcept, a text version of the code (eg. CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve the lost of the code information)</br>
 <br>- If an appropriate uri is known for the code system conveyed in the CWE data type (eg CWE.3 or CWE.6), the code may carried over to CodeableConcept.coding.code and .system populated (note that depending on the capabilities of the FHIR recipient, this code may or may not be useful to the receiving system)</br>
 <br>- use the "original code" extension to preserve the code</br> 
 </td>
-<td>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<td valign=top>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
 <br>- log an error (may be a warning (non-fatal) or an error (fatal)</br>
 <br>- if the FHIR element uses CodeableConcept, a text version of the code (eg. CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve the lost of the code information)</br>
 <br>- use the "original code" extension to preserve the code without violating the "required" binding of the value set</br>
 </td>
-<td>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<td valign=top>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
 <br>- log an error (may be a warning (non-fatal) or an error (fatal)<br>
 <br>- use the "original code" extension to preserve the code without violating the "required" binding of the value set<br>
 </td>
 </tr>
 <tr>
- <td>Example:</td>
- <td>Example:</td>
- <td>Example:</td>
- <td>Example:</td>
- <td>Example:</td>
+ <td valign=top>Example:</td>
+ <td valign=top>Example:</td>
+ <td valign=top>Example:</td>
+ <td valign=top>Example:</td>
+ <td valign=top>Example:</td>
+</tr>
+<tr>
+<td rowspan="4">HL7 Defined Table</td>
+<td valign=top>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no suitable value.</td>
+<td valign=top>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no suitable value.</td>
+<td valign=top>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no suitable value.</td>
+<td valign=top>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no known use for the v2 value or there is no suitable value and FHIR is not ready to expand their list.</td>
+<td valign=top>Project Approach: The mapping will map as many as possible of the HL7 provided examples are mapped to FHIR value set values.  That may result in v2 values not having a FHIR target if there is no known use for the v2 value or there is no suitable value and FHIR is not ready to expand their list.</td>
+</tr>
+<tr>
+<td valign=top>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 defined codes from the base standard and any local extensions to that list (note, that some HL7 defined tables may be extended locally (eg specimen collection priority) while others (eg data types, message type) may not be extended locally). Because the FHIR base standard only includes an example value set, the implementation team must understand what values the FHIR recipient accepts for the data element.</td>
+<td valign=top>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 define codes from the base standard and any local extensions to that list (note, that some HL7 defined tables may be extended locally (eg specimen collection priority) while others (eg data types, message type) may not be extended locally). Because the FHIR base standard only includes a preferred value set, the implementation team must understand what values the FHIR recipient accepts for the data element.</td>
+<td valign=top>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 defined codes from the base standard and any local extensions to that list (note, that some HL7 defined tables may be extended locally (eg specimen collection priority) while others (eg data types, message type) may not be extended locally). Because the FHIR base standard includes an extensible value set, any values from the FHIR value set must be used as the target code if they are appropriate for use. If no appropriate code exists in the extensible FHIR value set, then the implementation must identify an appropriate local extension acceptable to the FHIR recipient system.</td>
+<td valign=top>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 defined codes from the base standard and any local extensions to that list (note, that some HL7 defined tables may be extended locally (eg specimen collection priority) while others (eg data types, message type) may not be extended locally). Because the FHIR base standard includes a required value set, any values from the FHIR value set must be used as the target code if they are appropriate for use. If no appropriate code exists in the required FHIR value set, a local extension of the value set is NOT allowed and extensive discussion between trading partners will be required to arrive at a mutually agreeable solution.</td>
+<td valign=top>Implementation: The implementation team must map any known locally used codes that may be received in the v2 message to an appropriate value in the FHIR value set. This may include HL7 suggested codes from the base standard and any local extensions to that list. Note that because some v2 data types (eg CWE) can contain mulitple triplets containing synonymous codes for the same concept, it is important that the implementation team understand if multiple codes may be sent  in a single element and map/prioritize the appropriate codes from the multiple triplets. Because the FHIR base standard includes a required value set, any values from the FHIR value set must be used as the target code if they are appropriate for use. If no appropriate code exists in the required FHIR value set, a local extension of the value set is NOT allowed and extensive discussion between trading partners will be required to arrive at a mutually agreeable solution.</td>
+</tr>
+<tr>
+<td valign=top>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<br>- log an error (may be a warning (non-fatal) or an error (fatal) </br>
+<br>- if the FHIR element uses CodeableConcept, a text version of the code (eg. CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve the lost of the code information)</br>
+<br>- If an appropriate uri is known for the code system conveyed in the CWE data type (eg CWE.3 or CWE.6), the code may carried over to CodeableConcept.coding.code and .system populated (note that depending on the capabilities of the FHIR recipient, this code may or may not be useful to the receiving system)</br>
+<br>- use the "original code" extension to preserve the code </br>
+</td>
+<td valign=top>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<br>- log an error (may be a warning (non-fatal) or an error (fatal) </br>
+<br>- if the FHIR element uses CodeableConcept, a text version of the code (eg. CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve the lost of the code information)</br>
+<br>- If an appropriate uri is known for the code system conveyed in the CWE data type (eg CWE.3 or CWE.6), the code may carried over to CodeableConcept.coding.code and .system populated (note that depending on the capabilities of the FHIR recipient, this code may or may not be useful to the receiving system)</br>
+<br>- use the "original code" extension to preserve the code </br>
+</td>
+<td valign=top>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<br>- log an error (may be a warning (non-fatal) or an error (fatal) </br>
+<br>- if the FHIR element uses CodeableConcept, a text version of the code (eg. CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve the lost of the code information)</br>
+<br>- If an appropriate uri is known for the code system conveyed in the CWE data type (eg CWE.3 or CWE.6), the code may carried over to CodeableConcept.coding.code and .system populated (note that depending on the capabilities of the FHIR recipient, this code may or may not be useful to the receiving system)</br>
+<br>- use the "original code" extension to preserve the code </br>
+</td>
+<td valign=top>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<br>- log an error (may be a warning (non-fatal) or an error (fatal) </br>
+<br>- if the FHIR element uses CodeableConcept, a text version of the code (eg. CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve the lost of the code information)</br>
+<br>- use the "original code" extension to preserve the code without violating the "required" binding of the value set</br>
+ </td>
+<td valign=top>Default Behavior: If after all expected codes are mapped, if the v2 message contains an unmapped (unexpected) code, system behavior options include (these are not mutually exclusive options):
+<br>- log an error (may be a warning (non-fatal) or an error (fatal) </br>
+<br>- use the "original code" extension to preserve the code without violating the "required" binding of the value set</br>
+</td>
+</tr>
+<tr>
+<td valign=top>Example:</td>
+<td valign=top>Example:</td>
+<td valign=top>Example:</td>
+<td valign=top>Example:</td>
+<td valign=top>Example:</td>
 </tr>
 </table>
