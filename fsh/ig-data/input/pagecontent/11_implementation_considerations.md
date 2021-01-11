@@ -130,6 +130,11 @@ Implementers should consider local variations from the base standard when develo
 In the Assigmen columns for Segment and Data Type mapping, the specific assignment may not be available, but textual guidance is.  As this may be easily overseen, the following provides a list of where these instructions occur:
 * MSH[Provenance]
 
+### Common References
+References in v2 messages to an organization, person, or other entity may or may not result in a need to reference the same resources instance by the recipient.  Since these references may occur from different segments and may not always have enough data in the data type components to easily match, that may be a challenge.  Unfortunately, it is very challenging as well to already identify the proper link based on the data available from the v2 message structure and relationship.  This guide therefore does not attempt to do so.  However, we do encourage to re-use resources for reference where the mapper and receiving system can establish such re-use.
+
+In a couple of instances it is more easily done.  For example, MSH is mapped to different resource (MessageHeader, Bundle, Provenance) and possibly multiple resource instances (Provenance).  In those situations the mapper is strongly encouraged that the resulting resource, e.g., MSH-4 Sending Facility yielding an Organization, references that Organization from the respective MessageHeader, Bundle, and Provenence resource instances.
+
 ### Vocabulary Mapping
 
 #### Basics
