@@ -50,11 +50,11 @@ correctly.
 ### Provenance
 The concept of data provenance is typically only indirectly addressed within the v2 standard, however provenance can often be
 inferred by the data in various fields in the v2 message. For example, provenance may be inferred from data in the MSH segment (eg.
-the responsible sending organization), the ORC segment (eg. the entering user) or TXA segment (eg. the authenticator). This
+the responsible sending organization), the EVN segment (e.g., the event it represents), the ORC segment (eg. the entering user) or TXA segment (eg. the authenticator). This
 implementation guide does include some mapping to the Provenance resource but it is up to implementors to determine the level of
 data provenance that should be captured during the transformation process. At a minimum, the authors of this document feel that it
 may be appropriate to capture the provenance of the message source and the v2-to-FHIR transformation process. Additional provenance
-may be captured from additional fields as appropriate for the implementation.
+may be captured from additional fields as appropriate for the implementation.  To enable provenance, it is important to have the responsible organization or indivdiual included in the MSH, EVN, ORC, TXA, or other applicable segment as identified in the mapping, otherwise the mapping engine is provided with a default value for Provanence.agent.who in those instances.
 
 The guide does provide minimum provenance that is recommended to establish.  For every message, the MSH is mapped to the Provenance resource as well.  That Provenance resource may contain the original v2 message as well.  We do not provide specific mapping guidance on how to establish specific provenance on a FHIR resource back to the exact v2 segment in the message that yielded that (updated or new) resource.  However, you may include every resource created/updated as a result of this message as well in the Provenance resource created through the MSH[PRovenance] map, particularly if you included in this Provenance resoruce the full v2 message as well.
 
