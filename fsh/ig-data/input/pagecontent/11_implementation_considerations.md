@@ -27,6 +27,14 @@ translated into local data structures, or used in subsequent RESTful APIs.  The 
 therefore opt to not follow all of the above guidance as they may be able to already be capable of resolving the Resource.id to the
 correct existing or new .id.
 
+### Common Resource References
+In v2 messages, it is common for multiple fields (e.g., using the XCN data type) to document the data for the same provider (e.g., the same
+person may be the attending provider in the PV1 segment of an order message as well as the ordering provider in both the ORC and
+OBR segments of the same message). In this case, it may be most efficient if the Encounter and ServiceRequest resources reference
+the same Practitioner resource. It is critical that implementers consider how they will recognize duplicate provider references in
+a given v2 message and reuse Practitioner resources efficiently. Deduplication logic based on data including identifiers, name and
+credentials should be employed as part of the transformation strategy to identify potentially reusable resources.
+
 ### Contained Resources
 This implementation guide recognizes the distinction between stand-alone and [contained resources](https://www.hl7.org/fhir/references.html#contained)
 but does not provide guidance in the mappings as the appropriate usage of contained resources. Implementers should consider the
@@ -58,7 +66,6 @@ may be captured from additional fields as appropriate for the implementation.  T
 
 The guide does provide minimum provenance that is recommended to establish.  For every message, the MSH is mapped to the Provenance resource as well.  That Provenance resource may contain the original v2 message as well.  We do not provide specific mapping guidance on how to establish specific provenance on a FHIR resource back to the exact v2 segment in the message that yielded that (updated or new) resource.  However, you may include every resource created/updated as a result of this message as well in the Provenance resource created through the MSH[PRovenance] map, particularly if you included in this Provenance resoruce the full v2 message as well.
 
-
 ### Security
 Under Construction.
 
@@ -74,14 +81,7 @@ data content may or may not be sufficient to unambiguously identify a matching e
 of Encounter resources should be carefully considered during the implementation process. The use of contained Encounter resources
 may be appropriate.
 
-### Practitioners
-In v2 messages, it is common for multiple fields (using the XCN data type) to document the data for the same provider (eg, the same
-person may be the attending provider in the PV1 segment of an order message as well as the ordering provider in both the ORC and
-OBR segments of the same message). In this case, it may be most efficient if the Encounter and ServiceRequest resources reference
-the same Practitioner resource. It is critical that implementers consider how they will recognize duplicate provider references in
-a given v2 message and reuse Practitioner resources efficiently. Deduplication logic based on data including identifiers, name and
-credentials should be employed as part of the transformation strategy to identify potentially reusable resources.
-
+### Practitioner-PractionerRole
 In most FHIR resources, elements which allow a reference to a Practitioner resource also allow a reference to a PractitionerRole
 resource. In most scenarios, a v2 field using the XCN data type will typically be mapped to the Practitioner resource, but
 implementers may choose to map to the PractitionerRole resource instead. In a few places, an XCN field will be mapped to a
