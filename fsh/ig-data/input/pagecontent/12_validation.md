@@ -1,4 +1,6 @@
-The V2 to FHIR Mapping project is developing a transform validator. This note describes what it does and how it can be used.
+The V2 to FHIR Mapping project is developing a transform validator. This note describes what it does and how it can be used.  
+Note that this implementation guide expects and assumes that the input message represents a valid, compliant v2 message to the standard.  
+Any validation to the v2 message standard is out of scope of the guidance in this implementation guide.  Any variations in conformance need to be addressed, which may include updates to the mappings to accommodate any remaining variances.
 
 To <b>validate</b> a transform means: to check that it is correct, and to note any discrepancies between its inputs and its outputs. 
 ‘correct’ means: ‘the output of the transform is consistent with a set of V2 to FHIR mappings’. These can either be the ‘canonical’
