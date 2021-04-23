@@ -9,8 +9,11 @@
       * The code system/value set that the concept is part of.
 * HL7 FHIR
    * Code
-      * The code as used in FHIR for the concept
+      * The code as used in FHIR for the concept in .coding.code
    * Display
+      * The display value used in FHIR for the concept
+   * Code System
+      * The code system to be used when populating .coding.system
 
 
 When mapping from HL7 v2 messages to FHIR Resources, there are a number of cases where concept mapping needs to be performed.  When this mapping is performed, there may be information that is lost because it cannot be represented in a required coding system, or more specific detail may be lost when one or more codes is mapped to a singular required or preferred code in the FHIR specified terminology.
