@@ -7,6 +7,19 @@ implementation considerations may emerge as transforms are developed, tested and
 In older versions, e.g., v2.3.1 the message structure in MSH-9 may have been omitted as the standard did not always include that in the message structure definition.  For example, the message definition for RDE^O01 in v2.3.1 does not include the message structure, thus implementers omitted that, even though in Table 0354 there was a structure defined RDE_O01.  When MSH-9.3 is empty, we suggest to derive the message structure to get to the proper map by using the message code and trigger event. I.e., when message code and trigger event is ABC^Nnn then use ABC_Nnn.  For RDE^O01 that would be RDE_O01.
 We will be listing any known exceptions to that rule here as we find them.
 
+### Implementation Guide Extensions on the Base Standard
+Some v2 implementations may adhere to constraints made on the base standard by an implementation guide. Where this happens it may
+be necessary to extend or constrain the standard mappings provided by this project. For example, in the US the v2.5.1 immunization
+messaging implementation guide describes how to use OBX segments to convey information related patient eligibility, distribution of
+educational materials and vaccine funding source. While these concepts are part of the FHIR Immunization resource, the VXU mappings
+from this project do not include these transformations as they are defined by the implementation guide, not the base standard.
+Implementers should consider local variations from the base standard when developing their transformations.
+
+### Common References
+References in v2 messages to an organization, person, or other entity may or may not result in a need to reference the same resources instance by the recipient.  Since these references may occur from different segments and may not always have enough data in the data type components to easily match, that may be a challenge.  Unfortunately, it is very challenging as well to already identify the proper link based on the data available from the v2 message structure and relationship.  This guide therefore does not attempt to do so.  However, we do encourage to re-use resources for reference where the mapper and receiving system can establish such re-use.
+
+In a couple of instances it is more easily done.  For example, MSH is mapped to different resource (MessageHeader, Bundle, Provenance) and possibly multiple resource instances (Provenance).  In those situations the mapper is strongly encouraged that the resulting resource, e.g., MSH-4 Sending Facility yielding an Organization, references that Organization from the respective MessageHeader, Bundle, and Provenence resource instances.
+
 ### Variations in Cardinality
 In several maps, the v2 field or element has a larger maximum cardinality than the mapped FHIR attributes. That is, some v2 elements are allowed to repeat while the cognate FHIR element is not allowed to repeat. We still provide these mappings, but if your implementation allows these v2 elements to repeat, data may be lost. Implementers should evaluate the likelihood of this happening. The project team welcomes examples where this occurs in existing implementations so that we can discuss possible solutions.
 
@@ -54,6 +67,12 @@ process. For example, an order message may be directed to a system with the inte
 order without any expectation that the receiving system will fulfill the order. In this case, the creation of a Task resource is
 likely to not be appropriate. Implementers must understand the workflows associated with the data exchange to implement tasks
 correctly.
+
+### (Segment) Action Code
+Most Hl7 v2 messages are sent using snapshot mode.  However, where (segment) action codes are used it is up to the implementers to determine
+the appropriate actions on the FHIR side as the data may already exist.  That may or may not be known by the mapping engine and lead to different 
+techniques on how to interpret and manage the action codes.  A future version of this guide may include further guidance and best practices on 
+mapping (segment) action codes.
 
 ### Provenance
 The concept of data provenance is typically only indirectly addressed within the v2 standard, however provenance can often be
@@ -117,23 +136,6 @@ contain the systolic and diastolic values of a blood pressure reading, the relat
 maintained. Observation.component can be used to maintain the relationship between related results. Implementers are encouraged
 to read the base standard documentation available describing the use of Observation.component as well as think about how related
 observations will be identified during the transformation process.
-
-### Implementation Guide Extensions on the Base Standard
-Some v2 implementations may adhere to constraints made on the base standard by an implementation guide. Where this happens it may
-be necessary to extend or constrain the standard mappings provided by this project. For example, in the US the v2.5.1 immunization
-messaging implementation guide describes how to use OBX segments to convey information related patient eligibility, distribution of
-educational materials and vaccine funding source. While these concepts are part of the FHIR Immunization resource, the VXU mappings
-from this project do not include these transformations as they are defined by the implementation guide, not the base standard.
-Implementers should consider local variations from the base standard when developing their transformations.
-
-### Instructions on Assignments in Mapping Spreadsheets
-In the Assigmen columns for Segment and Data Type mapping, the specific assignment may not be available, but textual guidance is.  As this may be easily overseen, the following provides a list of where these instructions occur:
-* MSH[Provenance]
-
-### Common References
-References in v2 messages to an organization, person, or other entity may or may not result in a need to reference the same resources instance by the recipient.  Since these references may occur from different segments and may not always have enough data in the data type components to easily match, that may be a challenge.  Unfortunately, it is very challenging as well to already identify the proper link based on the data available from the v2 message structure and relationship.  This guide therefore does not attempt to do so.  However, we do encourage to re-use resources for reference where the mapper and receiving system can establish such re-use.
-
-In a couple of instances it is more easily done.  For example, MSH is mapped to different resource (MessageHeader, Bundle, Provenance) and possibly multiple resource instances (Provenance).  In those situations the mapper is strongly encouraged that the resulting resource, e.g., MSH-4 Sending Facility yielding an Organization, references that Organization from the respective MessageHeader, Bundle, and Provenence resource instances.
 
 ### Vocabulary Mapping
 
