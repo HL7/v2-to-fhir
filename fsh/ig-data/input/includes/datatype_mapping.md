@@ -21,6 +21,7 @@
    * FHIR Attribute
       * The first column reflects an existing FHIR attribute in the target FHIR version.
       * When there is not a single attribute to point to, rather a v2 field needs to be mapped to multiple FHIR attribute, e.g., ORC-27 Quantity/Timing where the TQ data type components need to be mapped to multiple ServiceRequest attributes, then the label "$this" is used.  Further mapping guidance is then provided in the Data Type mapping column.
+      * When a multi-component data type maps to a primitive data type, e.g., CWE to string, then $value will indicate that it is acutally mapped to the single compomnet of the primitive data type as leaving it blank would indicate it is not being mapped. 
       * The second column reflects a proposed extension.  It will be expressed with #ext-......# around the proposed name.  Once approved, the formal name will be put in the first column.
       * This approach will enable tooling to already process existing FHIR attributes and not have to create special handling for elements still being proposed.
    * Data Type
