@@ -304,3 +304,8 @@ The triplet does not contain a code but does contain text (in either the text fi
 <td valign=top>Example:</td>
 </tr>
 </table>
+
+### Open Issues
+<ol>
+<li>The OBX segment is used for a large variety of observations that are represently differently in FHIR.  For example, an OBX may have been used to document a Device Use Statement.  OBX-3 Observation Identifier would indicate what the most suitable map would be.  As a result, the initial publication will not include all potential mappings, rather only those for which there are known use cases in production.  Example, OBX[DeviceUseStatement] is a potential map, but will not be created until we know it is actually needed.
+</ol>
