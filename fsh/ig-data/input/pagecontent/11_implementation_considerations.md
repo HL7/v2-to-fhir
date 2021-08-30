@@ -140,20 +140,25 @@ observations will be identified during the transformation process.
 ### Vocabulary Mapping
 
 #### Basics
-The CWE data type can contain up to 3 “coding triplets” each of which may contain unique codes from different codes sets, however all codes must represent the same concept
-At a high level, these correspond to multiple occurrences of CodeableConcept.coding for the cognate FHIR element
-In an ideal world, each v2 CWE triplet will consist of a code, a display name and a coding system
-The combination of the code and the coding system should provide a unique key for mapping purposes
-While the v2-to-FHIR project can provide some basic vocabulary maps, it’s expected that individual implementation will need to confirm and potentially extend those maps to include non-standard values (either within a standard value set or in a custom value set)
-The project team cannot be expected to know all possible values in use by a given implementation
-Tool behavior should be driven by the configuration of the mapping files and not by unique code in the transformation engine
+Various HL7 v2 types enable the use of codes, e.g., CWE, CNE, CE, as well as ID and IS.  
+
+The HL7 v2-to-FHIR project team cannot be expected to know all possible values in use by a given implementation. While the HL7 v2-to-FHIR project can provide some basic vocabulary maps, it’s expected that individual implementation will need to confirm and potentially extend those maps to include non-standard values (either within a standard value set or in a custom value set).  Specifically:
+* There may be a code represented in the HL7 v2 table, but not in FHIR.  A suitable match may only be known in the context of the implementation where one could opt to map to an existing FHIR concept, need to create an extension, or map to an existing concept while holding on to the original value as well.
+* There may be no known HL7 v2 values at all.  This is particularly true for user defined tables where HL7 may not have provided any values, or only a couple of examples where HL7 FHIR has a more complete set defined.
+
+Tool behavior should be driven by the configuration of the vocabulary mapping files provided thus requiring the local implementation team to review and update the mapping tables to reflect the local usage.
+
+Using the CWE data type as the example, this following sections describe how vocabulary mapping is achieved between HL7 v2 and HL7 vocabulary.
+
 
 #### Translator Logic
-For the CWE field, the translator should perform the following steps for each of the three possible triplets
-If the triplet contains data (at a minimum, the code is present in the triplet), then:
-The code and code system present in the triplet, are used to identify the relevant lines in the vocabulary map (that is the code from the triplet matches a value in Column A (Code) and the code system from the triple matches the value in Column C (Code System) for that same row
+The CWE data type can contain up to 3 “coding triplets” each of which may contain unique codes from different codes sets, however all codes must represent the same concept.  At a high level, these correspond to multiple occurrences of CodeableConcept.coding for the cognate FHIR element. In an ideal world, each HL7 v2 CWE triplet will consist of a code, a display name and a coding system. The combination of the code and the coding system should provide a unique key for mapping purposes. 
+
+For the CWE field, the translator should perform the following steps for each of the three possible triplets.
+* If the triplet contains data (at a minimum, the code is present in the triplet), then:
+* The code and code system present in the triplet, are used to identify the relevant lines in the vocabulary map (that is the code from the triplet matches a value in Column A (Code) and the code system from the triple matches the value in Column C (Code System) for that same row
 Note that a single vocabulary map may contain multiple rows for a given code/code system pair if the implementers want to translate the code to multiple codings in the FHIR resource
-For each matching line in the vocabulary map, a new occurrence of CodeableConcept.coding is created with coding.code populated from Column G, coding.display populated from Column I and coding.system populated from Column J
+* For each matching line in the vocabulary map, a new occurrence of CodeableConcept.coding is created with coding.code populated from Column G, coding.display populated from Column I and coding.system populated from Column J
 
 #### Example (Marital Status)
 * Marital Status (PID-16) uses User-defined table HL70002 which includes the code S for Single
