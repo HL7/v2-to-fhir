@@ -146,6 +146,15 @@ The HL7 v2-to-FHIR project team cannot be expected to know all possible values i
 * There may be a code represented in the HL7 v2 table, but not in FHIR.  A suitable match may only be known in the context of the implementation where one could opt to map to an existing FHIR concept, need to create an extension, or map to an existing concept while holding on to the original value as well.
 * There may be no known HL7 v2 values at all.  This is particularly true for user defined tables where HL7 may not have provided any values, or only a couple of examples where HL7 FHIR has a more complete set defined.
 
+Translations may be particularly problematic when the FHIR value set is fixed (a binding strength of "Required") and cannot be extended locally. A v2 value may not have a cognate FHIR value or the the FHIR value may be less granular, either situation potentially resulting in the loss of information as the concept is translated. In these situations we recommend the following:
+* When the FHIR data type is code or coding: 
+  * Review the provided mappings and confirm that the v2 value is translated to the most appropriate value for the integration
+  * We strongly encourage the retention of the original v2 value using the http://hl7.org/fhir/[version]/StructureDefinition/extension-[Path] (resulting in [attribute].extension-originalCodeableConcept) for those values that are not mappable or when the v2 value is more granular than the FHIR value and data may be lost in the translation
+  * Example: PV1-2 Patient class maps to Encounter.status where the FHIR value set is fixed. Any suggested mappings to "unknown" need to be reviewed to determine if another FHIR value might be better
+* When the FHIR data type is code or coding: 
+  * Review the provided mappings and confirm that the v2 value is translated to the most appropriate value for the integration
+  * We strongly encourage the retention of the original v2 value as an alternate occurrence of the CodeableConcept.coding element
+
 Tool behavior should be driven by the configuration of the vocabulary mapping files provided thus requiring the local implementation team to review and update the mapping tables to reflect the local usage.
 
 Using the CWE data type as the example, this following sections describe how vocabulary mapping is achieved between HL7 v2 and HL7 vocabulary.
