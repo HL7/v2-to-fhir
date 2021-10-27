@@ -19,7 +19,7 @@
    * FHIR Attribute
       * The first column reflects an existing FHIR attribute in the target FHIR version.
       * When there is not a single attribute to point to, rather a v2 field needs to be mapped to multiple FHIR attribute, e.g., ORC-27 Quantity/Timing where the TQ data type components need to be mapped to multiple ServiceRequest attributes, then the label "$this" is used.  Further mapping guidance is then provided in the Data Type mapping column.
-      * The second column reflects a proposed extension.  It will be expressed with #ext-......# around the proposed name.  Once approved, the formal name will be put in the first column.
+      * The second column reflects a proposed extension.  It will be expressed with extension-[name] (when suggested as a full extension) or extension??-[name] (when it is open whether to include it in core and pre-adopt, or a full extension).  Once approved, the full extension paths will be put in the first column.
       * This approach will enable tooling to already process existing FHIR attributes and not have to create special handling for elements still being proposed.
    * Data Type
       * The FHIR attribute's data type in the target FHIR version.
