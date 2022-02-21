@@ -65,7 +65,7 @@ public class Convert {
                     if (!dir.exists()) {
                         dir.mkdirs();
                     }
-                    MAP_OUTPUT_DIR = new File(dir, PAGE_CONTENT_DIR).getPath() + "/";
+                    // MAP_OUTPUT_DIR = new File(dir, PAGE_CONTENT_DIR).getPath() + "/";
                     continue;
                 } else if (arg.startsWith("-d")) {
                     download = arg.substring(2);
@@ -84,7 +84,7 @@ public class Convert {
                 }
                 File f = new File(arg);
                 if (!f.exists()) {
-                    ConverterImpl.report(true, arg, 1, "'%s' does not exist.\n", arg);
+                    ConverterImpl.report(true, arg, 0, "'%s' does not exist.\n", arg);
                 } else if (f.isDirectory()) {
                     for (File l : FileUtils.listFiles(f, new String[] { "csv" }, false)) {
                         convert(l, output);
@@ -93,7 +93,7 @@ public class Convert {
                     convert(f, output);
                 }
             } catch (Exception e) {
-                ConverterImpl.report(true, arg, 1, "Unexpected error during conversion of '%s'.%n", arg);
+                ConverterImpl.report(true, arg, 0, "Unexpected error during conversion of '%s'.%n", arg);
                 e.printStackTrace();
                 success = false;
             }
@@ -103,7 +103,7 @@ public class Convert {
         try {
             generateMapOutputs();
         } catch (Exception e) {
-            ConverterImpl.report(true, "N/A", 1, "Unexpected error generating map tables.");
+            ConverterImpl.report(true, "N/A", 0, "Unexpected error generating map tables.");
             e.printStackTrace();
             success = false;
         }

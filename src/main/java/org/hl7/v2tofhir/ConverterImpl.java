@@ -313,7 +313,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                 pw.printf("* group.element[%d].target.equivalence = #%s%n", mappedRows,
                     StringUtils.isEmpty(row.targetCode) ? "unmatched" : "equivalent");
 
-                if (!StringUtils.isEmpty(row.targetCode)) {
+                if (!StringUtils.isBlank(row.targetCode)) {
                     String targetCode = row.targetCode.contains("=")
                         ? escapeFshString(StringUtils.substringBefore(row.targetCode, "="))
                         : row.targetCode;
