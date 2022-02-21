@@ -2,7 +2,8 @@ name: Download CSV Files
 on:
   push:
     paths:
-      - 'mappings/*.csv' '.github/workflows/update-csvs.yaml'
+      - 'mappings/*.csv'
+      - '.github/workflows/update-csvs.yaml'
 
 jobs:
   build:
