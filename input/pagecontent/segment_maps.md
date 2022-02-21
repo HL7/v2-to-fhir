@@ -12,7 +12,6 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [MSH](ConceptMap-segment-msh-to-bundle.html) - Message Header to FHIR [Bundle](http://hl7.org/fhir/R4/bundle.html)
 * [MSH](ConceptMap-segment-msh-to-messageheader.html) - Message Header to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
 * [MSH](ConceptMap-segment-msh-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
-* [MSH[Source]](ConceptMap-segment-mshsource-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 * [NTE](ConceptMap-segment-nte-to-observation.html) - Notes and Comments to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [NTE](ConceptMap-segment-nte-to-servicerequest.html) - Notes and Comments to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
 * [SFT](ConceptMap-segment-sft-to-messageheader.html) - Software Segment to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
@@ -68,7 +67,6 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 ### Chapter 15  Personnel Management
 
 * [ROL](ConceptMap-segment-rol-to-relatedperson.html) - Role to FHIR [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)
-* [ROL[GeneralPractioner]](ConceptMap-segment-rolgeneralpractioner-to-patient.html) - Role to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [ROL[PractitionerRole]](ConceptMap-segment-rolpractitionerrole-to-encounter.html) - Role to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 * [ROL[PractitionerRole]](ConceptMap-segment-rolpractitionerrole-to-patient.html) - Role to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 <h2 style='--heading-prefix: ""' id='mapping'>Mapping</h2>

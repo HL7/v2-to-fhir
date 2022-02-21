@@ -1,7 +1,7 @@
 package org.hl7.v2tofhir;
 /*
  * Copyright 2020 Audiacious Inquiry, Inc.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy
  * of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -42,7 +42,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
     private static final String FHIR_BASE = "https://hl7.org/fhir/R4/", FHIR_TERM = "http://terminology.hl7.org/";
     private static final String IG_URL = "http://hl7.org/fhir/uv/v2mappings";
-    private static boolean reportErrorsOnly = true;
+    private static boolean reportErrorsOnly = false;
     private static int errCount = 0, warnCount = 0;
     private static File errorOutput = new File(".", "ConvertErrors.log");
     private static PrintWriter log = null;
@@ -836,7 +836,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         String names[] = { "FHIR", "Segments", "Tables", "Data Types" };
 
         Set<String> htmlFiles = new HashSet<>();
-        Collection<File> files = FileUtils.listFiles(new File("fsh"), new String[] { "fsh" }, false);
+        Collection<File> files = FileUtils.listFiles(new File(output), new String[] { "fsh" }, false);
         for (File file: files) {
             htmlFiles.add("ConceptMap-" + makeId(file.getName()) + ".html");
         }
