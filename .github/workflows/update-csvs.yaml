@@ -11,6 +11,9 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Checkout Files
+        uses: actions/checkout@v2
+
       - name: Build the Conversion tools
         run: mvn compile package
 
@@ -26,7 +29,7 @@ jobs:
 
       - name: Recreate SUSHI Files
         run: |
-          del input/Datatype*.fsh input/Segment*.fsh input/Table*.fsh input/Message*.fsh
+          del input\Datatype*.fsh input\Segment*.fsh input\Table*.fsh input\Message*.fsh
           "%JAVA_HOME_11_X64%\bin\java" -cp target\v2-to-fhir.jar;target\lib\* org.hl7.v2tofhir.Convert -o. mappings/messages mappings/segments mappings/datatypes mappings/codesystems
 
       - name: Push Changes to GitHub
