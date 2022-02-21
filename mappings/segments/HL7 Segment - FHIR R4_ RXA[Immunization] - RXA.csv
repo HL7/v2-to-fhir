@@ -22,10 +22,10 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 17,RXA-17,Substance Manufacturer Name,CWE,0,-1,,,,manufacturer(Organization),,Reference(Organization),0,1,CWE[Organization],,,,
 18,RXA-18,Substance/Treatment Refusal Reason,CWE,0,-1,,,,statusReason,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
 19,RXA-19,Indication,CWE,0,-1,,,,reasonCode,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
-20,RXA-20,Completion Status,ID,0,1,,,,status,,code,1,1,,CompletionStatus,,,
+20,RXA-20,Completion Status,ID,0,1,"IF RXA-21 NOT EQUALS ""D""",,,status,,code,1,1,,CompletionStatus,,,
+20,RXA-20,Completion Status,ID,0,1,"IF NOT VALUED AND RXA-21 NOT EQUALS ""D""",,,status,,code,1,1,,,"""completed""",,
 21,RXA-21,Action Code – RXA,ID,0,1,"IF RXA-21 EQUALS ""D""",,,status,,code,1,1,,,"""entered-in-error""",,
-22,RXA-22,System Entry Date/Time,DTM,0,1,,,,meta.lastUpdated,,instant,0,1,,,,,
-22,RXA-22,System Entry Date/Time,DTM,0,1,,,,meta.versionId,,id,0,1,,,next,,"When the v2 message is an update, the next version is created for the resource."
+22,RXA-22,System Entry Date/Time,DTM,0,1,"IF RXA-21 EQUALS ""A""",,,recorded,,dateTime,0,1,,,,,
 23,RXA-23,Administered Drug Strength Volume,NM,0,1,,,,,,,,,,,,,
 24,RXA-24,Administered Drug Strength Volume Units,CWE,0,1,,,,,,,,,,,,,
 25,RXA-25,Administered Barcode Identifier,CWE,0,1,,,,,,,,,,,,,

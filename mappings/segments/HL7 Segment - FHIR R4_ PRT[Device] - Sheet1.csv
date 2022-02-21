@@ -2,7 +2,8 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,PRT-1,Participation Instance ID,EI,0,1,,,,,,,,,,,,,
-2,PRT-2,Action Code,ID,1,1,,,if mapped to a restful service to progress the message.,,,,,,,,,,
+2,PRT-2,Action Code,ID,1,1,"IF PRT-2 IS ""D""",,inactivate the relationship between the mapped resource that the PRT segment is asociated with in the message with the Device resource.,,,,,,,,,,
+2,PRT-2,Action Code,ID,1,1,"IF PRT-2 IS IN (""A"", ""S"", ""U"", X"")",,activate the relationship between the mapped resource that the PRT segment is asociated with in the message with the Device resource.,,,,,,,,,,
 3,PRT-3,Action Reason,CWE,0,1,,,,,,,,,,,,,
 4,PRT-4,Role of Participation,CWE,1,1,,,,,,,,,,,,,
 5,PRT-5,Person,XCN,0,-1,,,,,,,,,,,,,
@@ -12,8 +13,8 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 9,PRT-9,Location,PL,0,-1,,,,,,,,,,,,,
 10,PRT-10,Device,EI,0,-1,,,If it represents a HRF or AIDC,udiCarrier[1],,BackboneElement,0,-1,EI[Device-udiCarrier],,,,
 10,PRT-10,Device,EI,0,-1,,,If not an HRF or AIDC,identifier,,Identifier,0,-1,EI[Identifier],,,,
-11,PRT-11,Begin Date/Time (arrival time),DTM,0,1,,,,,,,,,,,,,
-12,PRT-12,End Date/Time (departure time),DTM,0,1,,,,,,,,,,,,,
+11,PRT-11,Begin Date/Time (arrival time),DTM,0,1,,,,,,,,,,,,,"We are not aware of current use of this field.  If used, that may indicate that mapping to DeviceUseStatement may be better.  Please submit a JIRA when you are using this field."
+12,PRT-12,End Date/Time (departure time),DTM,0,1,,,,,,,,,,,,,"We are not aware of current use of this field.  If used, that may indicate that mapping to DeviceUseStatement may be better.  Please submit a JIRA when you are using this field."
 13,PRT-13,Qualitative Duration,CWE,0,1,,,,,,,,,,,,,
 14,PRT-14,Address,XAD,0,-1,,,,,,,,,,,,,
 15,PRT-15,Telecommunication Address,XTN,0,-1,,,,,,,,,,,,,

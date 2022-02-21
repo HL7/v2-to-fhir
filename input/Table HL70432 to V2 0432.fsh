@@ -1,4 +1,4 @@
-// HL7 Concept Map_ Admission Level of Care Code - Sheet1.csv
+// HL7 Concept Map_ AdmissionLevelOfCareCode - Sheet1.csv
 Instance: TableHL70432toV20432
 InstanceOf: ConceptMap
 Title: "Table HL70432 to V2 0432 Map"
@@ -9,7 +9,7 @@ Title: "Table HL70432 to V2 0432 Map"
 * name = "TableHL70432toV20432"
 * status = #active
 * experimental = true
-* date = "2020-08-12"
+* date = "2022-02-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

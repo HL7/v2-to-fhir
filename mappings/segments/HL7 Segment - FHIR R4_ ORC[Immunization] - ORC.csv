@@ -13,7 +13,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 6,ORC-6,Response Flag,ID,0,1,,,,,,,,,,,,,
 7,ORC-7,Quantity/Timing,TQ,0,-1,,,,,,,,,,,,,
 8,ORC-8,Parent Order,EIP,0,1,,,,,,,,,,,,,
-9,ORC-9,Date/Time of Transaction,DTM,0,1,,,,recorded,,dateTime,0,1,,,,,
+9,ORC-9,Date/Time of Order Event,DTM,0,1,,,,recorded,,dateTime,0,1,,,,,
 10,ORC-10,Entered By,XCN,0,-1,,,,,,,,,,,,,
 11,ORC-11,Verified By,XCN,0,-1,,,,,,,,,,,,,
 12,ORC-12,Ordering Provider,XCN,0,-1,,,,performer.actor(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,

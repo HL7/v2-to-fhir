@@ -3,8 +3,8 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,TQ.1,Quantity,CQ,0,1,,,,quantityQuantity,,Quantity,0,1,CQ[Quantity],,,,
 2,TQ.2,Interval,RI,0,1,,,,occurrenceTiming,,Timing,0,1,RI[Timing],,,,
-3,TQ.3,Duration,ST,0,1,,,If the value and unit in TQ.3 can be unambiguously parsed where the unit is translatable into UCUM and the field contains nothing else.,occurenceTiming.repeat.boundsDuration.value,,decimal,0,1,,,,,
-3,TQ.3,Duration,ST,0,1,,,If the value and unit in TQ.3 can be unambiguously parsed where the unit is translatable into UCUM and the field contains nothing else.,occurenceTiming.repeat.boundsDuration.unit,,string,0,1,,,,,
+3,TQ.3,Duration,ST,0,1,,,If the value and unit in TQ.3 can be unambiguously parsed where the unit is translatable into UCUM and the field contains nothing else.,occurenceTiming.repeat.boundsDuration.value,,decimal,0,1,,,,,See notes on TQ.3 in v2.5.1 for likely formats that will be used in the v2 message.
+3,TQ.3,Duration,ST,0,1,,,If the value and unit in TQ.3 can be unambiguously parsed where the unit is translatable into UCUM and the field contains nothing else.,occurenceTiming.repeat.boundsDuration.unit,,string,0,1,,,,,See notes on TQ.3 in v2.5.1 for likely formats that will be used in the v2 message.
 3,TQ.3,Duration,ST,0,1,,,If the value and unit in TQ.3 can be unambiguously parsed where the unit is translatable into UCUM and the field contains nothing else.,occurenceTiming.repeat.boundsDuration.system,,,0,1,,,"""UCUM""",,
 3,TQ.3,Duration,ST,0,1,,,If TQ.3 cannot be parsed/translated into the duration datatype,,"ServiceRequest.occurrenceTiming.repeat.#ext-duration#""",string,0,1,,,,,
 4,TQ.4,Start Date/Time,TS,0,1,,,,"
@@ -16,5 +16,5 @@ occurrenceTiming.repeat.boundsPeriod.end",,dateTime,0,1,,,,,
 8,TQ.8,Text,TX,0,1,,,,note(Annotation.text),,Reference(Annotation),0,-1,,,,,
 9,TQ.9,Conjunction,ID,0,1,,,,,,,,,,,,,
 10,TQ.10,Order Sequencing,OSD,0,1,,,,,,,,,,,,,
-11,TQ.11,Occurrence Duration,CE,0,1,,,,,,,,,,,,,
+11,TQ.11,Occurrence Duration,CE,0,1,,,,,,,,,,,,,"Note that the v2 base standard data type of CE is incorrect, but since it always has been CE it is not clear how implementers actually put a time and unit in this field.  It is up to the implementer how best to parse this and use the occurrenceTiming.repeat.duration and durationUnits."
 12,TQ.12,Total Occurrences,NM,0,1,,,,occurrenceTiming.repeat.count,,positiveInt,0,1,,,,,

@@ -9,7 +9,7 @@ Title: "Datatype XCN to RelatedPerson Map"
 * name = "DatatypeXCNtoRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2020-08-12"
+* date = "2022-02-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -172,7 +172,7 @@ Title: "Datatype XCN to RelatedPerson Map"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "name.use"
 * group.element[7].target.dependsOn[0].property = "vocabulary-map"
-* group.element[7].target.dependsOn[0].value = "Name Type"
+* group.element[7].target.dependsOn[0].value = "NameType"
 * group.element[8].code = #XCN.13
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -193,7 +193,7 @@ Title: "Datatype XCN to RelatedPerson Map"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "identifier.type.coding.code"
 * group.element[8].target.dependsOn[0].property = "vocabulary-map"
-* group.element[8].target.dependsOn[0].value = "ID Type"
+* group.element[8].target.dependsOn[0].value = "IDType"
 * group.element[9].code = #XCN.14
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"

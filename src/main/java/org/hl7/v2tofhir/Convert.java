@@ -1,5 +1,17 @@
 package org.hl7.v2tofhir;
-
+/*
+ * Copyright 2020 Audiacious Inquiry, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ */
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -30,7 +42,8 @@ import com.opencsv.CSVReader;
 
 public class Convert {
 
-    private static String MAP_OUTPUT_DIR = "tank/ig-data/input/pagecontent/";
+    private static String MAP_OUTPUT_DIR = "input/pagecontent/";
+    private static final String PAGE_CONTENT_DIR = "input/pagecontent";
     private static final String FHIR_PREFIX = "http://hl7.org/fhir/R4";
     private static final String FILE_TO_URLMAP = "filetourl.properties";
     private static int fileCount = 0;
@@ -52,7 +65,7 @@ public class Convert {
                     if (!dir.exists()) {
                         dir.mkdirs();
                     }
-                    MAP_OUTPUT_DIR = new File(dir, "ig-data/input/pagecontent").getPath() + "/";
+                    MAP_OUTPUT_DIR = new File(dir, PAGE_CONTENT_DIR).getPath() + "/";
                     continue;
                 } else if (arg.startsWith("-d")) {
                     download = arg.substring(2);
@@ -119,7 +132,7 @@ public class Convert {
     }
 
     private static void generateMapOutputs() {
-        String files[] = { MAP_OUTPUT_DIR + "7_message_maps.md", MAP_OUTPUT_DIR + "8_segment_maps.md", MAP_OUTPUT_DIR + "9_datatype_maps.md", MAP_OUTPUT_DIR + "10_coding_system_maps.md" };
+        String files[] = { MAP_OUTPUT_DIR + "message_maps.md", MAP_OUTPUT_DIR + "segment_maps.md", MAP_OUTPUT_DIR + "datatype_maps.md", MAP_OUTPUT_DIR + "coding_system_maps.md" };
         String types[] = { "Message", "Segment", "Datatype", "Table" };
 
         Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap();

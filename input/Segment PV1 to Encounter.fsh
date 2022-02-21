@@ -9,7 +9,7 @@ Title: "Segment PV1 to Encounter Map"
 * name = "SegmentPV1toEncounter"
 * status = #active
 * experimental = true
-* date = "2020-08-12"
+* date = "2022-02-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -499,6 +499,8 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[21].target.display = "serviceType"
 * group.element[21].target.dependsOn[0].property = "data-type-map"
 * group.element[21].target.dependsOn[0].value = "CWE[CodeableConcept]"
+* group.element[21].target.dependsOn[1].property = "vocabulary-map"
+* group.element[21].target.dependsOn[1].value = "HospitalService"
 * group.element[22].code = #PV1-13
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "type"
@@ -1006,7 +1008,7 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[47].extension[0].extension[2].valueInteger = 1
 * group.element[47].display = "Service Episode Identifier"
 * group.element[47].target.equivalence = #equivalent
-* group.element[47].target.code = #episodeOfCare(EpisodeOfCare.identifier)
+* group.element[47].target.code = #episodeOfCare(EpisodeOfCare[1].identifier)
 * group.element[47].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[47].target.extension[0].extension[0].url = "type"
 * group.element[47].target.extension[0].extension[0].valueCode = #"Identifier"
@@ -1014,6 +1016,6 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[47].target.extension[0].extension[1].valueInteger = 0
 * group.element[47].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[47].target.extension[0].extension[2].valueInteger = -1
-* group.element[47].target.display = "episodeOfCare(EpisodeOfCare.identifier)"
+* group.element[47].target.display = "episodeOfCare(EpisodeOfCare[1].identifier)"
 * group.element[47].target.dependsOn[0].property = "data-type-map"
 * group.element[47].target.dependsOn[0].value = "CX"

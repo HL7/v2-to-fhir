@@ -9,7 +9,7 @@ Title: "Datatype ST to Identifier Map"
 * name = "DatatypeSTtoIdentifier"
 * status = #active
 * experimental = true
-* date = "2020-08-12"
+* date = "2022-02-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -33,12 +33,5 @@ Title: "Datatype ST to Identifier Map"
 * group.element[0].extension[0].extension[2].valueInteger = 1
 * group.element[0].display = "String"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #value
-* group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
-* group.element[0].target.extension[0].extension[0].url = "type"
-* group.element[0].target.extension[0].extension[0].valueCode = #"string"
-* group.element[0].target.extension[0].extension[1].url = "cardinalityMin"
-* group.element[0].target.extension[0].extension[1].valueInteger = 1
-* group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
-* group.element[0].target.extension[0].extension[2].valueInteger = 1
-* group.element[0].target.display = "value"
+* group.element[0].target.code = #$value
+* group.element[0].target.display = "$value"

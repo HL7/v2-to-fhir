@@ -9,7 +9,7 @@ Title: "Datatype RP to Attachment Map"
 * name = "DatatypeRPtoAttachment"
 * status = #active
 * experimental = true
-* date = "2020-08-12"
+* date = "2022-02-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -61,3 +61,5 @@ Title: "Datatype RP to Attachment Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "contentType"
+* group.element[1].target.dependsOn[0].property = "value"
+* group.element[1].target.dependsOn[0].value = "RP.3\"/\"RP.4"

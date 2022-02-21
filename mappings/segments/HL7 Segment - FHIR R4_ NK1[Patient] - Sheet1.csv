@@ -3,7 +3,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,NK1-1,Set ID - NK1,SI,1,1,,,,,,,,,,,,,
 2,NK1-2,Name,XPN,0,-1,,,,contact.name,,HumanName,0,1,XPN,,,,
-3,NK1-3,Relationship,CWE,0,1,,,,,Patient.contact.#ext-v2Relationship#,CodeableConcept,0,1,CWE[CodeableConcept],Relationship,,,Patient.contact.relationship uses the same value set as NK1-7 (contact role). There doesn't seem to be a standard element for the NK1-3 relationship in Patient.contact. An extension will likely be needed
+3,NK1-3,Relationship,CWE,0,1,,,,,contact.extension-v2Relationship,CodeableConcept,0,1,CWE[CodeableConcept],Relationship,,,Patient.contact.relationship uses the same value set as NK1-7 (contact role). There doesn't seem to be a standard element for the NK1-3 relationship in Patient.contact. An extension will likely be needed
 4,NK1-4,Address,XAD,0,-1,,,,contact.address,,Address,0,1,XAD[Address],,,,Note the decreased cardinality for the FHIR map
 5,NK1-5,Phone Number,XTN,0,-1,,,,contact.telecom[1],,ContactPoint,0,-1,XTN[ContactPoint],,,,
 6,NK1-6,Business Phone Number,XTN,0,-1,,,,contact.telecom[2],,ContactPoint,0,-1,XTN[ContactPoint],,,,
@@ -33,7 +33,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 30,NK1-30,Contact Person's Name,XPN,0,-1,,,,contact.organization[1](Organization.contact.name),,HumanName,0,1,XPN[HumanName],,,,
 31,NK1-31,Contact Person's Telephone Number,XTN,0,-1,,,,contact.organization[1](Organization.contact.telecom),,ContactPoint,0,-1,XTN[ContactPoint],,,,
 32,NK1-32,Contact Person's Address,XAD,0,-1,,,,contact.organization[1](Organization.contact.address),,Address,0,1,XAD[Address],,,,
-33,NK1-33,Next of Kin/Associated Party's Identifiers,CX,0,-1,,,,,Patient.contact.#ext-identifier#,Identifier,0,-1,CX[Identifier],,,,
+33,NK1-33,Next of Kin/Associated Party's Identifiers,CX,0,-1,,,,,,,,,,,,,
 34,NK1-34,Job Status,CWE,0,1,,,,,,,,,,,,,The job status is typically the patient's job status when the relationship indicates the NK1 is the employer. We invite feedback on whether or not an extension to Patient.contact is appropriate for this element.
 35,NK1-35,Race,CWE,0,-1,,,"Use your local extension, e.g., US = US Core Race Extension, AUS = indiginous extension.",,,,,,,,,,
 36,NK1-36,Handicap,CWE,0,1,,,,,,,,,,,,,

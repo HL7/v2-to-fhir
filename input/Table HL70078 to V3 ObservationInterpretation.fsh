@@ -9,7 +9,7 @@ Title: "Table HL70078 to V3 ObservationInterpretation Map"
 * name = "TableHL70078toV3ObservationInterpretation"
 * status = #active
 * experimental = true
-* date = "2020-08-12"
+* date = "2022-02-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

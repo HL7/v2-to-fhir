@@ -19,9 +19,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 11,PR1-11,Surgeon,XCN,0,-1,,,,perfomer[2].actor(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
 11,PR1-11,Surgeon,XCN,0,-1,,,,perfomer[2].function.coding.code,,CodeableConcept,0,1,,,"""304292004""",,
 11,PR1-11,Surgeon,XCN,0,-1,,,,perfomer[2].function.coding.uri,,uri,0,1,,,"""http://snomed.info/sct""",,
-12,PR1-12,Procedure Practitioner,XCN,0,-1,,,,perfomer[3].actor(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
-12,PR1-12,Procedure Practitioner,XCN,0,-1,,,,,Procedure.perfomer[3].function.coding.code=??,CodeableConcept,0,1,,,,,
-12,PR1-12,Procedure Practitioner,XCN,0,-1,,,,perfomer[3].function.coding.uri,,uri,0,1,,,"""http://snomed.info/sct""",,
+12,PR1-12,Procedure Practitioner,XCN,0,-1,,,,perfomer[3].actor(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,"Because PR1-12 is less specific than other fields in PR1 in regards to the role of the practitioner, this mapping is not providing a default code for performer.function. But if an implementation knows the function of the providers being exchanged in PR1-12, than a implementation-specific value for performer.function may be assigned on a case by case basis."
 13,PR1-13,Consent Code,CWE,0,1,,,,,,,,,,,,,
 14,PR1-14,Procedure Priority,NM,0,1,,,,,,,,,,,,,
 15,PR1-15,Associated Diagnosis Code,CWE,0,1,,,,reasonCode,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,

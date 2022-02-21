@@ -1,8 +1,8 @@
 REM TODO: Make this an ant build, and add the ant tasks to mvn
 REM Clean Folders
-rmdir /s/q input output
+rmdir /s/q output
 REM Remove generated mapping input files
-rm fsh/Datatype*.fsh fsh/Segment*.fsh fsh/Table*.fsh fsh/Message*.fsh
+rm input/Datatype*.fsh input/Segment*.fsh input/Table*.fsh input/Message*.fsh
 REM Build the source
 call mvn compile package
 REM Run it over the data

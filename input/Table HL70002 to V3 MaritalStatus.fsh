@@ -9,7 +9,7 @@ Title: "Table HL70002 to V3 MaritalStatus Map"
 * name = "TableHL70002toV3MaritalStatus"
 * status = #active
 * experimental = true
-* date = "2020-08-12"
+* date = "2022-02-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -75,7 +75,9 @@ Title: "Table HL70002 to V3 MaritalStatus Map"
 * group.element[9].target.display = "Legally Separated"
 * group.element[10].code = #N
 * group.element[10].display = "Annulled"
-* group.element[10].target.equivalence = #unmatched
+* group.element[10].target.equivalence = #equivalent
+* group.element[10].target.code = #A
+* group.element[10].target.display = "Annulled"
 * group.element[11].code = #I
 * group.element[11].display = "Interlocutory"
 * group.element[11].target.equivalence = #equivalent
@@ -90,10 +92,14 @@ Title: "Table HL70002 to V3 MaritalStatus Map"
 * group.element[13].display = "Unknown"
 * group.element[13].target.equivalence = #equivalent
 * group.element[13].target.code = #UNK
-* group.element[13].target.display = "unknown"
+* group.element[13].target.display = "Unknown"
 * group.element[14].code = #O
 * group.element[14].display = "Other"
-* group.element[14].target.equivalence = #unmatched
+* group.element[14].target.equivalence = #equivalent
+* group.element[14].target.code = #OTH
+* group.element[14].target.display = "Other"
 * group.element[15].code = #T
 * group.element[15].display = "Unreported"
-* group.element[15].target.equivalence = #unmatched
+* group.element[15].target.equivalence = #equivalent
+* group.element[15].target.code = #NAVU
+* group.element[15].target.display = "Not available"

@@ -6,6 +6,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 2,VXU_V04.SFT,[{ SFT }],Software,0,-1,,,,MessageHeader[1],SFT[MessageHeader],,,Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.
 3,VXU_V04.UAC,[ UAC ],User Authentication Credential,0,1,,,,,,,,
 4,VXU_V04.PID,PID,Patient Identification Segment,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
+4,VXU_V04.PID,PID,Patient Identification Segment,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance],Provenance.target.reference=Patient[1].id,,
 5,VXU_V04.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
 6,VXU_V04.NK1,[{ NK1 }],Next of Kin/Associated Parties,0,-1,,,,RelatedPerson[1],NK1[RelatedPerson],RelatedPerson.patient.reference=Patient[PID].id,,"Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
 6,VXU_V04.NK1,[{ NK1 }],Next of Kin/Associated Parties,0,-1,,,,Patient[1],NK1[Patient],,,

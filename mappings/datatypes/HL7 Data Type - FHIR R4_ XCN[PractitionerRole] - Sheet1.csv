@@ -1,7 +1,7 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
-1,XCN.1,Person Identifier,ST,0,1,,,,practitioner(Practitioner.identifier.value),,string,0,1,,,,,
+1,XCN.1,Person Identifier,ST,0,1,,,,practitioner(Practitioner.identifier[1].value),,string,0,1,,,,,
 2,XCN.2,Family Name,FN,0,1,,,,practitioner(Practitioner.name),,,,,FN[HumanName],,,,
 3,XCN.3,Given Name,ST,0,1,,,,practitioner(Practitioner.name.given),,string,0,-1,,,,,
 4,XCN.4,Second and Further Given Names or Initials Thereof,ST,0,1,,,,practitioner(Practitioner.name.given),,string,0,-1,,,,,
@@ -9,11 +9,12 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 6,XCN.6,"Prefix (e.g., DR)",ST,0,1,,,,practitioner(Practitioner.name.prefix),,string,0,-1,,,,,
 7,XCN.7,"Degree (e.g., MD)",,0,1,,,,practitioner(Practitioner.name.suffix),,string,0,-1,,,,,
 8,XCN.8,Source Table,CWE,0,1,,,,,,,,,,,,,
-9,XCN.9,Assigning Authority,HD,0,1,,,,practitioner(Practitioner.identifier.#ext-assigningAuthority#),,,,,HD[AssigningAuthority],,,,
-10,XCN.10,Name Type Code,ID,0,1,,,,practitioner(Practitioner.name.use),,code,0,1,,Name Type,,,
+9,XCN.9,Assigning Authority,HD,0,1,,,If organization,practitioner(Practioner.identifier[1].assigner(Organization)),,Reference(Organization),0,1,HD[Organization],,,,
+9,XCN.9,Assigning Authority,HD,0,1,,,If system,practitioner(Practioner.identifier[1].system),,uri,0,1,HD[uri],,,,"Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then XCN.9 should be mapped to .system"
+10,XCN.10,Name Type Code,ID,0,1,,,,practitioner(Practitioner.name.use),,code,0,1,,NameType,,,
 11,XCN.11,Identifier Check Digit,ST,0,1,,,,,PractitionerRole.practitioner(Practitioner.identifier.#ext-checkDigit#),string,0,1,,,,,
 12,XCN.12,Check Digit Scheme,ID,0,1,,,,,PractitionerRole.practitioner(Practitioner.identifier.#ext-checkDigitScheme#),code,0,1,,,,,
-13,XCN.13,Identifier Type Code,ID,0,1,,,,practitioner(Practitioner.identifier.type.coding.code),,code,0,1,,ID Type,,,
+13,XCN.13,Identifier Type Code,ID,0,1,,,,practitioner(Practitioner.identifier.type.coding.code),,code,0,1,,IDType,,,
 14,XCN.14,Assigning Facility,HD,0,1,,,,,PractitionerRole.practitioner(Practitioner.identifier.#ext-assigningFacility#),Reference(Location),0,1,HD[Location],,,,
 15,XCN.15,Name Representation Code,ID,0,1,,,,,,,,,,,,,
 16,XCN.16,Name Context,CWE,0,1,,,,,,,,,,,,,

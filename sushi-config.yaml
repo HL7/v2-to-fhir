@@ -59,6 +59,40 @@ history:
     sequence: STU 1
     current: true
 
+pages:
+  introduction.md:
+    title: Introduction
+  mapping_guidelines.md:
+    title: Mapping Guidelines
+  questions.md:
+    title: Questions
+  glossary.md:
+    title: Glossary
+  acknowledgements.md:
+    title: Acknowledgements
+  mappings.md:
+    title: Mappings
+  message_maps.md:
+    title: Message Maps
+  segment_maps.md:
+    title: Segment Maps
+  datatype_maps.md:
+    title: Datatype Maps
+  coding_system_maps.md:
+    title: Coding System Maps
+  implementation_considerations.md:
+    title: Implementation Considerations
+  validation.md:
+    title: Validation
+  test_conversions.md:
+    title: Test Conversions
+  profiles.md:
+    title: Profiles
+  antlr_condition_syntax.md:
+    title: ANTLR Condition Syntax
+  links.md:
+    title: Links
+
 # ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
 # │  To control the ig.ini using this config, uncomment and set the "template" property.           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

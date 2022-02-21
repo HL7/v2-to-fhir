@@ -2,49 +2,79 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
 Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
 1,ADT_A01.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
 1,ADT_A01.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
-1,ADT_A01.MSH,MSH,Message Header,1,1,,,,Provenance[1],MSH[Provenance],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
-2,ADT_A01.SFT,[{ SFT }],Software Segment,0,-1,,,,MessageHeader[1],SFT[MessageHeader],,,Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.
-3,ADT_A01.UAC,[ UAC ],User Authentication Credential,0,1,,,,,,,,
-4,ADT_A01.EVN,EVN,Event Type,1,1,,,,Provenance[2],EVN[Provenance],Provenance.target=Bundle; Provenance.target=MessageHeader,,
-5,ADT_A01.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
-5,ADT_A01.PID,PID,Patient Identification,1,1,,,If PID-10 is for clinical purposes,Observation[1],PID[Observation-Race],Observation.subject.reference=Patient[1].id,,
-5,ADT_A01.PID,PID,Patient Identification,1,1,,,IF PID-22 is for clinical purposes,Observation[2],PID[Observation-EthnicGroup],Obsevation.subject.reference=Patient[1].id,,
-5,ADT_A01.PID,PID,Patient Identification,1,1,,,,RelatedPerson,PID[RelatedPerson-Mother],RelatedPerson.patient.reference=Patient[1].id,,
-5,ADT_A01.PID,PID,Patient Identification,1,1,,,,Account,PID[Account],Account.subject.reference=Patient[1].id,,
-6,ADT_A01.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
-7,ADT_A01:follow:PID.ARV,[{ ARV }],Access Restrictions,0,-1,"IF ARV-1 IN (""PID"", ""PD1"") AND ARV-3 NOT VALUED",,,Patient[1],ARV[Patient],Resource=Patient[1],,"FHIR does not yet support field level security tags.  The ARV, when located with the PID/PD1 in the v2 message, is meant to only apply to the patient.  However, technically it could point to other places in the messageas as well.  That is considered out of scope as."
-8,ADT_A01:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[Patient-PractitionerRole],,,
-8,ADT_A01:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 NOT EQUALS  ""PP"" OR ROL-3.3 NOT EQUALS ""HL70443""","(element(""3.1"")!=""PP"")or(element(""3.3"")!=""HL70443"")","While most likely all other HL70443 values go to RelatedPerson, the implementation needs to determine whether that is fully accurate.",RelatedPerson[1],ROL[RelatedPerson],RelatedPerson[1].patient.reference=Patient[1].id,,
-9,ADT_A01.NK1,[{ NK1 }],Next of Kin / Associated Parties,0,-1,"IF NK1-3.1 NOT IN (""EMR"", ""E"", ""F"", ""I"", ""S"")",,,RelatedPerson[2],NK1[RelatedPerson],RelatedPerson[2].patient.reference=Patient[1].id,,"Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
-9,ADT_A01.NK1,[{ NK1 }],Next of Kin / Associated Parties,0,-1,"IF NK1-3.1 NOT IN (""EMR"", ""E"", ""F"", ""I"", ""S"")",,,Patient[1],NK1[Patient],,,
-9,ADT_A01.NK1,[{ NK1 }],Next of Kin / Associated Parties,0,-1,"IF NK1-3.1 IN (""EMR"", ""E"", ""F"", ""I"", ""S"")",,,Patient[1],NK1[Patient],,,
-10,ADT_A01.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter[1].subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
-10,ADT_A01.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-11,ADT_A01.PV2,[ PV2 ],Patient Visit - Additional Info.,0,1,,,,Encounter[1],PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.
-12,ADT_A01:follow:PV1.ARV,[{ ARV }],Access Restrictions,0,-1,IF  ARV-3 NOT VALUED,,,Encounter[1],ARV[Encounter],Resource=Encounter[1],,"FHIR does not yet support field level security tags.  The ARV, when located with the PV1/PV2 in the v2 message, is meant to only apply to the encounter.  However, technically it could point to other places in the messageas as well.  That is considered out of scope as."
-13,ADT_A01:follow:PV1.ROL,[{ ROL }],Role,0,-1,,,,Encounter[1],ROL[Encounter-PractitionerRole],,,
-14,ADT_A01.DB1,[{ DB1 }],Disability Information,0,-1,,,,,,,,
-15,ADT_A01.OBX,[{ OBX }],Observation/Result,0,-1,,,"Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet.",Observation[2],OBX[Observation],Observation.subject.reference=Patient[1].id; Observation.encounter.reference=Encounter[1].id,,
-15,ADT_A01.OBX,[{ OBX }],Observation/Result,0,-1,,,"Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet.",Observation[2],OBX[Observation-Component],Observation.subject.reference=Patient[1].id; Observation.encounter.reference=Encounter[1].id,,
-16,ADT_A01.AL1,[{ AL1 }],Allergy Information,0,-1,,,,AllergyIntolerance,AL1[AllergyIntolerance],AllergyIntolerance.patient.reference=Patient[1].id,,Processing of the AL1 segment results in the creation of a new AllergyIntolerance resource
-17,ADT_A01.DG1,[{ DG1 }],Diagnosis Information,0,-1,,,If in context of the patient,Condition,DG1[Condition],Condition.subject.reference=Patient[1].id,,Processing of the DG1 segment results in the creation of a new Condition resource
-17,ADT_A01.DG1,[{ DG1 }],Diagnosis Information,0,-1,,,If in context of an encounter,Encounter[1],DG1[Encounter],Encounter[1].diagnosis.reference=Condition[1].id,,
-17,ADT_A01.DG1,[{ DG1 }],Diagnosis Information,0,-1,,,If in context of a episode of care,EpisodeOfCare[1],DG1[EpisodeOfCare],EpisodeOfCare.diagnosis.reference=Condition[1].id,,
-18,ADT_A01.DRG,[ DRG ],Diagnosis Related Group,0,1,,,,,,,,
-19,ADT_A01.PROCEDURE,[{,--- PROCEDURE begin,0,-1,,,,,,,,
-19.1,ADT_A01.PROCEDURE.PR1,PR1,Procedures,1,1,,,,Procedure,PR1[Procedure],Procedure.subject.reference=Patient[1].id,,
-19.2,ADT_A01.PROCEDURE.ROL,[{ ROL }],Role,0,-1,,,,,,,,
-19.3,/ADT_A01.PROCEDURE,}],--- PROCEDURE end,,,,,,,,,,
-20,ADT_A01.GT1,[{ GT1 }],Guarantor,0,-1,,,,,,,,
-21,ADT_A01.INSURANCE,[{,--- INSURANCE begin,0,-1,,,,,,,,
-21.1,ADT_A01.INSURANCE.IN1,IN1,Insurance,1,1,,,,Coverage[1],IN1[Coverage],Coverage.subscriber.reference=Patient[1].id,,Processing of the IN1 segment results in the creation of a new Coverage resource
-21.2,ADT_A01.INSURANCE.IN2,[ IN2 ],Insurance Additional Info.,0,1,,,,Coverage[1],IN2[Coverage],,,Incorporate IN2 content into the Coverage created from the IN1 segment.
-21.3,ADT_A01.INSURANCE.IN3,[{ IN3 }],Insurance Additional Info - Cert.,0,-1,,,,Coverage[1],IN3[Coverage],,,Incorporate IN3 content into the Coverage created from the IN1 segment.
-21.4,ADT_A01.INSURANCE.ROL,[{ ROL }],Role,0,-1,,,,,,,,
-21.5,ADT_A01.INSURANCE.AUT,[{ AUT }],Authorization Record,0,-1,,,,,,,,
-21.6,ADT_A01.INSURANCE.RF1,[{ RF1 }],Referral Information,0,-1,,,,,,,,
-21.7,/ADT_A01.INSURANCE,}],--- INSURANCE end,,,,,,,,,,
-22,ADT_A01.ACC,[ ACC ],Accident Information,0,1,,,,,,,,
-23,ADT_A01.UB1,[ UB1 ],Universal Bill Information,0,1,,,,,,,,
-24,ADT_A01.UB2,[ UB2 ],Universal Bill 92 Information,0,1,,,,,,,,
-25,ADT_A01.PDA,[ PDA ],Patient Death and Autopsy,0,1,,,,,,,,
+1,ADT_A01.MSH,MSH,Message Header,1,1,,,"If there is a source in MSH-4, or known based on the configuration.",Provenance[1],MSH[Provenance-Source],Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id,,"If the FHIR transformation does not yield a FHIR message, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Proviance resource instance to the relevant FHIR resources generated."
+1,ADT_A01.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,"If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
+2,ADT_A01.ARV,[{ ARV }],Access Restrictions,0,-1,,,,,,,,
+3,ADT_A01.SFT,[{ SFT }],Software Segment,0,-1,,,If the software does represent not the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
+Provenance[1].entity.role=""derivation""",,
+3,ADT_A01.SFT,[{ SFT }],Software Segment,0,-1,,,If the software represents the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
+Provenance[1].entity.role=""source""",,
+4,ADT_A01.UAC,[ UAC ],User Authentication Credential,0,1,,,,,,,,
+5,ADT_A01.EVN,EVN,Event Type,1,1,,,,Provenance[3],EVN[Provenance-Activity],Provenance[3].target.reference=MessageHeader[1].id,,
+5,ADT_A01.EVN,EVN,Event Type,1,1,IF EVN-5 NOT VALUED AND (MSH-22 IS VALUED OR MSH-4 IS VALUED),,,Provenance[3],MSH[Provenance-Operator],Provenance[3].target.reference=MessageHeader[1].id,,"If EVN-5 is not valued, then the MSH may have either the sending responsible organization (MSH-22) or the sending facility (MSH-4) to reasonable approximate the agent relevant for this Provenance instance."
+6,ADT_A01.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
+6,ADT_A01.PID,PID,Patient Identification,1,1,,,,RelatedPerson,PID[RelatedPerson-Mother],RelatedPerson.patient.reference=Patient[1].id,,
+6,ADT_A01.PID,PID,Patient Identification,1,1,,,,Account,PID[Account],Account.subject.reference=Patient[1].id,,
+6,ADT_A01.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance-Patient],Provenance.target.reference=Patient[1].id,,
+7,ADT_A01.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
+8,ADT_A01.OH1,[{ OH1 }],Employment Status,0,-1,,,,,,,,
+9,ADT_A01.OH2,[{ OH2 }],Past or Present Job,0,-1,,,,,,,,
+10,ADT_A01.OH3,[  OH3  ],Usual Work,0,1,,,,,,,,
+11,ADT_A01.OH4,[{ OH4 }],Combat Zone Work,0,-1,,,,,,,,
+12,ADT_A01:follow:PID.ARV,[{ ARV }],Access Restrictions,0,-1,,,,,,,,"FHIR does not yet support field level security tags.  The ARV, when located with the PID/PD1 in the v2 message, is meant to only apply to the patient.  However, technically it could point to other places in the messageas as well.  That is considered out of scope as."
+13,ADT_A01:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[Patient-GeneralPractitioner],,,
+13,ADT_A01:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")!=""PP"")or(element(""3.3"")!=""HL70443"")","While most likely all other HL70443 values go to RelatedPerson, the implementation needs to determine whether that is fully accurate.",RelatedPerson[1],ROL[CareTeam,RelatedPerson[1].patient.reference=Patient[1].id,,
+13,ADT_A01:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.3 NOT EQUALS ""HL70443""",,"Need to determine whether it goes to Patient.contact, Patient.managingOrganization, CareTeam, or another FHIR resource",,,,,
+14,ADT_A01:follow:PID.PRT,[{ PRT }],Participation,0,-1,,,,,,,,
+15,ADT_A01.NEXT_OF_KIN,[{,--- NEXT_OF_KIN begin,0,-1,,,,,,,,
+15.1,ADT_A01.NEXT_OF_KIN.NK1,NK1,Next of Kin / Associated Parties,0,-1,"IF NK1-3.1 NOT IN (""EMR"", ""E"", ""F"", ""I"", ""S"")",,,RelatedPerson[2],NK1[RelatedPerson],RelatedPerson[2].patient.reference=Patient[1].id,,"Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
+15.1,ADT_A01.NEXT_OF_KIN.NK1,NK1,Next of Kin / Associated Parties,0,-1,"IF NK1-3.1 NOT IN (""EMR"", ""E"", ""F"", ""I"", ""S"")",,,Patient[1],NK1[Patient],,,
+15.1,ADT_A01.NEXT_OF_KIN.NK1,NK1,Next of Kin / Associated Parties,0,-1,"IF NK1-3.1 IN (""EMR"", ""E"", ""F"", ""I"", ""S"")",,,Patient[1],NK1[Patient],,,
+15.2,ADT_A01.NEXT_OF_KIN.OH2,[{ OH2 }],Past or Present Job,0,-1,,,,,,,,
+15.2,ADT_A01.NEXT_OF_KIN.OH3,[  OH3  ],Usual Work,0,1,,,,,,,,
+15.3,/ADT_A01.NEXT_OF_KIN,}],--- NEXT_OF_KIN end,,,,,,,,,,
+16,ADT_A01.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter[1].subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
+16,ADT_A01.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
+16,ADT_A01.PV1,PV1,Patient Visit,1,1,IF IN3.21 IS VALUED,,,CareTeam[1],PV1[CareTeam],CareTeam[1].encounter.reference=Encounter[1].id,,
+17,ADT_A01.PV2,[ PV2 ],Patient Visit - Additional Info.,0,1,,,,Encounter[1],PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.
+18,ADT_A01:follow:PV1.ARV,[{ ARV }],Access Restrictions,0,-1,,,,,,,,"FHIR does not yet support field level security tags.  The ARV, when located with the PV1/PV2 in the v2 message, is meant to only apply to the encounter.  However, technically it could point to other places in the messageas as well.  That is considered out of scope as."
+19,ADT_A01:follow:PV1.ROL,[{ ROL }],Role,0,-1,,,,Encounter[1],ROL[Encounter-PractitionerRole],,,
+20,ADT_A01:follow:PV1.PRT,[{ PRT }],Participation,0,-1,,,,,,,,
+21,ADT_A01.DB1,[{ DB1 }],Disability Information,0,-1,,,,,,,,
+22,ADT_A01.OBSERVATION,[{,--- OBSERVATION begin,0,-1,,,,,,,,
+22.1,ADT_A01.OBSERVATION.OBX,OBX,Observation/Result,0,-1,,,"Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet.",Observation[3],OBX[Observation],Observation[3].subject.reference=Patient[1].id,,"One cannot determine whether this observation made during the PV1/PV2 communicated above, or from a prior visit/stay. It is therefore up to the implementer whether to populate Observation.encounter.reference with the Encounter[1].id or not.  Only when the ADT message involves an event before the encounter occurs, e.g., the intiial registration, it is clear that the observation is NOT associated with Encounter[1]."
+22.1,ADT_A01.OBSERVATION.OBX,OBX,Observation/Result,0,-1,,,"Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet.",Observation[3],OBX[Observation-Component],Observation[3].subject.reference=Patient[1].id,,"One cannot determine whether this observation made during the PV1/PV2 communicated above, or from a prior visit/stay. It is therefore up to the implementer whether to populate Observation.encounter.reference with the Encounter[1].id or not.  Only when the ADT message involves an event before the encounter occurs, e.g., the intiial registration, it is clear that the observation is NOT associated with Encounter[1]."
+22.2,ADT_A01.OBSERVATION.PRT,[{ PRT }],Participation,0,-1,,,,,,,,
+22.3,/ADT_A01.OBSERVATION,}],--- OBSERVATION end,,,,,,,,,,
+23,ADT_A01.AL1,[{ AL1 }],Allergy Information,0,-1,,,,AllergyIntolerance,AL1[AllergyIntolerance],AllergyIntolerance.patient.reference=Patient[1].id,,Processing of the AL1 segment results in the creation of a new AllergyIntolerance resource
+24,ADT_A01.IAM,[{ IAM }],Patient Advers Reaction Information,0,-1,,,,,,,,
+25,ADT_A01.DG1,[{ DG1 }],Diagnosis Information,0,-1,,,If in context of the patient,Condition[1],DG1[Condition],Condition[1].subject.reference=Patient[1].id,,Processing of the DG1 segment results in the creation of a new Condition resource
+25,ADT_A01.DG1,[{ DG1 }],Diagnosis Information,0,-1,,,If in context of an encounter,Encounter[1],DG1[Encounter],Encounter[1].diagnosis.reference=Condition[1].id,,
+25,ADT_A01.DG1,[{ DG1 }],Diagnosis Information,0,-1,,,If in context of a episode of care,EpisodeOfCare[1],DG1[EpisodeOfCare],"EpisodeOfCare.patient.reference=Patient[1].id;
+EpisodeOfCare.diagnosis.reference=Condition[1].id",,
+26,ADT_A01.DRG,[ DRG ],Diagnosis Related Group,0,1,,,,,,,,
+27,ADT_A01.PROCEDURE,[{,--- PROCEDURE begin,0,-1,,,,,,,,
+27.1,ADT_A01.PROCEDURE.PR1,PR1,Procedures,1,1,,,,Procedure,PR1[Procedure],Procedure.subject.reference=Patient[1].id,,
+27.2,ADT_A01.PROCEDURE.ROL,[{ ROL }],Role,0,-1,,,,,,,,
+27.3,ADT_A01.PROCEDURE.PRT,[{ PRT }],Participation,0,-1,,,,,,,,
+27.4,/ADT_A01.PROCEDURE,}],--- PROCEDURE end,,,,,,,,,,
+28,ADT_A01.GT1,[{ GT1 }],Guarantor,0,-1,,,,,,,,
+29,ADT_A01.INSURANCE,[{,--- INSURANCE begin,0,-1,,,,,,,,
+29.1,ADT_A01.INSURANCE.IN1,IN1,Insurance,1,1,,,,Coverage[1],,,,Processing of the IN1 segment results in the creation of a new Coverage resource
+29.2,ADT_A01.INSURANCE.IN2,[ IN2 ],Insurance Additional Info.,0,1,,,,Coverage[1],,,,Incorporate IN2 content into the Coverage created from the IN1 segment.
+29.3,ADT_A01.INSURANCE.IN3,[{ IN3 }],Insurance Additional Info - Cert.,0,-1,,,,CareTeam[1],IN3[CareTeam],CareTeam.subject.reference=Patient[1].id,,Incorporate IN3 content into the Coverage created from the IN1 segment.
+29.4,ADT_A01.INSURANCE.ROL,[{ ROL }],Role,0,-1,,,,,,,,
+29.5,ADT_A01.INSURANCE.PRT,[{ PRT }],Participation,0,-1,,,,,,,,
+29.6,ADT_A0.INSURANCE.AUTHORIZATION,[{,--- AUTHORIZATION begin,0,-1,,,,,,,,
+29.6.1,ADT_A01.INSURANCE.AUTHORIZATION.AUT,AUT,Authorization Record,0,-1,,,,,,,,
+29.6.2,ADT_A01.INSURANCE.AUTHORIZATION.PRT,[{ PRT }],Participation,0,-1,,,,,,,,
+29.6.3,/ADT_A01.INSURANCE.AUTHORIZATION,}],--- AUTHORIZATION end,,,,,,,,,,
+29.7,ADT_A01.INSURANCE.REFERRAL,[{,--- REFERRAL begin,0,-1,,,,,,,,
+29.7.1,ADT_A01.INSURANCE.REFERRAL.RF1,RF1,Referral Information,0,-1,,,,,,,,
+29.7.2,ADT_A01.INSURANCE.REFERRAL.PRT,[{ PRT }],Participation,0,-1,,,,,,,,
+29.7.3,/ADT_A01.INSURANCE.REFERRAL,}],--- REFERRAL end,,,,,,,,,,
+29.8,/ADT_A01.INSURANCE,}],--- INSURANCE end,,,,,,,,,,
+30,ADT_A01.ACC,[ ACC ],Accident Information,0,1,,,,,,,,
+31,ADT_A01.UB1,[ UB1 ],Universal Bill Information,0,1,,,,,,,,
+32,ADT_A01.UB2,[ UB2 ],Universal Bill 92 Information,0,1,,,,,,,,
+33,ADT_A01.PDA,[ PDA ],Patient Death and Autopsy,0,1,,,,,,,,

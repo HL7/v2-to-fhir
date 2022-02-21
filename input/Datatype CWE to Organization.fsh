@@ -9,7 +9,7 @@ Title: "Datatype CWE to Organization Map"
 * name = "DatatypeCWEtoOrganization"
 * status = #active
 * experimental = true
-* date = "2020-08-12"
+* date = "2022-02-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -33,7 +33,7 @@ Title: "Datatype CWE to Organization Map"
 * group.element[0].extension[0].extension[2].valueInteger = 1
 * group.element[0].display = "Identifier"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #Organization.identifier.value
+* group.element[0].target.code = #identifier.value
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"string"
@@ -41,7 +41,7 @@ Title: "Datatype CWE to Organization Map"
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
-* group.element[0].target.display = "Organization.identifier.value"
+* group.element[0].target.display = "identifier.value"
 * group.element[1].code = #CWE.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -52,7 +52,7 @@ Title: "Datatype CWE to Organization Map"
 * group.element[1].extension[0].extension[2].valueInteger = 1
 * group.element[1].display = "Text"
 * group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #Organization.name
+* group.element[1].target.code = #name
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"string"
@@ -60,7 +60,7 @@ Title: "Datatype CWE to Organization Map"
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
-* group.element[1].target.display = "Organization.name"
+* group.element[1].target.display = "name"
 * group.element[2].code = #CWE.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -71,7 +71,7 @@ Title: "Datatype CWE to Organization Map"
 * group.element[2].extension[0].extension[2].valueInteger = 1
 * group.element[2].display = "Name of Coding System"
 * group.element[2].target.equivalence = #equivalent
-* group.element[2].target.code = #Organization.identifier.system
+* group.element[2].target.code = #identifier.system
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"uri"
@@ -79,4 +79,4 @@ Title: "Datatype CWE to Organization Map"
 * group.element[2].target.extension[0].extension[1].valueInteger = 1
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
-* group.element[2].target.display = "Organization.identifier.system"
+* group.element[2].target.display = "identifier.system"

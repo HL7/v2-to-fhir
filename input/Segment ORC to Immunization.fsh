@@ -9,7 +9,7 @@ Title: "Segment ORC to Immunization Map"
 * name = "SegmentORCtoImmunization"
 * status = #active
 * experimental = true
-* date = "2020-08-12"
+* date = "2022-02-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -157,7 +157,7 @@ Title: "Segment ORC to Immunization Map"
 * group.element[6].extension[0].extension[1].valueInteger = 1
 * group.element[6].extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].extension[0].extension[2].valueInteger = 1
-* group.element[6].display = "Date/Time of Transaction"
+* group.element[6].display = "Date/Time of Order Event"
 * group.element[6].target.equivalence = #equivalent
 * group.element[6].target.code = #recorded
 * group.element[6].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

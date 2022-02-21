@@ -9,7 +9,7 @@ Title: "Datatype CM to Specimen Map"
 * name = "DatatypeCMSourcetoSpecimen"
 * status = #active
 * experimental = true
-* date = "2020-08-12"
+* date = "2022-02-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -33,7 +33,7 @@ Title: "Datatype CM to Specimen Map"
 * group.element[0].extension[0].extension[2].valueInteger = 1
 * group.element[0].display = "Specimen source name or code"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #Specimen.type
+* group.element[0].target.code = #type
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -41,7 +41,7 @@ Title: "Datatype CM to Specimen Map"
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
-* group.element[0].target.display = "Specimen.type"
+* group.element[0].target.display = "type"
 * group.element[0].target.dependsOn[0].property = "data-type-map"
 * group.element[0].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[1].code = #CM.2

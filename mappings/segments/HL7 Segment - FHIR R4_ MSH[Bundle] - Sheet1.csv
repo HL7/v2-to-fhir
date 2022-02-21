@@ -11,10 +11,8 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 7,MSH-7,Date/Time of Message,DTM,1,1,,,,timestamp,,instant,0,1,,,,,
 8,MSH-8,Security,ST,0,1,,,,,,,,,,,,,
 9,MSH-9,Message Type,MSG,1,1,,,,,,,,,,,,,
-10,MSH-10,Message Control ID,ST,1,1,,,,identifier,,Identifier,0,-1,ST[Identifier],,,,"Need a gForge to request a MessageHeader.identifier (https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&tracker_item_id=20704&start=0)
-Note that if a message is part of a batch, then the MSH goes to a ""sub-bundle""..
-Note that as messages switch from V2 to FHIR and the response back from FHIR to V2, the ""mapping engine"" needs to track the actual MSH.10.00.00 value and Bundle.identifier value to connect responses correctly."
-10,MSH-10,Message Control ID,ST,1,1,,,,type,,,,,,,"""message""",,
+10,MSH-10,Message Control ID,ST,1,1,,,,identifier.value,,string,0,1,,,,,
+10,MSH-10,Message Control ID,ST,1,1,,,,identifier.system,,uri,0,1,,,/to be determined by the implementer/,,
 11,MSH-11,Processing ID,PT,1,1,,,,,,,,,,,,,
 12,MSH-12,Version ID,VID,1,1,,,,,,,,,,,,,
 13,MSH-13,Sequence Number,NM,0,1,,,,,,,,,,,,,

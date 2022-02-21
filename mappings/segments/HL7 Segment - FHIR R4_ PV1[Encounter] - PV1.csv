@@ -24,7 +24,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 9,PV1-9,Consulting Doctor,XCN,0,-1,,,,participant[3].type.coding.code,,code,0,1,,,"""CON""",,
 9,PV1-9,Consulting Doctor,XCN,0,-1,,,,participant[3].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v3-ParticipationType""",,
 9,PV1-9,Consulting Doctor,XCN,0,-1,,,,participant[3].type.text,,string,0,1,,,"""consultant""",,
-10,PV1-10,Hospital Service,CWE,0,1,,,,serviceType,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+10,PV1-10,Hospital Service,CWE,0,1,,,,serviceType,,CodeableConcept,0,1,CWE[CodeableConcept],HospitalService,,,
 11,PV1-11,Temporary Location,PL,0,1,,,,,,,,,,,,,
 12,PV1-12,Preadmit Test Indicator,CWE,0,1,,,,,,,,,,,,,
 13,PV1-13,Re-admission Indicator,CWE,0,1,,,,hospitalization.reAdmission,,CodeableConcept,0,1,CWE[CodeableConcept],ReadmissionIndicator,,,
@@ -35,8 +35,8 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 17,PV1-17,Admitting Doctor,XCN,0,-1,,,,participant[4].type.coding.code,,code,0,1,,,"""ADM""",,
 17,PV1-17,Admitting Doctor,XCN,0,-1,,,,participant[4].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v3-ParticipationType""",,
 17,PV1-17,Admitting Doctor,XCN,0,-1,,,,participant[4].type.text,,string,0,1,,,"""admitter""",,
-18,PV1-18,Patient Type,CWE,0,1,,,,,,,,,,,,,Please provide the use case for this field and a suggested FHIR element mapping.
-19,PV1-19,Visit Number,CX,0,1,,,,identifier[1],,Identifier,0,-1,CX[Identifier],,,,"Propose an identifier type of ""visit number"" "
+18,PV1-18,Patient Type,CWE,0,1,,,,,,,,,,,,,"This field is widely used, but since the value set is user defined and there are no examples, implementations vary widely.  It may fit for some Encounter.type, while others may want to reflect it on Patient or use another Encounter attribute.  Consequently, the implementer has to determine where to map this."
+19,PV1-19,Visit Number,CX,0,1,,,,identifier[1],,Identifier,0,-1,CX[Identifier],,,,
 19,PV1-19,Visit Number,CX,0,1,,,,identifier[1].type.coding.code,,code,,,,,"""VN""",,
 19,PV1-19,Visit Number,CX,0,1,,,,identifier[1].type.coding.system ,,uri,,,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,
 19,PV1-19,Visit Number,CX,0,1,,,,identifier[1].type.text,,string,,,,,"""visit number""",,
@@ -81,5 +81,5 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 52,PV1-52,Other Healthcare Provider,XCN,0,-1,,,,"participant[5].type.coding.code=""PART""",,code,0,1,,,"""PART""",,
 52,PV1-52,Other Healthcare Provider,XCN,0,-1,,,,participant[5].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v3-ParticipationType""",,
 52,PV1-52,Other Healthcare Provider,XCN,0,-1,,,,"participant[5].type.text=""Participation""",,string,0,1,,,"""Participation""",,
-53,PV1-53,Service Episode Description,ST,0,1,,,,,Encounter.episodeOfCare(EpisodeOfCare.#ext-name#),string,0,1,,,,,
-54,PV1-54,Service Episode Identifier,CX,0,1,,,,episodeOfCare(EpisodeOfCare.identifier),,Identifier,0,-1,CX,,,,
+53,PV1-53,Service Episode Description,ST,0,1,,,,,Encounter.episodeOfCare(EpisodeOfCare[1].#ext-name#),string,0,1,,,,,
+54,PV1-54,Service Episode Identifier,CX,0,1,,,,episodeOfCare(EpisodeOfCare[1].identifier),,Identifier,0,-1,CX,,,,

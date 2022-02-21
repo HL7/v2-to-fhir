@@ -3,5 +3,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,DLN.1,License Number,ST,1,1,,,,value,,string,0,1,,,,,
 1,DLN.1,License Number,ST,1,1,,,,type.coding.code,,CodeableConcept,0,1,,,"""DL""",,
+1,DLN.1,License Number,ST,1,1,,,,type.coding.sytem,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""
+",,
 2,DLN.2,"Issuing State, Province, Country",CWE,0,1,,,,system,,uri,0,1,CWE[uri],,,,
 3,DLN.3,Expiration Date,DT,0,1,,,,period.end,,dateTime,0,1,,,,,

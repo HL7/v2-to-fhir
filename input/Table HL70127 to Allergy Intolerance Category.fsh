@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AllergyCategory - Sheet1.csv
+// HL7 Concept Map_ AllergyType[AllergyIntolerance.category] - Sheet1.csv
 Instance: TableHL70127toAllergyIntoleranceCategory
 InstanceOf: ConceptMap
 Title: "Table HL70127 to Allergy Intolerance Category Map"
@@ -9,7 +9,7 @@ Title: "Table HL70127 to Allergy Intolerance Category Map"
 * name = "TableHL70127toAllergyIntoleranceCategory"
 * status = #active
 * experimental = true
-* date = "2020-08-12"
+* date = "2022-02-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -47,7 +47,7 @@ Title: "Table HL70127 to Allergy Intolerance Category Map"
 * group.element[5].code = #AA
 * group.element[5].display = "Animal allergy"
 * group.element[5].target.equivalence = #equivalent
-* group.element[5].target.code = #environment
+* group.element[5].target.code = #biologic
 * group.element[5].target.display = "Environment"
 * group.element[6].code = #PA
 * group.element[6].display = "Plant allergy"

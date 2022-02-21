@@ -1,9 +1,11 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
-1,XTN.1,Telephone Number,ST,0,1,"IF XTN.3 NOT IN (""Internet"", ""X.400"") AND XTN.7 AND XTN.12 NOT VALUED",,,value,,string,0,1,,,,,
+1,XTN.1,Telephone Number,ST,0,1,"IF XTN.3 NOT IN (""Internet"", ""X.400"") AND XTN.7 NOT VALUED AND XTN.12 NOT VALUED",,,value,,string,0,1,,,,,
 2,XTN.2,Telecommunication Use Code,ID,0,1,,,,use,,code,0,1,,TelecomUseCode,,,
-3,XTN.3,Telecommunication Equipment Type,ID,1,1,,,,system,,code,0,1,,TelecomEquipType,,,
+3,XTN.3,Telecommunication Equipment Type,ID,1,1,,,,system,,code,0,1,,TelecomEquipmentType,,,
+3,XTN.3,Telecommunication Equipment Type,ID,1,1,IF XTN.3 NOT VALUED AND XTN.4 VALUED,,,system,,code,0,1,,,"""email""",,
+3,XTN.3,Telecommunication Equipment Type,ID,1,1,IF XTN.3 NOT VALUED AND XTN.4  NOT VALUED,,,system.extension-data-absent-reason,,code,0,1,,,"""unknown""",,"This element became required in v2.7, before that, it was optional. FHIR has a requirement that system be populated when a value is present. If the source v2 message does not contain an Equipment Type, a default system may be selected based on other information in the XTN instance (eg, if XTN.4 is valued, then the Equipment Type should default to ""email). However, if neither XTN.3 nor XTN.4 are valued then it is unclear what the ContactPoint.system would be, thus the data absent reason would clearly indicate it is ""unknown""."
 4,XTN.4,Communication Address,ST,0,1,"IF XTN.3 IN (""Internet"", ""X.400"")",,,value,,string,0,1,,,,,
 5,XTN.5,Country Code,SNM,0,1,,,,extension-contactpoint-country,,string,0,1,,,,,
 6,XTN.6,Area/City Code,SNM,0,1,,,,extension-contactpoint-area,,string,0,1,,,,,
