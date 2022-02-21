@@ -52,6 +52,8 @@ jobs:
 
       - name: Commit and Push changes
         run: |
+          git config --global user.name 'Automated CSV Converter'
+          git config --global user.email 'actions@users.noreply.github.com'
           git add -A
           git commit -m "Add downloaded CSV files"
           git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
