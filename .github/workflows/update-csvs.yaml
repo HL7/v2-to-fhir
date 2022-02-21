@@ -2,10 +2,10 @@ name: Download CSV Files
 on:
   push:
     paths:
-      - 'mappings/*.csv'
+      - 'mappings/*.csv' '.github/workflows/update-csvs.yaml'
 
 jobs:
-  Download CSV Files:
+  build:
 
     runs-on: windows-latest
 
