@@ -46,6 +46,8 @@ copyrightYear: 2020+
 releaseLabel: CI Build
 
 pages:
+  index.md:
+    title: V2 to FHIR
   introduction.md:
     title: Introduction
   mapping_guidelines.md:
