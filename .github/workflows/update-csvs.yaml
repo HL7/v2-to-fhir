@@ -41,16 +41,13 @@ jobs:
         shell: bash
         run: |
           rm -f mappings/segments/*.csv mappings/messages/*.csv mappings/codesystems/*.csv mappings/datatypes/*.csv
-          echo Delete finshed
-          ls -R $JAVA_HOME
-          $JAVA_HOME/bin/java -cp target/v2-to-fhir.jar;target/lib/* org.hl7.v2tofhir.Convert -omappings/segments "-rmappings/v2-to-FHIR Map Inventory - Segment.csv" -omappings/datatypes "-rmappings/v2-to-FHIR Map Inventory - Data Type.csv" -omappings/messages "-rmappings/v2-to-FHIR Map Inventory - Message.csv" -omappings/codesystems "-dmappings/v2-to-FHIR Map Inventory - Code System.csv"
+          $JAVA_HOME/bin/java -cp target/v2-to-fhir.jar:target/lib/* org.hl7.v2tofhir.Convert -omappings/segments "-rmappings/v2-to-FHIR Map Inventory - Segment.csv" -omappings/datatypes "-rmappings/v2-to-FHIR Map Inventory - Data Type.csv" -omappings/messages "-rmappings/v2-to-FHIR Map Inventory - Message.csv" -omappings/codesystems "-dmappings/v2-to-FHIR Map Inventory - Code System.csv"
 
       - name: Recreate SUSHI Files
         shell: bash
         run: |
           rm -f input/Datatype*.fsh input/Segment*.fsh input/Table*.fsh input/Message*.fsh
-          echo Delete finshed
-          $JAVA_HOME/bin/java -cp target/v2-to-fhir.jar;target/lib/* org.hl7.v2tofhir.Convert -o. mappings/messages mappings/segments mappings/datatypes mappings/codesystems
+          $JAVA_HOME/bin/java -cp target/v2-to-fhir.jar:target/lib/* org.hl7.v2tofhir.Convert -o. mappings/messages mappings/segments mappings/datatypes mappings/codesystems
 
       - name: Commit and Push changes
         run: |
