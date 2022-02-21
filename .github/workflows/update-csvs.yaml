@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubunto-latest
 
     steps:
       - name: Checkout Files
@@ -27,24 +27,25 @@ jobs:
           maven-version: 3.5.3
 
       - name: Build the Conversion tools
+        shell: bash
         run: mvn compile package
 
       - name: Download files
+        shell: bash
         run: |
-          del mappings\segments\*.csv mappings\messages\*.csv mappings\codesystems\*.csv mappings\datatypes\*.csv
-          "%JAVA_HOME%\bin\java" -classpath target\v2-to-fhir.jar;target\lib\* org.hl7.v2tofhir.Convert -omappings/segments "-rmappings\v2-to-FHIR Map Inventory - Segment.csv" -omappings/datatypes "-rmappings\v2-to-FHIR Map Inventory - Data Type.csv" -omappings/messages "-rmappings\v2-to-FHIR Map Inventory - Message.csv" -omappings/codesystems "-dmappings\v2-to-FHIR Map Inventory - Code System.csv"
+          rm mappings/segments/*.csv mappings/messages/*.csv mappings/codesystems/*.csv mappings/datatypes/*.csv
+          "%JAVA_HOME%/bin/java" -classpath target/v2-to-fhir.jar;target/lib/* org.hl7.v2tofhir.Convert -omappings/segments "-rmappings/v2-to-FHIR Map Inventory - Segment.csv" -omappings/datatypes "-rmappings/v2-to-FHIR Map Inventory - Data Type.csv" -omappings/messages "-rmappings/v2-to-FHIR Map Inventory - Message.csv" -omappings/codesystems "-dmappings/v2-to-FHIR Map Inventory - Code System.csv"
 
       - name: Recreate SUSHI Files
+        shell: bash
         run: |
-          del input\Datatype*.fsh input\Segment*.fsh input\Table*.fsh input\Message*.fsh
-          "%JAVA_HOME_11_X64%\bin\java" -cp target\v2-to-fhir.jar;target\lib\* org.hl7.v2tofhir.Convert -o. mappings/messages mappings/segments mappings/datatypes mappings/codesystems
+          rm input/Datatype*.fsh input/Segment*.fsh input/Table*.fsh input/Message*.fsh
+          "%JAVA_HOME_11_X64%/bin/java" -cp target/v2-to-fhir.jar;target/lib/* org.hl7.v2tofhir.Convert -o. mappings/messages mappings/segments mappings/datatypes mappings/codesystems
 
-      - name: Commit changes
+      - name: Commit and Push changes
+        shell: bash
         run: |
           git add -A
           git commit -m "Add downloaded CSV files"
-
-      - name: Push Changes to GitHub
-        run: |
           git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push
