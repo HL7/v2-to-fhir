@@ -9,7 +9,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * name = "MessageADT_A01toBundle"
 * status = #active
 * experimental = true
-* date = "2022-02-21"
+* date = "2022-02-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -45,7 +45,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #MessageHeader[1]
 * group.element[1].target.display = "MessageHeader[1]"
-* group.element[1].target.comment = "Processing of the MSH segment results in the creation of a new MessageHeader resource"
+* group.element[1].target.comment = "Processing of the MSH segment results in the creation of a new MessageHeader resource."
 * group.element[1].target.dependsOn[0].property = "segment-map"
 * group.element[1].target.dependsOn[0].value = "MSH[MessageHeader]"
 * group.element[2].code = #ADT_A01.MSH

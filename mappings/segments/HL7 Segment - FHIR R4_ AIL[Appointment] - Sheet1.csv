@@ -1,0 +1,15 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,AIL-1,set ID -AIL,SI,1,1,,,,,,,,,,,,,
+2,AIL-2,Segment Action Code,ID,0,1,,,,,,,,,,,,,
+3,AIL-3,Location Resource ID,PL,0,1,,,,participant.actor[1],,Reference(Location),0,1,PL[location],,,,
+4,AIL-4,Location Type - AIL,CWE,0,1,,,,,,,,,,,,,
+5,AIL-5,Location Group,CWE,0,1,,,,,,,,,,,,,
+6,AIL-6,Start Date/Time,DTM,0,1,,,,participant.period.start,,,,,,,,,
+7,AIL-7,Start Date/Time Offset,NM,0,1,IF AIL-6 NOT VALUED,,,participant.period.start,,,,,,,/.start + AIL-7 according to AIL-8 units/,,
+8,AIL-8,Start Date/Time Offset Units,CNE,0,1,,,,,,,,,,,,,
+9,AIL-9,Duration,NM,0,1,IF AIL-6 IS VALUED,,,participant.period.end,,,,,,,Appointment.participant.period.start + AIL-9,,
+10,AIL-10,Duration Units,CNE,0,1,,,,,,,,,,,,,
+11,AIL-11,Allow Substitution Code,CWE,0,1,,,,,,,,,,,,,
+12,AIL-12,Filler Status Code,CWE,0,1,,,,,,,,,,,,,

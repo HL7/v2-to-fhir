@@ -79,154 +79,15 @@ W30) mappings/codesystems/HL7 Concept Map_ DurationUnit - Sheet1.csv does not ha
 W31) mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-E1) ARV has no FHIR Structure Specified
-	at mappings/messages/HL7 Message - FHIR R4_ ADT_A08 - Sheet1.csv(:29)
-	near: 18,ADT_A08:follow:PV1.ARV,[{ ARV }],Access Restrictions,0,-1,"IF ARV-1 IN (""PV1"", ""PV2"") AND ARV-3 NOT VALUED",,,Encounter[1],ARV,Resource=Encounter[1],,
-E2) ARV has no FHIR Structure Specified
-	at mappings/messages/HL7 Message - FHIR R4_ ADT_A08 - Sheet1.csv(:16)
-	near: 12,ADT_A08:follow:PID.ARV,[{ ARV }],Access Restrictions,0,-1,"IF ARV-1 IN (""PID"", ""PD1"") AND ARV-3 NOT VALUED",,,Patient[1],ARV,Resource=Patient[1],,
-E3) No mapping for EVN[Provenance-Activity]. Missing file: HL7 Segment - FHIR R4_ EVN[Provenance-Activity] - Sheet1.csv
+E1) No mapping for EVN[Provenance-Activity]. Missing file: HL7 Segment - FHIR R4_ EVN[Provenance-Activity] - Sheet1.csv
 	at mappings/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv(:11)
 	near: 5,ADT_A01.EVN,EVN,Event Type,1,1,,,,Provenance[3],EVN[Provenance-Activity],Provenance[3].target.reference=MessageHeader[1].id,,
-E4) No mapping for IN1[Coverage]. Missing file: HL7 Segment - FHIR R4_ IN1[Coverage] - Sheet1.csv
+E2) No mapping for IN1[Coverage]. Missing file: HL7 Segment - FHIR R4_ IN1[Coverage] - Sheet1.csv
 	at mappings/messages/HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv(:26)
 	near: 5.9.1,OML_O21.PATIENT.INSURANCE.IN1,IN1,Insurance,1,1,,,,Coverage[1],IN1[Coverage],Coverage.subscriber=Patient[PID],,Processing of the IN1 segment results in the creation of a new Coverage resource
-E5) No mapping for IN2[Coverage]. Missing file: HL7 Segment - FHIR R4_ IN2[Coverage] - Sheet1.csv
+E3) No mapping for IN2[Coverage]. Missing file: HL7 Segment - FHIR R4_ IN2[Coverage] - Sheet1.csv
 	at mappings/messages/HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv(:27)
 	near: 5.9.2,OML_O21.PATIENT.INSURANCE.IN2,[ IN2 ],Insurance Additional Information,0,1,,,,Coverage[1],IN2[Coverage],,,Incorporate IN2 content into the Coverage created from the IN1 segment.
-E6) No mapping for IN3[CareTeam]. Missing file: HL7 Segment - FHIR R4_ IN3[CareTeam] - Sheet1.csv
+E4) No mapping for IN3[CareTeam]. Missing file: HL7 Segment - FHIR R4_ IN3[CareTeam] - Sheet1.csv
 	at mappings/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv(:62)
-	near: 29.3,ADT_A01.INSURANCE.IN3,[{ IN3 }],Insurance Additional Info - Cert.,0,-1,,,,CareTeam[1],IN3[CareTeam],CareTeam.subject.reference=Patient[1].id,,Incorporate IN3 content into the Coverage created from the IN1 segment.
-E7) No mapping for IN3[Coverage]. Missing file: HL7 Segment - FHIR R4_ IN3[Coverage] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv(:28)
-	near: 5.9.3,OML_O21.PATIENT.INSURANCE.IN3,[ IN3 ],"Insurance Additional Information, Certification",0,1,,,,Coverage[1],IN3[Coverage],,,Incorporate IN3 content into the Coverage created from the IN1 segment.
-E8) MessageHeader.#extension-v2ProfileID# is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv(:27)
-	near: 21,MSH-21,Message Profile Identifier,EI,0,-1,,,,,MessageHeader.#extension-v2ProfileID#,Identifier,0,-1,EI[Identifier],,,,"Need to support multiple profiles. Also, comment on implicitRules is highly idealistic."
-E9) Extensions not supported yet for MessageHeader.source.#ext-binaryIdentifier#
-	at mappings/segments/HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv(:6)
-	near: 4,SFT-4,Software Binary ID,ST,1,1,,,,,MessageHeader.source.#ext-binaryIdentifier#,string,0,1,,,,,
-E10) Extensions not supported yet for MessageHeader.source.#ext-description#
-	at mappings/segments/HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv(:7)
-	near: 5,SFT-5,Software Product Information,TX,0,1,,,,,MessageHeader.source.#ext-description#,string,0,1,,,,,
-E11) Extensions not supported yet for MessageHeader.source.#ext-installDate#
-	at mappings/segments/HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv(:8)
-	near: 6,SFT-6,Software Install Date,DTM,0,1,,,,,MessageHeader.source.#ext-installDate#,dateTime,0,1,,,,,
-E12) Extensions not supported yet for MessageHeader.source.#ext-vendorOrganization(Organization)#
-	at mappings/segments/HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv(:3)
-	near: 1,SFT-1,Software Vendor Organization,XON,1,1,,,,,MessageHeader.source.#ext-vendorOrganization(Organization)#,Reference(Organization),1,1,XON,,,,
-E13) No mapping for MSH[Provenance]. Missing file: HL7 Segment - FHIR R4_ MSH[Provenance] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv(:5)
-	near: 1,VXU_V04.MSH,MSH,Message Header Segment,1,1,,,,Provenance[1],MSH[Provenance],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
-E14) No mapping for MSH[Task]. Missing file: HL7 Segment - FHIR R4_ MSH[Task] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv(:6)
-	near: 1,ORM_O01.MSH,MSH,Message Header,1,1,,,,Task[1],MSH[Task],,,
-E15) No mapping for MSH[Provenance-Operator]. Missing file: HL7 Segment - FHIR R4_ MSH[Provenance-Operator] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv(:12)
-	near: 5,ADT_A01.EVN,EVN,Event Type,1,1,IF EVN-5 NOT VALUED AND (MSH-22 IS VALUED OR MSH-4 IS VALUED),,,Provenance[3],MSH[Provenance-Operator],Provenance[3].target.reference=MessageHeader[1].id,,"If EVN-5 is not valued, then the MSH may have either the sending responsible organization (MSH-22) or the sending facility (MSH-4) to reasonable approximate the agent relevant for this Provenance instance."
-E16) No mapping for MSH[Provenance-Transformation]. Missing file: HL7 Segment - FHIR R4_ MSH[Provenance-Transformation] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv(:6)
-	near: 1,ADT_A01.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,"If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
-E17) No mapping for NTE[Annotation]. Missing file: HL7 Segment - FHIR R4_ NTE[Annotation] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv(:55)
-	near: 12.6.3,VXU_V04.ORDER.OBSERVATION.NTE,[{ NTE }],Notes (Regarding Immunization),0,-1,,,,Observation[2].note,NTE[Annotation],,,
-E18) No mapping for OBR[Specimen]. Missing file: HL7 Segment - FHIR R4_ OBR[Specimen] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv(:43)
-	near: 6.4.1,OML_O21.ORDER.OBSERVATION_REQUEST.OBR,OBR,Observation Request,1,1,,,,Specimen[each],OBR[Specimen],,,
-E19) No mapping for PID[Provenance]. Missing file: HL7 Segment - FHIR R4_ PID[Provenance] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv(:9)
-	near: 4,VXU_V04.PID,PID,Patient Identification Segment,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance],Provenance.target.reference=Patient[1].id,,
-E20) No mapping for PID[Provenance-Patient]. Missing file: HL7 Segment - FHIR R4_ PID[Provenance-Patient] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv(:16)
-	near: 6,ADT_A01.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance-Patient],Provenance.target.reference=Patient[1].id,,
-E21) No mapping for PV1[CareTeam]. Missing file: HL7 Segment - FHIR R4_ PV1[CareTeam] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv(:36)
-	near: 16,ADT_A01.PV1,PV1,Patient Visit,1,1,IF IN3.21 IS VALUED,,,CareTeam[1],PV1[CareTeam],CareTeam[1].encounter.reference=Encounter[1].id,,
-E22) No mapping for ROL[CareTeam. Missing file: HL7 Segment - FHIR R4_ ROL[CareTeam] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv(:24)
-	near: 13,ADT_A01:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")!=""PP"")or(element(""3.3"")!=""HL70443"")","While most likely all other HL70443 values go to RelatedPerson, the implementation needs to determine whether that is fully accurate.",RelatedPerson[1],ROL[CareTeam,RelatedPerson[1].patient.reference=Patient[1].id,,
-E23) No mapping for ROL[Patient-GeneralPractitioner]. Missing file: HL7 Segment - FHIR R4_ ROL[Patient-GeneralPractitioner] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv(:23)
-	near: 13,ADT_A01:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[Patient-GeneralPractitioner],,,
-E24) No mapping for ROL[Patient-PractitionerRole]. Missing file: HL7 Segment - FHIR R4_ ROL[Patient-PractitionerRole] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ ADT_A08 - Sheet1.csv(:17)
-	near: 13,ADT_A08:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[Patient-PractitionerRole],,,
-E25) No mapping for RXO[MedicationRequest]. Missing file: HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv(:39)
-	near: 4.2.1.7,ORM_O01.ORDER_DETAIL.CHOICE.RXO,RXO,Pharmacy/Treatment Order,0,1,,,,MedicationRequest,RXO[MedicationRequest],,,
-E26) No mapping for SFT[Device]. Missing file: HL7 Segment - FHIR R4_ SFT[Device] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv(:9)
-	near: 3,ADT_A01.SFT,[{ SFT }],Software Segment,0,-1,,,If the software represents the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
-Provenance[1].entity.role=""source""",,
-E27) No mapping for TQ1[ServiceRequest]. Missing file: HL7 Segment - FHIR R4_ TQ1[ServiceRequest] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv(:38)
-	near: 6.3.1,OML_O21.ORDER.TIMING.TQ1,TQ1,Timing/Quantity,1,1,,,,ServiceRequest[1],TQ1[ServiceRequest],,,
-E28) No mapping for TQ2[ServiceRequest]. Missing file: HL7 Segment - FHIR R4_ TQ2[ServiceRequest] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv(:39)
-	near: 6.3.2,OML_O21.ORDER.TIMING.TQ2,[{TQ2}],Timing/Quantity Order Sequence,0,-1,,,,ServiceRequest[1],TQ2[ServiceRequest],,,
-E29) "source" is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ MSH[Provenance-Source] - R4.csv(:10)
-	near: 3,MSH-3,Sending Application,HD,0,1,IF MSH-3 AND MSH-24 VALUED,,,entity[2].role,,code,,,"""source""",,,,
-E30) No mapping for CE[CodeableConcept]. Missing file: HL7 Data Type - FHIR R4_ CE[CodeableConcept] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:12)
-	near: 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""CE""",,,component[each].valueCodeableConcept,,CodeableConcept,0,1,CE[CodeableConcept],,,,
-E31) No mapping for CF[CodeableConcept]. Missing file: HL7 Data Type - FHIR R4_ CF[CodeableConcept] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:10)
-	near: 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""CF""",,,component[each].valueCodeableConcept,,CodeableConcept,0,1,CF[CodeableConcept],,,,
-E32) No mapping for CWE[Device]. Missing file: HL7 Data Type - FHIR R4_ CWE[Device] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ ORC[Provenance] - ORC.csv(:32)
-	near: 18,ORC-18,Entering Device,CWE,0,1,,,,agent[5].who(Device),,Reference(Device),0,1,CWE[Device],,,,
-E33) No mapping for CWE[Identifier]. Missing file: HL7 Data Type - FHIR R4_ CWE[Identifier] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:44)
-	near: 15,OBX-15,Producer's ID,CWE,0,1,,,,,extension??-producerIdentifier,identifier,0,1,CWE[Identifier],,,,
-E34) No mapping for DLD[Location]. Missing file: HL7 Data Type - FHIR R4_ DLD[Location] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:59)
-	near: 37,PV1-37,Discharged to Location,DLD,0,1,,,,hospitalization.destination(Location),,Reference(Location),0,1,DLD[Location],,,,Encounter.hospitalization.destination.reference=Location[1].id
-E35) No mapping for EI[Condition]. Missing file: HL7 Data Type - FHIR R4_ EI[Condition] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ DG1[Encounter] - Sheet1.csv(:28)
-	near: 22,DG1-22,Parent Diagnosis,EI,0,1,,,,diagnosis.condition(Condition.extension[1].valueReference(Condition)),,Reference,1,1,EI[Condition],,,,Extensions for occurredFollowing and related also exist
-E36) No mapping for EI[Identifier]. Missing file: HL7 Data Type - FHIR R4_ EI[Identifier] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ ORC[Immunization] - ORC.csv(:7)
-	near: 3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2],,Identifier,0,-1,EI[Identifier],,,,
-E37) No mapping for EI[Identifier-DefaultAssigner]. Missing file: HL7 Data Type - FHIR R4_ EI[Identifier-DefaultAssigner] - Sheet1.csv
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ PL[Location] - Sheet1.csv(:51)
-	near: 10,PL.10,Comprehensive Location Identifier,EI,0,1,IF PL.11 VALUED AND IF PL.4 VALUED AND PL.1 NOT VALUED AND PL.2 NOT VALUED AND PL.3 NOT VALUED AND PL.8 NOT VALUED AND PL.7 NOT VALUED,,,[4].identifier[3],,Identifier,,,EI[Identifier-DefaultAssigner],,,,
-E38) No mapping for EI[Identifier-Organization]. Missing file: HL7 Data Type - FHIR R4_ EI[Identifier-Organization] - Sheet1.csv
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ PL[Location] - Sheet1.csv(:45)
-	near: 10,PL.10,Comprehensive Location Identifier,EI,0,1,IF PL.4 VALUED AND PL.1 NOT VALUED AND PL.2 NOT VALUED AND PL.3 NOT VALUED AND PL.8 NOT VALUED AND PL.7 NOT VALUED,,,[4].identifier[3],,Identifier,,,EI[Identifier-Organization],,,,
-E39) No mapping for EIP[Identifier]. Missing file: HL7 Data Type - FHIR R4_ EIP[Identifier] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:5)
-	near: 3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,Only one of the two parent references in EIP can be mapped.  The implementation needs to choose which one.,parent.identifier,,Identifier,0,1,EIP[Identifier],,,,"Note that Specimen.parent can repeat, i.e., match the SPM-3 cardinality, but Specimen.parent.identifier does not.  Therefore, while a specimen can have multiple parents, putting placer and filler parent identifiers in separate parent instances is not appropriate."
-E40) No mapping for EIP[Identifier-FillerAssignedIdentifier]. Missing file: HL7 Data Type - FHIR R4_ EIP[Identifier-FillerAssignedIdentifier] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:22)
-	near: 8,ORC-8,Parent Order,EIP,0,-1,,,,,ServiceRequest.basedOn[1].#ext-parent.filler#,,,,EIP[Identifier-FillerAssignedIdentifier],,ORC-8.2,,
-E41) AssigningAuthority is not a recognized FHIR artifact
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv(:8)
-	near: 6,XON.6,Assigning Authority,HD,0,1,,,,,Organization.identifier.#ext-assigningAuthority#,,0,-1,HD[AssigningAuthority],,,,
-E42) No mapping for HD[Device]. Missing file: HL7 Data Type - FHIR R4_ HD[Device] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ MSH[Provenance-Source] - R4.csv(:9)
-	near: 3,MSH-3,Sending Application,HD,0,1,IF MSH-3 AND MSH-24 VALUED,,,entity[2].what(Device),,Reference(Device),,,HD[Device],,,,
-E43) No mapping for HD[Identifier]. Missing file: HL7 Data Type - FHIR R4_ HD[Identifier] - Sheet1.csv
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ NDL[PractitionerRole] - Sheet1.csv(:37)
-	near: 11,NDL.11,Floor,IS,0,1,,,,[6].identifier,,Identifier,,,HD[Identifier],,,,
-E44) No mapping for HD[uri]. Missing file: HL7 Data Type - FHIR R4_ HD[uri] - Sheet1.csv
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Practitioner] - Sheet1.csv(:12)
-	near: 9,XCN.9,Assigning Authority,HD,0,1,,,If system,identifier[1].system,,uri,0,1,HD[uri],,,,"Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then XCN.9 should be mapped to .system"
-E45) Boolean is not a recognized FHIR artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:50)
-	near: 31,PID-31,Identity Unknown Indicator,ID,0,1,,,,,Patient.#ext-identityUnknown#,boolean,0,1,ID[Boolean],Yes/No,,,
-E46) No mapping for ID[code]. Missing file: HL7 Data Type - FHIR R4_ ID[code] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv(:13)
-	near: 5,OBR-5,Priority,ID,0,1,,,,priority,,code,0,1,ID[code],Priority,,,
-E47) No mapping for ID[Coding]. Missing file: HL7 Data Type - FHIR R4_ ID[Coding] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:33)
-	near: 22,PV2-22,Visit Protection Indicator,ID,0,1,,,,meta.security,,Coding,0,-1,ID[Coding],,,,
-E48) String is not a recognized FHIR artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:20)
-	near: 12,PID-12,County Code,ID,0,1,IF PID-11 IS NOT VALUED,,,address[1].district,,string,0,1,ID[String],,,,
-E49) No mapping for ID[CodeableConcept-UniversalID]. Missing file: HL7 Data Type - FHIR R4_ ID[CodeableConcept-UniversalID] - Sheet1.csv
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ HD[Organization] - Sheet1.csv(:5)
-	near: 3,HD.3,Universal ID Type,ID,0,1,,,,identifier[2].type,,CodeableConcept,,,ID[CodeableConcept-UniversalID],UniversalIDType,,,"Request that DNS, ISO, and UUID (and other Table 0301 values) are added to: http://hl7.org/fhir/valueset-identifier-type.html"
-E50) No mapping for IS[code]. Missing file: HL7 Data Type - FHIR R4_ IS[code] - Sheet1.csv
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ NDL[PractitionerRole] - Sheet1.csv(:30)
-	near: 8,NDL.8,Location Status,IS,0,1,IF PL.8 VALUED,,,
+	ne

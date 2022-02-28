@@ -1,0 +1,15 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,AIP-1,set ID -AIP,SI,1,1,,,,,,,,,,,,,
+2,AIP-2,Segment Action Code,ID,0,1,,,,,,,,,,,,,
+3,AIP-3,Personnel Resource ID,XCN,0,1,,,,participant.actor[1],,Reference(Practitioner),0,1,XCN[Practioner],,,,
+4,AIP-4,Resource Type,CWE,1,1,,,,participant.type[1],,CodeableConcept,0,-1,CWE[CodeableConcept],,https://www.hl7.org/fhir/valueset-encounter-participant-type.html,,
+5,AIP-5,Resource Group,CWE,0,1,,,,,,,,,,,,,
+6,AIP-6,Start Date/Time,DTM,0,1,,,,participant.period.start,,,,,,,,,
+7,AIP-7,Start Date/Time Offset,NM,0,1,IF AIP-6 NOT VALUED,,,participant.period.start,,,,,,,/.start + AIP-7 according to AIP-8 units/,,
+8,AIP-8,Start Date/Time Offset Units,CNE,0,1,,,,,,,,,,,,,
+9,AIP-9,Duration,NM,0,1,IF AIP-6 IS VALUED,,,participant.period.end,,,,,,,Appointment.participant.period.start + AIP-9,,
+10,AIP-10,Duration Units,CNE,0,1,,,,,,,,,,,,,
+11,AIP-11,Allow Substitution Code,CWE,0,1,,,,,,,,,,,,,
+12,AIP-12,Filler Status Code,CWE,0,1,,,,participant.status[1],,,,,,,,,

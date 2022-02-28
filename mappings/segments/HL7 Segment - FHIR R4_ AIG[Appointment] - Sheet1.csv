@@ -1,0 +1,17 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,AIG-1,set ID -AIG,SI,1,1,,,,,,,,,,,,,
+2,AIG-2,Segment Action Code,ID,0,1,,,,,,,,,,,,,
+3,AIG-3,Resource ID,CWE,0,1,,,If AIG-4 reflects a location,participant.actor(Location.identifier),,identifier,0,1,CWE[Identifier],,,,
+4,AIG-4,Resource Type,CWE,1,1,,,,participant.type,,CodeableConcept,0,-1,CWE[CodeableConcept],https://www.hl7.org/fhir/valueset-encounter-participant-type.html,,,
+5,AIG-5,Resource Group,CWE,0,1,,,,,,,,,,,,,
+6,AIG-6,Resource Quantity,NM,0,1,,,,,,,,,,,,,
+7,AIG-7,Resource Quantity Units,CNE,0,1,,,,,,,,,,,,,
+8,AIG-8,Start Date/Time,DTM,0,1,,,,participant.period.start,,,,,,,,,
+9,AIG-9,Start Date/Time Offset,NM,0,1,IF AIG-8 NOT VALUED,,,participant.period.start,,,,,,,/.start + AIG-9 according to AIG-10 units/,,
+10,AIG-10,Start Date/Time Offset Units,CNE,0,1,,,,,,,,,,,,,
+11,AIG-11,Duration,NM,0,1,IF AIG-8 IS VALUED,,,participant.period.end,,,,,,,Appointment.participant.period.start + AIG-11,,
+12,AIG-12,Duration Units,CNE,0,1,,,,,,,,,,,,,
+13,AIG-13,Allow Substitution Code,CWE,0,1,,,,,,,,,,,,,
+14,AIG-14,Filler Status Code,CWE,0,1,,,,,,,,,,,,,

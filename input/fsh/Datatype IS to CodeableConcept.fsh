@@ -9,7 +9,7 @@ Title: "Datatype IS to CodeableConcept Map"
 * name = "DatatypeIStoCodeableConcept"
 * status = #active
 * experimental = true
-* date = "2022-02-21"
+* date = "2022-02-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

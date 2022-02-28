@@ -1,0 +1,15 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,AIS-1,set ID -AIS,SI,1,1,,,,,,,,,,,,,
+2,AIS-2,Segment Action Code,ID,0,1,,,,,,,,,,,,,
+3,AIS-3,Universal Service Identifier,CWE,0,1,,,,identifier[1],,,,,CWE[Identifier],,,,
+4,AIS-4,Start Date/Time,DTM,0,1,,,,occurrencePeriod.start,,Period,,,,,,,
+5,AIS-5,Start Date/Time Offset,NM,0,1,IF AIS-4 NOT VALUED,,,occurrencePeriod.start,,Period,,,,,/.start + AIS-5 according to AIS-6 units/,,
+6,AIS-6,Start Date/Time Offset Units,CNE,0,1,,,,,,,,,,,,,
+7,AIS-7,Duration,NM,0,1,IF AIS-4 IS VALUED,,,occurrencePeriod.end,,Period,,,,,ServiceRequest.occurrencePeriod.start+ AIS-7,,
+8,AIS-8,Duration Units,CNE,0,1,,,,,,,,,,,,,
+9,AIS-9,Allow Substitution Code,CWE,0,1,,,,,,,,,,,,,
+10,AIS-10,Filler Status Code,CWE,0,1,,,,,,,,,,,,,
+11,AIS-11,Placer Supplemental Service Information,CWE,0,-1,,,,identifier[2],,,,,CWE[Identifier],,,,
+12,AIS-12,Filler Supplemental Service Information,CWE,0,-1,,,,identifier[3],,,,,CWE[Identifier],,,,

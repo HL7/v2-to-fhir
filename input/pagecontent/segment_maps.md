@@ -10,11 +10,10 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 
 * [MSA](ConceptMap-segment-msa-to-messageheader.html) - Message Acknowledgment to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
 * [MSH](ConceptMap-segment-msh-to-bundle.html) - Message Header to FHIR [Bundle](http://hl7.org/fhir/R4/bundle.html)
-* [MSH](ConceptMap-segment-msh-to-messageheader.html) - Message Header to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
+* [MSH[Operator]](ConceptMap-segment-mshoperator-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 * [MSH[Source]](ConceptMap-segment-mshsource-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 * [NTE](ConceptMap-segment-nte-to-observation.html) - Notes and Comments to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [NTE](ConceptMap-segment-nte-to-servicerequest.html) - Notes and Comments to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
-* [SFT](ConceptMap-segment-sft-to-messageheader.html) - Software Segment to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
 
 ### Chapter  3  Patient Administration
 
@@ -25,9 +24,11 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [NK1](ConceptMap-segment-nk1-to-relatedperson.html) - Next of Kin / Associated Parties to FHIR [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)
 * [PD1](ConceptMap-segment-pd1-to-patient.html) - Patient Additional Demographic to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [PID](ConceptMap-segment-pid-to-account.html) - Patient Identification to FHIR [Account](http://hl7.org/fhir/R4/account.html)
+* [PID](ConceptMap-segment-pid-to-appointment.html) - Patient Identification to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
 * [PID](ConceptMap-segment-pid-to-patient.html) - Patient Identification to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [PID[EthnicGroup]](ConceptMap-segment-pidethnicgroup-to-observation.html) - Patient Identification to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [PID[Mother]](ConceptMap-segment-pidmother-to-relatedperson.html) - Patient Identification to FHIR [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)
+* [PID[Patient]](ConceptMap-segment-pidpatient-to-provenance.html) - Patient Identification to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 * [PID[Race]](ConceptMap-segment-pidrace-to-observation.html) - Patient Identification to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [PV1](ConceptMap-segment-pv1-to-encounter.html) - Patient Visit to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 * [PV1](ConceptMap-segment-pv1-to-patient.html) - Patient Visit to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
@@ -37,6 +38,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 
 * [OBR](ConceptMap-segment-obr-to-diagnosticreport.html) - Observation Request to FHIR [DiagnosticReport](http://hl7.org/fhir/R4/diagnosticreport.html)
 * [OBR](ConceptMap-segment-obr-to-servicerequest.html) - Observation Request to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
+* [OBR](ConceptMap-segment-obr-to-specimen.html) - Observation Request to FHIR [Specimen](http://hl7.org/fhir/R4/specimen.html)
 * [ORC](ConceptMap-segment-orc-to-diagnosticreport.html) - Common Order to FHIR [DiagnosticReport](http://hl7.org/fhir/R4/diagnosticreport.html)
 * [ORC](ConceptMap-segment-orc-to-immunization.html) - Common Order to FHIR [Immunization](http://hl7.org/fhir/R4/immunization.html)
 * [ORC](ConceptMap-segment-orc-to-provenance.html) - Common Order to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
@@ -63,6 +65,16 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [PRT](ConceptMap-segment-prt-to-relatedperson.html) - Participation Information to FHIR [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)
 * [PRT[Location]](ConceptMap-segment-prtlocation-to-observation.html) - Participation Information to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [SPM](ConceptMap-segment-spm-to-specimen.html) - Specimen to FHIR [Specimen](http://hl7.org/fhir/R4/specimen.html)
+
+### Chapter 10  Scheduling
+
+* [AIG](ConceptMap-segment-aig-to-appointment.html) - Appointment Information - General Resource to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
+* [AIL](ConceptMap-segment-ail-to-appointment.html) - Appointment Information - Location Resource to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
+* [AIP](ConceptMap-segment-aip-to-appointment.html) - Appointment Information - Personnel Resource to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
+* [AIS](ConceptMap-segment-ais-to-appointment.html) - Appointment Information to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
+* [AIS](ConceptMap-segment-ais-to-servicerequest.html) - Appointment Information to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
+* [SCH](ConceptMap-segment-sch-to-appointment.html) - Scheduling Activity Information to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
+* [SCH](ConceptMap-segment-sch-to-provenance.html) - Scheduling Activity Information to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 
 ### Chapter 15  Personnel Management
 
