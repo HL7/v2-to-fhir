@@ -144,7 +144,7 @@ Various HL7 v2 types enable the use of codes, e.g., CWE, CNE, CE, as well as ID 
 
 The HL7 v2-to-FHIR project team cannot be expected to know all possible values in use by a given implementation. While the HL7 v2-to-FHIR project can provide some basic vocabulary maps, it’s expected that individual implementation will need to confirm and potentially extend those maps to include non-standard values (either within a standard value set or in a custom value set).  Specifically:
 * There may be a code represented in the HL7 v2 table, but not in FHIR.  A suitable match may only be known in the context of the implementation where one could opt to map to an existing FHIR concept, need to create an extension, or map to an existing concept while holding on to the original value as well.
-* There may be no known HL7 v2 values at all.  This is particularly true for user defined tables where HL7 may not have provided any values, or only a couple of examples where HL7 FHIR has a more complete set defined.
+* There may be no known HL7 v2 values at all, in which case the Vocabulary Mapping cell would be empty.  This is particularly true for user defined tables where HL7 may not have provided any values, or only a couple of examples where HL7 FHIR has a more complete set defined.
 
 Translations may be particularly problematic when the FHIR value set is fixed (a binding strength of "Required") and cannot be extended locally. A v2 value may not have a cognate FHIR value or the the FHIR value may be less granular, either situation potentially resulting in the loss of information as the concept is translated. In these situations we recommend the following:
 * When the FHIR data type is code or coding: 
