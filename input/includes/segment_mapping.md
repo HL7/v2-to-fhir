@@ -30,6 +30,7 @@
       * There may be multiple flavors of the data type maps to support different mappings.  The flavor is appended to the end of the data type name using [] brackets, e.g., CWE[Coding].
    * Vocabulary Mapping
       * The URL to the Vocabulary Map that is to be used for the coded element for this attribute.
+      * If the applicable HL7 v2 table is empty, e.g., user defined tables without examples, this cell will be blank.
       * This is used where the HL7 v2 data type is either CWE, CNE, CF, CE, ID, or IS while the HL7 FHIR data type is code, coding, Codeable Concept, of boolean.
    * Assignment
       * The value that is to be assigned to the FHIR Attribute referenced.
