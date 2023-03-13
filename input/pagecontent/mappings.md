@@ -8,3 +8,4 @@ You can review specific v2-to-FHIR mappings via the links below for:
 * [Data Types](datatype_maps.html)
 * [Tables](coding_system_maps.html)
 
+__NOTE: Due to the build not being up-to-date with the latest spreadsheet we advise the reader to use this link to the [Mapping Spreadsheet Index](https://docs.google.com/spreadsheets/d/1PaFYPSSq4oplTvw_4OgOn6h2Bs_CMvCAU9CqC4tPBgk/edit#gid=1930219638) to review the lastest draft mappings.__
