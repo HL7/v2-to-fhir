@@ -9,7 +9,7 @@ Title: "Segment ORC to ServiceRequest Map"
 * name = "SegmentORCtoServiceRequest"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-03-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -435,6 +435,8 @@ Title: "Segment ORC to ServiceRequest Map"
 * group.element[18].target.display = "extension[1].valueCodeableConcept"
 * group.element[18].target.dependsOn[0].property = "data-type-map"
 * group.element[18].target.dependsOn[0].value = "CWE[CodeableConcept]"
+* group.element[18].target.dependsOn[1].property = "vocabulary-map"
+* group.element[18].target.dependsOn[1].value = "g"
 * group.element[18].target.product[0].property = "antlr"
 * group.element[18].target.product[0].value = "IF ORC-5 NOT VALUED"
 * group.element[19].code = #ORC-21

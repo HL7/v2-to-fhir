@@ -24,5 +24,5 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 20,PRT-20,Device Serial Number,ST,0,1,,,,,,,,,,,,,
 21,PRT-21,Device Donation Identification,EI,0,1,,,,,,,,,,,,,
 22,PRT-22,Device Type,CNE,0,1,,,,,,,,,,,,,
-23,PRT-23,Preferred Method of Contact,CWE,0,1,,,,,PractitionerRole.#ext-preferredMethodOfContact#,CodeableConcept,0,1,CWE[CodeableConcept],PreferredMethodOfContact,,,
+23,PRT-23,Preferred Method of Contact,CWE,0,1,,,,,extension??-preferredMethodOfContact,CodeableConcept,0,1,CWE[CodeableConcept],PreferredMethodOfContact,,,
 24,PRT-24,Contact Identifiers,PLN,0,-1,,,,identifier[2],,Identifier,0,-1,PLN[Identifier],,,,

@@ -2,11 +2,7 @@ v,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,OBR-1,Set ID – OBR,SI,0,1,,,,,,,,,,,,,
-2,OBR-2,Placer Order Number,EI,0,1,,,,,,,,,,,,,
-2,OBR-2,Placer Order Number,EI,0,1,,,,,,,,,,,,,
-2,OBR-2,Placer Order Number,EI,0,1,,,,,,,,,,,,,
-3,OBR-3,Filler Order Number,EI,0,1,,,,,,,,,,,,,
-3,OBR-3,Filler Order Number,EI,0,1,,,,,,,,,,,,,
+2,OBR-2,Placer Order Number,EI,0,1,,,If the placer number is also the accession identifier.,accessionIdentifier,,Identifier,0,1,CX[Identifier],,,,
 3,OBR-3,Filler Order Number,EI,0,1,,,,,,,,,,,,,
 4,OBR-4,Universal Service Identifier,CWE,1,1,,,,,,,,,,,,,
 5,OBR-5,Priority,ID,0,1,,,,,,,,,,,,,

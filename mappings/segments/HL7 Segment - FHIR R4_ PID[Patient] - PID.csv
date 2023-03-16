@@ -1,4 +1,4 @@
-HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+e,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,PID-1,Set ID - PID,SI,0,1,,,,,,,,,,,,,
@@ -29,10 +29,11 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 17,PID-17,Religion,CWE,0,1,,,,extension[2].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],Religion,,,
 18,PID-18,Patient Account Number,CX,0,1,,,,,,,,,,,,,"Mapped in PID[Account]. In some systems, PID-18 may contain a visit identifier. If that is the case for a given implementation, then a mapping to an Encounter may be more appropriate"
 19,PID-19,SSN Number - Patient,ST,0,1,,,,identifier[4].value,,string,0,1,,,,,the value set for Identifier.type doesn't contain SSN but it does have SB (social beneficiary)
-19,PID-19,SSN Number - Patient,ST,0,1,,,,identifier[4].type.coding.code,,code,0,1,,,"""SB""",,
+19,PID-19,SSN Number - Patient,ST,0,1,,,If in the US and various other jurisdictions,identifier[4].type.coding.code,,code,0,1,,,"""SS""",,
+19,PID-19,SSN Number - Patient,ST,0,1,,,If outside the US for certain jurisdictions,identifier[4].type.coding.code,,code,0,1,,,"""SB""",,
 19,PID-19,SSN Number - Patient,ST,0,1,,,,identifier[4].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,
 19,PID-19,SSN Number - Patient,ST,0,1,,,,identifier[4].system,,uri,0,1,,,"""http://hl7.org/fhir/sid/us-ssn.""",,"If working in a jurisdiction other than the US and this field is used for the local SSN equivalent, a different system will need to be identified."
-20,PID-20,Driver's License Number - Patient,,0,1,,,,identifier[5],,Identifier,0,1,DLN[Identifier],,,,
+20,PID-20,Driver's License Number - Patient,DLN,0,1,,,,identifier[5],,Identifier,0,1,DLN[Identifier],,,,
 21,PID-21,Mother's Identifier,CX,0,-1,,,,,,,,,,,,,
 22,PID-22,Ethnic Group,CWE,0,-1,,,"If PID-22 is for administrative purposes use, then use your local extension, e.g., for US = US Core Ethnicity.",,local implementation,,,,,,,,"For an international document, it may not be possible to come up with a FHIR value set for ethnic group.  Therefore the appropriate extension for the local implementation should be used based on preferably a country/realm specific extension, e.g., US Core Ethnicity for the US."
 23,PID-23,Birth Place,ST,0,1,,,,extension[3].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-birthPlace""",,
@@ -42,22 +43,22 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 26,PID-26,Citizenship,CWE,0,-1,,,,extension[4].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-citizenship""",,
 26,PID-26,Citizenship,CWE,0,-1,,,,extension[4].extension[1].url,,uri,1,1,,,"""code""",,
 26,PID-26,Citizenship,CWE,0,-1,,,,extension[4].extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],,,,The standard extension does not include a value set
-27,PID-27,Veterans Military Status,CWE,0,1,,,,,Patient.#ext-veteranMilitaryStatus#,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+27,PID-27,Veterans Military Status,CWE,0,1,,,,,extension??-veteranMilitaryStatus,CodeableConcept,0,1,CWE[CodeableConcept],,,,
 28,PID-28,Nationality,CWE,0,1,,,,extension[5].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-nationality""",,
-28,PID-28,Nationality,CWE,0,1,,,,extension[5].extension[1].url,,uri,1,1,,,,,
+28,PID-28,Nationality,CWE,0,1,,,,extension[5].extension[1].url,,uri,1,1,,,"""code""",,
 28,PID-28,Nationality,CWE,0,1,,,,extension[5].extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],,,,The standard extension does not include a value set
 29,PID-29,Patient Death Date and Time,DTM,0,1,,,,deceasedDateTime,,dateTime,0,1,,,,,
 30,PID-30,Patient Death Indicator,ID,0,1,IF PID-29 NOT VALUED,,,deceasedBoolean,,boolean,0,1,ID[Boolean],Yes/No,,,
-31,PID-31,Identity Unknown Indicator,ID,0,1,,,,,Patient.#ext-identityUnknown#,boolean,0,1,ID[Boolean],Yes/No,,,
+31,PID-31,Identity Unknown Indicator,ID,0,1,,,,,extension??-identityUnknown,boolean,0,1,ID[Boolean],Yes/No,,,
 32,PID-32,Identity Reliability Code,CWE,0,-1,,,,,,,,,,,,,
 33,PID-33,Last Update Date/Time,DTM,0,1,,,,meta.lastUpdated,,instant,0,1,,,,,
-34,PID-34,Last Update Facility,HD,0,1,,,,,Meta.#ext-lastUpdatedFacility(Organization)#,Reference(Organization),0,1,,,,,
-35,PID-35,Taxonomic Classification Code,CWE,0,1,,,,extension[6].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-animal""",,
-35,PID-35,Taxonomic Classification Code,CWE,0,1,,,,extension[6].extension[1].url,,uri,0,1,,,"""species""",,A vocabulary map may not be worth the lift given there is no HL7 table associated with this element
-35,PID-35,Taxonomic Classification Code,CWE,0,1,,,,extension[6].extension.valueCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
-36,PID-36,Breed Code,CWE,0,1,,,,extension[6].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-animal""",,
+34,PID-34,Last Update Facility,HD,0,1,,,,,Meta.extension??-lastUpdatedFacility(Organization),Reference(Organization),0,1,,,,,
+35,PID-35,Taxonomic Classification Code,CWE,0,1,,,,extension[6].url,,uri,0,-1,,,"""http://hl7.org/fhir/StructureDefinition/patient-animal""",,
+35,PID-35,Taxonomic Classification Code,CWE,0,1,,,,extension[6].extension[1].url,,uri,0,1,,,"""species""",,
+35,PID-35,Taxonomic Classification Code,CWE,0,1,,,,extension[6].extension[1].valueCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+36,PID-36,Breed Code,CWE,0,1,,,,extension[6].url,,uri,0,-1,,,"""http://hl7.org/fhir/StructureDefinition/patient-animal""",,
 36,PID-36,Breed Code,CWE,0,1,,,,extension[6].extension[2].url,,uri,0,1,,,"""breed""",,
-36,PID-36,Breed Code,CWE,0,1,,,,extension[6].extension[2].valueCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],,,,A vocabulary map may not be worth the lift given that the associated HL7 table (HL70447) has no suggested values
+36,PID-36,Breed Code,CWE,0,1,,,,extension[6].extension[2].valueCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
 37,PID-37,Strain,ST,0,1,,,,,,,,,,,,,"If this is necessary, it should be an update to the existing animal extension"
 38,PID-38,Production Class Code,CWE,0,2,,,,,,,,,,,,,
 39,PID-39,Tribal Citizenship,CWE,0,-1,,,,extension[7].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-citizenship""",,

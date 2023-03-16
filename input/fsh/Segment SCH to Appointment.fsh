@@ -9,7 +9,7 @@ Title: "Segment SCH to Appointment Map"
 * name = "SegmentSCHtoAppointment"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-03-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -112,7 +112,7 @@ Title: "Segment SCH to Appointment Map"
 * group.element[3].target.dependsOn[0].property = "data-type-map"
 * group.element[3].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[3].target.dependsOn[1].property = "vocabulary-map"
-* group.element[3].target.dependsOn[1].value = "AppointmentType"
+* group.element[3].target.dependsOn[1].value = "AppointmentReason"
 * group.element[3].target.product[0].property = "narrative"
 * group.element[3].target.product[0].value = "Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType."
 * group.element[4].code = #SCH-8
@@ -136,6 +136,8 @@ Title: "Segment SCH to Appointment Map"
 * group.element[4].target.display = "appointmentType[1]"
 * group.element[4].target.dependsOn[0].property = "data-type-map"
 * group.element[4].target.dependsOn[0].value = "CWE[CodeableConcept]"
+* group.element[4].target.dependsOn[1].property = "vocabulary-map"
+* group.element[4].target.dependsOn[1].value = "AppointmentType"
 * group.element[4].target.product[0].property = "narrative"
 * group.element[4].target.product[0].value = "The mapping of SCH-8 to Appointment.appointmentType will depend on the codes being received in SCH-7 and SCH-8"
 * group.element[5].code = #SCH-9

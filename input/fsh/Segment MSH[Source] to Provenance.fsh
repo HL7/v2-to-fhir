@@ -9,7 +9,7 @@ Title: "Segment MSH to Provenance Map"
 * name = "SegmentMSHSourcetoProvenance"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-03-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -99,7 +99,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[6].extension[0].extension[2].valueInteger = 1
 * group.element[6].display = "Sending Facility"
 * group.element[6].target.equivalence = #equivalent
-* group.element[6].target.code = #agent[3].who(Organization)
+* group.element[6].target.code = #agent[1].who(Organization)
 * group.element[6].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].target.extension[0].extension[0].url = "type"
 * group.element[6].target.extension[0].extension[0].valueCode = #"Reference(Organization)"
@@ -107,7 +107,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[6].target.extension[0].extension[1].valueInteger = 1
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
-* group.element[6].target.display = "agent[3].who(Organization)"
+* group.element[6].target.display = "agent[1].who(Organization)"
 * group.element[6].target.dependsOn[0].property = "data-type-map"
 * group.element[6].target.dependsOn[0].value = "HD[Organization]"
 * group.element[6].target.product[0].property = "antlr"
@@ -122,7 +122,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[7].extension[0].extension[2].valueInteger = 1
 * group.element[7].display = "Sending Facility"
 * group.element[7].target.equivalence = #equivalent
-* group.element[7].target.code = #agent[3].type.coding.code
+* group.element[7].target.code = #agent[1].type.coding.code
 * group.element[7].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].target.extension[0].extension[0].url = "type"
 * group.element[7].target.extension[0].extension[0].valueCode = #"code"
@@ -130,7 +130,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[7].target.extension[0].extension[1].valueInteger = 0
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
-* group.element[7].target.display = "agent[3].type.coding.code"
+* group.element[7].target.display = "agent[1].type.coding.code"
 * group.element[7].target.dependsOn[0].property = "value"
 * group.element[7].target.dependsOn[0].value = "\"author\""
 * group.element[7].target.product[0].property = "antlr"
@@ -145,7 +145,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[8].extension[0].extension[2].valueInteger = 1
 * group.element[8].display = "Sending Facility"
 * group.element[8].target.equivalence = #equivalent
-* group.element[8].target.code = #agent[3].type.coding.system
+* group.element[8].target.code = #agent[1].type.coding.system
 * group.element[8].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].target.extension[0].extension[0].url = "type"
 * group.element[8].target.extension[0].extension[0].valueCode = #"uri"
@@ -153,7 +153,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[8].target.extension[0].extension[1].valueInteger = 0
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
-* group.element[8].target.display = "agent[3].type.coding.system"
+* group.element[8].target.display = "agent[1].type.coding.system"
 * group.element[8].target.dependsOn[0].property = "value"
 * group.element[8].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
 * group.element[8].target.product[0].property = "antlr"
@@ -219,7 +219,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[12].extension[0].extension[2].valueInteger = 1
 * group.element[12].display = "Sending Responsible Organization"
 * group.element[12].target.equivalence = #equivalent
-* group.element[12].target.code = #agent[5].who(Organization)
+* group.element[12].target.code = #agent[2].who(Organization)
 * group.element[12].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].target.extension[0].extension[0].url = "type"
 * group.element[12].target.extension[0].extension[0].valueCode = #"Reference(Organization)"
@@ -227,7 +227,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[12].target.extension[0].extension[1].valueInteger = 1
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
-* group.element[12].target.display = "agent[5].who(Organization)"
+* group.element[12].target.display = "agent[2].who(Organization)"
 * group.element[12].target.dependsOn[0].property = "data-type-map"
 * group.element[12].target.dependsOn[0].value = "XON[Organization]"
 * group.element[13].code = #MSH-22
@@ -240,7 +240,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[13].extension[0].extension[2].valueInteger = 1
 * group.element[13].display = "Sending Responsible Organization"
 * group.element[13].target.equivalence = #equivalent
-* group.element[13].target.code = #agent[5].type.coding.code
+* group.element[13].target.code = #agent[2].type.coding.code
 * group.element[13].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].target.extension[0].extension[0].url = "type"
 * group.element[13].target.extension[0].extension[0].valueCode = #"code"
@@ -248,7 +248,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[13].target.extension[0].extension[1].valueInteger = 0
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
-* group.element[13].target.display = "agent[5].type.coding.code"
+* group.element[13].target.display = "agent[2].type.coding.code"
 * group.element[13].target.dependsOn[0].property = "value"
 * group.element[13].target.dependsOn[0].value = "\"author\""
 * group.element[14].code = #MSH-22
@@ -261,7 +261,7 @@ Title: "Segment MSH to Provenance Map"
 * group.element[14].extension[0].extension[2].valueInteger = 1
 * group.element[14].display = "Sending Responsible Organization"
 * group.element[14].target.equivalence = #equivalent
-* group.element[14].target.code = #agent[5].type.coding.system
+* group.element[14].target.code = #agent[2].type.coding.system
 * group.element[14].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].target.extension[0].extension[0].url = "type"
 * group.element[14].target.extension[0].extension[0].valueCode = #"uri"
@@ -269,6 +269,6 @@ Title: "Segment MSH to Provenance Map"
 * group.element[14].target.extension[0].extension[1].valueInteger = 0
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
-* group.element[14].target.display = "agent[5].type.coding.system"
+* group.element[14].target.display = "agent[2].type.coding.system"
 * group.element[14].target.dependsOn[0].property = "value"
 * group.element[14].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""

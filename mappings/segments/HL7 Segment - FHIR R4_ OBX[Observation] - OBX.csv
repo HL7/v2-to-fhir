@@ -51,7 +51,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 16,OBX-16,Responsible Observer,XCN,0,-1,,,,performer[1](PractitionerRole.code.coding.code),,CodeableConcept,0,-1,,,"""responsibleObserver""",,
 16,OBX-16,Responsible Observer,XCN,0,-1,,,,performer[1](PractitionerRole.code.coding.system),,CodeableConcept,0,-1,,,"""http://terminology.hl7.org/CodeSystem/practitioner-role""",,
 17,OBX-17,Observation Method,CWE,0,-1,,,,method,,CodeableConcept,0,1,CWE[CodeableConcept],,,,"The cardinality of Observation.method is 0..1 while the source allows for multiple methods.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide."
-18,OBX-18,Equipment Instance Identifier,EI,0,-1,,,,device(Device.identifier),,Identifier,0,-1,EI[Identifier],,,,
+18,OBX-18,Equipment Instance Identifier,EI,0,-1,,,,device(Device),,Reference(Device),0,1,EI[Identifier],,,,
 19,OBX-19,Date/Time of the Analysis,DTM,0,1,,,,,extension??-analysisDateTime,dateTime,0,1,,,,,
 20,OBX-20,Observation Site,CWE,0,-1,,,,bodySite,,CodeableConcept,0,1,CWE[CodeableConcept],,,,"The cardinality of Observation.bodySite is 0..1 while the source allows for multiple body sites.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide."
 21,OBX-21,Observation Instance Identifier,EI,0,1,,,,identifier,,Identifier,0,-1,EI[Identifier],,,,

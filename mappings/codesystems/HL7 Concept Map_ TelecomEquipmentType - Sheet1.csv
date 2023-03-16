@@ -1,0 +1,12 @@
+HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,,
+Code,Text,Code System,Computable,Narrative,Code,,Display,Code System
+PH,Telephone,HL70202,,,phone,,Phone,http://hl7.org/fhir/contact-point-system
+FX,Fax,HL70202,,,fax,,Fax,http://hl7.org/fhir/contact-point-system
+MD,Modem,HL70202,,,other,,Other,http://hl7.org/fhir/contact-point-system
+CP,Cellular or Mobile Phone,HL70202,,,mobile,,Mobile,http://hl7.org/fhir/contact-point-use
+SAT,Satellite Phone,HL70202,,,other,,Other,http://hl7.org/fhir/contact-point-system
+BP,Beeper,HL70202,,,pager,,Pager,http://hl7.org/fhir/contact-point-system
+Internet,Internet Address,HL70202,,,email,,email,http://hl7.org/fhir/contact-point-system
+X.400,X.400 email address,HL70202,,,email,,email,http://hl7.org/fhir/contact-point-system
+TDD,Telecommunications Device for the Deaf,HL70202,,,other,,Other,http://hl7.org/fhir/contact-point-system
+TTY,Teletypewriter,HL70202,,,other,,Other,http://hl7.org/fhir/contact-point-system

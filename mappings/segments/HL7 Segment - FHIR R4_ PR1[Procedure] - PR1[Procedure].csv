@@ -1,6 +1,7 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
+0,,,,,,,,"The value mapping depends on the message context where the PR1 is used and to be determined by the implementer.  If not clear, use ""unknown"".",status,,code,1,1,,,,,
 1,PR1-1,Set ID - PR1,SI,1,1,,,,,,,,,,,,,
 2,PR1-2,Procedure Coding Method,IS,1,-1,,,,,,,,,,,,,PR1-2 was deprecated in v2.3
 3,PR1-3,Procedure Code,CNE,1,-1,,,,code,,CodeableConcept,0,1,CNE[CodeableConcept],,,,

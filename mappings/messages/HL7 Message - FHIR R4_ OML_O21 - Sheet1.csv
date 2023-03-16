@@ -27,7 +27,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 5.9.2,OML_O21.PATIENT.INSURANCE.IN2,[ IN2 ],Insurance Additional Information,0,1,,,,Coverage[1],IN2[Coverage],,,Incorporate IN2 content into the Coverage created from the IN1 segment.
 5.9.3,OML_O21.PATIENT.INSURANCE.IN3,[ IN3 ],"Insurance Additional Information, Certification",0,1,,,,Coverage[1],IN3[Coverage],,,Incorporate IN3 content into the Coverage created from the IN1 segment.
 5.9,/OML_O21.PATIENT.INSURANCE,}],--- INSURANCE end,,,,,,,,,,
-5.10,OML_O21.PATIENT.AL1,[ GT1 ],Guarantor,0,1,,,,,,,,
+5.10,OML_O21.PATIENT.GT1,[ GT1 ],Guarantor,0,1,,,,,,,,
 5.11,OML_O21.PATIENT.AL1,[{AL1}],Allergy Information,0,-1,,,,AllergyIntolerance,AL1,AllergyIntolerance.patient=Patient[PID],,Processing of the AL1 segment results in the creation of a new AllergyIntolerance resource
 5,/OML_O21.PATIENT,],--- PATIENT end,,,,,,,,,,
 6,OML_O21.ORDER,{,--- ORDER begin,1,-1,,,,,,,,

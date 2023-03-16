@@ -8,8 +8,8 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 5,SCH-5,Schedule ID,CWE,0,1,,,,,,,,,,,,,
 6,SCH-6,Event Reason,CWE,1,1,,,,,,,,,,,,,
 7,SCH-7,Appointment Reason,CWE,0,1,,,"Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType.",reasonCode[1],,CodeableConcept,0,-1,CWE[CodeableConcept],AppointmentReason,,,
-7,SCH-7,Appointment Reason,CWE,0,1,,,"Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType.",appointmentType[1],,CodeableConcept,0,1,CWE[CodeableConcept],AppointmentType,,,"Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
-8,SCH-8,Appointment Type,CWE,0,1,,,The mapping of SCH-8 to Appointment.appointmentType will depend on the codes being received in SCH-7 and SCH-8,appointmentType[1],,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+7,SCH-7,Appointment Reason,CWE,0,1,,,"Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType.",appointmentType[1],,CodeableConcept,0,1,CWE[CodeableConcept],AppointmentReason,,,"Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
+8,SCH-8,Appointment Type,CWE,0,1,,,The mapping of SCH-8 to Appointment.appointmentType will depend on the codes being received in SCH-7 and SCH-8,appointmentType[1],,CodeableConcept,0,1,CWE[CodeableConcept],AppointmentType,,,
 9,SCH-9,Appointment Duration,NM,0,-1,,,If SCH-10 indicates units of minutes,minutesDuration[1],,positiveInt,0,1,,,,,
 10,SCH-10,Appointment Duration Units,CNE,0,-1,,,,,,,,,,,,,
 11,SCH-11,Appointment Timing Quantity,TQ,1,-1,,,,$this,,,,,TQ[Appointment],,,,

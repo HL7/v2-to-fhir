@@ -11,3 +11,8 @@ F,Final results; results stored and verified.Can only be changed with a correcte
 X,No results available; Order canceled.,HL70123,,,,cancelled,,Cancelled,http://hl7.org/fhir/diagnostic-report-status,,
 Y,No order on record for this test.(Used only on queries),HL70123,IF NOT MAPPED ERROR,,,,,,,,
 Z,No record of this patient. (Used only on queries),HL70123,IF NOT MAPPED ERROR,,,,,,,,
+M,"Corrected, not final",HL70123,,,,,,,,,
+N,"Procedure completed, results pending",HL70123,,,,,,,,,
+,,,,,,appended,,Appended,http://hl7.org/fhir/diagnostic-report-status,,
+,,,,,,entered-in-errror,,Entered in Error,http://hl7.org/fhir/diagnostic-report-status,,
+,,,,,,unkown,,Unknown,http://hl7.org/fhir/diagnostic-report-status,,

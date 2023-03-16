@@ -9,7 +9,7 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * name = "SegmentAL1toAllergyIntolerance"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-03-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -264,7 +264,7 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * group.element[11].extension[0].extension[2].valueInteger = 1
 * group.element[11].display = "Identification Date"
 * group.element[11].target.equivalence = #equivalent
-* group.element[11].target.code = #reaction.onset
+* group.element[11].target.code = #onsetDateTime
 * group.element[11].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].target.extension[0].extension[0].url = "type"
 * group.element[11].target.extension[0].extension[0].valueCode = #"dateTime"
@@ -272,4 +272,4 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * group.element[11].target.extension[0].extension[1].valueInteger = 0
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
-* group.element[11].target.display = "reaction.onset"
+* group.element[11].target.display = "onsetDateTime"

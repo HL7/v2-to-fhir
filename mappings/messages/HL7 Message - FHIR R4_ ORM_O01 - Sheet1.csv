@@ -4,7 +4,6 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 1,ORM_O01.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
 1,ORM_O01.MSH,MSH,Message Header,1,1,,,,Provenance[1],MSH[Provenance],"Provenance[1].target.reference=Bundle.id; 
 Provenance[1].target.reference=MessageHeader[1].id",,
-1,ORM_O01.MSH,MSH,Message Header,1,1,,,,Task[1],MSH[Task],,,
 2,ORM_O01.NTE,[{ NTE }],Notes and Comments (for Header),0,-1,,,,,,,,Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.
 3,ORM_O01.PATIENT,[ ,PATIENT begin,0,1,,,,,,,,
 3.1,ORM_O01.PATIENT.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource

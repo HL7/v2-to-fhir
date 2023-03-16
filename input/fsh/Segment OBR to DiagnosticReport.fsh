@@ -9,7 +9,7 @@ Title: "Segment OBR to DiagnosticReport Map"
 * name = "SegmentOBRtoDiagnosticReport"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-03-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -391,7 +391,7 @@ Title: "Segment OBR to DiagnosticReport Map"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "performer[1].extension[1].valueCodeableConcept.coding.code"
 * group.element[16].target.dependsOn[0].property = "value"
-* group.element[16].target.dependsOn[0].value = "\"TECH\""
+* group.element[16].target.dependsOn[0].value = "\"SPRF\""
 * group.element[16].target.dependsOn[1].property = "data-type-map"
 * group.element[16].target.dependsOn[1].value = "NDL[CodeableConcept]"
 * group.element[17].code = #OBR-34
@@ -414,7 +414,7 @@ Title: "Segment OBR to DiagnosticReport Map"
 * group.element[17].target.extension[0].extension[2].valueInteger = 1
 * group.element[17].target.display = "performer[1].extension[1].valueCodeableConcept.coding.system"
 * group.element[17].target.dependsOn[0].property = "value"
-* group.element[17].target.dependsOn[0].value = "\"http://hl7.org/fhir/R4/valueset-performer-function.html\""
+* group.element[17].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""
 * group.element[18].code = #OBR-35
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"
@@ -498,4 +498,4 @@ Title: "Segment OBR to DiagnosticReport Map"
 * group.element[21].target.extension[0].extension[2].valueInteger = 1
 * group.element[21].target.display = "performer[2].extension[1].valueCodeableConcept.coding.system"
 * group.element[21].target.dependsOn[0].property = "value"
-* group.element[21].target.dependsOn[0].value = "\"http://hl7.org/fhir/R4/valueset-performer-function.html\""
+* group.element[21].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""

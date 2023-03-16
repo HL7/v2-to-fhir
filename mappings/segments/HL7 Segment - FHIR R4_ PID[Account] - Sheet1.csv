@@ -20,7 +20,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 15,PID-15,Primary Language,CWE,0,1,,,,,,,,,,,,,
 16,PID-16,Marital Status,CWE,0,1,,,,,,,,,,,,,
 17,PID-17,Religion,CWE,0,1,,,,,,,,,,,,,
-18,PID-18,Patient Account Number,CX,0,1,,,,identifier,,Identifier,0,-1,CX,,,,
+18,PID-18,Patient Account Number,CX,0,1,,,,identifier,,Identifier,0,-1,CX[Identifier],,,,
 19,PID-19,SSN Number - Patient,ST,0,1,,,,,,,,,,,,,
 20,PID-20,Driver's License Number - Patient,,0,1,,,,,,,,,,,,,
 21,PID-21,Mother's Identifier,CX,0,-1,,,,,,,,,,,,,

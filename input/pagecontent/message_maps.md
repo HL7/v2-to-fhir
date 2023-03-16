@@ -9,6 +9,10 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 ### Chapter  3  Patient Administration
 
 * [ADT_A01](ConceptMap-message-adt-a01-to-bundle.html) - Admit/Visit Notification
+* [ADT_A02](ConceptMap-message-adt-a02-to-bundle.html) - Transfer a Patient
+* [ADT_A05](ConceptMap-message-adt-a05-to-bundle.html) - Pre-Admit a Patient
+* [ADT_A06](ConceptMap-message-adt-a06-to-bundle.html) - Change an Outpatient to an Inpatient
+* [ADT_A17](ConceptMap-message-adt-a17-to-bundle.html) - Swap Patients
 
 ### Chapter  4  Order Entry
 
@@ -19,9 +23,5 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 ### Chapter  7  Observation Reporting
 
 * [ORU_R01](ConceptMap-message-oru-r01-to-bundle.html) - Unsolicited Report Alarm
-
-### Chapter 10  Scheduling
-
-* [SIU_S12](ConceptMap-message-siu-s12-to-bundle.html) - SIU/ACK
 <h2 style='--heading-prefix: ""' id='mapping'>Mapping</h2>
 {% include message_mapping.md %}

@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PR1[Procedure] - PV1.csv
+// HL7 Segment - FHIR R4_ PR1[Procedure] - PR1[Procedure].csv
 Instance: SegmentPR1toProcedure
 InstanceOf: ConceptMap
 Title: "Segment PR1 to Procedure Map"
@@ -9,7 +9,7 @@ Title: "Segment PR1 to Procedure Map"
 * name = "SegmentPR1toProcedure"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-03-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

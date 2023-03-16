@@ -9,7 +9,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 6,CWE.6,Name of Alternate Coding System,ID,0,1,,,,,,,,,,,,,
 7,CWE.7,Coding System Version ID,ST,0,1,,,,,,,,,,,,,
 8,CWE.8,Alternate Coding System Version ID,ST,0,1,,,,,,,,,,,,,
-9,CWE.9,Original Text,ST,0,1,,,,,,,,,,,,,
+9,CWE.9,Original Text,ST,0,1,,,,name,,string,0,1,,,,,
 10,CWE.10,Second Alternate Identifier,ST,0,1,,,,,,,,,,,,,
 11,CWE.11,Second Alternate Text,ST,0,1,,,,,,,,,,,,,
 12,CWE.12,Name of Second Alternate Coding System,ID,0,1,,,,,,,,,,,,,

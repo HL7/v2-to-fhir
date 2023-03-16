@@ -9,7 +9,7 @@ Title: "Segment RXA to Immunization Map"
 * name = "SegmentRXAtoImmunization"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-03-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -255,7 +255,7 @@ Title: "Segment RXA to Immunization Map"
 * group.element[11].target.extension[0].extension[1].url = "cardinalityMin"
 * group.element[11].target.extension[0].extension[1].valueInteger = 0
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
-* group.element[11].target.extension[0].extension[2].valueInteger = 1
+* group.element[11].target.extension[0].extension[2].valueInteger = -1
 * group.element[11].target.display = "reasonCode"
 * group.element[11].target.dependsOn[0].property = "data-type-map"
 * group.element[11].target.dependsOn[0].value = "CWE[CodeableConcept]"

@@ -1,0 +1,10 @@
+,,,Condition (IF TRUE),,,HL7 FHIR,,
+Code,Text,Code System,Computable ANTLR,Computable FHIRpath,Narrative,Code,Display,Code System
+CA,Order was canceled,HL70038,,,,revoked,Revoked,http://hl7.org/fhir/request-status
+CM,Order is completed,HL70038,,,,completed,Completed,http://hl7.org/fhir/request-status
+DC,Order was discontinued,HL70038,,,,revoked,Revoked,http://hl7.org/fhir/request-status
+ER,"Error, order not found",HL70038,,,,entered-in-error,Entered in Error,http://hl7.org/fhir/request-status
+HD,Order is on hold,HL70038,,,,on-hold,On Hold,http://hl7.org/fhir/request-status
+IP,"In process, unspecified",HL70038,,,,active,Active,http://hl7.org/fhir/request-status
+RP,Order has been replaced,HL70038,,,,revoked,Revoked,http://hl7.org/fhir/request-status
+SC,"In process, scheduled",HL70038,,,,active,Active,http://hl7.org/fhir/request-status

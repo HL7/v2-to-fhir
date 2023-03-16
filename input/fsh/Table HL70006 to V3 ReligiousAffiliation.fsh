@@ -9,7 +9,7 @@ Title: "Table HL70006 to V3 ReligiousAffiliation Map"
 * name = "TableHL70006toV3ReligiousAffiliation"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-03-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -53,7 +53,9 @@ Title: "Table HL70006 to V3 ReligiousAffiliation Map"
 * group.element[5].target.display = "Lutheran"
 * group.element[6].code = #M
 * group.element[6].display = "Church of Latter Day Saints (Mormon)"
-* group.element[6].target.equivalence = #unmatched
+* group.element[6].target.equivalence = #equivalent
+* group.element[6].target.code = #1027
+* group.element[6].target.display = "Latter Day Saints"
 * group.element[7].code = #N
 * group.element[7].display = "Hindu"
 * group.element[7].target.equivalence = #equivalent
@@ -71,7 +73,9 @@ Title: "Table HL70006 to V3 ReligiousAffiliation Map"
 * group.element[9].target.display = "Agnosticism"
 * group.element[10].code = #ATH
 * group.element[10].display = "Atheist"
-* group.element[10].target.equivalence = #unmatched
+* group.element[10].target.equivalence = #equivalent
+* group.element[10].target.code = #1007
+* group.element[10].target.display = "Atheism"
 * group.element[11].code = #BAH
 * group.element[11].display = "Baha'i"
 * group.element[11].target.equivalence = #equivalent
@@ -406,7 +410,9 @@ Title: "Table HL70006 to V3 ReligiousAffiliation Map"
 * group.element[90].target.display = "Shinto"
 * group.element[91].code = #SIK
 * group.element[91].display = "Sikh"
-* group.element[91].target.equivalence = #unmatched
+* group.element[91].target.equivalence = #equivalent
+* group.element[91].target.code = #1047
+* group.element[91].target.display = "Sikism"
 * group.element[92].code = #SPI
 * group.element[92].display = "Spiritist"
 * group.element[92].target.equivalence = #equivalent

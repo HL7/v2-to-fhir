@@ -26,4 +26,4 @@ HL70127 is a user defined table"
 
 
 "
-6,AL1-6,Identification Date,DT,1,1,,,,reaction.onset,,dateTime,0,1,,,,,"Withdrawn as of 2.7, Refer to IAM-11 Onset or IAM-13 Reported Date"
+6,AL1-6,Identification Date,DT,1,1,,,,onsetDateTime,,dateTime,0,1,,,,,"Withdrawn as of 2.7, Refer to IAM-11 Onset or IAM-13 Reported Date"

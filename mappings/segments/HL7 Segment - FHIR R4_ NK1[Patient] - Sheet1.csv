@@ -3,10 +3,11 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,NK1-1,Set ID - NK1,SI,1,1,,,,,,,,,,,,,
 2,NK1-2,Name,XPN,0,-1,,,,contact.name,,HumanName,0,1,XPN,,,,
-3,NK1-3,Relationship,CWE,0,1,,,,,contact.extension-v2Relationship,CodeableConcept,0,1,CWE[CodeableConcept],Relationship,,,Patient.contact.relationship uses the same value set as NK1-7 (contact role). There doesn't seem to be a standard element for the NK1-3 relationship in Patient.contact. An extension will likely be needed
+3,NK1-3,Relationship,CWE,0,1,,,,,contact.extension??-v2Relationship,CodeableConcept,0,1,CWE[CodeableConcept],Relationship,,,Patient.contact.relationship uses the same value set as NK1-7 (contact role). There doesn't seem to be a standard element for the NK1-3 relationship in Patient.contact. An extension will likely be needed
 4,NK1-4,Address,XAD,0,-1,,,,contact.address,,Address,0,1,XAD[Address],,,,Note the decreased cardinality for the FHIR map
 5,NK1-5,Phone Number,XTN,0,-1,,,,contact.telecom[1],,ContactPoint,0,-1,XTN[ContactPoint],,,,
 6,NK1-6,Business Phone Number,XTN,0,-1,,,,contact.telecom[2],,ContactPoint,0,-1,XTN[ContactPoint],,,,
+6,NK1-6,Business Phone Number,XTN,0,-1,,,,contact.telecom[2].type.use,,code,0,1,,,"""work""",,
 7,NK1-7,Contact Role,CWE,0,1,,,,contact.relationship,,CodeableConcept,0,-1,CWE[CodeableConcept],Contact Role,,,"Should we update the names in the base FHIR standard as the names and value sets are confusing?  It's normative, so has to have a very strong case."
 8,NK1-8,Start Date,DT,0,1,,,,contact.period.start,,dateTime,0,1,,,,,
 9,NK1-9,End Date,DT,0,1,,,,contact.period.end,,dateTime,0,1,,,,,

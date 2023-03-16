@@ -16,8 +16,8 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 13,PV1-13,Re-admission Indicator,CWE,0,1,,,,,,,,,,,,,
 14,PV1-14,Admit Source,CWE,0,1,,,,,,,,,,,,,
 15,PV1-15,Ambulatory Status,CWE,0,-1,,,,,,,,,,,,,
-16,PV1-16,VIP Indicator,CWE,0,1,,,,extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-importance""",,
-16,PV1-16,VIP Indicator,CWE,0,1,,,,extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],,,,"Depending on the vocabulary used in PV1-16, this may require additional mapping."
+16,PV1-16,VIP Indicator,CWE,0,1,,,If person level VIP,extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-importance""",,
+16,PV1-16,VIP Indicator,CWE,0,1,,,If person level VIP,extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],VIPIndicator,,,
 17,PV1-17,Admitting Doctor,XCN,0,-1,,,,,,,,,,,,,
 18,PV1-18,Patient Type,CWE,0,1,,,,,,,,,,,,,
 19,PV1-19,Visit Number,CX,0,1,,,,,,,,,,,,,

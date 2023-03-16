@@ -8,7 +8,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 4,ROL-4,Role Person,XCN,1,-1,,,,participant[1].individual(PractitionerRole.practitioner),,Reference(Practitioner),,,XCN[Practitioner],,,,
 5,ROL-5,Role Begin Date/Time,DTM,0,1,,,,participant[1].period.start,,dateTime,0,1,,,,,
 6,ROL-6,Role End Date/Time,DTM,0,1,,,,participant[1].period.end,,dateTime,0,1,,,,,
-7,ROL-7,Role Duration,CWE,0,1,,,,,Encounter[PV1].participant[1]..#ext-duration#,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+7,ROL-7,Role Duration,CWE,0,1,,,,,participant[1].extension?-duration,CodeableConcept,0,1,CWE[CodeableConcept],,,,
 8,ROL-8,Role Action Reason,CWE,0,1,,,,,,,,,,,,,
 9,ROL-9,Provider Type,CWE,0,-1,,,,,,,,,,,,,
 10,ROL-10,Organization Unit Type,CWE,0,1,,,,,,,,,,,,,

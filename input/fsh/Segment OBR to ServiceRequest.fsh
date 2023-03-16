@@ -9,7 +9,7 @@ Title: "Segment OBR to ServiceRequest Map"
 * name = "SegmentOBRtoServiceRequest"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-03-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -329,7 +329,7 @@ Title: "Segment OBR to ServiceRequest Map"
 * group.element[14].target.dependsOn[0].property = "data-type-map"
 * group.element[14].target.dependsOn[0].value = "TQ[ServiceRequest]"
 * group.element[14].target.product[0].property = "antlr"
-* group.element[14].target.product[0].value = "IF ORC-7 NOT VALUED"
+* group.element[14].target.product[0].value = "IF ORC-7 NOT VALUED AND ORC-6 NOT VALUED"
 * group.element[15].code = #OBR-29
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"

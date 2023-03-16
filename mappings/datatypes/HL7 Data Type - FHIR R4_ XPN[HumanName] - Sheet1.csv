@@ -15,7 +15,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 11,XPN.11,Name Assembly Order,ID,0,1,,,,[1].extension.valueCode,,code,1,1,,NameAssemblyOrder,,,
 12,XPN.12,Effective Date,DTM,0,1,,,,[1].period.start,,dateTime,0,1,,,,,
 13,XPN.13,Expiration Date,DTM,0,1,,,,[1].period.end,,dateTime,0,1,,,,,
-14,XPN.14,Professional Suffix,ST,0,1,,,,[1].suffix,,string,0,-1,,,,,
+14,XPN.14,Professional Suffix,ST,0,1,,,,[1].suffix[3],,string,0,-1,,,,,
 15,XPN.15,Called By,ST,0,1,,,if the resource attribute using the HumanName datatype allows for multiple names,[2].given,,string,0,-1,,,,,"One possibility is to put this in HumanName.given where HumanName.use=""usual"". When XPN.7 does not map to ""usual"" a new occurence of Patient.name should be created
 Alternative a new extension could be created for HumanName.family.#ext-called-by#"
 15,XPN.15,Called By,ST,0,1,,,if the resource attribute using the HumanName datatype allows for multiple names,[2].use,,code,0,1,,,"""nickname""",,

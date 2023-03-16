@@ -9,7 +9,7 @@ Title: "Segment SPM to Specimen Map"
 * name = "SegmentSPMtoSpecimen"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-03-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -270,7 +270,7 @@ Title: "Segment SPM to Specimen Map"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "status"
 * group.element[11].target.dependsOn[0].property = "vocabulary-map"
-* group.element[11].target.dependsOn[0].value = "0490"
+* group.element[11].target.dependsOn[0].value = "136"
 * group.element[12].code = #SPM-24
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -292,6 +292,8 @@ Title: "Segment SPM to Specimen Map"
 * group.element[12].target.display = "condition"
 * group.element[12].target.dependsOn[0].property = "data-type-map"
 * group.element[12].target.dependsOn[0].value = "CWE[CodeableConcept]"
+* group.element[12].target.dependsOn[1].property = "vocabulary-map"
+* group.element[12].target.dependsOn[1].value = "493"
 * group.element[13].code = #SPM-27
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -314,7 +316,7 @@ Title: "Segment SPM to Specimen Map"
 * group.element[13].target.dependsOn[0].property = "data-type-map"
 * group.element[13].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[13].target.dependsOn[1].property = "vocabulary-map"
-* group.element[13].target.dependsOn[1].value = "544"
+* group.element[13].target.dependsOn[1].value = "785"
 * group.element[14].code = #SPM-30
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -416,5 +418,3 @@ Title: "Segment SPM to Specimen Map"
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = 1
 * group.element[18].target.display = "= \"http://terminology.hl7.org/CodeSystem/v2-0203\""
-* group.element[18].target.dependsOn[0].property = "vocabulary-map"
-* group.element[18].target.dependsOn[0].value = "206"

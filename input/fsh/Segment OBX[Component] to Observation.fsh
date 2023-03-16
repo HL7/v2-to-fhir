@@ -9,7 +9,7 @@ Title: "Segment OBX to Observation Map"
 * name = "SegmentOBXComponenttoObservation"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-03-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -54,7 +54,7 @@ Title: "Segment OBX to Observation Map"
 * group.element[1].extension[0].extension[2].valueInteger = 1
 * group.element[1].display = "Observation Identifier"
 * group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #component[*].code
+* group.element[1].target.code = #component[each].code
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -62,7 +62,7 @@ Title: "Segment OBX to Observation Map"
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
-* group.element[1].target.display = "component[*].code"
+* group.element[1].target.display = "component[each].code"
 * group.element[1].target.dependsOn[0].property = "data-type-map"
 * group.element[1].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[2].code = #OBX-5
