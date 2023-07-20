@@ -19,6 +19,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [MSH[Transformation]](ConceptMap-segment-mshtransformation-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 * [NTE](ConceptMap-segment-nte-to-observation.html) - Notes and Comments to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [NTE](ConceptMap-segment-nte-to-servicerequest.html) - Notes and Comments to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
+* [SFT](ConceptMap-segment-sft-to-device.html) - Software Segment to FHIR [Device](http://hl7.org/fhir/R4/device.html)
 
 ### Chapter  3  Patient Administration
 
@@ -35,6 +36,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [PID[EthnicGroup]](ConceptMap-segment-pidethnicgroup-to-observation.html) - Patient Identification to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [PID[Patient]](ConceptMap-segment-pidpatient-to-provenance.html) - Patient Identification to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 * [PID[Race]](ConceptMap-segment-pidrace-to-observation.html) - Patient Identification to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
+* [PV1](ConceptMap-segment-pv1-to-encounter.html) - Patient Visit to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 * [PV1](ConceptMap-segment-pv1-to-patient.html) - Patient Visit to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [PV2](ConceptMap-segment-pv2-to-encounter.html) - Patient Visit - Additional Information to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 
@@ -47,11 +49,14 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [ORC](ConceptMap-segment-orc-to-immunization.html) - Common Order to FHIR [Immunization](http://hl7.org/fhir/R4/immunization.html)
 * [ORC](ConceptMap-segment-orc-to-provenance.html) - Common Order to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 * [ORC](ConceptMap-segment-orc-to-servicerequest.html) - Common Order to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
+* [TQ1](ConceptMap-segment-tq1-to-servicerequest.html) - Timing/Quantity to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
+* [TQ2](ConceptMap-segment-tq2-to-servicerequest.html) - Timing/Quantity Relationship to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
 
 ### Chapter  4A  Order Entry:  Pharmacy/Treatment, Vaccination
 
 * [RXA](ConceptMap-segment-rxa-to-immunization.html) - Pharmacy/Treatment Administration to FHIR [Immunization](http://hl7.org/fhir/R4/immunization.html)
 * [RXR](ConceptMap-segment-rxr-to-immunization.html) - Pharmacy/Treatment Route to FHIR [Immunization](http://hl7.org/fhir/R4/immunization.html)
+* [RXR](ConceptMap-segment-rxr-to-medicationrequest.html) - Pharmacy/Treatment Route to FHIR [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html)
 
 ### Chapter  6  Financial Management
 
@@ -66,9 +71,11 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 
 * [OBX](ConceptMap-segment-obx-to-observation.html) - Observation/Result to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [OBX[Component]](ConceptMap-segment-obxcomponent-to-observation.html) - Observation/Result to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
+* [PRT](ConceptMap-segment-prt-to-careteam.html) - Participation Information to FHIR [CareTeam](http://hl7.org/fhir/R4/careteam.html)
 * [PRT](ConceptMap-segment-prt-to-device.html) - Participation Information to FHIR [Device](http://hl7.org/fhir/R4/device.html)
 * [PRT](ConceptMap-segment-prt-to-practitionerrole.html) - Participation Information to FHIR [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html)
 * [PRT](ConceptMap-segment-prt-to-relatedperson.html) - Participation Information to FHIR [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)
+* [PRT[GeneralPractitioner]](ConceptMap-segment-prtgeneralpractitioner-to-patient.html) - Participation Information to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [PRT[Location]](ConceptMap-segment-prtlocation-to-observation.html) - Participation Information to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [SPM](ConceptMap-segment-spm-to-specimen.html) - Specimen to FHIR [Specimen](http://hl7.org/fhir/R4/specimen.html)
 
@@ -81,6 +88,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [AIS](ConceptMap-segment-ais-to-servicerequest.html) - Appointment Information to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
 * [SCH](ConceptMap-segment-sch-to-appointment.html) - Scheduling Activity Information to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
 * [SCH](ConceptMap-segment-sch-to-provenance.html) - Scheduling Activity Information to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
+* [SCH](ConceptMap-segment-sch-to-servicerequest.html) - Scheduling Activity Information to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
 
 ### Chapter 15  Personnel Management
 

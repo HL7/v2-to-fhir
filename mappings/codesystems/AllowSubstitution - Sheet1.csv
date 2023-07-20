@@ -1,0 +1,5 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+N,Substitutions are NOT authorized. (This is the default - null.),HL70161,,,,N,,Substitutions are NOT authorized. (This is the default - null.),http://terminology.hl7.org/CodeSystem/v2-0161,,
+G,Allow generic substitutions.,HL70161,,,,G,,Allow generic substitutions.,http://terminology.hl7.org/CodeSystem/v2-0161,,
+T,Allow therapeutic substitutions,HL70161,,,,T,,Allow therapeutic substitutions,http://terminology.hl7.org/CodeSystem/v2-0161,,

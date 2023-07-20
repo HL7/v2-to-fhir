@@ -9,7 +9,7 @@ Title: "Table HL70123 to Diagnostic Report Status Map"
 * name = "TableHL70123QueriestoDiagnosticReportStatus"
 * status = #active
 * experimental = true
-* date = "2023-03-16"
+* date = "2023-07-20"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -40,9 +40,7 @@ Title: "Table HL70123 to Diagnostic Report Status Map"
 * group.element[2].target.display = "Registered"
 * group.element[3].code = #A
 * group.element[3].display = "Some, but not all, results available"
-* group.element[3].target.equivalence = #equivalent
-* group.element[3].target.code = #partial
-* group.element[3].target.display = "Partial"
+* group.element[3].target.equivalence = #unmatched
 * group.element[4].code = #P
 * group.element[4].display = "Preliminary: A verified early result is available, final results not yet obtained"
 * group.element[4].target.equivalence = #equivalent

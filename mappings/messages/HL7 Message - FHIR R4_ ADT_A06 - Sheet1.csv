@@ -25,7 +25,7 @@ Provenance[1].entity.role=""source""",,
 13,ADT_A06:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[Patient-GeneralPractitioner],,,
 13,ADT_A06:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.3 EQUALS ""HL70443"" AND ROL-3.1 IS NOT ""PP""","(element(""3.1"")!=""PP"")or(element(""3.3"")!=""HL70443"")","When the ROL includes entries with roles in Table HL70443 other than ""PP"", then they may be candidates for CareTeam, but not all.  That is implementation specific.",CareTeam[1],ROL[CareTeam],CareTeam[1].subject.reference=Patient[1].id,,
 14,ADT_A06:follow:PID.PRT,[{ PRT }],Participation,0,-1,"IF PRT-4 IS ""PP""",,,Patient[1],PRT[Patient-GeneralPractitioner],,,
-14,ADT_A06:follow:PID.PRT,[{ PRT }],Participation,0,-1,"IF PRT-4 IS NOT ""PP""",,,CareTeam[1],PRT[CareTeam],,,
+14,ADT_A06:follow:PID.PRT,[{ PRT }],Participation,0,-1,"IF PRT-4 IS IN (""AD"", ""AP"", ""ARI"", ""AT"", ""CP"", ""FHCP"", ""OP"", ""PH"", ""PP"", ""PRI"", ""RP"", ""RT"", ""VP"", ""PO"")",,,CareTeam[1],PRT[CareTeam],CareTeam[1].subject.reference=Patient[1].id,,
 15,ADT_A06.MRG,[ MRG ],Merge Information,0,1,,,,Account[2],MRG[Account],Account[2].subject.reference=Patient[1].id,,"It will be left to implementation negotiation to determine whether disparate systems merely change the patient class, or close and open a new account.  The current active account number should appear in field PID-18 - Patient Account Number; the prior account number can be included optionally in MRG-3 - Prior Patient Account Number. 
 Depending on the relationship between the old and new account, the implementer should consider whether Account.partOf should be used as well to link the two accounts appropriately."
 16,ADT_A06.NEXT_OF_KIN,[{,--- NEXT_OF_KIN begin,0,-1,,,,,,,,
@@ -36,7 +36,6 @@ Depending on the relationship between the old and new account, the implementer s
 16.3,/ADT_A06.NEXT_OF_KIN,}],--- NEXT_OF_KIN end,,,,,,,,,,
 17,ADT_A06.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter[1].subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource.  Note also that per A06 and A07 trigger event definitions PV1-19 - Visit Number may also be changed during this event.
 17,ADT_A06.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-17,ADT_A06.PV1,PV1,Patient Visit,1,1,IF IN3.21 IS VALUED,,,CareTeam[1].participant[1],PV1[CareTeam],CareTeam[1].encounter.reference=Encounter[1].id,,
 18,ADT_A06.PV2,[ PV2 ],Patient Visit - Additional Info.,0,1,,,,Encounter[1],PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.
 19,ADT_A06:follow:PV1.ARV,[{ ARV }],Access Restrictions,0,-1,,,,,,,,"FHIR does not yet support field level security tags.  The ARV, when located with the PV1/PV2 in the v2 message, is meant to only apply to the encounter.  However, technically it could point to other places in the messageas as well.  That is considered out of scope as."
 20,ADT_A06:follow:PV1.ROL,[{ ROL }],Role,0,-1,,,,Encounter[1],ROL[Encounter-PractitionerRole],,,

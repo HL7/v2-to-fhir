@@ -9,7 +9,7 @@ Title: "Message OML_O21 to Bundle Map"
 * name = "MessageOML_O21toBundle"
 * status = #active
 * experimental = true
-* date = "2023-03-16"
+* date = "2023-07-20"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -365,7 +365,7 @@ Title: "Message OML_O21 to Bundle Map"
 * group.element[23].extension[0].extension[0].valueInteger = 0
 * group.element[23].extension[0].extension[1].url = "cardinalityMax"
 * group.element[23].extension[0].extension[1].valueInteger = -1
-* group.element[23].display = "Timing/Quantity Order Sequence"
+* group.element[23].display = "Billing Segment"
 * group.element[23].target.equivalence = #equivalent
 * group.element[23].target.code = #ServiceRequest[1]
 * group.element[23].target.display = "ServiceRequest[1]"

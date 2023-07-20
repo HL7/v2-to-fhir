@@ -9,7 +9,7 @@ Title: "Segment OBX to Observation Map"
 * name = "SegmentOBXtoObservation"
 * status = #active
 * experimental = true
-* date = "2023-03-16"
+* date = "2023-07-20"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -1161,11 +1161,30 @@ Title: "Segment OBX to Observation Map"
 * group.element[54].extension[0].extension[2].valueInteger = -1
 * group.element[54].display = "Observation Related Specimen Identifier"
 * group.element[54].target.equivalence = #equivalent
-* group.element[54].target.code = #specimen(Specimen)
+* group.element[54].target.code = #extension[1].valueReference(Group.member.entity(Specimen))
 * group.element[54].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
-* group.element[54].target.extension[0].extension[0].url = "type"
-* group.element[54].target.extension[0].extension[0].valueCode = #"Reference"
-* group.element[54].target.display = "specimen(Specimen)"
-* group.element[54].target.comment = "/.specimen.reference.id points to either SPM-2.1 (placer assigned identifier) or SPM-2.2 (filler assigned identifier).  The implementer needs to determine which one, or which one tkae precedence"
+* group.element[54].target.extension[0].extension[0].url = "cardinalityMin"
+* group.element[54].target.extension[0].extension[0].valueInteger = 0
+* group.element[54].target.extension[0].extension[1].url = "cardinalityMax"
+* group.element[54].target.extension[0].extension[1].valueInteger = 1
+* group.element[54].target.display = "extension[1].valueReference(Group.member.entity(Specimen))"
 * group.element[54].target.product[0].property = "antlr"
-* group.element[54].target.product[0].value = "IF OBX-33 COUNT=1"
+* group.element[54].target.product[0].value = "IF OBX-33 COUNT>1"
+* group.element[55].code = #OBX-33
+* group.element[55].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[55].extension[0].extension[0].url = "type"
+* group.element[55].extension[0].extension[0].valueCode = #"EIP"
+* group.element[55].extension[0].extension[1].url = "cardinalityMin"
+* group.element[55].extension[0].extension[1].valueInteger = -1
+* group.element[55].extension[0].extension[2].url = "cardinalityMax"
+* group.element[55].extension[0].extension[2].valueInteger = -1
+* group.element[55].display = "Observation Related Specimen Identifier"
+* group.element[55].target.equivalence = #equivalent
+* group.element[55].target.code = #specimen(Specimen)
+* group.element[55].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[55].target.extension[0].extension[0].url = "type"
+* group.element[55].target.extension[0].extension[0].valueCode = #"Reference"
+* group.element[55].target.display = "specimen(Specimen)"
+* group.element[55].target.comment = "/.specimen.reference.id points to either SPM-2.1 (placer assigned identifier) or SPM-2.2 (filler assigned identifier).  The implementer needs to determine which one, or which one tkae precedence"
+* group.element[55].target.product[0].property = "antlr"
+* group.element[55].target.product[0].value = "IF OBX-33 COUNT=1"

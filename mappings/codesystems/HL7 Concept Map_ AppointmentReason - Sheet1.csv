@@ -1,0 +1,7 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+ROUTINE,Routine appointment - default if not valued,HL70276,,,,3780001,,"Routine patient disposition, no follow-up planned",http://hl7.org/fhir/ValueSet/encounter-reason,,
+WALKIN,A previously unscheduled walk-in visit,HL70276,,,,,,,,,
+CHECKUP,"A routine check-up, such as an annual physical",HL70276,,,,866149003,,Annual visit (procedure),http://hl7.org/fhir/ValueSet/encounter-reason,,
+FOLLOWUP,A follow up visit from a previous appointment,HL70276,,,,185389009,,Follow-up visit (procedure),http://hl7.org/fhir/ValueSet/encounter-reason,,
+EMERGENCY,Emergency appointment,HL70276,,,,373110003,,Emergency procedure (procedure),http://hl7.org/fhir/ValueSet/encounter-reason,,

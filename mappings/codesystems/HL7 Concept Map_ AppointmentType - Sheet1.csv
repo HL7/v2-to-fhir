@@ -1,0 +1,5 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+Normal,Routine schedule request type – default if not valued,HL70277,,,,,,,,,
+Tentative,"A request for a tentative (e.g., “penciled in”) appointment",HL70277,,,,,,,,,
+Complete,"A request to add a completed appointment, used to maintain records of completed appointments that did not appear in the schedule (e.g., STAT, walk-in, etc.)",HL70277,,,,,,,,,

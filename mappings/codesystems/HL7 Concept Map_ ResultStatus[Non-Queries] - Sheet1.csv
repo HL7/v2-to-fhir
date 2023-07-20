@@ -3,7 +3,7 @@ Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Displ
 O,Order received; specimen not yet received,HL70123,,,,registered,,Registered,http://hl7.org/fhir/diagnostic-report-status,,
 I,"No results available; specimen received, procedure incomplete",HL70123,,,,registered,,Registered,http://hl7.org/fhir/diagnostic-report-status,,
 S,"No results available; procedure scheduled,but not done",HL70123,,,,registered,,Registered,http://hl7.org/fhir/diagnostic-report-status,,
-A,"Some, but not all, results available",HL70123,,,,partial,,Partial,http://hl7.org/fhir/diagnostic-report-status,,
+A,"Some, but not all, results available",HL70123,,,,,,,,,"In v2 intent is to have those available be verified if not final (to be clarified), while in FHIR partial could be preliminary"
 P,"Preliminary: A verified early result is available, final results not yet obtained",HL70123,,,,preliminary,,Preliminary,http://hl7.org/fhir/diagnostic-report-status,,
 C,Correction to results,HL70123,,,,corrected,,Corrected,http://hl7.org/fhir/diagnostic-report-status,,
 R,Results stored; not yet verified,HL70123,,,,partial,,Partial,http://hl7.org/fhir/diagnostic-report-status,,
@@ -11,8 +11,8 @@ F,Final results; results stored and verified.Can only be changed with a correcte
 X,No results available; Order canceled.,HL70123,,,,cancelled,,Cancelled,http://hl7.org/fhir/diagnostic-report-status,,
 Y,No order on record for this test.(Used only on queries),HL70123,IF NOT MAPPED ERROR,,,,,,,,
 Z,No record of this patient. (Used only on queries),HL70123,IF NOT MAPPED ERROR,,,,,,,,
-M,"Corrected, not final",HL70123,,,,,,,,,
+M,"Corrected, not final",HL70123,,,,,,,,,Need JIRA for UTG to add this value.
 N,"Procedure completed, results pending",HL70123,,,,,,,,,
-,,,,,,appended,,Appended,http://hl7.org/fhir/diagnostic-report-status,,
+,,,,,,appended,,Appended,http://hl7.org/fhir/diagnostic-report-status,,"corrected and appended are part of amended, but amended  is used as corrected only."
 ,,,,,,entered-in-errror,,Entered in Error,http://hl7.org/fhir/diagnostic-report-status,,
 ,,,,,,unkown,,Unknown,http://hl7.org/fhir/diagnostic-report-status,,

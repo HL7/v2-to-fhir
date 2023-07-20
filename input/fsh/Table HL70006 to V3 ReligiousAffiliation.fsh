@@ -9,7 +9,7 @@ Title: "Table HL70006 to V3 ReligiousAffiliation Map"
 * name = "TableHL70006toV3ReligiousAffiliation"
 * status = #active
 * experimental = true
-* date = "2023-03-16"
+* date = "2023-07-20"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

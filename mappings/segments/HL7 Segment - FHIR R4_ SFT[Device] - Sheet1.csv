@@ -1,0 +1,12 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,SFT-1,Software Vendor Organization,XON,1,1,If XON.1 IS VALUED AND XON.10 NOT VALUED,,,manufacturer,,string,,,XON[string],,,,
+1,SFT-1,Software Vendor Organization,XON,1,1,IF XON.10 is valued,,,,,,,,,,,,extension[1].url to R6 Device.manufacturer with valueReference(Organization) once available
+2,SFT-2,Software Certified Version or Release Number,ST,1,1,,,,version.value,,string,1,1,,,,,
+3,SFT-3,Software Product Name,ST,1,1,,,,deviceName.name,,string,1,1,,,,,
+3,SFT-3,Software Product Name,ST,1,1,,,,deviceName.type,,code,,,,,"""manufacturer-name""",,
+4,SFT-4,Software Binary ID,ST,1,1,,,,modelNumber,,string,,,,,,,
+5,SFT-5,Software Product Information,TX,0,1,,,,note.text,,markdown,1,1,,,,,
+6,SFT-6,Software Install Date,DTM,0,1,,,,version.extension[1].url,,uri,1,1,,,"""https://hl7.org/fhir/R5/StructureDefinition/extension-Device.version.installDate""",,
+6,SFT-6,Software Install Date,DTM,0,1,,,,version.extension[1].valueDateTime,,dateTime,1,1,,,,,

@@ -36,7 +36,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 6.2,OML_O21.ORDER.PRT,[{PRT}],Participation (for Common Order),0,-1,"IF PRT-4.1 EQUALS ""OP"" AND PRT-4.3 EQUALS ""HL70443""","(element(""4.1"")=""OP"")and(element(""4.3"")=""HL70443"")",,PractitionerRole[3],PRT[PractitionerRole],ServiceRequest[1].requester.reference=PractitionerRole[3].id,,
 6.3,OML_O21.ORDER.TIMING,[{,--- TIMING begin,0,-1,,,,,,,,
 6.3.1,OML_O21.ORDER.TIMING.TQ1,TQ1,Timing/Quantity,1,1,,,,ServiceRequest[1],TQ1[ServiceRequest],,,
-6.3.2,OML_O21.ORDER.TIMING.TQ2,[{TQ2}],Timing/Quantity Order Sequence,0,-1,,,,ServiceRequest[1],TQ2[ServiceRequest],,,
+6.3.2,OML_O21.ORDER.TIMING.TQ2,[{TQ2}],Billing Segment,0,-1,,,,ServiceRequest[1],TQ2[ServiceRequest],,,
 6.3.3,/OML_O21.ORDER.TIMING,}],--- TIMING end,,,,,,,,,,
 6.4,OML_O21.ORDER.OBSERVATION_REQUEST,[,--- OBSERVATION_REQUEST begin,0,1,,,,,,,,
 6.4.1,OML_O21.ORDER.OBSERVATION_REQUEST.OBR,OBR,Observation Request,1,1,,,,ServiceRequest[1],OBR[ServiceRequest],,,Incorporate OBR content into the ServiceRequest created from the ORC segment in the same segment group.
@@ -49,7 +49,6 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 6.4.6,OML_O21.ORDER.OBSERVATION_REQUEST.DG1,[{DG1}],Diagnosis,0,-1,,,,Condition[1],DG1[Condition],ServiceRequest[1].reasonReference.reference=Condition[1].id; Condition[1].subject.reference=Patient[1].id,,Processing of the DG1 segment results in the creation of a new Condition resource which is referenced in the ServiceRequest created by the ORC segment
 6.4.7,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION,[{,--- OBSERVATION begin,0,-1,,,,,,,,
 6.4.7.1,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.OBX,OBX,Observation/Result,1,1,"IF OBX-29 IN (""QST"", ""SCI"")",,,Observation[1],OBX[Observation],ServiceRequest[1].supportingInfo.reference=Observation[1].id; Observation[1].subject.id=Patient[1].id,,
-6.4.7.1,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.OBX,OBX,Observation/Result,1,1,"IF OBX-29=""Q......",,,,,,,
 6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-10 VALUED,,,Device,PRT[Device],Observation[2].device.reference=Device.id,,
 6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[Observation-Location],,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
 6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-5 VALUED,,,PractitionerRole[7],PRT[PractitionerRole],Observation[2].performer.reference=PractitionerRole[7].id,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation practitioner information.

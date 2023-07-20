@@ -1,6 +1,7 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
+0,,,,,,IF SCH-25 NOT VALUED,,,status,,,,,,,"""active""",,
 1,SCH-1,Placer Appointment ID,EI,0,1,,,,,,,,,,,,,
 2,SCH-2,Filler Appointment ID,EI,0,1,,,,,,,,,,,,,
 3,SCH-3,Occurrence Number,NM,0,1,,,,,,,,,,,,,
@@ -32,6 +33,6 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 22,SCH-22,Entered By Location,PL,0,1,,,,,,,,,,,,,
 23,SCH-23,Parent Placer Appointment ID,EI,0,1,,,,,,,,,,,,,
 24,SCH-24,Parent Filler Appointment ID,EI,0,1,,,,,,,,,,,,,
-25,SCH-25,Filler Status Code,CWE,0,1,,,,status,,code,1,1,,,"""unknown""",,
+25,SCH-25,Filler Status Code,CWE,0,1,,,,status,,code,1,1,FillerStatus[Appointment],,,,
 26,SCH-26,Placer Order Number,EI,0,-1,,,,identifier[1],,,,,,,,,
 27,SCH-27,Filler Order Number,EI,0,-1,,,,identifier[2],,Identifier,0,-1,EI[Identifier],,,,

@@ -1,0 +1,11 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+AP,Applicator,HL70164,,,,,,,,,
+BT,Buretrol,HL70164,,,,,,,,,
+HL,Heparin Lock,HL70164,,,,,,,,,
+IPPB,IPPB,HL70164,,,,,,,,,
+IVP,IV Pump,HL70164,,,,,,,,,
+IVS,IV Soluset,HL70164,,,,,,,,,
+MI,Metered Inhaler,HL70164,,,,,,,,,
+NEB,Nebulizer,HL70164,,,,,,,,,
+PCA,PCA Pump,HL70164,,,,,,,,,

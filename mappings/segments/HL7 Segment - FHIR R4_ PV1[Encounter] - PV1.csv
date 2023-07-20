@@ -25,8 +25,8 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 9,PV1-9,Consulting Doctor,XCN,0,-1,,,,participant[3].type.text,,string,0,1,,,"""consultant""",,
 10,PV1-10,Hospital Service,CWE,0,1,,,,serviceType,,CodeableConcept,0,1,CWE[CodeableConcept],HospitalService,,,
 11,PV1-11,Temporary Location,PL,0,1,,,,location[3].location(Location),,Reference(Location),0,-1,PL,,,,
-,,,,,,,,,location[3].status,,,,,,,"""active""",,
-,,,,,,,,,,location[3].extension?-temporaryLocation,boolean,0,1,,,,,
+11,PV1-11,Temporary Location,PL,0,1,,,,location[3].status,,Reference(Location),0,-1,,,"""active""",,
+11,PV1-11,Temporary Location,PL,0,1,,,,,location[3].extension?-temporaryLocation,boolean,0,1,,,,,
 12,PV1-12,Preadmit Test Indicator,CWE,0,1,,,,,,,,,,,,,
 13,PV1-13,Re-admission Indicator,CWE,0,1,,,,hospitalization.reAdmission,,CodeableConcept,0,1,CWE[CodeableConcept],ReadmissionIndicator,,,
 14,PV1-14,Admit Source,CWE,0,1,,,,hospitalization.admitSource,,CodeableConcept,0,1,CWE[CodeableConcept],,,,"Table 0023 doesn't have any suggested values, therefore there is no vocabulary mapping"
