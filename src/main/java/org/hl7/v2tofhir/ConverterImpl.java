@@ -100,7 +100,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
     private String source;
     private String sourceName;
-    private String qualifier;
+    private static String qualifier;
     private String target;
     private String targetName;
     private String parts[] = null;
@@ -270,7 +270,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         try (PrintWriter pw = new PrintWriter(new FileWriter(f));
             PrintWriter introWriter = new PrintWriter(new FileWriter(intro));
             PrintWriter notesWriter = new PrintWriter(new FileWriter(notes));
-            ) {
+        ) {
             writeHeader(loc.getName(), pw, filename, type, sourceName, targetName, getFHIRDescription(), source, target);
             if (sourceUrl != null) {
                 pw.printf("* extension[0].url = \"%s/StructureDefinition/RelatedArtifact\"%n", IG_URL);
@@ -333,17 +333,17 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                     addConstraints(pw, "* group.element[%d].target", mappedRows, row.targetType, row.targetMin, row.targetMax);
 
 
-                    if (!StringUtils.isEmpty(targetDisplay)) {
+                    if (!StringUtils.isEmpty(escapeFshString(targetDisplay))) {
                         pw.printf("* group.element[%d].target.display = \"%s\"%n", mappedRows,
                             escapeFshString(targetDisplay));
                     }
-                    if (!StringUtils.isEmpty(comments)) {
+                    if (!StringUtils.isEmpty(escapeFshString(comments))) {
                         pw.printf("* group.element[%d].target.comment = \"%s\"%n", mappedRows,
                             escapeFshString(comments));
                     }
 
                     int dependencies = 0, products = 0;
-//                    if (!StringUtils.isEmpty(row.mapping)) {
+//                    if (!StringUtils.isEmpty(escapeFshString(row.mapping))) {
 //                        pw.printf("* group.element[%d].target.dependsOn[%d].property = \"%s\"%n", mappedRows,
 //                            dependencies, "ConceptMap");
 //                        pw.printf("* group.element[%d].target.dependsOn[%d].value = \"%s\"%n", mappedRows, dependencies,
@@ -408,14 +408,21 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         }
     }
 
-    private static void writeHeader(String filename, PrintWriter pw,
+    private static void writeHeader(String fn, PrintWriter pw,
         String sourceFilename, String type, String sourceName, String targetName, String fhirType,
         String source, String target
     ) {
+        String filename = fn;
+        String titleStr = type + " " + sourceName + qualifier + " to " + targetName + " Map";
+        if (source == null) {
+            titleStr = titleStr + " - Unsupported";
+            filename = "Unsupported " + filename;
+        }        
         pw.printf("// %s%n", sourceFilename);
         pw.printf("Instance: %s%n", makeName(filename));
         pw.println("InstanceOf: ConceptMap");
-        pw.printf("Title: \"%s %s to %s Map\"%n", type, sourceName, targetName);
+        pw.println("Title: \"" + titleStr + "\"");
+        pw.println("* title = \"" + titleStr + "\"");
         pw.printf("* description = \"This ConceptMap represents a mapping from the HL7 V2 %s %s to the FHIR %s.%s\"%n",
             type, sourceName, fhirType, source == null ? " It is not yet supported." : "");
         pw.printf("* id = \"%s\"%n", makeId(filename));
@@ -441,7 +448,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         int count = 0;
         String s = isDependsOn ? "dependsOn" : "product";
         for (String[] depValue : depValues) {
-            if (!StringUtils.isEmpty(depValue[1])) {
+            if (!StringUtils.isEmpty(escapeFshString(depValue[1]))) {
                 pw.printf("* group.element[%d].target.%s[%d].property = \"%s\"%n", mappedRows, s, count, depValue[0]);
                 pw.printf("* group.element[%d].target.%s[%d].value = \"%s\"%n", mappedRows, s, count,
                     escapeFshString(depValue[1]));
@@ -500,6 +507,9 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     }
 
     protected String escapeFshString(String comments) {
+        if (comments == null) {
+            return comments;
+        }
         String value = comments.replace("\r", "");
         // If there is a newline, use Sushi """ syntax
         if (value.contains("\n")) {
@@ -583,7 +593,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         if (name.endsWith(".fsh")) {
             name = name.substring(0, name.length()-4);
         }
-        return StringUtils.truncate(StringUtils.replaceChars(name.toLowerCase(), "! _[]", "---").replaceAll("--+", "-"),
+        return StringUtils.truncate(StringUtils.replaceChars(name.toLowerCase(), "! _[]", "-----").replaceAll("--+", "-"),
             64);
     }
 
@@ -735,11 +745,13 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     private String isResource(String fhirLink, int count) {
         Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap();
         Triple<String, String, String> t = null;
-        if ((t = m.get("FHIR Resource").get(fhirLink.toLowerCase())) != null) {
-            if (!t.getRight().equals(fhirLink)) {
-                warn("%s used where %s meant.%n", count, fhirLink, t.getRight());
+        if (fhirLink != null) {
+            if ((t = m.get("FHIR Resource").get(fhirLink.toLowerCase())) != null) {
+                if (!t.getRight().equals(fhirLink)) {
+                    warn("%s used where %s meant.%n", count, fhirLink, t.getRight());
+                }
+                return t.getRight();
             }
-            return t.getRight();
         }
         return null;
     }
@@ -948,6 +960,10 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             break;
         }
 
+        qualifier = "";
+        if (qualParts.length > 1) {
+            qualifier = "[" + qualParts[1] + "]";
+        }
         createMissingFish(output, fshFilename, typeFound, triple.getRight() + ":" + triple.getMiddle(), type, qualParts[0]);
         return String.format("No mapping for %s. Missing file: %s", triple.getLeft(), filename);
     }
@@ -991,21 +1007,36 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             } catch (IOException e) {
             }
         }
-        String message = String.format((isError ? "E" + errCount : "W" + warnCount) + ") " + format + "\tat "+ StringUtils.substringBeforeLast(source, "\\").replace("\\", ".") +"(" + StringUtils.substringAfterLast(source, "\\") + ":" + line + ")\n", args);
+        String subStrBeforeLast = StringUtils.substringBeforeLast(source, "\\");
+        if (subStrBeforeLast != null) {
+            subStrBeforeLast = subStrBeforeLast.replace("\\", ".");
+        }
+        String message = String.format((isError ? "E" + errCount : "W" + warnCount) + ") " + format + "\tat " + subStrBeforeLast + "(" + StringUtils.substringAfterLast(source, "\\") + ":" + line + ")\n", args);
         if (!reportErrorsOnly || isError) {
             System.err.print(message);
             log.print(message);
         }
-        if (line > 0 && source.length() > 5) {
-            System.err.printf("\tnear: %s%n", message = getLine(source, line));
+        if (line > 0 && source != null && source.length() > 5) {
+            message = getLine(source, line);
+            if (message == null) { 
+                message = "No corresponding line (" + line + ") in source file!";
+            }
+            System.err.printf("\tnear: %s%n", message);
             log.printf("\tnear: %s%n", message);
         }
     }
 
-
     private static String getLine(String source, int line) {
+        String filestr;
+        String[] sa;
         try {
-            return FileUtils.readFileToString(new File(source), StandardCharsets.UTF_8).split("\r\n")[line-1];
+            filestr = FileUtils.readFileToString(new File(source), StandardCharsets.UTF_8);
+            sa = filestr.split("\r\n");
+            if (line < sa.length) {
+                return sa[line-1];
+            } else {
+                return null;
+            }
         } catch (IOException e) {
             return e.getMessage();
         }
