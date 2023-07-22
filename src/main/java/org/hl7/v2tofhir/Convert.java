@@ -445,7 +445,7 @@ public class Convert {
                             outputFileMap.put(outputFile.getName(), theUrl);
                         }
                     }
-
+                    fileCount++;
                 } catch (IOException ioex) {
                     System.err.printf("Failure downloading %s to %s.csv%n", theUrl, nextLine[0]);
                     ioex.printStackTrace();
