@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ PID[Appointment] - PID.csv
-Instance: SegmentPIDtoAppointment
+Instance: SegmentPIDToAppointment
 InstanceOf: ConceptMap
 Title: "Segment PID to Appointment Map"
+* title = "Segment PID to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Appointment Resource."
 * id = "segment-pid-to-appointment"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pid-to-appointment"
 * version = "1.0"
-* name = "SegmentPIDtoAppointment"
+* name = "SegmentPIDToAppointment"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

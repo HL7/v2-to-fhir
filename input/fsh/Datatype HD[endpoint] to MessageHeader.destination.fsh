@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ HD[MessageHeader.destination-endpoint] - Sheet1.csv
-Instance: DatatypeHDendpointtoMessageHeader.destination
+Instance: DatatypeHDEndpointToMessageHeaderDestination
 InstanceOf: ConceptMap
-Title: "Datatype HD to MessageHeader.destination Map"
+Title: "Datatype HD[endpoint] to MessageHeader.destination Map"
+* title = "Datatype HD[endpoint] to MessageHeader.destination Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype HD to the FHIR MessageHeader.destination Data Type."
-* id = "datatype-hdendpoint-to-messageheader.destination"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-hdendpoint-to-messageheader.destination"
+* id = "datatype-hd-endpoint-to-messageheader-destination"
+* url = "http://hl7.org/fhir/uv/v2mappings/datatype-hd-endpoint-to-messageheader-destination"
 * version = "1.0"
-* name = "DatatypeHDendpointtoMessageHeader.destination"
+* name = "DatatypeHDEndpointToMessageHeaderDestination"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -115,12 +116,31 @@ Title: "Datatype HD to MessageHeader.destination Map"
 * group.element[4].extension[0].extension[2].valueInteger = 1
 * group.element[4].display = "Univeral ID Type"
 * group.element[4].target.equivalence = #equivalent
-* group.element[4].target.code = #endpoint.extension-dataAbsentReason
+* group.element[4].target.code = #endpoint.extension.url
 * group.element[4].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].target.extension[0].extension[0].url = "type"
-* group.element[4].target.extension[0].extension[0].valueCode = #"code"
-* group.element[4].target.display = "endpoint.extension-dataAbsentReason"
+* group.element[4].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[4].target.display = "endpoint.extension.url"
 * group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"unknown\""
+* group.element[4].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/data-absent-reason\""
 * group.element[4].target.product[0].property = "antlr"
 * group.element[4].target.product[0].value = "IF NOT VALUED"
+* group.element[5].code = #HD.3
+* group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[5].extension[0].extension[0].url = "type"
+* group.element[5].extension[0].extension[0].valueCode = #"ST"
+* group.element[5].extension[0].extension[1].url = "cardinalityMin"
+* group.element[5].extension[0].extension[1].valueInteger = 0
+* group.element[5].extension[0].extension[2].url = "cardinalityMax"
+* group.element[5].extension[0].extension[2].valueInteger = 1
+* group.element[5].display = "Univeral ID Type"
+* group.element[5].target.equivalence = #equivalent
+* group.element[5].target.code = #endpoint.extension.valueCode
+* group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[5].target.extension[0].extension[0].url = "type"
+* group.element[5].target.extension[0].extension[0].valueCode = #"code"
+* group.element[5].target.display = "endpoint.extension.valueCode"
+* group.element[5].target.dependsOn[0].property = "value"
+* group.element[5].target.dependsOn[0].value = "\"unknown\""
+* group.element[5].target.product[0].property = "antlr"
+* group.element[5].target.product[0].value = "IF NOT VALUED"

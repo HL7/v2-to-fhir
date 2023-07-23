@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ DR[DateTime] - Sheet1.csv
-Instance: DatatypeDRtoDateTime
+Instance: DatatypeDRToDateTime
 InstanceOf: ConceptMap
 Title: "Datatype DR to DateTime Map"
+* title = "Datatype DR to DateTime Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype DR to the FHIR DateTime Data Type."
 * id = "datatype-dr-to-datetime"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-dr-to-datetime"
 * version = "1.0"
-* name = "DatatypeDRtoDateTime"
+* name = "DatatypeDRToDateTime"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ CWE[Coding] - Sheet1.csv
-Instance: DatatypeCWEtoCoding
+Instance: DatatypeCWEToCoding
 InstanceOf: ConceptMap
 Title: "Datatype CWE to Coding Map"
+* title = "Datatype CWE to Coding Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Coding Data Type."
 * id = "datatype-cwe-to-coding"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-coding"
 * version = "1.0"
-* name = "DatatypeCWEtoCoding"
+* name = "DatatypeCWEToCoding"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -33,7 +34,7 @@ Title: "Datatype CWE to Coding Map"
 * group.element[0].extension[0].extension[2].valueInteger = 1
 * group.element[0].display = "Identifier"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #Coding.code
+* group.element[0].target.code = #code
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"code"
@@ -41,7 +42,7 @@ Title: "Datatype CWE to Coding Map"
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
-* group.element[0].target.display = "Coding.code"
+* group.element[0].target.display = "code"
 * group.element[1].code = #CWE.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -52,7 +53,7 @@ Title: "Datatype CWE to Coding Map"
 * group.element[1].extension[0].extension[2].valueInteger = 1
 * group.element[1].display = "Text"
 * group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #Coding.display
+* group.element[1].target.code = #display
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"string"
@@ -60,7 +61,7 @@ Title: "Datatype CWE to Coding Map"
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
-* group.element[1].target.display = "Coding.display"
+* group.element[1].target.display = "display"
 * group.element[2].code = #CWE.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -71,7 +72,7 @@ Title: "Datatype CWE to Coding Map"
 * group.element[2].extension[0].extension[2].valueInteger = 1
 * group.element[2].display = "Name of Coding System"
 * group.element[2].target.equivalence = #equivalent
-* group.element[2].target.code = #Coding.system
+* group.element[2].target.code = #system
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"uri"
@@ -79,7 +80,7 @@ Title: "Datatype CWE to Coding Map"
 * group.element[2].target.extension[0].extension[1].valueInteger = 1
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
-* group.element[2].target.display = "Coding.system"
+* group.element[2].target.display = "system"
 * group.element[3].code = #CWE.7
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -90,7 +91,7 @@ Title: "Datatype CWE to Coding Map"
 * group.element[3].extension[0].extension[2].valueInteger = 1
 * group.element[3].display = "Coding System Version ID"
 * group.element[3].target.equivalence = #equivalent
-* group.element[3].target.code = #Coding.version
+* group.element[3].target.code = #version
 * group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"string"
@@ -98,4 +99,4 @@ Title: "Datatype CWE to Coding Map"
 * group.element[3].target.extension[0].extension[1].valueInteger = 1
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
-* group.element[3].target.display = "Coding.version"
+* group.element[3].target.display = "version"

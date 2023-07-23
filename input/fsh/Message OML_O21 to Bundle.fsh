@@ -1,15 +1,16 @@
 // HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv
-Instance: MessageOML_O21toBundle
+Instance: MessageOML_O21ToBundle
 InstanceOf: ConceptMap
 Title: "Message OML_O21 to Bundle Map"
+* title = "Message OML_O21 to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message OML_O21 to the FHIR Message Bundle."
 * id = "message-oml-o21-to-bundle"
 * url = "http://hl7.org/fhir/uv/v2mappings/message-oml-o21-to-bundle"
 * version = "1.0"
-* name = "MessageOML_O21toBundle"
+* name = "MessageOML_O21ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ EI[Procedure] - Sheet1.csv
-Instance: DatatypeEItoProcedure
+Instance: DatatypeEIToProcedure
 InstanceOf: ConceptMap
 Title: "Datatype EI to Procedure Map"
+* title = "Datatype EI to Procedure Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype EI to the FHIR Procedure Resource."
 * id = "datatype-ei-to-procedure"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ei-to-procedure"
 * version = "1.0"
-* name = "DatatypeEItoProcedure"
+* name = "DatatypeEIToProcedure"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ PRT[CareTeam] - Sheet1.csv
-Instance: SegmentPRTtoCareTeam
+Instance: SegmentPRTToCareTeam
 InstanceOf: ConceptMap
 Title: "Segment PRT to CareTeam Map"
+* title = "Segment PRT to CareTeam Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PRT to the FHIR CareTeam Resource."
 * id = "segment-prt-to-careteam"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-prt-to-careteam"
 * version = "1.0"
-* name = "SegmentPRTtoCareTeam"
+* name = "SegmentPRTToCareTeam"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

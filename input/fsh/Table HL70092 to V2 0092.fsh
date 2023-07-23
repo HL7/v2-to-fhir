@@ -1,15 +1,16 @@
 // HL7 Concept Map_ ReadmissionIndicator - Sheet1.csv
-Instance: TableHL70092toV20092
+Instance: TableHL70092ToV20092
 InstanceOf: ConceptMap
 Title: "Table HL70092 to V2 0092 Map"
+* title = "Table HL70092 to V2 0092 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70092 to the FHIR V2 0092 Value Set."
 * id = "table-hl70092-to-v2-0092"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70092-to-v2-0092"
 * version = "1.0"
-* name = "TableHL70092toV20092"
+* name = "TableHL70092ToV20092"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

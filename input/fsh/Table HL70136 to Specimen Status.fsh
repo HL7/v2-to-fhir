@@ -1,15 +1,16 @@
 // HL7 Concept Map_ SpecimenAvailability - Sheet1.csv
-Instance: TableHL70136toSpecimenStatus
+Instance: TableHL70136ToSpecimenStatus
 InstanceOf: ConceptMap
 Title: "Table HL70136 to Specimen Status Map"
+* title = "Table HL70136 to Specimen Status Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70136 to the FHIR Specimen Status Value Set."
 * id = "table-hl70136-to-specimen-status"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70136-to-specimen-status"
 * version = "1.0"
-* name = "TableHL70136toSpecimenStatus"
+* name = "TableHL70136ToSpecimenStatus"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

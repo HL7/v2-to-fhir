@@ -1,15 +1,16 @@
-// HL7 Concept Map - FHIR R4_ AdmissionType - Sheet1.csv
-Instance: TableHL70007toV20007
+// HL7 Concept Map_ AdmissionType - Sheet1.csv
+Instance: TableHL70007ToV20007
 InstanceOf: ConceptMap
 Title: "Table HL70007 to V2 0007 Map"
+* title = "Table HL70007 to V2 0007 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70007 to the FHIR V2 0007 Value Set."
 * id = "table-hl70007-to-v2-0007"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70007-to-v2-0007"
 * version = "1.0"
-* name = "TableHL70007toV20007"
+* name = "TableHL70007ToV20007"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ MSH[Provenance-Source] - R4.csv
-Instance: SegmentMSHSourcetoProvenance
+Instance: SegmentMSHSourceToProvenance
 InstanceOf: ConceptMap
-Title: "Segment MSH to Provenance Map"
+Title: "Segment MSH[Source] to Provenance Map"
+* title = "Segment MSH[Source] to Provenance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment MSH to the FHIR Provenance Resource."
-* id = "segment-mshsource-to-provenance"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-mshsource-to-provenance"
+* id = "segment-msh-source-to-provenance"
+* url = "http://hl7.org/fhir/uv/v2mappings/segment-msh-source-to-provenance"
 * version = "1.0"
-* name = "SegmentMSHSourcetoProvenance"
+* name = "SegmentMSHSourceToProvenance"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

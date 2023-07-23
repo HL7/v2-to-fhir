@@ -1,15 +1,16 @@
-// mappings\messages\HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv:28
-Instance: SegmentIN3toCoverage
+// mappings/messages/HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv:28
+Instance: UnsupportedSegmentIN3ToCoverage
 InstanceOf: ConceptMap
-Title: "Segment IN3 to Coverage Map"
+Title: "Segment IN3 to Coverage Map - Unsupported"
+* title = "Segment IN3 to Coverage Map - Unsupported"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment IN3 to the FHIR Coverage. It is not yet supported."
-* id = "segment-in3-to-coverage"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-in3-to-coverage"
+* id = "unsupported-segment-in3-to-coverage"
+* url = "http://hl7.org/fhir/uv/v2mappings/unsupported-segment-in3-to-coverage"
 * version = "1.0"
-* name = "SegmentIN3toCoverage"
+* name = "UnsupportedSegmentIN3ToCoverage"
 * status = #active
 * experimental = true
-* date = "2022-02-21"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

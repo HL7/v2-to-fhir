@@ -1,15 +1,16 @@
 // HL7 Concept Map_ PatientClass[Encounter Class] - Sheet1.csv
-Instance: TableHL70004toV3ActCode
+Instance: TableHL70004ToV3ActCode
 InstanceOf: ConceptMap
 Title: "Table HL70004 to V3 ActCode Map"
+* title = "Table HL70004 to V3 ActCode Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70004 to the FHIR V3 ActCode Value Set."
 * id = "table-hl70004-to-v3-actcode"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70004-to-v3-actcode"
 * version = "1.0"
-* name = "TableHL70004toV3ActCode"
+* name = "TableHL70004ToV3ActCode"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

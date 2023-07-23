@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ PRT[Patient-GeneralPractitioner] - Sheet1.csv
-Instance: SegmentPRTGeneralPractitionertoPatient
+Instance: SegmentPRTGeneralPractitionerToPatient
 InstanceOf: ConceptMap
-Title: "Segment PRT to Patient Map"
+Title: "Segment PRT[GeneralPractitioner] to Patient Map"
+* title = "Segment PRT[GeneralPractitioner] to Patient Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PRT to the FHIR Patient Resource."
-* id = "segment-prtgeneralpractitioner-to-patient"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-prtgeneralpractitioner-to-patient"
+* id = "segment-prt-generalpractitioner-to-patient"
+* url = "http://hl7.org/fhir/uv/v2mappings/segment-prt-generalpractitioner-to-patient"
 * version = "1.0"
-* name = "SegmentPRTGeneralPractitionertoPatient"
+* name = "SegmentPRTGeneralPractitionerToPatient"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

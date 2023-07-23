@@ -1,15 +1,16 @@
 // HL7 Concept Map_ Gender - Sheet1.csv
-Instance: TableHL70001toAdministrativeGender
+Instance: TableHL70001ToAdministrativeGender
 InstanceOf: ConceptMap
 Title: "Table HL70001 to Administrative Gender Map"
+* title = "Table HL70001 to Administrative Gender Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70001 to the FHIR Administrative Gender Value Set."
 * id = "table-hl70001-to-administrative-gender"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70001-to-administrative-gender"
 * version = "1.0"
-* name = "TableHL70001toAdministrativeGender"
+* name = "TableHL70001ToAdministrativeGender"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

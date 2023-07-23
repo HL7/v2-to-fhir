@@ -1,15 +1,16 @@
 // HL7 Concept Map_ MaritalStatus - Sheet1.csv
-Instance: TableHL70002toV3MaritalStatus
+Instance: TableHL70002ToV3MaritalStatus
 InstanceOf: ConceptMap
 Title: "Table HL70002 to V3 MaritalStatus Map"
+* title = "Table HL70002 to V3 MaritalStatus Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70002 to the FHIR V3 MaritalStatus Value Set."
 * id = "table-hl70002-to-v3-maritalstatus"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70002-to-v3-maritalstatus"
 * version = "1.0"
-* name = "TableHL70002toV3MaritalStatus"
+* name = "TableHL70002ToV3MaritalStatus"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

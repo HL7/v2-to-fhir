@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ NA[NumericArray] - Sheet1.csv
-Instance: DatatypeNAtoNumericArray
+Instance: DatatypeNAToNumericArray
 InstanceOf: ConceptMap
 Title: "Datatype NA to NumericArray Map"
+* title = "Datatype NA to NumericArray Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype NA to the FHIR NumericArray Data Type."
 * id = "datatype-na-to-numericarray"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-na-to-numericarray"
 * version = "1.0"
-* name = "DatatypeNAtoNumericArray"
+* name = "DatatypeNAToNumericArray"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

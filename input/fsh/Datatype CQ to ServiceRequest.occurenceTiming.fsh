@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ CQ[ServiceRequest.occurenceTiming] - Sheet1.csv
-Instance: DatatypeCQtoServiceRequest.occurenceTiming
+Instance: DatatypeCQToServiceRequestOccurenceTiming
 InstanceOf: ConceptMap
 Title: "Datatype CQ to ServiceRequest.occurenceTiming Map"
+* title = "Datatype CQ to ServiceRequest.occurenceTiming Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CQ to the FHIR ServiceRequest.occurenceTiming Data Type."
-* id = "datatype-cq-to-servicerequest.occurencetiming"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-cq-to-servicerequest.occurencetiming"
+* id = "datatype-cq-to-servicerequest-occurencetiming"
+* url = "http://hl7.org/fhir/uv/v2mappings/datatype-cq-to-servicerequest-occurencetiming"
 * version = "1.0"
-* name = "DatatypeCQtoServiceRequest.occurenceTiming"
+* name = "DatatypeCQToServiceRequestOccurenceTiming"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

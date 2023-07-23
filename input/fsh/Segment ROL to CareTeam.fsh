@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ ROL[CareTeam] - Sheet1.csv
-Instance: SegmentROLtoCareTeam
+Instance: SegmentROLToCareTeam
 InstanceOf: ConceptMap
 Title: "Segment ROL to CareTeam Map"
+* title = "Segment ROL to CareTeam Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment ROL to the FHIR CareTeam Resource."
 * id = "segment-rol-to-careteam"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-rol-to-careteam"
 * version = "1.0"
-* name = "SegmentROLtoCareTeam"
+* name = "SegmentROLToCareTeam"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

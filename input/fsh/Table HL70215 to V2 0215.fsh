@@ -1,15 +1,16 @@
-// HL7 Concept Map_ Visit Publicity Code - Sheet1.csv
-Instance: TableHL70215toV20215
+// HL7 Concept Map_ VisitPublicityCode - Sheet1.csv
+Instance: TableHL70215ToV20215
 InstanceOf: ConceptMap
 Title: "Table HL70215 to V2 0215 Map"
+* title = "Table HL70215 to V2 0215 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70215 to the FHIR V2 0215 Value Set."
 * id = "table-hl70215-to-v2-0215"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70215-to-v2-0215"
 * version = "1.0"
-* name = "TableHL70215toV20215"
+* name = "TableHL70215ToV20215"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

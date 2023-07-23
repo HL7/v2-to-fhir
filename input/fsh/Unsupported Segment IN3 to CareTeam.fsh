@@ -1,15 +1,16 @@
-// mappings\messages\HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv:62
-Instance: SegmentIN3toCareTeam
+// mappings/messages/HL7 Message - FHIR R4_ ADT_A06 - Sheet1.csv:61
+Instance: UnsupportedSegmentIN3ToCareTeam
 InstanceOf: ConceptMap
-Title: "Segment IN3 to CareTeam Map"
+Title: "Segment IN3 to CareTeam Map - Unsupported"
+* title = "Segment IN3 to CareTeam Map - Unsupported"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment IN3 to the FHIR CareTeam. It is not yet supported."
-* id = "segment-in3-to-careteam"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-in3-to-careteam"
+* id = "unsupported-segment-in3-to-careteam"
+* url = "http://hl7.org/fhir/uv/v2mappings/unsupported-segment-in3-to-careteam"
 * version = "1.0"
-* name = "SegmentIN3toCareTeam"
+* name = "UnsupportedSegmentIN3ToCareTeam"
 * status = #active
 * experimental = true
-* date = "2022-02-21"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

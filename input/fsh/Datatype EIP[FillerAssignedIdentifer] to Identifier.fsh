@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ EIP[Identifier-FillerAssignedIdentifer] - Sheet1.csv
-Instance: DatatypeEIPFillerAssignedIdentifertoIdentifier
+Instance: DatatypeEIPFillerAssignedIdentiferToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype EIP to Identifier Map"
+Title: "Datatype EIP[FillerAssignedIdentifer] to Identifier Map"
+* title = "Datatype EIP[FillerAssignedIdentifer] to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype EIP to the FHIR Identifier Data Type."
-* id = "datatype-eipfillerassignedidentifer-to-identifier"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-eipfillerassignedidentifer-to-identifier"
+* id = "datatype-eip-fillerassignedidentifer-to-identifier"
+* url = "http://hl7.org/fhir/uv/v2mappings/datatype-eip-fillerassignedidentifer-to-identifier"
 * version = "1.0"
-* name = "DatatypeEIPFillerAssignedIdentifertoIdentifier"
+* name = "DatatypeEIPFillerAssignedIdentiferToIdentifier"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

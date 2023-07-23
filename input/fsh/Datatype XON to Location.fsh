@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ XON[Location] - Sheet1.csv
-Instance: DatatypeXONtoLocation
+Instance: DatatypeXONToLocation
 InstanceOf: ConceptMap
 Title: "Datatype XON to Location Map"
+* title = "Datatype XON to Location Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XON to the FHIR Location Resource."
 * id = "datatype-xon-to-location"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xon-to-location"
 * version = "1.0"
-* name = "DatatypeXONtoLocation"
+* name = "DatatypeXONToLocation"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -46,6 +47,10 @@ Title: "Datatype XON to Location Map"
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
 * group.element[1].extension[0].extension[0].valueCode = #"NM"
+* group.element[1].extension[0].extension[1].url = "cardinalityMin"
+* group.element[1].extension[0].extension[1].valueInteger = 0
+* group.element[1].extension[0].extension[2].url = "cardinalityMax"
+* group.element[1].extension[0].extension[2].valueInteger = 1
 * group.element[1].display = "ID Number"
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #identifier[1].value

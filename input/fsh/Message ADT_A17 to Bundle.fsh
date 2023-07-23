@@ -1,15 +1,16 @@
 // HL7 Message - FHIR R4_ ADT_A17 - Sheet1.csv
-Instance: MessageADT_A17toBundle
+Instance: MessageADT_A17ToBundle
 InstanceOf: ConceptMap
 Title: "Message ADT_A17 to Bundle Map"
+* title = "Message ADT_A17 to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message ADT_A17 to the FHIR Message Bundle."
 * id = "message-adt-a17-to-bundle"
 * url = "http://hl7.org/fhir/uv/v2mappings/message-adt-a17-to-bundle"
 * version = "1.0"
-* name = "MessageADT_A17toBundle"
+* name = "MessageADT_A17ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

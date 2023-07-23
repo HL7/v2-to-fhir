@@ -1,15 +1,16 @@
-// HL7 Concept Map_ Organizational NameType - Sheet1.csv
-Instance: TableHL70204toV20204
+// HL7 Concept Map_ OrganizationalNameType - Sheet1.csv
+Instance: TableHL70204ToV20204
 InstanceOf: ConceptMap
 Title: "Table HL70204 to V2 0204 Map"
+* title = "Table HL70204 to V2 0204 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70204 to the FHIR V2 0204 Value Set."
 * id = "table-hl70204-to-v2-0204"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70204-to-v2-0204"
 * version = "1.0"
-* name = "TableHL70204toV20204"
+* name = "TableHL70204ToV20204"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

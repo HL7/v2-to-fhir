@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ AIP[Appointment] - Sheet1.csv
-Instance: SegmentAIPtoAppointment
+Instance: SegmentAIPToAppointment
 InstanceOf: ConceptMap
 Title: "Segment AIP to Appointment Map"
+* title = "Segment AIP to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment AIP to the FHIR Appointment Resource."
 * id = "segment-aip-to-appointment"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-aip-to-appointment"
 * version = "1.0"
-* name = "SegmentAIPtoAppointment"
+* name = "SegmentAIPToAppointment"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

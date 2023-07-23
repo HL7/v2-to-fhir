@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ RXA[Immunization] - RXA.csv
-Instance: SegmentRXAtoImmunization
+Instance: SegmentRXAToImmunization
 InstanceOf: ConceptMap
 Title: "Segment RXA to Immunization Map"
+* title = "Segment RXA to Immunization Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment RXA to the FHIR Immunization Resource."
 * id = "segment-rxa-to-immunization"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-rxa-to-immunization"
 * version = "1.0"
-* name = "SegmentRXAtoImmunization"
+* name = "SegmentRXAToImmunization"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

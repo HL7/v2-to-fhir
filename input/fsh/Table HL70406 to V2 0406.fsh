@@ -1,15 +1,16 @@
 // HL7 Concept Map_ OrganizationUnitType - Sheet1.csv
-Instance: TableHL70406toV20406
+Instance: TableHL70406ToV20406
 InstanceOf: ConceptMap
 Title: "Table HL70406 to V2 0406 Map"
+* title = "Table HL70406 to V2 0406 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70406 to the FHIR V2 0406 Value Set."
 * id = "table-hl70406-to-v2-0406"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70406-to-v2-0406"
 * version = "1.0"
-* name = "TableHL70406toV20406"
+* name = "TableHL70406ToV20406"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

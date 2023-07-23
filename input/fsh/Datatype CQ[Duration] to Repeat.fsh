@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ CQ[Repeat-Duration] - Sheet1.csv
-Instance: DatatypeCQDurationtoRepeat
+Instance: DatatypeCQDurationToRepeat
 InstanceOf: ConceptMap
-Title: "Datatype CQ to Repeat Map"
+Title: "Datatype CQ[Duration] to Repeat Map"
+* title = "Datatype CQ[Duration] to Repeat Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CQ to the FHIR Repeat Data Type."
-* id = "datatype-cqduration-to-repeat"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-cqduration-to-repeat"
+* id = "datatype-cq-duration-to-repeat"
+* url = "http://hl7.org/fhir/uv/v2mappings/datatype-cq-duration-to-repeat"
 * version = "1.0"
-* name = "DatatypeCQDurationtoRepeat"
+* name = "DatatypeCQDurationToRepeat"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

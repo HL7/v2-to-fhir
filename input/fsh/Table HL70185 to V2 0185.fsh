@@ -1,15 +1,16 @@
 // HL7 Concept Map_ PreferredMethodOfContact - Sheet1.csv
-Instance: TableHL70185toV20185
+Instance: TableHL70185ToV20185
 InstanceOf: ConceptMap
 Title: "Table HL70185 to V2 0185 Map"
+* title = "Table HL70185 to V2 0185 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70185 to the FHIR V2 0185 Value Set."
 * id = "table-hl70185-to-v2-0185"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70185-to-v2-0185"
 * version = "1.0"
-* name = "TableHL70185toV20185"
+* name = "TableHL70185ToV20185"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

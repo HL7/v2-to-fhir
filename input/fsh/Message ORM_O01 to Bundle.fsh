@@ -1,15 +1,16 @@
 // HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv
-Instance: MessageORM_O01toBundle
+Instance: MessageORM_O01ToBundle
 InstanceOf: ConceptMap
 Title: "Message ORM_O01 to Bundle Map"
+* title = "Message ORM_O01 to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message ORM_O01 to the FHIR Message Bundle."
 * id = "message-orm-o01-to-bundle"
 * url = "http://hl7.org/fhir/uv/v2mappings/message-orm-o01-to-bundle"
 * version = "1.0"
-* name = "MessageORM_O01toBundle"
+* name = "MessageORM_O01ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

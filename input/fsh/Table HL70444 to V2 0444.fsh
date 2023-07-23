@@ -1,15 +1,16 @@
 // HL7 Concept Map_ NameAssemblyOrder - Sheet1.csv
-Instance: TableHL70444toV20444
+Instance: TableHL70444ToV20444
 InstanceOf: ConceptMap
 Title: "Table HL70444 to V2 0444 Map"
+* title = "Table HL70444 to V2 0444 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70444 to the FHIR V2 0444 Value Set."
 * id = "table-hl70444-to-v2-0444"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70444-to-v2-0444"
 * version = "1.0"
-* name = "TableHL70444toV20444"
+* name = "TableHL70444ToV20444"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

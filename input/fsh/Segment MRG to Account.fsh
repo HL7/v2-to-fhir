@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ MRG[Account] - Sheet1.csv
-Instance: SegmentMRGtoAccount
+Instance: SegmentMRGToAccount
 InstanceOf: ConceptMap
 Title: "Segment MRG to Account Map"
+* title = "Segment MRG to Account Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment MRG to the FHIR Account Resource."
 * id = "segment-mrg-to-account"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-mrg-to-account"
 * version = "1.0"
-* name = "SegmentMRGtoAccount"
+* name = "SegmentMRGToAccount"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

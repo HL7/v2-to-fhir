@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv
-Instance: SegmentPV2toEncounter
+Instance: SegmentPV2ToEncounter
 InstanceOf: ConceptMap
 Title: "Segment PV2 to Encounter Map"
+* title = "Segment PV2 to Encounter Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PV2 to the FHIR Encounter Resource."
 * id = "segment-pv2-to-encounter"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pv2-to-encounter"
 * version = "1.0"
-* name = "SegmentPV2toEncounter"
+* name = "SegmentPV2ToEncounter"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

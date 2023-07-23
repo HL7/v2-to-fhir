@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ XPN[HumanName] - Sheet1.csv
-Instance: DatatypeXPNtoHumanName
+Instance: DatatypeXPNToHumanName
 InstanceOf: ConceptMap
 Title: "Datatype XPN to HumanName Map"
+* title = "Datatype XPN to HumanName Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XPN to the FHIR HumanName Data Type."
 * id = "datatype-xpn-to-humanname"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xpn-to-humanname"
 * version = "1.0"
-* name = "DatatypeXPNtoHumanName"
+* name = "DatatypeXPNToHumanName"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -271,7 +272,7 @@ Title: "Datatype XPN to HumanName Map"
 * group.element[12].extension[0].extension[2].valueInteger = 1
 * group.element[12].display = "Professional Suffix"
 * group.element[12].target.equivalence = #equivalent
-* group.element[12].target.code = #[1].suffix
+* group.element[12].target.code = #[1].suffix[3]
 * group.element[12].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].target.extension[0].extension[0].url = "type"
 * group.element[12].target.extension[0].extension[0].valueCode = #"string"
@@ -279,7 +280,7 @@ Title: "Datatype XPN to HumanName Map"
 * group.element[12].target.extension[0].extension[1].valueInteger = -1
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = -1
-* group.element[12].target.display = "[1].suffix"
+* group.element[12].target.display = "[1].suffix[3]"
 * group.element[13].code = #XPN.15
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"

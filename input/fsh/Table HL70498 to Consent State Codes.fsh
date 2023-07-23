@@ -1,15 +1,16 @@
 // HL7 Concept Map_ ConsentStatus - Sheet1.csv
-Instance: TableHL70498toConsentStateCodes
+Instance: TableHL70498ToConsentStateCodes
 InstanceOf: ConceptMap
 Title: "Table HL70498 to Consent State Codes Map"
+* title = "Table HL70498 to Consent State Codes Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70498 to the FHIR Consent State Codes Value Set."
 * id = "table-hl70498-to-consent-state-codes"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70498-to-consent-state-codes"
 * version = "1.0"
-* name = "TableHL70498toConsentStateCodes"
+* name = "TableHL70498ToConsentStateCodes"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -30,14 +31,10 @@ Title: "Table HL70498 to Consent State Codes Map"
 * group.element[0].target.display = "Active"
 * group.element[1].code = #L
 * group.element[1].display = "Limited – Consent has been granted with limitations"
-* group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #active
-* group.element[1].target.display = "Active"
+* group.element[1].target.equivalence = #unmatched
 * group.element[2].code = #R
 * group.element[2].display = "Refused – Consent has been refused"
-* group.element[2].target.equivalence = #equivalent
-* group.element[2].target.code = #rejected
-* group.element[2].target.display = "Rejected"
+* group.element[2].target.equivalence = #unmatched
 * group.element[3].code = #P
 * group.element[3].display = "Pending – Consent has not yet been sought"
 * group.element[3].target.equivalence = #equivalent

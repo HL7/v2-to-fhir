@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ PT[Meta] - Sheet1.csv
-Instance: DatatypePTtoMeta
+Instance: DatatypePTToMeta
 InstanceOf: ConceptMap
 Title: "Datatype PT to Meta Map"
+* title = "Datatype PT to Meta Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype PT to the FHIR Meta Data Type."
 * id = "datatype-pt-to-meta"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-pt-to-meta"
 * version = "1.0"
-* name = "DatatypePTtoMeta"
+* name = "DatatypePTToMeta"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,15 +1,16 @@
-// HL7 Concept Map_ Visit User Code - Sheet1.csv
-Instance: TableHL70130toV20130
+// HL7 Concept Map_ VisitUserCode - Sheet1.csv
+Instance: TableHL70130ToV20130
 InstanceOf: ConceptMap
 Title: "Table HL70130 to V2 0130 Map"
+* title = "Table HL70130 to V2 0130 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70130 to the FHIR V2 0130 Value Set."
 * id = "table-hl70130-to-v2-0130"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70130-to-v2-0130"
 * version = "1.0"
-* name = "TableHL70130toV20130"
+* name = "TableHL70130ToV20130"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ PD1[Patient] - PD1.csv
-Instance: SegmentPD1toPatient
+Instance: SegmentPD1ToPatient
 InstanceOf: ConceptMap
 Title: "Segment PD1 to Patient Map"
+* title = "Segment PD1 to Patient Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PD1 to the FHIR Patient Resource."
 * id = "segment-pd1-to-patient"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pd1-to-patient"
 * version = "1.0"
-* name = "SegmentPD1toPatient"
+* name = "SegmentPD1ToPatient"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

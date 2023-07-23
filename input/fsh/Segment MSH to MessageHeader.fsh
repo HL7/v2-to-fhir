@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv
-Instance: SegmentMSHtoMessageHeader
+Instance: SegmentMSHToMessageHeader
 InstanceOf: ConceptMap
 Title: "Segment MSH to MessageHeader Map"
+* title = "Segment MSH to MessageHeader Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment MSH to the FHIR MessageHeader Resource."
 * id = "segment-msh-to-messageheader"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-msh-to-messageheader"
 * version = "1.0"
-* name = "SegmentMSHtoMessageHeader"
+* name = "SegmentMSHToMessageHeader"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

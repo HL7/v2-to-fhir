@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ CWE[CodeableConcept] - Sheet1.csv
-Instance: DatatypeCWEtoCodeableConcept
+Instance: DatatypeCWEToCodeableConcept
 InstanceOf: ConceptMap
 Title: "Datatype CWE to CodeableConcept Map"
+* title = "Datatype CWE to CodeableConcept Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR CodeableConcept Data Type."
 * id = "datatype-cwe-to-codeableconcept"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-codeableconcept"
 * version = "1.0"
-* name = "DatatypeCWEtoCodeableConcept"
+* name = "DatatypeCWEToCodeableConcept"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

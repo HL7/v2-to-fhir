@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ AIS[ServiceRequest] - Sheet1.csv
-Instance: SegmentAIStoServiceRequest
+Instance: SegmentAISToServiceRequest
 InstanceOf: ConceptMap
 Title: "Segment AIS to ServiceRequest Map"
+* title = "Segment AIS to ServiceRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment AIS to the FHIR ServiceRequest Resource."
 * id = "segment-ais-to-servicerequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-ais-to-servicerequest"
 * version = "1.0"
-* name = "SegmentAIStoServiceRequest"
+* name = "SegmentAISToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

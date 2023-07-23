@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ CWE[uri] - Sheet1.csv
-Instance: DatatypeCWEtouri
+Instance: DatatypeCWEToUri
 InstanceOf: ConceptMap
 Title: "Datatype CWE to uri Map"
+* title = "Datatype CWE to uri Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR uri Data Type."
 * id = "datatype-cwe-to-uri"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-uri"
 * version = "1.0"
-* name = "DatatypeCWEtouri"
+* name = "DatatypeCWEToUri"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

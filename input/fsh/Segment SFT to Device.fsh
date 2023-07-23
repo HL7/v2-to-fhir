@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ SFT[Device] - Sheet1.csv
-Instance: SegmentSFTtoDevice
+Instance: SegmentSFTToDevice
 InstanceOf: ConceptMap
 Title: "Segment SFT to Device Map"
+* title = "Segment SFT to Device Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment SFT to the FHIR Device Resource."
 * id = "segment-sft-to-device"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-sft-to-device"
 * version = "1.0"
-* name = "SegmentSFTtoDevice"
+* name = "SegmentSFTToDevice"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

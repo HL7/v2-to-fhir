@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ CX[Identifier] - Sheet1.csv
-Instance: DatatypeCXtoIdentifier
+Instance: DatatypeCXToIdentifier
 InstanceOf: ConceptMap
 Title: "Datatype CX to Identifier Map"
+* title = "Datatype CX to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CX to the FHIR Identifier Data Type."
 * id = "datatype-cx-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cx-to-identifier"
 * version = "1.0"
-* name = "DatatypeCXtoIdentifier"
+* name = "DatatypeCXToIdentifier"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -136,7 +137,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[5].target.dependsOn[0].property = "data-type-map"
 * group.element[5].target.dependsOn[0].value = "HD[Organization]"
 * group.element[5].target.product[0].property = "narrative"
-* group.element[5].target.product[0].value = "If organization"
+* group.element[5].target.product[0].value = "If not in http://hl7.org/implement/standards/fhir/identifier-registry.html then determine whether organization or system"
 * group.element[6].code = #CX.4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -158,8 +159,8 @@ Title: "Datatype CX to Identifier Map"
 * group.element[6].target.display = "system"
 * group.element[6].target.dependsOn[0].property = "data-type-map"
 * group.element[6].target.dependsOn[0].value = "HD[uri]"
-* group.element[6].target.product[0].property = "narrative"
-* group.element[6].target.product[0].value = "If system"
+* group.element[6].target.product[0].property = "antlr"
+* group.element[6].target.product[0].value = "IF CX.4 IN http://hl7.org/implement/standards/fhir/identifier-registry.html"
 * group.element[7].code = #CX.5
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"

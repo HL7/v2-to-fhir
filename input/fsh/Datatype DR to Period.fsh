@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ DR[Period] - Sheet1.csv
-Instance: DatatypeDRtoPeriod
+Instance: DatatypeDRToPeriod
 InstanceOf: ConceptMap
 Title: "Datatype DR to Period Map"
+* title = "Datatype DR to Period Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype DR to the FHIR Period Data Type."
 * id = "datatype-dr-to-period"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-dr-to-period"
 * version = "1.0"
-* name = "DatatypeDRtoPeriod"
+* name = "DatatypeDRToPeriod"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

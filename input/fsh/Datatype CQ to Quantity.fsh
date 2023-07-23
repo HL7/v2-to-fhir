@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ CQ[Quantity] - Sheet1.csv
-Instance: DatatypeCQtoQuantity
+Instance: DatatypeCQToQuantity
 InstanceOf: ConceptMap
 Title: "Datatype CQ to Quantity Map"
+* title = "Datatype CQ to Quantity Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CQ to the FHIR Quantity Data Type."
 * id = "datatype-cq-to-quantity"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cq-to-quantity"
 * version = "1.0"
-* name = "DatatypeCQtoQuantity"
+* name = "DatatypeCQToQuantity"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

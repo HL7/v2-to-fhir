@@ -1,15 +1,16 @@
 // HL7 Concept Map_ ConsentRelationship - Sheet1.csv
-Instance: TableHL70549toV3RoleCode
+Instance: TableHL70549ToV3RoleCode
 InstanceOf: ConceptMap
 Title: "Table HL70549 to V3 RoleCode Map"
+* title = "Table HL70549 to V3 RoleCode Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70549 to the FHIR V3 RoleCode Value Set."
 * id = "table-hl70549-to-v3-rolecode"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70549-to-v3-rolecode"
 * version = "1.0"
-* name = "TableHL70549toV3RoleCode"
+* name = "TableHL70549ToV3RoleCode"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

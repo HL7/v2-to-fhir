@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ EI[Coding] - Sheet1.csv
-Instance: DatatypeEItoCoding
+Instance: DatatypeEIToCoding
 InstanceOf: ConceptMap
 Title: "Datatype EI to Coding Map"
+* title = "Datatype EI to Coding Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype EI to the FHIR Coding Data Type."
 * id = "datatype-ei-to-coding"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ei-to-coding"
 * version = "1.0"
-* name = "DatatypeEItoCoding"
+* name = "DatatypeEIToCoding"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

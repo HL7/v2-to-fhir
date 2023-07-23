@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv
-Instance: SegmentOBXtoObservation
+Instance: SegmentOBXToObservation
 InstanceOf: ConceptMap
 Title: "Segment OBX to Observation Map"
+* title = "Segment OBX to Observation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment OBX to the FHIR Observation Resource."
 * id = "segment-obx-to-observation"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-obx-to-observation"
 * version = "1.0"
-* name = "SegmentOBXtoObservation"
+* name = "SegmentOBXToObservation"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

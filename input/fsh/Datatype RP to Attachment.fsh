@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ RP[Attachment] - Sheet1.csv
-Instance: DatatypeRPtoAttachment
+Instance: DatatypeRPToAttachment
 InstanceOf: ConceptMap
 Title: "Datatype RP to Attachment Map"
+* title = "Datatype RP to Attachment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype RP to the FHIR Attachment Data Type."
 * id = "datatype-rp-to-attachment"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-rp-to-attachment"
 * version = "1.0"
-* name = "DatatypeRPtoAttachment"
+* name = "DatatypeRPToAttachment"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

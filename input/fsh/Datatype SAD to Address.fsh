@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ SAD[Address] - Sheet1.csv
-Instance: DatatypeSADtoAddress
+Instance: DatatypeSADToAddress
 InstanceOf: ConceptMap
 Title: "Datatype SAD to Address Map"
+* title = "Datatype SAD to Address Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype SAD to the FHIR Address Data Type."
 * id = "datatype-sad-to-address"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-sad-to-address"
 * version = "1.0"
-* name = "DatatypeSADtoAddress"
+* name = "DatatypeSADToAddress"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -80,36 +81,3 @@ Title: "Datatype SAD to Address Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "line[3]"
-* group.element[3].code = #SAD.1
-* group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
-* group.element[3].extension[0].extension[0].url = "type"
-* group.element[3].extension[0].extension[0].valueCode = #"absent"
-* group.element[3].target.equivalence = #equivalent
-* group.element[3].target.code = #line[1]
-* group.element[3].target.display = "line[1]"
-* group.element[3].target.product[0].property = "antlr"
-* group.element[3].target.product[0].value = "XAD.1 and 2"
-* group.element[3].target.product[1].property = "fhirpath"
-* group.element[3].target.product[1].value = "|123 Street Road|Appt 55|"
-* group.element[4].code = #SAD.2
-* group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
-* group.element[4].extension[0].extension[0].url = "type"
-* group.element[4].extension[0].extension[0].valueCode = #"Stre"
-* group.element[4].display = "Street Road"
-* group.element[4].target.equivalence = #equivalent
-* group.element[4].target.code = #line[2]
-* group.element[4].target.display = "line[2]"
-* group.element[5].code = #SAD.3
-* group.element[5].display = "123"
-* group.element[5].target.equivalence = #equivalent
-* group.element[5].target.code = #line[1]
-* group.element[5].target.display = "line[1]"
-* group.element[5].target.product[0].property = "antlr"
-* group.element[5].target.product[0].value = "XAD.1 and 2"
-* group.element[5].target.product[1].property = "fhirpath"
-* group.element[5].target.product[1].value = "|^Street Road^123|Appt 55|"
-* group.element[6].code = #XAD.2
-* group.element[6].display = "Appt 55"
-* group.element[6].target.equivalence = #equivalent
-* group.element[6].target.code = #line[2]
-* group.element[6].target.display = "line[2]"

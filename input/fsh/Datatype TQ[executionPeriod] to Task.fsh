@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ TQ[Task-executionPeriod] - Sheet1.csv
-Instance: DatatypeTQexecutionPeriodtoTask
+Instance: DatatypeTQExecutionPeriodToTask
 InstanceOf: ConceptMap
-Title: "Datatype TQ to Task Map"
+Title: "Datatype TQ[executionPeriod] to Task Map"
+* title = "Datatype TQ[executionPeriod] to Task Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TQ to the FHIR Task Resource."
-* id = "datatype-tqexecutionperiod-to-task"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-tqexecutionperiod-to-task"
+* id = "datatype-tq-executionperiod-to-task"
+* url = "http://hl7.org/fhir/uv/v2mappings/datatype-tq-executionperiod-to-task"
 * version = "1.0"
-* name = "DatatypeTQexecutionPeriodtoTask"
+* name = "DatatypeTQExecutionPeriodToTask"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

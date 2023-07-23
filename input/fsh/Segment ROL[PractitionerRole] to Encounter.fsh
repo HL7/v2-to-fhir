@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ ROL[Encounter-PractitionerRole] - Sheet1.csv
-Instance: SegmentROLPractitionerRoletoEncounter
+Instance: SegmentROLPractitionerRoleToEncounter
 InstanceOf: ConceptMap
-Title: "Segment ROL to Encounter Map"
+Title: "Segment ROL[PractitionerRole] to Encounter Map"
+* title = "Segment ROL[PractitionerRole] to Encounter Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment ROL to the FHIR Encounter Resource."
-* id = "segment-rolpractitionerrole-to-encounter"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-rolpractitionerrole-to-encounter"
+* id = "segment-rol-practitionerrole-to-encounter"
+* url = "http://hl7.org/fhir/uv/v2mappings/segment-rol-practitionerrole-to-encounter"
 * version = "1.0"
-* name = "SegmentROLPractitionerRoletoEncounter"
+* name = "SegmentROLPractitionerRoleToEncounter"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

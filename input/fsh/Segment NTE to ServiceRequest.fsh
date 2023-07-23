@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ NTE[ServiceRequest] - NTE.csv
-Instance: SegmentNTEtoServiceRequest
+Instance: SegmentNTEToServiceRequest
 InstanceOf: ConceptMap
 Title: "Segment NTE to ServiceRequest Map"
+* title = "Segment NTE to ServiceRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment NTE to the FHIR ServiceRequest Resource."
 * id = "segment-nte-to-servicerequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-nte-to-servicerequest"
 * version = "1.0"
-* name = "SegmentNTEtoServiceRequest"
+* name = "SegmentNTEToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

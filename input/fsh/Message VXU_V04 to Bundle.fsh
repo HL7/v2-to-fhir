@@ -1,15 +1,16 @@
 // HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv
-Instance: MessageVXU_V04toBundle
+Instance: MessageVXU_V04ToBundle
 InstanceOf: ConceptMap
 Title: "Message VXU_V04 to Bundle Map"
+* title = "Message VXU_V04 to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message VXU_V04 to the FHIR Message Bundle."
 * id = "message-vxu-v04-to-bundle"
 * url = "http://hl7.org/fhir/uv/v2mappings/message-vxu-v04-to-bundle"
 * version = "1.0"
-* name = "MessageVXU_V04toBundle"
+* name = "MessageVXU_V04ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

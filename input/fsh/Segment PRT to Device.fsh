@@ -1,15 +1,16 @@
 // HL7 Segment - FHIR R4_ PRT[Device] - Sheet1.csv
-Instance: SegmentPRTtoDevice
+Instance: SegmentPRTToDevice
 InstanceOf: ConceptMap
 Title: "Segment PRT to Device Map"
+* title = "Segment PRT to Device Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PRT to the FHIR Device Resource."
 * id = "segment-prt-to-device"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-prt-to-device"
 * version = "1.0"
-* name = "SegmentPRTtoDevice"
+* name = "SegmentPRTToDevice"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

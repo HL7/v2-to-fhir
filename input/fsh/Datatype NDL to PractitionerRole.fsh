@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ NDL[PractitionerRole] - Sheet1.csv
-Instance: DatatypeNDLtoPractitionerRole
+Instance: DatatypeNDLToPractitionerRole
 InstanceOf: ConceptMap
 Title: "Datatype NDL to PractitionerRole Map"
+* title = "Datatype NDL to PractitionerRole Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype NDL to the FHIR PractitionerRole Resource."
 * id = "datatype-ndl-to-practitionerrole"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ndl-to-practitionerrole"
 * version = "1.0"
-* name = "DatatypeNDLtoPractitionerRole"
+* name = "DatatypeNDLToPractitionerRole"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -36,7 +37,11 @@ Title: "Datatype NDL to PractitionerRole Map"
 * group.element[0].target.code = #practitioner(Practitioner)
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
-* group.element[0].target.extension[0].extension[0].valueCode = #"0"
+* group.element[0].target.extension[0].extension[0].valueCode = #"Reference(Practitioner)"
+* group.element[0].target.extension[0].extension[1].url = "cardinalityMin"
+* group.element[0].target.extension[0].extension[1].valueInteger = 1
+* group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
+* group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "practitioner(Practitioner)"
 * group.element[0].target.dependsOn[0].property = "data-type-map"
 * group.element[0].target.dependsOn[0].value = "CNN[Practitioner]"

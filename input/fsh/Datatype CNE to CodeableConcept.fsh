@@ -1,15 +1,16 @@
 // HL7 Data Type - FHIR R4_ CNE[CodeableConcept] - Sheet1.csv
-Instance: DatatypeCNEtoCodeableConcept
+Instance: DatatypeCNEToCodeableConcept
 InstanceOf: ConceptMap
 Title: "Datatype CNE to CodeableConcept Map"
+* title = "Datatype CNE to CodeableConcept Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CNE to the FHIR CodeableConcept Data Type."
 * id = "datatype-cne-to-codeableconcept"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cne-to-codeableconcept"
 * version = "1.0"
-* name = "DatatypeCNEtoCodeableConcept"
+* name = "DatatypeCNEToCodeableConcept"
 * status = #active
 * experimental = true
-* date = "2022-02-28"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

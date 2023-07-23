@@ -1,15 +1,16 @@
 // HL7 Concept Map_ AdmissionLevelOfCareCode - Sheet1.csv
-Instance: TableHL70432toV20432
+Instance: TableHL70432ToV20432
 InstanceOf: ConceptMap
 Title: "Table HL70432 to V2 0432 Map"
+* title = "Table HL70432 to V2 0432 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70432 to the FHIR V2 0432 Value Set."
 * id = "table-hl70432-to-v2-0432"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70432-to-v2-0432"
 * version = "1.0"
-* name = "TableHL70432toV20432"
+* name = "TableHL70432ToV20432"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,15 +1,16 @@
 // HL7 Concept Map_ CompletionStatus - Sheet1.csv
-Instance: TableHL70322toEventStatus
+Instance: TableHL70322ToEventStatus
 InstanceOf: ConceptMap
 Title: "Table HL70322 to Event Status Map"
+* title = "Table HL70322 to Event Status Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70322 to the FHIR Event Status Value Set."
 * id = "table-hl70322-to-event-status"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70322-to-event-status"
 * version = "1.0"
-* name = "TableHL70322toEventStatus"
+* name = "TableHL70322ToEventStatus"
 * status = #active
 * experimental = true
-* date = "2023-07-20"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

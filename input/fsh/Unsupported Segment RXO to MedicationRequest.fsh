@@ -1,15 +1,16 @@
-// mappings\messages\HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv:39
-Instance: SegmentRXOtoMedicationRequest
+// mappings/messages/HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv:38
+Instance: UnsupportedSegmentRXOToMedicationRequest
 InstanceOf: ConceptMap
-Title: "Segment RXO to MedicationRequest Map"
+Title: "Segment RXO to MedicationRequest Map - Unsupported"
+* title = "Segment RXO to MedicationRequest Map - Unsupported"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment RXO to the FHIR MedicationRequest. It is not yet supported."
-* id = "segment-rxo-to-medicationrequest"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-rxo-to-medicationrequest"
+* id = "unsupported-segment-rxo-to-medicationrequest"
+* url = "http://hl7.org/fhir/uv/v2mappings/unsupported-segment-rxo-to-medicationrequest"
 * version = "1.0"
-* name = "SegmentRXOtoMedicationRequest"
+* name = "UnsupportedSegmentRXOToMedicationRequest"
 * status = #active
 * experimental = true
-* date = "2022-02-21"
+* date = "2023-07-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
