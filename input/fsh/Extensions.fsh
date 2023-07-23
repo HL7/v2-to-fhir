@@ -1,4 +1,5 @@
 Extension: TypeInfo
+Context: ConceptMap.group.element, ConceptMap.group.element.target
 Description: "Type information for conversion"
 * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * extension contains type 0..1 MS and
@@ -13,6 +14,7 @@ Description: "Type information for conversion"
 * extension[cardinalityMax] ^short = "Maximum cardinality of the item"
 
 Extension: RelatedArtifact
+Context: ConceptMap
 Description: "Related artifacts for a ConceptMap"
 * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * extension contains type 1..1 MS and
