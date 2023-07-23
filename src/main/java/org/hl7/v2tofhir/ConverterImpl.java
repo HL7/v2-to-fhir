@@ -144,7 +144,9 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         parts = filename.split("\\s*[\\._\\-]\\s*");
         sourceName = source = StringUtils.substringBefore(parts[2], "[");
         targetName = target;
-
+        if (target != null) {
+            targetName = target.replace(".html", "");
+        }
 
         try (FileReader r = new FileReader(f)) {
             beans = new CsvToBeanBuilder<T>(r).withType(classType).build().parse();
@@ -203,7 +205,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         if (target.contains("/")) {
             target = StringUtils.substringAfterLast(target, "/");
         }
-        return WordUtils.capitalize(target.replace("-", " "));
+        return WordUtils.capitalize(target.replace("-", " ").replace(".html", ""));
     }
 
     protected final T getFirstMappedBean() {
@@ -228,7 +230,11 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     }
 
     public String getFishFileName() {
-        return String.format("%s %s%s to %s.fsh", type, sourceName, qualifier, targetName);
+        String targetnm = null;
+        if (targetName != null) {
+            targetnm = targetName.replace(".html", "");
+        }
+        return String.format("%s %s%s to %s.fsh", type, sourceName, qualifier, targetnm);
     }
 
     public String getId() {
@@ -236,7 +242,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     }
 
     private static String makeName(String fishFileName) {
-        return fishFileName.replace(".fsh","").replace("[", "").replace("]", "").replace(" ","");
+        return WordUtils.capitalize(fishFileName.replace(".fsh","").replace(" to ", " To ").replace("[", " ").replace("]", " ").replace(".", " ")).replace(" ","");
     }
 
     public String getMdFileName(String prefix, String suffix) {
@@ -417,7 +423,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         if (source == null) {
             titleStr = titleStr + " - Unsupported";
             filename = "Unsupported " + filename;
-        }        
+        }
         pw.printf("// %s%n", sourceFilename);
         pw.printf("Instance: %s%n", makeName(filename));
         pw.println("InstanceOf: ConceptMap");
@@ -479,7 +485,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     }
 
     private String getFHIRDescription() {
-        String target = getTargetName();
+        String target = getTargetName().replace(",html", "");
         switch (type) {
         case "Table":
             return String.format("%s Value Set", target);
@@ -593,7 +599,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         if (name.endsWith(".fsh")) {
             name = name.substring(0, name.length()-4);
         }
-        return StringUtils.truncate(StringUtils.replaceChars(name.toLowerCase(), "! _[]", "-----").replaceAll("--+", "-"),
+        return StringUtils.truncate(StringUtils.replaceChars(name.toLowerCase(), "! _[].", "------").replaceAll("--+", "-"),
             64);
     }
 
