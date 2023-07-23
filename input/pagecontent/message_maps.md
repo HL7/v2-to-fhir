@@ -14,6 +14,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [ADT_A02](ConceptMap-message-adt-a02-to-bundle.html) - Transfer a Patient
 * [ADT_A05](ConceptMap-message-adt-a05-to-bundle.html) - Pre-Admit a Patient
 * [ADT_A06](ConceptMap-message-adt-a06-to-bundle.html) - Change an Outpatient to an Inpatient
+* [ADT_A09](ConceptMap-message-adt-a09-to-bundle.html) - Patient Departing - Tracking
 * [ADT_A17](ConceptMap-message-adt-a17-to-bundle.html) - Swap Patients
 
 ### Chapter  4  Order Entry
