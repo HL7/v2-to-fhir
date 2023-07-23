@@ -2,3 +2,7 @@
 # These concept maps are mappings between V2 structures and FHIR, therefore there is no source or target "code system" and system url to specify.
 %ConceptMap.group[0]: No Source Code System, so the source codes cannot be checked
 %ConceptMap.group[0]: No Target Code System, so the target codes cannot be checked
+
+# The "#broken" links are not intended to resolve.
+%The link '#broken' for "durationUnit" cannot be resolved%
+%The link '#broken' for "periodUnit" cannot be resolved%
