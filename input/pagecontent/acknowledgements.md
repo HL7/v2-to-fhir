@@ -3,6 +3,7 @@ HL7 would like to thank the following individuals for their contributions to thi
 * [Hans Buitendijk](https://www.linkedin.com/in/buitendijk-hans-203599/) - Project Co-Lead - Cerner Corporation
 * Craig Newman - Project Co-Lead - Altarum
 * [Keith Boone](https://www.linkedin.com/in/keithwboone/) - Publishing Facilitator - Audacious Inquiry
+* [Rob Hausam](https://www.linkedin.com/in/robert-hausam-a273aa7/) - OO WG Co-Chair - Hausam Consulting LLC
 * Deepak Bansal - Microsoft
 * [David Burgess](https://www.linkedin.com/in/david-burgess-272648a4/) - LabCorp
 * [Grahame Grieve](https://www.linkedin.com/in/grahame-grieve-952637/)
