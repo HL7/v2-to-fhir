@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.v2mappings
 canonical: http://hl7.org/fhir/uv/v2mappings
-version: 0.1.0
+version: 1.0.0
 name: HL7Version2toFHIR
 title: HL7 Version 2 to FHIR
 status: active
@@ -58,6 +58,8 @@ pages:
     title: Glossary
   acknowledgements.md:
     title: Acknowledgements
+  analysis.md:
+    title: IP Acknowledgements & IG Analysis
   mappings.md:
     title: Mappings
   message_maps.md:
