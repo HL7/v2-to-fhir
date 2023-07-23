@@ -1,0 +1,11 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+E,Emergency,HL70004,,,,in-progress,,,http://hl7.org/fhir/encounter-status,,
+I,Inpatient,HL70004,,,,in-progress,,,http://hl7.org/fhir/encounter-status,,
+O,Outpatient,HL70004,,,,in-progress,,,http://hl7.org/fhir/encounter-status,,
+P,Preadmit,HL70004,,,,planned,,,http://hl7.org/fhir/encounter-status,,
+R,Recurring patient,HL70004,,,,in-progress,,,http://hl7.org/fhir/encounter-status,,
+B,Obstetrics,HL70004,,,,in-progress,,,http://hl7.org/fhir/encounter-status,,
+C,Commercial Account,HL70004,,,,in-progress,,,http://hl7.org/fhir/encounter-status,,
+N,Not Applicable,HL70004,,,,in-progress,,,http://hl7.org/fhir/encounter-status,,
+U,Unknown,HL70004,,,,unknown,,,http://hl7.org/fhir/encounter-status,,

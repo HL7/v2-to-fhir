@@ -9,7 +9,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 4,CX.4,Assigning Authority,HD,0,1,,,If not in http://hl7.org/implement/standards/fhir/identifier-registry.html then determine whether organization or system,assigner(Organization),,Reference(Organization),0,1,HD[Organization],,,,
 4,CX.4,Assigning Authority,HD,0,1,IF CX.4 IN http://hl7.org/implement/standards/fhir/identifier-registry.html,,,system,,uri,0,1,HD[uri],,,,"Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then CX.4 should be mapped to .system"
 5,CX.5,Identifier Type Code,ID,1,1,,,,type.coding.code,,code,0,1,,IDType,,,
-6,CX.6,Assigning Facility,HD,0,1,,,,,Identifier.#ext-assigningFacility#,Reference(Location),0,1,HD[Location],,,,
+6,CX.6,Assigning Facility,HD,0,1,,,,,extension??-assigningFacility,Reference(Location),0,1,HD[Location],,,,
 7,CX.7,Effective Date,DT,0,1,,,,period.start,,dateTime,0,1,,,,,
 8,CX.8,Expiration Date,DT,0,1,,,,period.end,,dateTime,0,1,,,,,
 9,CX.9,Assigning Jurisdiction,CWE,0,1,,,,,,,,,,,,,

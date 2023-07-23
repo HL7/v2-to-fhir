@@ -8,4 +8,4 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 2,HD.2,Universal ID,ST,0,1,"IF HD-3 = ""URI""",,,endpoint,,uri,1,1,,,"""urn:uri:""+HD.2",,
 2,HD.2,Universal ID,ST,0,1,"IF HD-3 NOT IN (""ISO"", ""UUID"", ""DNS"", ""URI"")",,,name,,,,,, ,"HD.1+"" - ""+HD.3+"":""+HD.2",,
 3,HD.3,Univeral ID Type,ST,0,1,"IF NOT VALUED OR NOT IN (""ISO"", ""UUID"", ""DNS"", ""URI"")",,,endpoint.extension[1].url,,,,,,,"""http://hl7.org/fhir/R4/extension-data-absent-reason.html""",,
-,HD.3,Univeral ID Type,ST,0,1,"IF NOT VALUED OR NOT IN (""ISO"", ""UUID"", ""DNS"", ""URI"")",,,endpoint.extension[1].valueCode,,,,,,,"""unknown""",,
+3,HD.3,Univeral ID Type,ST,0,1,"IF NOT VALUED OR NOT IN (""ISO"", ""UUID"", ""DNS"", ""URI"")",,,endpoint.extension[1].valueCode,,,,,,,"""unknown""",,

@@ -5,4 +5,3 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 2,HD.2,Universal ID,ST,0,1,"IF HD.1 NOT VALUED AND IF HD-3 = ""ISO""",,,$value,,url,1,1,,,"""urn:oid:""+HD.2",,
 2,HD.2,Universal ID,ST,0,1,"IF HD.1 NOT VALUED AND IF HD-3 = ""UUID""",,,$value,,url,1,1,,,"""urn:uuid:""+HD.2",,
 2,HD.2,Universal ID,ST,0,1,"IF HD.1 NOT VALUED AND IF HD-3 NOT IN (""ISO"", ""UUID"")",,,$value,,url,1,1,,,,,
-3,HD.3,Universal ID Type,ID,0,1,,,,,,,,,,,,,

@@ -1,0 +1,28 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
+Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
+1,ADT_A09.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
+1,ADT_A09.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource.
+1,ADT_A09.MSH,MSH,Message Header,1,1,,,"If there is a source in MSH-4, or known based on the configuration.",Provenance[1],MSH[Provenance-Source],Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id,,"If the FHIR transformation does not yield a FHIR message, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Proviance resource instance to the relevant FHIR resources generated."
+1,ADT_A09.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,"If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
+2,ADT_A09.ARV,[{ ARV }],Access Restrictions,0,-1,,,,,,,,
+3,ADT_A09.SFT,[{ SFT }],Software Segment,0,-1,,,If the software does represent not the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
+Provenance[1].entity.role=""derivation""",,
+3,ADT_A09.SFT,[{ SFT }],Software Segment,0,-1,,,If the software represents the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
+Provenance[1].entity.role=""source""",,
+4,ADT_A09.UAC,[ UAC ],User Authentication Credential,0,1,,,,,,,,
+5,ADT_A09.EVN,EVN,Event Type,1,1,,,,Provenance[3],EVN[Provenance-Activity],Provenance[3].target.reference=MessageHeader[1].id,,
+5,ADT_A09.EVN,EVN,Event Type,1,1,IF EVN-5 NOT VALUED AND (MSH-22 IS VALUED OR MSH-4 IS VALUED),,,Provenance[3],MSH[Provenance-Operator],Provenance[3].target.reference=MessageHeader[1].id,,"If EVN-5 is not valued, then the MSH may have either the sending responsible organization (MSH-22) or the sending facility (MSH-4) to reasonable approximate the agent relevant for this Provenance instance."
+6,ADT_A09.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
+6,ADT_A09.PID,PID,Patient Identification,1,1,,,,RelatedPerson,PID[RelatedPerson-Mother],RelatedPerson.patient.reference=Patient[1].id,,
+6,ADT_A09.PID,PID,Patient Identification,1,1,,,,Account,PID[Account],Account.subject.reference=Patient[1].id,,
+6,ADT_A09.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance-Patient],Provenance[4].target.reference=Patient[1].id,,
+7,ADT_A09.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
+8,ADT_A09.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter[1].subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
+8,ADT_A09.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
+9,ADT_A09.PV2,[ PV2 ],Patient Visit - Additional Info.,0,1,,,,Encounter[1],PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.
+10,ADT_A09.DB1,[{ DB1 }],Disability Information,0,-1,,,,,,,,
+11,ADT_A09.OBSERVATION,[{,--- OBSERVATION begin,0,-1,,,,,,,,
+11.1,ADT_A09.OBSERVATION.OBX,OBX,Observation/Result,0,-1,,,"Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet.",Observation[1],OBX[Observation],Observation[1].subject.reference=Patient[1].id,,"One cannot determine whether this observation made during the PV1/PV2 communicated above, or from a prior visit/stay. It is therefore up to the implementer whether to populate Observation.encounter.reference with the Encounter[1].id or not.  Only when the ADT message involves an event before the encounter occurs, e.g., the intiial registration, it is clear that the observation is NOT associated with Encounter[1]."
+11.1,ADT_A09.OBSERVATION.OBX,OBX,Observation/Result,0,-1,,,"Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet.",Observation[1],OBX[Observation-Component],Observation[1].subject.reference=Patient[1].id,,"One cannot determine whether this observation made during the PV1/PV2 communicated above, or from a prior visit/stay. It is therefore up to the implementer whether to populate Observation.encounter.reference with the Encounter[1].id or not.  Only when the ADT message involves an event before the encounter occurs, e.g., the intiial registration, it is clear that the observation is NOT associated with Encounter[1]."
+11.2,ADT_A09.OBSERVATION.PRT,[{ PRT }],Participation,0,-1,,,,,,,,
+11.3,/ADT_A09.OBSERVATION,}],--- OBSERVATION end,,,,,,,,,,

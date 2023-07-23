@@ -9,10 +9,12 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 6,XAD.6,Country,ID,0,1,,,,country,,string,0,1,,,,,Do we need to supply a mapping from the v2 ID code to a string?
 7,XAD.7,Address Type,ID,0,1,"IF XAD.7 IN (""M"", ""SH"")",,,type,,code,0,1,,AddressType,,,
 7,XAD.7,Address Type,ID,0,1,"IF XAD.7 IN (""BA"", ""BI"", ""C"", ""B"", ""H"", ""O"")",,,use,,code,0,1,,AddressUse,,,
-7,XAD.7,Address Type,ID,0,1,"IF XAD.7 EQUALS ""HV""",,,ext.iso21090-AD-use,,code,0,1,,,,,
+7,XAD.7,Address Type,ID,0,1,"IF XAD.7 EQUALS ""HV""",,,extension.url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/iso21090-AD-use""",,
+7,XAD.7,Address Type,ID,0,1,"IF XAD.7 EQUALS ""HV""",,,extension.valueCode,,code,1,1,,,,,
 8,XAD.8,Other Geographic Designation,ST,0,1,,,,,,,,,,,,,"If this is in use, should it be mapped to Address.line (in which case, we can't go backwards from Address to XAD) or as a new extension?"
 9,XAD.9,County/Parish Code,CWE,0,1,,,,district,,string,0,1,CWE[string],,,,
-10,XAD.10,Census Tract,CWE,0,1,,,,extension-iso21090-ADXP-censusTract,,string,0,-1,CWE[string],,,,
+10,XAD.10,Census Tract,CWE,0,1,,,,extension.url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract""",,
+10,XAD.10,Census Tract,CWE,0,1,,,,extension.valueCode,,string,1,1,CWE[string],,,,
 11,XAD.11,Address Representation Code,ID,0,1,,,,,,,,,,,,,
 12,XAD.12,Address Validity Range,DR,0,1,,,,period,,Period,0,1,DR[Period],,,,
 13,XAD.13,Effective Date,DTM,0,1,,,,period.start,,dateTime,0,1,,,,,

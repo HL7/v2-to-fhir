@@ -1,0 +1,5 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+A,Admitting,HL0052,,,,AD,,Admission Diagnosis,http://terminology.hl7.org/CodeSystem/diagnosis-role,,
+W,Working,HL0052,,,,,,,,,
+F,Final,HL0052,,,,,,,,,

@@ -5,7 +5,7 @@ B,Appended ,HL70085,,,,,,,,,
 C,Correction ,HL70085,,,,corrected,,Corrected,http://hl7.org/fhir/observation-status,,
 D,Deleted,HL70085,,,,entered-in-error,,Entered in Error,http://hl7.org/fhir/observation-status,,
 F,Final,HL70085,,,,final,,Final,http://hl7.org/fhir/observation-status,,
-I,Specimen in Lab; results pending,HL70085,,,, ,ask update to registered to include in-process explicitly,Registered,http://hl7.org/fhir/observation-status,,
+I,Specimen in Lab; results pending,HL70085,,,, ,,Registered,http://hl7.org/fhir/observation-status,,ask update to registered to include in-process explicitly
 N,Not Asked,HL70085,,,Depedending on context,,,,,,
 O,Order Detail,HL70085,,,,,,,,,
 P,Preliminary,HL70085,,,,preliminary,,Preliminary,http://hl7.org/fhir/observation-status,,
@@ -15,6 +15,5 @@ V,Verified,HL70085,,,,,"Create JIRA: Final results reviewed and confirmed to be 
 X,Cannot be Obtained,HL70085,,,,cancelled,,,http://hl7.org/fhir/observation-status,,
 U,Status Change to Final Without Retransmission,HL70085,,,,,,,,,
 W,Original Posted as Wrong,HL70085,,,,entered-in-error,,Entered in Error,http://hl7.org/fhir/observation-status,,
-,,,,,,,,,,,
-,,,"Now: The existence of the observation is registered, but there is no result yet available.",,,,,,,,
-,,,"Draft Update: A placeholder Observation has been created in anticipation for documenting the actual result(s).  The creation may be at varying states of preparation or performance, e.g., for lab results the specimen is collected but not yet arrived in the lab or specimen in Lab but results pending.",,,,,,,,
+,,,,,,,now,,,,"Now: The existence of the observation is registered, but there is no result yet available."
+,,,,,,,draft update,,,,"Draft Update: A placeholder Observation has been created in anticipation for documenting the actual result(s).  The creation may be at varying states of preparation or performance, e.g., for lab results the specimen is collected but not yet arrived in the lab or specimen in Lab but results pending."
