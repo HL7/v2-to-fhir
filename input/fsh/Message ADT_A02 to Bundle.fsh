@@ -10,7 +10,7 @@ Title: "Message ADT_A02 to Bundle Map"
 * name = "MessageADT_A02ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-07-24"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -130,7 +130,7 @@ Provenance[1].entity.role="source"\
 * group.element[6].target.code = #Provenance[3]
 * group.element[6].target.display = "Provenance[3]"
 * group.element[6].target.dependsOn[0].property = "segment-map"
-* group.element[6].target.dependsOn[0].value = "EVN[Provenance-Activity]"
+* group.element[6].target.dependsOn[0].value = "EVN[Provenance]"
 * group.element[6].target.dependsOn[1].property = "references"
 * group.element[6].target.dependsOn[1].value = "Provenance[3].target.reference=MessageHeader[1].id"
 * group.element[7].code = #ADT_A02.EVN
