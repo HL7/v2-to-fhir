@@ -19,7 +19,7 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 12,NK1-12,Next of Kin / Associated Parties Employee Number,CX,0,1,,,,identifier[1]       ,,Identifier,0,-1,CX[Identifier],,,,
 13,NK1-13,Organization Name - NK1,XON,0,-1,,,,,,,,,,,,,Do we need to enhance the Organization resource to be able to serve as a next of kin or associated party?
 14,NK1-14,Marital Status,CWE,0,1,,,,,,,,,,,,,
-15,NK1-15,Administrative Sex,CWE,0,1,,,,gender,,code,0,1,CWE[code],Gender,,,
+15,NK1-15,Administrative Sex,CWE,0,1,,,,gender,,code,0,1,CWE[Code],Gender,,,
 16,NK1-16,Date/Time of Birth,DTM,0,1,,,,birthDate,,date,0,1,,,,,
 17,NK1-17,Living Dependency,CWE,0,-1,,,,,,,,,,,,,
 18,NK1-18,Ambulatory Status,CWE,0,-1,,,,,,,,,,,,,

@@ -22,7 +22,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 19,DG1-19,Attestation Date/Time,DTM,0,1,,,,diagnosis.condition(Condition.extension[1].url),,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/condition-assertedDate""",,
 19,DG1-19,Attestation Date/Time,DTM,0,1,,,,diagnosis.condition(Condition.extension[1].valueDateTime),,dateTime,1,1,,,,,It is unclear whether to use recorded or asserted date.  What is your opinion?
 19,DG1-19,Attestation Date/Time,DTM,0,1,,,,diagnosis.condition(Condition.recordedDate),,dateTime,0,1,,,,,It is unclear whether to use recorded or asserted date.  What is your opinion?
-20,DG1-20,Diagnosis Identifier,EI,0,1,,,,diagnosis.condition(Condition.identifier),,identifier,0,-1,EI[Identifier],,,,We should confirm that this is truly a unique ID before it gets used as .id. It may need to be combined with a visit ID to make it fully unique.
+20,DG1-20,Diagnosis Identifier,EI,0,1,,,,diagnosis.condition(Condition.identifier),,identifier,0,-1,EI[Identifier-Extension],,,,We should confirm that this is truly a unique ID before it gets used as .id. It may need to be combined with a visit ID to make it fully unique.
 21,DG1-21,Diagnosis Action Code,ID,0,1,,,,diagnosis.condition(Condition.verificationStatus.coding.code),,code,0,1,,,"""entered-in-error""",,Other values (A and U) don't map to anything
 21,DG1-21,Diagnosis Action Code,ID,0,1,,,,diagnosis.condition(Condition.verificationStatus.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/condition-ver-status""",,
 22,DG1-22,Parent Diagnosis,EI,0,1,,,,diagnosis.condition(Condition.extension[1].uri),,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/condition-dueTo""",,

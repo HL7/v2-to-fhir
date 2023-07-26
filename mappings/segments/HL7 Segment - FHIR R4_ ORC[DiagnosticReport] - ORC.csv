@@ -2,17 +2,17 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,ORC-1,Order Control,ID,1,1,,,,,,,,,,,,,
-2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1],,Identifier,0,-1,EI[Identifier],,,,
+2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
 2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1].type.coding.code,,code,0,1,,,"""PLAC""",,
 2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,
 2,ORC-2,Placer Order Number,EI,0,1,,,,basedOn(ServiceRequest),,Reference(ServiceRequest),0,-1,,,,,"The Placer Order Number may be used to find the ServiceRequest with the same ID to link the ServiceRequest and the DiagnosticReport which fulfills the order.
 Ideally, DiagnosticReport.identifier will be unique. Depending on how the resulting system populates the Filler ID, it may be desirable to concatenate the Filler ID with the procedure code and/or date/time to create a unique identifier."
-3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2],,Identifier,0,-1,EI[Identifier],,,,
+3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
 3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2].type.coding.code,,code,0,1,,,"""FILL""",,
 3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,
-4,ORC-4,Placer Group Number,EIP - This is EI in many versions including 2.9,0,1,,,,identifier[3],,Identifier,0,-1,EI[Identifier],,,,
-4,ORC-4,Placer Group Number,EIP - This is EI in many versions including 2.9,0,1,,,,identifier[3].type.coding.code,,code,0,1,,,"""PGN""",,
-4,ORC-4,Placer Group Number,EIP - This is EI in many versions including 2.9,0,1,,,,identifier[3].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,
+4,ORC-4,Placer Group Number,EIP,0,1,,,,identifier[3],,Identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,
+4,ORC-4,Placer Group Number,EIP,0,1,,,,identifier[4],,Identifier,0,-1,EIP[Identifier-PlacerAssignedIdentifier],,,,
+,,,,,,,,,,,,,,,,,,
 5,ORC-5,Order Status,ID,0,1,,,,,,,,,,,,,
 6,ORC-6,Response Flag,ID,0,1,,,,,,,,,,,,,
 7,ORC-7,Quantity/Timing,TQ,0,-1,,,,,,,,,,,,,

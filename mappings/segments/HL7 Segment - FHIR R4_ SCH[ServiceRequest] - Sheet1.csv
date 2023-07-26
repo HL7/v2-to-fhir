@@ -33,6 +33,6 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 22,SCH-22,Entered By Location,PL,0,1,,,,,,,,,,,,,
 23,SCH-23,Parent Placer Appointment ID,EI,0,1,,,,,,,,,,,,,
 24,SCH-24,Parent Filler Appointment ID,EI,0,1,,,,,,,,,,,,,
-25,SCH-25,Filler Status Code,CWE,0,1,,,,status,,code,1,1,FillerStatus[Appointment],,,,
+25,SCH-25,Filler Status Code,CWE,0,1,,,,status,,code,1,1,,FillerStatus[Appointment],,,
 26,SCH-26,Placer Order Number,EI,0,-1,,,,identifier[1],,,,,,,,,
 27,SCH-27,Filler Order Number,EI,0,-1,,,,identifier[2],,Identifier,0,-1,EI[Identifier],,,,

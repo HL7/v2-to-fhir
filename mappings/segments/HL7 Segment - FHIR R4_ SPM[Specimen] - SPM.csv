@@ -2,7 +2,8 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,SPM-1,Set ID - SPM,SI,0,1,,,,,,,,,,,,,
-2,SPM-2,Specimen ID,EIP,0,1,,,,identifier[1],,Identifier,0,-1,EIP[Identifier],,,,
+2,SPM-2,Specimen ID,EIP,0,1,,,,identifier[1],,Identifier,0,-1,EIP[Identifier-PlacerIdentifiedAssigner],,,,
+2,SPM-2,Specimen ID,EIP,0,1,,,,identifier[2],,Identifier,0,-1,EIP[Identifier-FillerIdentifiedAssigner],,,,
 3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,Only one of the two parent references in EIP can be mapped.  The implementation needs to choose which one.,parent.identifier,,Identifier,0,1,EIP[Identifier],,,,"Note that Specimen.parent can repeat, i.e., match the SPM-3 cardinality, but Specimen.parent.identifier does not.  Therefore, while a specimen can have multiple parents, putting placer and filler parent identifiers in separate parent instances is not appropriate."
 4,SPM-4,Specimen Type,CWE,1,1,,,,type,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenType,,,
 5,SPM-5,Specimen Type Modifier,CWE,0,-1,,,,,,,,,,,,,
