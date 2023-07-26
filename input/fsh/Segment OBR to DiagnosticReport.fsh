@@ -10,7 +10,7 @@ Title: "Segment OBR to DiagnosticReport Map"
 * name = "SegmentOBRToDiagnosticReport"
 * status = #active
 * experimental = true
-* date = "2023-07-24"
+* date = "2023-07-26"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -44,7 +44,7 @@ Title: "Segment OBR to DiagnosticReport Map"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "identifier[1]"
 * group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[0].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[0].target.product[0].property = "narrative"
 * group.element[0].target.product[0].value = "If ORC-2 of the same ORC/OBR pair is not valued OR there is ORC segment in the current ORDER_OBSERVATION segment group"
 * group.element[1].code = #OBR-2
@@ -113,7 +113,7 @@ Title: "Segment OBR to DiagnosticReport Map"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "identifier[2]"
 * group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[3].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[3].target.product[0].property = "narrative"
 * group.element[3].target.product[0].value = "If ORC-3 of the same ORC/OBR pair is not valued OR there is ORC segment in the current ORDER_OBSERVATION segment group"
 * group.element[4].code = #OBR-3
@@ -393,8 +393,6 @@ Title: "Segment OBR to DiagnosticReport Map"
 * group.element[16].target.display = "performer[1].extension[1].valueCodeableConcept.coding.code"
 * group.element[16].target.dependsOn[0].property = "value"
 * group.element[16].target.dependsOn[0].value = "\"SPRF\""
-* group.element[16].target.dependsOn[1].property = "data-type-map"
-* group.element[16].target.dependsOn[1].value = "NDL[CodeableConcept]"
 * group.element[17].code = #OBR-34
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"

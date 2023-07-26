@@ -10,7 +10,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * name = "SegmentDG1ToEpisodeOfCare"
 * status = #active
 * experimental = true
-* date = "2023-07-24"
+* date = "2023-07-26"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -223,7 +223,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * group.element[9].target.extension[0].extension[2].valueInteger = -1
 * group.element[9].target.display = "diagnosis.condition(Condition.identifier)"
 * group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[9].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[10].code = #DG1-21
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"

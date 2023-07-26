@@ -10,7 +10,7 @@ Title: "Message ORU_R01 to Bundle Map"
 * name = "MessageORU_R01ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-07-24"
+* date = "2023-07-26"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -59,36 +59,41 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #Provenance[1]
 * group.element[2].target.display = "Provenance[1]"
+* group.element[2].target.comment = "If the FHIR transformation does not yield a FHIR message, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
 * group.element[2].target.dependsOn[0].property = "segment-map"
-* group.element[2].target.dependsOn[0].value = "MSH[Provenance]"
+* group.element[2].target.dependsOn[0].value = "MSH[Provenance-Source]"
 * group.element[2].target.dependsOn[1].property = "references"
-* group.element[2].target.dependsOn[1].value = "Provenance.target=Bundle; Provenance.target=MessageHeader[MSH]"
-* group.element[3].code = #ORU_R01.SFT
+* group.element[2].target.dependsOn[1].value = "Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id"
+* group.element[2].target.product[0].property = "narrative"
+* group.element[2].target.product[0].value = "If there is a source in MSH-4, or known based on the configuration."
+* group.element[3].code = #ORU_R01.MSH
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "cardinalityMin"
-* group.element[3].extension[0].extension[0].valueInteger = 0
+* group.element[3].extension[0].extension[0].valueInteger = 1
 * group.element[3].extension[0].extension[1].url = "cardinalityMax"
-* group.element[3].extension[0].extension[1].valueInteger = -1
-* group.element[3].display = "Software Segment"
+* group.element[3].extension[0].extension[1].valueInteger = 1
+* group.element[3].display = "Message Header"
 * group.element[3].target.equivalence = #equivalent
-* group.element[3].target.code = #MessageHeader[1]
-* group.element[3].target.display = "MessageHeader[1]"
-* group.element[3].target.comment = "Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment."
+* group.element[3].target.code = #Provenance[2]
+* group.element[3].target.display = "Provenance[2]"
+* group.element[3].target.comment = "If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
 * group.element[3].target.dependsOn[0].property = "segment-map"
-* group.element[3].target.dependsOn[0].value = "SFT[MessageHeader]"
-* group.element[4].code = #ORU_R01.PATIENT_RESULT.PATIENT.PID
+* group.element[3].target.dependsOn[0].value = "MSH[Provenance-Transformation]"
+* group.element[3].target.dependsOn[1].property = "references"
+* group.element[3].target.dependsOn[1].value = "Provenance[2].target.reference=Bundle.id"
+* group.element[4].code = #ORU_R01.SFT
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "cardinalityMin"
-* group.element[4].extension[0].extension[0].valueInteger = 1
+* group.element[4].extension[0].extension[0].valueInteger = 0
 * group.element[4].extension[0].extension[1].url = "cardinalityMax"
-* group.element[4].extension[0].extension[1].valueInteger = 1
-* group.element[4].display = "Patient Identification"
+* group.element[4].extension[0].extension[1].valueInteger = -1
+* group.element[4].display = "Software Segment"
 * group.element[4].target.equivalence = #equivalent
-* group.element[4].target.code = #Patient[1]
-* group.element[4].target.display = "Patient[1]"
-* group.element[4].target.comment = "Processing of the PID segment results in the creation of a new Patient resource"
+* group.element[4].target.code = #MessageHeader[1]
+* group.element[4].target.display = "MessageHeader[1]"
+* group.element[4].target.comment = "Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment."
 * group.element[4].target.dependsOn[0].property = "segment-map"
-* group.element[4].target.dependsOn[0].value = "PID[Patient]"
+* group.element[4].target.dependsOn[0].value = "SFT[MessageHeader]"
 * group.element[5].code = #ORU_R01.PATIENT_RESULT.PATIENT.PID
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "cardinalityMin"
@@ -97,53 +102,42 @@ Title: "Message ORU_R01 to Bundle Map"
 * group.element[5].extension[0].extension[1].valueInteger = 1
 * group.element[5].display = "Patient Identification"
 * group.element[5].target.equivalence = #equivalent
-* group.element[5].target.code = #Provenance[4]
-* group.element[5].target.display = "Provenance[4]"
+* group.element[5].target.code = #Patient[1]
+* group.element[5].target.display = "Patient[1]"
+* group.element[5].target.comment = "Processing of the PID segment results in the creation of a new Patient resource"
 * group.element[5].target.dependsOn[0].property = "segment-map"
-* group.element[5].target.dependsOn[0].value = "PID[Provenance]"
-* group.element[5].target.dependsOn[1].property = "references"
-* group.element[5].target.dependsOn[1].value = "Provenance.target.reference=Patient[1].id"
-* group.element[5].target.product[0].property = "antlr"
-* group.element[5].target.product[0].value = "IF PID-33 AND PID-34 VALUED"
-* group.element[5].target.product[1].property = "narrative"
-* group.element[5].target.product[1].value = "One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date."
-* group.element[6].code = #ORU_R01.PATIENT_RESULT.PATIENT.PD1
+* group.element[5].target.dependsOn[0].value = "PID[Patient]"
+* group.element[6].code = #ORU_R01.PATIENT_RESULT.PATIENT.PID
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "cardinalityMin"
-* group.element[6].extension[0].extension[0].valueInteger = 0
+* group.element[6].extension[0].extension[0].valueInteger = 1
 * group.element[6].extension[0].extension[1].url = "cardinalityMax"
 * group.element[6].extension[0].extension[1].valueInteger = 1
-* group.element[6].display = "Additional Demographics"
+* group.element[6].display = "Patient Identification"
 * group.element[6].target.equivalence = #equivalent
-* group.element[6].target.code = #Patient[1]
-* group.element[6].target.display = "Patient[1]"
-* group.element[6].target.comment = "Incorporate PD1 content into the Patient created from the PID segment."
+* group.element[6].target.code = #Provenance[4]
+* group.element[6].target.display = "Provenance[4]"
 * group.element[6].target.dependsOn[0].property = "segment-map"
-* group.element[6].target.dependsOn[0].value = "PD1[Patient]"
-* group.element[7].code = #ORU_R01.PATIENT_RESULT.PATIENT.PRT
+* group.element[6].target.dependsOn[0].value = "PID[Provenance-Patient]"
+* group.element[6].target.dependsOn[1].property = "references"
+* group.element[6].target.dependsOn[1].value = "Provenance.target.reference=Patient[1].id"
+* group.element[6].target.product[0].property = "antlr"
+* group.element[6].target.product[0].value = "IF PID-33 AND PID-34 VALUED"
+* group.element[6].target.product[1].property = "narrative"
+* group.element[6].target.product[1].value = "One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date."
+* group.element[7].code = #ORU_R01.PATIENT_RESULT.PATIENT.PD1
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "cardinalityMin"
 * group.element[7].extension[0].extension[0].valueInteger = 0
 * group.element[7].extension[0].extension[1].url = "cardinalityMax"
-* group.element[7].extension[0].extension[1].valueInteger = -1
-* group.element[7].display = "Participation (for Patient)"
+* group.element[7].extension[0].extension[1].valueInteger = 1
+* group.element[7].display = "Additional Demographics"
 * group.element[7].target.equivalence = #equivalent
-* group.element[7].target.code = #PractitionerRole[1]
-* group.element[7].target.display = "PractitionerRole[1]"
-* group.element[7].target.comment = """
-Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data.
-If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
-"""
+* group.element[7].target.code = #Patient[1]
+* group.element[7].target.display = "Patient[1]"
+* group.element[7].target.comment = "Incorporate PD1 content into the Patient created from the PID segment."
 * group.element[7].target.dependsOn[0].property = "segment-map"
-* group.element[7].target.dependsOn[0].value = "PRT[PractitionerRole]"
-* group.element[7].target.dependsOn[1].property = "references"
-* group.element[7].target.dependsOn[1].value = "Patient[1].generalPractitioner.reference=PractitionerRole[1].id"
-* group.element[7].target.product[0].property = "antlr"
-* group.element[7].target.product[0].value = "IF PRT-4.1 EQUALS \"PP\" AND PRT-4.3 EQUALS \"HL70443\""
-* group.element[7].target.product[1].property = "fhirpath"
-* group.element[7].target.product[1].value = "(PRT.element(4.1)=\"PP\")and(PRT.element(4.3)=\"HL70443\")"
-* group.element[7].target.product[2].property = "narrative"
-* group.element[7].target.product[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
+* group.element[7].target.dependsOn[0].value = "PD1[Patient]"
 * group.element[8].code = #ORU_R01.PATIENT_RESULT.PATIENT.PRT
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
@@ -152,36 +146,43 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[8].extension[0].extension[1].valueInteger = -1
 * group.element[8].display = "Participation (for Patient)"
 * group.element[8].target.equivalence = #equivalent
-* group.element[8].target.code = #RelatedPerson[1]
-* group.element[8].target.display = "RelatedPerson[1]"
-* group.element[8].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[8].target.code = #PractitionerRole[1]
+* group.element[8].target.display = "PractitionerRole[1]"
+* group.element[8].target.comment = """
+Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data.
+If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
+"""
 * group.element[8].target.dependsOn[0].property = "segment-map"
-* group.element[8].target.dependsOn[0].value = "PRT[RelatedPerson]"
+* group.element[8].target.dependsOn[0].value = "PRT[PractitionerRole]"
 * group.element[8].target.dependsOn[1].property = "references"
-* group.element[8].target.dependsOn[1].value = "RelatedPerson.patient.reference=Patient[1].id"
+* group.element[8].target.dependsOn[1].value = "Patient[1].generalPractitioner.reference=PractitionerRole[1].id"
 * group.element[8].target.product[0].property = "antlr"
-* group.element[8].target.product[0].value = "IF PRT-4.1 NOT EQUALS \"PP\" OR PRT-4.3 NOT EQUALS \"HL70443\""
+* group.element[8].target.product[0].value = "IF PRT-4.1 EQUALS \"PP\" AND PRT-4.3 EQUALS \"HL70443\""
 * group.element[8].target.product[1].property = "fhirpath"
-* group.element[8].target.product[1].value = "(PRT.element(4.1)!=\"PP\")or(PRT.element(4.3)!=\"HL70443\")"
+* group.element[8].target.product[1].value = "(PRT.element(4.1)=\"PP\")and(PRT.element(4.3)=\"HL70443\")"
 * group.element[8].target.product[2].property = "narrative"
 * group.element[8].target.product[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
-* group.element[9].code = #ORU_R01.PATIENT_RESULT.PATIENT.NK1
+* group.element[9].code = #ORU_R01.PATIENT_RESULT.PATIENT.PRT
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "cardinalityMin"
 * group.element[9].extension[0].extension[0].valueInteger = 0
 * group.element[9].extension[0].extension[1].url = "cardinalityMax"
 * group.element[9].extension[0].extension[1].valueInteger = -1
-* group.element[9].display = "Next of Kin/Associated Parties"
+* group.element[9].display = "Participation (for Patient)"
 * group.element[9].target.equivalence = #equivalent
-* group.element[9].target.code = #RelatedPerson[2]
-* group.element[9].target.display = "RelatedPerson[2]"
-* group.element[9].target.comment = "Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
+* group.element[9].target.code = #RelatedPerson[1]
+* group.element[9].target.display = "RelatedPerson[1]"
+* group.element[9].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group.element[9].target.dependsOn[0].property = "segment-map"
-* group.element[9].target.dependsOn[0].value = "NK1[RelatedPerson]"
+* group.element[9].target.dependsOn[0].value = "PRT[RelatedPerson]"
 * group.element[9].target.dependsOn[1].property = "references"
 * group.element[9].target.dependsOn[1].value = "RelatedPerson.patient.reference=Patient[1].id"
-* group.element[9].target.product[0].property = "narrative"
-* group.element[9].target.product[0].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
+* group.element[9].target.product[0].property = "antlr"
+* group.element[9].target.product[0].value = "IF PRT-4.1 NOT EQUALS \"PP\" OR PRT-4.3 NOT EQUALS \"HL70443\""
+* group.element[9].target.product[1].property = "fhirpath"
+* group.element[9].target.product[1].value = "(PRT.element(4.1)!=\"PP\")or(PRT.element(4.3)!=\"HL70443\")"
+* group.element[9].target.product[2].property = "narrative"
+* group.element[9].target.product[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group.element[10].code = #ORU_R01.PATIENT_RESULT.PATIENT.NK1
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "cardinalityMin"
@@ -190,29 +191,30 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[10].extension[0].extension[1].valueInteger = -1
 * group.element[10].display = "Next of Kin/Associated Parties"
 * group.element[10].target.equivalence = #equivalent
-* group.element[10].target.code = #Patient[1]
-* group.element[10].target.display = "Patient[1]"
+* group.element[10].target.code = #RelatedPerson[2]
+* group.element[10].target.display = "RelatedPerson[2]"
 * group.element[10].target.comment = "Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
 * group.element[10].target.dependsOn[0].property = "segment-map"
-* group.element[10].target.dependsOn[0].value = "NK1[Patient]"
+* group.element[10].target.dependsOn[0].value = "NK1[RelatedPerson]"
+* group.element[10].target.dependsOn[1].property = "references"
+* group.element[10].target.dependsOn[1].value = "RelatedPerson.patient.reference=Patient[1].id"
 * group.element[10].target.product[0].property = "narrative"
 * group.element[10].target.product[0].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
-* group.element[11].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.OBX
+* group.element[11].code = #ORU_R01.PATIENT_RESULT.PATIENT.NK1
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
-* group.element[11].extension[0].extension[0].valueInteger = 1
+* group.element[11].extension[0].extension[0].valueInteger = 0
 * group.element[11].extension[0].extension[1].url = "cardinalityMax"
-* group.element[11].extension[0].extension[1].valueInteger = 1
-* group.element[11].display = "Observation (for Patient ID)"
+* group.element[11].extension[0].extension[1].valueInteger = -1
+* group.element[11].display = "Next of Kin/Associated Parties"
 * group.element[11].target.equivalence = #equivalent
-* group.element[11].target.code = #Observation[1]
-* group.element[11].target.display = "Observation[1]"
+* group.element[11].target.code = #Patient[1]
+* group.element[11].target.display = "Patient[1]"
+* group.element[11].target.comment = "Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
 * group.element[11].target.dependsOn[0].property = "segment-map"
-* group.element[11].target.dependsOn[0].value = "OBX[Observation]"
-* group.element[11].target.dependsOn[1].property = "references"
-* group.element[11].target.dependsOn[1].value = "Observation.subject.reference=Patient[1].id"
-* group.element[11].target.product[0].property = "antlr"
-* group.element[11].target.product[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1"
+* group.element[11].target.dependsOn[0].value = "NK1[Patient]"
+* group.element[11].target.product[0].property = "narrative"
+* group.element[11].target.product[0].value = "The FHIR location will depend on the nature of the data being exchanged and how the systems use next of kin data"
 * group.element[12].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.OBX
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "cardinalityMin"
@@ -224,28 +226,25 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[12].target.code = #Observation[1]
 * group.element[12].target.display = "Observation[1]"
 * group.element[12].target.dependsOn[0].property = "segment-map"
-* group.element[12].target.dependsOn[0].value = "OBX[Observation-Component]"
+* group.element[12].target.dependsOn[0].value = "OBX[Observation]"
+* group.element[12].target.dependsOn[1].property = "references"
+* group.element[12].target.dependsOn[1].value = "Observation.subject.reference=Patient[1].id"
 * group.element[12].target.product[0].property = "antlr"
-* group.element[12].target.product[0].value = "IF OBX-5 LST.count GREATER THAN 1"
-* group.element[13].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT
+* group.element[12].target.product[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1"
+* group.element[13].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.OBX
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
-* group.element[13].extension[0].extension[0].valueInteger = 0
+* group.element[13].extension[0].extension[0].valueInteger = 1
 * group.element[13].extension[0].extension[1].url = "cardinalityMax"
-* group.element[13].extension[0].extension[1].valueInteger = -1
-* group.element[13].display = "Participation (Observation Participation)"
+* group.element[13].extension[0].extension[1].valueInteger = 1
+* group.element[13].display = "Observation (for Patient ID)"
 * group.element[13].target.equivalence = #equivalent
-* group.element[13].target.code = #Device
-* group.element[13].target.display = "Device"
-* group.element[13].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[13].target.code = #Observation[1]
+* group.element[13].target.display = "Observation[1]"
 * group.element[13].target.dependsOn[0].property = "segment-map"
-* group.element[13].target.dependsOn[0].value = "PRT[Device]"
-* group.element[13].target.dependsOn[1].property = "references"
-* group.element[13].target.dependsOn[1].value = "Observation[1].device.reference=Device.id"
+* group.element[13].target.dependsOn[0].value = "OBX[Observation-Component]"
 * group.element[13].target.product[0].property = "antlr"
-* group.element[13].target.product[0].value = "IF PRT-10 VALUED"
-* group.element[13].target.product[1].property = "narrative"
-* group.element[13].target.product[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
+* group.element[13].target.product[0].value = "IF OBX-5 LST.count GREATER THAN 1"
 * group.element[14].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "cardinalityMin"
@@ -254,13 +253,15 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[14].extension[0].extension[1].valueInteger = -1
 * group.element[14].display = "Participation (Observation Participation)"
 * group.element[14].target.equivalence = #equivalent
-* group.element[14].target.code = #Observation[1]
-* group.element[14].target.display = "Observation[1]"
+* group.element[14].target.code = #Device
+* group.element[14].target.display = "Device"
 * group.element[14].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group.element[14].target.dependsOn[0].property = "segment-map"
-* group.element[14].target.dependsOn[0].value = "PRT[Observation-Location]"
+* group.element[14].target.dependsOn[0].value = "PRT[Device]"
+* group.element[14].target.dependsOn[1].property = "references"
+* group.element[14].target.dependsOn[1].value = "Observation[1].device.reference=Device.id"
 * group.element[14].target.product[0].property = "antlr"
-* group.element[14].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
+* group.element[14].target.product[0].value = "IF PRT-10 VALUED"
 * group.element[14].target.product[1].property = "narrative"
 * group.element[14].target.product[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group.element[15].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT
@@ -271,32 +272,34 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[15].extension[0].extension[1].valueInteger = -1
 * group.element[15].display = "Participation (Observation Participation)"
 * group.element[15].target.equivalence = #equivalent
-* group.element[15].target.code = #PractitionerRole[1]
-* group.element[15].target.display = "PractitionerRole[1]"
+* group.element[15].target.code = #Observation[1]
+* group.element[15].target.display = "Observation[1]"
 * group.element[15].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group.element[15].target.dependsOn[0].property = "segment-map"
-* group.element[15].target.dependsOn[0].value = "PRT[PractitionerRole]"
-* group.element[15].target.dependsOn[1].property = "references"
-* group.element[15].target.dependsOn[1].value = "Observation.performer.reference=PractitionerRole[1].id"
+* group.element[15].target.dependsOn[0].value = "PRT[Observation-Location]"
 * group.element[15].target.product[0].property = "antlr"
-* group.element[15].target.product[0].value = "IF PRT-5 VALUED"
+* group.element[15].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[15].target.product[1].property = "narrative"
 * group.element[15].target.product[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
-* group.element[16].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1
+* group.element[16].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "cardinalityMin"
-* group.element[16].extension[0].extension[0].valueInteger = 1
+* group.element[16].extension[0].extension[0].valueInteger = 0
 * group.element[16].extension[0].extension[1].url = "cardinalityMax"
-* group.element[16].extension[0].extension[1].valueInteger = 1
-* group.element[16].display = "Patient Visit"
+* group.element[16].extension[0].extension[1].valueInteger = -1
+* group.element[16].display = "Participation (Observation Participation)"
 * group.element[16].target.equivalence = #equivalent
-* group.element[16].target.code = #Encounter[1]
-* group.element[16].target.display = "Encounter[1]"
-* group.element[16].target.comment = "Processing of the PV1 segment results in the creation of a new Encounter resource"
+* group.element[16].target.code = #PractitionerRole[1]
+* group.element[16].target.display = "PractitionerRole[1]"
+* group.element[16].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group.element[16].target.dependsOn[0].property = "segment-map"
-* group.element[16].target.dependsOn[0].value = "PV1[Encounter]"
+* group.element[16].target.dependsOn[0].value = "PRT[PractitionerRole]"
 * group.element[16].target.dependsOn[1].property = "references"
-* group.element[16].target.dependsOn[1].value = "Encounter.subject.reference=Patient[1].id"
+* group.element[16].target.dependsOn[1].value = "Observation.performer.reference=PractitionerRole[1].id"
+* group.element[16].target.product[0].property = "antlr"
+* group.element[16].target.product[0].value = "IF PRT-5 VALUED"
+* group.element[16].target.product[1].property = "narrative"
+* group.element[16].target.product[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group.element[17].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "cardinalityMin"
@@ -305,58 +308,58 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[17].extension[0].extension[1].valueInteger = 1
 * group.element[17].display = "Patient Visit"
 * group.element[17].target.equivalence = #equivalent
-* group.element[17].target.code = #Patient[1]
-* group.element[17].target.display = "Patient[1]"
+* group.element[17].target.code = #Encounter[1]
+* group.element[17].target.display = "Encounter[1]"
+* group.element[17].target.comment = "Processing of the PV1 segment results in the creation of a new Encounter resource"
 * group.element[17].target.dependsOn[0].property = "segment-map"
-* group.element[17].target.dependsOn[0].value = "PV1[Patient]"
-* group.element[18].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV2
+* group.element[17].target.dependsOn[0].value = "PV1[Encounter]"
+* group.element[17].target.dependsOn[1].property = "references"
+* group.element[17].target.dependsOn[1].value = "Encounter.subject.reference=Patient[1].id"
+* group.element[18].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "cardinalityMin"
-* group.element[18].extension[0].extension[0].valueInteger = 0
+* group.element[18].extension[0].extension[0].valueInteger = 1
 * group.element[18].extension[0].extension[1].url = "cardinalityMax"
 * group.element[18].extension[0].extension[1].valueInteger = 1
-* group.element[18].display = "Patient Visit - Additional Info"
+* group.element[18].display = "Patient Visit"
 * group.element[18].target.equivalence = #equivalent
-* group.element[18].target.code = #Encounter[1]
-* group.element[18].target.display = "Encounter[1]"
-* group.element[18].target.comment = "Incorporate PV2 content into the Encounter created from the PV1 segment."
+* group.element[18].target.code = #Patient[1]
+* group.element[18].target.display = "Patient[1]"
 * group.element[18].target.dependsOn[0].property = "segment-map"
-* group.element[18].target.dependsOn[0].value = "PV2[Encounter]"
-* group.element[19].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PRT
+* group.element[18].target.dependsOn[0].value = "PV1[Patient]"
+* group.element[19].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV2
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "cardinalityMin"
 * group.element[19].extension[0].extension[0].valueInteger = 0
 * group.element[19].extension[0].extension[1].url = "cardinalityMax"
-* group.element[19].extension[0].extension[1].valueInteger = -1
-* group.element[19].display = "Participation (for Patient Visit)"
+* group.element[19].extension[0].extension[1].valueInteger = 1
+* group.element[19].display = "Patient Visit - Additional Info"
 * group.element[19].target.equivalence = #equivalent
-* group.element[19].target.code = #PractitionerRole[2]
-* group.element[19].target.display = "PractitionerRole[2]"
-* group.element[19].target.comment = """
+* group.element[19].target.code = #Encounter[1]
+* group.element[19].target.display = "Encounter[1]"
+* group.element[19].target.comment = "Incorporate PV2 content into the Encounter created from the PV1 segment."
+* group.element[19].target.dependsOn[0].property = "segment-map"
+* group.element[19].target.dependsOn[0].value = "PV2[Encounter]"
+* group.element[20].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PRT
+* group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[20].extension[0].extension[0].url = "cardinalityMin"
+* group.element[20].extension[0].extension[0].valueInteger = 0
+* group.element[20].extension[0].extension[1].url = "cardinalityMax"
+* group.element[20].extension[0].extension[1].valueInteger = -1
+* group.element[20].display = "Participation (for Patient Visit)"
+* group.element[20].target.equivalence = #equivalent
+* group.element[20].target.code = #PractitionerRole[2]
+* group.element[20].target.display = "PractitionerRole[2]"
+* group.element[20].target.comment = """
 Incorporate PRT content into the Encounter created from the PV1 segment.
 If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
 """
-* group.element[19].target.dependsOn[0].property = "segment-map"
-* group.element[19].target.dependsOn[0].value = "PRT[PractitionerRole]"
-* group.element[19].target.dependsOn[1].property = "references"
-* group.element[19].target.dependsOn[1].value = "Encounter[1].participant.individual.reference=PractitionerRole[2].id"
-* group.element[19].target.product[0].property = "narrative"
-* group.element[19].target.product[0].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
-* group.element[20].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.ORC
-* group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
-* group.element[20].extension[0].extension[0].url = "cardinalityMin"
-* group.element[20].extension[0].extension[0].valueInteger = 1
-* group.element[20].extension[0].extension[1].url = "cardinalityMax"
-* group.element[20].extension[0].extension[1].valueInteger = 1
-* group.element[20].display = "Order common"
-* group.element[20].target.equivalence = #equivalent
-* group.element[20].target.code = #DiagnosticReport[1]
-* group.element[20].target.display = "DiagnosticReport[1]"
-* group.element[20].target.comment = "Processing of each ORC segment results in the creation of a new DiagnosticReport resource"
 * group.element[20].target.dependsOn[0].property = "segment-map"
-* group.element[20].target.dependsOn[0].value = "ORC[DiagnosticReport]"
+* group.element[20].target.dependsOn[0].value = "PRT[PractitionerRole]"
 * group.element[20].target.dependsOn[1].property = "references"
-* group.element[20].target.dependsOn[1].value = "DiagnosticReport[1].encounter.reference=Encounter[1].id"
+* group.element[20].target.dependsOn[1].value = "Encounter[1].participant.individual.reference=PractitionerRole[2].id"
+* group.element[20].target.product[0].property = "narrative"
+* group.element[20].target.product[0].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group.element[21].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.ORC
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "cardinalityMin"
@@ -365,47 +368,49 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[21].extension[0].extension[1].valueInteger = 1
 * group.element[21].display = "Order common"
 * group.element[21].target.equivalence = #equivalent
-* group.element[21].target.code = #ServiceRequest[1]
-* group.element[21].target.display = "ServiceRequest[1]"
+* group.element[21].target.code = #DiagnosticReport[1]
+* group.element[21].target.display = "DiagnosticReport[1]"
+* group.element[21].target.comment = "Processing of each ORC segment results in the creation of a new DiagnosticReport resource"
 * group.element[21].target.dependsOn[0].property = "segment-map"
-* group.element[21].target.dependsOn[0].value = "ORC[ServiceRequest]"
+* group.element[21].target.dependsOn[0].value = "ORC[DiagnosticReport]"
 * group.element[21].target.dependsOn[1].property = "references"
-* group.element[21].target.dependsOn[1].value = "DiagnosticReport[1].basedOn.reference=ServiceRequest[1].id"
-* group.element[21].target.product[0].property = "narrative"
-* group.element[21].target.product[0].value = "If a ServiceRequest needs to be created for the receiver."
-* group.element[22].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.PRT
+* group.element[21].target.dependsOn[1].value = "DiagnosticReport[1].encounter.reference=Encounter[1].id"
+* group.element[22].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.ORC
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "cardinalityMin"
-* group.element[22].extension[0].extension[0].valueInteger = 0
+* group.element[22].extension[0].extension[0].valueInteger = 1
 * group.element[22].extension[0].extension[1].url = "cardinalityMax"
-* group.element[22].extension[0].extension[1].valueInteger = -1
-* group.element[22].display = "Participation (for Observation)"
+* group.element[22].extension[0].extension[1].valueInteger = 1
+* group.element[22].display = "Order common"
 * group.element[22].target.equivalence = #equivalent
-* group.element[22].target.code = #PractitionerRole[3]
-* group.element[22].target.display = "PractitionerRole[3]"
+* group.element[22].target.code = #ServiceRequest[1]
+* group.element[22].target.display = "ServiceRequest[1]"
 * group.element[22].target.dependsOn[0].property = "segment-map"
-* group.element[22].target.dependsOn[0].value = "PRT[PractitionerRole]"
+* group.element[22].target.dependsOn[0].value = "ORC[ServiceRequest]"
 * group.element[22].target.dependsOn[1].property = "references"
-* group.element[22].target.dependsOn[1].value = "ServiceRequest[1].requester.reference=PractitionerRole[3].id"
-* group.element[22].target.product[0].property = "antlr"
-* group.element[22].target.product[0].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
-* group.element[22].target.product[1].property = "fhirpath"
-* group.element[22].target.product[1].value = "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
-* group.element[22].target.product[2].property = "narrative"
-* group.element[22].target.product[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
-* group.element[23].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR
+* group.element[22].target.dependsOn[1].value = "DiagnosticReport[1].basedOn.reference=ServiceRequest[1].id"
+* group.element[22].target.product[0].property = "narrative"
+* group.element[22].target.product[0].value = "If a ServiceRequest needs to be created for the receiver."
+* group.element[23].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.PRT
 * group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].extension[0].extension[0].url = "cardinalityMin"
-* group.element[23].extension[0].extension[0].valueInteger = 1
+* group.element[23].extension[0].extension[0].valueInteger = 0
 * group.element[23].extension[0].extension[1].url = "cardinalityMax"
-* group.element[23].extension[0].extension[1].valueInteger = 1
-* group.element[23].display = "Observations Request"
+* group.element[23].extension[0].extension[1].valueInteger = -1
+* group.element[23].display = "Participation (for Observation)"
 * group.element[23].target.equivalence = #equivalent
-* group.element[23].target.code = #DiagnosticReport[1]
-* group.element[23].target.display = "DiagnosticReport[1]"
-* group.element[23].target.comment = "Incorporate OBR content into the DiagnosticReport created from the ORC segment in the same segment group."
+* group.element[23].target.code = #PractitionerRole[3]
+* group.element[23].target.display = "PractitionerRole[3]"
 * group.element[23].target.dependsOn[0].property = "segment-map"
-* group.element[23].target.dependsOn[0].value = "OBR[DiagnosticReport]"
+* group.element[23].target.dependsOn[0].value = "PRT[PractitionerRole]"
+* group.element[23].target.dependsOn[1].property = "references"
+* group.element[23].target.dependsOn[1].value = "ServiceRequest[1].requester.reference=PractitionerRole[3].id"
+* group.element[23].target.product[0].property = "antlr"
+* group.element[23].target.product[0].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[23].target.product[1].property = "fhirpath"
+* group.element[23].target.product[1].value = "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
+* group.element[23].target.product[2].property = "narrative"
+* group.element[23].target.product[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group.element[24].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[24].extension[0].extension[0].url = "cardinalityMin"
@@ -414,13 +419,11 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[24].extension[0].extension[1].valueInteger = 1
 * group.element[24].display = "Observations Request"
 * group.element[24].target.equivalence = #equivalent
-* group.element[24].target.code = #Specimen[1]
-* group.element[24].target.display = "Specimen[1]"
-* group.element[24].target.comment = "The OBR specimen data yields one Specimen resource that all Observations generated for the same OBR need to reference."
+* group.element[24].target.code = #DiagnosticReport[1]
+* group.element[24].target.display = "DiagnosticReport[1]"
+* group.element[24].target.comment = "Incorporate OBR content into the DiagnosticReport created from the ORC segment in the same segment group."
 * group.element[24].target.dependsOn[0].property = "segment-map"
-* group.element[24].target.dependsOn[0].value = "OBR[Specimen]"
-* group.element[24].target.dependsOn[1].property = "references"
-* group.element[24].target.dependsOn[1].value = "DiagnosticReport[1].specimen.reference=Specimen.id"
+* group.element[24].target.dependsOn[0].value = "OBR[DiagnosticReport]"
 * group.element[25].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR
 * group.element[25].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[25].extension[0].extension[0].url = "cardinalityMin"
@@ -429,36 +432,30 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[25].extension[0].extension[1].valueInteger = 1
 * group.element[25].display = "Observations Request"
 * group.element[25].target.equivalence = #equivalent
-* group.element[25].target.code = #ServiceRequest[1]
-* group.element[25].target.display = "ServiceRequest[1]"
-* group.element[25].target.comment = "Mapping to ServiceRequest as well is needed if the receiver is not the originator of the order to which this results message responds.  This mapping will be completed once OMG/OML mapping is sufficiently completed.  We will add the other segment mappings below to ServiceRequest then as well."
+* group.element[25].target.code = #Specimen[1]
+* group.element[25].target.display = "Specimen[1]"
+* group.element[25].target.comment = "The OBR specimen data yields one Specimen resource that all Observations generated for the same OBR need to reference."
 * group.element[25].target.dependsOn[0].property = "segment-map"
-* group.element[25].target.dependsOn[0].value = "OBR[ServiceRequest]"
-* group.element[25].target.product[0].property = "antlr"
-* group.element[25].target.product[0].value = "IF ORC VALUED"
-* group.element[25].target.product[1].property = "narrative"
-* group.element[25].target.product[1].value = "If a ServiceRequest needs to be created for the receiver."
-* group.element[26].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
+* group.element[25].target.dependsOn[0].value = "OBR[Specimen]"
+* group.element[25].target.dependsOn[1].property = "references"
+* group.element[25].target.dependsOn[1].value = "DiagnosticReport[1].specimen.reference=Specimen.id"
+* group.element[26].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR
 * group.element[26].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[26].extension[0].extension[0].url = "cardinalityMin"
-* group.element[26].extension[0].extension[0].valueInteger = 0
+* group.element[26].extension[0].extension[0].valueInteger = 1
 * group.element[26].extension[0].extension[1].url = "cardinalityMax"
-* group.element[26].extension[0].extension[1].valueInteger = -1
-* group.element[26].display = "Participation (for Observation)"
+* group.element[26].extension[0].extension[1].valueInteger = 1
+* group.element[26].display = "Observations Request"
 * group.element[26].target.equivalence = #equivalent
-* group.element[26].target.code = #PractitionerRole[4]
-* group.element[26].target.display = "PractitionerRole[4]"
-* group.element[26].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[26].target.code = #ServiceRequest[1]
+* group.element[26].target.display = "ServiceRequest[1]"
+* group.element[26].target.comment = "Mapping to ServiceRequest as well is needed if the receiver is not the originator of the order to which this results message responds.  This mapping will be completed once OMG/OML mapping is sufficiently completed.  We will add the other segment mappings below to ServiceRequest then as well."
 * group.element[26].target.dependsOn[0].property = "segment-map"
-* group.element[26].target.dependsOn[0].value = "PRT[PractitionerRole]"
-* group.element[26].target.dependsOn[1].property = "references"
-* group.element[26].target.dependsOn[1].value = "DiagnosticReport[1].performer.reference=PractitionerRole[4].id"
+* group.element[26].target.dependsOn[0].value = "OBR[ServiceRequest]"
 * group.element[26].target.product[0].property = "antlr"
-* group.element[26].target.product[0].value = "IF PRT-4.1 IN (\"ARI\",\"TN\",\"TR\") AND PRT-4.3 EQUALS \"HL70443\""
-* group.element[26].target.product[1].property = "fhirpath"
-* group.element[26].target.product[1].value = "PRT.element(4.1) in (\"ARI\",\"TN\", \"TR\")and(PRT.element(4.3)=\"HL70443\")"
-* group.element[26].target.product[2].property = "narrative"
-* group.element[26].target.product[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
+* group.element[26].target.product[0].value = "IF ORC VALUED"
+* group.element[26].target.product[1].property = "narrative"
+* group.element[26].target.product[1].value = "If a ServiceRequest needs to be created for the receiver."
 * group.element[27].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
 * group.element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[27].extension[0].extension[0].url = "cardinalityMin"
@@ -467,17 +464,17 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[27].extension[0].extension[1].valueInteger = -1
 * group.element[27].display = "Participation (for Observation)"
 * group.element[27].target.equivalence = #equivalent
-* group.element[27].target.code = #PractitionerRole[5]
-* group.element[27].target.display = "PractitionerRole[5]"
+* group.element[27].target.code = #PractitionerRole[4]
+* group.element[27].target.display = "PractitionerRole[4]"
 * group.element[27].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group.element[27].target.dependsOn[0].property = "segment-map"
 * group.element[27].target.dependsOn[0].value = "PRT[PractitionerRole]"
 * group.element[27].target.dependsOn[1].property = "references"
-* group.element[27].target.dependsOn[1].value = "DiagnosticReport[1].resultsInterpreter.reference=PractitionerRole[5].id"
+* group.element[27].target.dependsOn[1].value = "DiagnosticReport[1].performer.reference=PractitionerRole[4].id"
 * group.element[27].target.product[0].property = "antlr"
-* group.element[27].target.product[0].value = "IF PRT-4.1 EQUALS \"PRI\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[27].target.product[0].value = "IF PRT-4.1 IN (\"ARI\",\"TN\",\"TR\") AND PRT-4.3 EQUALS \"HL70443\""
 * group.element[27].target.product[1].property = "fhirpath"
-* group.element[27].target.product[1].value = "(PRT.element(4.1)=\"PRI\")and(PRT.element(4.3)=\"HL70443\")"
+* group.element[27].target.product[1].value = "PRT.element(4.1) in (\"ARI\",\"TN\", \"TR\")and(PRT.element(4.3)=\"HL70443\")"
 * group.element[27].target.product[2].property = "narrative"
 * group.element[27].target.product[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group.element[28].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
@@ -488,17 +485,17 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[28].extension[0].extension[1].valueInteger = -1
 * group.element[28].display = "Participation (for Observation)"
 * group.element[28].target.equivalence = #equivalent
-* group.element[28].target.code = #PractitionerRole[6]
-* group.element[28].target.display = "PractitionerRole[6]"
+* group.element[28].target.code = #PractitionerRole[5]
+* group.element[28].target.display = "PractitionerRole[5]"
 * group.element[28].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group.element[28].target.dependsOn[0].property = "segment-map"
 * group.element[28].target.dependsOn[0].value = "PRT[PractitionerRole]"
 * group.element[28].target.dependsOn[1].property = "references"
-* group.element[28].target.dependsOn[1].value = "DiagnosticReport[1].specimen[1](Specimen.collection.collector.reference)=PractitionerRole[6].id"
+* group.element[28].target.dependsOn[1].value = "DiagnosticReport[1].resultsInterpreter.reference=PractitionerRole[5].id"
 * group.element[28].target.product[0].property = "antlr"
-* group.element[28].target.product[0].value = "IF PRT-4.1 EQUALS \"SC\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[28].target.product[0].value = "IF PRT-4.1 EQUALS \"PRI\" AND PRT-4.3 EQUALS \"HL70443\""
 * group.element[28].target.product[1].property = "fhirpath"
-* group.element[28].target.product[1].value = "(element(\"4.1\")=\"SC\")and(element(\"4.3\")=\"HL70443\")"
+* group.element[28].target.product[1].value = "(PRT.element(4.1)=\"PRI\")and(PRT.element(4.3)=\"HL70443\")"
 * group.element[28].target.product[2].property = "narrative"
 * group.element[28].target.product[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group.element[29].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
@@ -509,42 +506,40 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[29].extension[0].extension[1].valueInteger = -1
 * group.element[29].display = "Participation (for Observation)"
 * group.element[29].target.equivalence = #equivalent
-* group.element[29].target.code = #PractitionerRole[3]
-* group.element[29].target.display = "PractitionerRole[3]"
+* group.element[29].target.code = #PractitionerRole[6]
+* group.element[29].target.display = "PractitionerRole[6]"
 * group.element[29].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group.element[29].target.dependsOn[0].property = "segment-map"
 * group.element[29].target.dependsOn[0].value = "PRT[PractitionerRole]"
 * group.element[29].target.dependsOn[1].property = "references"
-* group.element[29].target.dependsOn[1].value = "DiagnosticReport[1].requester.reference=PractitionerRole[3].id"
+* group.element[29].target.dependsOn[1].value = "DiagnosticReport[1].specimen[1](Specimen.collection.collector.reference)=PractitionerRole[6].id"
 * group.element[29].target.product[0].property = "antlr"
-* group.element[29].target.product[0].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[29].target.product[0].value = "IF PRT-4.1 EQUALS \"SC\" AND PRT-4.3 EQUALS \"HL70443\""
 * group.element[29].target.product[1].property = "fhirpath"
-* group.element[29].target.product[1].value = "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
+* group.element[29].target.product[1].value = "(element(\"4.1\")=\"SC\")and(element(\"4.3\")=\"HL70443\")"
 * group.element[29].target.product[2].property = "narrative"
 * group.element[29].target.product[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
-* group.element[30].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
+* group.element[30].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
 * group.element[30].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[30].extension[0].extension[0].url = "cardinalityMin"
-* group.element[30].extension[0].extension[0].valueInteger = 1
+* group.element[30].extension[0].extension[0].valueInteger = 0
 * group.element[30].extension[0].extension[1].url = "cardinalityMax"
-* group.element[30].extension[0].extension[1].valueInteger = 1
-* group.element[30].display = "Observation related to OBR"
+* group.element[30].extension[0].extension[1].valueInteger = -1
+* group.element[30].display = "Participation (for Observation)"
 * group.element[30].target.equivalence = #equivalent
-* group.element[30].target.code = #Observation[2]
-* group.element[30].target.display = "Observation[2]"
-* group.element[30].target.comment = """
-Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation.
-Note that it is not clear that every OBX represents a results that can be associated with the encounter during which it was ordered/performed.\
-"""
+* group.element[30].target.code = #PractitionerRole[3]
+* group.element[30].target.display = "PractitionerRole[3]"
+* group.element[30].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group.element[30].target.dependsOn[0].property = "segment-map"
-* group.element[30].target.dependsOn[0].value = "OBX[Observation]"
+* group.element[30].target.dependsOn[0].value = "PRT[PractitionerRole]"
 * group.element[30].target.dependsOn[1].property = "references"
-* group.element[30].target.dependsOn[1].value = """
-DiagnosticReport.result.reference=Observation[2].id
-Observation[2].subject.reference=Patient[1].id;\
-"""
+* group.element[30].target.dependsOn[1].value = "DiagnosticReport[1].requester.reference=PractitionerRole[3].id"
 * group.element[30].target.product[0].property = "antlr"
-* group.element[30].target.product[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1"
+* group.element[30].target.product[0].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[30].target.product[1].property = "fhirpath"
+* group.element[30].target.product[1].value = "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
+* group.element[30].target.product[2].property = "narrative"
+* group.element[30].target.product[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group.element[31].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
 * group.element[31].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[31].extension[0].extension[0].url = "cardinalityMin"
@@ -555,35 +550,39 @@ Observation[2].subject.reference=Patient[1].id;\
 * group.element[31].target.equivalence = #equivalent
 * group.element[31].target.code = #Observation[2]
 * group.element[31].target.display = "Observation[2]"
-* group.element[31].target.comment = "Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation. When multiple OBX segments are tranformed into Observation components in a single Observation resource, implementers should consider how the metadata associated with the result (eg performer, status, date/time, etc) are populated. If the OBX segments being combined into a single resource contain different metadata, it must be considered whether or not the use of components is appropriate."
+* group.element[31].target.comment = """
+Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation.
+Note that it is not clear that every OBX represents a results that can be associated with the encounter during which it was ordered/performed.\
+"""
 * group.element[31].target.dependsOn[0].property = "segment-map"
-* group.element[31].target.dependsOn[0].value = "OBX[Observation-Component]"
+* group.element[31].target.dependsOn[0].value = "OBX[Observation]"
 * group.element[31].target.dependsOn[1].property = "references"
 * group.element[31].target.dependsOn[1].value = """
 DiagnosticReport.result.reference=Observation[2].id
 Observation[2].subject.reference=Patient[1].id;\
 """
 * group.element[31].target.product[0].property = "antlr"
-* group.element[31].target.product[0].value = "IF OBX-5 LST.count GREATER THAN 1"
-* group.element[32].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
+* group.element[31].target.product[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1"
+* group.element[32].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
 * group.element[32].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[32].extension[0].extension[0].url = "cardinalityMin"
-* group.element[32].extension[0].extension[0].valueInteger = 0
+* group.element[32].extension[0].extension[0].valueInteger = 1
 * group.element[32].extension[0].extension[1].url = "cardinalityMax"
-* group.element[32].extension[0].extension[1].valueInteger = -1
-* group.element[32].display = "Participation (Observation Participation)"
+* group.element[32].extension[0].extension[1].valueInteger = 1
+* group.element[32].display = "Observation related to OBR"
 * group.element[32].target.equivalence = #equivalent
-* group.element[32].target.code = #Device
-* group.element[32].target.display = "Device"
-* group.element[32].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[32].target.code = #Observation[2]
+* group.element[32].target.display = "Observation[2]"
+* group.element[32].target.comment = "Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation. When multiple OBX segments are tranformed into Observation components in a single Observation resource, implementers should consider how the metadata associated with the result (eg performer, status, date/time, etc) are populated. If the OBX segments being combined into a single resource contain different metadata, it must be considered whether or not the use of components is appropriate."
 * group.element[32].target.dependsOn[0].property = "segment-map"
-* group.element[32].target.dependsOn[0].value = "PRT[Device]"
+* group.element[32].target.dependsOn[0].value = "OBX[Observation-Component]"
 * group.element[32].target.dependsOn[1].property = "references"
-* group.element[32].target.dependsOn[1].value = "Observation[2].device.reference=Device.id"
+* group.element[32].target.dependsOn[1].value = """
+DiagnosticReport.result.reference=Observation[2].id
+Observation[2].subject.reference=Patient[1].id;\
+"""
 * group.element[32].target.product[0].property = "antlr"
-* group.element[32].target.product[0].value = "IF PRT-10 VALUED"
-* group.element[32].target.product[1].property = "narrative"
-* group.element[32].target.product[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
+* group.element[32].target.product[0].value = "IF OBX-5 LST.count GREATER THAN 1"
 * group.element[33].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
 * group.element[33].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[33].extension[0].extension[0].url = "cardinalityMin"
@@ -592,16 +591,15 @@ Observation[2].subject.reference=Patient[1].id;\
 * group.element[33].extension[0].extension[1].valueInteger = -1
 * group.element[33].display = "Participation (Observation Participation)"
 * group.element[33].target.equivalence = #equivalent
-* group.element[33].target.code = #Observation[2]
-* group.element[33].target.display = "Observation[2]"
-* group.element[33].target.comment = """
-Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
-If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
-"""
+* group.element[33].target.code = #Device
+* group.element[33].target.display = "Device"
+* group.element[33].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group.element[33].target.dependsOn[0].property = "segment-map"
-* group.element[33].target.dependsOn[0].value = "PRT[Observation-Location]"
+* group.element[33].target.dependsOn[0].value = "PRT[Device]"
+* group.element[33].target.dependsOn[1].property = "references"
+* group.element[33].target.dependsOn[1].value = "Observation[2].device.reference=Device.id"
 * group.element[33].target.product[0].property = "antlr"
-* group.element[33].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
+* group.element[33].target.product[0].value = "IF PRT-10 VALUED"
 * group.element[33].target.product[1].property = "narrative"
 * group.element[33].target.product[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group.element[34].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
@@ -612,65 +610,66 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[34].extension[0].extension[1].valueInteger = -1
 * group.element[34].display = "Participation (Observation Participation)"
 * group.element[34].target.equivalence = #equivalent
-* group.element[34].target.code = #PractitionerRole[7]
-* group.element[34].target.display = "PractitionerRole[7]"
+* group.element[34].target.code = #Observation[2]
+* group.element[34].target.display = "Observation[2]"
 * group.element[34].target.comment = """
-Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation practitioner information.
+Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
 If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
 """
 * group.element[34].target.dependsOn[0].property = "segment-map"
-* group.element[34].target.dependsOn[0].value = "PRT[PractitionerRole]"
-* group.element[34].target.dependsOn[1].property = "references"
-* group.element[34].target.dependsOn[1].value = "Observation[2].performer.reference=PractitionerRole[7].id"
+* group.element[34].target.dependsOn[0].value = "PRT[Observation-Location]"
 * group.element[34].target.product[0].property = "antlr"
-* group.element[34].target.product[0].value = "IF PRT-5 VALUED"
+* group.element[34].target.product[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[34].target.product[1].property = "narrative"
 * group.element[34].target.product[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
-* group.element[35].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.NTE
+* group.element[35].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
 * group.element[35].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[35].extension[0].extension[0].url = "cardinalityMin"
 * group.element[35].extension[0].extension[0].valueInteger = 0
 * group.element[35].extension[0].extension[1].url = "cardinalityMax"
 * group.element[35].extension[0].extension[1].valueInteger = -1
-* group.element[35].display = "Notes and comments"
+* group.element[35].display = "Participation (Observation Participation)"
 * group.element[35].target.equivalence = #equivalent
-* group.element[35].target.code = #Observation[2].note
-* group.element[35].target.display = "Observation[2].note"
+* group.element[35].target.code = #PractitionerRole[7]
+* group.element[35].target.display = "PractitionerRole[7]"
+* group.element[35].target.comment = """
+Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation practitioner information.
+If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
+"""
 * group.element[35].target.dependsOn[0].property = "segment-map"
-* group.element[35].target.dependsOn[0].value = "NTE[Annotation]"
-* group.element[36].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPM
+* group.element[35].target.dependsOn[0].value = "PRT[PractitionerRole]"
+* group.element[35].target.dependsOn[1].property = "references"
+* group.element[35].target.dependsOn[1].value = "Observation[2].performer.reference=PractitionerRole[7].id"
+* group.element[35].target.product[0].property = "antlr"
+* group.element[35].target.product[0].value = "IF PRT-5 VALUED"
+* group.element[35].target.product[1].property = "narrative"
+* group.element[35].target.product[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
+* group.element[36].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.NTE
 * group.element[36].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[36].extension[0].extension[0].url = "cardinalityMin"
-* group.element[36].extension[0].extension[0].valueInteger = 1
+* group.element[36].extension[0].extension[0].valueInteger = 0
 * group.element[36].extension[0].extension[1].url = "cardinalityMax"
-* group.element[36].extension[0].extension[1].valueInteger = 1
-* group.element[36].display = "Specimen"
+* group.element[36].extension[0].extension[1].valueInteger = -1
+* group.element[36].display = "Notes and comments"
 * group.element[36].target.equivalence = #equivalent
-* group.element[36].target.code = #Specimen[n]
-* group.element[36].target.display = "Specimen[n]"
+* group.element[36].target.code = #Observation[2].note
+* group.element[36].target.display = "Observation[2].note"
 * group.element[36].target.dependsOn[0].property = "segment-map"
-* group.element[36].target.dependsOn[0].value = "SPM[Specimen]"
-* group.element[36].target.dependsOn[1].property = "references"
-* group.element[36].target.dependsOn[1].value = "DiagnosticReport[1].specimen.reference=Specimen[n].id"
-* group.element[37].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION.OBX
+* group.element[36].target.dependsOn[0].value = "NTE[Annotation]"
+* group.element[37].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPM
 * group.element[37].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[37].extension[0].extension[0].url = "cardinalityMin"
 * group.element[37].extension[0].extension[0].valueInteger = 1
 * group.element[37].extension[0].extension[1].url = "cardinalityMax"
 * group.element[37].extension[0].extension[1].valueInteger = 1
-* group.element[37].display = "Observation (for Patient ID)"
+* group.element[37].display = "Specimen"
 * group.element[37].target.equivalence = #equivalent
-* group.element[37].target.code = #Observation[3]
-* group.element[37].target.display = "Observation[3]"
+* group.element[37].target.code = #Specimen[n]
+* group.element[37].target.display = "Specimen[n]"
 * group.element[37].target.dependsOn[0].property = "segment-map"
-* group.element[37].target.dependsOn[0].value = "OBX[Observation]"
+* group.element[37].target.dependsOn[0].value = "SPM[Specimen]"
 * group.element[37].target.dependsOn[1].property = "references"
-* group.element[37].target.dependsOn[1].value = """
-Observation[3].subject.reference=Patient[1].id
-Observation[3].focus.reference=Specimen[n].id\
-"""
-* group.element[37].target.product[0].property = "antlr"
-* group.element[37].target.product[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1"
+* group.element[37].target.dependsOn[1].value = "DiagnosticReport[1].specimen.reference=Specimen[n].id"
 * group.element[38].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION.OBX
 * group.element[38].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[38].extension[0].extension[0].url = "cardinalityMin"
@@ -682,11 +681,30 @@ Observation[3].focus.reference=Specimen[n].id\
 * group.element[38].target.code = #Observation[3]
 * group.element[38].target.display = "Observation[3]"
 * group.element[38].target.dependsOn[0].property = "segment-map"
-* group.element[38].target.dependsOn[0].value = "OBX[Observation-Component]"
+* group.element[38].target.dependsOn[0].value = "OBX[Observation]"
 * group.element[38].target.dependsOn[1].property = "references"
 * group.element[38].target.dependsOn[1].value = """
 Observation[3].subject.reference=Patient[1].id
 Observation[3].focus.reference=Specimen[n].id\
 """
 * group.element[38].target.product[0].property = "antlr"
-* group.element[38].target.product[0].value = "IF OBX-5 LST.count GREATER THAN 1"
+* group.element[38].target.product[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1"
+* group.element[39].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION.OBX
+* group.element[39].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[39].extension[0].extension[0].url = "cardinalityMin"
+* group.element[39].extension[0].extension[0].valueInteger = 1
+* group.element[39].extension[0].extension[1].url = "cardinalityMax"
+* group.element[39].extension[0].extension[1].valueInteger = 1
+* group.element[39].display = "Observation (for Patient ID)"
+* group.element[39].target.equivalence = #equivalent
+* group.element[39].target.code = #Observation[3]
+* group.element[39].target.display = "Observation[3]"
+* group.element[39].target.dependsOn[0].property = "segment-map"
+* group.element[39].target.dependsOn[0].value = "OBX[Observation-Component]"
+* group.element[39].target.dependsOn[1].property = "references"
+* group.element[39].target.dependsOn[1].value = """
+Observation[3].subject.reference=Patient[1].id
+Observation[3].focus.reference=Specimen[n].id\
+"""
+* group.element[39].target.product[0].property = "antlr"
+* group.element[39].target.product[0].value = "IF OBX-5 LST.count GREATER THAN 1"

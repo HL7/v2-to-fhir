@@ -10,7 +10,7 @@ Title: "Segment AIG to Appointment Map"
 * name = "SegmentAIGToAppointment"
 * status = #active
 * experimental = true
-* date = "2023-07-24"
+* date = "2023-07-26"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

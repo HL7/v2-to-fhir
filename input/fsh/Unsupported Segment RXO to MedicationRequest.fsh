@@ -1,4 +1,4 @@
-// mappings/messages/HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv:38
+// mappings/messages/HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv:39
 Instance: UnsupportedSegmentRXOToMedicationRequest
 InstanceOf: ConceptMap
 Title: "Segment RXO to MedicationRequest Map - Unsupported"
@@ -10,7 +10,7 @@ Title: "Segment RXO to MedicationRequest Map - Unsupported"
 * name = "UnsupportedSegmentRXOToMedicationRequest"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-07-26"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

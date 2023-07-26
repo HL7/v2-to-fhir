@@ -10,7 +10,7 @@ Title: "Segment SCH to ServiceRequest Map"
 * name = "SegmentSCHToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2023-07-24"
+* date = "2023-07-26"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -64,7 +64,7 @@ Title: "Segment SCH to ServiceRequest Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "status"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
+* group.element[1].target.dependsOn[0].property = "vocabulary-map"
 * group.element[1].target.dependsOn[0].value = "FillerStatus[Appointment]"
 * group.element[2].code = #SCH-26
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

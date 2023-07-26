@@ -1,4 +1,4 @@
-// mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv:5
+// mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv:6
 Instance: UnsupportedDatatypeEIPToIdentifier
 InstanceOf: ConceptMap
 Title: "Datatype EIP to Identifier Map - Unsupported"
@@ -10,7 +10,7 @@ Title: "Datatype EIP to Identifier Map - Unsupported"
 * name = "UnsupportedDatatypeEIPToIdentifier"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-07-26"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

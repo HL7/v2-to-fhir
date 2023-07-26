@@ -1,4 +1,4 @@
-// mappings/messages/HL7 Message - FHIR R4_ ORU_R01 - Sheet1.csv:6
+// mappings/messages/HL7 Message - FHIR R4_ ORU_R01 - Sheet1.csv:7
 Instance: UnsupportedSegmentSFTToMessageHeader
 InstanceOf: ConceptMap
 Title: "Segment SFT to MessageHeader Map - Unsupported"
@@ -10,7 +10,7 @@ Title: "Segment SFT to MessageHeader Map - Unsupported"
 * name = "UnsupportedSegmentSFTToMessageHeader"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-07-26"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

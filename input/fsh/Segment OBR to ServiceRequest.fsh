@@ -10,7 +10,7 @@ Title: "Segment OBR to ServiceRequest Map"
 * name = "SegmentOBRToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2023-07-24"
+* date = "2023-07-26"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -50,7 +50,7 @@ Title: "Segment OBR to ServiceRequest Map"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "identifier[1]"
 * group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[1].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[1].target.product[0].property = "antlr"
 * group.element[1].target.product[0].value = "IF ORC-2 NOT VALUED"
 * group.element[2].code = #OBR-2
@@ -119,7 +119,7 @@ Title: "Segment OBR to ServiceRequest Map"
 * group.element[4].target.extension[0].extension[2].valueInteger = -1
 * group.element[4].target.display = "identifier[2]"
 * group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[4].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[4].target.product[0].property = "antlr"
 * group.element[4].target.product[0].value = "IF ORC-3 NOT VALUED"
 * group.element[5].code = #OBR-3

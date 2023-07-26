@@ -10,7 +10,7 @@ Title: "Segment IAM to AllergyIntolerance Map"
 * name = "SegmentIAMToAllergyIntolerance"
 * status = #active
 * experimental = true
-* date = "2023-07-24"
+* date = "2023-07-26"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -195,7 +195,7 @@ Title: "Segment IAM to AllergyIntolerance Map"
 * group.element[7].target.extension[0].extension[2].valueInteger = -1
 * group.element[7].target.display = "identifier"
 * group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[7].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[8].code = #IAM-11
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -275,7 +275,7 @@ Title: "Segment IAM to AllergyIntolerance Map"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "recorder.reference(Practitioner.name)"
 * group.element[11].target.dependsOn[0].property = "data-type-map"
-* group.element[11].target.dependsOn[0].value = "XPN"
+* group.element[11].target.dependsOn[0].value = "XPN[HumanName]"
 * group.element[11].target.product[0].property = "antlr"
 * group.element[11].target.product[0].value = "IF IAM-15 NOT VALUED"
 * group.element[11].target.product[1].property = "narrative"
@@ -300,7 +300,7 @@ Title: "Segment IAM to AllergyIntolerance Map"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "recorder.reference(Patient[1].name)"
 * group.element[12].target.dependsOn[0].property = "data-type-map"
-* group.element[12].target.dependsOn[0].value = "XPN"
+* group.element[12].target.dependsOn[0].value = "XPN[HumanName]"
 * group.element[12].target.product[0].property = "antlr"
 * group.element[12].target.product[0].value = "IF IAM-15 EQUALS \"SEL\""
 * group.element[13].code = #IAM-14
@@ -323,7 +323,7 @@ Title: "Segment IAM to AllergyIntolerance Map"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "recorder.reference(RelatedPerson.name)"
 * group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "XPN"
+* group.element[13].target.dependsOn[0].value = "XPN[HumanName]"
 * group.element[13].target.product[0].property = "antlr"
 * group.element[13].target.product[0].value = "IF IAM-15 VALUED AND NOT \"SEL\""
 * group.element[14].code = #IAM-15
