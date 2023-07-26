@@ -62,7 +62,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [DG1](ConceptMap-segment-dg1-to-episodeofcare.html) - Diagnosis to FHIR [EpisodeOfCare](http://hl7.org/fhir/R4/episodeofcare.html)
 * [IN1](ConceptMap-segment-in1-to-coverage.html) - Insurance to FHIR [Coverage](http://hl7.org/fhir/R4/coverage.html)
 * [IN2](ConceptMap-segment-in2-to-coverage.html) - Insurance Additional Information to FHIR [Coverage](http://hl7.org/fhir/R4/coverage.html)
-* [IN3](ConceptMap-segment-in3-to-careteam-participant.html) - Insurance Additional Information, Certification to FHIR [CareTeam.participant](http://hl7.org/fhir/R4/careteam-definitions.html#careteam.participant)
+* [IN3](ConceptMap-segment-in3-to-careteam.html) - Insurance Additional Information, Certification to FHIR [CareTeam](http://hl7.org/fhir/R4/careteam.html)
 * [PR1](ConceptMap-segment-pr1-to-procedure.html) - Procedures to FHIR [Procedure](http://hl7.org/fhir/R4/procedure.html)
 
 ### Chapter  7  Observation Reporting
