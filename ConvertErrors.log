@@ -15,172 +15,166 @@ W6) DateTime.$value used where dateTime.$value meant.
 W7) DateTime.dateTime used where dateTime.dateTime meant.
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ DR[DateTime] - Sheet1.csv(:3)
 	near: 1,DR.1,Range Start Date/Time,DTM,0,1,,,,$value,,dateTime,0,1,,,,,
-W8) UnsignedInt.$value used where unsignedInt.$value meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[UnsignedInt] - Sheet1.csv(:3)
-	near: 1,CQ.1,Quantity,NM,0,1,,,,$value,,unsignedInt,0,1,,,/convert to minutes based on CQ.2/,,
-W9) UnsignedInt.unsignedInt used where unsignedInt.unsignedInt meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[UnsignedInt] - Sheet1.csv(:3)
-	near: 1,CQ.1,Quantity,NM,0,1,,,,$value,,unsignedInt,0,1,,,/convert to minutes based on CQ.2/,,
-W10) DateTime.$value used where dateTime.$value meant.
+W8) DateTime.$value used where dateTime.$value meant.
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ DTM[DateTime] - Sheet1.csv(:3)
 	near: No corresponding line (3) in source file!
-W11) extension.string used where Extension.string meant.
+W9) extension.string used where Extension.string meant.
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ HD[extension-AssigningAuthority] - Sheet1.csv(:3)
-	near: 1,HD.1,Namespace ID,IS,0,1,,,,,#ext-assigningauthority.nameSpaceID#,string,0,1,,,,,
-W12) extension.string used where Extension.string meant.
+	near: 1,HD.1,Namespace ID,IS,0,1,,,,,extension??-assigningauthority.nameSpaceID,string,0,1,,,,,
+W10) extension.string used where Extension.string meant.
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ HD[extension-AssigningAuthority] - Sheet1.csv(:4)
-	near: 2,HD.2,Universal ID,ST,0,1,"IF HD.3 IN (""ISO"", ""UUID"")",,,,#ext-assigningauthority.universalID#,string,0,1,,,,,
-W13) extension.code used where Extension.code meant.
+	near: 2,HD.2,Universal ID,ST,0,1,"IF HD.3 IN (""ISO"", ""UUID"")",,,,extension??-assigningauthority.universalID,string,0,1,,,,,
+W11) extension.code used where Extension.code meant.
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ HD[extension-AssigningAuthority] - Sheet1.csv(:5)
 	near: No corresponding line (5) in source file!
-W14) String.$value used where string.$value meant.
+W12) String.$value used where string.$value meant.
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[String] - Sheet1.csv(:3)
 	near: 1,CX.1,ID Number,ST,1,1,,,,$value,,string,,,,,,,
-W15) String.string used where string.string meant.
+W13) String.string used where string.string meant.
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[String] - Sheet1.csv(:3)
 	near: 1,CX.1,ID Number,ST,1,1,,,,$value,,string,,,,,,,
-W16) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CWE[Observation-SupportingInfo] - Sheet1.csv(:3)
+W14) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CWE[Observation-SupportingInfo] - Sheet1.csv(:3)
 	near: 0,,,,,,,,,code,,CodeableConcept,1,1,,,/to be determined by implementer based on use of OBR-13/,,
-W17) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CWE[Observation-SupportingInfo] - Sheet1.csv(:4)
+W15) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CWE[Observation-SupportingInfo] - Sheet1.csv(:4)
 	near: 0,,,,,,,,,status,,code,1,1,,,"""final""",,
-W18) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SAD[Address] - Sheet1.csv(:6)
+W16) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SAD[Address] - Sheet1.csv(:6)
 	near: No corresponding line (6) in source file!
-W19) period used where Period meant.
+W17) period used where Period meant.
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[Repeat-Period] - Sheet1.csv(:3)
 	near: 1,CQ.1,Quantity,NM,0,1,,,,period,,decimal,0,1,,,,,
 E1) Link to periodUnit not found.
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[Repeat-Period] - Sheet1.csv(:5)
 	near: No corresponding line (5) in source file!
-W20) duration used where Duration meant.
+W18) duration used where Duration meant.
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[Repeat-Duration] - Sheet1.csv(:3)
 	near: 1,CQ.1,Quantity,NM,0,1,,,,duration,,decimal,0,1,,,,,
 E2) Link to durationUnit not found.
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[Repeat-Duration] - Sheet1.csv(:5)
 	near: No corresponding line (5) in source file!
-W21) mappings/codesystems/HL7 Concept Map_ VaccineAdministered - Sheet1.csv does not have any FHIR Mapping Content
+W19) mappings/codesystems/HL7 Concept Map_ VaccineAdministered - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ VaccineAdministered - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W22) mappings/codesystems/HL7 Concept Map_ Participation - Sheet1.csv does not have any FHIR Mapping Content
+W20) mappings/codesystems/HL7 Concept Map_ Participation - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ Participation - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W23) mappings/codesystems/HL7 Concept Map_ AdministrationDevice - Sheet1.csv does not have any FHIR Mapping Content
+W21) mappings/codesystems/HL7 Concept Map_ AdministrationDevice - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ AdministrationDevice - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W24) mappings/codesystems/HL7 Concept Map_ NameType - Sheet1.csv does not have any FHIR Mapping Content
+W22) mappings/codesystems/HL7 Concept Map_ NameType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ NameType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W25) mappings/codesystems/HL7 Concept Map_ RequestedDosageForm - Sheet1.csv does not have any FHIR Mapping Content
+W23) mappings/codesystems/HL7 Concept Map_ RequestedDosageForm - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedDosageForm - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W26) mappings/codesystems/HL7 Concept Map_ ConfidentialityClassification - Sheet1.csv does not have any FHIR Mapping Content
+W24) mappings/codesystems/HL7 Concept Map_ ConfidentialityClassification - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ConfidentialityClassification - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W27) mappings/codesystems/HL7 Concept Map_ OperatorID - Sheet1.csv does not have any FHIR Mapping Content
+W25) mappings/codesystems/HL7 Concept Map_ OperatorID - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ OperatorID - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W28) mappings/codesystems/HL7 Concept Map_ SpecimenSourceSite - Sheet1.csv does not have any FHIR Mapping Content
+W26) mappings/codesystems/HL7 Concept Map_ SpecimenSourceSite - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SpecimenSourceSite - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W29) mappings/codesystems/HL7 Concept Map_ SpecimenRejectReason - Sheet1.csv does not have any FHIR Mapping Content
+W27) mappings/codesystems/HL7 Concept Map_ SpecimenRejectReason - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SpecimenRejectReason - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W30) mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv does not have any FHIR Mapping Content
+W28) mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W31) mappings/codesystems/HL7 Concept Map_ RoutingInstruction - Sheet1.csv does not have any FHIR Mapping Content
+W29) mappings/codesystems/HL7 Concept Map_ RoutingInstruction - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RoutingInstruction - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W32) mappings/codesystems/HL7 Concept Map_ AddressType - Sheet1.csv does not have any FHIR Mapping Content
+W30) mappings/codesystems/HL7 Concept Map_ AddressType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ AddressType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W33) mappings/codesystems/HL7 Concept Map_ TelecomEquipmentType - Sheet1.csv does not have any FHIR Mapping Content
+W31) mappings/codesystems/HL7 Concept Map_ TelecomEquipmentType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ TelecomEquipmentType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,,
-W34) mappings/codesystems/HL7 Concept Map_ AllergySeverity[AllergyIntolerance.criticality] - Sheet1.csv does not have any FHIR Mapping Content
+W32) mappings/codesystems/HL7 Concept Map_ AllergySeverity[AllergyIntolerance.criticality] - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ AllergySeverity[AllergyIntolerance.criticality] - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,,,,Comment
-W35) mappings/codesystems/HL7 Concept Map_ AppointmentType - Sheet1.csv does not have any FHIR Mapping Content
+W33) mappings/codesystems/HL7 Concept Map_ AppointmentType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ AppointmentType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W36) mappings/codesystems/HL7 Concept Map_ ProcessingMode - Sheet1.csv does not have any FHIR Mapping Content
+W34) mappings/codesystems/HL7 Concept Map_ ProcessingMode - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ProcessingMode - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,
-W37) mappings/codesystems/HL7 Concept Map_ RequestedDispenseUnits - Sheet1.csv does not have any FHIR Mapping Content
+W35) mappings/codesystems/HL7 Concept Map_ RequestedDispenseUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedDispenseUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W38) mappings/codesystems/HL7 Concept Map_ ProcessingID - Sheet1.csv does not have any FHIR Mapping Content
+W36) mappings/codesystems/HL7 Concept Map_ ProcessingID - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ProcessingID - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,
-W39) mappings/codesystems/HL7 Concept Map_ RegistryStatus - Sheet1.csv does not have any FHIR Mapping Content
+W37) mappings/codesystems/HL7 Concept Map_ RegistryStatus - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RegistryStatus - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W40) mappings/codesystems/HL7 Concept Map_ GiveDosageForm - Sheet1.csv does not have any FHIR Mapping Content
+W38) mappings/codesystems/HL7 Concept Map_ GiveDosageForm - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ GiveDosageForm - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W41) mappings/codesystems/HL7 Concept Map_ YesNo - Sheet1.csv does not have any FHIR Mapping Content
+W39) mappings/codesystems/HL7 Concept Map_ YesNo - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ YesNo - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W42) mappings/codesystems/HL7 Concept Map_ GiveUnits - Sheet1.csv does not have any FHIR Mapping Content
+W40) mappings/codesystems/HL7 Concept Map_ GiveUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ GiveUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W43) mappings/codesystems/HL7 Concept Map_ OrderStatus - Sheet1.csv does not have any FHIR Mapping Content
+W41) mappings/codesystems/HL7 Concept Map_ OrderStatus - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ OrderStatus - Sheet1.csv(:1)
 	near: ,,,Condition (IF TRUE),,,HL7 FHIR,,
-W44) mappings/codesystems/HL7 Concept Map_ DurationUnit - Sheet1.csv does not have any FHIR Mapping Content
+W42) mappings/codesystems/HL7 Concept Map_ DurationUnit - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ DurationUnit - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W45) mappings/codesystems/HL7 Concept Map_ ContainerType - Sheet1.csv does not have any FHIR Mapping Content
+W43) mappings/codesystems/HL7 Concept Map_ ContainerType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ContainerType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W46) mappings/codesystems/HL7 Concept Map_ AddressUse - Sheet1.csv does not have any FHIR Mapping Content
+W44) mappings/codesystems/HL7 Concept Map_ AddressUse - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ AddressUse - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,,
-W47) mappings/codesystems/HL7 Concept Map_ Countries - Sheet1.csv does not have any FHIR Mapping Content
+W45) mappings/codesystems/HL7 Concept Map_ Countries - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ Countries - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W48) mappings/codesystems/HL7 Concept Map_ ValueType - Sheet1.csv does not have any FHIR Mapping Content
+W46) mappings/codesystems/HL7 Concept Map_ ValueType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ValueType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W49) mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv does not have any FHIR Mapping Content
+W47) mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W50) mappings/codesystems/HL7 Concept Map_ SpecimenSourceTypeModifier - Sheet1.csv does not have any FHIR Mapping Content
+W48) mappings/codesystems/HL7 Concept Map_ SpecimenSourceTypeModifier - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SpecimenSourceTypeModifier - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W51) mappings/codesystems/HL7 Concept Map_ RequestedGiveStrengthUnits - Sheet1.csv does not have any FHIR Mapping Content
+W49) mappings/codesystems/HL7 Concept Map_ RequestedGiveStrengthUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedGiveStrengthUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W52) mappings/codesystems/HL7 Concept Map_ PrimaryLanguage - Sheet1.csv does not have any FHIR Mapping Content
+W50) mappings/codesystems/HL7 Concept Map_ PrimaryLanguage - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ PrimaryLanguage - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W53) mappings/codesystems/HL7 Concept Map_ Practioner ID Number Type - Sheet1.csv does not have any FHIR Mapping Content
+W51) mappings/codesystems/HL7 Concept Map_ Practioner ID Number Type - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ Practioner ID Number Type - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,
-W54) mappings/codesystems/HL7 Concept Map_ AllergySeverity[AllergyIntolerance.criticality-original] - Sheet1.csv does not have any FHIR Mapping Content
+W52) mappings/codesystems/HL7 Concept Map_ AllergySeverity[AllergyIntolerance.criticality-original] - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ AllergySeverity[AllergyIntolerance.criticality-original] - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,,,,Comment
-W55) mappings/codesystems/HL7 Concept Map_ VIPIndicator - Sheet1.csv does not have any FHIR Mapping Content
+W53) mappings/codesystems/HL7 Concept Map_ VIPIndicator - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ VIPIndicator - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W56) mappings/codesystems/HL7 Concept Map_ RequestedGiveUnits - Sheet1.csv does not have any FHIR Mapping Content
+W54) mappings/codesystems/HL7 Concept Map_ RequestedGiveUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedGiveUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W57) mappings/codesystems/HL7 Concept Map_ RequestedGiveCode - Sheet1.csv does not have any FHIR Mapping Content
+W55) mappings/codesystems/HL7 Concept Map_ RequestedGiveCode - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedGiveCode - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W58) mappings/codesystems/HL7 Concept Map_ AllergySeverity[AllergyIntolerance.reaction.severity] - Sheet1.csv does not have any FHIR Mapping Content
+W56) mappings/codesystems/HL7 Concept Map_ AllergySeverity[AllergyIntolerance.reaction.severity] - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ AllergySeverity[AllergyIntolerance.reaction.severity] - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,,,,Comment
-W59) mappings/codesystems/HL7 Concept Map_ AccessRestrictionValue - Sheet1.csv does not have any FHIR Mapping Content
+W57) mappings/codesystems/HL7 Concept Map_ AccessRestrictionValue - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ AccessRestrictionValue - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W60) mappings/codesystems/HL7 Concept Map_ AccessRestrictionReasonCode - Sheet1.csv does not have any FHIR Mapping Content
+W58) mappings/codesystems/HL7 Concept Map_ AccessRestrictionReasonCode - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ AccessRestrictionReasonCode - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W61) mappings/codesystems/HL7 Concept Map_ DispenseUnits - Sheet1.csv does not have any FHIR Mapping Content
+W59) mappings/codesystems/HL7 Concept Map_ DispenseUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ DispenseUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W62) mappings/codesystems/HL7 Concept Map_ RequestedDrugStengthVolumeUnits - Sheet1.csv does not have any FHIR Mapping Content
+W60) mappings/codesystems/HL7 Concept Map_ RequestedDrugStengthVolumeUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedDrugStengthVolumeUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
 E3) extension??-characterSet is not a recognized V2 artifact
@@ -201,68 +195,78 @@ E7) No mapping for NTE[Annotation]. Missing file: HL7 Segment - FHIR R4_ NTE[Ann
 E8) No mapping for PID[RelatedPerson-Mother]. Missing file: HL7 Segment - FHIR R4_ PID[RelatedPerson-Mother] - Sheet1.csv
 	at mappings/messages/HL7 Message - FHIR R4_ ADT_A06 - Sheet1.csv(:14)
 	near: 6,ADT_A06.PID,PID,Patient Identification,1,1,,,,RelatedPerson[1],PID[RelatedPerson-Mother],RelatedPerson[1].patient.reference=Patient[1].id,,
-E9) No mapping for ROL[Patient-GeneralPractitioner]. Missing file: HL7 Segment - FHIR R4_ ROL[Patient-GeneralPractitioner] - Sheet1.csv
+E9) No mapping for PRT[Patient-GeneralPractitioner]. Missing file: HL7 Segment - FHIR R4_ PRT[Patient-GeneralPractitioner] - Sheet1.csv
+	at mappings/messages/HL7 Message - FHIR R4_ ADT_A06 - Sheet1.csv(:25)
+	near: 14,ADT_A06:follow:PID.PRT,[{ PRT }],Participation,0,-1,"IF PRT-4 IS ""PP""",,,Patient[1],PRT[Patient-GeneralPractitioner],,,
+E10) No mapping for ROL[Patient-GeneralPractitioner]. Missing file: HL7 Segment - FHIR R4_ ROL[Patient-GeneralPractitioner] - Sheet1.csv
 	at mappings/messages/HL7 Message - FHIR R4_ ADT_A06 - Sheet1.csv(:23)
 	near: 13,ADT_A06:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[Patient-GeneralPractitioner],,,
-E10) No mapping for RXO[MedicationRequest]. Missing file: HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv
+E11) No mapping for RXO[MedicationRequest]. Missing file: HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv
 	at mappings/messages/HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv(:39)
 	near: 4.2.1.7,ORM_O01.ORDER_DETAIL.CHOICE.RXO,RXO,Pharmacy/Treatment Order,0,1,,,,MedicationRequest,RXO[MedicationRequest],,,
-E11) No mapping for SFT[MessageHeader]. Missing file: HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv
+E12) No mapping for SFT[MessageHeader]. Missing file: HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv
 	at mappings/messages/HL7 Message - FHIR R4_ ORU_R01 - Sheet1.csv(:7)
 	near: 2,ORU_R01.SFT,[{ SFT }],Software Segment,0,-1,,,,MessageHeader[1],SFT[MessageHeader],,,Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.
-E12) https://www.hl7.org/fhir/valueset-encounter-participant-type.html is not a recognized V2 artifact
+E13) https://www.hl7.org/fhir/valueset-encounter-participant-type.html is not a recognized V2 artifact
 	at null(null:6)
-E13) No mapping for CF[CodeableConcept]. Missing file: HL7 Data Type - FHIR R4_ CF[CodeableConcept] - Sheet1.csv
+E14) No mapping for CF[CodeableConcept]. Missing file: HL7 Data Type - FHIR R4_ CF[CodeableConcept] - Sheet1.csv
 	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:9)
 	near: 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""CF""",,,valueCodeableConcept,,CodeableConcept,0,1,CF[CodeableConcept],,,,
-E14) No mapping for CWE[Device]. Missing file: HL7 Data Type - FHIR R4_ CWE[Device] - Sheet1.csv
+E15) UnsignedInt is not a recognized FHIR artifact
+	at mappings/segments/HL7 Segment - FHIR R4_ TQ1[ServiceRequest] - TQ1.csv(:7)
+	near: 5,TQ1-5,Relative Time and Units,CQ,0,-1,,,,occurrenceTIming.repeat.offset,,unsignedInt,0,1,CQ[UnsignedInt],,,,
+E16) No mapping for CWE[Device]. Missing file: HL7 Data Type - FHIR R4_ CWE[Device] - Sheet1.csv
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[Provenance] - ORC.csv(:32)
 	near: 18,ORC-18,Entering Device,CWE,0,1,,,,agent[5].who(Device),,Reference(Device),0,1,CWE[Device],,,,
-E15) No mapping for CWE[Identifier]. Missing file: HL7 Data Type - FHIR R4_ CWE[Identifier] - Sheet1.csv
+E17) No mapping for CWE[Identifier]. Missing file: HL7 Data Type - FHIR R4_ CWE[Identifier] - Sheet1.csv
 	at mappings/segments/HL7 Segment - FHIR R4_ AIS[Appointment] - Sheet1.csv(:6)
 	near: 3,AIS-3,Universal Service Identifier,CWE,0,1,IF AIS-5 AND AIS-6 AND ..... AND AIS-12 NOT VALUED,,,serviceType,,Reference(Procedure),0,-1,CWE[Identifier],,,,
-E16) No mapping for DLD[Location]. Missing file: HL7 Data Type - FHIR R4_ DLD[Location] - Sheet1.csv
+E18) No mapping for DLD[Location]. Missing file: HL7 Data Type - FHIR R4_ DLD[Location] - Sheet1.csv
 	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:60)
 	near: 37,PV1-37,Discharged to Location,DLD,0,1,,,,hospitalization.destination(Location),,Reference(Location),0,1,DLD[Location],,,,Encounter.hospitalization.destination.reference=Location[1].id
-E17) No mapping for EI[Identifier]. Missing file: HL7 Data Type - FHIR R4_ EI[Identifier] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ PR1[Procedure] - PR1[Procedure].csv(:35)
-	near: No corresponding line (35) in source file!
-E18) No mapping for EIP[Identifier-FillerAssignedIdentifier]. Missing file: HL7 Data Type - FHIR R4_ EIP[Identifier-FillerAssignedIdentifier] - Sheet1.csv
+E19) No mapping for EIP[Identifier-FillerAssignedIdentifier]. Missing file: HL7 Data Type - FHIR R4_ EIP[Identifier-FillerAssignedIdentifier] - Sheet1.csv
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:22)
 	near: 8,ORC-8,Parent Order,EIP,0,-1,,,,,basedOn[1].extension??-parent.filler,,,,EIP[Identifier-FillerAssignedIdentifier],,ORC-8.2,,
-E19) No mapping for EIP[Identifier-FillerIdentifiedAssigner]. Missing file: HL7 Data Type - FHIR R4_ EIP[Identifier-FillerIdentifiedAssigner] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:5)
-	near: 2,SPM-2,Specimen ID,EIP,0,1,,,,identifier[2],,Identifier,0,-1,EIP[Identifier-FillerIdentifiedAssigner],,,,
-E20) No mapping for EIP[Identifier-PlacerIdentifiedAssigner]. Missing file: HL7 Data Type - FHIR R4_ EIP[Identifier-PlacerIdentifiedAssigner] - Sheet1.csv
+E20) No mapping for EIP[Identifier-FillerIdentifiedAssigner]. Missing file: HL7 Data Type - FHIR R4_ EIP[Identifier-FillerIdentifiedAssigner] - Sheet1.csv
+	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:7)
+	near: 3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,,parent.identifier,,Identifier,0,1,EIP[Identifier-FillerIdentifiedAssigner],,,,
+E21) No mapping for EIP[Identifier-PlacerIdentifiedAssigner]. Missing file: HL7 Data Type - FHIR R4_ EIP[Identifier-PlacerIdentifiedAssigner] - Sheet1.csv
 	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:4)
 	near: 2,SPM-2,Specimen ID,EIP,0,1,,,,identifier[1],,Identifier,0,-1,EIP[Identifier-PlacerIdentifiedAssigner],,,,
-E21) No mapping for EIP[Identifier]. Missing file: HL7 Data Type - FHIR R4_ EIP[Identifier] - Sheet1.csv
-	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:6)
-	near: 3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,Only one of the two parent references in EIP can be mapped.  The implementation needs to choose which one.,parent.identifier,,Identifier,0,1,EIP[Identifier],,,,"Note that Specimen.parent can repeat, i.e., match the SPM-3 cardinality, but Specimen.parent.identifier does not.  Therefore, while a specimen can have multiple parents, putting placer and filler parent identifiers in separate parent instances is not appropriate."
 E22) AssigningAuthority is not a recognized FHIR artifact
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv(:8)
 	near: 6,XON.6,Assigning Authority,HD,0,1,,,,,identifier.extension??-assigningAuthority,,0,-1,HD[AssigningAuthority],,,,
-E23) No mapping for HD[uri]. Missing file: HL7 Data Type - FHIR R4_ HD[uri] - Sheet1.csv
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[PractitionerRole] - Sheet1.csv(:12)
-	near: 9,XCN.9,Assigning Authority,HD,0,1,,,If system,practitioner(Practioner.identifier[1].system),,uri,0,1,HD[uri],,,,"Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then XCN.9 should be mapped to .system"
-E24) No mapping for ID[Coding]. Missing file: HL7 Data Type - FHIR R4_ ID[Coding] - Sheet1.csv
+E23) No mapping for ID[Coding]. Missing file: HL7 Data Type - FHIR R4_ ID[Coding] - Sheet1.csv
 	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:29)
 	near: 22,PV2-22,Visit Protection Indicator,ID,0,1,,,,meta.security,,Coding,0,-1,ID[Coding],Yes/No,,,
-E25) String is not a recognized FHIR artifact
+E24) String is not a recognized FHIR artifact
 	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:20)
 	near: 12,PID-12,County Code,ID,0,1,IF PID-11 IS NOT VALUED,,,address[1].district,,string,0,1,ID[String],,,,
-E26) No mapping for ID[CodeableConcept-UniversalID]. Missing file: HL7 Data Type - FHIR R4_ ID[CodeableConcept-UniversalID] - Sheet1.csv
+E25) No mapping for ID[CodeableConcept-UniversalID]. Missing file: HL7 Data Type - FHIR R4_ ID[CodeableConcept-UniversalID] - Sheet1.csv
 	at mappings/datatypes/HL7 Data Type - FHIR R4_ HD[Organization] - Sheet1.csv(:5)
 	near: 3,HD.3,Universal ID Type,ID,0,1,,,,identifier[2].type,,CodeableConcept,,,ID[CodeableConcept-UniversalID],UniversalIDType,,,"Request that DNS, ISO, and UUID (and other Table 0301 values) are added to: http://hl7.org/fhir/valueset-identifier-type.html"
+E26) PositiveInt is not a recognized FHIR artifact
+	at mappings/datatypes/HL7 Data Type - FHIR R4_ XTN[ContactPoint] - Sheet1.csv(:23)
+	near: No corresponding line (23) in source file!
 E27) No mapping for NM[Quantity]. Missing file: HL7 Data Type - FHIR R4_ NM[Quantity] - Sheet1.csv
 	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:7)
 	near: 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NM""",,,valueQuantity.value,,quantity,0,1,NM[Quantity],,,,
-E28) No mapping for PLN[Location]. Missing file: HL7 Data Type - FHIR R4_ PLN[Location] - Sheet1.csv
+E28) No mapping for PL[Address]. Missing file: HL7 Data Type - FHIR R4_ PL[Address] - Sheet1.csv
+	at mappings/segments/HL7 Segment - FHIR R4_ ROL[CareTeam] - Sheet1.csv(:20)
+	near: 13,ROL-13,Person's Location,PL,0,1,,,Depending on ROL-3,participant.member(RelatedPerson[1].address),,Reference,0,1,PL[Address],,,,
+E29) No mapping for PLN[Location]. Missing file: HL7 Data Type - FHIR R4_ PLN[Location] - Sheet1.csv
 	at mappings/segments/HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv(:27)
 	near: No corresponding line (27) in source file!
-E29) Priority is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ TQ1[ServiceRequest] - TQ1.csv(:13)
-	near: 9,TQ1-9,Priority,CWE,0,-1,,,,priority,,code,0,1,Priority,,,,
-E30) RepeatPattern is not a recognized V2 artifact
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ RI[Timing] - Sheet1.csv(:3)
-	n
+E30) No mapping for RPT[ServiceRequest]. Missing file: HL7 Data Type - FHIR R4_ RPT[ServiceRequest] - Sheet1.csv
+	at mappings/segments/HL7 Segment - FHIR R4_ TQ1[ServiceRequest] - TQ1.csv(:5)
+	near: 3,TQ1-3,Repeat Pattern,RPT,0,-1,,,,occurrenceTiming.code,,CodeableConcept,0,1,RPT[ServiceRequest],,,,
+E31) String is not a recognized FHIR artifact
+	at mappings/datatypes/HL7 Data Type - FHIR R4_ XTN[ContactPoint] - Sheet1.csv(:13)
+	near: 8,XTN.8,Extension,SNM,0,1,,,,extension-contactpoint-extension,,string,0,1,SNM[String],,,,
+E32) No mapping for TQ[Appointment]. Missing file: HL7 Data Type - FHIR R4_ TQ[Appointment] - Sheet1.csv
+	at mappings/segments/HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv(:14)
+	near: 11,SCH-11,Appointment Timing Quantity,TQ,1,-1,,,,$this,,,,,TQ[Appointment],,,,
+E33) DateTime is not a recognized FHIR artifact
+	at mappings/datatypes/HL7 Data Type - FHIR R4_ TQ[ServiceRequest] - Sheet1.csv(:10)
+	near: occurrenceTiming.repeat.boundsPeriod.start",,dateTime,0,1,TS[DateTime],,,,
+E34) No mapping for XAD[Organization]. Missing file: HL7 Data Type - FHIR R4_ XAD[Organization]
