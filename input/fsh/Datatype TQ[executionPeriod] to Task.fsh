@@ -1,8 +1,8 @@
-// HL7 Data Type - FHIR R4_ TQ[Task-executionPeriod] - Sheet1.csv
+// HL7 Data Type - FHIR R4_ TQ[Task-ExecutionPeriod] - Sheet1.csv
 Instance: DatatypeTQExecutionPeriodToTask
 InstanceOf: ConceptMap
-Title: "Datatype TQ[executionPeriod] to Task Map"
-* title = "Datatype TQ[executionPeriod] to Task Map"
+Title: "Datatype TQ[ExecutionPeriod] to Task Map"
+* title = "Datatype TQ[ExecutionPeriod] to Task Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TQ to the FHIR Task Resource."
 * id = "datatype-tq-executionperiod-to-task"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-tq-executionperiod-to-task"
@@ -10,7 +10,7 @@ Title: "Datatype TQ[executionPeriod] to Task Map"
 * name = "DatatypeTQExecutionPeriodToTask"
 * status = #active
 * experimental = true
-* date = "2023-07-26"
+* date = "2023-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -21,7 +21,7 @@ Title: "Datatype TQ[executionPeriod] to Task Map"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Datatype TQ[executionPeriod] to Task.fsh"
+* extension[0].extension[1].valueString = "Datatype TQ[ExecutionPeriod] to Task.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1f4PcY0fzBbcg7ewW67TpNGPKDZHMtA8AKRHuRVLrzqc/edit#gid=0"
 * group.element[0].code = #TQ.4

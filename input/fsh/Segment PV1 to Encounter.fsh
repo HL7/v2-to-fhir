@@ -10,7 +10,7 @@ Title: "Segment PV1 to Encounter Map"
 * name = "SegmentPV1ToEncounter"
 * status = #active
 * experimental = true
-* date = "2023-07-26"
+* date = "2023-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -522,7 +522,7 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[22].target.extension[0].extension[2].valueInteger = -1
 * group.element[22].target.display = "location[3].location(Location)"
 * group.element[22].target.dependsOn[0].property = "data-type-map"
-* group.element[22].target.dependsOn[0].value = "PL"
+* group.element[22].target.dependsOn[0].value = "PL[Location]"
 * group.element[23].code = #PV1-11
 * group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].extension[0].extension[0].url = "type"
@@ -850,7 +850,7 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[38].target.extension[0].extension[2].valueInteger = -1
 * group.element[38].target.display = "location[4].location(Location)"
 * group.element[38].target.dependsOn[0].property = "data-type-map"
-* group.element[38].target.dependsOn[0].value = "PL"
+* group.element[38].target.dependsOn[0].value = "PL[Location]"
 * group.element[39].code = #PV1-42
 * group.element[39].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[39].extension[0].extension[0].url = "type"
@@ -885,7 +885,7 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[40].target.extension[0].extension[2].valueInteger = -1
 * group.element[40].target.display = "location[5].location(Location)"
 * group.element[40].target.dependsOn[0].property = "data-type-map"
-* group.element[40].target.dependsOn[0].value = "PL"
+* group.element[40].target.dependsOn[0].value = "PL[Location]"
 * group.element[41].code = #PV1-43
 * group.element[41].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[41].extension[0].extension[0].url = "type"
@@ -979,7 +979,7 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[45].target.extension[0].extension[2].valueInteger = -1
 * group.element[45].target.display = "identifier[2]"
 * group.element[45].target.dependsOn[0].property = "data-type-map"
-* group.element[45].target.dependsOn[0].value = "CX"
+* group.element[45].target.dependsOn[0].value = "CX[Identifier]"
 * group.element[46].code = #PV1-52
 * group.element[46].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[46].extension[0].extension[0].url = "type"
@@ -1084,4 +1084,4 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[50].target.extension[0].extension[2].valueInteger = -1
 * group.element[50].target.display = "episodeOfCare(EpisodeOfCare[1].identifier)"
 * group.element[50].target.dependsOn[0].property = "data-type-map"
-* group.element[50].target.dependsOn[0].value = "CX"
+* group.element[50].target.dependsOn[0].value = "CX[Identifier]"

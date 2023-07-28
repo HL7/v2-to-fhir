@@ -10,7 +10,7 @@ Title: "Datatype TQ to ServiceRequest Map"
 * name = "DatatypeTQToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2023-07-26"
+* date = "2023-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -148,6 +148,8 @@ Title: "Datatype TQ to ServiceRequest Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "occurrenceTiming.repeat.boundsPeriod.start"
+* group.element[5].target.dependsOn[0].property = "data-type-map"
+* group.element[5].target.dependsOn[0].value = "TS[DateTime]"
 * group.element[6].code = #TQ.5
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -167,6 +169,8 @@ Title: "Datatype TQ to ServiceRequest Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "occurrenceTiming.repeat.boundsPeriod.end"
+* group.element[6].target.dependsOn[0].property = "data-type-map"
+* group.element[6].target.dependsOn[0].value = "TS[DateTime]"
 * group.element[7].code = #TQ.6
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"

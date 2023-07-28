@@ -1,16 +1,16 @@
-// HL7 Segment - FHIR R4_ PRT[Patient-GeneralPractitioner] - Sheet1.csv
-Instance: SegmentPRTGeneralPractitionerToPatient
+// HL7 Segment - FHIR R4_ PRT[Patient-GeneralPractitioner(Practitioner)] - Sheet1.csv
+Instance: SegmentPRTGeneralPractitionerPractitionerToPatient
 InstanceOf: ConceptMap
-Title: "Segment PRT[GeneralPractitioner] to Patient Map"
-* title = "Segment PRT[GeneralPractitioner] to Patient Map"
+Title: "Segment PRT[GeneralPractitioner(Practitioner)] to Patient Map"
+* title = "Segment PRT[GeneralPractitioner(Practitioner)] to Patient Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PRT to the FHIR Patient Resource."
-* id = "segment-prt-generalpractitioner-to-patient"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-prt-generalpractitioner-to-patient"
+* id = "segment-prt-generalpractitioner-practitioner-to-patient"
+* url = "http://hl7.org/fhir/uv/v2mappings/segment-prt-generalpractitioner-practitioner-to-patient"
 * version = "1.0"
-* name = "SegmentPRTGeneralPractitionerToPatient"
+* name = "SegmentPRTGeneralPractitionerPractitionerToPatient"
 * status = #active
 * experimental = true
-* date = "2023-07-26"
+* date = "2023-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -21,7 +21,7 @@ Title: "Segment PRT[GeneralPractitioner] to Patient Map"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Segment PRT[GeneralPractitioner] to Patient.fsh"
+* extension[0].extension[1].valueString = "Segment PRT[GeneralPractitioner(Practitioner)] to Patient.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1bdaAckuDNz3OVL9VjJn79gk0BlxzpsA7zpTrcd8eBTs/edit#gid=0"
 * group.element[0].code = #PRT-5

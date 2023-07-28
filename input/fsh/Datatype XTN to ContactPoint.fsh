@@ -10,7 +10,7 @@ Title: "Datatype XTN to ContactPoint Map"
 * name = "DatatypeXTNToContactPoint"
 * status = #active
 * experimental = true
-* date = "2023-07-26"
+* date = "2023-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -64,8 +64,10 @@ Title: "Datatype XTN to ContactPoint Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "use"
-* group.element[1].target.dependsOn[0].property = "vocabulary-map"
-* group.element[1].target.dependsOn[0].value = "TelecomUseCode"
+* group.element[1].target.dependsOn[0].property = "data-type-map"
+* group.element[1].target.dependsOn[0].value = "ID[Code]"
+* group.element[1].target.dependsOn[1].property = "vocabulary-map"
+* group.element[1].target.dependsOn[1].value = "TelecomUseCode"
 * group.element[2].code = #XTN.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -85,8 +87,10 @@ Title: "Datatype XTN to ContactPoint Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "system"
-* group.element[2].target.dependsOn[0].property = "vocabulary-map"
-* group.element[2].target.dependsOn[0].value = "TelecomEquipmentType"
+* group.element[2].target.dependsOn[0].property = "data-type-map"
+* group.element[2].target.dependsOn[0].value = "ID[Code]"
+* group.element[2].target.dependsOn[1].property = "vocabulary-map"
+* group.element[2].target.dependsOn[1].value = "TelecomEquipmentType"
 * group.element[3].code = #XTN.3
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -108,6 +112,8 @@ Title: "Datatype XTN to ContactPoint Map"
 * group.element[3].target.display = "system"
 * group.element[3].target.dependsOn[0].property = "value"
 * group.element[3].target.dependsOn[0].value = "\"email\""
+* group.element[3].target.dependsOn[1].property = "data-type-map"
+* group.element[3].target.dependsOn[1].value = "ID[Code]"
 * group.element[3].target.product[0].property = "antlr"
 * group.element[3].target.product[0].value = "IF XTN.3 NOT VALUED AND XTN.4 VALUED"
 * group.element[4].code = #XTN.3
@@ -131,6 +137,8 @@ Title: "Datatype XTN to ContactPoint Map"
 * group.element[4].target.display = "system.extension-data-absent-reason"
 * group.element[4].target.dependsOn[0].property = "value"
 * group.element[4].target.dependsOn[0].value = "\"unknown\""
+* group.element[4].target.dependsOn[1].property = "data-type-map"
+* group.element[4].target.dependsOn[1].value = "ID[Code]"
 * group.element[4].target.product[0].property = "antlr"
 * group.element[4].target.product[0].value = "IF XTN.3 NOT VALUED AND XTN.4  NOT VALUED"
 * group.element[5].code = #XTN.4
@@ -194,6 +202,8 @@ Title: "Datatype XTN to ContactPoint Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "extension[1].valueString"
+* group.element[7].target.dependsOn[0].property = "data-type-map"
+* group.element[7].target.dependsOn[0].value = "SNM[String]"
 * group.element[8].code = #XTN.6
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -213,6 +223,8 @@ Title: "Datatype XTN to ContactPoint Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "extension-contactpoint-area"
+* group.element[8].target.dependsOn[0].property = "data-type-map"
+* group.element[8].target.dependsOn[0].value = "SNM[String]"
 * group.element[9].code = #XTN.7
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -232,6 +244,8 @@ Title: "Datatype XTN to ContactPoint Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "extension-contactpoint-local"
+* group.element[9].target.dependsOn[0].property = "data-type-map"
+* group.element[9].target.dependsOn[0].value = "SNM[String]"
 * group.element[9].target.product[0].property = "antlr"
 * group.element[9].target.product[0].value = "IF XTN.3 NOT IN (\"Internet\", \"X.400\")"
 * group.element[10].code = #XTN.8
@@ -253,6 +267,8 @@ Title: "Datatype XTN to ContactPoint Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "extension-contactpoint-extension"
+* group.element[10].target.dependsOn[0].property = "data-type-map"
+* group.element[10].target.dependsOn[0].value = "SNM[String]"
 * group.element[11].code = #XTN.12
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -293,6 +309,8 @@ Title: "Datatype XTN to ContactPoint Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "period.start"
+* group.element[12].target.dependsOn[0].property = "data-type-map"
+* group.element[12].target.dependsOn[0].value = "DTM[DateTime]"
 * group.element[13].code = #XTN.14
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -312,6 +330,8 @@ Title: "Datatype XTN to ContactPoint Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "period.end"
+* group.element[13].target.dependsOn[0].property = "data-type-map"
+* group.element[13].target.dependsOn[0].value = "DTM[DateTime]"
 * group.element[14].code = #XTN.18
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -331,3 +351,5 @@ Title: "Datatype XTN to ContactPoint Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "rank"
+* group.element[14].target.dependsOn[0].property = "data-type-map"
+* group.element[14].target.dependsOn[0].value = "NM[PositiveInt]"

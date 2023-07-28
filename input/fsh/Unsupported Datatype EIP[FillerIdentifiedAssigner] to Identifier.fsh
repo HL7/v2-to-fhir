@@ -1,4 +1,4 @@
-// mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv:5
+// mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv:7
 Instance: UnsupportedDatatypeEIPFillerIdentifiedAssignerToIdentifier
 InstanceOf: ConceptMap
 Title: "Datatype EIP[FillerIdentifiedAssigner] to Identifier Map - Unsupported"
@@ -10,7 +10,7 @@ Title: "Datatype EIP[FillerIdentifiedAssigner] to Identifier Map - Unsupported"
 * name = "UnsupportedDatatypeEIPFillerIdentifiedAssignerToIdentifier"
 * status = #active
 * experimental = true
-* date = "2023-07-26"
+* date = "2023-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
