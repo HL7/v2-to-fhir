@@ -27,10 +27,10 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 16,PR1-16,Procedure Code Modifier,CNE,0,-1,,,,,,,,,,,,,
 17,PR1-17,Procedure DRG Type,CWE,0,1,,,,,,,,,,,,,
 18,PR1-18,Tissue Type Code,CWE,0,-1,,,,,,,,,,,,,
-19,PR1-19,Procedure Identifier,EI,0,1,,,,identifier,,Identifier,0,-1,EI[Identifier],,,,
+19,PR1-19,Procedure Identifier,EI,0,1,,,,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,
 20,PR1-20,Procedure Action Code,ID,0,1,,,,,,,,,,,,,
 21,PR1-21,DRG Procedure Determination Status,CWE,0,1,,,,,,,,,,,,,
 22,PR1-22,DRG Procedure Relevance,CWE,0,1,,,,,,,,,,,,,
 23,PR1-23,Treating Organizational Unit,PL,0,-1,,,,location(Location),,Reference(Location),0,1,PL[Location],,,,We will address >=2 cardinality if somebody raises the need.
 24,PR1-24,Respiratory Within Surgery,ID,0,1,,,,,,,,,,,,,
-25,PR1-25,Parent Procedure ID,EI,0,1,,,,partOf(Procedure.identifier),,Reference(Procedure),0,-1,EI[Identifier],,,,Procedure.partOf should contain the reference to another Procedure resource where Procedure.identifier matches the value of PR1-25
+25,PR1-25,Parent Procedure ID,EI,0,1,,,,partOf(Procedure.identifier),,Reference(Procedure),0,-1,EI[Identifier-Extension],,,,Procedure.partOf should contain the reference to another Procedure resource where Procedure.identifier matches the value of PR1-25

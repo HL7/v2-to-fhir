@@ -1,7 +1,7 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
-1,ROL-1,Role Instance ID,EI,0,1,,,,participant[1].individual.reference,,Identifier,0,-1,EI[Identifier],,,,
+1,ROL-1,Role Instance ID,EI,0,1,,,,participant[1].individual.reference,,Identifier,0,-1,EI[Identifier-Extension],,,,
 1,ROL-1,Role Instance ID,EI,0,1,,,,participant[1].individual[1](PractitionerRole.identifier),,,,,,,,,
 2,ROL-2,Action Code,ID,1,1,,,if mapped to a restful service to progress the message.,,,,,,,,,,
 3,ROL-3,Role-ROL,CWE,1,1,,,,participant[1].type,,CodeableConcept,0,-1,CWE[CodeableConcept],Role,,,

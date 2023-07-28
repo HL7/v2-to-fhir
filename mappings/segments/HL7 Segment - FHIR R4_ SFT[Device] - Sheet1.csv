@@ -9,4 +9,4 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 4,SFT-4,Software Binary ID,ST,1,1,,,,modelNumber,,string,,,,,,,
 5,SFT-5,Software Product Information,TX,0,1,,,,note.text,,markdown,1,1,,,,,
 6,SFT-6,Software Install Date,DTM,0,1,,,,version.extension[1].url,,uri,1,1,,,"""https://hl7.org/fhir/R5/StructureDefinition/extension-Device.version.installDate""",,
-6,SFT-6,Software Install Date,DTM,0,1,,,,version.extension[1].valueDateTime,,dateTime,1,1,,,,,
+6,SFT-6,Software Install Date,DTM,0,1,,,,version.extension[1].valueDateTime,,dateTime,1,1,DTM[DateTime],,,,
