@@ -10,7 +10,7 @@ Title: "Segment SCH to ServiceRequest Map"
 * name = "SegmentSCHToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -65,7 +65,9 @@ Title: "Segment SCH to ServiceRequest Map"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "status"
 * group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "FillerStatus[Appointment]"
+* group.element[1].target.dependsOn[0].value = "CWE[code]"
+* group.element[1].target.dependsOn[1].property = "vocabulary-map"
+* group.element[1].target.dependsOn[1].value = "FillerStatus[Appointment]"
 * group.element[2].code = #SCH-26
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -98,4 +100,4 @@ Title: "Segment SCH to ServiceRequest Map"
 * group.element[3].target.extension[0].extension[2].valueInteger = -1
 * group.element[3].target.display = "identifier[2]"
 * group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[3].target.dependsOn[0].value = "EI[Identifier-Extension]"

@@ -10,7 +10,7 @@ Title: "Segment AIG to Appointment Map"
 * name = "SegmentAIGToAppointment"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -68,8 +68,6 @@ Title: "Segment AIG to Appointment Map"
 * group.element[1].target.display = "participant.type"
 * group.element[1].target.dependsOn[0].property = "data-type-map"
 * group.element[1].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[1].target.dependsOn[1].property = "vocabulary-map"
-* group.element[1].target.dependsOn[1].value = "https://www.hl7.org/fhir/valueset-encounter-participant-type.html"
 * group.element[2].code = #AIG-8
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"

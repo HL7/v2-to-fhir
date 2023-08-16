@@ -3,7 +3,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,AIP-1,set ID -AIP,SI,1,1,,,,,,,,,,,,,
 2,AIP-2,Segment Action Code,ID,0,1,,,,,,,,,,,,,
-3,AIP-3,Personnel Resource ID,XCN,0,1,,,,participant.actor[1],,Reference(Practitioner),0,1,XCN[Practioner],,,,
+3,AIP-3,Personnel Resource ID,XCN,0,1,,,,participant.actor[1],,Reference(Practitioner),0,1,XCN[Practitioner],,,,
 4,AIP-4,Resource Type,CWE,1,1,,,,participant.type[1],,CodeableConcept,0,-1,CWE[CodeableConcept],,https://www.hl7.org/fhir/valueset-encounter-participant-type.html,,
 5,AIP-5,Resource Group,CWE,0,1,,,,,,,,,,,,,
 6,AIP-6,Start Date/Time,DTM,0,1,,,,participant.period.start,,,,,,,,,

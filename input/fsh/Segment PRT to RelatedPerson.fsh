@@ -10,7 +10,7 @@ Title: "Segment PRT to RelatedPerson Map"
 * name = "SegmentPRTToRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -157,4 +157,4 @@ Title: "Segment PRT to RelatedPerson Map"
 * group.element[6].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[6].target.display = "identifier[2]"
 * group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "PLN[Location]"
+* group.element[6].target.dependsOn[0].value = "PLN[Identifier]"

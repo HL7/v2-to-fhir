@@ -4,7 +4,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 1,AIG-1,set ID -AIG,SI,1,1,,,,,,,,,,,,,
 2,AIG-2,Segment Action Code,ID,0,1,,,,,,,,,,,,,
 3,AIG-3,Resource ID,CWE,0,1,,,If AIG-4 reflects a location,participant.actor(Location.identifier),,identifier,0,1,CWE[Identifier],,,,
-4,AIG-4,Resource Type,CWE,1,1,,,,participant.type,,CodeableConcept,0,-1,CWE[CodeableConcept],https://www.hl7.org/fhir/valueset-encounter-participant-type.html,,,
+4,AIG-4,Resource Type,CWE,1,1,,,,participant.type,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
 5,AIG-5,Resource Group,CWE,0,1,,,,,,,,,,,,,
 6,AIG-6,Resource Quantity,NM,0,1,,,,,,,,,,,,,
 7,AIG-7,Resource Quantity Units,CNE,0,1,,,,,,,,,,,,,

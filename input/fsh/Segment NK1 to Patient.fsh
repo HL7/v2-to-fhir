@@ -10,7 +10,7 @@ Title: "Segment NK1 to Patient Map"
 * name = "SegmentNK1ToPatient"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -44,7 +44,7 @@ Title: "Segment NK1 to Patient Map"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "contact.name"
 * group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "XPN"
+* group.element[0].target.dependsOn[0].value = "XPN[HumanName]"
 * group.element[1].code = #NK1-4
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -231,7 +231,7 @@ Title: "Segment NK1 to Patient Map"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "contact.gender"
 * group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "CWE[code]"
+* group.element[9].target.dependsOn[0].value = "CWE[Code]"
 * group.element[9].target.dependsOn[1].property = "vocabulary-map"
 * group.element[9].target.dependsOn[1].value = "Gender"
 * group.element[10].code = #NK1-30

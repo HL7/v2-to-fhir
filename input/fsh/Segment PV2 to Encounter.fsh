@@ -10,7 +10,7 @@ Title: "Segment PV2 to Encounter Map"
 * name = "SegmentPV2ToEncounter"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -44,7 +44,7 @@ Title: "Segment PV2 to Encounter Map"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "location[5].location(Location)"
 * group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "PL"
+* group.element[0].target.dependsOn[0].value = "PL[Location]"
 * group.element[1].code = #PV2-1
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"

@@ -1,0 +1,4 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",,
+1,NM.1,Numeric,,1,1,,,,$value,,decimal,0,1,,,,

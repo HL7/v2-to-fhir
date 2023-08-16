@@ -1,7 +1,8 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
-1,NM.1,Numeric,ST,,,,,,value,,,,,,,,,
-1,NM.1,Numeric,ST,,,,,,unit,,,,,,,"""days""",,
-1,NM.1,Numeric,ST,,,,,,system,,,,,,,"""http://unitsofmeasure.org/""",,
-1,NM.1,Numeric,ST,,,,,,code,,,,,,,"""d""",,
+1,NM.1,Numeric,ST,,,,,If positive,value,,,,,,,,,
+1,NM.1,Numeric,ST,,,,,If positive,unit,,,,,,,"""days""",,
+1,NM.1,Numeric,ST,,,,,If positive,system,,,,,,,"""http://unitsofmeasure.org/""",,
+1,NM.1,Numeric,ST,,,,,If positive,code,,,,,,,"""d""",,
+1,NM.1,Numeric,ST,,,,,If negative raise an error,,,,,,,,,,

@@ -10,7 +10,7 @@ Title: "Datatype DR to DateTime Map"
 * name = "DatatypeDRToDateTime"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,3 +43,5 @@ Title: "Datatype DR to DateTime Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "$value"
+* group.element[0].target.dependsOn[0].property = "value"
+* group.element[0].target.dependsOn[0].value = "/must convert v2 date time format to FHIR date time format before populating/"

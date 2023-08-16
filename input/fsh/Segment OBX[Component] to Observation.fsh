@@ -10,7 +10,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * name = "SegmentOBXComponentToObservation"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -832,7 +832,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * group.element[37].target.extension[0].extension[2].valueInteger = -1
 * group.element[37].target.display = "device(Device.identifier)"
 * group.element[37].target.dependsOn[0].property = "data-type-map"
-* group.element[37].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[37].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[38].code = #OBX-20
 * group.element[38].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[38].extension[0].extension[0].url = "type"
@@ -874,7 +874,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * group.element[39].target.extension[0].extension[2].valueInteger = -1
 * group.element[39].target.display = "identifier"
 * group.element[39].target.dependsOn[0].property = "data-type-map"
-* group.element[39].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[39].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[40].code = #OBX-21
 * group.element[40].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[40].extension[0].extension[0].url = "type"

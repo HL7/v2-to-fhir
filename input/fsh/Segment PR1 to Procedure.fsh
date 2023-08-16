@@ -10,7 +10,7 @@ Title: "Segment PR1 to Procedure Map"
 * name = "SegmentPR1ToProcedure"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -361,7 +361,7 @@ Title: "Segment PR1 to Procedure Map"
 * group.element[15].target.extension[0].extension[2].valueInteger = -1
 * group.element[15].target.display = "identifier"
 * group.element[15].target.dependsOn[0].property = "data-type-map"
-* group.element[15].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[15].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[16].code = #PR1-23
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -403,4 +403,4 @@ Title: "Segment PR1 to Procedure Map"
 * group.element[17].target.extension[0].extension[2].valueInteger = -1
 * group.element[17].target.display = "partOf(Procedure.identifier)"
 * group.element[17].target.dependsOn[0].property = "data-type-map"
-* group.element[17].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[17].target.dependsOn[0].value = "EI[Identifier-Extension]"

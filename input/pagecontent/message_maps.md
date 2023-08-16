@@ -26,5 +26,9 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 ### Chapter  7  Observation Reporting
 
 * [ORU_R01](ConceptMap-message-oru-r01-to-bundle.html) - Unsolicited Report Alarm
+
+### Chapter 10  Scheduling
+
+* [SIU_S12](ConceptMap-message-siu-s12-to-bundle.html) - SIU/ACK
 <h2 style='--heading-prefix: ""' id='mapping'>Mapping</h2>
 {% include message_mapping.md %}

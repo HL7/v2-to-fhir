@@ -2,13 +2,14 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
 Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
 1,OML_O21.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
 1,OML_O21.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
-1,OML_O21.MSH,MSH,Message Header,1,1,,,,Provenance[1],MSH[Provenance],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
+1,OML_O21.MSH,MSH,Message Header,1,1,,,"If there is a source in MSH-4, or known based on the configuration.",Provenance[1],MSH[Provenance-Source],Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id,,"If the FHIR transformation does not yield a FHIR message, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
+1,OML_O21.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,"If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
 2,OML_O21.SFT,[{SFT}],Software,0,-1,,,,MessageHeader[1],SFT[MessageHeader],,,Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.
 3,OML_O21.UAC,[ UAC ],User Authentication Credential,0,1,,,,,,,,
 4,OML_O21.NTE,[{NTE}],Notes and Comments (for Header),0,-1,,,,,,,,
 5,OML_O21.PATIENT,[,--- PATIENT begin,0,1,,,,,,,,
 5.1,OML_O21.PATIENT.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
-5.1,OML_O21.PATIENT.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance],Provenance.target.reference=Patient[1].id,,
+5.1,OML_O21.PATIENT.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance-Patient],Provenance.target.reference=Patient[1].id,,
 5.2,OML_O21.PATIENT.PD1,[PD1],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
 5.3,OML_O21.PATIENT.PRT,[{PRT}],Participation (for Patient),0,-1,"IF PRT-4.1 EQUALS ""PP"" AND PRT-4.3 EQUALS ""HL70443""","(element(""4.1"")=""PP"")and(element(""4.3"")=""HL70443"")",,PractitionerRole[1],PRT[PractitionerRole],Patient[1].generalPractitioner.reference=PractitionerRole[1].id,,Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data.
 5.3,OML_O21.PATIENT.PRT,[{PRT}],Participation (for Patient),0,-1,"IF PRT-4.1 NOT EQUALS ""PP"" OR PRT-4.3 NOT EQUALS ""HL70443""","(element(""4.1""!)=""PP"")or(element(""4.3"")!=""HL70443"")",,RelatedPerson[1],PRT[RelatedPerson],RelatedPerson[1].patient.reference=Patient[1].id,,
@@ -25,10 +26,10 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 5.9,OML_O21.PATIENT.INSURANCE,[{,--- INSURANCE begin,0,-1,,,,,,,,
 5.9.1,OML_O21.PATIENT.INSURANCE.IN1,IN1,Insurance,1,1,,,,Coverage[1],IN1[Coverage],Coverage.subscriber=Patient[PID],,Processing of the IN1 segment results in the creation of a new Coverage resource
 5.9.2,OML_O21.PATIENT.INSURANCE.IN2,[ IN2 ],Insurance Additional Information,0,1,,,,Coverage[1],IN2[Coverage],,,Incorporate IN2 content into the Coverage created from the IN1 segment.
-5.9.3,OML_O21.PATIENT.INSURANCE.IN3,[ IN3 ],"Insurance Additional Information, Certification",0,1,,,,Coverage[1],IN3[Coverage],,,Incorporate IN3 content into the Coverage created from the IN1 segment.
+5.9.3,OML_O21.PATIENT.INSURANCE.IN3,[ IN3 ],"Insurance Additional Information, Certification",0,1,,,,Coverage[1],IN3[CareTeam],,,
 5.9,/OML_O21.PATIENT.INSURANCE,}],--- INSURANCE end,,,,,,,,,,
 5.10,OML_O21.PATIENT.GT1,[ GT1 ],Guarantor,0,1,,,,,,,,
-5.11,OML_O21.PATIENT.AL1,[{AL1}],Allergy Information,0,-1,,,,AllergyIntolerance,AL1,AllergyIntolerance.patient=Patient[PID],,Processing of the AL1 segment results in the creation of a new AllergyIntolerance resource
+5.11,OML_O21.PATIENT.AL1,[{AL1}],Allergy Information,0,-1,,,,AllergyIntolerance,AL1[AllergyIntolerance],AllergyIntolerance.patient=Patient[PID],,Processing of the AL1 segment results in the creation of a new AllergyIntolerance resource
 5,/OML_O21.PATIENT,],--- PATIENT end,,,,,,,,,,
 6,OML_O21.ORDER,{,--- ORDER begin,1,-1,,,,,,,,
 6.1,OML_O21.ORDER.ORC,ORC,Common Order,1,1,,,,ServiceRequest[1],ORC[ServiceRequest],ServiceRequest.subject=Patient[PID],,Processing of each ORC segment results in the creation of a new ServiceRequest resource

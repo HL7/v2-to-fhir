@@ -1,11 +1,11 @@
-b,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,IN1-1,Set ID - IN1,SI,1,1,,,,,,,,,,,,,
 2,IN1-2,Health Plan ID,CWE,1,1,,,,,,,,,,InsurancePlanID,,,
 3,IN1-3,Insurance Company ID,CX,1,-1,,,,,,,,,,,,,
 4,IN1-4,Insurance Company Name,XON,0,-1,,,,payor[1](Organization),,Reference,,,XON[Organization],,,,
-5,IN1-5,Insurance Company Address,XAD,0,-1,,,,payer[1](Organization),,Reference,,,XAD[Organization],,,,
+5,IN1-5,Insurance Company Address,XAD,0,-1,,,,payer[1](Organization.address),,Reference,,,XAD[Address],,,,
 6,IN1-6,Insurance Co Contact Person,XPN,0,-1,,,,,,,,,,,,,
 7,IN1-7,Insurance Co Phone Number,XTN,0,-1,,,,,,,,,,,,,
 8,IN1-8,Group Number,ST,0,1,,,,,,,,,,,,,

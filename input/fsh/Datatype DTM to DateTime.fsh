@@ -10,7 +10,7 @@ Title: "Datatype DTM to DateTime Map"
 * name = "DatatypeDTMToDateTime"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -34,4 +34,4 @@ Title: "Datatype DTM to DateTime Map"
 * group.element[0].target.code = #$value
 * group.element[0].target.display = "$value"
 * group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "/must convert v2 date time format to FHIR date time format before populating/"
+* group.element[0].target.dependsOn[0].value = "/must convert v2 date time format to FHIR date time format before populating according to FHIR date/time format https://build.fhir.org/datatypes.html#dateTime /"

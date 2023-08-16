@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AllergyType[AllergyIntolerance.category] - Sheet1.csv
+// HL7 Concept Map_ AllergenType[AllergyIntoleranceCategory] - Sheet1.csv
 Instance: TableHL70127ToAllergyIntoleranceCategory
 InstanceOf: ConceptMap
 Title: "Table HL70127 to Allergy Intolerance Category Map"
@@ -10,7 +10,7 @@ Title: "Table HL70127 to Allergy Intolerance Category Map"
 * name = "TableHL70127ToAllergyIntoleranceCategory"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

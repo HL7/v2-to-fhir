@@ -2,11 +2,12 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
 Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
 1,VXU_V04.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
 1,VXU_V04.MSH,MSH,Message Header Segment,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
-1,VXU_V04.MSH,MSH,Message Header Segment,1,1,,,,Provenance[1],MSH[Provenance],Provenance.target=Bundle; Provenance.target=MessageHeader[MSH],,
+1,VXU_V04.MSH,MSH,Message Header Segment,1,1,,,"If there is a source in MSH-4, or known based on the configuration.",Provenance[1],MSH[Provenance-Source],Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id,,"If the FHIR transformation does not yield a FHIR message, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
+1,VXU_V04.MSH,MSH,Message Header Segment,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,"If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
 2,VXU_V04.SFT,[{ SFT }],Software,0,-1,,,,MessageHeader[1],SFT[MessageHeader],,,Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.
 3,VXU_V04.UAC,[ UAC ],User Authentication Credential,0,1,,,,,,,,
 4,VXU_V04.PID,PID,Patient Identification Segment,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
-4,VXU_V04.PID,PID,Patient Identification Segment,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance],Provenance.target.reference=Patient[1].id,,
+4,VXU_V04.PID,PID,Patient Identification Segment,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance-Patient],Provenance.target.reference=Patient[1].id,,
 5,VXU_V04.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
 6,VXU_V04.NK1,[{ NK1 }],Next of Kin/Associated Parties,0,-1,,,,RelatedPerson[1],NK1[RelatedPerson],RelatedPerson.patient.reference=Patient[PID].id,,"Typically, each NK1 will be translated to either a new RelatedPerson resource or added as a new occurrence of Patient.contact, but it's possible to insert the NK1 data into both structures."
 6,VXU_V04.NK1,[{ NK1 }],Next of Kin/Associated Parties,0,-1,,,,Patient[1],NK1[Patient],,,
@@ -29,7 +30,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 11.2,VXU_V04.PERSON_OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-10 VALUED,,,Device[1],PRT[Device],Observation[1].device.reference=Device.id,,
 11.2,VXU_V04.PERSON_OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[1],PRT[Observation-Location],,,"At this time we don't know of a use case for sending a location PRT to a patient level observations. We've provided a mapping from PRT to Location but not way to link it to other resources in the Bundle. If there is a known use case, please comment on it so that we can develop a solution."
 11.2,VXU_V04.PERSON_OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-5 VALUED,,,PractitionerRole[1],PRT[PractitionerRole],Observation.performer.reference=PractitionerRole[1].id,,
-11.3,VXU_V04.PERSON_OBSERVATION.NTE,[{ NTE }],Notes (Regarding Patient Observation),0,-1,,,,Observation[1].note,NTE[Annotation],,,
+11.3,VXU_V04.PERSON_OBSERVATION.NTE,[{ NTE }],Notes (Regarding Patient Observation),0,-1,,,,Observation[1].note,NTE[ServiceRequest],,,
 11.4,/VXU_V04.PERSON_OBSERVATION,}],--- PERSON_OBSERVATION end,,,,,,,,,,
 12,VXU_V04.ORDER,[{,--- ORDER begin,0,-1,,,,,,,,
 12.1,VXU_V04.ORDER.ORC,ORC,Common Order,1,1,,,,Immunization[1],ORC[Immunization],Immunzation.patient.reference=Patient[1].id,,Processing of each ORC segment results in the creation of a new Immunization resource
@@ -56,6 +57,6 @@ It may be possible to reuse a Practitioner resource in the bundle created from s
 12.6.2,VXU_V04.ORDER.OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-10 VALUED,,,Device[2],PRT[Device],Observation[1].device.reference=Device.id,,
 12.6.2,VXU_V04.ORDER.OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[Observation-Location],,,
 12.6.2,VXU_V04.ORDER.OBSERVATION.PRT,[{ PRT }],Participation (for Observation),0,-1,IF PRT-5 VALUED,,,PractitionerRole[4],PRT[PractitionerRole],Observation.performer.reference=PractitionerRole[1].id,,
-12.6.3,VXU_V04.ORDER.OBSERVATION.NTE,[{ NTE }],Notes (Regarding Immunization),0,-1,,,,Observation[2].note,NTE[Annotation],,,
+12.6.3,VXU_V04.ORDER.OBSERVATION.NTE,[{ NTE }],Notes (Regarding Immunization),0,-1,,,,Observation[2].note,NTE[ServiceRequest],,,
 12.6.4,/VXU_V04.ORDER.OBSERVATION,}],--- OBSERVATION end,,,,,,,,,,
 12.7,/VXU_V04.ORDER,}],--- ORDER end,,,,,,,,,,

@@ -10,7 +10,7 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * name = "SegmentAL1ToAllergyIntolerance"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -72,7 +72,7 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * group.element[2].target.dependsOn[0].property = "data-type-map"
 * group.element[2].target.dependsOn[0].value = "CWE[code]"
 * group.element[2].target.dependsOn[1].property = "vocabulary-map"
-* group.element[2].target.dependsOn[1].value = "AllergyType[AllergyIntolerance.category]"
+* group.element[2].target.dependsOn[1].value = "AllergenType[AllergyIntoleranceCategory]"
 * group.element[3].code = #AL1-2
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -116,7 +116,7 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * group.element[4].target.dependsOn[0].property = "data-type-map"
 * group.element[4].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[4].target.dependsOn[1].property = "vocabulary-map"
-* group.element[4].target.dependsOn[1].value = "AllergyTyp[AllergyIntolerance.category-original]"
+* group.element[4].target.dependsOn[1].value = "AllergenType[AllergyIntoleranceOriginalCategory]"
 * group.element[5].code = #AL1-2
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"

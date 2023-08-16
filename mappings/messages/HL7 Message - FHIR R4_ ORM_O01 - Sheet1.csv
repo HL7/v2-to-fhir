@@ -2,12 +2,12 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
 Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
 1,ORM_O01.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
 1,ORM_O01.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
-1,ORM_O01.MSH,MSH,Message Header,1,1,,,,Provenance[1],MSH[Provenance],"Provenance[1].target.reference=Bundle.id; 
-Provenance[1].target.reference=MessageHeader[1].id",,
+1,ORM_O01.MSH,MSH,Message Header,1,1,,,"If there is a source in MSH-4, or known based on the configuration.",Provenance[1],MSH[Provenance-Source],Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id,,"If the FHIR transformation does not yield a FHIR message, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
+1,ORM_O01.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,"If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
 2,ORM_O01.NTE,[{ NTE }],Notes and Comments (for Header),0,-1,,,,,,,,Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.
 3,ORM_O01.PATIENT,[ ,PATIENT begin,0,1,,,,,,,,
 3.1,ORM_O01.PATIENT.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
-3.1,ORM_O01.PATIENT.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance],Provenance.target.reference=Patient[1].id,,
+3.1,ORM_O01.PATIENT.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance-Patient],Provenance.target.reference=Patient[1].id,,
 3.2,ORM_O01.PATIENT.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
 3.3,ORM_O01.PATIENT.NTE,[{ NTE }],Notes and Comments (for Patient ID),0,-1,,,,,,,,
 3.4,ORM_O01.PATIENT.VISIT,[,PATIENT_VISIT begin,0,1,,,,,,,,
@@ -21,7 +21,7 @@ Provenance[1].target.reference=MessageHeader[1].id",,
 3.5.3,ORM_O01.PATIENT.INSURANCE.IN3,[ IN3 ],Insurance Add'l Info – Cert.,0,1,,,,Coverage[1],,,,Incorporate IN3 content into the Coverage created from the IN1 segment.
 3.5.4,/ORM_O01.PATIENT.INSURANCE,}],INSURANCE end,,,,,,,,,,
 3.6,ORM_O01.PATIENT.GT1,[ GT1 ],Guarantor,0,1,,,,,,,,
-3.7,ORM_O01.PATIENT.AL1,[{ AL1 }],Allergy Information,0,-1,,,,AllergyIntolerance,AL1,AllergyIntolerance.patient.reference=Patient[1].id,,Processing of the AL1 segment results in the creation of a new AllergyIntolerance resource
+3.7,ORM_O01.PATIENT.AL1,[{ AL1 }],Allergy Information,0,-1,,,,AllergyIntolerance,AL1[AllergyIntolerance],AllergyIntolerance.patient.reference=Patient[1].id,,Processing of the AL1 segment results in the creation of a new AllergyIntolerance resource
 3.8,/ORM_O01.PATIENT,],PATIENT end,,,,,,,,,,
 4,ORM_O01.ORDER,{,ORDER begin,1,-1,,,,,,,,
 4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,,,,ServiceRequest[1],ORC[ServiceRequest],ServiceRequest[1].subject.reference=Patient[1].id,,Processing of each ORC segment results in the creation of a new ServiceRequest resource
@@ -42,7 +42,7 @@ Provenance[1].target.reference=MessageHeader[1].id",,
 4.2.1.10,ORM_O01.ORDER_DETAIL.CHOICE,|,,,,,,,,,,,
 4.2.1.11,ORM_O01.ORDER_DETAIL.CHOICE.ODT,ODT,Diet Tray Instructions,0,1,,,,,,,,
 4.2.1.12,/ORM_O01.ORDER_DETAIL.CHOICE,>,,,,,,,,,,,
-4.2.2,ORM_O01.ORDER_DETAIL.NTE,[{ NTE }],Notes and Comments (for Detail),0,-1,,,,ServiceRequest[1].note,NTE[Annotation],,,
+4.2.2,ORM_O01.ORDER_DETAIL.NTE,[{ NTE }],Notes and Comments (for Detail),0,-1,,,,ServiceRequest[1].note,NTE[ServiceRequest],,,
 4.2.3,ORM_O01.ORDER_DETAIL.CTD,[ CTD ],Contact Data 1,0,1,,,,,,,,
 4.2.4,ORM_O01.ORDER_DETAIL.DG1,[{ DG1 }],Diagnosis,0,-1,,,,ServiceRequest[1].reasonReference(Condition),DG1[Condition],Condition.subject.reference=Patient[1].id,,Processing of the DG1 segment results in the creation of a new Condition resource which is referenced in the ServiceRequest created by the ORC segment
 ,,,,,,,,,,,,,

@@ -59,6 +59,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [HL70487](ConceptMap-table-hl70487-to-v2-0487.html) - Specimen Type  to FHIR [V2 0487](http://hl7.org/fhir/R4/v2/0487/index.html)
 * [HL70488](ConceptMap-table-hl70488-to-v2-0488.html) - Specimen Collection Method  to FHIR [V2 0488](http://hl7.org/fhir/R4/v2/0488/index.html)
 * [HL70498](ConceptMap-table-hl70498-to-consent-state-codes.html) - Consent Status  to FHIR [Consent State Codes](http://hl7.org/fhir/R4/codesystem-consent-state-codes.html)
+* [HL70528](ConceptMap-table-hl70528-to-v3-timingevent.html) - Event Related Period  to FHIR [V3 TimingEvent](http://hl7.org/fhir/R4/v3/TimingEvent/cs.html)
 * [HL70549](ConceptMap-table-hl70549-to-v3-rolecode.html) - NDC Codes  to FHIR [V3 RoleCode](http://hl7.org/fhir/R4/v3/RoleCode/cs.html)
 * [HL70550](ConceptMap-table-hl70550-to-v2-0550.html) - Body Parts  to FHIR [V2 0550](http://hl7.org/fhir/R4/v2/0550/index.html)
 <h2 style='--heading-prefix: ""' id='mapping'>Mapping</h2>

@@ -10,7 +10,7 @@ Title: "Datatype NM[LengthOfStay] to Quantity Map"
 * name = "DatatypeNMLengthOfStayToQuantity"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -32,6 +32,8 @@ Title: "Datatype NM[LengthOfStay] to Quantity Map"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #value
 * group.element[0].target.display = "value"
+* group.element[0].target.product[0].property = "narrative"
+* group.element[0].target.product[0].value = "If positive"
 * group.element[1].code = #NM.1
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -42,6 +44,8 @@ Title: "Datatype NM[LengthOfStay] to Quantity Map"
 * group.element[1].target.display = "unit"
 * group.element[1].target.dependsOn[0].property = "value"
 * group.element[1].target.dependsOn[0].value = "\"days\""
+* group.element[1].target.product[0].property = "narrative"
+* group.element[1].target.product[0].value = "If positive"
 * group.element[2].code = #NM.1
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -52,6 +56,8 @@ Title: "Datatype NM[LengthOfStay] to Quantity Map"
 * group.element[2].target.display = "system"
 * group.element[2].target.dependsOn[0].property = "value"
 * group.element[2].target.dependsOn[0].value = "\"http://unitsofmeasure.org/\""
+* group.element[2].target.product[0].property = "narrative"
+* group.element[2].target.product[0].value = "If positive"
 * group.element[3].code = #NM.1
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -62,3 +68,5 @@ Title: "Datatype NM[LengthOfStay] to Quantity Map"
 * group.element[3].target.display = "code"
 * group.element[3].target.dependsOn[0].property = "value"
 * group.element[3].target.dependsOn[0].value = "\"d\""
+* group.element[3].target.product[0].property = "narrative"
+* group.element[3].target.product[0].value = "If positive"

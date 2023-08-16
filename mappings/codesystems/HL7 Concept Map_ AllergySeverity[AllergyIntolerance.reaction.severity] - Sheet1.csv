@@ -1,9 +1,9 @@
 HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,,,,Comment
 Code,Text,Code System,Computable,Narrative,Code,,Display,Code System,,
-SV,Severe,http://terminology.hl7.org/CodeSystem/v2-0128,,,severe,,Severe,https://www.hl7.org/fhir/codesystem-reaction-event-severity.html,,
-MO,Moderate,http://terminology.hl7.org/CodeSystem/v2-0128,,,moderate,,Moderate,https://www.hl7.org/fhir/codesystem-reaction-event-severity.html,,
-MI,Mild,http://terminology.hl7.org/CodeSystem/v2-0128,,,mild,,Mild,https://www.hl7.org/fhir/codesystem-reaction-event-severity.html,,
-U,Unknown,http://terminology.hl7.org/CodeSystem/v2-0128,,,,,,,,
+SV,Severe,HL70128,,,severe,,Severe,https://www.hl7.org/fhir/codesystem-reaction-event-severity.html,,
+MO,Moderate,HL70128,,,moderate,,Moderate,https://www.hl7.org/fhir/codesystem-reaction-event-severity.html,,
+MI,Mild,HL70128,,,mild,,Mild,https://www.hl7.org/fhir/codesystem-reaction-event-severity.html,,
+U,Unknown,HL70128,,,,,,,,
 399166001,Fatal (qualifier value),http://snomed.info/sct,,,severe,,Severe,https://www.hl7.org/fhir/codesystem-reaction-event-severity.html,,
 442452003,Life threatening severity (qualifier value),http://snomed.info/sct,,,severe,,Severe,https://www.hl7.org/fhir/codesystem-reaction-event-severity.html,,
 255604002,Mild (qualifier value),http://snomed.info/sct,,,mild,,Mild,https://www.hl7.org/fhir/codesystem-reaction-event-severity.html,,

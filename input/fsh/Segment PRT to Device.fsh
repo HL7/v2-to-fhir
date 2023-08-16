@@ -10,7 +10,7 @@ Title: "Segment PRT to Device Map"
 * name = "SegmentPRTToDevice"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -67,7 +67,7 @@ Title: "Segment PRT to Device Map"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "identifier"
 * group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "EI[Identifier]"
+* group.element[1].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[1].target.product[0].property = "narrative"
 * group.element[1].target.product[0].value = "If not an HRF or AIDC"
 * group.element[2].code = #PRT-16

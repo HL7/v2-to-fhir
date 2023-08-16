@@ -3,10 +3,10 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 (IS, ID, CE, CNE, CWE)",Assignment,,
 0,OBR,,,,,,,,intent,,,,,,,"""order""",,
 1,OBR-1,Set ID – OBR,SI,0,1,,,,,,,,,,,,,
-2,OBR-2,Placer Order Number,EI,0,1,IF ORC-2 NOT VALUED,,,identifier[1],,Identifier,0,-1,EI[Identifier],,,,
+2,OBR-2,Placer Order Number,EI,0,1,IF ORC-2 NOT VALUED,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
 2,OBR-2,Placer Order Number,EI,0,1,IF ORC-2 NOT VALUED,,,identifier[1].type.coding.code,,code,0,1,,,"""PLAC""",,
 2,OBR-2,Placer Order Number,EI,0,1,IF ORC-2 NOT VALUED,,,identifier[1].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,
-3,OBR-3,Filler Order Number,EI,0,1,IF ORC-3 NOT VALUED,,,identifier[2],,Identifier,0,-1,EI[Identifier],,,,
+3,OBR-3,Filler Order Number,EI,0,1,IF ORC-3 NOT VALUED,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
 3,OBR-3,Filler Order Number,EI,0,1,IF ORC-3 NOT VALUED,,,,"extension??-fingerprint[1]=fingerprint(ORC-2,ORC-3,....)",,,,,,,,"To be resolved as part of parent-child guidance from the base standard, including reflex/add-on/micro."
 3,OBR-3,Filler Order Number,EI,0,1,IF ORC-3 NOT VALUED,,,identifier[2].type.coding.code,,code,0,1,,,"""FILL""",,
 3,OBR-3,Filler Order Number,EI,0,1,IF ORC-3 NOT VALUED,,,identifier[2].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,

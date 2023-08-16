@@ -15,4 +15,4 @@ M,"Corrected, not final",HL70123,,,,,,,,,Need JIRA for UTG to add this value.
 N,"Procedure completed, results pending",HL70123,,,,,,,,,
 ,,,,,,appended,,Appended,http://hl7.org/fhir/diagnostic-report-status,,"corrected and appended are part of amended, but amended  is used as corrected only."
 ,,,,,,entered-in-errror,,Entered in Error,http://hl7.org/fhir/diagnostic-report-status,,
-,,,,,,unkown,,Unknown,http://hl7.org/fhir/diagnostic-report-status,,
+,,,,,,unknown,,Unknown,http://hl7.org/fhir/diagnostic-report-status,,

@@ -10,7 +10,7 @@ Title: "Datatype HD to Organization Map"
 * name = "DatatypeHDToOrganization"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -90,5 +90,7 @@ Title: "Datatype HD to Organization Map"
 * group.element[3].target.display = "identifier[2].system"
 * group.element[3].target.dependsOn[0].property = "value"
 * group.element[3].target.dependsOn[0].value = "\"urn:ietf:rfc:3986\""
+* group.element[3].target.dependsOn[1].property = "data-type-map"
+* group.element[3].target.dependsOn[1].value = "​ID[CodeableConcept-UniversalID]"
 * group.element[3].target.product[0].property = "antlr"
 * group.element[3].target.product[0].value = "IF HD.3 IN (\"ISO\", \"UUID\")"

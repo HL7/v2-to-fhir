@@ -6,7 +6,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 3,PD1-3,Patient Primary Facility,XON,0,-1,,,,generalPractitioner[1](Organization),,Reference(Organization),0,-1,XON[Organization],,,,Is Patient.managingOrganization better?
 4,PD1-4,Patient Primary Care Provider Name & ID No.,XCN,0,-1,,,,generalPractitioner[2](Practitioner),,Reference(Practitioner),0,-1,XCN[Practitioner],,,,
 5,PD1-5,Student Indicator,CWE,0,1,,,,,extension??-studentStatus,CodeableConcept,0,1,CWE[CodeableConcept],StudentStatus,,,
-6,PD1-6,Handicap,CWE,0,1,,,,extension[1].url,,uri,1,1,,W to Wheelchair 0295,"""http://hl7.org/fhir/StructureDefinition/patient-disability""",,
+6,PD1-6,Handicap,CWE,0,1,,,,extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-disability""",,
 6,PD1-6,Handicap,CWE,,1,,,,extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],,,,The FHIR extension does not include a value set
 7,PD1-7,Living Will Code,CWE,0,1,,,,,extension??-livingWill,CodeableConcept,0,1,CWE[CodeableConcept],LivingWill,,,
 8,PD1-8,Organ Donor Code,CWE,0,1,,,,,,,,,,,,,

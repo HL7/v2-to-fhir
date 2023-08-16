@@ -10,7 +10,7 @@ Title: "Segment PRT to CareTeam Map"
 * name = "SegmentPRTToCareTeam"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -118,7 +118,7 @@ Title: "Segment PRT to CareTeam Map"
 * group.element[5].target.code = #participant.member(Organization)
 * group.element[5].target.display = "participant.member(Organization)"
 * group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "XON[Organization"
+* group.element[5].target.dependsOn[0].value = "XON[Organization]"
 * group.element[5].target.product[0].property = "antlr"
 * group.element[5].target.product[0].value = "IF PRT-5 AND PRT-6 AREA NOT VALUED"
 * group.element[6].code = #PRT-8
@@ -134,7 +134,7 @@ Title: "Segment PRT to CareTeam Map"
 * group.element[6].target.code = #participant.onBehalfOf(Organization)
 * group.element[6].target.display = "participant.onBehalfOf(Organization)"
 * group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "XON[Organization"
+* group.element[6].target.dependsOn[0].value = "XON[Organization]"
 * group.element[6].target.product[0].property = "antlr"
 * group.element[6].target.product[0].value = "IF PRT-5 OR PRT-6 IS VALUED"
 * group.element[7].code = #PRT-11

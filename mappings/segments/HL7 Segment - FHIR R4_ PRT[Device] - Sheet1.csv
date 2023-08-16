@@ -12,7 +12,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 8,PRT-8,Organization,XON,0,-1,,,,,,,,,,,,,
 9,PRT-9,Location,PL,0,-1,,,,,,,,,,,,,
 10,PRT-10,Device,EI,0,-1,,,If it represents a HRF or AIDC,udiCarrier[1],,BackboneElement,0,-1,EI[Device-udiCarrier],,,,
-10,PRT-10,Device,EI,0,-1,,,If not an HRF or AIDC,identifier,,Identifier,0,-1,EI[Identifier],,,,
+10,PRT-10,Device,EI,0,-1,,,If not an HRF or AIDC,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,
 11,PRT-11,Begin Date/Time (arrival time),DTM,0,1,,,,,,,,,,,,,"We are not aware of current use of this field.  If used, that may indicate that mapping to DeviceUseStatement may be better.  Please submit a JIRA when you are using this field."
 12,PRT-12,End Date/Time (departure time),DTM,0,1,,,,,,,,,,,,,"We are not aware of current use of this field.  If used, that may indicate that mapping to DeviceUseStatement may be better.  Please submit a JIRA when you are using this field."
 13,PRT-13,Qualitative Duration,CWE,0,1,,,,,,,,,,,,,

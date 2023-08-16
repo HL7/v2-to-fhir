@@ -1,8 +1,8 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
-1,SCH-1,Placer Appointment ID,EI,0,1,,,,identifier[1],,Identifier,0,-1,EI[Identifier],,,,
-2,SCH-2,Filler Appointment ID,EI,0,1,,,,identifier[2],,Identifier,0,-1,EI[Identifier],,,,
+1,SCH-1,Placer Appointment ID,EI,0,1,,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
+2,SCH-2,Filler Appointment ID,EI,0,1,,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
 3,SCH-3,Occurrence Number,NM,0,1,,,,,,,,,,,,,
 4,SCH-4,Placer Group Number,EI,0,1,,,,,,,,,,,,,
 5,SCH-5,Schedule ID,CWE,0,1,,,,,,,,,,,,,

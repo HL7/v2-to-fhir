@@ -2,8 +2,10 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,SPM-1,Set ID - SPM,SI,0,1,,,,,,,,,,,,,
-2,SPM-2,Specimen ID,EIP,0,1,,,,identifier[1],,Identifier,0,-1,EIP[Identifier],,,,
-3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,Only one of the two parent references in EIP can be mapped.  The implementation needs to choose which one.,parent.identifier,,Identifier,0,1,EIP[Identifier],,,,"Note that Specimen.parent can repeat, i.e., match the SPM-3 cardinality, but Specimen.parent.identifier does not.  Therefore, while a specimen can have multiple parents, putting placer and filler parent identifiers in separate parent instances is not appropriate."
+2,SPM-2,Specimen ID,EIP,0,1,,,,identifier[1],,Identifier,0,-1,EIP[Identifier-PlacerAssignedIdentifier],,,,
+2,SPM-2,Specimen ID,EIP,0,1,,,,identifier[2],,Identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,
+3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,,parent.identifier,,Identifier,0,1,EIP[Identifier-PlacerAssignedIdentifier],,,,"Note that Specimen.parent can repeat, i.e., match the SPM-3 cardinality, but Specimen.parent.identifier does not.  Therefore, while a specimen can have multiple parents, putting placer and filler parent identifiers in separate parent instances is not appropriate."
+3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,,parent.identifier,,Identifier,0,1,EIP[Identifier-FillerAssignedIdentifier],,,,
 4,SPM-4,Specimen Type,CWE,1,1,,,,type,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenType,,,
 5,SPM-5,Specimen Type Modifier,CWE,0,-1,,,,,,,,,,,,,
 6,SPM-6,Specimen Additives,CWE,0,-1,,,,container.additiveCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],Addition/Preservative,,,
@@ -33,6 +35,6 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 29,SPM-29,Specimen Child Role,CWE,0,1,,,,,,,,,,,,,
 30,SPM-30,Accession ID,CX,0,-1,,,,accessionIdentifier,,Identifier,0,1,CX[Identifier],,,,
 31,SPM-31,Other Specimen ID,CX,0,-1,,,,identifier[2],,Identifier,0,-1,CX[Identifier],,,,
-32,SPM-32,Shipment ID,EI,0,1,,,,identifier[3],,Identifier,0,-1,EI[Identifier],,,,
+32,SPM-32,Shipment ID,EI,0,1,,,,identifier[3],,Identifier,0,-1,EI[Identifier-Extension],,,,
 32,SPM-32,Shipment ID,EI,0,1,,,,identifier[3].type.coding.code,"assign: ""SHIP""",code,0,1,,,,,
 32,SPM-32,Shipment ID,EI,0,1,,,,"identifier[3].type.coding.system=""http://terminology.hl7.org/CodeSystem/v2-0203""",,uri,0,1,,,,,

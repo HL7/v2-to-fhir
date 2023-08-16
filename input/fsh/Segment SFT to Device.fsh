@@ -10,7 +10,7 @@ Title: "Segment SFT to Device Map"
 * name = "SegmentSFTToDevice"
 * status = #active
 * experimental = true
-* date = "2023-07-22"
+* date = "2023-08-16"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -172,3 +172,5 @@ Title: "Segment SFT to Device Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "version.extension[1].valueDateTime"
+* group.element[7].target.dependsOn[0].property = "data-type-map"
+* group.element[7].target.dependsOn[0].value = "DTM[DateTime]"
