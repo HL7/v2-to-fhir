@@ -47,6 +47,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [HL70301](ConceptMap-table-hl70301-to-v2-0301.html) - Universal ID Type  to FHIR [V2 0301](http://hl7.org/fhir/R4/v2/0301/index.html)
 * [User0315](ConceptMap-table-hl70315-to-v2-0315.html) - Living Will Code  to FHIR [V2 0315](http://hl7.org/fhir/R4/v2/0315/index.html)
 * [HL70322](ConceptMap-table-hl70322-to-event-status.html) - Completion Status  to FHIR [Event Status](http://hl7.org/fhir/R4/codesystem-event-status.html)
+* [User0335](ConceptMap-table-hl70335-to-v2-0335.html) - Repeat Pattern  to FHIR [V2 0335](http://hl7.org/fhir/R4/v2/0335/index.html)
 * [User0364](ConceptMap-table-hl70364-to-v2-0364.html) - Comment Type  to FHIR [V2 0364](http://hl7.org/fhir/R4/v2/0364/index.html)
 * [HL70371](ConceptMap-table-hl70371-to-v2-0371.html) - Additive/Preservative  to FHIR [V2 0371](http://hl7.org/fhir/R4/v2/0371/index.html)
 * [User0406](ConceptMap-table-hl70406-to-v2-0406.html) - Organization Unit Type  to FHIR [V2 0406](http://hl7.org/fhir/R4/v2/0406/index.html)

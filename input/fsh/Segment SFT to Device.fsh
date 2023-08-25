@@ -10,7 +10,7 @@ Title: "Segment SFT to Device Map"
 * name = "SegmentSFTToDevice"
 * status = #active
 * experimental = true
-* date = "2023-08-16"
+* date = "2023-08-25"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

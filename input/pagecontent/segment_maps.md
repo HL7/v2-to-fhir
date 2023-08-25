@@ -45,6 +45,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [OBR](ConceptMap-segment-obr-to-specimen.html) - Observation Request to FHIR [Specimen](http://hl7.org/fhir/R4/specimen.html)
 * [ORC](ConceptMap-segment-orc-to-diagnosticreport.html) - Common Order to FHIR [DiagnosticReport](http://hl7.org/fhir/R4/diagnosticreport.html)
 * [ORC](ConceptMap-segment-orc-to-immunization.html) - Common Order to FHIR [Immunization](http://hl7.org/fhir/R4/immunization.html)
+* [ORC](ConceptMap-segment-orc-to-medicationadministration.html) - Common Order to FHIR [MedicationAdministration](http://hl7.org/fhir/R4/medicationadministration.html)
 * [ORC](ConceptMap-segment-orc-to-provenance.html) - Common Order to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 * [ORC](ConceptMap-segment-orc-to-servicerequest.html) - Common Order to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
 * [TQ1](ConceptMap-segment-tq1-to-servicerequest.html) - Timing/Quantity to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
