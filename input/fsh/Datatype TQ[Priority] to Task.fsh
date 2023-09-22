@@ -10,7 +10,7 @@ Title: "Datatype TQ[Priority] to Task Map"
 * name = "DatatypeTQPriorityToTask"
 * status = #active
 * experimental = true
-* date = "2023-08-25"
+* date = "2023-09-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,5 +43,5 @@ Title: "Datatype TQ[Priority] to Task Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "priority"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
+* group.element[0].target.dependsOn[0].property = "vocabulary-map"
 * group.element[0].target.dependsOn[0].value = "Priority"

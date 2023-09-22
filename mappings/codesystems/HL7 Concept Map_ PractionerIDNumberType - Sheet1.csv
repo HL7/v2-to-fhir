@@ -1,0 +1,14 @@
+HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,Display,Code System
+CY,County number,HL70338,,,,CY,County Number,http://terminology.hl7.org/CodeSystem/v2-0203
+DEA,Drug Enforcement Agency no.,HL70338,,,,DEA,Drug Enforcement Agency no.,http://terminology.hl7.org/CodeSystem/v2-0203
+GL,General ledger number,HL70338,,,,GL,General ledger number,http://terminology.hl7.org/CodeSystem/v2-0203
+LI,Labor and industries number,HL70338,,,,LI,Labor and industries number,http://terminology.hl7.org/CodeSystem/v2-0203
+L&I,Labor and industries number,HL70338,,,,LI,Labor and industries number,http://terminology.hl7.org/CodeSystem/v2-0203
+MCD,Medicaid number,HL70338,,,,MCD,Practitioner Medicaid Number,http://terminology.hl7.org/CodeSystem/v2-0203
+MCR,Medicare number,HL70338,,,,MCR,Practitioner Medicare Nuber,http://terminology.hl7.org/CodeSystem/v2-0203
+QA,QA number,HL70338,,,,QA,QA number,http://terminology.hl7.org/CodeSystem/v2-0203
+SL,State license number,HL70338,,,,SL,State license number,http://terminology.hl7.org/CodeSystem/v2-0203
+TAX,Tax ID number,HL70338,,,,TAX,Tax ID number,http://terminology.hl7.org/CodeSystem/v2-0203
+TRL,Training license number,HL70338,,,,TRL,Training license number,http://terminology.hl7.org/CodeSystem/v2-0203
+UPIN,Unique physician ID no.,HL70338,,,,UPIN,Medicare/CMS Univeral Physician Identification Number,http://terminology.hl7.org/CodeSystem/v2-0203

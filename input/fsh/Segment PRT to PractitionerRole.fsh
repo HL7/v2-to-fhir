@@ -10,7 +10,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * name = "SegmentPRTToPractitionerRole"
 * status = #active
 * experimental = true
-* date = "2023-08-25"
+* date = "2023-09-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -57,7 +57,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[1].extension[0].extension[2].valueInteger = -1
 * group.element[1].display = "Person"
 * group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #practitioner(Practitioner)
+* group.element[1].target.code = #practitioner[Practitioner]
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"Reference(Practitioner)"
@@ -65,7 +65,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[1].target.extension[0].extension[1].valueInteger = 0
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
-* group.element[1].target.display = "practitioner(Practitioner)"
+* group.element[1].target.display = "practitioner[Practitioner]"
 * group.element[1].target.dependsOn[0].property = "data-type-map"
 * group.element[1].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[2].code = #PRT-6
@@ -99,7 +99,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[3].extension[0].extension[2].valueInteger = 1
 * group.element[3].display = "Organization Unit Type"
 * group.element[3].target.equivalence = #equivalent
-* group.element[3].target.code = #organization(Organization.type)
+* group.element[3].target.code = #organization[Organization.type]
 * group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -107,7 +107,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[3].target.extension[0].extension[1].valueInteger = 0
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
-* group.element[3].target.display = "organization(Organization.type)"
+* group.element[3].target.display = "organization[Organization.type]"
 * group.element[3].target.dependsOn[0].property = "data-type-map"
 * group.element[3].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[3].target.dependsOn[1].property = "vocabulary-map"
@@ -122,7 +122,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[4].extension[0].extension[2].valueInteger = -1
 * group.element[4].display = "Organization"
 * group.element[4].target.equivalence = #equivalent
-* group.element[4].target.code = #organization(Organization)
+* group.element[4].target.code = #organization[Organization]
 * group.element[4].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].target.extension[0].extension[0].url = "type"
 * group.element[4].target.extension[0].extension[0].valueCode = #"Reference(Organization)"
@@ -130,7 +130,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[4].target.extension[0].extension[1].valueInteger = 0
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
-* group.element[4].target.display = "organization(Organization)"
+* group.element[4].target.display = "organization[Organization]"
 * group.element[4].target.dependsOn[0].property = "data-type-map"
 * group.element[4].target.dependsOn[0].value = "XON[Organization]"
 * group.element[5].code = #PRT-9
@@ -143,7 +143,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[5].extension[0].extension[2].valueInteger = -1
 * group.element[5].display = "Location"
 * group.element[5].target.equivalence = #equivalent
-* group.element[5].target.code = #location(Location)
+* group.element[5].target.code = #location[Location]
 * group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"Reference(Location)"
@@ -151,7 +151,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[5].target.extension[0].extension[1].valueInteger = 0
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
-* group.element[5].target.display = "location(Location)"
+* group.element[5].target.display = "location[Location]"
 * group.element[5].target.dependsOn[0].property = "data-type-map"
 * group.element[5].target.dependsOn[0].value = "PL[Location]"
 * group.element[6].code = #PRT-11
@@ -202,7 +202,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[8].extension[0].extension[2].valueInteger = -1
 * group.element[8].display = "Address"
 * group.element[8].target.equivalence = #equivalent
-* group.element[8].target.code = #practitioner(Practitioner.address)
+* group.element[8].target.code = #practitioner[Practitioner.address]
 * group.element[8].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].target.extension[0].extension[0].url = "type"
 * group.element[8].target.extension[0].extension[0].valueCode = #"Address"
@@ -210,7 +210,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[8].target.extension[0].extension[1].valueInteger = 0
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = -1
-* group.element[8].target.display = "practitioner(Practitioner.address)"
+* group.element[8].target.display = "practitioner[Practitioner.address]"
 * group.element[8].target.dependsOn[0].property = "data-type-map"
 * group.element[8].target.dependsOn[0].value = "XAD[Address]"
 * group.element[9].code = #PRT-15

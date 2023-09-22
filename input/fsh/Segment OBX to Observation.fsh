@@ -10,7 +10,7 @@ Title: "Segment OBX to Observation Map"
 * name = "SegmentOBXToObservation"
 * status = #active
 * experimental = true
-* date = "2023-08-25"
+* date = "2023-09-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -711,7 +711,7 @@ Title: "Segment OBX to Observation Map"
 * group.element[31].target.extension[0].extension[0].valueCode = #"CodeableConcept"
 * group.element[31].target.display = "dataAbsentReason.coding[1].code"
 * group.element[31].target.dependsOn[0].property = "value"
-* group.element[31].target.dependsOn[0].value = "\"cannot-be-obtained\""
+* group.element[31].target.dependsOn[0].value = "/cannot-be-obtained/"
 * group.element[31].target.product[0].property = "antlr"
 * group.element[31].target.product[0].value = "IF OBX-11 IS \"X\""
 * group.element[32].code = #OBX-11
@@ -730,7 +730,7 @@ Title: "Segment OBX to Observation Map"
 * group.element[32].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[32].target.display = "dataAbsentReason.coding[1].system"
 * group.element[32].target.dependsOn[0].property = "value"
-* group.element[32].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/data-absent-reason\""
+* group.element[32].target.dependsOn[0].value = "/http://terminology.hl7.org/CodeSystem/data-absent-reason."
 * group.element[32].target.product[0].property = "antlr"
 * group.element[32].target.product[0].value = "IF OBX-11 IS \"X\""
 * group.element[33].code = #OBX-11

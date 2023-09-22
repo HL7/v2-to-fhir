@@ -10,7 +10,7 @@ Title: "Datatype NM to PositiveInt Map"
 * name = "DatatypeNMToPositiveInt"
 * status = #active
 * experimental = true
-* date = "2023-08-25"
+* date = "2023-09-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -34,6 +34,10 @@ Title: "Datatype NM to PositiveInt Map"
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"integer"
+* group.element[0].target.extension[0].extension[1].url = "cardinalityMin"
+* group.element[0].target.extension[0].extension[1].valueInteger = 1
+* group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
+* group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "$value"
 * group.element[0].target.product[0].property = "narrative"
 * group.element[0].target.product[0].value = "If positive"

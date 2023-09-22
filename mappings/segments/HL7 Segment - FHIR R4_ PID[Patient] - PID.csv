@@ -1,4 +1,4 @@
-e,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,PID-1,Set ID - PID,SI,0,1,,,,,,,,,,,,,
@@ -23,7 +23,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 13,PID-13,Phone Number - Home,XTN,0,-1,IF PID-13.2 IS NOT VALUED,,,telecom[1].use,,,,,,,"""home""",,
 14,PID-14,Phone Number - Business,XTN,0,-1,,,,telecom[2],,ContactPoint,0,-1,XTN[ContactPoint],,,,
 14,PID-14,Phone Number - Business,XTN,0,-1,IF PID-14.2 IS NOT VALUED,,,telecom[2].use,,,,,,,"""work""",,
-15,PID-15,Primary Language,CWE,0,1,,,,communication.language,,CodeableConcept,0,-1,CWE[CodeableConcept],PrimaryLanguage,,,"During implementation, if you know that the value in PID-15 is the preferred patient language, then Patient.communication.preferred can be set to ""true""."
+15,PID-15,Primary Language,CWE,0,1,,,,communication.language,,CodeableConcept,0,-1,CWE[CodeableConcept],Language,,,"During implementation, if you know that the value in PID-15 is the preferred patient language, then Patient.communication.preferred can be set to ""true""."
 16,PID-16,Marital Status,CWE,0,1,,,,maritalStatus,,CodeableConcept,0,1,CWE[CodeableConcept],MaritalStatus,,,
 17,PID-17,Religion,CWE,0,1,,,,extension[2].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-religion""",,
 17,PID-17,Religion,CWE,0,1,,,,extension[2].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],Religion,,,

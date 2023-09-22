@@ -10,7 +10,7 @@ Title: "Table HL70335 to V2 0335 Map"
 * name = "TableHL70335ToV20335"
 * status = #active
 * experimental = true
-* date = "2023-08-25"
+* date = "2023-09-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -154,7 +154,7 @@ Title: "Table HL70335 to V2 0335 Map"
 * group.element[25].target.equivalence = #equivalent
 * group.element[25].target.code = #C
 * group.element[25].target.display = "service is provided continuously between start time and stop time"
-* group.element[26].code = #U <spec>
+* group.element[26].code = #U<spec>
 * group.element[26].display = "for future use, where <spec> is an interval specification as defined by the UNIX cron specification."
 * group.element[26].target.equivalence = #equivalent
 * group.element[26].target.code = #U
@@ -175,7 +175,7 @@ Title: "Table HL70335 to V2 0335 Map"
 * group.element[29].target.equivalence = #equivalent
 * group.element[29].target.code = #Once
 * group.element[29].target.display = "one time only."
-* group.element[30].code = #Meal Related Timings
+* group.element[30].code = #Meal_Related_Timings
 * group.element[30].display = "<timing>C (\"cum\")<meal>"
 * group.element[30].target.equivalence = #equivalent
 * group.element[30].target.code = #Meal

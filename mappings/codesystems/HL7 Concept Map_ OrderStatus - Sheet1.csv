@@ -1,4 +1,4 @@
-,,,Condition (IF TRUE),,,HL7 FHIR,,
+HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
 Code,Text,Code System,Computable ANTLR,Computable FHIRpath,Narrative,Code,Display,Code System
 CA,Order was canceled,HL70038,,,,revoked,Revoked,http://hl7.org/fhir/request-status
 CM,Order is completed,HL70038,,,,completed,Completed,http://hl7.org/fhir/request-status

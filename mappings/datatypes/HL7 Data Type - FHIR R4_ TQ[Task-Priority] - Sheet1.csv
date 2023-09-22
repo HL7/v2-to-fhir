@@ -7,7 +7,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 3,TQ.3,Duration,ST,0,1,,,,,,,,,,,,,
 4,TQ.4,Start Date/Time,TS,0,1,,,,,,,,,,,,,
 5,TQ.5,End Date/Time,TS,0,1,,,,,,,,,,,,,
-6,TQ.6,Priority,ST,0,1,,,,priority,,code,0,1,Priority,,,,A translation from the text priority in the v2 message to a coded value in the request-priority value set will be required.
+6,TQ.6,Priority,ST,0,1,,,,priority,,code,0,1,,Priority,,,A translation from the text priority in the v2 message to a coded value in the request-priority value set will be required.
 7,TQ.7,Condition,ST,0,1,,,,,,,,,,,,,
 8,TQ.8,Text,TX,0,1,,,,,,,,,,,,,
 9,TQ.9,Conjunction,ID,0,1,,,,,,,,,,,,,

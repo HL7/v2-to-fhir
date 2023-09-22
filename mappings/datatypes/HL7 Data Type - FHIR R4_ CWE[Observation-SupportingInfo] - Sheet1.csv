@@ -1,8 +1,8 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
-0,,,,,,,,,code,,CodeableConcept,1,1,,,/to be determined by implementer based on use of OBR-13/,,
-0,,,,,,,,,status,,code,1,1,,,"""final""",,
+0,CWE,,,,,,,,code,,CodeableConcept,1,1,,,/to be determined by implementer based on use of OBR-13/,,
+0,CWE,,,,,,,,status,,code,1,1,,,"""final""",,
 1,CWE.1,Identifier,ST,0,1,,,,value.CodeableConcept.coding[1].code,,code,,,,,,,
 2,CWE.2,Text,ST,0,1,,,,value.CodeableConcept.coding[1].display,,string,,,,,,,
 3,CWE.3,Name of Coding System,ID,0,1,,,,value.CodeableConcept.coding[1].system,,uri,,,,,,,

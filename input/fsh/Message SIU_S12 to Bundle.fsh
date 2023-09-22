@@ -10,7 +10,7 @@ Title: "Message SIU_S12 to Bundle Map"
 * name = "MessageSIU_S12ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-08-25"
+* date = "2023-09-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -48,7 +48,7 @@ Title: "Message SIU_S12 to Bundle Map"
 * group.element[1].target.display = "MessageHeader[1]"
 * group.element[1].target.comment = "Processing of the MSH segment results in the creation of a new MessageHeader resource"
 * group.element[1].target.dependsOn[0].property = "segment-map"
-* group.element[1].target.dependsOn[0].value = "MSH[MessageHeader"
+* group.element[1].target.dependsOn[0].value = "MSH[MessageHeader]"
 * group.element[2].code = #SIU_S12.MSH
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "cardinalityMin"
@@ -122,7 +122,7 @@ ServiceRequest[1..n].subject=Patient[1].id\
 * group.element[6].target.code = #Provenance[3]
 * group.element[6].target.display = "Provenance[3]"
 * group.element[6].target.dependsOn[0].property = "segment-map"
-* group.element[6].target.dependsOn[0].value = "SCH[Provenenance]"
+* group.element[6].target.dependsOn[0].value = "SCH[Provenance]"
 * group.element[7].code = #SIU_S12.NTE
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "cardinalityMin"
@@ -329,7 +329,6 @@ If SCH-26 and SCH-27 repeat, then the implementer needs to determine how to alig
 * group.element[20].target.equivalence = #equivalent
 * group.element[20].target.code = #Appointment[1]
 * group.element[20].target.display = "Appointment[1]"
-* group.element[20].target.comment = "I only see in OR cases"
 * group.element[20].target.dependsOn[0].property = "segment-map"
 * group.element[20].target.dependsOn[0].value = "AIL[Appointment]"
 * group.element[20].target.product[0].property = "narrative"
@@ -344,6 +343,5 @@ If SCH-26 and SCH-27 repeat, then the implementer needs to determine how to alig
 * group.element[21].target.equivalence = #equivalent
 * group.element[21].target.code = #Appointment[1]
 * group.element[21].target.display = "Appointment[1]"
-* group.element[21].target.comment = "I only see in OR cases"
 * group.element[21].target.dependsOn[0].property = "segment-map"
 * group.element[21].target.dependsOn[0].value = "AIP[Appointment]"

@@ -15,6 +15,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [MSH](ConceptMap-segment-msh-to-encounter.html) - Message Header to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 * [MSH](ConceptMap-segment-msh-to-messageheader.html) - Message Header to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
 * [MSH](ConceptMap-segment-msh-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
+* [NTE](ConceptMap-segment-nte-to-appointment.html) - Notes and Comments to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
 * [NTE](ConceptMap-segment-nte-to-observation.html) - Notes and Comments to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [NTE](ConceptMap-segment-nte-to-servicerequest.html) - Notes and Comments to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
 * [SFT](ConceptMap-segment-sft-to-device.html) - Software Segment to FHIR [Device](http://hl7.org/fhir/R4/device.html)

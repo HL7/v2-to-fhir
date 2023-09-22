@@ -2,10 +2,10 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,ORC-1,Order Control,ID,1,1,,,,,,,,,,,,,
-2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1],,Identifier,0,-1,EI[Identifier],,,,
+2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
 2,ORC-2,Placer Order Number,EI,0,1,,,,"identifier[1].type.coding.code=""PLAC""",,code,0,1,,,"""PLAC""",,
 2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,
-3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2],,Identifier,0,-1,EI[Identifier],,,,
+3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
 3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2].type.coding.code,,code,0,1,,,"""FILL""",,
 3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,
 4,ORC-4,Placer Group Number,EI,0,1,,,,,,,,,,,,,

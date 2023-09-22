@@ -1,13 +1,13 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
 Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
 1,SIU_S12.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
-1,SIU_S12.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader,,,Processing of the MSH segment results in the creation of a new MessageHeader resource
+1,SIU_S12.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
 1,SIU_S12.MSH,MSH,Message Header,1,1,,,,Provenance[1],MSH[Provenance-Source],Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id,,.
 1,SIU_S12.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,
 2,SIU_S12.SCH,SCH,Schedule Activity Information,1,1,,,,Appointment[1],SCH[Appointment],Appointment.participant.actor=Patient[1].id,,
 2,SIU_S12.SCH,SCH,Schedule Activity Information,1,1,IF SCH-26 or SCH-27 VALUED,,,ServiceRequest[1..n],SCH[ServiceRequest],"Appointment[1].basedOn=ServiceRequest[1..n].id
 ServiceRequest[1..n].subject=Patient[1].id",,
-2,SIU_S12.SCH,SCH,Schedule Activity Information,1,1,,,,Provenance[3],SCH[Provenenance],,,
+2,SIU_S12.SCH,SCH,Schedule Activity Information,1,1,,,,Provenance[3],SCH[Provenance],,,
 3,SIU_S12.NTE,[ { NTE } ],Notes and Comments,0,-1,,,,Appointment[1],NTE[Appointment],Appointment.participant.actor=Patient[1].id,,"Because multiple NTE segments in a message all need to map to a single Appointment.comment element, the content of the NTEs will need to be concatenated together in R4"
 4,SIU_S12.PATIENT,[{,--- PATIENT begin,0,-1,,,,,,,,
 4.1,SIU_S12.PATIENT.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
@@ -32,11 +32,11 @@ If SCH-26 and SCH-27 repeat, then the implementer needs to determine how to alig
 5.3.2,SIU_S12.RESOURCES.GENERAL_RESOURCE.NTE,[ { NTE } ],Notes and Comments,0,-1,,,,,,,,
 5.3.3,SIU_S12.RESOURCES.GENERAL_RESOURCE,}],--- GENERAL_RESOURCE end,0,-1,,,,,,,,
 5.4,SIU_S12.RESOURCES.LOCATION_RESOURCE,[{,--- LOCATION_RESOURCE begin AIL,0,-1,,,,,,,,
-5.4.1,SIU_S12.RESOURCES.LOCATION_RESOURCE.AIL,AIL,Appointment Information - Location Resource,1,-1,,,Determine which AIL populates Appointment if there is more than one AIL.,Appointment[1],AIL[Appointment],,,I only see in OR cases
+5.4.1,SIU_S12.RESOURCES.LOCATION_RESOURCE.AIL,AIL,Appointment Information - Location Resource,1,-1,,,Determine which AIL populates Appointment if there is more than one AIL.,Appointment[1],AIL[Appointment],,,
 5.4.2,SIU_S12.RESOURCES.LOCATION_RESOURCE.NTE,[ { NTE } ],Notes and Comments,0,-1,,,,,,,,
 5.4.3,SIU_S12.RESOURCES.LOCATION_RESOURCE,}],--- LOCATION_RESOURCE end,0,-1,,,,,,,,
 5.5,SIU_S12.RESOURCES.PERSONNEL_RESOURCE,[{,--- PERSONNEL_RESOURCE begin AIP,0,-1,,,,,,,,
-5.5.1,SIU_S12.RESOURCES.PERSONNEL_RESOURCE.AIP,AIP,Appointment Information - Personnel Resource,1,-1,,,,Appointment[1],AIP[Appointment],,,I only see in OR cases
+5.5.1,SIU_S12.RESOURCES.PERSONNEL_RESOURCE.AIP,AIP,Appointment Information - Personnel Resource,1,-1,,,,Appointment[1],AIP[Appointment],,,
 5.5.2,SIU_S12.RESOURCES.PERSONNEL_RESOURCE.NTE,[ { NTE } ],Notes and Comments,0,-1,,,,,,,,
 5.5.3,SIU_S12.RESOURCES.PERSONNEL_RESOURCE,}],--- PERSONNEL_RESOURCE end,0,-1,,,,,,,,
 5.6,SIU_S12.RESOURCES,},--- RESOURCES end,1,-1,,,,,,,,

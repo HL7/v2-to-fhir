@@ -10,7 +10,7 @@ Title: "Segment PRT to RelatedPerson Map"
 * name = "SegmentPRTToRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2023-08-25"
+* date = "2023-09-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
