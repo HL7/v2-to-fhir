@@ -12,11 +12,11 @@ AdministrativeSex,,Under Construction,,,
 AdmissionLevelOfCareCode,HL70432,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1Va5F4KJWOsdZ02fAh_LpIR_FBhHn99uJnNqxGoaFcnc/edit#gid=0
 AdmissionType,HL70007,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1KJsdOBI-L2BD2DpItURTDZ7o-rGNEYIZZMBNEoiqhrI/edit#gid=0
 AllergySeverity[AllergryIntolerance.reaction.severity],HL70128,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1sMIR0cGVDt34suaYtk-yH0DA6lVdpV3yrthqOcZLOKg/edit#gid=0
-AllergySeverity[AllergyIntolerance.criticality-original,HL70128,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1F3YGZuimTTxay5ngXQKu2Gvy5VvEom5xLvtWvHWJbkk/edit#gid=0
+AllergySeverity[AllergyIntolerance.criticality-original],HL70128,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1F3YGZuimTTxay5ngXQKu2Gvy5VvEom5xLvtWvHWJbkk/edit#gid=0
 AllergySeverity[AllergyIntolerance.criticality],HL70128,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1au42G-4z1OKLQp9hQkGVtauaiyYl6rHaGjLswnCgPjo/edit#gid=0
 AllergyType,HL70127,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1UpQTB_IaM7hHAqz6gpmenkcPt2_BWSymicKQMtmZKN0/edit#gid=0
-AllergyType[AllergyIntolerance.category-original],HL70127,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1MnZzLYKreOvD41o_OaOfZIhUFF3B-93cAmEcNs_Q9BY/edit#gid=0
-AllergyType[AllergyIntolerance.category],HL70127,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1kRIGg82psj97HFzQx5-t34LbHBzhAQzFqM1BT2uNVSI/edit#gid=0
+AllergyType[AllergyIntoleranceOriginalCategory],HL70127,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1MnZzLYKreOvD41o_OaOfZIhUFF3B-93cAmEcNs_Q9BY/edit#gid=0
+AllergyType[AllergyIntoleranceCategory],HL70127,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1kRIGg82psj97HFzQx5-t34LbHBzhAQzFqM1BT2uNVSI/edit#gid=0
 AllowSubstitution,HL70161,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1giNdFr1kWkyyBeotwZ_o92J5HFKa440vbF8k48mFCcY/edit#gid=0
 AmbulatoryStatus,,Under Construction,,,
 AppealReason,,Under Construction,,,
@@ -43,7 +43,7 @@ CoverageType,HL70309,Under Construction,,,
 DiagnosisType,HL70052,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1MWVgzweS_o7Hy9ftUGElhuobSdxsZ0vb2O8hKzh-RDU/edit#gid=0
 DiagnosticServiceSection,HL70074,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/190IK3DXu5_bpGgesA5ZZ_YxN009gyutbuT5yztzB3BI/edit#gid=0
 DispenseUnits,HL70720,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1FIWlv_ubFlHUMD9FAdwWW6J7Pg--JrcS4m_qMkNTdhs/edit#gid=0
-Duration Unit,HL70663,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1mCuQYhWWQJ0h4s4GG0txW4PCFF1JtsJACZ05MgkbLMs/edit#gid=0
+DurationUnit,HL70663,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1mCuQYhWWQJ0h4s4GG0txW4PCFF1JtsJACZ05MgkbLMs/edit#gid=0
 EligibilitySource,,Under Construction,,,
 EmployerInformationData,,Under Construction,,,
 EmploymentStatus,HL70066,Under Construction,,,
@@ -57,7 +57,7 @@ GiveUnits,HL70715,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1Cb9
 Handicap,,Under Construction,,,
 IDType,HL70203,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1ynFVTj3fQrQAvpGK7XAEODEzRaMdIexWD8MpT70VfE4/edit#gid=0
 InsuranceCompanyContactReason,,Under Construction,,,
-InsurancePlanID,HL70072,Under Construction,,,
+InsurancePlanID,HL70072,Under Construction,,,https://docs.google.com/spreadsheets/d/16B1rjIeSFp5t-nWPRz6vJSAa3_lR80W2bFEBdH-yhJI/edit#gid=0
 InterpretationCode,HL70078,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1mxMfcCgpRM2gH6QBOxndzjZcy22MzlskspqEmNADLp8/edit#gid=0
 JobStatus,HL70311,Under Construction,,,
 Language,HL70296,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1zPHUFEcOLuIhdG1yyDGDpYd-LAuUKn9hdJNlqYPTkGc/edit#gid=0
@@ -82,7 +82,7 @@ NonCoveredInsuranceCode,HL70143,Under Construction,,,
 ObservationStatus,HL70085,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1RsA6SEYsjfrR6TbwY1JHBetrPyRED2RDzTa1jvHRvX0/edit#gid=0
 Operation,HL70206,Under Construction,,,
 OperatorID,HL70188,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1M2BTKmsXiVq_GUxd2pMMgs2ugzYW7FSc-gtrBY9CBO4/edit#gid=0
-OrderControlCode[ServiceRequest.status],HL70119,Under Construction,,,
+OrderControlCode[ServiceRequest.status],HL70119,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1-M3ehfvgrNyOwWBIP3--KMEN6A0vi90W-hnkdrUIYIg/edit#gid=0
 OrderStatus,HL70038,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1yfFl5Zg_qfB6TZeM1e6tB33Mpprw0czJ3PyBCe4g07o/edit#gid=0
 OrderType,HL70482,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1uTlF1ZBSs6GIksOREp3pcBLGNphcpxOrn5NBBEiRTd4/edit#gid=0
 OrganizationalNameType,HL70204,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/16h7s6tlvAS0vjsbTxHUdAhojioKgK7Jmxxu1rFaDHDc/edit#gid=0
@@ -93,7 +93,7 @@ PatientClass[EncounterStatus],HL70004,Ready for Ballot,,,https://docs.google.com
 PatientClass[EncounterStatus],HL70004,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1-g6mrN1Q_Y_foJjlOXY32UAtMWwPi245mh3kRc8FBQ4/edit#gid=0
 PatientRelationshipToInsured,,Under Construction,,,
 PhysicianID,,Under Construction,,,
-PlanId,,Under Construction,,,
+PlanId,,Under Construction,,,https://docs.google.com/spreadsheets/d/1odWyxmpwkTeQeTapaaDWSLtz_p6T_Jd_lPFrQvJQvBI/edit#gid=0
 PolicyScope,,Under Construction,,,
 PractitionerIDNumberType,HL70338,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/18y5DEgTbYd-SvVx8PtVn7aNNNCaVW_rJv5-H79bU3Ic/edit#gid=0
 PreferredMethodofContact,HL70185,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1L_AfyPgHtp2gKwuLLUtqYwT7FZPpqtfQaxaJAkLqj04/edit#gid=0
@@ -111,7 +111,7 @@ Religion,,Under Construction,,,
 RepeatPattern,HL70335,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1OBcSumRh0MVFA2C5YXcGsld9hxufvQWdhYINrTRvcWE/edit#gid=0
 RequestedDispenseUnits,HL70754,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1bwDNo01JWUgjw_ayPfdpuGm4qscF_-OAgaRVkZwxRoA/edit#gid=0
 RequestedDosageForm,HL70750,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1c9nS007lrKkdNparG5NbUl4VnrDZtoARVtQpL1-mp60/edit#gid=0
-RequestedDrugStengthVolumeUnits,HL70764,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1UnT31r4XwcP-rs0keSLMZaXFVKuclEXr9EHpfIjdi0A/edit#gid=0
+RequestedDrugStrengthVolumeUnits,HL70764,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1UnT31r4XwcP-rs0keSLMZaXFVKuclEXr9EHpfIjdi0A/edit#gid=0
 RequestedGiveCode,HL70747,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1SFt4m06XebDV2Xby0N8RwMYp6-7pVRQgpco8S147f14/edit#gid=0
 RequestedGiveStrengthUnits,HL70756,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1rlcfwVlAZLGYID2vwn9PiH206Qzuul7wow4bZw81PEM/edit#gid=0
 RequestedGiveUnits,HL70748,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1YJrLAdKpEb90sLLpokVGfxaHMkYd_fwblGUoMqRlkYc/edit#gid=0
