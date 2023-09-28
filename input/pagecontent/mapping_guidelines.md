@@ -10,7 +10,12 @@ being mapped is a Message, Segment, Data Type, or Table.
 
 The spreadsheet title has a defined format to enable conversion from .csv into FHIR ConceptMap:
 
+<table>
+<tr> <wbr>
 HL7 {Message|Segment|Data Type|Code System} - FHIR {R4|R5}: [{v2 Message Type|v2 Segment|v2 Data Type|v2 Table}]([{FHIR Resource|FHIR Data Type|FHIR Metadata Data Type|FHIR Vocabulary}-{QualifierName}])
+</wbr>
+</tr>
+</table>
 
 Examples:
 
