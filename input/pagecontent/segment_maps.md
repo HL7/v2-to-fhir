@@ -49,8 +49,8 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [ORC](ConceptMap-segment-orc-to-medicationadministration.html) - Common Order to FHIR [MedicationAdministration](http://hl7.org/fhir/R4/medicationadministration.html)
 * [ORC](ConceptMap-segment-orc-to-provenance.html) - Common Order to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 * [ORC](ConceptMap-segment-orc-to-servicerequest.html) - Common Order to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
+* [TQ1](ConceptMap-segment-tq1-to-medicationrequest.html) - Timing/Quantity to FHIR [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html)
 * [TQ1](ConceptMap-segment-tq1-to-servicerequest.html) - Timing/Quantity to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
-* [TQ2](ConceptMap-segment-tq2-to-servicerequest.html) - Timing/Quantity Relationship to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
 
 ### Chapter  4A  Order Entry:  Pharmacy/Treatment, Vaccination
 

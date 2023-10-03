@@ -10,7 +10,7 @@ Title: "Message ADT_A06 to Bundle Map"
 * name = "MessageADT_A06ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-09-22"
+* date = "2023-10-03"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -255,7 +255,7 @@ Provenance[1].entity.role="source"\
 * group.element[14].target.code = #Patient[1]
 * group.element[14].target.display = "Patient[1]"
 * group.element[14].target.dependsOn[0].property = "segment-map"
-* group.element[14].target.dependsOn[0].value = "PRT[Patient-GeneralPractitioner[Practitioner]]"
+* group.element[14].target.dependsOn[0].value = "PRT[Patient-GeneralPractitioner-Practitioner]"
 * group.element[14].target.product[0].property = "antlr"
 * group.element[14].target.product[0].value = "IF PRT-4 IS \"PP\""
 * group.element[15].code = #ADT_A06:follow:PID.PRT

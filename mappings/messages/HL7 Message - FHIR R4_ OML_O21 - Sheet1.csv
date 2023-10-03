@@ -37,7 +37,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 6.2,OML_O21.ORDER.PRT,[{PRT}],Participation (for Common Order),0,-1,"IF PRT-4.1 EQUALS ""OP"" AND PRT-4.3 EQUALS ""HL70443""","(element(""4.1"")=""OP"")and(element(""4.3"")=""HL70443"")",,PractitionerRole[3],PRT[PractitionerRole],ServiceRequest[1].requester.reference=PractitionerRole[3].id,,
 6.3,OML_O21.ORDER.TIMING,[{,--- TIMING begin,0,-1,,,,,,,,
 6.3.1,OML_O21.ORDER.TIMING.TQ1,TQ1,Timing/Quantity,1,1,,,,ServiceRequest[1],TQ1[ServiceRequest],,,
-6.3.2,OML_O21.ORDER.TIMING.TQ2,[{TQ2}],Billing Segment,0,-1,,,,ServiceRequest[1],TQ2[ServiceRequest],,,
+6.3.2,OML_O21.ORDER.TIMING.TQ2,[{TQ2}],Timing/Quantity Order Sequence,0,-1,,,,,,,,
 6.3.3,/OML_O21.ORDER.TIMING,}],--- TIMING end,,,,,,,,,,
 6.4,OML_O21.ORDER.OBSERVATION_REQUEST,[,--- OBSERVATION_REQUEST begin,0,1,,,,,,,,
 6.4.1,OML_O21.ORDER.OBSERVATION_REQUEST.OBR,OBR,Observation Request,1,1,,,,ServiceRequest[1],OBR[ServiceRequest],,,Incorporate OBR content into the ServiceRequest created from the ORC segment in the same segment group.
