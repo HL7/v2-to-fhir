@@ -71,6 +71,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 ### Chapter  7  Observation Reporting
 
 * [OBX](ConceptMap-segment-obx-to-observation.html) - Observation/Result to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
+* [OBX](ConceptMap-segment-obx-to-servicerequest-supportinginfo.html) - Observation/Result to FHIR [ServiceRequest.supportingInfo](http://hl7.org/fhir/R4/servicerequest-definitions.html#servicerequest.supportinginfo)
 * [PRT](ConceptMap-segment-prt-to-careteam.html) - Participation Information to FHIR [CareTeam](http://hl7.org/fhir/R4/careteam.html)
 * [PRT](ConceptMap-segment-prt-to-device.html) - Participation Information to FHIR [Device](http://hl7.org/fhir/R4/device.html)
 * [PRT](ConceptMap-segment-prt-to-observation.html) - Participation Information to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)

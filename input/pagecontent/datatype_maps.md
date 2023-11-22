@@ -34,6 +34,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [CWE](ConceptMap-datatype-cwe-to-string.html) - Coded With Exceptions to FHIR [string](http://hl7.org/fhir/R4/datatypes.html#string)
 * [CWE](ConceptMap-datatype-cwe-to-uri.html) - Coded With Exceptions to FHIR [uri](http://hl7.org/fhir/R4/datatypes.html#uri)
 * [CX](ConceptMap-datatype-cx-to-identifier.html) - Extended Composite Id With Check Digit to FHIR [Identifier](http://hl7.org/fhir/R4/datatypes.html#identifier)
+* [CX](ConceptMap-datatype-cx-to-relatedperson.html) - Extended Composite Id With Check Digit to FHIR [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)
 * [CX](ConceptMap-datatype-cx-to-string.html) - Extended Composite Id With Check Digit to FHIR [string](http://hl7.org/fhir/R4/datatypes.html#string)
 * [DLD](ConceptMap-datatype-dld-to-location.html) - Discharge To Location And Date to FHIR [Location](http://hl7.org/fhir/R4/location.html)
 * [DLN](ConceptMap-datatype-dln-to-identifier.html) - Driver's License Number to FHIR [Identifier](http://hl7.org/fhir/R4/datatypes.html#identifier)
