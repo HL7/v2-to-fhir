@@ -16,6 +16,9 @@ version: 1.0.0
 name: HL7Version2toFHIR
 title: HL7 Version 2 to FHIR
 status: active
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
+    valueCode: oo  
 publisher:
   name: HL7 International
 contact:
