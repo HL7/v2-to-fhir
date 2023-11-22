@@ -47,7 +47,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 4.2.4,ORM_O01.ORDER_DETAIL.DG1,[{ DG1 }],Diagnosis,0,-1,,,,ServiceRequest[1].reasonReference(Condition),DG1[Condition],Condition.subject.reference=Patient[1].id,,Processing of the DG1 segment results in the creation of a new Condition resource which is referenced in the ServiceRequest created by the ORC segment
 ,,,,,,,,,,,,,
 4.2.5,ORM_O01.ORDER_DETAIL.OBSERVATION,[{,OBSERVATION begin,0,-1,,,,,,,,
-4.2.5.1,ORM_O01.ORDER_DETAIL.OBSERVATION.OBX,OBX,Observation/Result,1,1,,,,Observation,OBX[Observation],,,"While some OBX segments may not represent an Observation.  One cannot determine whether it is or is not based on known OBX fields, thus leave any need to separate mapping to another resource to the implementer.  E.g., one may not want to consider as an Observation the ask at order entry answer who the sonographer is for the order."
+4.2.5.1,ORM_O01.ORDER_DETAIL.OBSERVATION.OBX,OBX,Observation/Result,1,1,,,,Observation[1],OBX[ServiceRequest.supportingInfo(Observation)],ServiceRequest[1].supportingInfo.reference=Observation[1].id; Observation[1].subject.id=Patient[1].id,,"While some OBX segments may not represent an Observation.  One cannot determine whether it is or is not based on known OBX fields, thus leave any need to separate mapping to another resource to the implementer.  E.g., one may not want to consider as an Observation the ask at order entry answer who the sonographer is for the order."
 4.2.5.2,ORM_O01.ORDER_DETAIL.OBSERVATION.NTE,[{ NTE }],Notes and Comments (for Results),0,-1,,,,,,,,
 4.2.5.3,/ORM_O01.ORDER_DETAIL.OBSERVATION,}],OBSERVATION end,,,,,,,,,,
 4.2.6,/ORM_O01.ORDER_DETAIL,],ORDER_DETAIL end,,,,,,,,,,

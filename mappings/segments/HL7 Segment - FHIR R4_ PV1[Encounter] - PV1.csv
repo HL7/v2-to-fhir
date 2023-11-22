@@ -57,9 +57,9 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 33,PV1-33,Bad Debt Recovery Amount,NM,0,1,,,,,,,,,,,,,
 34,PV1-34,Delete Account Indicator,CWE,0,1,,,,,,,,,,,,,
 35,PV1-35,Delete Account Date,DT,0,1,,,,,,,,,,,,,
-36,PV1-36,Discharge Disposition,CWE,0,1,,,,hospitalization.dischargeDisposition,,CodeableConcept,0,1,CWE[CodeableConcept],,,,"Table 0112 doesn't have any suggested values, therefore there is no vocabulary mapping"
-37,PV1-37,Discharged to Location,DLD,0,1,,,,hospitalization.destination(Location),,Reference(Location),0,1,DLD[Location],,,,Encounter.hospitalization.destination.reference=Location[1].id
-38,PV1-38,Diet Type,CWE,0,1,,,,hospitalization.dietPreference,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,"Table 0114 doesn't have any suggested values, therefore there is no vocabulary mapping"
+36,PV1-36,Discharge Disposition,CWE,0,1,,,,hospitalization.dischargeDisposition,,CodeableConcept,0,1,CWE[CodeableConcept],DischargeDisposition,,,
+37,PV1-37,Discharged to Location,DLD,0,1,,,,hospitalization.destination(Location),,Reference(Location),0,1,DLD[Location-Discharge],,/Encounter.hospitalization.destination.reference=Location[n].id/,,This location should be a new location resources instance.
+38,PV1-38,Diet Type,CWE,0,1,,,,hospitalization.dietPreference,,CodeableConcept,0,-1,CWE[CodeableConcept],DietType,,,
 39,PV1-39,Servicing Facility,CWE,0,1,,,,,,,,,,,,,
 40,PV1-40,Bed Status,IS,0,1,,,,,,,,,,,,,
 41,PV1-41,Account Status,CWE,0,1,,,,,,,,,,,,,

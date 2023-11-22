@@ -25,12 +25,12 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 5.8.4,/OML_O21.PATIENT.PATIENT_VISIT,],--- PATIENT_VISIT end,,,,,,,,,,
 5.9,OML_O21.PATIENT.INSURANCE,[{,--- INSURANCE begin,0,-1,,,,,,,,
 5.9.1,OML_O21.PATIENT.INSURANCE.IN1,IN1,Insurance,1,1,,,,Coverage[1],IN1[Coverage],Coverage.subscriber=Patient[PID],,Processing of the IN1 segment results in the creation of a new Coverage resource
-5.9.2,OML_O21.PATIENT.INSURANCE.IN2,[ IN2 ],Insurance Additional Information,0,1,,,,Coverage[1],IN2[Coverage],,,Incorporate IN2 content into the Coverage created from the IN1 segment.
+5.9.2,OML_O21.PATIENT.INSURANCE.IN2,[ IN2 ],Insurance Additional Information,0,1,,,,,,,,
 5.9.3,OML_O21.PATIENT.INSURANCE.IN3,[ IN3 ],"Insurance Additional Information, Certification",0,1,,,,Coverage[1],IN3[CareTeam],,,
 5.9,/OML_O21.PATIENT.INSURANCE,}],--- INSURANCE end,,,,,,,,,,
 5.10,OML_O21.PATIENT.GT1,[ GT1 ],Guarantor,0,1,,,,,,,,
 5.11,OML_O21.PATIENT.AL1,[{AL1}],Allergy Information,0,-1,,,,AllergyIntolerance,AL1[AllergyIntolerance],AllergyIntolerance.patient=Patient[PID],,Processing of the AL1 segment results in the creation of a new AllergyIntolerance resource
-5,/OML_O21.PATIENT,],--- PATIENT end,,,,,,,,,,
+5.12,/OML_O21.PATIENT,],--- PATIENT end,,,,,,,,,,
 6,OML_O21.ORDER,{,--- ORDER begin,1,-1,,,,,,,,
 6.1,OML_O21.ORDER.ORC,ORC,Common Order,1,1,,,,ServiceRequest[1],ORC[ServiceRequest],ServiceRequest.subject=Patient[PID],,Processing of each ORC segment results in the creation of a new ServiceRequest resource
 6.1,OML_O21.ORDER.ORC,ORC,Common Order,1,1,,,,Provenance[3],ORC[Provenance],Provenance.target=ServiceRequest[ORC],,"Using Provenance is the preferred way, but a local implementation may decide to add extensions to the main resource.  As the use and guidance of Provenance matures we wil revisit this later."
@@ -49,9 +49,10 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 6.4.5,OML_O21.ORDER.OBSERVATION_REQUEST.CTD,[ CTD ],Contact Data,0,1,,,,,,,,
 6.4.6,OML_O21.ORDER.OBSERVATION_REQUEST.DG1,[{DG1}],Diagnosis,0,-1,,,,Condition[1],DG1[Condition],ServiceRequest[1].reasonReference.reference=Condition[1].id; Condition[1].subject.reference=Patient[1].id,,Processing of the DG1 segment results in the creation of a new Condition resource which is referenced in the ServiceRequest created by the ORC segment
 6.4.7,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION,[{,--- OBSERVATION begin,0,-1,,,,,,,,
-6.4.7.1,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.OBX,OBX,Observation/Result,1,1,"IF OBX-29 IN (""QST"", ""SCI"")",,,Observation[1],OBX[Observation],ServiceRequest[1].supportingInfo.reference=Observation[1].id; Observation[1].subject.id=Patient[1].id,,
-6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-10 VALUED,,,Device,PRT[Device],Observation[2].device.reference=Device.id,,
-6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[2],PRT[Observation-Location],,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
+6.4.7.1,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.OBX,OBX,Observation/Result,1,1,IF  OBX-5 LST.count GREATER THAN 1,,,Observation[1],OBX[ServiceRequest.supportingInfo(Observation)-Component],ServiceRequest[1].supportingInfo.reference=Observation[1].id; Observation[1].subject.id=Patient[1].id,,
+6.4.7.1,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.OBX,OBX,Observation/Result,1,1,IF OBX-5 LST.count LESS THAN OR EQUALS 1,,,Observation[1],OBX[ServiceRequest.supportingInfo(Observation)],ServiceRequest[1].supportingInfo.reference=Observation[1].id; Observation[1].subject.id=Patient[1].id,,
+6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-10 VALUED,,,Device[1],PRT[Device],Observation[2].device.reference=Device.id,,
+6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-9 VALUED OR IF PRT-14 VALUED,,,Observation[1],PRT[Observation-Location],,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
 6.4.7.2,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.PRT,[{PRT}],Participation (for OBX),0,-1,IF PRT-5 VALUED,,,PractitionerRole[7],PRT[PractitionerRole],Observation[2].performer.reference=PractitionerRole[7].id,,Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation practitioner information.
 6.4.7.3,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.TCD,[ TCD ],Test Code Detail,0,1,,,,,,,,
 6.4.7.4,OML_O21.ORDER.OBSERVATION_REQUEST.OBSERVATION.NTE,[{NTE}],Notes and Comments (for Results),0,-1,,,,Observation[1],NTE[Observation],,,

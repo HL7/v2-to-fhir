@@ -59,7 +59,7 @@ EpisodeOfCare.diagnosis.reference=Condition[1].id",,
 28,ADT_A01.GT1,[{ GT1 }],Guarantor,0,-1,,,,,,,,
 29,ADT_A01.INSURANCE,[{,--- INSURANCE begin,0,-1,,,,,,,,
 29.1,ADT_A01.INSURANCE.IN1,IN1,Insurance,1,1,,,,Coverage[1],IN1[Coverage],Coverage.beneficiary.reference=Patient[1].id,,Processing of the IN1 segment results in the creation of a new Coverage resource
-29.2,ADT_A01.INSURANCE.IN2,[ IN2 ],Insurance Additional Info.,0,1,,,,Coverage[1],IN2[Coverage],,,Incorporate IN2 content into the Coverage created from the IN1 segment.
+29.2,ADT_A01.INSURANCE.IN2,[ IN2 ],Insurance Additional Info.,0,1,,,,,,,,
 29.3,ADT_A01.INSURANCE.IN3,[{ IN3 }],Insurance Additional Info - Cert.,0,-1,,,,CareTeam[1],IN3[CareTeam],CareTeam.subject.reference=Patient[1].id,,Incorporate IN3 content into the Coverage created from the IN1 segment.
 29.4,ADT_A01.INSURANCE.ROL,[{ ROL }],Role,0,-1,,,,,,,,
 29.5,ADT_A01.INSURANCE.PRT,[{ PRT }],Participation,0,-1,,,,,,,,

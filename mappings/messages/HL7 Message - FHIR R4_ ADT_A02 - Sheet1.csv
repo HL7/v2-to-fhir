@@ -4,7 +4,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 1,ADT_A02.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource.
 1,ADT_A02.MSH,MSH,Message Header,1,1,,,"If there is a source in MSH-4, or known based on the configuration.",Provenance[1],MSH[Provenance-Source],Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id,,"If the FHIR transformation does not yield a FHIR message, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Proviance resource instance to the relevant FHIR resources generated."
 1,ADT_A02.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,"If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
-2,ADT_A02.ARV,[{ ARV }],Access Restrictions,0,-1,,,,,,,,
+2,ADT_A02.ARV,[{ ARV }],Access Restrictions,0,-1,,b,,,,,,
 3,ADT_A02.SFT,[{ SFT }],Software Segment,0,-1,,,If the software does represent not the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
 Provenance[1].entity.role=""derivation""",,
 3,ADT_A02.SFT,[{ SFT }],Software Segment,0,-1,,,If the software represents the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
@@ -23,7 +23,7 @@ Provenance[1].entity.role=""source""",,
 12,ADT_A02:follow:PID.ARV,[{ ARV }],Access Restrictions,0,-1,,,,,,,,"FHIR does not yet support field level security tags.  The ARV, when located with the PID/PD1 in the v2 message, is meant to only apply to the patient.  However, technically it could point to other places in the messages as well.  That is considered out of scope as."
 13,ADT_A02:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.1 EQUALS ""PP"" AND ROL-3.3 EQUALS ""HL70443""","(element(""3.1"")=""PP"")and(element(""3.3"")=""HL70443"")",,Patient[1],ROL[Patient-GeneralPractitioner],,,
 13,ADT_A02:follow:PID.ROL,[{ ROL }],Role,0,-1,"IF ROL-3.3 EQUALS ""HL70443"" AND ROL-3.1 IS NOT ""PP""","(element(""3.1"")!=""PP"")or(element(""3.3"")!=""HL70443"")","When the ROL includes entries with roles in Table HL70443 other than ""PP"", then they may be candidates for CareTeam, but not all.  That is implementation specific.",CareTeam[1],ROL[CareTeam],CareTeam[1].subject.reference=Patient[1].id,,
-14,ADT_A02:follow:PID.PRT,[{ PRT }],Participation,0,-1,"IF PRT-4 IS ""PP""",,,Patient[1],PRT[Patient-GeneralPractitioner(Practitioner)],,,
+14,ADT_A02:follow:PID.PRT,[{ PRT }],Participation,0,-1,"IF PRT-4 IS ""PP""",,,Patient[1],PRT[Patient-GeneralPractitioner-Practitioner],,,
 14,ADT_A02:follow:PID.PRT,[{ PRT }],Participation,0,-1,"IF PRT-4 IS IN (""AD"", ""AP"", ""ARI"", ""AT"", ""CP"", ""FHCP"", ""OP"", ""PH"", ""PP"", ""PRI"", ""RP"", ""RT"", ""VP"", ""PO"")",,,CareTeam[1],PRT[CareTeam],CareTeam[1].subject.reference=Patient[1].id,,
 15,ADT_A02.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter[1].subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
 15,ADT_A02.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
