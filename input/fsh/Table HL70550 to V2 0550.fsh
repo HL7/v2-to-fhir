@@ -10,7 +10,7 @@ Title: "Table HL70550 to V2 0550 Map"
 * name = "TableHL70550ToV20550"
 * status = #active
 * experimental = true
-* date = "2023-11-21"
+* date = "2023-11-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

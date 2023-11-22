@@ -10,7 +10,7 @@ Title: "Table HL70062 to V3 ActReason Map"
 * name = "TableHL70062ToV3ActReason"
 * status = #active
 * experimental = true
-* date = "2023-11-21"
+* date = "2023-11-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
