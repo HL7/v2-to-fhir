@@ -1,8 +1,8 @@
-// HL7 Concept Map_ AllergySeverity[AllergyIntolerance.criticality-Original] - Sheet1.csv
+// HL7 Concept Map_ AllergySeverity[AllergyIntolerance.criticality-original] - Sheet1.csv
 Instance: TableHL70128OriginalToAllergyIntoleranceCriticality
 InstanceOf: ConceptMap
-Title: "Table HL70128[Original] to Allergy Intolerance Criticality Map"
-* title = "Table HL70128[Original] to Allergy Intolerance Criticality Map"
+Title: "Table HL70128[original] to Allergy Intolerance Criticality Map"
+* title = "Table HL70128[original] to Allergy Intolerance Criticality Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70128 to the FHIR Allergy Intolerance Criticality Value Set."
 * id = "table-hl70128-original-to-allergy-intolerance-criticality"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70128-original-to-allergy-intolerance-criticality"
@@ -10,7 +10,7 @@ Title: "Table HL70128[Original] to Allergy Intolerance Criticality Map"
 * name = "TableHL70128OriginalToAllergyIntoleranceCriticality"
 * status = #active
 * experimental = true
-* date = "2023-10-03"
+* date = "2023-11-21"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -21,9 +21,9 @@ Title: "Table HL70128[Original] to Allergy Intolerance Criticality Map"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Table HL70128[Original] to Allergy Intolerance Criticality.fsh"
+* extension[0].extension[1].valueString = "Table HL70128[original] to Allergy Intolerance Criticality.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1au42G-4z1OKLQp9hQkGVtauaiyYl6rHaGjLswnCgPjo/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1F3YGZuimTTxay5ngXQKu2Gvy5VvEom5xLvtWvHWJbkk/edit#gid=0"
 * group.element[0].code = #SV
 * group.element[0].display = "Severe"
 * group.element[0].target.equivalence = #equivalent

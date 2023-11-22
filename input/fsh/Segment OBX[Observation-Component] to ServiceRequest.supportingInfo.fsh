@@ -1,13 +1,13 @@
-// HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv
-Instance: SegmentOBXComponentToObservation
+// HL7 Segment - FHIR R4_ OBX[ServiceRequest.supportingInfo-Observation-Component] - OBX.csv
+Instance: SegmentOBXObservation-ComponentToServiceRequestSupportingInfo
 InstanceOf: ConceptMap
-Title: "Segment OBX[Component] to Observation Map"
-* title = "Segment OBX[Component] to Observation Map"
-* description = "This ConceptMap represents a mapping from the HL7 V2 Segment OBX to the FHIR Observation Resource."
-* id = "segment-obx-component-to-observation"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-obx-component-to-observation"
+Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
+* title = "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
+* description = "This ConceptMap represents a mapping from the HL7 V2 Segment OBX to the FHIR ServiceRequest.supportingInfo Data Type."
+* id = "segment-obx-observation-component-to-servicerequest-supportingin"
+* url = "http://hl7.org/fhir/uv/v2mappings/segment-obx-observation-component-to-servicerequest-supportingin"
 * version = "1.0"
-* name = "SegmentOBXComponentToObservation"
+* name = "SegmentOBXObservation-ComponentToServiceRequestSupportingInfo"
 * status = #active
 * experimental = true
 * date = "2023-11-21"
@@ -16,14 +16,14 @@ Title: "Segment OBX[Component] to Observation Map"
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "OBX"
-* targetUri = "Observation"
+* targetUri = "ServiceRequest.supportingInfo"
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Segment OBX[Component] to Observation.fsh"
+* extension[0].extension[1].valueString = "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1otkCEXuRkQy7kJ--_4WycdG2yQSM7eSfT9t8AUtylck/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Yc5vX0x8E3euRLV01f2vqNtyTQopL680iJY9IoVjKC0/edit#gid=0"
 * group.element[0].code = #OBX-3
 * group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "type"

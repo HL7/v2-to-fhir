@@ -10,7 +10,7 @@ Title: "Message ORM_O01 to Bundle Map"
 * name = "MessageORM_O01ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-10-03"
+* date = "2023-11-21"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -341,8 +341,10 @@ Title: "Message ORM_O01 to Bundle Map"
 * group.element[23].extension[0].extension[1].valueInteger = 1
 * group.element[23].display = "Observation/Result"
 * group.element[23].target.equivalence = #equivalent
-* group.element[23].target.code = #Observation
-* group.element[23].target.display = "Observation"
+* group.element[23].target.code = #Observation[1]
+* group.element[23].target.display = "Observation[1]"
 * group.element[23].target.comment = "While some OBX segments may not represent an Observation.  One cannot determine whether it is or is not based on known OBX fields, thus leave any need to separate mapping to another resource to the implementer.  E.g., one may not want to consider as an Observation the ask at order entry answer who the sonographer is for the order."
 * group.element[23].target.dependsOn[0].property = "segment-map"
-* group.element[23].target.dependsOn[0].value = "OBX[Observation]"
+* group.element[23].target.dependsOn[0].value = "OBX[ServiceRequest.supportingInfo(Observation)]"
+* group.element[23].target.dependsOn[1].property = "references"
+* group.element[23].target.dependsOn[1].value = "ServiceRequest[1].supportingInfo.reference=Observation[1].id; Observation[1].subject.id=Patient[1].id"
