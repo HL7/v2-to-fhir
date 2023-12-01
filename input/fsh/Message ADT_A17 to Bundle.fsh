@@ -10,7 +10,7 @@ Title: "Message ADT_A17 to Bundle Map"
 * name = "MessageADT_A17ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-11-22"
+* date = "2023-12-01"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

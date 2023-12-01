@@ -10,7 +10,7 @@ Title: "Message ORU_R01 to Bundle Map"
 * name = "MessageORU_R01ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-11-22"
+* date = "2023-12-01"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -601,7 +601,7 @@ Observation[2].encounter.reference=Encounter[1].id\
 * group.element[33].target.code = #Observation[2]
 * group.element[33].target.display = "Observation[2]"
 * group.element[33].target.dependsOn[0].property = "segment-map"
-* group.element[33].target.dependsOn[0].value = "OBX[ServiceRequest.supportingInfo(Observation)]"
+* group.element[33].target.dependsOn[0].value = "OBX[Observation]"
 * group.element[33].target.dependsOn[1].property = "references"
 * group.element[33].target.dependsOn[1].value = "ServiceRequest[1].supportingInfo.reference=Observation[1].id; Observation[1].subject.id=Patient[1].id"
 * group.element[33].target.product[0].property = "antlr"
@@ -617,7 +617,7 @@ Observation[2].encounter.reference=Encounter[1].id\
 * group.element[34].target.code = #Observation[2]
 * group.element[34].target.display = "Observation[2]"
 * group.element[34].target.dependsOn[0].property = "segment-map"
-* group.element[34].target.dependsOn[0].value = "OBX[ServiceRequest.supportingInfo(Observation)-Component]"
+* group.element[34].target.dependsOn[0].value = "OBX[Observation-Component]"
 * group.element[34].target.dependsOn[1].property = "references"
 * group.element[34].target.dependsOn[1].value = "ServiceRequest[1].supportingInfo.reference=Observation[1].id; Observation[1].subject.id=Patient[1].id"
 * group.element[34].target.product[0].property = "antlr"

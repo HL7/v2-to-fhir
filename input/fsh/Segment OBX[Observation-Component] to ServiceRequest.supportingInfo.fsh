@@ -10,7 +10,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * name = "SegmentOBXObservation-ComponentToServiceRequestSupportingInfo"
 * status = #active
 * experimental = true
-* date = "2023-11-22"
+* date = "2023-12-01"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -34,7 +34,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[0].extension[0].extension[2].valueInteger = 1
 * group.element[0].display = "Observation Identifier"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #code
+* group.element[0].target.code = #Observation.code
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -42,7 +42,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
-* group.element[0].target.display = "code"
+* group.element[0].target.display = "Observation.code"
 * group.element[0].target.dependsOn[0].property = "data-type-map"
 * group.element[0].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[1].code = #OBX-3
@@ -55,7 +55,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[1].extension[0].extension[2].valueInteger = 1
 * group.element[1].display = "Observation Identifier"
 * group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #component[each].code
+* group.element[1].target.code = #Observation.component[each].code
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -63,7 +63,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
-* group.element[1].target.display = "component[each].code"
+* group.element[1].target.display = "Observation.component[each].code"
 * group.element[1].target.dependsOn[0].property = "data-type-map"
 * group.element[1].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[2].code = #OBX-5
@@ -76,7 +76,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[2].extension[0].extension[2].valueInteger = -1
 * group.element[2].display = "Observation Value"
 * group.element[2].target.equivalence = #equivalent
-* group.element[2].target.code = #component[each].valueQuantity
+* group.element[2].target.code = #Observation.component[each].valueQuantity
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"quantity"
@@ -84,7 +84,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[2].target.extension[0].extension[1].valueInteger = 0
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
-* group.element[2].target.display = "component[each].valueQuantity"
+* group.element[2].target.display = "Observation.component[each].valueQuantity"
 * group.element[2].target.dependsOn[0].property = "data-type-map"
 * group.element[2].target.dependsOn[0].value = "NM[Quantity]"
 * group.element[2].target.product[0].property = "antlr"
@@ -99,7 +99,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[3].extension[0].extension[2].valueInteger = -1
 * group.element[3].display = "Observation Value"
 * group.element[3].target.equivalence = #equivalent
-* group.element[3].target.code = #component[each].valueString
+* group.element[3].target.code = #Observation.component[each].valueString
 * group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"string"
@@ -107,7 +107,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[3].target.extension[0].extension[1].valueInteger = 0
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
-* group.element[3].target.display = "component[each].valueString"
+* group.element[3].target.display = "Observation.component[each].valueString"
 * group.element[3].target.product[0].property = "antlr"
 * group.element[3].target.product[0].value = "IF OBX-2 IN (\"ST\", \"FT\", \"TX\")"
 * group.element[3].target.product[1].property = "narrative"
@@ -122,7 +122,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[4].extension[0].extension[2].valueInteger = -1
 * group.element[4].display = "Observation Value"
 * group.element[4].target.equivalence = #equivalent
-* group.element[4].target.code = #component[each].valueCodeableConcept
+* group.element[4].target.code = #Observation.component[each].valueCodeableConcept
 * group.element[4].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].target.extension[0].extension[0].url = "type"
 * group.element[4].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -130,7 +130,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[4].target.extension[0].extension[1].valueInteger = 0
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
-* group.element[4].target.display = "component[each].valueCodeableConcept"
+* group.element[4].target.display = "Observation.component[each].valueCodeableConcept"
 * group.element[4].target.dependsOn[0].property = "data-type-map"
 * group.element[4].target.dependsOn[0].value = "CF[CodeableConcept]"
 * group.element[4].target.product[0].property = "antlr"
@@ -145,7 +145,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[5].extension[0].extension[2].valueInteger = -1
 * group.element[5].display = "Observation Value"
 * group.element[5].target.equivalence = #equivalent
-* group.element[5].target.code = #component[each].valueCodeableConcept
+* group.element[5].target.code = #Observation.component[each].valueCodeableConcept
 * group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -153,7 +153,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[5].target.extension[0].extension[1].valueInteger = 0
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
-* group.element[5].target.display = "component[each].valueCodeableConcept"
+* group.element[5].target.display = "Observation.component[each].valueCodeableConcept"
 * group.element[5].target.dependsOn[0].property = "data-type-map"
 * group.element[5].target.dependsOn[0].value = "CNE[CodeableConcept]"
 * group.element[5].target.product[0].property = "antlr"
@@ -168,7 +168,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[6].extension[0].extension[2].valueInteger = -1
 * group.element[6].display = "Observation Value"
 * group.element[6].target.equivalence = #equivalent
-* group.element[6].target.code = #component[each].valueCodeableConcept
+* group.element[6].target.code = #Observation.component[each].valueCodeableConcept
 * group.element[6].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].target.extension[0].extension[0].url = "type"
 * group.element[6].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -176,7 +176,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[6].target.extension[0].extension[1].valueInteger = 0
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
-* group.element[6].target.display = "component[each].valueCodeableConcept"
+* group.element[6].target.display = "Observation.component[each].valueCodeableConcept"
 * group.element[6].target.dependsOn[0].property = "data-type-map"
 * group.element[6].target.dependsOn[0].value = "CE[CodeableConcept]"
 * group.element[6].target.product[0].property = "antlr"
@@ -191,7 +191,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[7].extension[0].extension[2].valueInteger = -1
 * group.element[7].display = "Observation Value"
 * group.element[7].target.equivalence = #equivalent
-* group.element[7].target.code = #component[each].valueCodeableConcept
+* group.element[7].target.code = #Observation.component[each].valueCodeableConcept
 * group.element[7].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].target.extension[0].extension[0].url = "type"
 * group.element[7].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -199,7 +199,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[7].target.extension[0].extension[1].valueInteger = 0
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
-* group.element[7].target.display = "component[each].valueCodeableConcept"
+* group.element[7].target.display = "Observation.component[each].valueCodeableConcept"
 * group.element[7].target.dependsOn[0].property = "data-type-map"
 * group.element[7].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[7].target.product[0].property = "antlr"
@@ -214,7 +214,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[8].extension[0].extension[2].valueInteger = -1
 * group.element[8].display = "Observation Value"
 * group.element[8].target.equivalence = #equivalent
-* group.element[8].target.code = #component[each].valueCodeableConcept
+* group.element[8].target.code = #Observation.component[each].valueCodeableConcept
 * group.element[8].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].target.extension[0].extension[0].url = "type"
 * group.element[8].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -222,7 +222,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[8].target.extension[0].extension[1].valueInteger = 0
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
-* group.element[8].target.display = "component[each].valueCodeableConcept"
+* group.element[8].target.display = "Observation.component[each].valueCodeableConcept"
 * group.element[8].target.dependsOn[0].property = "data-type-map"
 * group.element[8].target.dependsOn[0].value = "IS[CodeableConcept]"
 * group.element[8].target.product[0].property = "antlr"
@@ -237,7 +237,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[9].extension[0].extension[2].valueInteger = -1
 * group.element[9].display = "Observation Value"
 * group.element[9].target.equivalence = #equivalent
-* group.element[9].target.code = #component[each].valuePeriod
+* group.element[9].target.code = #Observation.component[each].valuePeriod
 * group.element[9].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].target.extension[0].extension[0].url = "type"
 * group.element[9].target.extension[0].extension[0].valueCode = #"Period"
@@ -245,7 +245,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[9].target.extension[0].extension[1].valueInteger = 0
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
-* group.element[9].target.display = "component[each].valuePeriod"
+* group.element[9].target.display = "Observation.component[each].valuePeriod"
 * group.element[9].target.dependsOn[0].property = "data-type-map"
 * group.element[9].target.dependsOn[0].value = "DR[Period]"
 * group.element[9].target.product[0].property = "antlr"
@@ -260,7 +260,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[10].extension[0].extension[2].valueInteger = -1
 * group.element[10].display = "Observation Value"
 * group.element[10].target.equivalence = #equivalent
-* group.element[10].target.code = #component[each].valueDateTime
+* group.element[10].target.code = #Observation.component[each].valueDateTime
 * group.element[10].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].target.extension[0].extension[0].url = "type"
 * group.element[10].target.extension[0].extension[0].valueCode = #"dateTime"
@@ -268,7 +268,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[10].target.extension[0].extension[1].valueInteger = 0
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
-* group.element[10].target.display = "component[each].valueDateTime"
+* group.element[10].target.display = "Observation.component[each].valueDateTime"
 * group.element[10].target.product[0].property = "antlr"
 * group.element[10].target.product[0].value = "IF OBX-2 IN (\"DTM\", \"DT\")"
 * group.element[11].code = #OBX-5
@@ -281,7 +281,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[11].extension[0].extension[2].valueInteger = -1
 * group.element[11].display = "Observation Value"
 * group.element[11].target.equivalence = #equivalent
-* group.element[11].target.code = #component[each].valueRange
+* group.element[11].target.code = #Observation.component[each].valueRange
 * group.element[11].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].target.extension[0].extension[0].url = "type"
 * group.element[11].target.extension[0].extension[0].valueCode = #"Range"
@@ -289,7 +289,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[11].target.extension[0].extension[1].valueInteger = 0
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
-* group.element[11].target.display = "component[each].valueRange"
+* group.element[11].target.display = "Observation.component[each].valueRange"
 * group.element[11].target.dependsOn[0].property = "data-type-map"
 * group.element[11].target.dependsOn[0].value = "NR[Range]"
 * group.element[11].target.product[0].property = "antlr"
@@ -304,7 +304,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[12].extension[0].extension[2].valueInteger = -1
 * group.element[12].display = "Observation Value"
 * group.element[12].target.equivalence = #equivalent
-* group.element[12].target.code = #component[each].valueString
+* group.element[12].target.code = #Observation.component[each].valueString
 * group.element[12].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].target.extension[0].extension[0].url = "type"
 * group.element[12].target.extension[0].extension[0].valueCode = #"string"
@@ -312,7 +312,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[12].target.extension[0].extension[1].valueInteger = 0
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
-* group.element[12].target.display = "component[each].valueString"
+* group.element[12].target.display = "Observation.component[each].valueString"
 * group.element[12].target.dependsOn[0].property = "value"
 * group.element[12].target.dependsOn[0].value = "OBX-5.1+\"-\"+OBX-5.2"
 * group.element[12].target.product[0].property = "antlr"
@@ -327,7 +327,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[13].extension[0].extension[2].valueInteger = -1
 * group.element[13].display = "Observation Value"
 * group.element[13].target.equivalence = #equivalent
-* group.element[13].target.code = #component[each].valueTime
+* group.element[13].target.code = #Observation.component[each].valueTime
 * group.element[13].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].target.extension[0].extension[0].url = "type"
 * group.element[13].target.extension[0].extension[0].valueCode = #"time"
@@ -335,7 +335,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[13].target.extension[0].extension[1].valueInteger = 0
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
-* group.element[13].target.display = "component[each].valueTime"
+* group.element[13].target.display = "Observation.component[each].valueTime"
 * group.element[13].target.product[0].property = "antlr"
 * group.element[13].target.product[0].value = "IF OBX-2 EQUALS \"TM\""
 * group.element[14].code = #OBX-5
@@ -348,7 +348,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[14].extension[0].extension[2].valueInteger = -1
 * group.element[14].display = "Observation Value"
 * group.element[14].target.equivalence = #equivalent
-* group.element[14].target.code = #component[each].valueRatio
+* group.element[14].target.code = #Observation.component[each].valueRatio
 * group.element[14].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].target.extension[0].extension[0].url = "type"
 * group.element[14].target.extension[0].extension[0].valueCode = #"Ratio"
@@ -356,7 +356,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[14].target.extension[0].extension[1].valueInteger = 0
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
-* group.element[14].target.display = "component[each].valueRatio"
+* group.element[14].target.display = "Observation.component[each].valueRatio"
 * group.element[14].target.dependsOn[0].property = "data-type-map"
 * group.element[14].target.dependsOn[0].value = "SN[Ratio]"
 * group.element[14].target.product[0].property = "antlr"
@@ -371,7 +371,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[15].extension[0].extension[2].valueInteger = -1
 * group.element[15].display = "Observation Value"
 * group.element[15].target.equivalence = #equivalent
-* group.element[15].target.code = #component[each].valueRange
+* group.element[15].target.code = #Observation.component[each].valueRange
 * group.element[15].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].target.extension[0].extension[0].url = "type"
 * group.element[15].target.extension[0].extension[0].valueCode = #"Range"
@@ -379,7 +379,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[15].target.extension[0].extension[1].valueInteger = 0
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
-* group.element[15].target.display = "component[each].valueRange"
+* group.element[15].target.display = "Observation.component[each].valueRange"
 * group.element[15].target.dependsOn[0].property = "data-type-map"
 * group.element[15].target.dependsOn[0].value = "SN[Range]"
 * group.element[15].target.product[0].property = "antlr"
@@ -394,7 +394,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[16].extension[0].extension[2].valueInteger = -1
 * group.element[16].display = "Observation Value"
 * group.element[16].target.equivalence = #equivalent
-* group.element[16].target.code = #component[each].valueString
+* group.element[16].target.code = #Observation.component[each].valueString
 * group.element[16].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].target.extension[0].extension[0].url = "type"
 * group.element[16].target.extension[0].extension[0].valueCode = #"string"
@@ -402,7 +402,7 @@ Title: "Segment OBX[Observation-Component] to ServiceRequest.supportingInfo Map"
 * group.element[16].target.extension[0].extension[1].valueInteger = 0
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
-* group.element[16].target.display = "component[each].valueString"
+* group.element[16].target.display = "Observation.component[each].valueString"
 * group.element[16].target.dependsOn[0].property = "value"
 * group.element[16].target.dependsOn[0].value = "OBX-5.1+\"\"+OBX-5.2+\"\"+OBX-5.3+\"\"+OBX-5.4"
 * group.element[16].target.product[0].property = "antlr"

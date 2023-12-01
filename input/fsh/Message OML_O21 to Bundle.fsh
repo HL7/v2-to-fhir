@@ -10,7 +10,7 @@ Title: "Message OML_O21 to Bundle Map"
 * name = "MessageOML_O21ToBundle"
 * status = #active
 * experimental = true
-* date = "2023-11-22"
+* date = "2023-12-01"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -463,7 +463,7 @@ Title: "Message OML_O21 to Bundle Map"
 * group.element[29].target.code = #Observation[1]
 * group.element[29].target.display = "Observation[1]"
 * group.element[29].target.dependsOn[0].property = "segment-map"
-* group.element[29].target.dependsOn[0].value = "OBX[ServiceRequest.supportingInfo(Observation)-Component]"
+* group.element[29].target.dependsOn[0].value = "OBX[Observation]"
 * group.element[29].target.dependsOn[1].property = "references"
 * group.element[29].target.dependsOn[1].value = "ServiceRequest[1].supportingInfo.reference=Observation[1].id; Observation[1].subject.id=Patient[1].id"
 * group.element[29].target.product[0].property = "antlr"
@@ -479,7 +479,7 @@ Title: "Message OML_O21 to Bundle Map"
 * group.element[30].target.code = #Observation[1]
 * group.element[30].target.display = "Observation[1]"
 * group.element[30].target.dependsOn[0].property = "segment-map"
-* group.element[30].target.dependsOn[0].value = "OBX[ServiceRequest.supportingInfo(Observation)]"
+* group.element[30].target.dependsOn[0].value = "OBX[Observation-Component]"
 * group.element[30].target.dependsOn[1].property = "references"
 * group.element[30].target.dependsOn[1].value = "ServiceRequest[1].supportingInfo.reference=Observation[1].id; Observation[1].subject.id=Patient[1].id"
 * group.element[30].target.product[0].property = "antlr"
