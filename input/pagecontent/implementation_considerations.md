@@ -149,7 +149,7 @@ The HL7 v2-to-FHIR project team cannot be expected to know all possible values i
 Translations may be particularly problematic when the FHIR value set is fixed (a binding strength of "Required") and cannot be extended locally. A v2 value may not have a cognate FHIR value or the the FHIR value may be less granular, either situation potentially resulting in the loss of information as the concept is translated. In these situations we recommend the following:
 * When the FHIR data type is code or coding: 
   * Review the provided mappings and confirm that the v2 value is translated to the most appropriate value for the integration
-  * We strongly encourage the retention of the original v2 value using the http://hl7.org/fhir/[version]/StructureDefinition/extension-[Path] (resulting in [attribute].extension-originalCodeableConcept) for those values that are not mappable or when the v2 value is more granular than the FHIR value and data may be lost in the translation
+  * We strongly encourage the retention of the original v2 value using the http://hl7.org/fhir/StructureDefinition/alternate-codes extension for those values that are not mappable or when the v2 value is more granular than the FHIR value and data may be lost in the translation
   * Example: PV1-2 Patient class maps to Encounter.status where the FHIR value set is fixed. Any suggested mappings to "unknown" need to be reviewed to determine if another FHIR value might be better
 * When the FHIR data type is code or coding: 
   * Review the provided mappings and confirm that the v2 value is translated to the most appropriate value for the integration
