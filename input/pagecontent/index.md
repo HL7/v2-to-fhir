@@ -5,10 +5,15 @@
 <br>
 The following are known JIRAs waiting for resolution.  Feedback and voting on these as part of the ballot can further guide appropriate resolution and inclusion:
 <ul>
+   <li>[FHIR-33007] Aligning Appointment.servicetype and .basedOn</li>
    <li>[FHIR-33036] Observation needs type and subtype extension</li>
    <li>[FHIR-33037] Observation Location extension needed</li>
+   <li>[FHIR-33041] Clarify "in process" as part Observation.status="registered" or create a separate status</li>
+   <li>[FHIR-33042] Include Observation.status "appended"</li>
+   <li>[FHIR-33043] Clarify "not asked" as part Observation.status="final" or create a separate status</li>
    <li>[FHIR-34194] Add businessEvent extension</li>
    <li>[FHIR-43298] Attachment.data only supports binary64</li>
+   <li>UPS-217] Add "sender-application" to http://terminology.hl7.org/CodeSystem/provenance-participant-type</li>
 </ul>
 <br>
 The following JIRAs have been dispositioned and will be applied before publication as they are formatting issues:
