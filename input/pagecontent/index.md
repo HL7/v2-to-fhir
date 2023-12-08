@@ -2,6 +2,13 @@
 <b>Review Note:</b>
 <br>The focus of this first HL7 v2-to-FHIR STU Ballot is on an initial set of messages, segments, data types, and vocabulary to establish the foundation on which to expand and cover the full range of HL7 v2 messages in actual use.  The purpose is primarily to solicit feedback on the accuracy of the proposed mappings.  Secondary is to solicit feedback on structure and navigation.  Suggestions on additional messages, segments, data types, and vocabulary to prioritize supporting real-world use are welcome as well and should be marked as A-S in the ballot spreadsheet.  Lastly, specific questions are provided [here](questions.html).
 <br>
+<br>
+The following are known JIRAs waiting for resolution.  Feedback and voting on these as part of the ballot can further guide appropriate resolution and inclusion:
+* [FHIR-33036] Observation needs type and subtype extension
+* [FHIR-33037] Observation Location extension needed
+* [FHIR-34194] Add businessEvent extension
+* [FHIR-43298] Attachment.data only supports binary64
+<br>
 </p>
 The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages
 segments, datatypes and vocabulary to HL7 FHIR Release 4.0 Bundles, Resources, Data
