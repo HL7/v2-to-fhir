@@ -4,10 +4,12 @@
 <br>
 <br>
 The following are known JIRAs waiting for resolution.  Feedback and voting on these as part of the ballot can further guide appropriate resolution and inclusion:
-* [FHIR-33036] Observation needs type and subtype extension
-* [FHIR-33037] Observation Location extension needed
-* [FHIR-34194] Add businessEvent extension
-* [FHIR-43298] Attachment.data only supports binary64
+<ul>
+   <li>[FHIR-33036] Observation needs type and subtype extension</li>
+   <li>[FHIR-33037] Observation Location extension needed</li>
+   <li>[FHIR-34194] Add businessEvent extension</li>
+   <li>[FHIR-43298] Attachment.data only supports binary64</li>
+</ul>
 <br>
 </p>
 The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages
