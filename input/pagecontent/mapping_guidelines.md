@@ -89,6 +89,8 @@ Examples:
   * Note that this does not mean that there is a first and second slot where one is kept empty if not available in v2.  Rather it just means they are to be different if both present.
   * If the mapping needs to yield multiple instances and the v2 value needs to be applied to multiple FHIR element instances, [each] is used.
      * Example:  OBX-2 Observation Identifier needs to be mapped to all Observation.component.code instances if OBX-5 Value contains multiple values.  The FHIR attribute being mapped to then states Observation.component[each].code.
+  * If a mapping needs to use a specific numbe of instance the notation [n-m] is used.
+     * Example: The XAD.1 Street Address component is mapped to Address.line one through three, which is represented as line[1-3] in the FHIR attribute column, that would then be followed by XAD.2 Other Designation referencing line[4]
   * While typically these notations are a suffix on the FHIR element it applies to, in Data Type mappings you may see these as seemingly a prefix.  This would effectively apply to the FHIR element (typically an attribute) where that FHIR data type is actually referenced.
      * Example: [1].Contactpoint.value and [2].ContactPoint.value mapped to from the v2 XTN data type would reflect the first instance of the attribute repetition is actually used, e.g., Patient.telecom that can repeat and is mapped to from PID-13 and PID-14 which have the v2 XTN data type.
 
