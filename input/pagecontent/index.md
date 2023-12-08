@@ -11,6 +11,13 @@ The following are known JIRAs waiting for resolution.  Feedback and voting on th
    <li>[FHIR-43298] Attachment.data only supports binary64</li>
 </ul>
 <br>
+The following JIRAs have been dispositioned and will be applied before publication as they are formatting issues:
+<ul>
+   <li>[V2-5] Duplicate information</li>
+   <li>[V2-25538] MSH[MessageHeader] is presented in Message Table format, not Segment Table Format</li>
+   <li>[V2-25632] Segment Mapping Headers out of sync</li>
+   <li>[FHIR-V2-25633] Data Type Mapping table columns out of sync</li>
+</ul>
 </p>
 The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages
 segments, datatypes and vocabulary to HL7 FHIR Release 4.0 Bundles, Resources, Data
