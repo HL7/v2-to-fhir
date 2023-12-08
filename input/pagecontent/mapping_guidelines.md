@@ -92,6 +92,8 @@ Examples:
   * While typically these notations are a suffix on the FHIR element it applies to, in Data Type mappings you may see these as seemingly a prefix.  This would effectively apply to the FHIR element (typically an attribute) where that FHIR data type is actually referenced.
      * Example: [1].Contactpoint.value and [2].ContactPoint.value mapped to from the v2 XTN data type would reflect the first instance of the attribute repetition is actually used, e.g., Patient.telecom that can repeat and is mapped to from PID-13 and PID-14 which have the v2 XTN data type.
 
+* Other than as described in the [n] Notation above, a repeat of a segment in the message should yield a new instance of the FHIR resource it maps to, and each instance of a field within a segment a new instance of an attribute.
+  * There are situations where the HL7 v2 message may include field repeats that the corresponding FHIR attribute does not accommodate.  We have not yet consistently resolved with FHIR whether it should have the core standard extend its cardinality or use an extension.  In the absence of clear guidance the implementer should determine whether a local extension is appropriate to be utilized. 
 * Each mapping row includes comments to document any considerations for the mapping that can aid in further refining the mappings for local use.
 * Note that a FHIR attribute may be mapped to by both a segment field or a field component from another field in that segment, e.g., ROL-1 Role Instance ID and ROL-4 Role Person.  That involves two separate spreadsheets for different compoents (segment spreadsheet and data type component) and therefore should be mapped to different instance of a FHIR attribute.  In this example RelatedPerson.identifier.
 
