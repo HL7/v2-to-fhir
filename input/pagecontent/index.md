@@ -16,6 +16,16 @@ The following are known JIRAs waiting for resolution.  Feedback and voting on th
    <li>UPS-217] Add "sender-application" to http://terminology.hl7.org/CodeSystem/provenance-participant-type</li>
 </ul>
 <br>
+The following have been resolved but were not applied, or need clarification that was not provided before this ballot round.  We aim to still be applied before publication and would either be reviewed in a targeted peer review or as part of a ballot round if another is necessary before publication.
+<ul>
+<li>[FHIR-33038] Observation needs a subID extension</li>
+<li>[FHIR-31587] Add Nature of Abnormal Test Extension to Observation</li> 
+<li>[FHIR-31586] Add Analysis Date/Time Extension to Observation</li> 
+<li>[FHIR-31611] Add Callback Number Extension to ServiceRequest</li>
+<li>[FHIR-33077] - Add "sender" as a Provenance.agent.role or .type</li>
+<li>[FHIR-36650] Create Temporary Location Extension</li>
+</ul>
+<br>
 The following JIRAs have been dispositioned and will be applied before publication as they are formatting issues:
 <ul>
    <li>[V2-5] Duplicate information</li>
