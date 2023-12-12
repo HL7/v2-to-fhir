@@ -26,7 +26,8 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 14,OBR-14,Specimen Received Date/Time *,TS,0,1,,,,,,,,,,,,,
 15,OBR-15,Specimen Source,CM,0,1,,,,,,,,,,,,,
 16,OBR-16,Ordering Provider,XCN,0,-1,IF ORC-12 NOT VALUED,,,requester(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
-17,OBR-17,Order Callback Phone Number,XTN,0,2,,,,,requester.extension??-callbackNumber,ContactPoint,0,-1,XTN[ContactPoint],,,,
+17,OBR-17,Order Callback Phone Number,XTN,0,2,,,,requester.extension[1].url,,uri,0,1,,,,,"""http://hl7.org/fhir/StructureDefinition/servicerequest-order-callback-phone-number"""
+17,OBR-17,Order Callback Phone Number,XTN,0,2,,,,requester.extension[1].valueContactPoint,,ContactPoint,0,1,XTN[ContactPoint],,,,
 18,OBR-18,Placer Field 1,ST,0,1,,,,,,,,,,,,,"The use of OBR-18 is variable and the transformation of it is an implementation level decision. ServiceRequest.note exists to hold text, but should only be used if the content of the field doesn't require any context to be understood."
 19,OBR-19,Placer Field 2,ST,0,1,,,,,,,,,,,,,"The use of OBR-19 is variable and the transformation of it is an implementation level decision. ServiceRequest.note exists to hold text, but should only be used if the content of the field doesn't require any context to be understood."
 20,OBR-20,Filler Field 1 +,ST,0,1,,,,,,,,,,,,,"The use of OBR-20 is variable and the transformation of it is an implementation level decision. ServiceRequest.note exists to hold text, but should only be used if the content of the field doesn't require any context to be understood."

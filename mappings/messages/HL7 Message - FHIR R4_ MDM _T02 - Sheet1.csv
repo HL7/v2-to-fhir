@@ -1,0 +1,32 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
+Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
+1,MDM_T02.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
+1,MDM_T02.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
+1,MDM_T02.MSH,MSH,Message Header,1,1,,,,Provenance[1],MSH[Provenance-Source],Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id,,"If the FHIR transformation does not yield a FHIR message, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
+1,MDM_T02.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,"If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
+2,MDM_T02.SFT,[{SFT}],Software Segment,0,-1,,,If the software does represent not the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
+Provenance[1].entity.role=""derivation""",,
+2,MDM_T02.SFT,[{SFT}],Software Segment,0,-1,,,If the software represents the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
+Provenance[1].entity.role=""source""",,
+3,MDM_T02.UAC,[ UAC ],User Authentication Credential,0,1,,,,,,,,
+4,MDM_T02.EVN,EVN,Event Type,1,1,,,,Provenance[3],EVN[Provenance],Provenance[3].target.reference=MessageHeader[1].id,,
+5,MDM_T02.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
+5,MDM_T02.PID,PID,Patient Identification,1,1,,,,Provenance[4],PID[Provenance-Patient],Provenance.target.reference=Patient[1].id,,
+6,MDM_T02.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter.subject=Patient[PID],,Processing of the PV1 segment results in the creation of a new Encounter resource
+6,MDM_T02.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
+7,MDM_T02.COMMON_ORDER,[{,--- COMMON_ORDER begin,0,-1,,,,,,,,
+7.1,MDM_T02.COMMON_ORDER.ORC,ORC,Common order segment,1,1,,,,ServiceRequest[1],ORC[ServiceRequest],ServiceRequest.subject=Patient[PID],,Processing of each ORC segment results in the creation of a new ServiceRequest resource
+7.1,MDM_T02.COMMON_ORDER.ORC,ORC,Common order segment,1,1,,,,Provenance[3],ORC[Provenance],Provenance.target=ServiceRequest[ORC],,"Using Provenance is the preferred way, but a local implementation may decide to add extensions to the main resource.  As the use and guidance of Provenance matures we wil revisit this later."
+7.2,MDM_T02.COMMON_ORDER.TIMING,[{,--- TIMING begin,0,-1,,,,,,,,
+7.2.1,MDM_T02.COMMON_ORDER.TIMING.TQ1,TQ1,Timing/Quantity,1,1,,,,ServiceRequest[1],TQ1[ServiceRequest],,,
+7.2.2,MDM_T02.COMMON_ORDER.TIMING.TQ2,[{TQ2}],Timing/Quantity Order Sequence,0,-1,,,,,,,,
+7.2.3,/MDM_T02.COMMON_ORDER.TIMING,}],--- TIMING end,,,,,,,,,,
+7.3,MDM_T02.COMMON_ORDER.OBR,OBR,Observation request segment,1,1,,,,ServiceRequest[1],OBR[ServiceRequest],,,
+7.4,MDM_T02.COMMON_ORDER.NTE,[{ NTE }],Notes and comments about the observation (OBR),0,-1,,,,ServiceRequest[1],NTE[ServiceRequest],,,
+7.5,/MDM_T02.COMMON_ORDER,}],--- COMMON_ORDER end,,,,,,,,,,
+8,MDM_T02.TXA,TXA,Document Notification,1,1,,,,DocumentReference[1],TXA[DocumentReference],DocumentReference[1].context.related.reference=ServiceRequest[1].id,,Note for detailed mapping to use 
+9,MDM_T02.CON,[{CON}],Consent Segment,0,-1,,,,,,,,
+10,MDM_T02.OBSERVATION,{,--- OBSERVATION begin,1,-1,,,,,,,,
+10.1,MDM_T02.OBSERVATION.OBX,OBX,Observation/Result (one or more required),1,1,,,,DocumentReference[1],OBX[DocumentReference],DocumentReference[1].context.related.reference=ServiceRequest[1].id,,
+10.2,MDM_T02.OBSERVATION.NTE,[{ NTE }],Notes and comments about the observation (OBX),0,-1,,,,DocumentReference[1],NTE[DocumentReference],DocumentReference[1].context.related.reference=ServiceRequest[1].id,,
+10.3,/MDM_T02.OBSERVATION,},--- OBSERVATION end,,,,,,,,,,

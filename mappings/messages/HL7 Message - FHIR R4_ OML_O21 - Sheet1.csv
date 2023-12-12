@@ -4,7 +4,10 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 1,OML_O21.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
 1,OML_O21.MSH,MSH,Message Header,1,1,,,"If there is a source in MSH-4, or known based on the configuration.",Provenance[1],MSH[Provenance-Source],Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id,,"If the FHIR transformation does not yield a FHIR message, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
 1,OML_O21.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,"If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
-2,OML_O21.SFT,[{SFT}],Software,0,-1,,,,MessageHeader[1],SFT[MessageHeader],,,Incorporate SFT content for each of the SFT instances into the MessageHeader created from the MSH segment.
+2,OML_O21.SFT,[{SFT}],Software,0,-1,,,If the software does represent not the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
+Provenance[1].entity.role=""derivation""",,
+2,OML_O21.SFT,[{SFT}],Software,0,-1,,,If the software represents the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
+Provenance[1].entity.role=""source""",,
 3,OML_O21.UAC,[ UAC ],User Authentication Credential,0,1,,,,,,,,
 4,OML_O21.NTE,[{NTE}],Notes and Comments (for Header),0,-1,,,,,,,,
 5,OML_O21.PATIENT,[,--- PATIENT begin,0,1,,,,,,,,

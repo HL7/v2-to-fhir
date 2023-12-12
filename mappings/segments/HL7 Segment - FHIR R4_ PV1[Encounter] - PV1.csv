@@ -41,7 +41,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 19,PV1-19,Visit Number,CX,0,1,,,,identifier[1].type.coding.code,,code,,,,,"""VN""",,
 19,PV1-19,Visit Number,CX,0,1,,,,identifier[1].type.coding.system ,,uri,,,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,
 19,PV1-19,Visit Number,CX,0,1,,,,identifier[1].type.text,,string,,,,,"""visit number""",,
-20,PV1-20,Financial Class,FC,0,-1,,,,,extension?-financialClass,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
+20,PV1-20,Financial Class,FC,0,-1,,,,,extension??-financialClass,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
 21,PV1-21,Charge Price Indicator,CWE,0,1,,,,,,,,,,,,,
 22,PV1-22,Courtesy Code,CWE,0,1,,,,,,,,,,,,,
 23,PV1-23,Credit Rating,CWE,0,1,,,,,,,,,,,,,
