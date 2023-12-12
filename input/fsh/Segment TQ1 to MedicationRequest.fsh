@@ -10,7 +10,7 @@ Title: "Segment TQ1 to MedicationRequest Map"
 * name = "SegmentTQ1ToMedicationRequest"
 * status = #active
 * experimental = true
-* date = "2023-12-04"
+* date = "2023-12-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

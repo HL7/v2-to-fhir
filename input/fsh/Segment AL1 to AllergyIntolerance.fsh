@@ -10,7 +10,7 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * name = "SegmentAL1ToAllergyIntolerance"
 * status = #active
 * experimental = true
-* date = "2023-12-04"
+* date = "2023-12-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -93,7 +93,7 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "category.extension[1].url"
 * group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/originalCodeableConcept\""
+* group.element[3].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[4].code = #AL1-2
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -206,7 +206,7 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "criticality.extension[1].url"
 * group.element[8].target.dependsOn[0].property = "value"
-* group.element[8].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/originalCodeableConcept\""
+* group.element[8].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[8].target.product[0].property = "narrative"
 * group.element[8].target.product[0].value = "If severity was used equivalent to criticality"
 * group.element[9].code = #AL1-4

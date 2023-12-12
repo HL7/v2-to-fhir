@@ -10,7 +10,7 @@ Title: "Datatype ED to Attachment Map"
 * name = "DatatypeEDToAttachment"
 * status = #active
 * experimental = true
-* date = "2023-12-04"
+* date = "2023-12-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -44,7 +44,7 @@ Title: "Datatype ED to Attachment Map"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "extension[1].url"
 * group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"https://hl7.org/fhir/StructureDefinition/originalCodeableConcept\""
+* group.element[0].target.dependsOn[0].value = "\"https://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[0].target.product[0].property = "antlr"
 * group.element[0].target.product[0].value = "IF ED.3 NOT VALUED"
 * group.element[1].code = #ED.2

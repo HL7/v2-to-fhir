@@ -10,7 +10,7 @@ Title: "Datatype FN to HumanName Map"
 * name = "DatatypeFNToHumanName"
 * status = #active
 * experimental = true
-* date = "2023-12-04"
+* date = "2023-12-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -63,7 +63,7 @@ Title: "Datatype FN to HumanName Map"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "family.extension[1].url"
 * group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/humanname-own-name\""
+* group.element[1].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/humanname-own-prefix\""
 * group.element[2].code = #FN.2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"

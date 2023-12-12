@@ -10,7 +10,7 @@ Title: "Datatype EIP[FillerAssignedIdentifier] to Identifier Map"
 * name = "DatatypeEIPFillerAssignedIdentifierToIdentifier"
 * status = #active
 * experimental = true
-* date = "2023-12-04"
+* date = "2023-12-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -27,7 +27,7 @@ Title: "Datatype EIP[FillerAssignedIdentifier] to Identifier Map"
 * group.element[0].code = #EIP.2
 * group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "type"
-* group.element[0].extension[0].extension[0].valueCode = #"IS"
+* group.element[0].extension[0].extension[0].valueCode = #"EI"
 * group.element[0].extension[0].extension[1].url = "cardinalityMin"
 * group.element[0].extension[0].extension[1].valueInteger = 0
 * group.element[0].extension[0].extension[2].url = "cardinalityMax"
@@ -39,10 +39,12 @@ Title: "Datatype EIP[FillerAssignedIdentifier] to Identifier Map"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[0].target.display = "value"
+* group.element[0].target.dependsOn[0].property = "data-type-map"
+* group.element[0].target.dependsOn[0].value = "EI[Identifier-Organization]"
 * group.element[1].code = #EIP.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
-* group.element[1].extension[0].extension[0].valueCode = #"IS"
+* group.element[1].extension[0].extension[0].valueCode = #"EI"
 * group.element[1].extension[0].extension[1].url = "cardinalityMin"
 * group.element[1].extension[0].extension[1].valueInteger = 0
 * group.element[1].extension[0].extension[2].url = "cardinalityMax"
@@ -63,7 +65,7 @@ Title: "Datatype EIP[FillerAssignedIdentifier] to Identifier Map"
 * group.element[2].code = #EIP.2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
-* group.element[2].extension[0].extension[0].valueCode = #"IS"
+* group.element[2].extension[0].extension[0].valueCode = #"EI"
 * group.element[2].extension[0].extension[1].url = "cardinalityMin"
 * group.element[2].extension[0].extension[1].valueInteger = 0
 * group.element[2].extension[0].extension[2].url = "cardinalityMax"

@@ -10,7 +10,7 @@ Title: "Segment NTE to ServiceRequest Map"
 * name = "SegmentNTEToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2023-12-04"
+* date = "2023-12-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -29,9 +29,9 @@ Title: "Segment NTE to ServiceRequest Map"
 * group.element[0].extension[0].extension[0].url = "type"
 * group.element[0].extension[0].extension[0].valueCode = #"FT"
 * group.element[0].extension[0].extension[1].url = "cardinalityMin"
-* group.element[0].extension[0].extension[1].valueInteger = 1
+* group.element[0].extension[0].extension[1].valueInteger = -1
 * group.element[0].extension[0].extension[2].url = "cardinalityMax"
-* group.element[0].extension[0].extension[2].valueInteger = 1
+* group.element[0].extension[0].extension[2].valueInteger = -1
 * group.element[0].display = "Comment"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #note.text
