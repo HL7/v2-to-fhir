@@ -13,16 +13,13 @@ The following are known JIRAs waiting for resolution.  Feedback and voting on th
    <li>[FHIR-33043] Clarify "not asked" as part Observation.status="final" or create a separate status</li>
    <li>[FHIR-34194] Add businessEvent extension</li>
    <li>[FHIR-43298] Attachment.data only supports binary64</li>
-   <li>UPS-217] Add "sender-application" to http://terminology.hl7.org/CodeSystem/provenance-participant-type</li>
+   <li>[UPS-217] Add "sender-application" to http://terminology.hl7.org/CodeSystem/provenance-participant-type</li>
 </ul>
 <br>
 The following have been resolved but were not applied, or need clarification that was not provided before this ballot round.  We aim to still be applied before publication and would either be reviewed in a targeted peer review or as part of a ballot round if another is necessary before publication.
 <ul>
 <li>[FHIR-33038] Observation needs a subID extension</li>
-<li>[FHIR-31587] Add Nature of Abnormal Test Extension to Observation</li> 
-<li>[FHIR-31586] Add Analysis Date/Time Extension to Observation</li> 
-<li>[FHIR-31611] Add Callback Number Extension to ServiceRequest</li>
-<li>[FHIR-33077] - Add "sender" as a Provenance.agent.role or .type</li>
+<li>[FHIR-33077] Add "sender" as a Provenance.agent.role or .type</li>
 <li>[FHIR-36650] Create Temporary Location Extension</li>
 </ul>
 <br>
