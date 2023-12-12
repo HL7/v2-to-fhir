@@ -16,6 +16,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [MSH](ConceptMap-segment-msh-to-messageheader.html) - Message Header to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
 * [MSH](ConceptMap-segment-msh-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 * [NTE](ConceptMap-segment-nte-to-appointment.html) - Notes and Comments to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
+* [NTE](ConceptMap-segment-nte-to-documentreference.html) - Notes and Comments to FHIR [DocumentReference](http://hl7.org/fhir/R4/documentreference.html)
 * [NTE](ConceptMap-segment-nte-to-observation.html) - Notes and Comments to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [NTE](ConceptMap-segment-nte-to-servicerequest.html) - Notes and Comments to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
 * [SFT](ConceptMap-segment-sft-to-device.html) - Software Segment to FHIR [Device](http://hl7.org/fhir/R4/device.html)
@@ -70,8 +71,8 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 
 ### Chapter  7  Observation Reporting
 
+* [OBX](ConceptMap-segment-obx-to-documentreference.html) - Observation/Result to FHIR [DocumentReference](http://hl7.org/fhir/R4/documentreference.html)
 * [OBX](ConceptMap-segment-obx-to-observation.html) - Observation/Result to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
-* [OBX](ConceptMap-segment-obx-to-servicerequest-supportinginfo.html) - Observation/Result to FHIR [ServiceRequest.supportingInfo](http://hl7.org/fhir/R4/servicerequest-definitions.html#servicerequest.supportinginfo)
 * [PRT](ConceptMap-segment-prt-to-careteam.html) - Participation Information to FHIR [CareTeam](http://hl7.org/fhir/R4/careteam.html)
 * [PRT](ConceptMap-segment-prt-to-device.html) - Participation Information to FHIR [Device](http://hl7.org/fhir/R4/device.html)
 * [PRT](ConceptMap-segment-prt-to-observation.html) - Participation Information to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
@@ -79,6 +80,10 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [PRT](ConceptMap-segment-prt-to-practitionerrole.html) - Participation Information to FHIR [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html)
 * [PRT](ConceptMap-segment-prt-to-relatedperson.html) - Participation Information to FHIR [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)
 * [SPM](ConceptMap-segment-spm-to-specimen.html) - Specimen to FHIR [Specimen](http://hl7.org/fhir/R4/specimen.html)
+
+### Chapter  8  Master Files
+
+* [TXA](ConceptMap-segment-txa-to-documentreference.html) - Transcription Document Header to FHIR [DocumentReference](http://hl7.org/fhir/R4/documentreference.html)
 
 ### Chapter 10  Scheduling
 

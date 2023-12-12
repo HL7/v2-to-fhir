@@ -15,6 +15,7 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [ADT_A05](ConceptMap-message-adt-a05-to-bundle.html) - Pre-Admit a Patient
 * [ADT_A06](ConceptMap-message-adt-a06-to-bundle.html) - Change an Outpatient to an Inpatient
 * [ADT_A09](ConceptMap-message-adt-a09-to-bundle.html) - Patient Departing - Tracking
+* [ADT_A11](ConceptMap-message-adt-a11-to-bundle.html) - Cancel Admit / Visit Notification
 * [ADT_A17](ConceptMap-message-adt-a17-to-bundle.html) - Swap Patients
 
 ### Chapter  4  Order Entry
@@ -26,6 +27,10 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 ### Chapter  7  Observation Reporting
 
 * [ORU_R01](ConceptMap-message-oru-r01-to-bundle.html) - Unsolicited Report Alarm
+
+### Chapter  9  Medical Records/Information Management
+
+* [MDM_T02](ConceptMap-message-mdm-t02-to-bundle.html) - Document status change notification and content
 
 ### Chapter 10  Scheduling
 
