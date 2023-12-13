@@ -242,7 +242,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     }
 
     private static String makeName(String fishFileName) {
-        return WordUtils.capitalize(fishFileName.replace(".fsh","").replace(" to ", " To ").replace("[", " ").replace("]", " ").replace(".", " ")).replace(" ","");
+        return WordUtils.capitalize(fishFileName.replace(".fsh","").replace(" to ", " To ").replace("[", " ").replace("]", " ").replace(".", " ")).replace(" ","").replace("-","");
     }
 
     public String getMdFileName(String prefix, String suffix) {
