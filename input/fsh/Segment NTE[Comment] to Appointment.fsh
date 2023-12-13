@@ -1,16 +1,16 @@
-// HL7 Segment - FHIR R4_ NTE[Appointment] - NTE.csv
-Instance: SegmentNTEToAppointment
+// HL7 Segment - FHIR R4_ NTE[Appointment-Comment] - NTE.csv
+Instance: SegmentNTECommentToAppointment
 InstanceOf: ConceptMap
-Title: "Segment NTE to Appointment Map"
-* title = "Segment NTE to Appointment Map"
+Title: "Segment NTE[Comment] to Appointment Map"
+* title = "Segment NTE[Comment] to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment NTE to the FHIR Appointment Resource."
-* id = "segment-nte-to-appointment"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-nte-to-appointment"
+* id = "segment-nte-comment-to-appointment"
+* url = "http://hl7.org/fhir/uv/v2mappings/segment-nte-comment-to-appointment"
 * version = "1.0"
-* name = "SegmentNTEToAppointment"
+* name = "SegmentNTECommentToAppointment"
 * status = #active
 * experimental = true
-* date = "2023-12-12"
+* date = "2023-12-13"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -21,7 +21,7 @@ Title: "Segment NTE to Appointment Map"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Segment NTE to Appointment.fsh"
+* extension[0].extension[1].valueString = "Segment NTE[Comment] to Appointment.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1fksIG8cf2DGSE7uHc_-UnP1VCfPGmObeREWqaQTNIRg/edit#gid=0"
 * group.element[0].code = #NTE-3

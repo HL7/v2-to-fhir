@@ -1,5 +1,5 @@
 // HL7 Segment - FHIR R4_ PRT[Patient-GeneralPractitioner-Practitioner] - Sheet1.csv
-Instance: SegmentPRTGeneralPractitioner-PractitionerToPatient
+Instance: SegmentPRTGeneralPractitionerPractitionerToPatient
 InstanceOf: ConceptMap
 Title: "Segment PRT[GeneralPractitioner-Practitioner] to Patient Map"
 * title = "Segment PRT[GeneralPractitioner-Practitioner] to Patient Map"
@@ -7,10 +7,10 @@ Title: "Segment PRT[GeneralPractitioner-Practitioner] to Patient Map"
 * id = "segment-prt-generalpractitioner-practitioner-to-patient"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-prt-generalpractitioner-practitioner-to-patient"
 * version = "1.0"
-* name = "SegmentPRTGeneralPractitioner-PractitionerToPatient"
+* name = "SegmentPRTGeneralPractitionerPractitionerToPatient"
 * status = #active
 * experimental = true
-* date = "2023-12-12"
+* date = "2023-12-13"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
