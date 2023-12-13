@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.v2mappings
 canonical: http://hl7.org/fhir/uv/v2mappings
-version: 1.0.0
+version: 1.0.0-ballot
 name: HL7Version2toFHIR
 title: HL7 Version 2 to FHIR
 status: active
@@ -20,16 +20,20 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
     valueCode: oo  
 publisher:
-  name: HL7 International
+  name: HL7 International / Orders and Observations
 contact:
   - name: HL7 Orders and Observations Workgroup
     telecom:
       - system: url
-        value: http://hl7.org/Special/committees/orders/index.cfm
+        value: http://www.hl7.org/Special/committees/orders
   - name: Keith W. Boone
     telecom:
       - system: email
         value: kboone@ainq.com
+  - name: Rob Hausam
+    telecom:
+      - system: email
+        value: rrhausam@gmail.com
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
 description: The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages segments, datatypes and vocabulary to HL7 FHIR Release 4.0 Bundles, Resources, Data Types and Coding Systems.
 license: CC0-1.0
@@ -46,7 +50,7 @@ parameters:
   apply-version: true
 
 copyrightYear: 2020+
-releaseLabel: CI Build
+releaseLabel: ballot
 
 pages:
   index.md:
@@ -85,11 +89,6 @@ pages:
     title: ANTLR Condition Syntax
   links.md:
     title: Links
-
-# ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
-# │  To control the ig.ini using this config, uncomment and set the "template" property.           │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# template: hl7.fhir.template
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
