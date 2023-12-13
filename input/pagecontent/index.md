@@ -30,6 +30,13 @@ The following JIRAs have been dispositioned and will be applied before publicati
    <li>[V2-25632] Segment Mapping Headers out of sync</li>
    <li>[FHIR-V2-25633] Data Type Mapping table columns out of sync</li>
 </ul>
+The build still included errors that do not prevent the reviewer to review and comment on the proposed mappings.  That may require different navigation where the link is still broken.  Please use the following guidance
+<ul>
+   <li>Links to a number of segment and data type maps are not working when accessed directly from the Segment Map or Data Type Map pages.  However, when accessed when navigating from the Message to the relevant Segment Map or from the Segment to the Data Type map they do work.</li>
+  <li>The links to the diagnostic report status and allergey intolerance criticality do not work when you click on them, however, when you copy them into your browser they do.</li>
+</ul>
+<br>
+The combination of the updates resulting from the above and the ballot comments another reviewe will be necessary, but we will determine based on substantivity whether that will involve a focused ballot round or a peer review as permitted for STU content.
 </p>
 The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages
 segments, datatypes and vocabulary to HL7 FHIR Release 4.0 Bundles, Resources, Data
