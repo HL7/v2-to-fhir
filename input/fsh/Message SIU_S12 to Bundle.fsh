@@ -135,7 +135,7 @@ ServiceRequest[1..n].subject=Patient[1].id\
 * group.element[7].target.display = "Appointment[1]"
 * group.element[7].target.comment = "Because multiple NTE segments in a message all need to map to a single Appointment.comment element, the content of the NTEs will need to be concatenated together in R4"
 * group.element[7].target.dependsOn[0].property = "segment-map"
-* group.element[7].target.dependsOn[0].value = "NTE[Appointment]"
+* group.element[7].target.dependsOn[0].value = "NTE[Appointment-Comment]"
 * group.element[7].target.dependsOn[1].property = "references"
 * group.element[7].target.dependsOn[1].value = "Appointment.participant.actor=Patient[1].id"
 * group.element[8].code = #SIU_S12.PATIENT.PID
@@ -300,7 +300,7 @@ If SCH-26 and SCH-27 repeat, then the implementer needs to determine how to alig
 * group.element[18].target.display = "Appointment[1]"
 * group.element[18].target.comment = "Because multiple NTE segments in a message all need to map to a single Appointment.comment element, the content of the NTEs will need to be concatenated together in R4"
 * group.element[18].target.dependsOn[0].property = "segment-map"
-* group.element[18].target.dependsOn[0].value = "NTE[Appointment]"
+* group.element[18].target.dependsOn[0].value = "NTE[Appointment-Comment]"
 * group.element[18].target.dependsOn[1].property = "references"
 * group.element[18].target.dependsOn[1].value = "Appointment.participant.actor=Patient[1].id"
 * group.element[18].target.product[0].property = "narrative"

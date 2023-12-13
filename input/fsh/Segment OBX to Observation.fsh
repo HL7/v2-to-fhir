@@ -774,7 +774,7 @@ Title: "Segment OBX to Observation Map"
 * group.element[34].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[34].target.display = "dataAbsentReason.coding[1].system"
 * group.element[34].target.dependsOn[0].property = "value"
-* group.element[34].target.dependsOn[0].value = "/http://terminology.hl7.org/CodeSystem/data-absent-reason./"
+* group.element[34].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/data-absent-reason\""
 * group.element[34].target.product[0].property = "antlr"
 * group.element[34].target.product[0].value = "IF OBX-11 IS \"X\""
 * group.element[35].code = #OBX-11
