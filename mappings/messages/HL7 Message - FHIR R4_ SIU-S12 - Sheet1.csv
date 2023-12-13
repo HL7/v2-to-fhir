@@ -8,7 +8,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 2,SIU_S12.SCH,SCH,Schedule Activity Information,1,1,IF SCH-26 or SCH-27 VALUED,,,ServiceRequest[1..n],SCH[ServiceRequest],"Appointment[1].basedOn=ServiceRequest[1..n].id
 ServiceRequest[1..n].subject=Patient[1].id",,
 2,SIU_S12.SCH,SCH,Schedule Activity Information,1,1,,,,Provenance[3],SCH[Provenance],,,
-3,SIU_S12.NTE,[ { NTE } ],Notes and Comments,0,-1,,,,Appointment[1],NTE[Appointment],Appointment.participant.actor=Patient[1].id,,"Because multiple NTE segments in a message all need to map to a single Appointment.comment element, the content of the NTEs will need to be concatenated together in R4"
+3,SIU_S12.NTE,[ { NTE } ],Notes and Comments,0,-1,,,,Appointment[1],NTE[Appointment-Comment],Appointment.participant.actor=Patient[1].id,,"Because multiple NTE segments in a message all need to map to a single Appointment.comment element, the content of the NTEs will need to be concatenated together in R4"
 4,SIU_S12.PATIENT,[{,--- PATIENT begin,0,-1,,,,,,,,
 4.1,SIU_S12.PATIENT.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
 4.1,SIU_S12.PATIENT.PID,PID,Patient Identification,1,1,,,,Appointment[1],PID[Appointment],Appointment.participant.actor=Patient[1].id,,
@@ -25,7 +25,7 @@ ServiceRequest[1..n].subject=Patient[1].id",,
 5.2.1,SIU_S12.RESOURCES.SERVICE.AIS,AIS,Appointment Information - Service,1,1,,,Determine which AIS populates Appointment if there is more than one AIS.,Appointment[1],AIS[Appointment],,,
 5.2.1,SIU_S12.RESOURCES.SERVICE.AIS,AIS,Appointment Information - Service,1,1,IF SCH-26 IS VALUED OR SCH-27 IS VALUED,,,ServiceRequest[n],AIS[ServiceRequest],,,"Note that each ServiceRequest being created includes data from SCH segment.
 If SCH-26 and SCH-27 repeat, then the implementer needs to determine how to align this with potentially repeating AIS segments."
-5.2.2,SIU_S12.RESOURCES.SERVICE.NTE,[ { NTE } ],Notes and Comments,0,-1,,,Determine which AIS populates Appointment if there is more than one AIS.,Appointment[1],NTE[Appointment],Appointment.participant.actor=Patient[1].id,,"Because multiple NTE segments in a message all need to map to a single Appointment.comment element, the content of the NTEs will need to be concatenated together in R4"
+5.2.2,SIU_S12.RESOURCES.SERVICE.NTE,[ { NTE } ],Notes and Comments,0,-1,,,Determine which AIS populates Appointment if there is more than one AIS.,Appointment[1],NTE[Appointment-Comment],Appointment.participant.actor=Patient[1].id,,"Because multiple NTE segments in a message all need to map to a single Appointment.comment element, the content of the NTEs will need to be concatenated together in R4"
 5.2.3,SIU_S12.RESOURCES.SERVICE,}],--- SERVICE end,0,-1,,,,,,,,
 5.3,SIU_S12.RESOURCES.GENERAL_RESOURCE,[{,--- GENERAL_RESOURCE begin AIG,0,-1,,,,,,,,
 5.3.1,SIU_S12.RESOURCES.GENERAL_RESOURCE.AIG,AIG,Appointment Information - General Resource,1,1,,,Determine which AIG populates Appointment if there is more than one AIG.,Appointment[1],AIG[Appointment],,,
