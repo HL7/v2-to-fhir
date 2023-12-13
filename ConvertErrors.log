@@ -181,11 +181,15 @@ E2) extension??-v2ProfileID.uri is not a recognized V2 artifact
 E3) extension??-v2ProfileID.valueString is not a recognized V2 artifact
 	at mappings/segments/HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv(:28)
 	near: 21,MSH-21,Message Profile Identifier,EI,0,-1,,,,,extension??-v2ProfileID.valueString,string,1,1,,,,,
-E4) No mapping for NTE[Appointment]. Missing file: HL7 Segment - FHIR R4_ NTE[Appointment] - Sheet1.csv
-	at mappings/messages/HL7 Message - FHIR R4_ SIU-S12 - Sheet1.csv(:26)
-	near: 5.2.2,SIU_S12.RESOURCES.SERVICE.NTE,[ { NTE } ],Notes and Comments,0,-1,,,Determine which AIS populates Appointment if there is more than one AIS.,Appointment[1],NTE[Appointment],Appointment.participant.actor=Patient[1].id,,"Because multiple NTE segments in a message all need to map to a single Appointment.comment element, the content of the NTEs will need to be concatenated together in R4"
-E5) source.extension??-binaryIdentifier is not a recognized V2 artifact
+E4) source.extension??-binaryIdentifier is not a recognized V2 artifact
 	at mappings/segments/HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv(:6)
 	near: 4,SFT-4,Software Binary ID,ST,1,1,,,,,source.extension??-binaryIdentifier,string,0,1,,,,,
-E6) source.extension??-description is not a recognized V2 artifact
-	at m
+E5) source.extension??-description is not a recognized V2 artifact
+	at mappings/segments/HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv(:7)
+	near: 5,SFT-5,Software Product Information,TX,0,1,,,,,source.extension??-description,string,0,1,,,,,
+E6) source.extension??-installDate is not a recognized V2 artifact
+	at mappings/segments/HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv(:8)
+	near: No corresponding line (8) in source file!
+E7) source.extension??-vendorOrganization(Organization) is not a recognized V2 artifact
+	at mappings/segments/HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv(:3)
+	near: 1,SFT-1,Software Vendor O
