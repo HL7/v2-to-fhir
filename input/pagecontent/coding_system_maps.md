@@ -31,7 +31,6 @@ __NOTE: Due to the build not being up-to-date with the latest spreadsheet we adv
 * [User0127](ConceptMap-table-hl70127-to-v2-0127.html) - Allergen Type  to FHIR [V2 0127](http://hl7.org/fhir/R4/v2/0127/index.html)
 * [User0128](ConceptMap-table-hl70128-to-allergy-intolerance-criticality.html) - Allergy Severity  to FHIR [Allergy Intolerance Criticality](http://hl7.org/fhir/R4/codesystem-allergy-intolerance-criticality.html)
 * [User0128](ConceptMap-table-hl70128-to-codesystem-reaction-event-severity.html) - Allergy Severity  to FHIR [Codesystem Reaction Event Severity](http://hl7.org/fhir/R4/codesystem-codesystem-reaction-event-severity.html)
-* [User0128](ConceptMap-table-hl70128-to-v2-0128.html) - Allergy Severity  to FHIR [V2 0128](http://hl7.org/fhir/R4/v2/0128/index.html)
 * [User0130](ConceptMap-table-hl70130-to-v2-0130.html) - Visit User Code  to FHIR [V2 0130](http://hl7.org/fhir/R4/v2/0130/index.html)
 * [User0131](ConceptMap-table-hl70131-to-v2-0131.html) - Contact Role  to FHIR [V2 0131](http://hl7.org/fhir/R4/v2/0131/index.html)
 * [HL70136](ConceptMap-table-hl70136-to-specimen-status.html) - Yes/no Indicator  to FHIR [Specimen Status](http://hl7.org/fhir/R4/codesystem-specimen-status.html)
