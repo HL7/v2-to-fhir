@@ -53,7 +53,7 @@ public class SegmentInput implements Cloneable, Convertible {
     String fhirVocab;
     @CsvBindByPosition(position=16)
     String fhirValue;
-    @CsvBindByPosition(position=17)
+    @CsvBindByPosition(position=18)
     String comments;
     public SegmentInput copy() {
         try {
