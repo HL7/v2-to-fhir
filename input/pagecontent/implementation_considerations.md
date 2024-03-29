@@ -1,11 +1,15 @@
-This sections outlines implementation specific considerations that will have to be addressed during the implementation of v2-to-FHIR
-transformation project. Not all of these issues will apply to every implementation, but each implementation should review and consider
-he entire list to assess whether or not they are relevant for the project at hand. This list is not comprehensive and other
-implementation considerations may emerge as transforms are developed, tested and implemented in a Production environment.
+This section outlines implementation specific considerations that will have to be addressed during the implementation of a v2-to-FHIR 
+transformation project. Not all of these issues will apply to every implementation, but each implementation should review and consider 
+the entire list to assess whether or not they are relevant for the project at hand. This list is not comprehensive and other implementation 
+considerations may emerge as transforms are developed, tested, and implemented in a Production environment.
 
 ### Message Structures in Older Versions
-In older versions, e.g., v2.3.1 the message structure in MSH-9 may have been omitted as the standard did not always include that in the message structure definition.  For example, the message definition for RDE^O01 in v2.3.1 does not include the message structure, thus implementers omitted that, even though in Table 0354 there was a structure defined RDE_O01.  When MSH-9.3 is empty, we suggest to derive the message structure to get to the proper map by using the message code and trigger event. I.e., when message code and trigger event is ABC^Nnn then use ABC_Nnn.  For RDE^O01 that would be RDE_O01.
-We will be listing any known exceptions to that rule here as we find them.
+In older versions (e.g., v2.3.1), the message structure in MSH-9, specifically MSH-9.3, may have been omitted as the standard did not always 
+include it in the message structure definition. For example, the message definition for RDE^O01 in v2.3.1 does not include the message structure, 
+thus implementers omitted that, even though in Table 0354 there was a structure defined for RDE_O01. When MSH-9.3 is empty, we suggest to derive 
+the message structure to get to the proper map by using the message code and trigger event. For example, when the message code and trigger event 
+is ABC^Nnn then use ABC_Nnn. For RDE^O01 that would be RDE_O01. Exceptions to this approach will be more common for certain domains, for example 
+Admission, Discharge and Transfer (ADT) messaging often reuses an existing message type for new message code/trigger event pairs.
 
 ### Implementation Guide Extensions on the Base Standard
 Some v2 implementations may adhere to constraints made on the base standard by an implementation guide. Where this happens it may
@@ -81,9 +85,13 @@ the responsible sending organization), the EVN segment (e.g., the event it repre
 implementation guide does include some mapping to the Provenance resource but it is up to implementors to determine the level of
 data provenance that should be captured during the transformation process. At a minimum, the authors of this document feel that it
 may be appropriate to capture the provenance of the message source and the v2-to-FHIR transformation process. Additional provenance
-may be captured from additional fields as appropriate for the implementation.  To enable provenance, it is important to have the responsible organization or indivdiual included in the MSH, EVN, ORC, TXA, or other applicable segment as identified in the mapping, otherwise the mapping engine is provided with a default value for Provanence.agent.who in those instances.
+may be captured from additional fields as appropriate for the implementation.  To enable provenance, it is important to have the responsible organization or 
+indivdiual included in the MSH, EVN, ORC, TXA, or other applicable segment as identified in the mapping, otherwise the mapping engine is provided with a default value for Provanence.agent.who in those instances.
 
-The guide does provide minimum provenance that is recommended to establish.  For every message, the MSH is mapped to the Provenance resource as well.  That Provenance resource may contain the original v2 message as well.  We do not provide specific mapping guidance on how to establish specific provenance on a FHIR resource back to the exact v2 segment in the message that yielded that (updated or new) resource.  However, you may include every resource created/updated as a result of this message as well in the Provenance resource created through the MSH[Provenance] map, particularly if you included in this Provenance resoruce the full v2 message as well.
+The guide does provide minimum provenance that is recommended to establish.  For every message, the MSH is mapped to the Provenance resource as well.  That Provenance 
+resource may contain the original v2 message as well.  We do not provide specific mapping guidance on how to establish specific provenance on a FHIR resource back to 
+the exact v2 segment in the message that yielded that (updated or new) resource.  However, you may include every resource created/updated as a result of this message 
+as well in the Provenance resource created through the MSH[Provenance] map, particularly if you included in this Provenance resoruce the full v2 message as well.
 
 ### Security
 Under Construction.
