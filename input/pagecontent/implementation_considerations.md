@@ -12,7 +12,7 @@ is ABC^Nnn then use ABC_Nnn. For RDE^O01 that would be RDE_O01. Exceptions to th
 Admission, Discharge and Transfer (ADT) messaging often reuses an existing message type for new message code/trigger event pairs.
 
 ### Implementation Guide Extensions on the Base Standard
-Some v2 implementations may adhere to constraints made on the base standard by an implementation guide. Where this happens it may
+Some v2 implementations may adhere to constraints made on the base standard by an implementation guide. Where this happens, it may
 be necessary to extend or constrain the standard mappings provided by this project. For example, in the US the v2.5.1 immunization
 messaging implementation guide describes how to use OBX segments to convey information related patient eligibility, distribution of
 educational materials and vaccine funding source. While these concepts are part of the FHIR Immunization resource, the VXU mappings
@@ -20,46 +20,47 @@ from this project do not include these transformations as they are defined by th
 Implementers should consider local variations from the base standard when developing their transformations.
 
 ### Common References
-References in v2 messages to an organization, person, or other entity may or may not result in a need to reference the same resources instance by the recipient.  Since these references may occur from different segments and may not always have enough data in the data type components to easily match, that may be a challenge.  Unfortunately, it is very challenging as well to already identify the proper link based on the data available from the v2 message structure and relationship.  This guide therefore does not attempt to do so.  However, we do encourage to re-use resources for reference where the mapper and receiving system can establish such re-use.
+In v2, it often happens that singular organization, person, or other entity may be referenced multiple places in a message. For example, 
+the Attending Doctor in PV1-7 of a laboratory order message may also be the ordering provider referenced in ORC-12 and OBR-16 (or in newer 
+versions a PRT segment). When converting a v2 message to a set of FHIR resources, it may be ideal to create a single instance of a resource 
+for that entity and reference it from multiple Resource elements. In this case, a single Practitioner resource may be present in the newly 
+created FHIR bundle but references from both Encounter.participant.individual and ServiceRequest.requester in a bundle of R4 FHIR resources. 
+Since these references may occur in different segments and a given message may not always have enough data in the data type components to 
+unambiguously identify multiple references to a singular entity, this may be a challenge for some implementations. This guide therefore does 
+not attempt to provide guidance in the mappings where different message data elements may potentially reference a common entity. However, we 
+do encourage to re-use resources for reference where the mapper and receiving system can establish such re-use. Deduplication logic based on 
+data including identifiers, name and credentials should be employed as part of the transformation strategy to identify potentially reusable resources.
 
-In a couple of instances it is more easily done.  For example, MSH is mapped to different resource (MessageHeader, Bundle, Provenance) and possibly multiple resource instances (Provenance).  In those situations the mapper is strongly encouraged that the resulting resource, e.g., MSH-4 Sending Facility yielding an Organization, references that Organization from the respective MessageHeader, Bundle, and Provenence resource instances.
+In some instances, a single segment may be mapped to multiple FHIR resources, for example MSH is mapped to MessageHeader and one or more Provenance 
+resources. In this case, the mapper is strongly encouraged to reuse resulting FHIR resources where possible. For example, the mapping for MSH-4 Sending 
+Facility yields an Organization resource which can be referenced from the respective MessageHeader and Provenance resources resulting from individual segment maps.
 
 ### Variations in Cardinality
-In several maps, the v2 field or element has a larger maximum cardinality than the mapped FHIR attributes. That is, some v2 elements are allowed to repeat while the cognate FHIR element is not allowed to repeat. We still provide these mappings, but if your implementation allows these v2 elements to repeat, data may be lost. Implementers should evaluate the likelihood of this happening. The project team welcomes examples where this occurs in existing implementations so that we can discuss possible solutions.
+In several maps, the v2 field or element has a larger maximum cardinality than the mapped FHIR attributes. That is, some v2 elements are allowed to repeat 
+while the cognate FHIR element is not allowed to repeat. We still provide these mappings, but if your implementation allows these v2 elements to repeat, 
+data may be lost. Implementers should evaluate the likelihood of this happening. The project team welcomes examples where this occurs in existing 
+implementations so that we can discuss possible solutions.
 
 ### Resource.id Generation and References
-When the v2 message is mapped into a FHIR Bundle, resources need to have a resource.id.  At the time of the mapping the actual
-Resource.id may not be known if the intent is to update or reference an existing resource.  The following guidance should be followed:
+When the v2 message is mapped into a FHIR Bundle, resources need to have a Resource.id. The [FHIR base standard](https://hl7.org/implement/standards/fhir/resource-definitions.html#Resource.id) defines Resource.id as “The logical id of the resource, 
+as used in the URL for the resource.”. Typically, this is the “the ‘logical id’ of the resource assigned by the server responsible for storing it” however in the 
+case of a v2 message conversion this definition is not applicable, Additional discussion of the use of Resource.id when resources are created transiently for 
+transfer between systems is available in the [base standard](https://hl7.org/implement/standards/fhir/resource.html#id). The description of [resolving references in Bundles](https://hl7.org/implement/standards/fhir/bundle.html#references) is particularly important for the v2 transformation 
+process. Implementers should ensure that all resources within the Bundle resulting from the transformation have a unique id so that references within the bundle 
+can be resolved. Different options may include assigning an id based on information with the message (such as a patient or order identifier) or system assigned 
+number generated at the time of transformation. The receiver of the Bundle should not read any meaning into the value of the id.  
 
-* Give resources a unique id within the bundle so all references in the bundle are correct.
-  * Give resources a unique UUID
-  * Base the id generation on information in the segment.  But that may vary, e.g.,
-    * the UK may opt to use the NHS number for PID to Patient to then be used as reference.
-    * another may create random numbers
-    * etc.
-  * Receiver cannot read any meaning in the value of the .id.
-
-Depending on the next step, the Bundle may be forwarded in a FHIR message, the resource may be persisted as FHIR resources or
-translated into local data structures, or used in subsequent RESTful APIs.  The system managing one or more of these steps may
-therefore opt to not follow all of the above guidance as they may be able to already be capable of resolving the Resource.id to the
-correct existing or new .id.
-
-### Common Resource References
-In v2 messages, it is common for multiple fields (e.g., using the XCN data type) to document the data for the same provider (e.g., the same
-person may be the attending provider in the PV1 segment of an order message as well as the ordering provider in both the ORC and
-OBR segments of the same message). In this case, it may be most efficient if the Encounter and ServiceRequest resources reference
-the same Practitioner resource. It is critical that implementers consider how they will recognize duplicate provider references in
-a given v2 message and reuse Practitioner resources efficiently. Deduplication logic based on data including identifiers, name and
-credentials should be employed as part of the transformation strategy to identify potentially reusable resources.
+Depending on the nature of the implementation, the Bundle may be used by the recipient in any number of ways including being forwarded in a FHIR message, 
+persisting the content as FHIR resources, or translating content into local data structures. Persistence of Resource.id cannot be guaranteed. 
 
 ### Contained Resources
 This implementation guide recognizes the distinction between stand-alone and [contained resources](https://www.hl7.org/fhir/references.html#contained)
 but does not provide guidance in the mappings as the appropriate usage of contained resources. Implementers should consider the
 appropriateness of using contained resources during the transformation process where insufficient data is available in the v2
 message to create a stand-alone FHIR resource. For example, if an ROL segment is transformed into a PractitionerRole resource
-including the address of the provider office in ROL-11 but lacks the provider's location in ROL-13 there may not be enough
-information to create a stand-alone Location resource, but contained Location resource (including the address) may be included in
-the PractitionerRole resource.
+including the address of the provider office in ROL-11 but the segment lacks the provider's location in ROL-13 there may not be enough
+information to warrant creating a stand-alone Location resource, but rather a contained Location resource (including the address) may be 
+included in the PractitionerRole resource.
 
 ### Task Management
 The FHIR standard includes extensive content related to [workflow management](http://hl7.org/implement/standards/fhir/workflow-module.html)
