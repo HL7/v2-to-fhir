@@ -29,10 +29,10 @@ The scope of the project is:
   * Establish v2 to FHIR data type mappings and resolve missing data type components in FHIR for V2 data type components.
   * A data type may require a different map to a different FHIR component depending on the context of the segment or other data type it is used.  Consequently, data type map flavors will be created to simplify the maps yet maximize re-use where possible.
 * Vocabulary:
-  *Where a coded v2 data type maps to a FHIR data type which uses a different set of coded values, an initial vocabulary map is provided, either by referencing the applicable Unified Terminology Governance (UTG) map or creating a proposed map that UTG can adopt.
-  *Note that not all elements (in either V2 or FHIR) provide suggested or required value sets, so it is not always possible to provide a vocabulary mapping.
-  *Where a v2 table is available and the FHIR value set is not specified, the V2 codes may be used in the FHIR element.
-  *Within a map, a subset of v2 codes may not have a corresponding code in the FHIR value set.
+  * Where a coded v2 data type maps to a FHIR data type which uses a different set of coded values, an initial vocabulary map is provided, either by referencing the applicable Unified Terminology Governance (UTG) map or creating a proposed map that UTG can adopt.
+  * Note that not all elements (in either V2 or FHIR) provide suggested or required value sets, so it is not always possible to provide a vocabulary mapping.
+  * Where a v2 table is available and the FHIR value set is not specified, the V2 codes may be used in the FHIR element.
+  * Within a map, a subset of v2 codes may not have a corresponding code in the FHIR value set.
 * Implementation Considerations:
   * Where the project team is unable to provide definitive mappings due to expected variations in local implementations, implementation considerations are provided to help guide implementers as they apply the standard mappings to their own circumstances.
   * Note that the mappings are rooted in the base standards and do not account for constrains applied in specific HL7 published implementation guides (e.g., LOI, LRI, Immunization messaging), nor do maps account for any local variations which are not compliant with the base standard.  Affilliates, jurisdictions, other parties, as well HL7 itself for implementation guides it owns can use the base v2-to-FHIR mappings to further establish implementation guide specific mappings.
