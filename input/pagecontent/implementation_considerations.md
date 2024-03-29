@@ -65,46 +65,38 @@ included in the PractitionerRole resource.
 ### Task Management
 The FHIR standard includes extensive content related to [workflow management](http://hl7.org/implement/standards/fhir/workflow-module.html)
 and [task management](http://hl7.org/implement/standards/fhir/task.html). While many v2 message types don't
-infer tasks (eg, they report on a previously completed event), some message types (eg. order messages) may imply the need for an
-external system to complete a task (eg. fullfill the order being requested). This implementation does include some mappings to the
+infer tasks (eg, they report on a previously completed event), some message types (e.g., order messages) may imply the need for an
+external system to complete a task (e.g., fullfill the order being requested). This implementation does include some mappings to the
 Task resource but it is up to implementers to determine if it is appropriate to create Task resources during the transformation
-process. For example, an order message may be directed to a system with the intent of notifying the system of the existence of the
-order without any expectation that the receiving system will fulfill the order. In this case, the creation of a Task resource is
-likely to not be appropriate. Implementers must understand the workflows associated with the data exchange to implement tasks
-correctly.
+process based on the business requirements and workflows associated with the integration. For example, an order message may be 
+directed to a system with the intent of notifying the system of the existence of the order without any expectation that the receiving 
+system will fulfill the order. In this case, the creation of a Task resource is likely to be inappropriate. Implementers must 
+understand the workflows associated with the data exchange to implement tasks correctly.
 
-### (Segment) Action Code
-Most Hl7 v2 messages are sent using snapshot mode.  However, where (segment) action codes are used it is up to the implementers to determine
-the appropriate actions on the FHIR side as the data may already exist.  That may or may not be known by the mapping engine and lead to different 
-techniques on how to interpret and manage the action codes.  A future version of this guide may include further guidance and best practices on 
-mapping (segment) action codes.
+### Segment Action Code
+Most Hl7 v2 messages are sent using snapshot mode. However, where segment action codes (typically – add, update, or delete) are used it 
+is up to the implementers to determine the appropriate actions on the FHIR side as the data may already exist. That may or may not be 
+known by the mapping engine and lead to the application of different techniques to interpret and manage the action codes. A future version 
+of this guide may include further guidance and best practices on mapping segment action codes.
 
 ### Provenance
-The concept of data provenance is typically only indirectly addressed within the v2 standard, however provenance can often be
-inferred by the data in various fields in the v2 message. For example, provenance may be inferred from data in the MSH segment (eg.
-the responsible sending organization), the EVN segment (e.g., the event it represents), the ORC segment (eg. the entering user) or TXA segment (eg. the authenticator). This
-implementation guide does include some mapping to the Provenance resource but it is up to implementors to determine the level of
-data provenance that should be captured during the transformation process. At a minimum, the authors of this document feel that it
-may be appropriate to capture the provenance of the message source and the v2-to-FHIR transformation process. Additional provenance
-may be captured from additional fields as appropriate for the implementation.  To enable provenance, it is important to have the responsible organization or 
-indivdiual included in the MSH, EVN, ORC, TXA, or other applicable segment as identified in the mapping, otherwise the mapping engine is provided with a default value for Provanence.agent.who in those instances.
-
-The guide does provide minimum provenance that is recommended to establish.  For every message, the MSH is mapped to the Provenance resource as well.  That Provenance 
-resource may contain the original v2 message as well.  We do not provide specific mapping guidance on how to establish specific provenance on a FHIR resource back to 
-the exact v2 segment in the message that yielded that (updated or new) resource.  However, you may include every resource created/updated as a result of this message 
-as well in the Provenance resource created through the MSH[Provenance] map, particularly if you included in this Provenance resoruce the full v2 message as well.
-
-### Security
-Under Construction.
+The concept of data provenance is typically only indirectly addressed within the v2 standard; however provenance can often be inferred by the 
+data in various fields of the v2 message. For example, provenance may be inferred from data in the MSH segment (e.g., the responsible sending 
+organization), the EVN segment (e.g., the event it represents), the ORC segment (e.g., the entering user) or TXA segment (e.g., the authenticator). 
+This implementation guide does include some mapping to the Provenance resource, but it is up to implementors to determine the level of data 
+provenance that should be captured during the transformation process. At a minimum, the authors of this document feel that it is appropriate to 
+capture the provenance of the message source and the v2-to-FHIR transformation process. Additional provenance may be captured from additional 
+fields as appropriate for the implementation. To enable provenance, it is important to have the responsible organization or individual included 
+in the MSH, EVN, ORC, TXA, and other applicable segment as identified in the mapping.
 
 ### Patients
 Identity management and patient merging/unmerging are complex processes at the best of times. Implementers should carefully consider
-how these activities will be impacted by a v2-to-FHIR transformation project. In particular, the workflow chosen (eg. messaging versus
+how these activities will be impacted by a v2-to-FHIR transformation project. In particular, the workflow chosen (e.g., messaging versus
 RESTful actions) and how Patient.id is populated may significantly impact how Patient resources are created, updated and deleted by
 the receiving system.
 
 ### Encounters
-Clinically focused v2 messages (eg. ORM/OML, ORU, MDM) may contain limited data regarding an associated patient encounter. This
+Clinically focused v2 messages (e.g., ORM/OML, ORU, MDM) may contain limited data regarding an associated patient encounter. This
 data content may or may not be sufficient to unambiguously identify a matching encounter in the receiving system. The creation
 of Encounter resources should be carefully considered during the implementation process. The use of contained Encounter resources
 may be appropriate.
@@ -114,18 +106,19 @@ In most FHIR resources, elements which allow a reference to a Practitioner resou
 resource. In most scenarios, a v2 field using the XCN data type will typically be mapped to the Practitioner resource, but
 implementers may choose to map to the PractitionerRole resource instead. In a few places, an XCN field will be mapped to a
 PractitionerRole resource when other fields in the segment can contribute content to the PractitionerRole resource to create a
-more robust resource (for example, the ORC segment when mapped to ServiceRequest maps the Ordering Provider (ORC-12) field to
-PractitionerRole because the Ordering Facility fields in ORC (ORC-21 through -23) can also contribute to the PractitionerRole resource).
+more robust resource. For example, the ORC segment when mapped to ServiceRequest maps the Ordering Provider (ORC-12) field to
+PractitionerRole because the Ordering Facility fields in ORC (ORC-21 through -23) can also contribute to the PractitionerRole resource 
+to create a more robust resource.
 
 ### Results
 #### Observations and Components
-Depending on context and content an OBX segment in a v2 message may represent a wide variety of different types of data. Typically
-however, the OBX segment will map to an Observation resource which in turn is referenced in some other resource (eg, the result
+Depending on context and content an OBX segment in a v2 message may represent a wide variety of different types of data. Typically, 
+the OBX segment will map to an Observation resource which in turn is referenced in some other resource (eg, the result
 containing OBX segments in an ORU message will typically be transformed into Observation resources which are referenced in
 DiagnosticReport.result). Even when an OBX segment clearly maps to an Observation resource, complications may arise when the
 contents of multiple OBX segments must be considered as a whole in order to be fully understood or when there are multiple parts to
-a single result (that is each OBX segment is a component of an Observation (eg Observation.component). It is critical that
-implementers fully understand the type of content that may be presented in an OBX segment.
+a single result (that is each OBX segment is a component of an Observation (e.g., Observation.component). It is critical that
+implementers fully understand the type of content that may be presented in an OBX segment so that an appropriate transformation approach can be developed.
 
 #### Multiple Occurrences of OBX-5
 OBX-5 (Observation Value) is allowed to repeat in the v2 base standard however Observation.value[x] is constrained to a cardinality
@@ -134,7 +127,7 @@ of 0..1. In this case, the transform may take a number of forms:
 * Where it is possible to concatenate the repeating values into a single value, then it may be possible to use one Observation resource
 to capture the result
 * Multiple Observation resources may need to be created, one for each occurrence of OBX-5
-  * In this instance, it may be important to understand the relationships that can be documented with the partOf and/or hasMember
+  * In this instance, it is important to understand the relationships that can be documented with the partOf and/or hasMember
   elements offered by Observation
 * It may be possible to capture each occurrence as a component of a single Observation resource
 
