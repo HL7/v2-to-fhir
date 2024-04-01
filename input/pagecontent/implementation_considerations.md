@@ -272,7 +272,8 @@ Note that a single vocabulary map may contain multiple rows for a given code/cod
    * It would be up to the transformation engine to determine if the lack of a matching row warrants the logging of a warning or error
 
 <img alt="CWE_Guidance_Sample" src="https://github.com/HL7/v2-to-fhir/assets/17408249/246b56a5-b4f9-4b09-8653-ebf0e57b8ed7">
- 
+
+ <br>
 
 #### Edge Cases
 If the implementers know that the v2 CWE field will not be fully populated (e.g., there will be a code but not a code system), the vocabulary map will need to be updated accordingly to include a row where Column A is populated but not Column C is not populated.
