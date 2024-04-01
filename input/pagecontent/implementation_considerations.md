@@ -269,9 +269,9 @@ Note that a single vocabulary map may contain multiple rows for a given code/cod
 * The transformation engine takes the first triplet from PID-16 (S^Single^HL70002) and compares it to the values in Columns A and C and find 2 relevant rows (Rows 6 and 7), for each row, a new occurrence of CodeableConcept.coding is created using the content of Columns G, I and J
    * The transformation engine then takes the second triplet from PID-16 (UN^unmarried^L) and performs the same comparison to the map and finds one relevant row (Row 10) and creates a third occurrence of CodeableConcept.coding
 * If instead the implementers had decided to only preserve the original HL70002 code and discard the local code (UN), they would not have created Row 10 and when the transformation engine searched the table, it would have found no matching row and not created an occurrence of CodeableConcept.coding
-   * It would be up to the transformation engine to determine if the lack of a matching row warrants the logging of a warning or error
+   * It would be up to the transformation engine to determine if the lack of a matching row warrants the logging of a warning or error - zzzz
 
-<img alt="CWE_Guidance_Sample" src="https://github.com/HL7/v2-to-fhir/assets/17408249/246b56a5-b4f9-4b09-8653-ebf0e57b8ed7">
+<img title="CWE example" alt="CWE_Guidance_Sample" src="https://github.com/HL7/v2-to-fhir/assets/17408249/246b56a5-b4f9-4b09-8653-ebf0e57b8ed7">
 
  <br>
 
