@@ -274,7 +274,7 @@ Note that a single vocabulary map may contain multiple rows for a given code/cod
 <figure>
     <img src="https://github.com/HL7/v2-to-fhir/assets/17408249/246b56a5-b4f9-4b09-8653-ebf0e57b8ed7"
          alt="CWE_Guidance_Sample">
-    <figcaption>Marital Status Mappings</figcaption>
+    <figcaption>Figure 1. Marital Status Mappings</figcaption>
 </figure>
 
 #### Edge Cases
