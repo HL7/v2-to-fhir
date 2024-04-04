@@ -4,7 +4,7 @@
       * If a FHIR attribute is required but there is no v2 element to map from, the sort order is "0".
    * Identifier
       * Contains the formal Segment Name and Field Sequence according to the base standard using "-" as the delimiter.
-      * If the Sort Order is "0" this cell will be set to "Implied".
+      * If the Sort Order is “0” the HL7 FHIR element listed in the HL7 FHIR column needs to be updated according to the rest of the mapping instructions in the HL7 FHIR columns, typically an assignment.  For example, when OBR is mapped to ServiceRequest, ServiceRequest.intent will always need to be set to "order".  There is no specific OBR field that containts the correct value.
    * Name
       * The formal name of the field in the most current published version
    * Data Type
