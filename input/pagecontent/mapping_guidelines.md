@@ -120,7 +120,7 @@ There are situations where the field/attribute cardinalities between v2 and FHIR
 <tr>
 <td>0..1</td>
 <td>1..n</td>
-<td>When the v2 message can empty and FHIR requires an attribute to be valued, a nullFlavor is preferred to indicate why it is absent.  The mapping will specify what the nullFavlor should be.  However, it there is nullFlavor, then the local implementation of the mapping needs to determine what value should be used.</td>
+<td>When the HL7 v2 message incudes a blank field in a segment where HL7 FHIR requires an attribute to be valued, a nullFlavor is preferred to indicate why it is absent.  The mapping will specify what the nullFavlor should be.  However, if there is no nullFlavor specified, then the local implementation of the mapping needs to determine what value should be used.</td>
 </tr>
 <tr>
 <td>n..*</td>
