@@ -1,6 +1,6 @@
 The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages
 segments, datatypes and vocabulary to HL7 FHIR Release 4.0 Bundles, Resources, Data
-Types and Coding Systems.
+Types and Coding Systems.  It represents a cumulative mapping of the standard, not any HL7 v2 based implementation guide.  That means that it is not focused on any particular HL7 v2 version, although we started with HL7 v2.9, rather that it aims to address all message structures, segments, and data types that are represented in the latest HL7 v2 version and any components that were deprecated yet known to still be in use in messages based on older versions.  
 
 This implementation guide provides the Concept Maps and references to the Spreadsheets
 used to generate them, as well as additional information and material to support validation
