@@ -10,7 +10,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * name = "SegmentDG1ToEpisodeOfCare"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -62,6 +62,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * group.element[1].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.display = "diagnosis.condition(Condition.code.text)"
+* group.element[1].target.comment = "Doesn't warrant mapping"
 * group.element[2].code = #DG1-5
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -81,6 +82,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "diagnosis.condition(Condition.onsetDateTime)"
+* group.element[2].target.comment = "Should confirm that these two concepts are equivalent. Condition.recordedDate is also available"
 * group.element[3].code = #DG1-6
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -123,6 +125,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "diagnosis.rank"
+* group.element[4].target.comment = "Could contribute to Condition.category or be a new extension"
 * group.element[5].code = #DG1-16
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -142,6 +145,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "diagnosis.condition(Condition.asserter(Practitioner)"
+* group.element[5].target.comment = "While DG1-16 can repeat, we are not aware of instances where this is used.  Until such time, we will not yet establish an agreed to method to communicate the extra repeats in FHIR."
 * group.element[5].target.dependsOn[0].property = "data-type-map"
 * group.element[5].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[6].code = #DG1-19
@@ -184,6 +188,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "diagnosis.condition(Condition.extension[1].valueDateTime)"
+* group.element[7].target.comment = "It is unclear whether to use recorded or asserted date.  What is your opinion?"
 * group.element[8].code = #DG1-19
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -203,6 +208,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "diagnosis.condition(Condition.recordedDate)"
+* group.element[8].target.comment = "It is unclear whether to use recorded or asserted date.  What is your opinion?"
 * group.element[9].code = #DG1-20
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -222,6 +228,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = -1
 * group.element[9].target.display = "diagnosis.condition(Condition.identifier)"
+* group.element[9].target.comment = "We should confirm that this is truly a unique ID before it gets used as .id. It may need to be combined with a visit ID to make it fully unique."
 * group.element[9].target.dependsOn[0].property = "data-type-map"
 * group.element[9].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[10].code = #DG1-21
@@ -243,6 +250,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "diagnosis.condition(Condition.verificationStatus.coding.code)"
+* group.element[10].target.comment = "Other values (A and U) don't map to anything"
 * group.element[10].target.dependsOn[0].property = "value"
 * group.element[10].target.dependsOn[0].value = "\"entered-in-error\""
 * group.element[11].code = #DG1-21
@@ -299,5 +307,6 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "diagnosis.condition(Condition.extension[2].valueReference(Condition))"
+* group.element[13].target.comment = "Extensions for occurredFollowing and related also exist"
 * group.element[13].target.dependsOn[0].property = "data-type-map"
 * group.element[13].target.dependsOn[0].value = "EI[Condition]"

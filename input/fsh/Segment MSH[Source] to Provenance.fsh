@@ -10,7 +10,7 @@ Title: "Segment MSH[Source] to Provenance Map"
 * name = "SegmentMSHSourceToProvenance"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -28,12 +28,14 @@ Title: "Segment MSH[Source] to Provenance Map"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #entity[1].what(DocumentReference.content.attachment.url)
 * group.element[0].target.display = "entity[1].what(DocumentReference.content.attachment.url)"
+* group.element[0].target.comment = "If there is an interest in holding to the original message by the recipient"
 * group.element[0].target.product[0].property = "narrative"
 * group.element[0].target.product[0].value = "when you hold on to/persist the v2 message in a data store"
 * group.element[1].code = #MSH
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #entity[1].what(DocumentReference.content.attachment.data)
 * group.element[1].target.display = "entity[1].what(DocumentReference.content.attachment.data)"
+* group.element[1].target.comment = "If there is an interest in holding to the original message by the recipient"
 * group.element[1].target.dependsOn[0].property = "value"
 * group.element[1].target.dependsOn[0].value = "/v2.txt or v2.xml into base 64/"
 * group.element[1].target.product[0].property = "narrative"
@@ -42,6 +44,7 @@ Title: "Segment MSH[Source] to Provenance Map"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #entity[1].what(DocumentReference.status)
 * group.element[2].target.display = "entity[1].what(DocumentReference.status)"
+* group.element[2].target.comment = "If there is an interest in holding to the original message by the recipient"
 * group.element[2].target.dependsOn[0].property = "value"
 * group.element[2].target.dependsOn[0].value = "\"current\""
 * group.element[2].target.product[0].property = "narrative"
@@ -176,6 +179,7 @@ Title: "Segment MSH[Source] to Provenance Map"
 * group.element[9].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[1].valueInteger = 1
 * group.element[9].target.display = "recorded"
+* group.element[9].target.comment = "We note that this could have been mapped to the Provenance.occurred[x] attribute, but since Provenance.recorded is required and these two times are virtually the same, we opted to map to Provenance.recorded."
 * group.element[10].code = #MSH-7
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"

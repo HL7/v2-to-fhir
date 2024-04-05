@@ -10,7 +10,7 @@ Title: "Segment PR1 to Procedure Map"
 * name = "SegmentPR1ToProcedure"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -77,6 +77,7 @@ Title: "Segment PR1 to Procedure Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "code.text"
+* group.element[2].target.comment = "PR1-4 was deprecated in v2.3"
 * group.element[2].target.product[0].property = "antlr"
 * group.element[2].target.product[0].value = "IF PR1-3.9 NOT VALUED"
 * group.element[3].code = #PR1-5
@@ -119,6 +120,7 @@ Title: "Segment PR1 to Procedure Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "performedDateTime"
+* group.element[4].target.comment = "The Procedure date/time must be at least to the granularity of minutes if a performedPeriod is to be created from PR1-5 and PR1-7"
 * group.element[4].target.product[0].property = "antlr"
 * group.element[4].target.product[0].value = "IF PR1-7 VALUED AND PR1-5.5 NOT VALUED"
 * group.element[5].code = #PR1-5
@@ -182,6 +184,7 @@ Title: "Segment PR1 to Procedure Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "performedPeriod.end"
+* group.element[7].target.comment = "The number of minutes in PR1-7 must be added to the time in PR1-5 to get the endpoint of the performedPeriod (note that other elements of the date/time (hours, date, etc) may also need to be changed depending on the length of the procedure)"
 * group.element[7].target.dependsOn[0].property = "value"
 * group.element[7].target.dependsOn[0].value = "Procedure.performedPeriod.start+PR1-7"
 * group.element[7].target.product[0].property = "antlr"
@@ -331,6 +334,7 @@ Title: "Segment PR1 to Procedure Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "perfomer[3].actor(Practitioner)"
+* group.element[14].target.comment = "Because PR1-12 is less specific than other fields in PR1 in regards to the role of the practitioner, this mapping is not providing a default code for performer.function. But if an implementation knows the function of the providers being exchanged in PR1-12, than a implementation-specific value for performer.function may be assigned on a case by case basis."
 * group.element[14].target.dependsOn[0].property = "data-type-map"
 * group.element[14].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[15].code = #PR1-15
@@ -394,6 +398,7 @@ Title: "Segment PR1 to Procedure Map"
 * group.element[17].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[17].target.extension[0].extension[2].valueInteger = 1
 * group.element[17].target.display = "location(Location)"
+* group.element[17].target.comment = "We will address >=2 cardinality if somebody raises the need."
 * group.element[17].target.dependsOn[0].property = "data-type-map"
 * group.element[17].target.dependsOn[0].value = "PL[Location]"
 * group.element[18].code = #PR1-25
@@ -415,5 +420,6 @@ Title: "Segment PR1 to Procedure Map"
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = -1
 * group.element[18].target.display = "partOf(Procedure.identifier)"
+* group.element[18].target.comment = "Procedure.partOf should contain the reference to another Procedure resource where Procedure.identifier matches the value of PR1-25"
 * group.element[18].target.dependsOn[0].property = "data-type-map"
 * group.element[18].target.dependsOn[0].value = "EI[Identifier-Extension]"

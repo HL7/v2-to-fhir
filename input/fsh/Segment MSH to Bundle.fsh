@@ -10,7 +10,7 @@ Title: "Segment MSH to Bundle Map"
 * name = "SegmentMSHToBundle"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -35,6 +35,7 @@ Title: "Segment MSH to Bundle Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "type"
+* group.element[0].target.comment = "Note that the assignment is according to the mapping principles for mapping definitions only.  There is no expectation that this is the actual Bundle.type being mapped to based on local implementation considerations.  Unless the progression actually is a FHIR Message."
 * group.element[0].target.dependsOn[0].property = "value"
 * group.element[0].target.dependsOn[0].value = "\"message\""
 * group.element[1].code = #MSH-7
@@ -56,6 +57,7 @@ Title: "Segment MSH to Bundle Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "timestamp"
+* group.element[1].target.comment = "Note that MSH-7 does not require a time offset while Bundle.timestamp does.  Implementers should configure the actual mapping according to local context of the transaction."
 * group.element[2].code = #MSH-10
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"

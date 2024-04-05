@@ -10,7 +10,7 @@ Title: "Segment OBR to ServiceRequest Map"
 * name = "SegmentOBRToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -334,6 +334,7 @@ Title: "Segment OBR to ServiceRequest Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "requester.extension[1].url"
+* group.element[14].target.comment = "\"http://hl7.org/fhir/StructureDefinition/servicerequest-order-callback-phone-number\""
 * group.element[15].code = #OBR-17
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"

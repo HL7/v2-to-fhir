@@ -10,7 +10,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * name = "SegmentPRTToPractitionerRole"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -66,6 +66,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "practitioner[Practitioner]"
+* group.element[1].target.comment = "While PRT may contain multiple persons within one PRT, we believe this to be rare, and when it happens, the implementer needs to determine how to best resolve that."
 * group.element[1].target.dependsOn[0].property = "data-type-map"
 * group.element[1].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[2].code = #PRT-6
@@ -131,6 +132,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "organization[Organization]"
+* group.element[4].target.comment = "While PRT may contain multiple organizations within one PRT, we believe this to be rare, and when it happens, the implementer needs to determine how to best resolve that."
 * group.element[4].target.dependsOn[0].property = "data-type-map"
 * group.element[4].target.dependsOn[0].value = "XON[Organization]"
 * group.element[5].code = #PRT-9
@@ -152,6 +154,7 @@ Title: "Segment PRT to PractitionerRole Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "location[Location]"
+* group.element[5].target.comment = "While PRT may contain multiple locations within one PRT, we believe this to be rare, and when it happens, the implementer needs to determine how to best resolve that."
 * group.element[5].target.dependsOn[0].property = "data-type-map"
 * group.element[5].target.dependsOn[0].value = "PL[Location]"
 * group.element[6].code = #PRT-11

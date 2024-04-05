@@ -10,7 +10,7 @@ Title: "Segment DG1 to Condition Map"
 * name = "SegmentDG1ToCondition"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -81,6 +81,7 @@ Title: "Segment DG1 to Condition Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "onsetDateTime"
+* group.element[2].target.comment = "Should confirm that these two concepts are equivalent. Condition.recordedDate is also available"
 * group.element[3].code = #DG1-16
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -100,6 +101,7 @@ Title: "Segment DG1 to Condition Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "asserter(Practitioner)"
+* group.element[3].target.comment = "Condition.recorder is also an option. Neither of these fields can repeat like DG1-16 can."
 * group.element[3].target.dependsOn[0].property = "data-type-map"
 * group.element[3].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[4].code = #DG1-19
@@ -142,6 +144,7 @@ Title: "Segment DG1 to Condition Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "extension[1].valueDateTime"
+* group.element[5].target.comment = "It is unclear whether to use recorded or asserted date.  What is your opinion?"
 * group.element[6].code = #DG1-19
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -161,6 +164,7 @@ Title: "Segment DG1 to Condition Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "recordedDate"
+* group.element[6].target.comment = "It is unclear whether to use recorded or asserted date.  What is your opinion?"
 * group.element[7].code = #DG1-20
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -201,6 +205,7 @@ Title: "Segment DG1 to Condition Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "verificationStatus.coding.code"
+* group.element[8].target.comment = "Other values (A and U) don't map to anything"
 * group.element[8].target.dependsOn[0].property = "value"
 * group.element[8].target.dependsOn[0].value = "\"entered-in-error\""
 * group.element[9].code = #DG1-21
@@ -264,5 +269,6 @@ Title: "Segment DG1 to Condition Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "extension[2].valueReference(Condition)"
+* group.element[11].target.comment = "Extensions for occurredFollowing and related also exist"
 * group.element[11].target.dependsOn[0].property = "data-type-map"
 * group.element[11].target.dependsOn[0].value = "EI[Condition]"

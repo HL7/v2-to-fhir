@@ -10,7 +10,7 @@ Title: "Segment TQ1 to MedicationRequest Map"
 * name = "SegmentTQ1ToMedicationRequest"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -127,6 +127,7 @@ Title: "Segment TQ1 to MedicationRequest Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "occurrenceTiming.boundsDuration"
+* group.element[4].target.comment = "The Duration data type is required to be an expression of time using UCUM units"
 * group.element[4].target.dependsOn[0].property = "data-type-map"
 * group.element[4].target.dependsOn[0].value = "CQ[Quantity]"
 * group.element[4].target.product[0].property = "antlr"

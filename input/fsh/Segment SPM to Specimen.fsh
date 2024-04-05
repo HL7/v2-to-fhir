@@ -10,7 +10,7 @@ Title: "Segment SPM to Specimen Map"
 * name = "SegmentSPMToSpecimen"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -85,6 +85,7 @@ Title: "Segment SPM to Specimen Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "parent.identifier"
+* group.element[2].target.comment = "Note that Specimen.parent can repeat, i.e., match the SPM-3 cardinality, but Specimen.parent.identifier does not.  Therefore, while a specimen can have multiple parents, putting placer and filler parent identifiers in separate parent instances is not appropriate."
 * group.element[2].target.dependsOn[0].property = "data-type-map"
 * group.element[2].target.dependsOn[0].value = "EIP[Identifier-PlacerAssignedIdentifier]"
 * group.element[3].code = #SPM-3
@@ -173,6 +174,7 @@ Title: "Segment SPM to Specimen Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "collection.method"
+* group.element[6].target.comment = "This should not be populated in a message corresponding to a ServiceRequest (eg ORM)"
 * group.element[6].target.dependsOn[0].property = "data-type-map"
 * group.element[6].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[6].target.dependsOn[1].property = "vocabulary-map"
@@ -196,6 +198,7 @@ Title: "Segment SPM to Specimen Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "collection.bodySite"
+* group.element[7].target.comment = "This should not be populated in a message corresponding to a ServiceRequest (eg ORM)"
 * group.element[7].target.dependsOn[0].property = "data-type-map"
 * group.element[7].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[7].target.dependsOn[1].property = "vocabulary-map"

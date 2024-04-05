@@ -10,7 +10,7 @@ Title: "Segment NK1 to Patient Map"
 * name = "SegmentNK1ToPatient"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -64,6 +64,7 @@ Title: "Segment NK1 to Patient Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "contact.address"
+* group.element[1].target.comment = "Note the decreased cardinality for the FHIR map"
 * group.element[1].target.dependsOn[0].property = "data-type-map"
 * group.element[1].target.dependsOn[0].value = "XAD[Address]"
 * group.element[2].code = #NK1-5
@@ -148,6 +149,7 @@ Title: "Segment NK1 to Patient Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = -1
 * group.element[5].target.display = "contact.relationship"
+* group.element[5].target.comment = "Should we update the names in the base FHIR standard as the names and value sets are confusing?  It's normative, so has to have a very strong case."
 * group.element[5].target.dependsOn[0].property = "data-type-map"
 * group.element[5].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[5].target.dependsOn[1].property = "vocabulary-map"

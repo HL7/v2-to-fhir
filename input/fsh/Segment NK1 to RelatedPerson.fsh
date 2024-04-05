@@ -10,7 +10,7 @@ Title: "Segment NK1 to RelatedPerson Map"
 * name = "SegmentNK1ToRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -64,6 +64,10 @@ Title: "Segment NK1 to RelatedPerson Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "relationship[1]"
+* group.element[1].target.comment = """
+Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.
+See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPersonfor further discussion\
+"""
 * group.element[1].target.dependsOn[0].property = "data-type-map"
 * group.element[1].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[1].target.dependsOn[1].property = "vocabulary-map"
@@ -108,6 +112,7 @@ Title: "Segment NK1 to RelatedPerson Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = -1
 * group.element[3].target.display = "telecom[1]"
+* group.element[3].target.comment = "ContactPoint.use would likely be \"home\" or \"mobile\", but picked up from XTN.2"
 * group.element[3].target.dependsOn[0].property = "data-type-map"
 * group.element[3].target.dependsOn[0].value = "XTN[ContactPoint]"
 * group.element[4].code = #NK1-6
@@ -164,6 +169,11 @@ Title: "Segment NK1 to RelatedPerson Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = -1
 * group.element[6].target.display = "relationship[2]"
+* group.element[6].target.comment = """
+Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.
+RelatedPerson.relationship is allowed to repeat and so can accept values from both NK1-3 and NK1-7
+See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPerson for further discussion\
+"""
 * group.element[6].target.dependsOn[0].property = "data-type-map"
 * group.element[6].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[6].target.dependsOn[1].property = "vocabulary-map"
@@ -311,6 +321,7 @@ Title: "Segment NK1 to RelatedPerson Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = -1
 * group.element[13].target.display = "name[2]"
+* group.element[13].target.comment = "Do we need a way in RelatedPerson to distinguish between a \"next of kin\" and a \"contact Person\"?"
 * group.element[13].target.dependsOn[0].property = "data-type-map"
 * group.element[13].target.dependsOn[0].value = "XPN[HumanName]"
 * group.element[14].code = #NK1-31

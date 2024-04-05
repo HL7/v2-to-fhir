@@ -10,7 +10,7 @@ Title: "Segment ROL[GeneralPractitioner] to Patient Map"
 * name = "SegmentROLGeneralPractitionerToPatient"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -153,6 +153,7 @@ Title: "Segment ROL[GeneralPractitioner] to Patient Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = -1
 * group.element[6].target.display = "generalPractitioner(PractitionerRole.location(Location.address))"
+* group.element[6].target.comment = "We seek feedback whether we actually should vary this based on ROL-13 being valued.  If not valued, then put it in Patient.generalPractitioner(PractitionerRole.Practitioner(Practitioner.address[2]))"
 * group.element[6].target.dependsOn[0].property = "data-type-map"
 * group.element[6].target.dependsOn[0].value = "XAD[Address]"
 * group.element[6].target.product[0].property = "antlr"
@@ -220,6 +221,7 @@ Title: "Segment ROL[GeneralPractitioner] to Patient Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "generalPractitioner(PractitionerRole.location(Location))"
+* group.element[9].target.comment = "We seek more information on how this is mapped/merged with ROL-11."
 * group.element[9].target.dependsOn[0].property = "data-type-map"
 * group.element[9].target.dependsOn[0].value = "PL[Location]"
 * group.element[10].code = #ROL-14
@@ -241,5 +243,6 @@ Title: "Segment ROL[GeneralPractitioner] to Patient Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "generalPractitioner(PractitionerRole.organization.(Organization))"
+* group.element[10].target.comment = "We seek more information on how this is mapped/merged with ROL-11."
 * group.element[10].target.dependsOn[0].property = "data-type-map"
 * group.element[10].target.dependsOn[0].value = "XON[Organization]"

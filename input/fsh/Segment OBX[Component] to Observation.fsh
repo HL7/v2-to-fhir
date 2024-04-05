@@ -10,7 +10,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * name = "SegmentOBXComponentToObservation"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -449,6 +449,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = 1
 * group.element[18].target.display = "component[each].valueSampledData"
+* group.element[18].target.comment = "Need to add text on converting from NA to SampledData"
 * group.element[18].target.product[0].property = "antlr"
 * group.element[18].target.product[0].value = "IF OBX-2 EQUALS \"NA\""
 * group.element[19].code = #OBX-5
@@ -493,6 +494,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
 * group.element[20].target.display = "component[each].extension[1].valueAttachment"
+* group.element[20].target.comment = "We are for now addressing Base64 that cover .pdf, pictures and other binaries.  If somebody does this, we will address those."
 * group.element[20].target.dependsOn[0].property = "data-type-map"
 * group.element[20].target.dependsOn[0].value = "ED[Attachment]"
 * group.element[20].target.product[0].property = "antlr"
@@ -539,6 +541,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * group.element[22].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[22].target.extension[0].extension[2].valueInteger = 1
 * group.element[22].target.display = "component[each].extension[1].valueAttachment"
+* group.element[22].target.comment = "To be resolved when we resolve DocumentReference and valueAttachment"
 * group.element[22].target.dependsOn[0].property = "data-type-map"
 * group.element[22].target.dependsOn[0].value = "RP[Attachment]"
 * group.element[22].target.product[0].property = "antlr"
@@ -669,6 +672,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * group.element[29].target.equivalence = #equivalent
 * group.element[29].target.code = #component[each].referenceRange.text
 * group.element[29].target.display = "component[each].referenceRange.text"
+* group.element[29].target.comment = "If OBX-7 is sufficiently parseable, then the low, high, type, appliesTo, and/or age may be used."
 * group.element[30].code = #OBX-8
 * group.element[30].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[30].extension[0].extension[0].url = "type"
@@ -854,6 +858,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * group.element[38].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[38].target.extension[0].extension[2].valueInteger = 1
 * group.element[38].target.display = "method"
+* group.element[38].target.comment = "The cardinality of Observation.method is 0..1 while the source allows for multiple methods.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide."
 * group.element[38].target.dependsOn[0].property = "data-type-map"
 * group.element[38].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[39].code = #OBX-18
@@ -896,6 +901,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * group.element[40].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[40].target.extension[0].extension[2].valueInteger = 1
 * group.element[40].target.display = "extension[1].url"
+* group.element[40].target.comment = "\"http://hl7.org/fhir/StructureDefinition/observation-analysis-date-time\""
 * group.element[41].code = #OBX-19
 * group.element[41].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[41].extension[0].extension[0].url = "type"
@@ -934,6 +940,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * group.element[42].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[42].target.extension[0].extension[2].valueInteger = 1
 * group.element[42].target.display = "bodySite"
+* group.element[42].target.comment = "The cardinality of Observation.bodySite is 0..1 while the source allows for multiple body sites.  As we are not aware of anybody populating multiples in HL7 v2, we did not provide further mapping guidance.  If you need to support multiples, please submit a gForge to OO for the HL7 v2 to FHIR mapping Implementation Guide."
 * group.element[42].target.dependsOn[0].property = "data-type-map"
 * group.element[42].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[43].code = #OBX-21
@@ -1140,6 +1147,7 @@ Title: "Segment OBX[Component] to Observation Map"
 * group.element[52].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[52].target.extension[0].extension[2].valueInteger = 1
 * group.element[52].target.display = "extension[1].uri"
+* group.element[52].target.comment = "Note that in v2 messages the observations that a calculated observation is derived from on and involve multiple specimens are typically not included with the message. To enable relating the calculated observation to the correct specimens it relates to, the v2 message should include the originating observations that in turn use OBX-33 to link to the correct specimens.  Without that, and if there are multiple specimens in OBX-33, there is no standard method to correctly associate the observation with the correct specimens.  The implementer will have to devise an appropriate method for that in their context."
 * group.element[52].target.dependsOn[0].property = "value"
 * group.element[52].target.dependsOn[0].value = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.specimen"
 * group.element[52].target.product[0].property = "antlr"

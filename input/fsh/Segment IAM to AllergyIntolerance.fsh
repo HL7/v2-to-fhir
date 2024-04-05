@@ -10,7 +10,7 @@ Title: "Segment IAM to AllergyIntolerance Map"
 * name = "SegmentIAMToAllergyIntolerance"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -234,6 +234,7 @@ Title: "Segment IAM to AllergyIntolerance Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "onsetString"
+* group.element[9].target.comment = "Cannot map to both onsetDateTime and onsetString, so take onsetDateTime if available."
 * group.element[9].target.product[0].property = "antlr"
 * group.element[9].target.product[0].value = "IF IAM-11 NOT VALUED"
 * group.element[10].code = #IAM-13
@@ -387,5 +388,6 @@ Title: "Segment IAM to AllergyIntolerance Map"
 * group.element[16].target.extension[0].extension[0].url = "type"
 * group.element[16].target.extension[0].extension[0].valueCode = #"CodeableConcept"
 * group.element[16].target.display = "code[1]"
+* group.element[16].target.comment = "The values are added as additional .coding entries in the CodeableConcept for AllergyIntolerance.code"
 * group.element[16].target.dependsOn[0].property = "data-type-map"
 * group.element[16].target.dependsOn[0].value = "CWE[CodeableConcept]"

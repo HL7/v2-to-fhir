@@ -10,7 +10,7 @@ Title: "Segment PV2 to Encounter Map"
 * name = "SegmentPV2ToEncounter"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -78,6 +78,7 @@ Title: "Segment PV2 to Encounter Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "reasonCode[1]"
+* group.element[2].target.comment = "PV2-3 doesn't have an associated table so no vocabulary mapping is provided"
 * group.element[2].target.dependsOn[0].property = "data-type-map"
 * group.element[2].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[3].code = #PV2-8

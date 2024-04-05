@@ -10,7 +10,7 @@ Title: "Datatype ID to boolean Map"
 * name = "DatatypeIDToBoolean"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

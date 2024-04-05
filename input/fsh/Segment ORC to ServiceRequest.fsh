@@ -10,7 +10,7 @@ Title: "Segment ORC to ServiceRequest Map"
 * name = "SegmentORCToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,6 +43,7 @@ Title: "Segment ORC to ServiceRequest Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "status"
+* group.element[0].target.comment = "This is a complicated mapping where .status, .intent, and Task get involved that may have various localized interpretation."
 * group.element[0].target.dependsOn[0].property = "vocabulary-map"
 * group.element[0].target.dependsOn[0].value = "OrderControlCode[ServiceRequest.status]"
 * group.element[0].target.product[0].property = "antlr"
@@ -480,6 +481,7 @@ Title: "Segment ORC to ServiceRequest Map"
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
 * group.element[20].target.display = "requester(PractitionerRole.organization(Organization))"
+* group.element[20].target.comment = "PractitionerRole.location is an alternative mapping, we invite ballot comments on which element in PractitionerRole is best."
 * group.element[20].target.dependsOn[0].property = "data-type-map"
 * group.element[20].target.dependsOn[0].value = "XON[Organization]"
 * group.element[21].code = #ORC-22
@@ -536,6 +538,7 @@ Title: "Segment ORC to ServiceRequest Map"
 * group.element[23].target.equivalence = #equivalent
 * group.element[23].target.code = #requester(PractitionerRole.practitioner(Practitioner.address))
 * group.element[23].target.display = "requester(PractitionerRole.practitioner(Practitioner.address))"
+* group.element[23].target.comment = "We request feedback on whether this address is more directly related to the Practitioner rather than the PractitionerRole"
 * group.element[23].target.dependsOn[0].property = "data-type-map"
 * group.element[23].target.dependsOn[0].value = "XAD[Address]"
 * group.element[24].code = #ORC-29

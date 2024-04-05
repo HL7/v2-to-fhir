@@ -10,7 +10,7 @@ Title: "Segment ORC to DiagnosticReport Map"
 * name = "SegmentORCToDiagnosticReport"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -106,6 +106,10 @@ Title: "Segment ORC to DiagnosticReport Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = -1
 * group.element[3].target.display = "basedOn(ServiceRequest)"
+* group.element[3].target.comment = """
+The Placer Order Number may be used to find the ServiceRequest with the same ID to link the ServiceRequest and the DiagnosticReport which fulfills the order.
+Ideally, DiagnosticReport.identifier will be unique. Depending on how the resulting system populates the Filler ID, it may be desirable to concatenate the Filler ID with the procedure code and/or date/time to create a unique identifier.\
+"""
 * group.element[4].code = #ORC-3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"

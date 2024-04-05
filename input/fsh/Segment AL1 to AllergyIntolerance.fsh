@@ -10,7 +10,7 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * name = "SegmentAL1ToAllergyIntolerance"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -35,6 +35,7 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "clinicalStatus.coding.code"
+* group.element[0].target.comment = "While .clinicalStatus is not required, constraint ait-1 (AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error.) does necessitate populating this element in the map as it's not possible to infer a verificationStatus of \"entered-in-error\" based on the data in AL1."
 * group.element[0].target.dependsOn[0].property = "value"
 * group.element[0].target.dependsOn[0].value = "\"active\""
 * group.element[1].code = #AL1
@@ -69,6 +70,16 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "category"
+* group.element[2].target.comment = """
+The FHIR table has a "required" binding. Do we need to expand the values in the FHIR table?
+
+Could other be used for:
+Miscellaneous allergy
+Miscellaneous contraindication
+Animal Allergy
+
+HL70127 is a user defined table\
+"""
 * group.element[2].target.dependsOn[0].property = "data-type-map"
 * group.element[2].target.dependsOn[0].value = "CWE[code]"
 * group.element[2].target.dependsOn[1].property = "vocabulary-map"
@@ -180,6 +191,7 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "criticality"
+* group.element[7].target.comment = "Note that AllergyIntolerance.reaction.severity is available in FHIR but from a base standard perspective that is actually not the most appropriate and would require that AL1-6 is valued as well.  However, a local implementation may have used vocabulary that better fits AllergyIntolerance.reaction.severity and should then consider that instead as a local variation.  Note that the .reaction though is at a particular time, while .criticality is an overall assement that matches HL7 v2 generally better."
 * group.element[7].target.dependsOn[0].property = "data-type-map"
 * group.element[7].target.dependsOn[0].value = "CWE[code]"
 * group.element[7].target.dependsOn[1].property = "vocabulary-map"
@@ -253,6 +265,9 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "reaction.manifestation.text"
+* group.element[10].target.comment = """
+AllergyIntolerance.reaction can repeat, presumably to capture both multiple manifestations of the reaction (rash and nausea) as well as reactions to independent exposures (last week and last month) - we may want to confirm this understanding.\
+"""
 * group.element[10].target.dependsOn[0].property = "data-type-map"
 * group.element[10].target.dependsOn[0].value = "ST[CodeableConcept]"
 * group.element[11].code = #AL1-6
@@ -274,3 +289,4 @@ Title: "Segment AL1 to AllergyIntolerance Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "onsetDateTime"
+* group.element[11].target.comment = "Withdrawn as of 2.7, Refer to IAM-11 Onset or IAM-13 Reported Date"

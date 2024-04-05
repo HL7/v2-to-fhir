@@ -10,7 +10,7 @@ Title: "Segment PV1 to Encounter Map"
 * name = "SegmentPV1ToEncounter"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -91,6 +91,7 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "location[1].location(Location)"
+* group.element[2].target.comment = "Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included."
 * group.element[2].target.dependsOn[0].property = "data-type-map"
 * group.element[2].target.dependsOn[0].value = "PL[Location]"
 * group.element[3].code = #PV1-3
@@ -586,6 +587,7 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[25].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[25].target.extension[0].extension[2].valueInteger = 1
 * group.element[25].target.display = "hospitalization.admitSource"
+* group.element[25].target.comment = "Table 0023 doesn't have any suggested values, therefore there is no vocabulary mapping"
 * group.element[25].target.dependsOn[0].property = "data-type-map"
 * group.element[25].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[26].code = #PV1-16
@@ -598,7 +600,7 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[26].extension[0].extension[2].valueInteger = 1
 * group.element[26].display = "VIP Indicator"
 * group.element[26].target.equivalence = #equivalent
-* group.element[26].target.code = #specialCourtesy
+* group.element[26].target.code = #hospitalization.specialCourtesy
 * group.element[26].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[26].target.extension[0].extension[0].url = "type"
 * group.element[26].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -606,7 +608,8 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[26].target.extension[0].extension[1].valueInteger = 0
 * group.element[26].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[26].target.extension[0].extension[2].valueInteger = 1
-* group.element[26].target.display = "specialCourtesy"
+* group.element[26].target.display = "hospitalization.specialCourtesy"
+* group.element[26].target.comment = "Depending on the vocabulary used in PV1-16, this may require additional mapping."
 * group.element[26].target.dependsOn[0].property = "data-type-map"
 * group.element[26].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[26].target.dependsOn[1].property = "vocabulary-map"
@@ -809,6 +812,7 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[36].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[36].target.extension[0].extension[2].valueInteger = 1
 * group.element[36].target.display = "hospitalization.destination(Location)"
+* group.element[36].target.comment = "This location should be a new location resources instance."
 * group.element[36].target.dependsOn[0].property = "value"
 * group.element[36].target.dependsOn[0].value = "/Encounter.hospitalization.destination.reference=Location[n].id/"
 * group.element[36].target.dependsOn[1].property = "data-type-map"

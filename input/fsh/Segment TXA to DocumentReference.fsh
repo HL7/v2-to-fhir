@@ -10,7 +10,7 @@ Title: "Segment TXA to DocumentReference Map"
 * name = "SegmentTXAToDocumentReference"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -148,6 +148,7 @@ Title: "Segment TXA to DocumentReference Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = -1
 * group.element[5].target.display = "identifier[1]"
+* group.element[5].target.comment = "Need to ensure that the full path is represented."
 * group.element[5].target.dependsOn[0].property = "data-type-map"
 * group.element[5].target.dependsOn[0].value = "ST[Identifier]"
 * group.element[6].code = #TXA

@@ -10,7 +10,7 @@ Title: "Segment OBR to DiagnosticReport Map"
 * name = "SegmentOBRToDiagnosticReport"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -202,6 +202,7 @@ Title: "Segment OBR to DiagnosticReport Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "effectiveDateTime"
+* group.element[7].target.comment = "This should not be populated in a message corresponding to a ServiceRequest (eg ORM)"
 * group.element[7].target.product[0].property = "antlr"
 * group.element[7].target.product[0].value = "IF OBR-8 NOT VALUED"
 * group.element[8].code = #OBR-7
@@ -244,6 +245,7 @@ Title: "Segment OBR to DiagnosticReport Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "effectivePeriod.end"
+* group.element[9].target.comment = "This should not be populated in a message corresponding to a ServiceRequest (eg ORM)"
 * group.element[10].code = #OBR-22
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"

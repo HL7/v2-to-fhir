@@ -10,7 +10,7 @@ Title: "Segment TQ1 to ServiceRequest Map"
 * name = "SegmentTQ1ToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -276,6 +276,7 @@ Title: "Segment TQ1 to ServiceRequest Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "occurrenceTiming.duration"
+* group.element[11].target.comment = "goes to .duration and .durationUnit"
 * group.element[11].target.dependsOn[0].property = "data-type-map"
 * group.element[11].target.dependsOn[0].value = "CQ[Decimal]"
 * group.element[12].code = #TQ1-13

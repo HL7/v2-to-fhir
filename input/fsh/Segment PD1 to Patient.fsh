@@ -10,7 +10,7 @@ Title: "Segment PD1 to Patient Map"
 * name = "SegmentPD1ToPatient"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,6 +43,7 @@ Title: "Segment PD1 to Patient Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "generalPractitioner[1](Organization)"
+* group.element[0].target.comment = "Is Patient.managingOrganization better?"
 * group.element[0].target.dependsOn[0].property = "data-type-map"
 * group.element[0].target.dependsOn[0].value = "XON[Organization]"
 * group.element[1].code = #PD1-4
@@ -106,6 +107,7 @@ Title: "Segment PD1 to Patient Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "extension[1].valueCodeableConcept"
+* group.element[3].target.comment = "The FHIR extension does not include a value set"
 * group.element[3].target.dependsOn[0].property = "data-type-map"
 * group.element[3].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[4].code = #PD1-14

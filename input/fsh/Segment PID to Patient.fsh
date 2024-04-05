@@ -10,7 +10,7 @@ Title: "Segment PID to Patient Map"
 * name = "SegmentPIDToPatient"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -148,6 +148,7 @@ Title: "Segment PID to Patient Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "extension[1].valueString"
+* group.element[5].target.comment = "This may not be the second name if there are repeats in PID-5. ext.patientMothersMaiden (string) also exists if we prefer."
 * group.element[5].target.dependsOn[0].property = "data-type-map"
 * group.element[5].target.dependsOn[0].value = "XPN[String]"
 * group.element[6].code = #PID-7
@@ -169,6 +170,7 @@ Title: "Segment PID to Patient Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "birthDate"
+* group.element[6].target.comment = "PROPOSAL MOVE TO IG IMPLEMENTATION GUIDANCE SECTION: Use ISO 8601 to establish the re-formatting from HL7 v2 data type to HL7 FHIR data type, particularly when mapping a platform datetime to platform date.  ADD OTHER REFERENCES ON HOW TO ACHIEVE THESE CONVERSIONS in Java, CSHarp, etc., etc."
 * group.element[7].code = #PID-7
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -297,6 +299,7 @@ Title: "Segment PID to Patient Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "address[1].district"
+* group.element[12].target.comment = "This may not be the second occurrence if PID-11 repeats. Because PID-11 can repeat but PID-12 cannot, it's not appropriate to include PID-12 in an iteration of .address populated from PID-11"
 * group.element[12].target.dependsOn[0].property = "data-type-map"
 * group.element[12].target.dependsOn[0].value = "ID[String]"
 * group.element[12].target.product[0].property = "antlr"
@@ -459,6 +462,7 @@ Title: "Segment PID to Patient Map"
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = -1
 * group.element[20].target.display = "communication.language"
+* group.element[20].target.comment = "During implementation, if you know that the value in PID-15 is the preferred patient language, then Patient.communication.preferred can be set to \"true\"."
 * group.element[20].target.dependsOn[0].property = "data-type-map"
 * group.element[20].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[20].target.dependsOn[1].property = "vocabulary-map"
@@ -549,6 +553,7 @@ Title: "Segment PID to Patient Map"
 * group.element[24].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[24].target.extension[0].extension[2].valueInteger = 1
 * group.element[24].target.display = "identifier[4].value"
+* group.element[24].target.comment = "the value set for Identifier.type doesn't contain SSN but it does have SB (social beneficiary)"
 * group.element[25].code = #PID-19
 * group.element[25].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[25].extension[0].extension[0].url = "type"
@@ -635,6 +640,7 @@ Title: "Segment PID to Patient Map"
 * group.element[28].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[28].target.extension[0].extension[2].valueInteger = 1
 * group.element[28].target.display = "identifier[4].system"
+* group.element[28].target.comment = "If working in a jurisdiction other than the US and this field is used for the local SSN equivalent, a different system will need to be identified."
 * group.element[28].target.dependsOn[0].property = "value"
 * group.element[28].target.dependsOn[0].value = "\"http://hl7.org/fhir/sid/us-ssn.\""
 * group.element[29].code = #PID-20
@@ -817,6 +823,7 @@ Title: "Segment PID to Patient Map"
 * group.element[37].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[37].target.extension[0].extension[2].valueInteger = 1
 * group.element[37].target.display = "extension[4].extension[1].valueCodeableConcept"
+* group.element[37].target.comment = "The standard extension does not include a value set"
 * group.element[37].target.dependsOn[0].property = "data-type-map"
 * group.element[37].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[38].code = #PID-28
@@ -880,6 +887,7 @@ Title: "Segment PID to Patient Map"
 * group.element[40].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[40].target.extension[0].extension[2].valueInteger = 1
 * group.element[40].target.display = "extension[5].extension[1].valueCodeableConcept"
+* group.element[40].target.comment = "The standard extension does not include a value set"
 * group.element[40].target.dependsOn[0].property = "data-type-map"
 * group.element[40].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[41].code = #PID-29
@@ -1132,6 +1140,7 @@ Title: "Segment PID to Patient Map"
 * group.element[52].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[52].target.extension[0].extension[2].valueInteger = 1
 * group.element[52].target.display = "extension[7].extension[1].valueCodeableConcept"
+* group.element[52].target.comment = "The standard extension does not include a value set.  Also suggest that the extension should not be limited to \"country\".  Consider adding a .type to the extension to distinguish tribal vs. \"country\" (or whatever we call it), or otherwise add an extension for tribal citizenship to accommodate the return flow."
 * group.element[52].target.dependsOn[0].property = "data-type-map"
 * group.element[52].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[53].code = #PID-40

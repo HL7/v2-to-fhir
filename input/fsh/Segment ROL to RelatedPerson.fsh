@@ -10,7 +10,7 @@ Title: "Segment ROL to RelatedPerson Map"
 * name = "SegmentROLToRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2023-12-19"
+* date = "2024-03-22"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -80,6 +80,7 @@ Title: "Segment ROL to RelatedPerson Map"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #$this
 * group.element[2].target.display = "$this"
+* group.element[2].target.comment = "A given ROL segment should create a single RelatedPerson resource, with the name coming from ROL-4 via the Data Type Map provided here and other attributes (eg. address, phone number) from other ROL fields. Therefor, when performing $this, the data type map updates the RelatedPerson resource created from this ROL[RelatedPerson] map."
 * group.element[2].target.dependsOn[0].property = "data-type-map"
 * group.element[2].target.dependsOn[0].value = "XCN[RelatedPerson]"
 * group.element[3].code = #ROL-5
