@@ -2,8 +2,6 @@ With the advent of HL7<sup>(R)</sup> FHIR<sup>(R)</sup>, an HL7 endorsed mapping
 
 This project will develop v2-to-FHIR maps for v2 messages, segments and data types to standard FHIR elements, as well as agreed to extensions where there is a gap in FHIR. The initial focus of the project is on commonly used v2 message structures and the segment and data type building blocks used to construct those messages.  Over time, other v2 message structures will be added based on interest and demand.
 
-Drafting, documenting, and publishing the v2-to-FHIR mappings and link to them from relevant FHIR component and upcoming v2+ elements, there is also a need for an infrastructure that can take advantage of the FHIR publishing infrastructure and enable linkages to the respective v2+ and FHIR standards.
-
 ### Scope
 The scope of the project is:
 
@@ -43,7 +41,9 @@ The scope of the project is:
 * Transformation Validation
   * Provide a mechanism for validating that transforms from a given engine adhere to the mappings developed by the project (or custom/extended mappings from implementers)
 * Documentation and Publication Infrastructure
-  * Create a documentation and publication infrastructure that enable easy editing of proposed mappings, human readable review formats (e.g., spreadsheet format) to enable validation, balloting, and mapping reference documentation, while providing computable mappings for mapping engines to ingest unambiguously across any mapping engine.
+  * Create a documentation and publication infrastructure that enable easy editing of proposed mappings, human readable review formats (e.g., spreadsheet format) to enable validation, balloting, and mapping reference documentation, while providing computable mappings for mapping engines to ingest unambiguously across any mapping engine.  Until such time the project utilizes Google Spreadsheets that are indexed here (https://docs.google.com/spreadsheets/d/1PaFYPSSq4oplTvw_4OgOn6h2Bs_CMvCAU9CqC4tPBgk/edit#gid=1419236962) to document the mappings that are then pulled into the IG for the CI Build and publication.
+  * Upon publication of the first version, work will be initiated to enable FHIR resources and data types to directly reference available FHIR mappings rather than the summary mappings currently available. 
+
 
 The intent is to ultimately achieve normative status of the mappings.
 
