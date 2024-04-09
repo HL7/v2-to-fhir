@@ -41,7 +41,7 @@ The scope of the project is:
 * Transformation Validation
   * Provide a mechanism for validating that transforms from a given engine adhere to the mappings developed by the project (or custom/extended mappings from implementers)
 * Documentation and Publication Infrastructure
-  * Create a documentation and publication infrastructure that enable easy editing of proposed mappings, human readable review formats (e.g., spreadsheet format) to enable validation, balloting, and mapping reference documentation, while providing computable mappings for mapping engines to ingest unambiguously across any mapping engine.  Until such time the project utilizes Google Spreadsheets that are indexed here (https://docs.google.com/spreadsheets/d/1PaFYPSSq4oplTvw_4OgOn6h2Bs_CMvCAU9CqC4tPBgk/edit#gid=1419236962) to document the mappings that are then pulled into the IG for the CI Build and publication.
+  * Create a documentation and publication infrastructure that enable easy editing of proposed mappings, human readable review formats (e.g., spreadsheet format) to enable validation, balloting, and mapping reference documentation, while providing computable mappings for mapping engines to ingest unambiguously across any mapping engine.  Until such time the project utilizes Google Spreadsheets that are indexed [here](https://docs.google.com/spreadsheets/d/1PaFYPSSq4oplTvw_4OgOn6h2Bs_CMvCAU9CqC4tPBgk/edit#gid=1419236962) to document the mappings that are then pulled into the IG for the CI Build and publication.
   * Upon publication of the first version, work will be initiated to enable FHIR resources and data types to directly reference available FHIR mappings rather than the summary mappings currently available. 
 
 
@@ -49,3 +49,4 @@ The intent is to ultimately achieve normative status of the mappings.
 
 ### Additional Mappings
 The mappings will be expanded over time and messages, segments, fields, data types, or code sets you use may not be included.  When you run into a situation where you have non-z-data in your messages for which no mappings are available yet, please submit a JIRA here to help complete the mappings.
+b
