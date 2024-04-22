@@ -48,5 +48,4 @@ The scope of the project is:
 The intent is to ultimately achieve normative status of the mappings.
 
 ### Additional Mappings
-The mappings will be expanded over time and messages, segments, fields, data types, or code sets you use may not be included.  When you run into a situation where you have non-z-data in your messages for which no mappings are available yet, please submit a JIRA here to help complete the mappings.
-b
+The mappings will be expanded over time thus messages, segments, fields, data types, or code sets you use may not yet be included.  Please submit a JIRA for any missing mappings that you would like to see in the next version.  Note that any z-data (messages, trigger events, segments, data types) you may have will not be considered for inclusion.  Please aim to identify the proper equivalent in a later version and base your mappings on that.  If there is not an equivalen you always may enter a JIRA to add such data to the base standard.
