@@ -66,7 +66,7 @@ included in the PractitionerRole resource.
 The FHIR standard includes extensive content related to [workflow management](http://hl7.org/implement/standards/fhir/workflow-module.html)
 and [task management](http://hl7.org/implement/standards/fhir/task.html). While many v2 message types don't
 infer tasks (eg, they report on a previously completed event), some message types (e.g., order messages) may imply the need for an
-external system to complete a task (e.g., fullfill the order being requested). This implementation does include some mappings to the
+external system to complete a task (e.g., fulfill the order being requested). This implementation does include some mappings to the
 Task resource but it is up to implementers to determine if it is appropriate to create Task resources during the transformation
 process based on the business requirements and workflows associated with the integration. For example, an order message may be 
 directed to a system with the intent of notifying the system of the existence of the order without any expectation that the receiving 
@@ -218,7 +218,7 @@ need to prioritize the mapping of certain codes or implement processes to ensure
 * To avoid potential data loss, system functionality and/or error handling processes must be developed to handle cases where a value in an instance of a v2 message 
 cannot be mapped at the time of transformation. Potential (non-mutually exclusive) options include:
   * Log an error in the transformation tool (may be a warning (non-fatal) or an error (fatal))
-  * If the FHIR element uses CodeableConcept, a text version of the code (eg. CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve 
+  * If the FHIR element uses CodeableConcept, a text version of the code (e.g., CWE.2 or CWE.9) may be conveyed in CodeableConcept.text (note this will involve 
 the loss of the code information)
   * If an appropriate uri is known for the code system conveyed in the CWE data type (eg CWE.3 or CWE.6), the code may be carried over to CodeableConcept.coding.code
 and .system populated (note that depending on the capabilities of the FHIR recipient, this code may or may not be useful to the receiving system)
