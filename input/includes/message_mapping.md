@@ -28,5 +28,5 @@
       * The URL to the Segment Map that is to be used for the segment in this message structure in this location.
       * There may be multiple flavors of the segment maps to support different mappings.  The flavor is appended to the end of the segment name using [] brackets, e.g., MSH[Provenance - Originator].
    * References
-      *  An assignment that indicates for the FHIR resource being mapped to the attribute that needs to reference a particular other resource.  For example, a PV1 segement being mapped to an Encounter resource must reference the Patient resource that the PID earlier in the message was mapped to.
+      *  An assignment that indicates for the FHIR resource being mapped to the attribute that needs to reference a particular other resource.  For example, a PV1 segment being mapped to an Encounter resource must reference the Patient resource that the PID earlier in the message was mapped to.
 
