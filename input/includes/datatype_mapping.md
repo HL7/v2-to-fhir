@@ -21,7 +21,7 @@
    * FHIR Attribute
       * The first column reflects an existing FHIR attribute in the target FHIR version.
       * When there is not a single attribute to point to, rather a v2 field needs to be mapped to multiple FHIR attribute, e.g., ORC-27 Quantity/Timing where the TQ data type components need to be mapped to multiple ServiceRequest attributes, then the label "$this" is used.  Further mapping guidance is then provided in the Data Type mapping column.
-      * When a multi-component data type maps to a primitive data type, e.g., CWE to string, then $value will indicate that it is acutally mapped to the single compomnet of the primitive data type as leaving it blank would indicate it is not being mapped. 
+      * When a multi-component data type maps to a primitive data type, e.g., CWE to string, then $value will indicate that it is acutally mapped to the single component of the primitive data type as leaving it blank would indicate it is not being mapped. 
       * The second column reflects a proposed extension.  It will be expressed with extension-[name] (when suggested as a full extension) or extension??-[name] (when it is open whether to include it in core and pre-adopt, or a full extension).  Once approved, the full extension paths will be put in the first column.
       * This approach will enable tooling to already process existing FHIR attributes and not have to create special handling for elements still being proposed.
    * Data Type
@@ -35,7 +35,7 @@
    * Vocabulary Mapping
       * The URL to the Vocabulary Map that is to be used for the coded element for this attribute.
       * If the applicable HL7 v2 table is empty, e.g., user defined tables without examples, this cell will be blank.
-      * This is used where the HL7 v2 data type is either CWE, CNE, CF, CE, ID, or IS while the HL7 FHIR data type is code, coding, Codeable Concept, of boolean.
+      * This is used where the HL7 v2 data type is either CWE, CNE, CF, CE, ID, or IS while the HL7 FHIR data type is code, Coding, Codeable Concept, of boolean.
    * Assignment
       * The value that is to be assigned to the FHIR Attribute referenced. 
          * If it is to be set to a particular string, it is uses "string". 
