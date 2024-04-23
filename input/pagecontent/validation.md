@@ -1,10 +1,10 @@
 Validation of mappings is an important step in the process to ensure the v2-FHIR mapper deployed is fit to purpose.  This means not only that the mappings are reflecting the agreed to mappings in this guide, but also that it considers local variations in use of HL7 v2 that may not be fully conformant to the standard, as well as local extensions using z-segments.  For that reason, and the complexities and efforts required, HL7 is not provider a transform validator, although it will provide a set of HL7 v2 test messages with corresponding HL7 FHIR Bundles that reflect the defined mappings.
 
-This section is informative and describes key characteristics of a transform validator that is based on the basic premies that the HL7 v2 message being validated is a correct, HL7 v2 conformant message.  Any variations in conformance need to be addressed, which may include updates to the mappings to accommodate any remaining variances.
+This section is informative and describes key characteristics of a transform validator that is based on the basic premise that the HL7 v2 message being validated is a correct, HL7 v2 conformant message.  Any variations in conformance need to be addressed, which may include updates to the mappings to accommodate any remaining variances.
 
 To <b>validate</b> a transform means: to check that it is correct, and to note any discrepancies between its inputs and its outputs. 
 ‘correct’ means: ‘the output of the transform is consistent with a set of V2 to FHIR mappings’. These can either be the ‘canonical’
-mapping tables produced by the V2-to-FHIR mapping project, or some local variants of those tables (e.g. mappings from UK V2 to UK
+mapping tables produced by the V2-to-FHIR mapping project, or some local variants of those tables (e.g., mappings from UK V2 to UK
 FHIR profiles). Validation is a <b>semantic</b> check of the output of a transform against the input of that transform – i.e., it
 checks that each data value in the FHIR output is derived correctly from the V2 input (or vice versa, for a FHIR to V2 transform).
 
@@ -43,7 +43,7 @@ required, and the validator will do this.
 ![Validation_3](Validation_3.png)
 
 ### Current Status and Intentions
-A prototype of a validator, developed by Robert Worden, was used during a connectathon and subsequent validations of the mapping tables to identify a series of issues during the definitional phase, although it has not been used for all mappings to date. Its inputs are:
+A prototype of a validator, developed by Robert Worden, was used during a Connectathon and subsequent validations of the mapping tables to identify a series of issues during the definitional phase, although it has not been used for all mappings to date. Its inputs are:
 
 * A set of V2-FHIR mapping tables – typically with one message level mapping table, with segment-level mapping tables for all the
 segments in the message, data type mapping tables, and code value mapping tables
@@ -78,12 +78,12 @@ are required – e.g. what fields in the FHIR outputs need to be checked; or to 
 the transform output FHIR against profiles.
 
 ### Outlook
-A transform validator can be an important deliverable of the V2-FHIR mapping project, as well as implemnetations, enabling
+A transform validator can be an important deliverable of the V2-FHIR mapping project, as well as implementations, enabling
 users of HL7 V2 and FHIR to check that V2 messages and FHIR resources are correctly related to one another.  It will be of interest to
 healthcare providers, and to national and regional healthcare authorities, to help them ensure the data quality of their applications.
 
 Any regional healthcare authority may wish to use the mapping tables developed by the V2-to-FHIR mapping project, to develop local
-variant mapping tables which reflect the ways in which V2 and FHIR are used  in their region (local profiles and usages), and then to
+variant mapping tables which reflect the ways in which V2 and FHIR are used in their region (local profiles and usages), and then to
 offer a local validation service using those mapping tables. Suppliers of transform services may wish to use the validator to test and
 demonstrate the quality of their offerings.
 
@@ -98,4 +98,4 @@ providing a valuable service to healthcare providers worldwide.
 Providing a strong cross-check between HL7 V2 and FHIR – where they overlap – will go a long way to make them a coherent and unified
 offering, helping to unify HL7’s product set. Over time, similar cross-checks could be provided for CDA and for OpenEHR.
 
-As stated, currently HL7 does not provide such a validator as part of the IG and has no plans to develop and support one, but remains interested to learn more from others who may be pursuing this opportunity.
+As stated, currently HL7 does not provide such a validator as part of the IG and has no plans to develop and support one but remains interested to learn more from others who may be pursuing this opportunity.
