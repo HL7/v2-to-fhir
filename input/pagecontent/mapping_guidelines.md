@@ -1,6 +1,6 @@
 The mappings for this round of review are documented and published using a spreadsheet style format.  This format allows for easy, side-by-side editing and review of from=to mappings with supporting information.  At the same time, the content must be computable enabling a mapping engine to ingest the mappings to populate their base mappings for subsequent refinement.
 
-To this end, the infrastructure is based on a number of FHIR ConceptMap profiles to capture the relevant data for message structure, segment, data type, and vocabulary mappings.  Until such time that tools are available to directly edit the ConceptMaps, Google Spreadsheets are used to capture the mappings and populate the ConceptMaps in gitHub at regular intervals.  Regardless of the tools used, as the displayed format will be spreadsheet style, we refer to the mappings as mapping spreadsheets.
+To this end, the infrastructure is based on a number of FHIR ConceptMap profiles to capture the relevant data for message structure, segment, data type, and vocabulary mappings.  Until such time that tools are available to directly edit the ConceptMaps, Google Spreadsheets are used to capture the mappings and populate the ConceptMaps in GitHub at regular intervals.  Regardless of the tools used, as the displayed format will be spreadsheet style, we refer to the mappings as mapping spreadsheets.
 
 The following provides a review for each of the types of spreadsheets the mapping and supporting information capture.
 
@@ -94,7 +94,7 @@ Examples:
   * If a mapping needs to use a specific number of instance the notation [n-m] is used.
      * Example: The XAD.1 Street Address component is mapped to Address.line one through three, which is represented as line[1-3] in the FHIR attribute column, that would then be followed by XAD.2 Other Designation referencing line[4]
   * While typically these notations are a suffix on the FHIR element it applies to, in Data Type mappings you may see these as seemingly a prefix.  This would effectively apply to the FHIR element (typically an attribute) where that FHIR data type is actually referenced.
-     * Example: [1].Contactpoint.value and [2].ContactPoint.value mapped to from the v2 XTN data type would reflect the first instance of the attribute repetition is actually used, e.g., Patient.telecom that can repeat and is mapped to from PID-13 and PID-14 which have the v2 XTN data type.
+     * Example: [1].ContactPoint.value and [2].ContactPoint.value mapped to from the v2 XTN data type would reflect the first instance of the attribute repetition is actually used, e.g., Patient.telecom that can repeat and is mapped to from PID-13 and PID-14 which have the v2 XTN data type.
 
 * Other than as described in the [n] Notation above, a repeat of a segment in the message should yield a new instance of the FHIR resource it maps to, and each instance of a field within a segment a new instance of an attribute.
   * There are situations where the HL7 v2 message may include field repeats that the corresponding FHIR attribute does not accommodate.  We have not yet consistently resolved with FHIR whether it should have the core standard extend its cardinality or use an extension.  In the absence of clear guidance the implementer should determine whether a local extension is appropriate to be utilized. 
