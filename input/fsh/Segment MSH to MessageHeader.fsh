@@ -10,7 +10,7 @@ Title: "Segment MSH to MessageHeader Map"
 * name = "SegmentMSHToMessageHeader"
 * status = #active
 * experimental = true
-* date = "2024-03-22"
+* date = "2024-04-24"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -35,8 +35,6 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[0].target.code = #source[1]
 * group.element[0].target.display = "source[1]"
 * group.element[0].target.comment = "1"
-* group.element[0].target.dependsOn[0].property = "references"
-* group.element[0].target.dependsOn[0].value = "string"
 * group.element[1].code = #MSH-3
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "cardinalityMin"
@@ -216,8 +214,8 @@ Title: "Segment MSH to MessageHeader Map"
 * group.element[14].extension[0].extension[1].valueInteger = 1
 * group.element[14].display = "HD"
 * group.element[14].target.equivalence = #equivalent
-* group.element[14].target.code = #source.endpoint
-* group.element[14].target.display = "source.endpoint"
+* group.element[14].target.code = #source
+* group.element[14].target.display = "source"
 * group.element[14].target.comment = "1"
 * group.element[14].target.dependsOn[0].property = "references"
 * group.element[14].target.dependsOn[0].value = "string"

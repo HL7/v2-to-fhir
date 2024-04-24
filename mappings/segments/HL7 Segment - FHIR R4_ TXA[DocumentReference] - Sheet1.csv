@@ -6,7 +6,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 3,TXA-3,Document Content Presentation,ID,0,1,,,,content.attachment.contentType,,code,1,1,ID[code],,,,
 4,TXA,Activity Date/Time,DTM,0,1,,,,,,,,,,,,,
 5,TXA,Primary Activity Provider Code/Name,XCN,0,-1,,,,,,,,,,,,,
-6,TXA,Origination Date/Time,DTM,0,1,,,,,,,,,,,,,
+6,TXA,Origination Date/Time,DTM,0,1,,,,date,,instant,0,1,,,,,
 7,TXA,Transcription Date/Time,DTM,0,1,,,,,,,,,,,,,
 8,TXA,Edit Date/Time,DTM,0,-1,,,,,,,,,,,,,
 9,TXA,Originator Code/Name,XCN,0,-1,,,,author(Practitioner),,Reference,0,-1,XCN[Practitioner],,,,

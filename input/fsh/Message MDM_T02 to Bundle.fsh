@@ -10,7 +10,7 @@ Title: "Message MDM_T02 to Bundle Map"
 * name = "MessageMDM_T02ToBundle"
 * status = #active
 * experimental = true
-* date = "2024-03-22"
+* date = "2024-04-24"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -266,31 +266,45 @@ Provenance[1].entity.role="source"\
 * group.element[16].target.dependsOn[0].value = "TXA[DocumentReference]"
 * group.element[16].target.dependsOn[1].property = "references"
 * group.element[16].target.dependsOn[1].value = "DocumentReference[1].context.related.reference=ServiceRequest[1].id"
-* group.element[17].code = #MDM_T02.OBSERVATION.OBX
+* group.element[17].code = #MDM_T02.TXA
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "cardinalityMin"
 * group.element[17].extension[0].extension[0].valueInteger = 1
 * group.element[17].extension[0].extension[1].url = "cardinalityMax"
 * group.element[17].extension[0].extension[1].valueInteger = 1
-* group.element[17].display = "Observation/Result (one or more required)"
+* group.element[17].display = "Document Notification"
 * group.element[17].target.equivalence = #equivalent
-* group.element[17].target.code = #DocumentReference[1]
-* group.element[17].target.display = "DocumentReference[1]"
+* group.element[17].target.code = #Provenance[5]
+* group.element[17].target.display = "Provenance[5]"
 * group.element[17].target.dependsOn[0].property = "segment-map"
-* group.element[17].target.dependsOn[0].value = "OBX[DocumentReference]"
+* group.element[17].target.dependsOn[0].value = "TXA[Provenance]"
 * group.element[17].target.dependsOn[1].property = "references"
-* group.element[17].target.dependsOn[1].value = "DocumentReference[1].context.related.reference=ServiceRequest[1].id"
-* group.element[18].code = #MDM_T02.OBSERVATION.NTE
+* group.element[17].target.dependsOn[1].value = "Provenance[5].target.reference=DocumentReference.id;"
+* group.element[18].code = #MDM_T02.OBSERVATION.OBX
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "cardinalityMin"
-* group.element[18].extension[0].extension[0].valueInteger = 0
+* group.element[18].extension[0].extension[0].valueInteger = 1
 * group.element[18].extension[0].extension[1].url = "cardinalityMax"
-* group.element[18].extension[0].extension[1].valueInteger = -1
-* group.element[18].display = "Notes and comments about the observation (OBX)"
+* group.element[18].extension[0].extension[1].valueInteger = 1
+* group.element[18].display = "Observation/Result (one or more required)"
 * group.element[18].target.equivalence = #equivalent
 * group.element[18].target.code = #DocumentReference[1]
 * group.element[18].target.display = "DocumentReference[1]"
 * group.element[18].target.dependsOn[0].property = "segment-map"
-* group.element[18].target.dependsOn[0].value = "NTE[DocumentReference]"
+* group.element[18].target.dependsOn[0].value = "OBX[DocumentReference]"
 * group.element[18].target.dependsOn[1].property = "references"
 * group.element[18].target.dependsOn[1].value = "DocumentReference[1].context.related.reference=ServiceRequest[1].id"
+* group.element[19].code = #MDM_T02.OBSERVATION.NTE
+* group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[19].extension[0].extension[0].url = "cardinalityMin"
+* group.element[19].extension[0].extension[0].valueInteger = 0
+* group.element[19].extension[0].extension[1].url = "cardinalityMax"
+* group.element[19].extension[0].extension[1].valueInteger = -1
+* group.element[19].display = "Notes and comments about the observation (OBX)"
+* group.element[19].target.equivalence = #equivalent
+* group.element[19].target.code = #DocumentReference[1]
+* group.element[19].target.display = "DocumentReference[1]"
+* group.element[19].target.dependsOn[0].property = "segment-map"
+* group.element[19].target.dependsOn[0].value = "NTE[DocumentReference]"
+* group.element[19].target.dependsOn[1].property = "references"
+* group.element[19].target.dependsOn[1].value = "DocumentReference[1].context.related.reference=ServiceRequest[1].id"

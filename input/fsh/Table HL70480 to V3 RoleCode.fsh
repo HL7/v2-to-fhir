@@ -10,7 +10,7 @@ Title: "Table HL70480 to V3 RoleCode Map"
 * name = "TableHL70480ToV3RoleCode"
 * status = #active
 * experimental = true
-* date = "2024-03-22"
+* date = "2024-04-24"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

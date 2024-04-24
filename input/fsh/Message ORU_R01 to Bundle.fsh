@@ -10,7 +10,7 @@ Title: "Message ORU_R01 to Bundle Map"
 * name = "MessageORU_R01ToBundle"
 * status = #active
 * experimental = true
-* date = "2024-03-22"
+* date = "2024-04-24"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -266,7 +266,7 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[14].target.equivalence = #equivalent
 * group.element[14].target.code = #Observation[1]
 * group.element[14].target.display = "Observation[1]"
-* group.element[14].target.comment = "Note that when OBX-5 repeats, the standard mapping is to use Observation.component rather than creating separate Observation instances.  However, we are aware that some profiles and implementation guides do separate the OBX into multiple observations depending on the OBX-2 value.  This is an example of a non-standard interpretation as the OBX should have been separated into multiple OBX segments to start.  Please consider the local profiles and implementation guides on how to manage these variants."
+* group.element[14].target.comment = "Note that when OBX-5 repeats, the standard mapping is to use Observation.component (see OBX[Observation-Component] map) rather than creating separate Observation instances.  However, we are aware that some profiles and implementation guides do separate the OBX into multiple observations depending on the OBX-2 value.  This is an example of a non-standard interpretation as the OBX should have been separated into multiple OBX segments to start.  Please consider the local profiles and implementation guides on how to manage these variants."
 * group.element[14].target.dependsOn[0].property = "segment-map"
 * group.element[14].target.dependsOn[0].value = "OBX[Observation-Component]"
 * group.element[14].target.dependsOn[1].property = "references"
