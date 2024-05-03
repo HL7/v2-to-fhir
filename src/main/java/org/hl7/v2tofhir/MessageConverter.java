@@ -63,7 +63,7 @@ public class MessageConverter extends ConverterImpl<MessageInput> implements Con
                 w.printf("<th title='%s'>%s</th>", escapeHtmlAttr(titles[i++]), head);
             }
         }
-        w.println("</thead>");
+        w.println("</tr></thead>");
         w.println("<tbody>");
 
         int count = 0;
