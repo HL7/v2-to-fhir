@@ -3,7 +3,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 1,ADT_A09.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
 1,ADT_A09.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource.
 1,ADT_A09.MSH,MSH,Message Header,1,1,,,"If there is a source in MSH-4, or known based on the configuration.",Provenance[1],MSH[Provenance-Source],Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id,,"If the FHIR transformation does not yield a FHIR message, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Proviance resource instance to the relevant FHIR resources generated."
-1,ADT_A09.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,"If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
+1,ADT_A09.MSH,MSH,Message Header,1,1,,,,Provenance[2],MSH[Provenance-Transformation],Provenance[2].target.reference=Bundle.id,,"If the FHIR transformation does not yield a FHIR Bundle, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
 2,ADT_A09.ARV,[{ ARV }],Access Restrictions,0,-1,,,,,,,,
 3,ADT_A09.SFT,[{ SFT }],Software Segment,0,-1,,,If the software does represent not the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
 Provenance[1].entity.role=""derivation""",,
