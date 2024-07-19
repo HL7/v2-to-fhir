@@ -76,7 +76,7 @@ Title: "Message ADT_A02 to Bundle Map"
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #Provenance[2]
 * group.element[3].target.display = "Provenance[2]"
-* group.element[3].target.comment = "If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
+* group.element[3].target.comment = "If the FHIR transformation does not yield a FHIR Bundle, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
 * group.element[3].target.dependsOn[0].property = "segment-map"
 * group.element[3].target.dependsOn[0].value = "MSH[Provenance-Transformation]"
 * group.element[3].target.dependsOn[1].property = "references"
