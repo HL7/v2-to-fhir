@@ -24,13 +24,16 @@ HL7 Data Type - FHIR R4: CWE[string],Ready for Ballot,,,https://docs.google.com/
 HL7 Data Type - FHIR R4: CWE[Timing.duration],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1peXd1bfzbP54t4Ns267PTNjDR1wX1HqF28C6o5P_-LY/edit#gid=0
 HL7 Data Type - FHIR R4: CWE[uri],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/17uu9lTeyxn8IG_OXCQK6sZZmVXLgncFZUkfB7OUZ2_M/edit#gid=0
 HL7 Data Type - FHIR R4: CX[Identifier],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1wZsWZMw0kBpu-oWB1U3iljL0m_7PLGM9tFfSqBUoRU4/edit#gid=0
+HL7 Data Type - FHIR R4: CX[RelatedPerson-Mother],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1_Wxt3nDxMfR946FnjQSNPgPSNgxh7mHPeHooHGX2jeU/edit#gid=0
 HL7 Data Type - FHIR R4: CX[string],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1IWUHkEnYB8mCCwzvO9cyt0OGsvIBUG0IAygcMgvInPk/edit#gid=0
-HL7 Data Type - FHIR R4: DLD[Location],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1lUw9g0EWTpvOZ-4GBPpvOh-djKs_38GZTDxhMz3WgwE/edit#gid=0
+HL7 Data Type - FHIR R4: DLD[Location-Discharge],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1lUw9g0EWTpvOZ-4GBPpvOh-djKs_38GZTDxhMz3WgwE/edit#gid=0
 HL7 Data Type - FHIR R4: DLN[Identifier],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1bcpPkFAMCKkvyN4w-XFAKYTaMMz-rmRWqZAkaTzMrYY/edit#gid=0
 HL7 Data Type - FHIR R4: DR[DateTime],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1tE6xgT7ns7kFg0aBWUgKociuXfuKrdnm01Gy6nHWcOU/edit#gid=0
 HL7 Data Type - FHIR R4: DR[Period],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1Y-KQhTaOTH5XsQKiQkYsF_DVBA0BRTNH3lDXyUDJlyY/edit#gid=0
+HL7 Data Type - FHIR R4: DTM[Annotation-Time],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1F5jpv1JbXEGHMvGjxy3ji_zOQBJ69x_8sBoaLDIgF1g/edit#gid=0
 HL7 Data Type - FHIR R4: DTM[DateTime],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1_9GXAgL9iXUNRxQ-jQoTMuyqNPNb7ZzIanNszwqHR3M/edit#gid=0
 HL7 Data Type - FHIR R4: ED[Attachment],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1SGCbdWUV21fClCmnt3zNqOMzeV5Bt2FcBIoO7eP51YM/edit#gid=0
+HL7 Data Type - FHIR R4: ED[DocumentReference],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1LnY0-HZxstOum6gIlV73mLi2z_7p06HkiEwI8myaN6w/edit#gid=0
 HL7 Data Type - FHIR R4: EI[Coding],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1VUiS1wxVE8cPLeWbJs8HP3rjuwlc9Dg4fSBLsHMKWDg/edit#gid=0
 HL7 Data Type - FHIR R4: EI[Condition],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1JZT3RMYHWaeaCiurh4LAkxGpGIp4U8RbbQBQ1yt5KK4/edit#gid=0
 HL7 Data Type - FHIR R4: EI[Device-udiCarrierDI],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1uMZ5C8gEzU9qMKXYUUdesF9HFubW6s8BFYzD-DOgRro/edit#gid=0
@@ -43,15 +46,16 @@ HL7 Data Type - FHIR R4: EIP[Identifier-FillerAssignedIdentifier],Ready for Ball
 HL7 Data Type - FHIR R4: EIP[Identifier-PlacerAssignedIdentifier],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1Ez3350XkVw7cS5ufWsFVpVXV884WOtutsWFfEAZUUvo/edit#gid=0
 HL7 Data Type - FHIR R4: ERL,Under Construction,Kathleen,,https://docs.google.com/spreadsheets/d/1zgohCF9AdUx1K3l2a2OrJhg9FFKs9MIfJ0iOyOPDtUU/edit#gid=0
 HL7 Data Type - FHIR R4: FN[HumanName],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/16_unbJhBhLcdgy0KhkwtNfZiK2RzGOVghUlm6VKjWmc/edit#gid=0
+HL7 Data Type - FHIR R4: FT[Annotation-Comment],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1fksIG8cf2DGSE7uHc_-UnP1VCfPGmObeREWqaQTNIRg/edit#gid=0
 HL7 Data Type - FHIR R4: HD[Device],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/18o2QLSHQPkRr1S0vax7G4tuuXQnhE9wJl0n1kjupS7U/edit#gid=0
 HL7 Data Type - FHIR R4: HD[extension-AssigningAuthority],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1thMC8Et_hA-VC-DyerLrpNDcNdzPOIql9Z7SP7u9h_w/edit#gid=0
 HL7 Data Type - FHIR R4: HD[Identifier],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1Ao9N1tFgkzTMGA1y0stCr0sgDk6vVtzT6TnpdByshC4/edit#gid=0
 HL7 Data Type - FHIR R4: HD[Location],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/126xjG_YCcKYzO7f10dtlBOBUMNZZXkteoE2zNu-_J40/edit#gid=0
-HL7 Data Type - FHIR R4: HD[MessageHeader.destination.endpoint],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1T99UdnCSjoGpbamAvfVEZMDN5wKRtc0gUlWZ0ufRd6c/edit#gid=0
 HL7 Data Type - FHIR R4: HD[MessageHeader.destination.name],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1MZ2k1XgrAcvf4KCxSx_2bKwrdtOZHQDvKgCmXwrDUqY/edit#gid=0
 HL7 Data Type - FHIR R4: HD[MessageHeader.destination.target],Under Construction,,,
-HL7 Data Type - FHIR R4: HD[MessageHeader.source.endpoint],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/18o2QLSHQPkRr1S0vax7G4tuuXQnhE9wJl0n1kjupS7U/edit#gid=0
+HL7 Data Type - FHIR R4: HD[MessageHeader.destination],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1T99UdnCSjoGpbamAvfVEZMDN5wKRtc0gUlWZ0ufRd6c/edit#gid=0
 HL7 Data Type - FHIR R4: HD[MessageHeader.source.name],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1IOOZxQ8rqWsm1zlWNJPLy91rAdFiTTbLJcFLfa_hN18/edit#gid=0
+HL7 Data Type - FHIR R4: HD[MessageHeader.source],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/18o2QLSHQPkRr1S0vax7G4tuuXQnhE9wJl0n1kjupS7U/edit#gid=0
 HL7 Data Type - FHIR R4: HD[Organization],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1zLANrSl_qRMGtJED5BnklU9EipB4xeU4rgmtr03hbIA/edit#gid=0
 HL7 Data Type - FHIR R4: HD[uri],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1geX7fy4NBWzKR3gxwYCuG8DtlzY-W8Yp6fu9r2Qnpxo/edit#gid=0
 HL7 Data Type - FHIR R4: ID[Boolean],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/12tPvyla2Ion3sHXGxbbX3OdLpKI8BYpHfsuUKIuqHvk/edit#gid=0
@@ -73,12 +77,14 @@ HL7 Data Type - FHIR R4: NM[Quantity-LengthOfStay],Ready for Ballot,,,https://do
 HL7 Data Type - FHIR R4: NM[Quantity],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1g4uO4eRFeRsOhiR5G_PIqMs8rTMIxjF1qk9izKcunnI/edit#gid=0
 HL7 Data Type - FHIR R4: NM[SimpleQuantity],Under Construction,,,
 HL7 Data Type - FHIR R4: NR[Range],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1o7Z8P8sOk9fjHiUYFfv1hVNhuKVdm34MmivLiyqdXUY/edit#gid=0
-HL7 Data Type - FHIR R4: PL[Location],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/17b4wqJOzGieNBSdHYZt3ymKucsRDd_h8leaiz_umG7E/edit#gid=0
+HL7 Data Type - FHIR R4: OG[Extension-Subidentifier],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1b5obkzO4CkZ8IRVI_b2kaKrPbHAgdNMvjc-ez3IxJig/edit#gid=0
+HL7 Data Type - FHIR R4: PL[Encounter.location],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/17b4wqJOzGieNBSdHYZt3ymKucsRDd_h8leaiz_umG7E/edit#gid=0
 HL7 Data Type - FHIR R4: PLN[Identifier],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1ac4z8T-3r5guzjHNW60VjDBfBFnVaHV2e2bXhlJSkjg/edit#gid=0
 HL7 Data Type - FHIR R4: PLN[Location],Under Construction,,,
 HL7 Data Type - FHIR R4: PT[Meta],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1WAGzkLwwhJJGdsry9llddsgZpwjs3D1xoeir_guRVKI/edit#gid=0
 HL7 Data Type - FHIR R4: RI[Timing],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1CzyaN_QGJDg6RMgwDyhMgwIsEUOek0IKJmt7e_aPCDE/edit#gid=0
 HL7 Data Type - FHIR R4: RP[Attachment],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/14JpjWqo_RG1Q_tYJYpV0__SVyflLsveSVYnlryTaoB0/edit#gid=0
+HL7 Data Type - FHIR R4: RP[DocumentReference],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1kJzKw6MDLJ-ZN-nou885pyd3Fb1fP3Jl45Av6ywfNqM/edit#gid=0
 HL7 Data Type - FHIR R4: RPT[Timing],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1C6fGBJDwx5EkYnOwYNvwuDmKsb55pCVWW3Odn9QysIQ/edit#gid=0
 HL7 Data Type - FHIR R4: SAD[Address],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1VO508bSJpIwkdvRNFpblmxsVxEfO1q2wozOKA_7pCaE/edit#gid=0
 HL7 Data Type - FHIR R4: SN[Quantity],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1azu9FNtDrbtyTB9dj1doDW315ngDrPlqrLARvvVHNb8/edit#gid=0
@@ -93,6 +99,7 @@ HL7 Data Type - FHIR R4: TQ[Task-ExecutionPeriod],Ready for Ballot,,,https://doc
 HL7 Data Type - FHIR R4: TQ[Task-Priority],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1B_WY_ONY5EEt1t9X-1VZtWokiOOYTL2sgnXy7k8i9Js/edit#gid=0
 HL7 Data Type - FHIR R4: TS[DateTime],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1s6RZieg7HZDSxcXYnaXaDlaCEKzt-ph6mm0eFdyOUwY/edit#gid=0
 HL7 Data Type - FHIR R4: XAD[Address],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1hSTEur557TIKPEKZRoprVw-uNpw12JZtri-iQsc4uQ0/edit#gid=0
+HL7 Data Type - FHIR R4: XCN[Annotation-Author],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1PdQh4b6-1m2cQM1qNKGWxwaGBWpULUPp-8zq7ZMvwV8/edit#gid=0
 HL7 Data Type - FHIR R4: XCN[Patient],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1zgeUgPr_mtwoMW54zFcRc6H76Pc3BXjMQMCCqL8PUcQ/edit#gid=0
 HL7 Data Type - FHIR R4: XCN[Practitioner],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1hp-FZG0jKhKmxbVddilKKCc24RLAvum6g14q8o-3frk/edit#gid=0
 HL7 Data Type - FHIR R4: XCN[PractitionerRole],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1IXMRcpSKosDeviTGPb-v0FJ1OAYgBzRft5H-tGcFUgk/edit#gid=0
