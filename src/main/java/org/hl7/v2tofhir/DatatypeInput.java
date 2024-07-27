@@ -53,7 +53,7 @@ public class DatatypeInput implements Convertible, Cloneable {
     String fhirVocab;
     @CsvBindByPosition(position=16)
     String fhirValue;
-    @CsvBindByPosition(position=17)
+    @CsvBindByPosition(position=18)
     String comments;
     @Override
     public Row convert() {

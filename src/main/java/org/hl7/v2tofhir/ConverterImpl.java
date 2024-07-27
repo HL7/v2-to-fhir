@@ -1,6 +1,6 @@
 package org.hl7.v2tofhir;
 /*
- * Copyright 2020 Audiacious Inquiry, Inc.
+ * Copyright 2020 Audacious Inquiry, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy
@@ -100,10 +100,10 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
     private String source;
     private String sourceName;
-    private static String qualifier;
+    private String qualifier;
     private String target;
     private String targetName;
-    private String parts[] = null;
+    private String[] parts = null;
 
     private String filename = null;
     private File theSource;
@@ -419,7 +419,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         String source, String target
     ) {
         String filename = fn;
-        String titleStr = type + " " + sourceName + qualifier + " to " + targetName + " Map";
+        String titleStr = type + " " + sourceName + staticQualifier + " to " + targetName + " Map";
         if (source == null) {
             titleStr = titleStr + " - Unsupported";
             filename = "Unsupported " + filename;
@@ -528,6 +528,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     }
 
     private static Pattern LINK_PATTERN = Pattern.compile("http:|https:|ftp:|mailto:");
+	private static String staticQualifier;
 
     protected String escapeHtmlString(String html) {
         if (html == null) {
@@ -888,8 +889,8 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     protected static String explainProblem(Triple<String, Integer, String> triple, String output) {
         String link = triple.getLeft();
         String type = StringUtils.substringBefore(link, "[");
-        String qual = StringUtils.substringBefore(StringUtils.substringAfter(link, "["), "]");
-        String qualParts[] = qual.split("[^A-Za-z0-9.]", 2);
+        String qual = StringUtils.substringBetween(link, "[", "]");
+        String[] qualParts = qual == null ? new String[0] : qual.split("[^A-Za-z0-9.]", 2);
         String typeFound = null;
         if (StringUtils.isAllEmpty(type)) {
             return String.format("%s is missing the V2 artifact.", link);
@@ -966,9 +967,9 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             break;
         }
 
-        qualifier = "";
+        staticQualifier = "";
         if (qualParts.length > 1) {
-            qualifier = "[" + qualParts[1] + "]";
+        	staticQualifier = "[" + qualParts[1] + "]";
         }
         createMissingFish(output, fshFilename, typeFound, triple.getRight() + ":" + triple.getMiddle(), type, qualParts[0]);
         return String.format("No mapping for %s. Missing file: %s", triple.getLeft(), filename);

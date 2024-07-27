@@ -50,7 +50,7 @@ public class Convert {
     public static Map<String, Set<Converter>> generated = new HashMap<>();
     public static Map<String, String> outputFileMap = new HashMap<>();
 
-    public static void main(String args[]) {
+    public static void main(String ... args) {
         String output = ".";
         String download = null;
         boolean success = true;
@@ -293,6 +293,7 @@ public class Convert {
 
     private static void addTitlesToIndex(Map<String, Map<String, Triple<String, String, String>>> m, Chapter chapters,
         Converter c, Triple<String, String, String> dtData, Triple<String, String, String> chapData) {
+    	/** The problem with hyphenated terms is somewhere in here */
         Chapter chap;
         Chapter subchap;
         chap = chapters.get(chapData.getLeft());

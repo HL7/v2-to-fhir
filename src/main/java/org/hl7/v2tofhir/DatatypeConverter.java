@@ -30,13 +30,13 @@ public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements C
     protected void writeIntro(List<DatatypeInput> beans, PrintWriter w) {
         w.println("<table class='grid'><thead>");
         w.print("<tr><th colspan='6'>HL7 v2</th><th colspan='3'>Condition (IF True, args)</th>");
-        w.println("<th colspan='7'>HL7 FHIR</th><th rowspan='2'>Comments</th></tr>");
+        w.println("<th colspan='8'>HL7 FHIR</th><th rowspan='2'>Comments</th></tr>");
         w.print("<tr>");
         String heads[] = {
             "Sort Order", "Identifier", "Name", "Data Type", "Cardinality - Min", "Cardinality - Max",
             "Computable ANTLR", "Computable FHIRPath", "Narrative",
             "FHIR Attribute", "Proposed Extension", "Data Type", "Cardinality - Min", "Cardinality - Max",
-            "Data Type Mapping", "Assignment", "Vocabulary"
+            "Data Type Mapping", "Vocabulary", "Assignment"
         };
         String titles[] = {
             "Rows are listed in sequence of how they appear in the v2 standard. "
