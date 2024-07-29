@@ -1,8 +1,8 @@
 // HL7 Concept Map_ Role - Sheet1.csv
 Instance: TableHL70443ToV3ParticipationType
 InstanceOf: ConceptMap
-Title: "Table HL70443 to V3 ParticipationType Map"
-* title = "Table HL70443 to V3 ParticipationType Map"
+Title: "Table HL70443null to V3 ParticipationType Map"
+* title = "Table HL70443null to V3 ParticipationType Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70443 to the FHIR V3 ParticipationType Value Set."
 * id = "table-hl70443-to-v3-participationtype"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70443-to-v3-participationtype"
@@ -10,7 +10,7 @@ Title: "Table HL70443 to V3 ParticipationType Map"
 * name = "TableHL70443ToV3ParticipationType"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

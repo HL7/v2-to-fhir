@@ -25,7 +25,7 @@ Provenance[1].entity.role=""source""",,
 7.4,MDM_T02.COMMON_ORDER.NTE,[{ NTE }],Notes and comments about the observation (OBR),0,-1,,,,ServiceRequest[1],NTE[ServiceRequest],,,
 7.5,/MDM_T02.COMMON_ORDER,}],--- COMMON_ORDER end,,,,,,,,,,
 8,MDM_T02.TXA,TXA,Document Notification,1,1,,,,DocumentReference[1],TXA[DocumentReference],DocumentReference[1].context.related.reference=ServiceRequest[1].id,,Note for detailed mapping to use 
-8,MDM_T02.TXA,TXA,Document Notification,1,1,,,,Provenance[5],TXA[Provenance],Provenance[5].target.reference=DocumentReference.id; ,,
+8,MDM_T02.TXA,TXA,Document Notification,1,1,,,,Provenance,TXA[Provenance],Provenance[1].target=DocumentReference[1].id,,
 9,MDM_T02.CON,[{CON}],Consent Segment,0,-1,,,,,,,,
 10,MDM_T02.OBSERVATION,{,--- OBSERVATION begin,1,-1,,,,,,,,
 10.1,MDM_T02.OBSERVATION.OBX,OBX,Observation/Result (one or more required),1,1,,,,DocumentReference[1],OBX[DocumentReference],DocumentReference[1].context.related.reference=ServiceRequest[1].id,,

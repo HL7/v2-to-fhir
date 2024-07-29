@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[PractitionerRole] - Sheet1.csv
 Instance: DatatypeCWEToPractitionerRole
 InstanceOf: ConceptMap
-Title: "Datatype CWE to PractitionerRole Map"
-* title = "Datatype CWE to PractitionerRole Map"
+Title: "Datatype CWEnull to PractitionerRole Map"
+* title = "Datatype CWEnull to PractitionerRole Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR PractitionerRole Resource."
 * id = "datatype-cwe-to-practitionerrole"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-practitionerrole"
@@ -10,7 +10,7 @@ Title: "Datatype CWE to PractitionerRole Map"
 * name = "DatatypeCWEToPractitionerRole"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -69,6 +69,7 @@ Title: "Datatype CWE to PractitionerRole Map"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[2].target.display = "code.coding[1].system"
+* group.element[2].target.comment = "CWE.3 needs to converted to proper uri for the coding system used, considering CWE.14"
 * group.element[3].code = #CWE.4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -114,6 +115,7 @@ Title: "Datatype CWE to PractitionerRole Map"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[5].target.display = "code.coding[2].system"
+* group.element[5].target.comment = "CWE.6 needs to converted to proper uri for the coding system used, considering CWE.17"
 * group.element[6].code = #CWE.9
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -171,3 +173,4 @@ Title: "Datatype CWE to PractitionerRole Map"
 * group.element[9].target.extension[0].extension[0].url = "type"
 * group.element[9].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[9].target.display = "code.coding[3].system"
+* group.element[9].target.comment = "CWE.12 needs to converted to proper uri for the coding system used, consdiering CWE.13"

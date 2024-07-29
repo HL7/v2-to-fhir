@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[Identifier] - Sheet1.csv
 Instance: DatatypeCWEToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype CWE to Identifier Map"
-* title = "Datatype CWE to Identifier Map"
+Title: "Datatype CWEnull to Identifier Map"
+* title = "Datatype CWEnull to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Identifier Data Type."
 * id = "datatype-cwe-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-identifier"
@@ -10,7 +10,7 @@ Title: "Datatype CWE to Identifier Map"
 * name = "DatatypeCWEToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -81,6 +81,7 @@ Title: "Datatype CWE to Identifier Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "[1].system"
+* group.element[2].target.comment = "Some mapping of the CWE.3 value to an actual uri will be necessary"
 * group.element[3].code = #CWE.4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -138,6 +139,7 @@ Title: "Datatype CWE to Identifier Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "[2].system"
+* group.element[5].target.comment = "Some mapping of the CWE.3 value to an actual uri will be necessary"
 * group.element[6].code = #CWE.10
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"

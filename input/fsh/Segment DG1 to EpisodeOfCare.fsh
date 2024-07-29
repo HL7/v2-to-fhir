@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ DG1[EpisodeOfCare] - Sheet1.csv
 Instance: SegmentDG1ToEpisodeOfCare
 InstanceOf: ConceptMap
-Title: "Segment DG1 to EpisodeOfCare Map"
-* title = "Segment DG1 to EpisodeOfCare Map"
+Title: "Segment DG1null to EpisodeOfCare Map"
+* title = "Segment DG1null to EpisodeOfCare Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment DG1 to the FHIR EpisodeOfCare Resource."
 * id = "segment-dg1-to-episodeofcare"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-dg1-to-episodeofcare"
@@ -10,7 +10,7 @@ Title: "Segment DG1 to EpisodeOfCare Map"
 * name = "SegmentDG1ToEpisodeOfCare"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

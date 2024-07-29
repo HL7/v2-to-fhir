@@ -12,11 +12,13 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [MSH](ConceptMap-segment-msh-to-bundle.html) - Message Header to FHIR [Bundle](http://hl7.org/fhir/R4/bundle.html)
 * [MSH](ConceptMap-segment-msh-to-encounter.html) - Message Header to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 * [MSH](ConceptMap-segment-msh-to-messageheader.html) - Message Header to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
-* [MSH](ConceptMap-segment-msh-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
-* [NTE](ConceptMap-segment-nte-to-appointment.html) - Notes and Comments to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
+* [MSH[Operator]](ConceptMap-segment-msh-operator-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
+* [MSH[Source]](ConceptMap-segment-msh-source-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
+* [MSH[Transformation]](ConceptMap-segment-msh-transformation-to-provenance.html) - Message Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 * [NTE](ConceptMap-segment-nte-to-documentreference.html) - Notes and Comments to FHIR [DocumentReference](http://hl7.org/fhir/R4/documentreference.html)
 * [NTE](ConceptMap-segment-nte-to-observation.html) - Notes and Comments to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [NTE](ConceptMap-segment-nte-to-servicerequest.html) - Notes and Comments to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
+* [NTE[Comment]](ConceptMap-segment-nte-comment-to-appointment.html) - Notes and Comments to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
 * [SFT](ConceptMap-segment-sft-to-device.html) - Software Segment to FHIR [Device](http://hl7.org/fhir/R4/device.html)
 * [SFT](ConceptMap-segment-sft-to-messageheader.html) - Software Segment to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
 
@@ -31,9 +33,10 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [PD1](ConceptMap-segment-pd1-to-patient.html) - Patient Additional Demographic to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [PID](ConceptMap-segment-pid-to-account.html) - Patient Identification to FHIR [Account](http://hl7.org/fhir/R4/account.html)
 * [PID](ConceptMap-segment-pid-to-appointment.html) - Patient Identification to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
-* [PID](ConceptMap-segment-pid-to-observation.html) - Patient Identification to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [PID](ConceptMap-segment-pid-to-patient.html) - Patient Identification to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
-* [PID](ConceptMap-segment-pid-to-provenance.html) - Patient Identification to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
+* [PID[EthnicGroup]](ConceptMap-segment-pid-ethnicgroup-to-observation.html) - Patient Identification to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
+* [PID[Patient]](ConceptMap-segment-pid-patient-to-provenance.html) - Patient Identification to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
+* [PID[Race]](ConceptMap-segment-pid-race-to-observation.html) - Patient Identification to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [PV1](ConceptMap-segment-pv1-to-encounter.html) - Patient Visit to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 * [PV1](ConceptMap-segment-pv1-to-patient.html) - Patient Visit to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [PV2](ConceptMap-segment-pv2-to-encounter.html) - Patient Visit - Additional Information to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
@@ -71,12 +74,14 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 
 * [OBX](ConceptMap-segment-obx-to-documentreference.html) - Observation/Result to FHIR [DocumentReference](http://hl7.org/fhir/R4/documentreference.html)
 * [OBX](ConceptMap-segment-obx-to-observation.html) - Observation/Result to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
+* [OBX[Component]](ConceptMap-segment-obx-component-to-observation.html) - Observation/Result to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [PRT](ConceptMap-segment-prt-to-careteam.html) - Participation Information to FHIR [CareTeam](http://hl7.org/fhir/R4/careteam.html)
 * [PRT](ConceptMap-segment-prt-to-device.html) - Participation Information to FHIR [Device](http://hl7.org/fhir/R4/device.html)
-* [PRT](ConceptMap-segment-prt-to-observation.html) - Participation Information to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
-* [PRT](ConceptMap-segment-prt-to-patient.html) - Participation Information to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [PRT](ConceptMap-segment-prt-to-practitionerrole.html) - Participation Information to FHIR [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html)
 * [PRT](ConceptMap-segment-prt-to-relatedperson.html) - Participation Information to FHIR [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)
+* [PRT[GeneralPractitioner-PractitionerRole]](ConceptMap-segment-prt-generalpractitioner-practitionerrole-to-patient.html) - Participation Information to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
+* [PRT[GeneralPractitioner-Practitioner]](ConceptMap-segment-prt-generalpractitioner-practitioner-to-patient.html) - Participation Information to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
+* [PRT[Location]](ConceptMap-segment-prt-location-to-observation.html) - Participation Information to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [SPM](ConceptMap-segment-spm-to-specimen.html) - Specimen to FHIR [Specimen](http://hl7.org/fhir/R4/specimen.html)
 
 ### Chapter  8  Master Files
@@ -97,8 +102,8 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 ### Chapter 15  Personnel Management
 
 * [ROL](ConceptMap-segment-rol-to-careteam.html) - Role to FHIR [CareTeam](http://hl7.org/fhir/R4/careteam.html)
-* [ROL](ConceptMap-segment-rol-to-encounter.html) - Role to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
-* [ROL](ConceptMap-segment-rol-to-patient.html) - Role to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [ROL](ConceptMap-segment-rol-to-relatedperson.html) - Role to FHIR [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)
+* [ROL[GeneralPractitioner]](ConceptMap-segment-rol-generalpractitioner-to-patient.html) - Role to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
+* [ROL[PractitionerRole]](ConceptMap-segment-rol-practitionerrole-to-encounter.html) - Role to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 <h2 style='--heading-prefix: ""' id='mapping'>Mapping</h2>
 {% include segment_mapping.md %}

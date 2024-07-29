@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PID[Observation-EthnicGroup] - Sheet1.csv
 Instance: SegmentPIDEthnicGroupToObservation
 InstanceOf: ConceptMap
-Title: "Segment PID[EthnicGroup] to Observation Map"
-* title = "Segment PID[EthnicGroup] to Observation Map"
+Title: "Segment PIDnull to Observation Map"
+* title = "Segment PIDnull to Observation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Observation Resource."
 * id = "segment-pid-ethnicgroup-to-observation"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pid-ethnicgroup-to-observation"
@@ -10,7 +10,7 @@ Title: "Segment PID[EthnicGroup] to Observation Map"
 * name = "SegmentPIDEthnicGroupToObservation"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -36,22 +36,28 @@ Title: "Segment PID[EthnicGroup] to Observation Map"
 * group.element[1].target.display = "status"
 * group.element[1].target.dependsOn[0].property = "value"
 * group.element[1].target.dependsOn[0].value = "\"final\""
-* group.element[2].code = #PID-22
-* group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
-* group.element[2].extension[0].extension[0].url = "type"
-* group.element[2].extension[0].extension[0].valueCode = #"CWE"
-* group.element[2].extension[0].extension[1].url = "cardinalityMin"
-* group.element[2].extension[0].extension[1].valueInteger = -1
-* group.element[2].extension[0].extension[2].url = "cardinalityMax"
-* group.element[2].extension[0].extension[2].valueInteger = -1
-* group.element[2].display = "Ethnic Group"
+* group.element[2].code = #PID
 * group.element[2].target.equivalence = #equivalent
-* group.element[2].target.code = #valueCodeableConcept
-* group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
-* group.element[2].target.extension[0].extension[0].url = "cardinalityMin"
-* group.element[2].target.extension[0].extension[0].valueInteger = 0
-* group.element[2].target.extension[0].extension[1].url = "cardinalityMax"
-* group.element[2].target.extension[0].extension[1].valueInteger = -1
-* group.element[2].target.display = "valueCodeableConcept"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "CWE[CodeableConcept]"
+* group.element[2].target.code = #code
+* group.element[2].target.display = "code"
+* group.element[2].target.dependsOn[0].property = "value"
+* group.element[2].target.dependsOn[0].value = "\"46463-6\""
+* group.element[3].code = #PID-22
+* group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[3].extension[0].extension[0].url = "type"
+* group.element[3].extension[0].extension[0].valueCode = #"CWE"
+* group.element[3].extension[0].extension[1].url = "cardinalityMin"
+* group.element[3].extension[0].extension[1].valueInteger = -1
+* group.element[3].extension[0].extension[2].url = "cardinalityMax"
+* group.element[3].extension[0].extension[2].valueInteger = -1
+* group.element[3].display = "Ethnic Group"
+* group.element[3].target.equivalence = #equivalent
+* group.element[3].target.code = #valueCodeableConcept
+* group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[3].target.extension[0].extension[0].url = "cardinalityMin"
+* group.element[3].target.extension[0].extension[0].valueInteger = 0
+* group.element[3].target.extension[0].extension[1].url = "cardinalityMax"
+* group.element[3].target.extension[0].extension[1].valueInteger = -1
+* group.element[3].target.display = "valueCodeableConcept"
+* group.element[3].target.dependsOn[0].property = "data-type-map"
+* group.element[3].target.dependsOn[0].value = "CWE[CodeableConcept]"

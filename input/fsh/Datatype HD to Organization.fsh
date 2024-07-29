@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ HD[Organization] - Sheet1.csv
 Instance: DatatypeHDToOrganization
 InstanceOf: ConceptMap
-Title: "Datatype HD to Organization Map"
-* title = "Datatype HD to Organization Map"
+Title: "Datatype HDnull to Organization Map"
+* title = "Datatype HDnull to Organization Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype HD to the FHIR Organization Resource."
 * id = "datatype-hd-to-organization"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-hd-to-organization"
@@ -10,7 +10,7 @@ Title: "Datatype HD to Organization Map"
 * name = "DatatypeHDToOrganization"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -39,6 +39,7 @@ Title: "Datatype HD to Organization Map"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"string"
 * group.element[0].target.display = "identifier[1].value"
+* group.element[0].target.comment = "Need gForge (#20522) to change MessageHeader.destination.endpoint from 1..1 to 0..1.  Must be a reachable address."
 * group.element[1].code = #HD.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -69,6 +70,7 @@ Title: "Datatype HD to Organization Map"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"CodeableConcept"
 * group.element[2].target.display = "identifier[2].type"
+* group.element[2].target.comment = "Request that DNS, ISO, and UUID (and other Table 0301 values) are added to: http://hl7.org/fhir/valueset-identifier-type.html"
 * group.element[2].target.dependsOn[0].property = "data-type-map"
 * group.element[2].target.dependsOn[0].value = "ID[CodeableConcept-UniversalID]"
 * group.element[2].target.dependsOn[1].property = "vocabulary-map"

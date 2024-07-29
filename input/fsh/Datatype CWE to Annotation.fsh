@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[Annotation] - Sheet1.csv
 Instance: DatatypeCWEToAnnotation
 InstanceOf: ConceptMap
-Title: "Datatype CWE to Annotation Map"
-* title = "Datatype CWE to Annotation Map"
+Title: "Datatype CWEnull to Annotation Map"
+* title = "Datatype CWEnull to Annotation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Annotation Data Type."
 * id = "datatype-cwe-to-annotation"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-annotation"
@@ -10,7 +10,7 @@ Title: "Datatype CWE to Annotation Map"
 * name = "DatatypeCWEToAnnotation"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

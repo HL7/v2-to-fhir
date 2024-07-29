@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ TS[DateTime] - Sheet1.csv
 Instance: DatatypeTSToDateTime
 InstanceOf: ConceptMap
-Title: "Datatype TS to DateTime Map"
-* title = "Datatype TS to DateTime Map"
+Title: "Datatype TSnull to DateTime Map"
+* title = "Datatype TSnull to DateTime Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TS to the FHIR DateTime Data Type."
 * id = "datatype-ts-to-datetime"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ts-to-datetime"
@@ -10,7 +10,7 @@ Title: "Datatype TS to DateTime Map"
 * name = "DatatypeTSToDateTime"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[Quantity] - Sheet1.csv
 Instance: DatatypeCWEToQuantity
 InstanceOf: ConceptMap
-Title: "Datatype CWE to Quantity Map"
-* title = "Datatype CWE to Quantity Map"
+Title: "Datatype CWEnull to Quantity Map"
+* title = "Datatype CWEnull to Quantity Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Quantity Data Type."
 * id = "datatype-cwe-to-quantity"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-quantity"
@@ -10,7 +10,7 @@ Title: "Datatype CWE to Quantity Map"
 * name = "DatatypeCWEToQuantity"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,6 +43,7 @@ Title: "Datatype CWE to Quantity Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "Quantity.code"
+* group.element[0].target.comment = "The source of Quantity.value will likely come from a different field (eg. OBX-5 may populate Quantity.value while OBX-6 populates the remaining Quantity elements)."
 * group.element[0].target.product[0].property = "antlr"
 * group.element[0].target.product[0].value = "IF CWE.1 IS VALUED AND CWE.3 IS VALUED"
 * group.element[1].code = #CWE.1

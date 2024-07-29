@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XPN[string] - Sheet1.csv
 Instance: DatatypeXPNToString
 InstanceOf: ConceptMap
-Title: "Datatype XPN to string Map"
-* title = "Datatype XPN to string Map"
+Title: "Datatype XPNnull to string Map"
+* title = "Datatype XPNnull to string Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XPN to the FHIR string Data Type."
 * id = "datatype-xpn-to-string"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xpn-to-string"
@@ -10,7 +10,7 @@ Title: "Datatype XPN to string Map"
 * name = "DatatypeXPNToString"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

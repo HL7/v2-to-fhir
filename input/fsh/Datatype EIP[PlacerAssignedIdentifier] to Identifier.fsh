@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ EIP[Identifier-PlacerAssignedIdentifier] - Sheet1.csv
 Instance: DatatypeEIPPlacerAssignedIdentifierToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype EIP[PlacerAssignedIdentifier] to Identifier Map"
-* title = "Datatype EIP[PlacerAssignedIdentifier] to Identifier Map"
+Title: "Datatype EIPnull to Identifier Map"
+* title = "Datatype EIPnull to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype EIP to the FHIR Identifier Data Type."
 * id = "datatype-eip-placerassignedidentifier-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-eip-placerassignedidentifier-to-identifier"
@@ -10,7 +10,7 @@ Title: "Datatype EIP[PlacerAssignedIdentifier] to Identifier Map"
 * name = "DatatypeEIPPlacerAssignedIdentifierToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Concept Map_ CommentType - Sheet1.csv
 Instance: TableHL70364ToV20364
 InstanceOf: ConceptMap
-Title: "Table HL70364 to V2 0364 Map"
-* title = "Table HL70364 to V2 0364 Map"
+Title: "Table HL70364null to V2 0364 Map"
+* title = "Table HL70364null to V2 0364 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70364 to the FHIR V2 0364 Value Set."
 * id = "table-hl70364-to-v2-0364"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70364-to-v2-0364"
@@ -10,7 +10,7 @@ Title: "Table HL70364 to V2 0364 Map"
 * name = "TableHL70364ToV20364"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

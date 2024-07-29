@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ TQ[ServiceRequest] - Sheet1.csv
 Instance: DatatypeTQToServiceRequest
 InstanceOf: ConceptMap
-Title: "Datatype TQ to ServiceRequest Map"
-* title = "Datatype TQ to ServiceRequest Map"
+Title: "Datatype TQnull to ServiceRequest Map"
+* title = "Datatype TQnull to ServiceRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TQ to the FHIR ServiceRequest Resource."
 * id = "datatype-tq-to-servicerequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-tq-to-servicerequest"
@@ -10,7 +10,7 @@ Title: "Datatype TQ to ServiceRequest Map"
 * name = "DatatypeTQToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -85,6 +85,7 @@ Title: "Datatype TQ to ServiceRequest Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "occurenceTiming.repeat.boundsDuration.value"
+* group.element[2].target.comment = "See notes on TQ.3 in v2.5.1 for likely formats that will be used in the v2 message."
 * group.element[2].target.product[0].property = "narrative"
 * group.element[2].target.product[0].value = "If the value and unit in TQ.3 can be unambiguously parsed where the unit is translatable into UCUM and the field contains nothing else."
 * group.element[3].code = #TQ.3
@@ -106,6 +107,7 @@ Title: "Datatype TQ to ServiceRequest Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "occurenceTiming.repeat.boundsDuration.unit"
+* group.element[3].target.comment = "See notes on TQ.3 in v2.5.1 for likely formats that will be used in the v2 message."
 * group.element[3].target.product[0].property = "narrative"
 * group.element[3].target.product[0].value = "If the value and unit in TQ.3 can be unambiguously parsed where the unit is translatable into UCUM and the field contains nothing else."
 * group.element[4].code = #TQ.3
@@ -190,6 +192,7 @@ Title: "Datatype TQ to ServiceRequest Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "priority"
+* group.element[7].target.comment = "A translation from the text priority in the v2 message to a coded value in the request-priority value set will be required."
 * group.element[7].target.dependsOn[0].property = "vocabulary-map"
 * group.element[7].target.dependsOn[0].value = "Priority"
 * group.element[8].code = #TQ.8

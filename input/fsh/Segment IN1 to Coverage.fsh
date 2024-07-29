@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ IN1[Coverage] - Sheet1.csv
 Instance: SegmentIN1ToCoverage
 InstanceOf: ConceptMap
-Title: "Segment IN1 to Coverage Map"
-* title = "Segment IN1 to Coverage Map"
+Title: "Segment IN1null to Coverage Map"
+* title = "Segment IN1null to Coverage Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment IN1 to the FHIR Coverage Resource."
 * id = "segment-in1-to-coverage"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-in1-to-coverage"
@@ -10,7 +10,7 @@ Title: "Segment IN1 to Coverage Map"
 * name = "SegmentIN1ToCoverage"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

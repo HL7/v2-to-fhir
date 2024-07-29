@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ ED[DocumentReference] - Sheet1.csv
 Instance: DatatypeEDToDocumentReference
 InstanceOf: ConceptMap
-Title: "Datatype ED to DocumentReference Map"
-* title = "Datatype ED to DocumentReference Map"
+Title: "Datatype EDnull to DocumentReference Map"
+* title = "Datatype EDnull to DocumentReference Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype ED to the FHIR DocumentReference Resource."
 * id = "datatype-ed-to-documentreference"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ed-to-documentreference"
@@ -10,7 +10,7 @@ Title: "Datatype ED to DocumentReference Map"
 * name = "DatatypeEDToDocumentReference"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -106,6 +106,7 @@ Title: "Datatype ED to DocumentReference Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "content.attachment.data"
+* group.element[3].target.comment = "Implementations are not always accurate, so to be safe you may want to always assess OBX-5.5 to determine the correct .contentType."
 * group.element[3].target.product[0].property = "antlr"
 * group.element[3].target.product[0].value = "IF ED.4 IN (\"Base64\")"
 * group.element[4].code = #ED.5
@@ -127,6 +128,7 @@ Title: "Datatype ED to DocumentReference Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "content.attachment.data"
+* group.element[4].target.comment = "Implementations are not always accurate, so to be safe you may want to always assess OBX-5.5 to determine the correct .contentType."
 * group.element[4].target.dependsOn[0].property = "value"
 * group.element[4].target.dependsOn[0].value = "/convert from A or HEX to binary64/"
 * group.element[4].target.product[0].property = "antlr"

@@ -16,6 +16,7 @@ Provenance[1].entity.role=""source""",,
 6,ADT_A17.PID,PID,Patient Identification,1,1,,,,Account[1],PID[Account],Account[1].subject.reference=Patient[1].id,,
 6,ADT_A17.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance-Patient],Provenance[4].target.reference=Patient[1].id,,
 7,ADT_A17.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
+7,ADT_A01.PD1,[ PD1 ],Additional Demographics,0,1,IF PD1-7 VALUED,,,Observation[3],PD1[Observation-LivingWill],Observation[3].subject.reference=Patient[1].id,,
 8,ADT_A17.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter[1].subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
 8,ADT_A17.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
 9,ADT_A17.PV2,[ PV2 ],Patient Visit - Additional Info.,0,1,,,,Encounter[1],PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.

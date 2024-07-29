@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ OBR[Specimen] - Sheet1.csv
 Instance: SegmentOBRToSpecimen
 InstanceOf: ConceptMap
-Title: "Segment OBR to Specimen Map"
-* title = "Segment OBR to Specimen Map"
+Title: "Segment OBRnull to Specimen Map"
+* title = "Segment OBRnull to Specimen Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment OBR to the FHIR Specimen Resource."
 * id = "segment-obr-to-specimen"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-obr-to-specimen"
@@ -10,7 +10,7 @@ Title: "Segment OBR to Specimen Map"
 * name = "SegmentOBRToSpecimen"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

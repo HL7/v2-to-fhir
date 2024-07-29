@@ -1,8 +1,8 @@
 // HL7 Message - FHIR R4_ ADT_A09 - Sheet1.csv
 Instance: MessageADT_A09ToBundle
 InstanceOf: ConceptMap
-Title: "Message ADT_A09 to Bundle Map"
-* title = "Message ADT_A09 to Bundle Map"
+Title: "Message ADT_A09null to Bundle Map"
+* title = "Message ADT_A09null to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message ADT_A09 to the FHIR Message Bundle."
 * id = "message-adt-a09-to-bundle"
 * url = "http://hl7.org/fhir/uv/v2mappings/message-adt-a09-to-bundle"
@@ -10,7 +10,7 @@ Title: "Message ADT_A09 to Bundle Map"
 * name = "MessageADT_A09ToBundle"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -208,21 +208,22 @@ Provenance[1].entity.role="source"\
 * group.element[11].target.comment = "Incorporate PD1 content into the Patient created from the PID segment."
 * group.element[11].target.dependsOn[0].property = "segment-map"
 * group.element[11].target.dependsOn[0].value = "PD1[Patient]"
-* group.element[12].code = #ADT_A09.PV1
+* group.element[12].code = #ADT_A01.PD1
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "cardinalityMin"
-* group.element[12].extension[0].extension[0].valueInteger = 1
+* group.element[12].extension[0].extension[0].valueInteger = 0
 * group.element[12].extension[0].extension[1].url = "cardinalityMax"
 * group.element[12].extension[0].extension[1].valueInteger = 1
-* group.element[12].display = "Patient Visit"
+* group.element[12].display = "Additional Demographics"
 * group.element[12].target.equivalence = #equivalent
-* group.element[12].target.code = #Encounter[1]
-* group.element[12].target.display = "Encounter[1]"
-* group.element[12].target.comment = "Processing of the PV1 segment results in the creation of a new Encounter resource"
+* group.element[12].target.code = #Observation[1]
+* group.element[12].target.display = "Observation[1]"
 * group.element[12].target.dependsOn[0].property = "segment-map"
-* group.element[12].target.dependsOn[0].value = "PV1[Encounter]"
+* group.element[12].target.dependsOn[0].value = "PD1[Observation-LivingWill]"
 * group.element[12].target.dependsOn[1].property = "references"
-* group.element[12].target.dependsOn[1].value = "Encounter[1].subject.reference=Patient[1].id"
+* group.element[12].target.dependsOn[1].value = "Observation[1].subject.reference=Patient[1].id"
+* group.element[12].target.product[0].property = "antlr"
+* group.element[12].target.product[0].value = "IF PD1-7 VALUED"
 * group.element[13].code = #ADT_A09.PV1
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
@@ -231,40 +232,38 @@ Provenance[1].entity.role="source"\
 * group.element[13].extension[0].extension[1].valueInteger = 1
 * group.element[13].display = "Patient Visit"
 * group.element[13].target.equivalence = #equivalent
-* group.element[13].target.code = #Patient[1]
-* group.element[13].target.display = "Patient[1]"
+* group.element[13].target.code = #Encounter[1]
+* group.element[13].target.display = "Encounter[1]"
+* group.element[13].target.comment = "Processing of the PV1 segment results in the creation of a new Encounter resource"
 * group.element[13].target.dependsOn[0].property = "segment-map"
-* group.element[13].target.dependsOn[0].value = "PV1[Patient]"
-* group.element[14].code = #ADT_A09.PV2
+* group.element[13].target.dependsOn[0].value = "PV1[Encounter]"
+* group.element[13].target.dependsOn[1].property = "references"
+* group.element[13].target.dependsOn[1].value = "Encounter[1].subject.reference=Patient[1].id"
+* group.element[14].code = #ADT_A09.PV1
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "cardinalityMin"
-* group.element[14].extension[0].extension[0].valueInteger = 0
+* group.element[14].extension[0].extension[0].valueInteger = 1
 * group.element[14].extension[0].extension[1].url = "cardinalityMax"
 * group.element[14].extension[0].extension[1].valueInteger = 1
-* group.element[14].display = "Patient Visit - Additional Info."
+* group.element[14].display = "Patient Visit"
 * group.element[14].target.equivalence = #equivalent
-* group.element[14].target.code = #Encounter[1]
-* group.element[14].target.display = "Encounter[1]"
-* group.element[14].target.comment = "Incorporate PV2 content into the Encounter created from the PV1 segment."
+* group.element[14].target.code = #Patient[1]
+* group.element[14].target.display = "Patient[1]"
 * group.element[14].target.dependsOn[0].property = "segment-map"
-* group.element[14].target.dependsOn[0].value = "PV2[Encounter]"
-* group.element[15].code = #ADT_A09.OBSERVATION.OBX
+* group.element[14].target.dependsOn[0].value = "PV1[Patient]"
+* group.element[15].code = #ADT_A09.PV2
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "cardinalityMin"
 * group.element[15].extension[0].extension[0].valueInteger = 0
 * group.element[15].extension[0].extension[1].url = "cardinalityMax"
-* group.element[15].extension[0].extension[1].valueInteger = -1
-* group.element[15].display = "Observation/Result"
+* group.element[15].extension[0].extension[1].valueInteger = 1
+* group.element[15].display = "Patient Visit - Additional Info."
 * group.element[15].target.equivalence = #equivalent
-* group.element[15].target.code = #Observation[1]
-* group.element[15].target.display = "Observation[1]"
-* group.element[15].target.comment = "One cannot determine whether this observation made during the PV1/PV2 communicated above, or from a prior visit/stay. It is therefore up to the implementer whether to populate Observation.encounter.reference with the Encounter[1].id or not.  Only when the ADT message involves an event before the encounter occurs, e.g., the intiial registration, it is clear that the observation is NOT associated with Encounter[1]."
+* group.element[15].target.code = #Encounter[1]
+* group.element[15].target.display = "Encounter[1]"
+* group.element[15].target.comment = "Incorporate PV2 content into the Encounter created from the PV1 segment."
 * group.element[15].target.dependsOn[0].property = "segment-map"
-* group.element[15].target.dependsOn[0].value = "OBX[Observation]"
-* group.element[15].target.dependsOn[1].property = "references"
-* group.element[15].target.dependsOn[1].value = "Observation[1].subject.reference=Patient[1].id"
-* group.element[15].target.product[0].property = "narrative"
-* group.element[15].target.product[0].value = "Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet."
+* group.element[15].target.dependsOn[0].value = "PV2[Encounter]"
 * group.element[16].code = #ADT_A09.OBSERVATION.OBX
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "cardinalityMin"
@@ -273,12 +272,29 @@ Provenance[1].entity.role="source"\
 * group.element[16].extension[0].extension[1].valueInteger = -1
 * group.element[16].display = "Observation/Result"
 * group.element[16].target.equivalence = #equivalent
-* group.element[16].target.code = #Observation[1]
-* group.element[16].target.display = "Observation[1]"
+* group.element[16].target.code = #Observation[2]
+* group.element[16].target.display = "Observation[2]"
 * group.element[16].target.comment = "One cannot determine whether this observation made during the PV1/PV2 communicated above, or from a prior visit/stay. It is therefore up to the implementer whether to populate Observation.encounter.reference with the Encounter[1].id or not.  Only when the ADT message involves an event before the encounter occurs, e.g., the intiial registration, it is clear that the observation is NOT associated with Encounter[1]."
 * group.element[16].target.dependsOn[0].property = "segment-map"
-* group.element[16].target.dependsOn[0].value = "OBX[Observation-Component]"
+* group.element[16].target.dependsOn[0].value = "OBX[Observation]"
 * group.element[16].target.dependsOn[1].property = "references"
-* group.element[16].target.dependsOn[1].value = "Observation[1].subject.reference=Patient[1].id"
+* group.element[16].target.dependsOn[1].value = "Observation[2].subject.reference=Patient[1].id"
 * group.element[16].target.product[0].property = "narrative"
 * group.element[16].target.product[0].value = "Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet."
+* group.element[17].code = #ADT_A09.OBSERVATION.OBX
+* group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[17].extension[0].extension[0].url = "cardinalityMin"
+* group.element[17].extension[0].extension[0].valueInteger = 0
+* group.element[17].extension[0].extension[1].url = "cardinalityMax"
+* group.element[17].extension[0].extension[1].valueInteger = -1
+* group.element[17].display = "Observation/Result"
+* group.element[17].target.equivalence = #equivalent
+* group.element[17].target.code = #Observation[2]
+* group.element[17].target.display = "Observation[2]"
+* group.element[17].target.comment = "One cannot determine whether this observation made during the PV1/PV2 communicated above, or from a prior visit/stay. It is therefore up to the implementer whether to populate Observation.encounter.reference with the Encounter[1].id or not.  Only when the ADT message involves an event before the encounter occurs, e.g., the intiial registration, it is clear that the observation is NOT associated with Encounter[1]."
+* group.element[17].target.dependsOn[0].property = "segment-map"
+* group.element[17].target.dependsOn[0].value = "OBX[Observation-Component]"
+* group.element[17].target.dependsOn[1].property = "references"
+* group.element[17].target.dependsOn[1].value = "Observation[2].subject.reference=Patient[1].id"
+* group.element[17].target.product[0].property = "narrative"
+* group.element[17].target.product[0].value = "Based on profiles, such as Vital Signs, certain observations are represented on the Observation, while others on its components.  No computable guidance available yet."

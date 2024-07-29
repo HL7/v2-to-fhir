@@ -1,4 +1,4 @@
-HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
+i,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
 Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
 1,ORM_O01.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
 1,ORM_O01.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource
@@ -9,6 +9,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 3.1,ORM_O01.PATIENT.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
 3.1,ORM_O01.PATIENT.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance-Patient],Provenance.target.reference=Patient[1].id,,
 3.2,ORM_O01.PATIENT.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
+3.2,ORM_O01.PATIENT.PD1,[ PD1 ],Additional Demographics,0,1,IF PD1-7 VALUED,,,Observation[2],PD1[Observation-LivingWill],Observation[2].subject.reference=Patient[1].id,,
 3.3,ORM_O01.PATIENT.NTE,[{ NTE }],Notes and Comments (for Patient ID),0,-1,,,,,,,,
 3.4,ORM_O01.PATIENT.VISIT,[,PATIENT_VISIT begin,0,1,,,,,,,,
 3.4.1,ORM_O01.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter.subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
@@ -25,7 +26,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 3.8,/ORM_O01.PATIENT,],PATIENT end,,,,,,,,,,
 4,ORM_O01.ORDER,{,ORDER begin,1,-1,,,,,,,,
 4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,,,,ServiceRequest[1],ORC[ServiceRequest],ServiceRequest[1].subject.reference=Patient[1].id,,Processing of each ORC segment results in the creation of a new ServiceRequest resource
-4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,,,,Task[1],,,,"Processing of each ORC segment results in the creation of a new Task resource which is linked back to the ServiceRequest created for the same ORC segment. =*= The creation of a Task resource and its inclusion in the FHIR bundle should only happen when the receiving system is responsible for fulfillment of the ServiceRequest. Other systems may receive notification of the order, but should not receive a Task Resource if they are not the intended filler system. =*= The actual value of the ORC-1 Order Control Code will yield different population of the Task resource. "
+4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,,h,,Task[1],,,,"Processing of each ORC segment results in the creation of a new Task resource which is linked back to the ServiceRequest created for the same ORC segment. =*= The creation of a Task resource and its inclusion in the FHIR bundle should only happen when the receiving system is responsible for fulfillment of the ServiceRequest. Other systems may receive notification of the order, but should not receive a Task Resource if they are not the intended filler system. =*= The actual value of the ORC-1 Order Control Code will yield different population of the Task resource. "
 4.1,ORM_O01.ORDER.ORC,ORC,Common Order,1,1,,,,Provenance[2],ORC[Provenance],Provenance[2].target=ServiceRequest[1],,
 4.2.begin,ORM_O01.ORDER_DETAIL,[,ORDER_DETAIL begin,0,1,,,,,,,,
 4.2.1.begin,ORM_O01.ORDER_DETAIL.CHOICE,<,,1,1,,,,,,,,

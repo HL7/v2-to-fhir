@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XCN[Patient] - Sheet1.csv
 Instance: DatatypeXCNToPatient
 InstanceOf: ConceptMap
-Title: "Datatype XCN to Patient Map"
-* title = "Datatype XCN to Patient Map"
+Title: "Datatype XCNnull to Patient Map"
+* title = "Datatype XCNnull to Patient Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XCN to the FHIR Patient Resource."
 * id = "datatype-xcn-to-patient"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xcn-to-patient"
@@ -10,7 +10,7 @@ Title: "Datatype XCN to Patient Map"
 * name = "DatatypeXCNToPatient"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -199,6 +199,7 @@ Title: "Datatype XCN to Patient Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "identifier[1].system"
+* group.element[8].target.comment = "Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then XCN.9 should be mapped to .system"
 * group.element[8].target.dependsOn[0].property = "data-type-map"
 * group.element[8].target.dependsOn[0].value = "HD[uri]"
 * group.element[8].target.product[0].property = "narrative"

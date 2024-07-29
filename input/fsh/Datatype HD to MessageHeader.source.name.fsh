@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ HD[MessageHeader.source.name] - Sheet1.csv
 Instance: DatatypeHDToMessageHeaderSourceName
 InstanceOf: ConceptMap
-Title: "Datatype HD to MessageHeader.source.name Map"
-* title = "Datatype HD to MessageHeader.source.name Map"
+Title: "Datatype HDnull to MessageHeader.source.name Map"
+* title = "Datatype HDnull to MessageHeader.source.name Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype HD to the FHIR MessageHeader.source.name Data Type."
 * id = "datatype-hd-to-messageheader-source-name"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-hd-to-messageheader-source-name"
@@ -10,7 +10,7 @@ Title: "Datatype HD to MessageHeader.source.name Map"
 * name = "DatatypeHDToMessageHeaderSourceName"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

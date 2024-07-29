@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[Device] - Sheet1.csv
 Instance: DatatypeCWEToDevice
 InstanceOf: ConceptMap
-Title: "Datatype CWE to Device Map"
-* title = "Datatype CWE to Device Map"
+Title: "Datatype CWEnull to Device Map"
+* title = "Datatype CWEnull to Device Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Device Resource."
 * id = "datatype-cwe-to-device"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-device"
@@ -10,7 +10,7 @@ Title: "Datatype CWE to Device Map"
 * name = "DatatypeCWEToDevice"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

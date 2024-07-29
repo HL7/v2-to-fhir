@@ -10,7 +10,7 @@ Title: "Segment TXA to Provenance Map - Unsupported"
 * name = "UnsupportedSegmentTXAToProvenance"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

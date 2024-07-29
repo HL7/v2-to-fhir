@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ HD[MessageHeader.destination] - Sheet1.csv
 Instance: DatatypeHDToMessageHeaderDestination
 InstanceOf: ConceptMap
-Title: "Datatype HD to MessageHeader.destination Map"
-* title = "Datatype HD to MessageHeader.destination Map"
+Title: "Datatype HDnull to MessageHeader.destination Map"
+* title = "Datatype HDnull to MessageHeader.destination Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype HD to the FHIR MessageHeader.destination Data Type."
 * id = "datatype-hd-to-messageheader-destination"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-hd-to-messageheader-destination"
@@ -10,7 +10,7 @@ Title: "Datatype HD to MessageHeader.destination Map"
 * name = "DatatypeHDToMessageHeaderDestination"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -39,6 +39,7 @@ Title: "Datatype HD to MessageHeader.destination Map"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"string"
 * group.element[0].target.display = "name"
+* group.element[0].target.comment = "Not sure whether used, and if used, what a reasonable extension name would be.  We believe that source.endpoint should be Universal ID when both Namespace ID and Universal ID are valued."
 * group.element[1].code = #HD.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"

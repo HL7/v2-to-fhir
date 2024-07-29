@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ NK1[RelatedPerson] - Sheet1.csv
 Instance: SegmentNK1ToRelatedPerson
 InstanceOf: ConceptMap
-Title: "Segment NK1 to RelatedPerson Map"
-* title = "Segment NK1 to RelatedPerson Map"
+Title: "Segment NK1null to RelatedPerson Map"
+* title = "Segment NK1null to RelatedPerson Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment NK1 to the FHIR RelatedPerson Resource."
 * id = "segment-nk1-to-relatedperson"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-nk1-to-relatedperson"
@@ -10,7 +10,7 @@ Title: "Segment NK1 to RelatedPerson Map"
 * name = "SegmentNK1ToRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

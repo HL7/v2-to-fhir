@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CM[Specimen-Source] - Sheet1.csv
 Instance: DatatypeCMSourceToSpecimen
 InstanceOf: ConceptMap
-Title: "Datatype CM[Source] to Specimen Map"
-* title = "Datatype CM[Source] to Specimen Map"
+Title: "Datatype CMnull to Specimen Map"
+* title = "Datatype CMnull to Specimen Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CM to the FHIR Specimen Resource."
 * id = "datatype-cm-source-to-specimen"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cm-source-to-specimen"
@@ -10,7 +10,7 @@ Title: "Datatype CM[Source] to Specimen Map"
 * name = "DatatypeCMSourceToSpecimen"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ NM[PositiveInt] - Sheet1.csv
 Instance: DatatypeNMToPositiveInt
 InstanceOf: ConceptMap
-Title: "Datatype NM to PositiveInt Map"
-* title = "Datatype NM to PositiveInt Map"
+Title: "Datatype NMnull to PositiveInt Map"
+* title = "Datatype NMnull to PositiveInt Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype NM to the FHIR PositiveInt Data Type."
 * id = "datatype-nm-to-positiveint"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-nm-to-positiveint"
@@ -10,7 +10,7 @@ Title: "Datatype NM to PositiveInt Map"
 * name = "DatatypeNMToPositiveInt"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

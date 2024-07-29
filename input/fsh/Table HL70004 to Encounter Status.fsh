@@ -1,8 +1,8 @@
 // HL7 Concept Map_ PatientClass[EncounterStatus] - Sheet1.csv
 Instance: TableHL70004ToEncounterStatus
 InstanceOf: ConceptMap
-Title: "Table HL70004 to Encounter Status Map"
-* title = "Table HL70004 to Encounter Status Map"
+Title: "Table HL70004null to Encounter Status Map"
+* title = "Table HL70004null to Encounter Status Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70004 to the FHIR Encounter Status Value Set."
 * id = "table-hl70004-to-encounter-status"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70004-to-encounter-status"
@@ -10,7 +10,7 @@ Title: "Table HL70004 to Encounter Status Map"
 * name = "TableHL70004ToEncounterStatus"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XAD[Address] - Sheet1.csv
 Instance: DatatypeXADToAddress
 InstanceOf: ConceptMap
-Title: "Datatype XAD to Address Map"
-* title = "Datatype XAD to Address Map"
+Title: "Datatype XADnull to Address Map"
+* title = "Datatype XADnull to Address Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XAD to the FHIR Address Data Type."
 * id = "datatype-xad-to-address"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xad-to-address"
@@ -10,7 +10,7 @@ Title: "Datatype XAD to Address Map"
 * name = "DatatypeXADToAddress"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -64,6 +64,7 @@ Title: "Datatype XAD to Address Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "line[4]"
+* group.element[1].target.comment = "Note that XAD.1 is mapped to Address.line as well using the SAD data type.  That may yield up to three address lines."
 * group.element[2].code = #XAD.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -415,3 +416,4 @@ Title: "Datatype XAD to Address Map"
 * group.element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[19].target.extension[0].extension[2].valueInteger = -1
 * group.element[19].target.display = "line[5]"
+* group.element[19].target.comment = "There is an existing ADXP extension if we prefer"

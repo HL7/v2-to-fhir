@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ NTE[Appointment-Comment] - NTE.csv
 Instance: SegmentNTECommentToAppointment
 InstanceOf: ConceptMap
-Title: "Segment NTE[Comment] to Appointment Map"
-* title = "Segment NTE[Comment] to Appointment Map"
+Title: "Segment NTEnull to Appointment Map"
+* title = "Segment NTEnull to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment NTE to the FHIR Appointment Resource."
 * id = "segment-nte-comment-to-appointment"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-nte-comment-to-appointment"
@@ -10,7 +10,7 @@ Title: "Segment NTE[Comment] to Appointment Map"
 * name = "SegmentNTECommentToAppointment"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

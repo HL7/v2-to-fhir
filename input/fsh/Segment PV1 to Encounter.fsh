@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv
 Instance: SegmentPV1ToEncounter
 InstanceOf: ConceptMap
-Title: "Segment PV1 to Encounter Map"
-* title = "Segment PV1 to Encounter Map"
+Title: "Segment PV1null to Encounter Map"
+* title = "Segment PV1null to Encounter Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PV1 to the FHIR Encounter Resource."
 * id = "segment-pv1-to-encounter"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pv1-to-encounter"
@@ -10,7 +10,7 @@ Title: "Segment PV1 to Encounter Map"
 * name = "SegmentPV1ToEncounter"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -93,7 +93,7 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[2].target.display = "location[1]"
 * group.element[2].target.comment = "Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included."
 * group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "PL[Location]"
+* group.element[2].target.dependsOn[0].value = "PL[Encounter.location]"
 * group.element[3].code = #PV1-3
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -204,7 +204,7 @@ Title: "Segment PV1 to Encounter Map"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "location[2]"
 * group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "PL[Location]"
+* group.element[7].target.dependsOn[0].value = "PL[Encounter.location]"
 * group.element[8].code = #PV1-7
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"

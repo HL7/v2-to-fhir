@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv
 Instance: DatatypeXONToOrganization
 InstanceOf: ConceptMap
-Title: "Datatype XON to Organization Map"
-* title = "Datatype XON to Organization Map"
+Title: "Datatype XONnull to Organization Map"
+* title = "Datatype XONnull to Organization Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XON to the FHIR Organization Resource."
 * id = "datatype-xon-to-organization"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xon-to-organization"
@@ -10,7 +10,7 @@ Title: "Datatype XON to Organization Map"
 * name = "DatatypeXONToOrganization"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -186,6 +186,7 @@ Title: "Datatype XON to Organization Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "identifier[1].system"
+* group.element[7].target.comment = "Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then XCN.9 should be mapped to .system"
 * group.element[7].target.dependsOn[0].property = "data-type-map"
 * group.element[7].target.dependsOn[0].value = "HD[uri]"
 * group.element[7].target.product[0].property = "narrative"

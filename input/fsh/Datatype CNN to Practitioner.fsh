@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CNN[Practitioner] - Sheet1.csv
 Instance: DatatypeCNNToPractitioner
 InstanceOf: ConceptMap
-Title: "Datatype CNN to Practitioner Map"
-* title = "Datatype CNN to Practitioner Map"
+Title: "Datatype CNNnull to Practitioner Map"
+* title = "Datatype CNNnull to Practitioner Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CNN to the FHIR Practitioner Resource."
 * id = "datatype-cnn-to-practitioner"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cnn-to-practitioner"
@@ -10,7 +10,7 @@ Title: "Datatype CNN to Practitioner Map"
 * name = "DatatypeCNNToPractitioner"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

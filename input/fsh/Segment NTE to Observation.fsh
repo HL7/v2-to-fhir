@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ NTE[Observation] - Sheet1.csv
 Instance: SegmentNTEToObservation
 InstanceOf: ConceptMap
-Title: "Segment NTE to Observation Map"
-* title = "Segment NTE to Observation Map"
+Title: "Segment NTEnull to Observation Map"
+* title = "Segment NTEnull to Observation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment NTE to the FHIR Observation Resource."
 * id = "segment-nte-to-observation"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-nte-to-observation"
@@ -10,7 +10,7 @@ Title: "Segment NTE to Observation Map"
 * name = "SegmentNTEToObservation"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

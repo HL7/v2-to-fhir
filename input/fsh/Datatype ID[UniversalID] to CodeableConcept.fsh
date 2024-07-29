@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ ID[CodeableConcept-UniversalID] - Sheet1.csv
 Instance: DatatypeIDUniversalIDToCodeableConcept
 InstanceOf: ConceptMap
-Title: "Datatype ID[UniversalID] to CodeableConcept Map"
-* title = "Datatype ID[UniversalID] to CodeableConcept Map"
+Title: "Datatype IDnull to CodeableConcept Map"
+* title = "Datatype IDnull to CodeableConcept Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype ID to the FHIR CodeableConcept Data Type."
 * id = "datatype-id-universalid-to-codeableconcept"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-id-universalid-to-codeableconcept"
@@ -10,7 +10,7 @@ Title: "Datatype ID[UniversalID] to CodeableConcept Map"
 * name = "DatatypeIDUniversalIDToCodeableConcept"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ MSH[Provenance-Transformation] - Sheet1.csv
 Instance: SegmentMSHTransformationToProvenance
 InstanceOf: ConceptMap
-Title: "Segment MSH[Transformation] to Provenance Map"
-* title = "Segment MSH[Transformation] to Provenance Map"
+Title: "Segment MSHnull to Provenance Map"
+* title = "Segment MSHnull to Provenance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment MSH to the FHIR Provenance Resource."
 * id = "segment-msh-transformation-to-provenance"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-msh-transformation-to-provenance"
@@ -10,7 +10,7 @@ Title: "Segment MSH[Transformation] to Provenance Map"
 * name = "SegmentMSHTransformationToProvenance"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

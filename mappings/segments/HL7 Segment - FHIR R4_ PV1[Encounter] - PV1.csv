@@ -4,12 +4,12 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 1,PV1-1,Set ID - PV1,SI,0,1,,,,,,,,,,,,,
 2,PV1-2,Patient Class,CWE,1,1,,,,class,,Coding,1,1,CWE[Coding],PatientClass[EncounterClass],,,
 2,PV1-2,Patient Class,CWE,1,1,IF PV1-45 NOT VALUED,,,status,,code,1,1,CWE[code],PatientClass[EncounterStatus],,,
-3,PV1-3,Assigned Patient Location,PL,0,1,,,,location[1],,Backbone,0,1,PL[Location],,,,Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included.
+3,PV1-3,Assigned Patient Location,PL,0,1,,,,location[1],,Backbone,0,1,PL[Encounter.location],,,,Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included.
 3,PV1-3,Assigned Patient Location,PL,0,1,"IF PV1-2.1 NOT EQUALS ""P""",,,location[1].status,,code,0,1,,,"""active""",,
 3,PV1-3,Assigned Patient Location,PL,0,1,"IF PV1-2.1 EQUALS ""P""",,,location[1].status,,code,0,1,,,"""planned""",,
 4,PV1-4,Admission Type,CWE,0,1,,,,type,,CodeableConcept,0,-1,CWE[CodeableConcept],AdmissionType,,,
 5,PV1-5,Preadmit Number,CX,0,1,,,,hospitalization.preAdmissionIdentifier,,Identifier,0,1,CX[Identifier],,,,
-6,PV1-6,Prior Patient Location,PL,0,1,,,,location[2],,Reference(Location),0,1,PL[Location],,,,
+6,PV1-6,Prior Patient Location,PL,0,1,,,,location[2],,Reference(Location),0,1,PL[Encounter.location],,,,
 7,PV1-7,Attending Doctor,XCN,0,-1,,,,participant[1].individual(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
 7,PV1-7,Attending Doctor,XCN,0,-1,,,,participant[1].type.coding.code,,code,0,1,,,"""ATND""",,
 7,PV1-7,Attending Doctor,XCN,0,-1,,,,participant[1].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v3-ParticipationType""",,

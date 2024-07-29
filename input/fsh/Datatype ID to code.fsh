@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ ID[code] - Sheet1.csv
 Instance: DatatypeIDToCode
 InstanceOf: ConceptMap
-Title: "Datatype ID to code Map"
-* title = "Datatype ID to code Map"
+Title: "Datatype IDnull to code Map"
+* title = "Datatype IDnull to code Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype ID to the FHIR code Data Type."
 * id = "datatype-id-to-code"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-id-to-code"
@@ -10,7 +10,7 @@ Title: "Datatype ID to code Map"
 * name = "DatatypeIDToCode"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -33,3 +33,4 @@ Title: "Datatype ID to code Map"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #$value
 * group.element[0].target.display = "$value"
+* group.element[0].target.comment = "Note that the vocabulary mapping is done at the segment's field level."

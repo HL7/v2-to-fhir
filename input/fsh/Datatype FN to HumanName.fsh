@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ FN[HumanName] - Sheet1.csv
 Instance: DatatypeFNToHumanName
 InstanceOf: ConceptMap
-Title: "Datatype FN to HumanName Map"
-* title = "Datatype FN to HumanName Map"
+Title: "Datatype FNnull to HumanName Map"
+* title = "Datatype FNnull to HumanName Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype FN to the FHIR HumanName Data Type."
 * id = "datatype-fn-to-humanname"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-fn-to-humanname"
@@ -10,7 +10,7 @@ Title: "Datatype FN to HumanName Map"
 * name = "DatatypeFNToHumanName"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
