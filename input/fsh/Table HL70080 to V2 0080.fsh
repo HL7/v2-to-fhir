@@ -1,8 +1,8 @@
 // HL7 Concept Map_ NatureOfAbnormalTesting - Sheet1.csv
 Instance: TableHL70080ToV20080
 InstanceOf: ConceptMap
-Title: "Table HL70080 to V2 0080 Map"
-* title = "Table HL70080 to V2 0080 Map"
+Title: "Table HL70080null to V2 0080 Map"
+* title = "Table HL70080null to V2 0080 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70080 to the FHIR V2 0080 Value Set."
 * id = "table-hl70080-to-v2-0080"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70080-to-v2-0080"
@@ -10,7 +10,7 @@ Title: "Table HL70080 to V2 0080 Map"
 * name = "TableHL70080ToV20080"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ TQ[Task-Priority] - Sheet1.csv
 Instance: DatatypeTQPriorityToTask
 InstanceOf: ConceptMap
-Title: "Datatype TQ[Priority] to Task Map"
-* title = "Datatype TQ[Priority] to Task Map"
+Title: "Datatype TQnull to Task Map"
+* title = "Datatype TQnull to Task Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TQ to the FHIR Task Resource."
 * id = "datatype-tq-priority-to-task"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-tq-priority-to-task"
@@ -10,7 +10,7 @@ Title: "Datatype TQ[Priority] to Task Map"
 * name = "DatatypeTQPriorityToTask"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,5 +43,6 @@ Title: "Datatype TQ[Priority] to Task Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "priority"
+* group.element[0].target.comment = "A translation from the text priority in the v2 message to a coded value in the request-priority value set will be required."
 * group.element[0].target.dependsOn[0].property = "vocabulary-map"
 * group.element[0].target.dependsOn[0].value = "Priority"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ MSG[MessageHeader] - Sheet1.csv
 Instance: DatatypeMSGToMessageHeader
 InstanceOf: ConceptMap
-Title: "Datatype MSG to MessageHeader Map"
-* title = "Datatype MSG to MessageHeader Map"
+Title: "Datatype MSGnull to MessageHeader Map"
+* title = "Datatype MSGnull to MessageHeader Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype MSG to the FHIR MessageHeader Resource."
 * id = "datatype-msg-to-messageheader"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-msg-to-messageheader"
@@ -10,7 +10,7 @@ Title: "Datatype MSG to MessageHeader Map"
 * name = "DatatypeMSGToMessageHeader"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

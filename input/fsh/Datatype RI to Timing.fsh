@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ RI[Timing] - Sheet1.csv
 Instance: DatatypeRIToTiming
 InstanceOf: ConceptMap
-Title: "Datatype RI to Timing Map"
-* title = "Datatype RI to Timing Map"
+Title: "Datatype RInull to Timing Map"
+* title = "Datatype RInull to Timing Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype RI to the FHIR Timing Data Type."
 * id = "datatype-ri-to-timing"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ri-to-timing"
@@ -10,7 +10,7 @@ Title: "Datatype RI to Timing Map"
 * name = "DatatypeRIToTiming"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -64,3 +64,4 @@ Title: "Datatype RI to Timing Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "repeat.timeOfDay"
+* group.element[1].target.comment = "The format of this field in the v2 data type is HHMM,HHMM,HHMM,.… and thus functionally contains repeats even though the element is technically not allowed to repeat"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[Timing.duration] - Sheet1.csv
 Instance: DatatypeCWEToTimingDuration
 InstanceOf: ConceptMap
-Title: "Datatype CWE to Timing.duration Map"
-* title = "Datatype CWE to Timing.duration Map"
+Title: "Datatype CWEnull to Timing.duration Map"
+* title = "Datatype CWEnull to Timing.duration Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Timing.duration Data Type."
 * id = "datatype-cwe-to-timing-duration"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-timing-duration"
@@ -10,7 +10,7 @@ Title: "Datatype CWE to Timing.duration Map"
 * name = "DatatypeCWEToTimingDuration"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,5 +43,6 @@ Title: "Datatype CWE to Timing.duration Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "Timing.repeat.durationUnit"
+* group.element[0].target.comment = "The durationUnit is limited to a required set of UCUM units"
 * group.element[0].target.dependsOn[0].property = "vocabulary-map"
 * group.element[0].target.dependsOn[0].value = "DurationUnit"

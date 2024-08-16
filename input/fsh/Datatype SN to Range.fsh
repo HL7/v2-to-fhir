@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ SN[Range] - Sheet1.csv
 Instance: DatatypeSNToRange
 InstanceOf: ConceptMap
-Title: "Datatype SN to Range Map"
-* title = "Datatype SN to Range Map"
+Title: "Datatype SNnull to Range Map"
+* title = "Datatype SNnull to Range Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype SN to the FHIR Range Data Type."
 * id = "datatype-sn-to-range"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-sn-to-range"
@@ -10,7 +10,7 @@ Title: "Datatype SN to Range Map"
 * name = "DatatypeSNToRange"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

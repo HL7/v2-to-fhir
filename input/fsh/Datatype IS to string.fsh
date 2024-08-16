@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ IS[string] - Sheet1.csv
 Instance: DatatypeISToString
 InstanceOf: ConceptMap
-Title: "Datatype IS to string Map"
-* title = "Datatype IS to string Map"
+Title: "Datatype ISnull to string Map"
+* title = "Datatype ISnull to string Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype IS to the FHIR string Data Type."
 * id = "datatype-is-to-string"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-is-to-string"
@@ -10,7 +10,7 @@ Title: "Datatype IS to string Map"
 * name = "DatatypeISToString"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ ROL[RelatedPerson] - Sheet1.csv
 Instance: SegmentROLToRelatedPerson
 InstanceOf: ConceptMap
-Title: "Segment ROL to RelatedPerson Map"
-* title = "Segment ROL to RelatedPerson Map"
+Title: "Segment ROLnull to RelatedPerson Map"
+* title = "Segment ROLnull to RelatedPerson Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment ROL to the FHIR RelatedPerson Resource."
 * id = "segment-rol-to-relatedperson"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-rol-to-relatedperson"
@@ -10,7 +10,7 @@ Title: "Segment ROL to RelatedPerson Map"
 * name = "SegmentROLToRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

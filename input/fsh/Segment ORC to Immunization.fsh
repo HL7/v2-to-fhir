@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ ORC[Immunization] - ORC.csv
 Instance: SegmentORCToImmunization
 InstanceOf: ConceptMap
-Title: "Segment ORC to Immunization Map"
-* title = "Segment ORC to Immunization Map"
+Title: "Segment ORCnull to Immunization Map"
+* title = "Segment ORCnull to Immunization Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment ORC to the FHIR Immunization Resource."
 * id = "segment-orc-to-immunization"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-orc-to-immunization"
@@ -10,7 +10,7 @@ Title: "Segment ORC to Immunization Map"
 * name = "SegmentORCToImmunization"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ EI[Condition] - Sheet1.csv
 Instance: DatatypeEIToCondition
 InstanceOf: ConceptMap
-Title: "Datatype EI to Condition Map"
-* title = "Datatype EI to Condition Map"
+Title: "Datatype EInull to Condition Map"
+* title = "Datatype EInull to Condition Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype EI to the FHIR Condition Resource."
 * id = "datatype-ei-to-condition"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ei-to-condition"
@@ -10,7 +10,7 @@ Title: "Datatype EI to Condition Map"
 * name = "DatatypeEIToCondition"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -58,6 +58,7 @@ Title: "Datatype EI to Condition Map"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"string"
 * group.element[1].target.display = "assigner(Organization[1].identifier[1].value)"
+* group.element[1].target.comment = "Note that, even though the HL7 v2 component sounds like a type or category of organization (using IS), the intent is to point to the specific oranization that assigned the identifier value in EI.1"
 * group.element[2].code = #EI.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CX[Identifier] - Sheet1.csv
 Instance: DatatypeCXToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype CX to Identifier Map"
-* title = "Datatype CX to Identifier Map"
+Title: "Datatype CXnull to Identifier Map"
+* title = "Datatype CXnull to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CX to the FHIR Identifier Data Type."
 * id = "datatype-cx-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cx-to-identifier"
@@ -10,7 +10,7 @@ Title: "Datatype CX to Identifier Map"
 * name = "DatatypeCXToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -165,6 +165,7 @@ Title: "Datatype CX to Identifier Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "system"
+* group.element[6].target.comment = "Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then CX.4 should be mapped to .system"
 * group.element[6].target.dependsOn[0].property = "data-type-map"
 * group.element[6].target.dependsOn[0].value = "HD[uri]"
 * group.element[6].target.product[0].property = "antlr"

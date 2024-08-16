@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ DTM[Annotation-Time] - Sheet1.csv
 Instance: DatatypeDTMTimeToAnnotation
 InstanceOf: ConceptMap
-Title: "Datatype DTM[Time] to Annotation Map"
-* title = "Datatype DTM[Time] to Annotation Map"
+Title: "Datatype DTMnull to Annotation Map"
+* title = "Datatype DTMnull to Annotation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype DTM to the FHIR Annotation Data Type."
 * id = "datatype-dtm-time-to-annotation"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-dtm-time-to-annotation"
@@ -10,7 +10,7 @@ Title: "Datatype DTM[Time] to Annotation Map"
 * name = "DatatypeDTMTimeToAnnotation"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

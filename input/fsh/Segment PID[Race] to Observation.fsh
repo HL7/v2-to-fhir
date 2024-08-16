@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PID[Observation-Race] - Sheet1.csv
 Instance: SegmentPIDRaceToObservation
 InstanceOf: ConceptMap
-Title: "Segment PID[Race] to Observation Map"
-* title = "Segment PID[Race] to Observation Map"
+Title: "Segment PIDnull to Observation Map"
+* title = "Segment PIDnull to Observation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Observation Resource."
 * id = "segment-pid-race-to-observation"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pid-race-to-observation"
@@ -10,7 +10,7 @@ Title: "Segment PID[Race] to Observation Map"
 * name = "SegmentPIDRaceToObservation"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

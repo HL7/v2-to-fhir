@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PD1[Patient] - PD1.csv
 Instance: SegmentPD1ToPatient
 InstanceOf: ConceptMap
-Title: "Segment PD1 to Patient Map"
-* title = "Segment PD1 to Patient Map"
+Title: "Segment PD1null to Patient Map"
+* title = "Segment PD1null to Patient Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PD1 to the FHIR Patient Resource."
 * id = "segment-pd1-to-patient"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pd1-to-patient"
@@ -10,7 +10,7 @@ Title: "Segment PD1 to Patient Map"
 * name = "SegmentPD1ToPatient"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,7 +43,6 @@ Title: "Segment PD1 to Patient Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "generalPractitioner[1](Organization)"
-* group.element[0].target.comment = "Is Patient.managingOrganization better?"
 * group.element[0].target.dependsOn[0].property = "data-type-map"
 * group.element[0].target.dependsOn[0].value = "XON[Organization]"
 * group.element[1].code = #PD1-4

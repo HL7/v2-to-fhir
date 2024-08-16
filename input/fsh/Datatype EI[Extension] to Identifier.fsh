@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ EI[Identifier-Extension] - Sheet1.csv
 Instance: DatatypeEIExtensionToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype EI[Extension] to Identifier Map"
-* title = "Datatype EI[Extension] to Identifier Map"
+Title: "Datatype EInull to Identifier Map"
+* title = "Datatype EInull to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype EI to the FHIR Identifier Data Type."
 * id = "datatype-ei-extension-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ei-extension-to-identifier"
@@ -10,7 +10,7 @@ Title: "Datatype EI[Extension] to Identifier Map"
 * name = "DatatypeEIExtensionToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

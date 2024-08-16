@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ IN3[CareTeam] - Sheet1.csv
 Instance: SegmentIN3ToCareTeam
 InstanceOf: ConceptMap
-Title: "Segment IN3 to CareTeam Map"
-* title = "Segment IN3 to CareTeam Map"
+Title: "Segment IN3null to CareTeam Map"
+* title = "Segment IN3null to CareTeam Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment IN3 to the FHIR CareTeam Resource."
 * id = "segment-in3-to-careteam"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-in3-to-careteam"
@@ -10,7 +10,7 @@ Title: "Segment IN3 to CareTeam Map"
 * name = "SegmentIN3ToCareTeam"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

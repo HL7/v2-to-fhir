@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ HD[uri] - Sheet1.csv
 Instance: DatatypeHDToUri
 InstanceOf: ConceptMap
-Title: "Datatype HD to uri Map"
-* title = "Datatype HD to uri Map"
+Title: "Datatype HDnull to uri Map"
+* title = "Datatype HDnull to uri Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype HD to the FHIR uri Data Type."
 * id = "datatype-hd-to-uri"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-hd-to-uri"
@@ -10,7 +10,7 @@ Title: "Datatype HD to uri Map"
 * name = "DatatypeHDToUri"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

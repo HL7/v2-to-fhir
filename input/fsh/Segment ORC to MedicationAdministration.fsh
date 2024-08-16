@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ ORC[MedicationAdministration] - Sheet1.csv
 Instance: SegmentORCToMedicationAdministration
 InstanceOf: ConceptMap
-Title: "Segment ORC to MedicationAdministration Map"
-* title = "Segment ORC to MedicationAdministration Map"
+Title: "Segment ORCnull to MedicationAdministration Map"
+* title = "Segment ORCnull to MedicationAdministration Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment ORC to the FHIR MedicationAdministration Resource."
 * id = "segment-orc-to-medicationadministration"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-orc-to-medicationadministration"
@@ -10,7 +10,7 @@ Title: "Segment ORC to MedicationAdministration Map"
 * name = "SegmentORCToMedicationAdministration"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

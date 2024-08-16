@@ -16,6 +16,7 @@ Provenance[1].entity.role=""source""",,
 6,ADT_A06.PID,PID,Patient Identification,1,1,,,,Account[1],PID[Account],Account[1].subject.reference=Patient[1].id,,
 6,ADT_A06.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance-Patient],Provenance[4].target.reference=Patient[1].id,,
 7,ADT_A06.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
+7,ADT_A01.PD1,[ PD1 ],Additional Demographics,0,1,IF PD1-7 VALUED,,,Observation[1],PD1[Observation-LivingWill],Observation[1].subject.reference=Patient[1].id,,
 8,ADT_A06.OH1,[{ OH1 }],Employment Status,0,-1,,,,,,,,
 9,ADT_A06.OH2,[{ OH2 }],Past or Present Job,0,-1,,,,,,,,
 10,ADT_A06.OH3,[  OH3  ],Usual Work,0,1,,,,,,,,

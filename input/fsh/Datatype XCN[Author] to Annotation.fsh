@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XCN[Annotation-Author] - Sheet1.csv
 Instance: DatatypeXCNAuthorToAnnotation
 InstanceOf: ConceptMap
-Title: "Datatype XCN[Author] to Annotation Map"
-* title = "Datatype XCN[Author] to Annotation Map"
+Title: "Datatype XCNnull to Annotation Map"
+* title = "Datatype XCNnull to Annotation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XCN to the FHIR Annotation Data Type."
 * id = "datatype-xcn-author-to-annotation"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xcn-author-to-annotation"
@@ -10,7 +10,7 @@ Title: "Datatype XCN[Author] to Annotation Map"
 * name = "DatatypeXCNAuthorToAnnotation"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -199,6 +199,7 @@ Title: "Datatype XCN[Author] to Annotation Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "authorReference(Practitioner.identifier[1].system)"
+* group.element[8].target.comment = "Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then XCN.9 should be mapped to .system"
 * group.element[8].target.dependsOn[0].property = "data-type-map"
 * group.element[8].target.dependsOn[0].value = "HD[uri]"
 * group.element[8].target.product[0].property = "narrative"

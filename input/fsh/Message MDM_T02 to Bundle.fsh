@@ -1,8 +1,8 @@
 // HL7 Message - FHIR R4_ MDM _T02 - Sheet1.csv
 Instance: MessageMDM_T02ToBundle
 InstanceOf: ConceptMap
-Title: "Message MDM_T02 to Bundle Map"
-* title = "Message MDM_T02 to Bundle Map"
+Title: "Message MDM_T02null to Bundle Map"
+* title = "Message MDM_T02null to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message MDM_T02 to the FHIR Message Bundle."
 * id = "message-mdm-t02-to-bundle"
 * url = "http://hl7.org/fhir/uv/v2mappings/message-mdm-t02-to-bundle"
@@ -10,7 +10,7 @@ Title: "Message MDM_T02 to Bundle Map"
 * name = "MessageMDM_T02ToBundle"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -274,12 +274,12 @@ Provenance[1].entity.role="source"\
 * group.element[17].extension[0].extension[1].valueInteger = 1
 * group.element[17].display = "Document Notification"
 * group.element[17].target.equivalence = #equivalent
-* group.element[17].target.code = #Provenance[5]
-* group.element[17].target.display = "Provenance[5]"
+* group.element[17].target.code = #Provenance
+* group.element[17].target.display = "Provenance"
 * group.element[17].target.dependsOn[0].property = "segment-map"
 * group.element[17].target.dependsOn[0].value = "TXA[Provenance]"
 * group.element[17].target.dependsOn[1].property = "references"
-* group.element[17].target.dependsOn[1].value = "Provenance[5].target.reference=DocumentReference.id;"
+* group.element[17].target.dependsOn[1].value = "Provenance[1].target=DocumentReference[1].id"
 * group.element[18].code = #MDM_T02.OBSERVATION.OBX
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "cardinalityMin"

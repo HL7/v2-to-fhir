@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CNE[CodeableConcept] - Sheet1.csv
 Instance: DatatypeCNEToCodeableConcept
 InstanceOf: ConceptMap
-Title: "Datatype CNE to CodeableConcept Map"
-* title = "Datatype CNE to CodeableConcept Map"
+Title: "Datatype CNEnull to CodeableConcept Map"
+* title = "Datatype CNEnull to CodeableConcept Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CNE to the FHIR CodeableConcept Data Type."
 * id = "datatype-cne-to-codeableconcept"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cne-to-codeableconcept"
@@ -10,7 +10,7 @@ Title: "Datatype CNE to CodeableConcept Map"
 * name = "DatatypeCNEToCodeableConcept"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -81,6 +81,7 @@ Title: "Datatype CNE to CodeableConcept Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "coding[1].system"
+* group.element[2].target.comment = "This is only an indirect mapping in that the vocabulary table will give the actual uri."
 * group.element[3].code = #CNE.4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -138,6 +139,7 @@ Title: "Datatype CNE to CodeableConcept Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "coding[2].system"
+* group.element[5].target.comment = "This is only an indirect mapping in that the vocabulary table will give the actual uri"
 * group.element[6].code = #CNE.7
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -271,3 +273,4 @@ Title: "Datatype CNE to CodeableConcept Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "coding[3.version"
+* group.element[12].target.comment = "This is only an indirect mapping in that the vocabulary table will give the actual uri."

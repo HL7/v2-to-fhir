@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ DLN[Identifier] - Sheet1.csv
 Instance: DatatypeDLNToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype DLN to Identifier Map"
-* title = "Datatype DLN to Identifier Map"
+Title: "Datatype DLNnull to Identifier Map"
+* title = "Datatype DLNnull to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype DLN to the FHIR Identifier Data Type."
 * id = "datatype-dln-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-dln-to-identifier"
@@ -10,7 +10,7 @@ Title: "Datatype DLN to Identifier Map"
 * name = "DatatypeDLNToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Concept Map_ SpecimenRejectReason - Sheet1.csv
 Instance: TableHL70490ToV20490
 InstanceOf: ConceptMap
-Title: "Table HL70490 to V2 0490 Map"
-* title = "Table HL70490 to V2 0490 Map"
+Title: "Table HL70490null to V2 0490 Map"
+* title = "Table HL70490null to V2 0490 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70490 to the FHIR V2 0490 Value Set."
 * id = "table-hl70490-to-v2-0490"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70490-to-v2-0490"
@@ -10,7 +10,7 @@ Title: "Table HL70490 to V2 0490 Map"
 * name = "TableHL70490ToV20490"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

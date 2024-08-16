@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XPN[HumanName] - Sheet1.csv
 Instance: DatatypeXPNToHumanName
 InstanceOf: ConceptMap
-Title: "Datatype XPN to HumanName Map"
-* title = "Datatype XPN to HumanName Map"
+Title: "Datatype XPNnull to HumanName Map"
+* title = "Datatype XPNnull to HumanName Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XPN to the FHIR HumanName Data Type."
 * id = "datatype-xpn-to-humanname"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xpn-to-humanname"
@@ -10,7 +10,7 @@ Title: "Datatype XPN to HumanName Map"
 * name = "DatatypeXPNToHumanName"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -64,6 +64,7 @@ Title: "Datatype XPN to HumanName Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "[1].given[1]"
+* group.element[1].target.comment = "The requirement for XPN.2 being the first iteration of HumanName.given critical when it's an \"official\" name"
 * group.element[2].code = #XPN.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -83,6 +84,7 @@ Title: "Datatype XPN to HumanName Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "[1].given[2]"
+* group.element[2].target.comment = "Consideration must be given if XPN.3 contains multiple names separated by a space. Should these be a single iteration of HumanName.given or is each name an iteration? For example, if XPN.3 is \"Mary Anne\", is that one name or two?"
 * group.element[3].code = #XPN.4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -300,6 +302,10 @@ Title: "Datatype XPN to HumanName Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = -1
 * group.element[13].target.display = "[2].given"
+* group.element[13].target.comment = """
+One possibility is to put this in HumanName.given where HumanName.use="usual". When XPN.7 does not map to "usual" a new occurence of Patient.name should be created
+Alternative a new extension could be created for HumanName.family.#ext-called-by#\
+"""
 * group.element[13].target.product[0].property = "narrative"
 * group.element[13].target.product[0].value = "if the resource attribute using the HumanName datatype allows for multiple names"
 * group.element[14].code = #XPN.15

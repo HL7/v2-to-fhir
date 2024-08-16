@@ -1,7 +1,7 @@
 HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
 Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
 A,Amended ,HL70085,,,,amended,,Amended,http://hl7.org/fhir/observation-status,,
-B,Appended ,HL70085,,,,,,,,,
+B,Appended ,HL70085,,,,appended,,Appended,http://hl7.org/fhir/observation-status,,
 C,Correction ,HL70085,,,,corrected,,Corrected,http://hl7.org/fhir/observation-status,,
 D,Deleted,HL70085,,,,entered-in-error,,Entered in Error,http://hl7.org/fhir/observation-status,,
 F,Final,HL70085,,,,final,,Final,http://hl7.org/fhir/observation-status,,

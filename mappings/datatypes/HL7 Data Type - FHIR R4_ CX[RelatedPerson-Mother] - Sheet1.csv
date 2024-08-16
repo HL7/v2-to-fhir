@@ -2,6 +2,8 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 0,,,,,,,,,patient(Patient.identifier),,,,,,,/one of the PID-3 or other available identifiers that uniquely links to the patient who's mother is represented in this RelatedPerson instance./,,
+0,,,,,,,,,relationship[1].coding[1].code,,,,,,,"/a relationship type that represents ""mother"" should be populated with ""MTH"" as default if no further context is known, or either of ""AOPTM"", ""GESTM"", ""NMTH"", ""NMTHF"", ""STPMTH"" if the context is known.",,
+0,,,,,,,,,relationship[1].coding[1].system,,,,,,,"""https://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-_PersonalRelationshipRoleType""",,
 1,CX.1,ID Number,ST,1,1,,,,identifier.value,,string,0,1,,,,,
 2,CX.2,Identifier Check Digit,ST,0,1,,,,identifier.extension[1].url,,uri,0,1,,,"""http://hl7.org/fhir/StructureDefinition/identifier-checkDigit""",,
 2,CX.2,Identifier Check Digit,ST,0,1,,,,identifier.extension[1].valueString,,string,1,1,,,,,

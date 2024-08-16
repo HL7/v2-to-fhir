@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ MSH[Encounter] - Sheet1.csv
 Instance: SegmentMSHToEncounter
 InstanceOf: ConceptMap
-Title: "Segment MSH to Encounter Map"
-* title = "Segment MSH to Encounter Map"
+Title: "Segment MSHnull to Encounter Map"
+* title = "Segment MSHnull to Encounter Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment MSH to the FHIR Encounter Resource."
 * id = "segment-msh-to-encounter"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-msh-to-encounter"
@@ -10,7 +10,7 @@ Title: "Segment MSH to Encounter Map"
 * name = "SegmentMSHToEncounter"
 * status = #active
 * experimental = true
-* date = "2024-04-24"
+* date = "2024-07-28"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
