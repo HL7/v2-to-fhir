@@ -36,7 +36,7 @@ public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements C
             "Sort Order", "Identifier", "Name", "Data Type", "Cardinality - Min", "Cardinality - Max",
             "Computable ANTLR", "Computable FHIRPath", "Narrative",
             "FHIR Attribute", "Proposed Extension", "Data Type", "Cardinality - Min", "Cardinality - Max",
-            "Data Type Mapping", "Vocabulary", "Assignment"
+            "Data Type Mapping", "Vocabulary Mapping<br/>(IS, ID, CE, CEN, CWE)", "Assignment"
         };
         String titles[] = {
             "Rows are listed in sequence of how they appear in the v2 standard. "
