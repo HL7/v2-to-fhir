@@ -26,14 +26,6 @@ contact:
     telecom:
       - system: url
         value: http://www.hl7.org/Special/committees/orders
-  - name: Keith W. Boone
-    telecom:
-      - system: email
-        value: kboone@ainq.com
-  - name: Rob Hausam
-    telecom:
-      - system: email
-        value: rrhausam@gmail.com
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
 description: The HL7 V2 to FHIR Implementation Guide supports the mapping of HL7 Version 2 messages segments, datatypes and vocabulary to HL7 FHIR Release 4.0 Bundles, Resources, Data Types and Coding Systems.
 license: CC0-1.0
