@@ -130,6 +130,7 @@ MSH|^~\&|HIE|REDDING HOSPITAL|||20230814022400||MDM^T02^MDM_T02|10819306|P|2.5.1
 <br>OBX|2|FT|1055860039^Critical Values - Text||Critical Values Entered On:  08/22/2023 2:11 EDT \.br\ Performed On:  08/22/2023 2:11 EDT by BOYLE, KRISTEN C \.br\ \.br\ \.br\ \.br\ \.br\Called Critical Value Reported \.br\Critical Value Reported Lab :   Yes \.br\BOYLE, KRISTEN C - 08/22/2023 2:11 EDT \.br\Critical Lab Values \.br\Red List Hematology Grid \.br\  Heparin Test (AntiXa)        \.br\Lab Values :    1.27            \.br\  BOYLE, KRISTEN C - 08/22/2023 2:11 EDT     \.br\\.br\Result Received :   08/22/2023 02:11 EDT \.br\Received From :   K Gresco (Lab) \.br\Red List Result Read Back :   K Boyle (ED) \.br\Provider Notified :   No \.br\Reason not notified :   Protocol utilized \.br\BOYLE, KRISTEN C - 08/22/2023 2:11 EDT||||||F|||20230822021111||
 <br>OBX|3|ST|&GDT^Critical Values-String||Table formatting from the original result was not included.||||||F
 <br>OBX|4|ED|1111.2^PHQ-9 Depression Screen PDF^L^44249-1^PHQ-9 quick depression assessment panel [Reported.PHQ]^LN||CareCoordination^AP^PDF^Base64^<Base64 encoded>||||||F
+<br>
 </tr>
 </table>
 
