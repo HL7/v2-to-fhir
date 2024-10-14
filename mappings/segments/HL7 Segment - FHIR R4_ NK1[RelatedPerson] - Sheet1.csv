@@ -43,6 +43,8 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 36,NK1-36,Handicap,CWE,0,1,,,,,,,,,,,,,
 37,NK1-37,Contact Person Social Security Number,ST,0,1,,,,identifier[3].value,,Identifier,0,-1,,,,,
 37,NK1-37,Contact Person Social Security Number,ST,0,1,,,,identifier[3].system,,uri,0,-1,,,"""http://hl7.org/fhir/sid/us-ssn""",,
+37,NK1-37,Contact Person Social Security Number,ST,0,1,,,If in the US and various other jurisdictions,identifier[3].type.coding.code,,code,0,1,,,"""SS""",,
+37,NK1-37,Contact Person Social Security Number,ST,0,1,,,If outside the US for certain jurisdictions,identifier[3].type.coding.code,,code,0,1,,,"""SB""",,
 38,NK1-38,Next of Kin Birth Place,ST,0,1,,,,,,,,,,,,,
 39,NK1-39,VIP Indicator,CWE,0,1,,,,,,,,,,,,,
 40,NK1-40,Next of Kin Telecommunication Information,XTN,0,1,,,,telecom[4],,ContactPoint,0,-1,XTN[ContactPoint],,,,

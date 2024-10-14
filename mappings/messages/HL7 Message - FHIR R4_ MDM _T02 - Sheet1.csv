@@ -13,7 +13,9 @@ Provenance[1].entity.role=""source""",,
 5,MDM_T02.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
 5,MDM_T02.PID,PID,Patient Identification,1,1,,,,Provenance[4],PID[Provenance-Patient],Provenance.target.reference=Patient[1].id,,
 6,MDM_T02.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter.subject=Patient[PID],,Processing of the PV1 segment results in the creation of a new Encounter resource
+6,MDM_T02.PV1,PV1,Patient Visit,1,1,IF PV1-43 VALUED,,,EncounterHistory,PV1[EncounterHistory],EncounterHistory.subject.reference=Patient[1].id,,
 6,MDM_T02.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
+6,MDM_T02.PV1,PV1,Patient Visit,1,1,IF PV1-20 VALUE,,,Coverage[1],PV1[Coverage],Coverage.beneficiary.reference=Patient[1].id,,
 7,MDM_T02.COMMON_ORDER,[{,--- COMMON_ORDER begin,0,-1,,,,,,,,
 7.1,MDM_T02.COMMON_ORDER.ORC,ORC,Common order segment,1,1,,,,ServiceRequest[1],ORC[ServiceRequest],ServiceRequest.subject=Patient[PID],,Processing of each ORC segment results in the creation of a new ServiceRequest resource
 7.1,MDM_T02.COMMON_ORDER.ORC,ORC,Common order segment,1,1,,,,Provenance[3],ORC[Provenance],Provenance.target=ServiceRequest[ORC],,"Using Provenance is the preferred way, but a local implementation may decide to add extensions to the main resource.  As the use and guidance of Provenance matures we wil revisit this later."

@@ -10,7 +10,7 @@ Title: "Table HL70085null to Observation Status Map"
 * name = "TableHL70085ToObservationStatus"
 * status = #active
 * experimental = true
-* date = "2024-07-28"
+* date = "2024-10-14"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -52,9 +52,13 @@ Title: "Table HL70085null to Observation Status Map"
 * group.element[5].code = #I
 * group.element[5].display = "Specimen in Lab; results pending"
 * group.element[5].target.equivalence = #equivalent
+* group.element[5].target.code = #specimen-in-process
+* group.element[5].target.display = "Specimen In Process"
 * group.element[6].code = #N
 * group.element[6].display = "Not Asked"
-* group.element[6].target.equivalence = #unmatched
+* group.element[6].target.equivalence = #equivalent
+* group.element[6].target.code = #not-asked
+* group.element[6].target.display = "Not Asked"
 * group.element[7].code = #O
 * group.element[7].display = "Order Detail"
 * group.element[7].target.equivalence = #unmatched

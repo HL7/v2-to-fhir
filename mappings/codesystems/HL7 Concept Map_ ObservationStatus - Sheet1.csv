@@ -5,14 +5,14 @@ B,Appended ,HL70085,,,,appended,,Appended,http://hl7.org/fhir/observation-status
 C,Correction ,HL70085,,,,corrected,,Corrected,http://hl7.org/fhir/observation-status,,
 D,Deleted,HL70085,,,,entered-in-error,,Entered in Error,http://hl7.org/fhir/observation-status,,
 F,Final,HL70085,,,,final,,Final,http://hl7.org/fhir/observation-status,,
-I,Specimen in Lab; results pending,HL70085,,,, ,,Registered,http://hl7.org/fhir/observation-status,,ask update to registered to include in-process explicitly
-N,Not Asked,HL70085,,,Depedending on context,,,,,,
+I,Specimen in Lab; results pending,HL70085,,,,specimen-in-process,,Specimen In Process,http://hl7.org/fhir/observation-status,,
+N,Not Asked,HL70085,,,,not-asked,,Not Asked,http://hl7.org/fhir/observation-status,,
 O,Order Detail,HL70085,,,,,,,,,
 P,Preliminary,HL70085,,,,preliminary,,Preliminary,http://hl7.org/fhir/observation-status,,
 R,Entered - Not Verified,HL70085,,,,,,,,,
 S,Partial,HL70085,,,,,,,,,
 V,Verified,HL70085,,,,,"Create JIRA: Final results reviewed and confirmed to be correct, no change to result value, normal range or abnormal flag",,,,"Depending on the interepretation and which verification step is being referenced (e.g., the one before finalizing, or after finalizing to validate/verify it is actually correct), this may need to become an originalCodeableConcept on Observation.status or an Observation.note."
-X,Cannot be Obtained,HL70085,,,,cancelled,,,http://hl7.org/fhir/observation-status,,
+X,Cannot be Obtained,HL70085,,,,cancelled,,,http://hl7.org/fhir/observation-status,,"And set data-absent-reason on Observation.value to ""cannot-be-obtained"""
 U,Status Change to Final Without Retransmission,HL70085,,,,,,,,,
 W,Original Posted as Wrong,HL70085,,,,entered-in-error,,Entered in Error,http://hl7.org/fhir/observation-status,,
 ,,,,,,,now,,,,"Now: The existence of the observation is registered, but there is no result yet available."

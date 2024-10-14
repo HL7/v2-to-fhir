@@ -34,7 +34,9 @@ Provenance[1].entity.role=""source""",,
 15.2,ADT_A01.NEXT_OF_KIN.OH3,[  OH3  ],Usual Work,0,1,,,,,,,,
 15.3,/ADT_A01.NEXT_OF_KIN,}],--- NEXT_OF_KIN end,,,,,,,,,,
 16,ADT_A01.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter[1].subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
+16,ADT_A01.PV1,PV1,Patient Visit,1,1,IF PV1-43 VALUED,,,EncounterHistory,PV1[EncounterHistory],EncounterHistory.subject.reference=Patient[1].id,,
 16,ADT_A01.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
+16,ADT_A01.PV1,PV1,Patient Visit,1,1,IF PV1-20 VALUE,,,Coverage[1],PV1[Coverage],Coverage.beneficiary.reference=Patient[1].id,,
 17,ADT_A01.PV2,[ PV2 ],Patient Visit - Additional Info.,0,1,,,,Encounter[1],PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.
 18,ADT_A01:follow:PV1.ARV,[{ ARV }],Access Restrictions,0,-1,,,,,,,,"FHIR does not yet support field level security tags.  The ARV, when located with the PV1/PV2 in the v2 message, is meant to only apply to the encounter.  However, technically it could point to other places in the messageas as well.  That is considered out of scope as."
 19,ADT_A01:follow:PV1.ROL,[{ ROL }],Role,0,-1,,,,Encounter[1],ROL[Encounter-PractitionerRole],,,
