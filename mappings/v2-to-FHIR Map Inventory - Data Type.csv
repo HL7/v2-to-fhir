@@ -46,7 +46,7 @@ HL7 Data Type - FHIR R4: EIP[Identifier-FillerAssignedIdentifier],Ready for Ball
 HL7 Data Type - FHIR R4: EIP[Identifier-PlacerAssignedIdentifier],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1Ez3350XkVw7cS5ufWsFVpVXV884WOtutsWFfEAZUUvo/edit#gid=0
 HL7 Data Type - FHIR R4: ERL,Under Construction,Kathleen,,https://docs.google.com/spreadsheets/d/1zgohCF9AdUx1K3l2a2OrJhg9FFKs9MIfJ0iOyOPDtUU/edit#gid=0
 HL7 Data Type - FHIR R4: FN[HumanName],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/16_unbJhBhLcdgy0KhkwtNfZiK2RzGOVghUlm6VKjWmc/edit#gid=0
-HL7 Data Type - FHIR R4: FT[Annotation-Comment],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1fksIG8cf2DGSE7uHc_-UnP1VCfPGmObeREWqaQTNIRg/edit#gid=0
+HL7 Data Type - FHIR R4: FT[Annotation-Comment],Ready for Ballot,,To force a change for load.,https://docs.google.com/spreadsheets/d/1fksIG8cf2DGSE7uHc_-UnP1VCfPGmObeREWqaQTNIRg/edit#gid=0
 HL7 Data Type - FHIR R4: HD[Device],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/18o2QLSHQPkRr1S0vax7G4tuuXQnhE9wJl0n1kjupS7U/edit#gid=0
 HL7 Data Type - FHIR R4: HD[extension-AssigningAuthority],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1thMC8Et_hA-VC-DyerLrpNDcNdzPOIql9Z7SP7u9h_w/edit#gid=0
 HL7 Data Type - FHIR R4: HD[Identifier],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1Ao9N1tFgkzTMGA1y0stCr0sgDk6vVtzT6TnpdByshC4/edit#gid=0
@@ -78,7 +78,7 @@ HL7 Data Type - FHIR R4: NM[Quantity],Ready for Ballot,,,https://docs.google.com
 HL7 Data Type - FHIR R4: NM[SimpleQuantity],Under Construction,,,
 HL7 Data Type - FHIR R4: NR[Range],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1o7Z8P8sOk9fjHiUYFfv1hVNhuKVdm34MmivLiyqdXUY/edit#gid=0
 HL7 Data Type - FHIR R4: OG[Extension-Subidentifier],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1b5obkzO4CkZ8IRVI_b2kaKrPbHAgdNMvjc-ez3IxJig/edit#gid=0
-HL7 Data Type - FHIR R4: PL[Location],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/17b4wqJOzGieNBSdHYZt3ymKucsRDd_h8leaiz_umG7E/edit#gid=0
+HL7 Data Type - FHIR R4: PL[Encounter.location],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/17b4wqJOzGieNBSdHYZt3ymKucsRDd_h8leaiz_umG7E/edit#gid=0
 HL7 Data Type - FHIR R4: PLN[Identifier],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1ac4z8T-3r5guzjHNW60VjDBfBFnVaHV2e2bXhlJSkjg/edit#gid=0
 HL7 Data Type - FHIR R4: PLN[Location],Under Construction,,,
 HL7 Data Type - FHIR R4: PT[Meta],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1WAGzkLwwhJJGdsry9llddsgZpwjs3D1xoeir_guRVKI/edit#gid=0
