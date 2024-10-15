@@ -15,17 +15,27 @@ package org.hl7.v2tofhir;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.text.WordUtils;
 
 
 public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implements Converter {
-
+	public static Map<String, String> vocabToLinkMap = new LinkedHashMap<>();
+	
     public ConceptMapConverter(File f, String sourceUrl) throws IOException {
         super(ConceptMapInput.class, sourceUrl);
         load(f);
+        String name = StringUtils.substringBetween(
+        		f.getName().toLowerCase().replaceAll("[^a-z]+",""),  
+        		"map_ ", " ");
+        vocabToLinkMap.put(name, getHtmlFileName());
+    }
+    
+    public static String getLinkFromName(String name) {
+    	return vocabToLinkMap.get(name.toLowerCase().replaceAll("[^a-z]+",""));
     }
 
     @Override
@@ -54,7 +64,7 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
             };
             w.print("<tr>");
             for (String col: cols) {
-                if (col == bean.v2CodeSystem || col == bean.conditionNarrative) {
+                if (escapeHtmlString(bean.v2CodeSystem).equals(col) || escapeHtmlString(bean.conditionNarrative).equals(col)) {
                     w.printf("<td style='border-right: 2px'>%s</td>", col);
                 } else {
                     w.printf("<td>%s</td>", col);

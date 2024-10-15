@@ -55,50 +55,44 @@ public class Convert {
         String download = null;
         boolean success = true;
         for (String arg: args) {
-            try {
-                if (arg.startsWith("-e")) {
-                    break; // We're done
+            if (arg.startsWith("-e")) {
+                break; // We're done
+            }
+            if (arg.startsWith("-o")) {
+                output = arg.substring(2);
+                File dir = new File(output);
+                if (!dir.exists()) {
+                    dir.mkdirs();
                 }
-                if (arg.startsWith("-o")) {
-                    output = arg.substring(2);
-                    File dir = new File(output);
-                    if (!dir.exists()) {
-                        dir.mkdirs();
-                    }
-                    // MAP_OUTPUT_DIR = new File(dir, PAGE_CONTENT_DIR).getPath() + "/";
-                    continue;
-                } else if (arg.startsWith("-d")) {
-                    download = arg.substring(2);
-                    outputFileMap.clear();
-                    outputFileMap.put(".", new File(output).getPath());
-                    downloadAll(download, output, true);
-                    writeFileToUrlMap(output);
-                    continue;
-                } else if (arg.startsWith("-r")) {
-                    download = arg.substring(2);
-                    outputFileMap.clear();
-                    outputFileMap.put(".", new File(output).getPath());
-                    downloadAll(download, output, false);
-                    writeFileToUrlMap(output);
-                    continue;
+                // MAP_OUTPUT_DIR = new File(dir, PAGE_CONTENT_DIR).getPath() + "/";
+                continue;
+            } else if (arg.startsWith("-d")) {
+                download = arg.substring(2);
+                outputFileMap.clear();
+                outputFileMap.put(".", new File(output).getPath());
+                downloadAll(download, output, true);
+                writeFileToUrlMap(output);
+                continue;
+            } else if (arg.startsWith("-r")) {
+                download = arg.substring(2);
+                outputFileMap.clear();
+                outputFileMap.put(".", new File(output).getPath());
+                downloadAll(download, output, false);
+                writeFileToUrlMap(output);
+                continue;
+            }
+            File f = new File(arg);
+            if (!f.exists()) {
+                ConverterImpl.report(true, arg, 0, "'%s' does not exist.\n", arg);
+            } else if (f.isDirectory()) {
+                for (File l : FileUtils.listFiles(f, new String[] { "csv" }, false)) {
+                    addToConversions(l, output);
                 }
-                File f = new File(arg);
-                if (!f.exists()) {
-                    ConverterImpl.report(true, arg, 0, "'%s' does not exist.\n", arg);
-                } else if (f.isDirectory()) {
-                    for (File l : FileUtils.listFiles(f, new String[] { "csv" }, false)) {
-                        convert(l, output);
-                    }
-                } else {
-                    convert(f, output);
-                }
-            } catch (Exception e) {
-                ConverterImpl.report(true, arg, 0, "Unexpected error during conversion of '%s'.%n", arg);
-                e.printStackTrace();
-                success = false;
+            } else {
+            	addToConversions(f, output);
             }
         }
-
+        convertAll();
         // For each converted piece of content, generate the mapping outputs.
         try {
             generateMapOutputs();
@@ -115,7 +109,34 @@ public class Convert {
         System.exit(success ? 0 : 1);
     }
 
-    /**
+    private static Map<File, String> conversions = new TreeMap<>(Convert::compareByFileType);
+    
+    private static void addToConversions(File f, String output) {
+    	conversions.put(f, output);
+	}
+    // Put Concept Map conversions first in the list.
+    private static int compareByFileType(File f1, File f2) {
+    	if (f1 == f2 || f1.equals(f2)) {
+    		return 0;
+    	}
+    	int result = getType(f1.getName()).compareTo(getType(f2.getName()));
+    	return result == 0 ? f1.getName().compareTo(f2.getName()) : result;
+    }
+    private static boolean convertAll() {
+    	boolean success = true;
+    	for (Map.Entry<File, String> e: conversions.entrySet()) {
+            try {
+            	convert(e.getKey(), e.getValue());
+            } catch (Exception ex) {
+                ConverterImpl.report(true, "N/A", 0, "Unexpected error generating map tables.");
+                ex.printStackTrace();
+                success = false;
+            }
+    	}
+    	return success;
+    }
+
+	/**
      * Write a map of files to URLs for mapping during
      * generation stage.
      * @param output    The folder in which to put the map.
@@ -132,14 +153,14 @@ public class Convert {
     }
 
     private static void generateMapOutputs() {
-        String files[] = { MAP_OUTPUT_DIR + "message_maps.md", MAP_OUTPUT_DIR + "segment_maps.md", MAP_OUTPUT_DIR + "datatype_maps.md", MAP_OUTPUT_DIR + "coding_system_maps.md" };
-        String types[] = { "Message", "Segment", "Datatype", "Table" };
+        String[] files = { MAP_OUTPUT_DIR + "message_maps.md", MAP_OUTPUT_DIR + "segment_maps.md", MAP_OUTPUT_DIR + "datatype_maps.md", MAP_OUTPUT_DIR + "coding_system_maps.md" };
+        String[] types = { "Message", "Segment", "Datatype", "Table" };
 
         Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap();
 
         for (int i = 0; i < files.length; i++) {
             System.out.println(types[i]);
-            generateMapTables(files[i], generated.get(types[i]), files[i], m);
+            generateMapTables(generated.get(types[i]), files[i], m);
         }
     }
 
@@ -173,7 +194,7 @@ public class Convert {
         }
     }
 
-    private static void generateMapTables(String sourceFileToModify, Set<Converter> set, String chapterDataFile, Map<String, Map<String, Triple<String, String, String>>> m) {
+    private static void generateMapTables(Set<Converter> set, String chapterDataFile, Map<String, Map<String, Triple<String, String, String>>> m) {
         if (set == null || set.isEmpty()) {
             return;
         }
@@ -233,24 +254,6 @@ public class Convert {
         pw.printf("<h2 style='--heading-prefix: \"\"' id='mapping'>Mapping</h2>%n"
             + "{%% include %s_mapping.md %%}%n", type.replace(" ", "").toLowerCase());
 
-//        pw.printf("%n<div id=\"disqus_thread\"></div>%n" +
-//            "<script>%n" +
-//            "var disqus_config = function () {%n" +
-//            "this.page.url = \"http://build.fhir.org/hl7/v2-to-fhir/branches/master/%s.html\"; // Replace PAGE_URL with your page's canonical URL variable%n" +
-//            "this.page.identifier = this.page.url.substring(this.page.url.lastIndexOf(\"/\")+1, this.page.url.lastIndexOf(\".\")); // Replace PAGE_IDENTIFIER with your page's unique identifier variable%n" +
-//            "};%n" +
-//            "(function() { // DON'T EDIT BELOW THIS LINE%n" +
-//            "var d = document, s = d.createElement('script');%n" +
-//            "s.src = 'https://v2-to-fhir.disqus.com/embed.js';%n" +
-//            "s.setAttribute('data-timestamp', +new Date());%n" +
-//            "(d.head || d.body).appendChild(s);%n" +
-//            "})();%n" +
-//            "</script>%n" +
-//            "<noscript>%n" +
-//            "    Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a>%n" +
-//            "</noscript>%n" +
-//            "%n" +
-//            "", StringUtils.substringBeforeLast(StringUtils.substringAfter(cDataFile.getName(),"_"),"."));
         pw.close();
 
         try {
@@ -359,9 +362,6 @@ public class Convert {
         Map<String, Triple<String, String, String>> msgtype = m.get("Message Type");
         Map<String, Triple<String, String, String>> title = m.get("Chapter");
 
-        if (struct == null || c == null) {
-            System.err.println("Got here");
-        }
         Triple<String, String, String> structData = struct.get(c.getSourceName());
         if (structData == null) {
            ConverterImpl.report(true, "Structure %s not recognized.", 1, "N/A", c.getSourceName());
@@ -485,6 +485,24 @@ public class Convert {
         return string.replace(":","_").replace("/", "");
     }
 
+    private static String getType(String name) {
+        if (name.contains("Inventory")) {
+            return "Inventory";
+        } 
+        if (name.contains("Data Type")) {
+            return "Data Type";
+        } 
+        if (name.contains("Message")) {
+            return "Message";
+        } 
+        if (name.contains("Concept Map")) {
+        	return "Concept Map";
+        } 
+        if (name.contains("Segment")) {
+        	return "Segment";
+        }
+        return "Unknown";
+    }
     private static void convert(File f, String outputLocation) {
         String name = f.getName();
         ensureFileMapLoaded(f);
@@ -492,21 +510,27 @@ public class Convert {
         fileCount++;
         Converter c;
         try {
-            if (name.contains("Inventory")) {
-                // This is one of the inventory lists, skip it.
-                return;
-            } else if (name.contains("Data Type")) {
+        	switch (getType(name)) {
+    		case "Inventory":
+    			return;
+    		case "Data Type":
                 c = new DatatypeConverter(f, sourceUrl);
-            } else if (name.contains("Message")) {
+                break;
+    		case "Message":
                 c = new MessageConverter(f, sourceUrl);
-            } else if (name.contains("Concept Map")) {
+                break;
+    		case "Concept Map":
                 c = new ConceptMapConverter(f, sourceUrl);
-            } else if (name.contains("Segment")) {
+    			break;
+    		case "Segment":
                 c = new SegmentConverter(f, sourceUrl);
-            }  else {
+                break;
+    		case "Unknown":
+            default:
                 System.err.printf("Don't know know how to convert '%s'.\n", f);
                 return;
-            }
+    		}
+        	
             String output = c.getFishFileName();
             if (output.contains("to Unknown.fsh")) {
                 ConverterImpl.report(false, c.getSourceFileName(), 1, "%s does not have any FHIR Mapping Content%n", c.getSourceFileName());

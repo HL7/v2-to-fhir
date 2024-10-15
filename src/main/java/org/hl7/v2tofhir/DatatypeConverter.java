@@ -32,13 +32,13 @@ public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements C
         w.print("<tr><th colspan='6'>HL7 v2</th><th colspan='3'>Condition (IF True, args)</th>");
         w.println("<th colspan='8'>HL7 FHIR</th><th rowspan='2'>Comments</th></tr>");
         w.print("<tr>");
-        String heads[] = {
+        String[] heads = {
             "Sort Order", "Identifier", "Name", "Data Type", "Cardinality - Min", "Cardinality - Max",
             "Computable ANTLR", "Computable FHIRPath", "Narrative",
             "FHIR Attribute", "Proposed Extension", "Data Type", "Cardinality - Min", "Cardinality - Max",
             "Data Type Mapping", "Vocabulary Mapping<br/>(IS, ID, CE, CEN, CWE)", "Assignment"
         };
-        String titles[] = {
+        String[] titles = {
             "Rows are listed in sequence of how they appear in the v2 standard. "
                 + "The first column, Sort Order, provides a sort order that can re-create "
                 + "the original v2 standard sequence in case one opts to re-sort/filter the rows.",
