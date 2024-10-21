@@ -10,7 +10,7 @@ Title: "Datatype XONnull to string Map"
 * name = "DatatypeXONToString"
 * status = #active
 * experimental = true
-* date = "2024-10-14"
+* date = "2024-10-21"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

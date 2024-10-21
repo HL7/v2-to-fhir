@@ -1,15 +1,16 @@
-HL7 v2		,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+pl,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,PV1-1,Set ID - PV1,SI,0,1,,,,,,,,,,,,,
 2,PV1-2,Patient Class,CWE,1,1,,,,class,,Coding,1,1,CWE[Coding],PatientClass[EncounterClass],,,
 2,PV1-2,Patient Class,CWE,1,1,IF PV1-45 NOT VALUED,,,status,,code,1,1,CWE[code],PatientClass[EncounterStatus],,,
-3,PV1-3,Assigned Patient Location,PL,0,1,,,,location[1],,Backbone,0,1,PL[Encounter.location],,,,Recommended is to put the most granular location from the v2 segment into the location.  But it is acceptable if all known location on the v2 segment are included.
+3,PV1-3,Assigned Patient Location,PL,0,1,,,,location[1].location(Location),,Reference(Location),1,1,PL[location],,,,Recommended is to put the most granular location from the v2 segment in Encounter.location(Location) and then chain the less granular back to the most granular using Location.partOf.  The additional Location instance do then not need to be linked directly in Encounter.location to avoid confusion on purpose and relationships.
 3,PV1-3,Assigned Patient Location,PL,0,1,"IF PV1-2.1 NOT EQUALS ""P""",,,location[1].status,,code,0,1,,,"""active""",,
 3,PV1-3,Assigned Patient Location,PL,0,1,"IF PV1-2.1 EQUALS ""P""",,,location[1].status,,code,0,1,,,"""planned""",,
 4,PV1-4,Admission Type,CWE,0,1,,,,type,,CodeableConcept,0,-1,CWE[CodeableConcept],AdmissionType,,,
 5,PV1-5,Preadmit Number,CX,0,1,,,,hospitalization.preAdmissionIdentifier,,Identifier,0,1,CX[Identifier],,,,
-6,PV1-6,Prior Patient Location,PL,0,1,,,,location[2],,Reference(Location),0,1,PL[Encounter.location],,,,
+6,PV1-6,Prior Patient Location,PL,0,1,,,,location[2].location(Location),,Reference(Location),1,1,PL[Location],,,,
+6,PV1-6,Prior Patient Location,PL,0,1,,,,location[2].status,,code,0,1,,,"""completed""",,
 7,PV1-7,Attending Doctor,XCN,0,-1,,,,participant[1].individual(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
 7,PV1-7,Attending Doctor,XCN,0,-1,,,,participant[1].type.coding.code,,code,0,1,,,"""ATND""",,
 7,PV1-7,Attending Doctor,XCN,0,-1,,,,participant[1].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v3-ParticipationType""",,
@@ -23,7 +24,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 9,PV1-9,Consulting Doctor,XCN,0,-1,,,,participant[3].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v3-ParticipationType""",,
 9,PV1-9,Consulting Doctor,XCN,0,-1,,,,participant[3].type.text,,string,0,1,,,"""consultant""",,
 10,PV1-10,Hospital Service,CWE,0,1,,,,serviceType,,CodeableConcept,0,1,CWE[CodeableConcept],HospitalService,,,
-11,PV1-11,Temporary Location,PL,0,1,,,,location[3],,Backbone,0,-1,PL[Location],,,,
+11,PV1-11,Temporary Location,PL,0,1,,,,location[3].location(Location),,Reference(Location),1,1,PL[Location],,,,
 11,PV1-11,Temporary Location,PL,0,1,,,,location[3].status,,code,0,1,,,"""active""",,
 11,PV1-11,Temporary Location,PL,0,1,,,,location[3].extension.url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/subject-locationClassification""",,
 11,PV1-11,Temporary Location,PL,0,1,,,,location[3].extension.valueCodeableConcept.coding.code,,code,,,,,"""temporary""",,
@@ -62,10 +63,15 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 37,PV1-37,Discharged to Location,DLD,0,1,,,,hospitalization.destination(Location),,Reference(Location),0,1,DLD[Location-Discharge],,/Encounter.hospitalization.destination.reference=Location[n].id/,,This location should be a new location resources instance.
 38,PV1-38,Diet Type,CWE,0,1,,,,hospitalization.dietPreference,,CodeableConcept,0,-1,CWE[CodeableConcept],DietType,,,
 39,PV1-39,Servicing Facility,CWE,0,1,,,,,,,,,,,,,
-40,PV1-40,Bed Status,IS,0,1,IF PV1-3.2 OR PV1-3.3 VALUED,,,location.location(Location.operationalStatus),,code,0,1,,BedStatus,,,The operational status is on the Location resource where the implementer must determine which of the Encounter.location(Location) instances reflect the Bed or Room and apply it to the most granular available.
+40,PV1-40,Bed Status,IS,0,1,IF PV1-3.2 OR PV1-3.3 VALUED,,,location[1].location(Location.operationalStatus),,code,0,1,,BedStatus,,,The operational status is on the Location resource where the implementer must determine which of the Encounter.location(Location) instances reflect the Bed or Room and apply it to the most granular available.
 41,PV1-41,Account Status,CWE,0,1,,,,,,,,,,,,,
-42,PV1-42,Pending Location,PL,0,1,,,,location[4],,Backbone,0,-1,PL[Location],,,,
-43,PV1-43,Prior Temporary Location,PL,0,1,,,,,,,,,,,,,
+42,PV1-42,Pending Location,PL,0,1,,,,location[4].location(Location),,Reference(Location),1,1,PL[Location],,"""reserved""",,
+42,PV1-42,Pending Location,PL,0,1,,,,location[4].status,,code,0,1,,,,,"""reserved"""
+43,PV1-43,Prior Temporary Location,PL,0,1,,,,location[5].location(Location),,Reference(Location),1,1,PL[Location],,,,
+43,PV1-43,Prior Temporary Location,PL,0,1,,,,location[5].status,,code,0,1,,,"""completed""",,
+,,,,,,,,,location[5].extension.url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/subject-locationClassification""",,
+43,PV1-43,Prior Temporary Location,PL,0,1,,,,location[5].extension.valueCodeableConcept.coding.code,,code,,,,,"""temporary""",,
+43,PV1-43,Prior Temporary Location,PL,0,1,,,,location[5].extension.valueCodeableConcept.coding.system,,uri,,,,,""" http://hl7.org/fhir/ValueSet/subject-location""",,
 44,PV1-44,Admit Date/Time,DTM,0,1,,,,period.start,,dateTime,0,1,,,,,
 45,PV1-45,Discharge Date/Time,DTM,0,1,,,,period.end,,dateTime,0,1,,,,,
 45,PV1-45,Discharge Date/Time,DTM,0,1,IF PV1-45 VALUED,,,"status=""finished""",,code,1,1,,,,,

@@ -10,7 +10,7 @@ Title: "Table HL70002null to V3 MaritalStatus Map"
 * name = "TableHL70002ToV3MaritalStatus"
 * status = #active
 * experimental = true
-* date = "2024-10-14"
+* date = "2024-10-21"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
