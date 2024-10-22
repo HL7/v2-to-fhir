@@ -4,14 +4,14 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 1,SPM-1,Set ID - SPM,SI,0,1,,,,,,,,,,,,,
 2,SPM-2,Specimen ID,EIP,0,1,,,,identifier[1],,Identifier,0,-1,EIP[Identifier-PlacerAssignedIdentifier],,,,
 2,SPM-2,Specimen ID,EIP,0,1,,,,identifier[2],,Identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,
-3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,,parent.identifier,,Identifier,0,1,EIP[Identifier-PlacerAssignedIdentifier],,,,"Note that Specimen.parent can repeat, i.e., match the SPM-3 cardinality, but Specimen.parent.identifier does not.  Therefore, while a specimen can have multiple parents, putting placer and filler parent identifiers in separate parent instances is not appropriate."
-3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,,parent.identifier,,Identifier,0,1,EIP[Identifier-FillerAssignedIdentifier],,,,
+3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,,parent[1](Specimen.identifier[1]),,Identifier,0,-1,EIP[Identifier-PlacerAssignedIdentifier],,,,
+3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,,parent[1](Specimen.identifier[2]),,Identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,
 4,SPM-4,Specimen Type,CWE,1,1,,,,type,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenType,,,
 5,SPM-5,Specimen Type Modifier,CWE,0,-1,,,,,,,,,,,,,
 6,SPM-6,Specimen Additives,CWE,0,-1,,,,container.additiveCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],Addition/Preservative,,,
 7,SPM-7,Specimen Collection Method,CWE,0,1,,,,collection.method,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenCollectionMethod,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)
 8,SPM-8,Specimen Source Site,CWE,0,1,,,,collection.bodySite,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenSourceSite,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)
-9,SPM-9,Specimen Source Site Modifier,CWE,0,-1,,,,,collection.extension??-bodySiteModifier,CodeableConcept,0,-1,CWE[CodeableConcept],SpecimenSourceTypeModifier,,,
+9,SPM-9,Specimen Source Site Modifier,CWE,0,-1,,,,,collection.extension??-bodySiteModifier,CodeableConcept,0,-1,CWE[CodeableConcept],SpecimenSourceTypeModifier,,,"Note that when using SNOMED codes in SPM-8, these are covered."
 10,SPM-10,Specimen Collection Site,CWE,0,1,,,,,,,,,,,,,
 11,SPM-11,Specimen Role,CWE,0,-1,,,,,,,,,,,,,
 12,SPM-12,Specimen Collection Amount,CQ,0,1,,,,collection.quantity,,SimpleQuantity,0,1,CQ[Quantity],,,,
@@ -24,7 +24,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 18,SPM-18,Specimen Received Date/Time,DTM,0,1,,,,receivedTime,,dateTime,0,1,,,,,
 19,SPM-19,Specimen Expiration Date/Time,DTM,0,1,,,,,,,,,,,,,
 20,SPM-20,Specimen Availability,ID,0,1,,,,status,,code,0,1,,Yes/No,,,
-21,SPM-21,Specimen Reject Reason,CWE,0,-1,,,,,extension??-rejectReason,CodeableConcept,0,-1,CWE[CodeableConcept],SpecimenRejectReason,,,
+21,SPM-21,Specimen Reject Reason,CWE,0,-1,,,,,,,,,,SpecimenRejectReason,,,"This should be mapped top the correct ServiceRequest.dataAbsentReason as the speciman is rejected in the context of a particular test given the specimen condition.  Since the placement of the SPM in the message is not always clear as to which ORC/OBR it relates to, we cannot provide specific mapping beyond the vocabulary map."
 22,SPM-22,Specimen Quality,CWE,0,1,,,,,,,,,,,,,
 23,SPM-23,Specimen Appropriateness,CWE,0,1,,,,,,,,,,,,,
 24,SPM-24,Specimen Condition,CWE,0,-1,,,,condition,,CodeableConcept,0,-1,CWE[CodeableConcept],SpecimenCondition,,,

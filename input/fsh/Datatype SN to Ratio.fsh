@@ -10,7 +10,7 @@ Title: "Datatype SNnull to Ratio Map"
 * name = "DatatypeSNToRatio"
 * status = #active
 * experimental = true
-* date = "2024-07-28"
+* date = "2024-10-21"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -76,5 +76,3 @@ Title: "Datatype SNnull to Ratio Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "denominator.value"
-* group.element[2].target.product[0].property = "antlr"
-* group.element[2].target.product[0].value = "IF SN.3 IN (\"/\",\"\")"

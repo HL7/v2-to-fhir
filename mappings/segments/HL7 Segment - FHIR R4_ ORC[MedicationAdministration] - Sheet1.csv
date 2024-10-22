@@ -1,7 +1,10 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
-1,ORC-1,Order Control,ID,1,1,,,,,,,,,,,,,
+1,ORC-1,Order Control,ID,1,1,,,,extension.url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/businessEvent""",,
+1,ORC-1,Order Control,ID,1,1,,,,extension[1].extension.url,,uri,1,1,,,"""value""",,
+1,ORC-1,Order Control,ID,1,1,,,,extension[1].valueCodeableConcept.coding.code,,code,1,1,,,,,
+1,ORC-1,Order Control,ID,1,1,,,,extension[1].valueCodeableConcept.coding.system,,uri,1,1,,,"""http://terminology.hl7.org/ValueSet/v2-0119""",,
 2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
 2,ORC-2,Placer Order Number,EI,0,1,,,,"identifier[1].type.coding.code=""PLAC""",,code,0,1,,,"""PLAC""",,
 2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,

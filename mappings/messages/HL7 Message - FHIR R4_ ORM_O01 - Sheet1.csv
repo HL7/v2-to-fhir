@@ -13,7 +13,9 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 3.3,ORM_O01.PATIENT.NTE,[{ NTE }],Notes and Comments (for Patient ID),0,-1,,,,,,,,
 3.4,ORM_O01.PATIENT.VISIT,[,PATIENT_VISIT begin,0,1,,,,,,,,
 3.4.1,ORM_O01.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter.subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
+3.4.1,ORM_O01.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,IF PV1-43 VALUED,,,EncounterHistory,PV1[EncounterHistory],EncounterHistory.subject.reference=Patient[1].id,,
 3.4.1,ORM_O01.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
+3.4.1,ORM_O01.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,IF PV1-20 VALUE,,,Coverage[1],PV1[Coverage],Coverage.beneficiary.reference=Patient[1].id,,
 3.4.2,ORM_O01.PATIENT.VISIT.PV2,[ PV2 ],Patient Visit- Additional Info,0,1,,,,Encounter[1],PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.
 3.4.3,/ORM_O01.PATIENT.VISIT,],PATIENT_VISIT end,,,,,,,,,,
 3.5,ORM_O01.PATIENT.INSURANCE,[{,INSURANCE begin,0,-1,,,,,,,,

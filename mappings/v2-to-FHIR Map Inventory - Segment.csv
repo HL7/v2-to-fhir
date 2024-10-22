@@ -1,4 +1,4 @@
-Segment,Status,Owner,Comment,Link
+.,Status,Owner,Comment,Link
 HL7 Segment - FHIR R4: ACC[Accident],Under Construction,Hans,,https://docs.google.com/spreadsheets/d/1aAeI7Hs2zq9dEGBFaj0Yzxb22nEURrbqWNlbc__jx0c/edit#gid=0
 HL7 Segment - FHIR R4: AIG[Appointment],Ready for Ballot,Camila,,https://docs.google.com/spreadsheets/d/1uJX48rZptCjY68MjnSD_bTmJfhNoWYGn2rbDJCoutpw/edit#gid=0
 HL7 Segment - FHIR R4: AIL[Appointment],Ready for Ballot,Camila,,https://docs.google.com/spreadsheets/d/1ZIiSCg23gdsYPJn89PRipOIKfdV6zM28P-YmGYcFyvQ/edit#gid=0
@@ -52,11 +52,12 @@ HL7 Segment - FHIR R4: ORC[Provenance],Ready for Ballot,Craig,,https://docs.goog
 HL7 Segment - FHIR R4: ORC[ServiceRequest],Ready for Ballot,Craig,,https://docs.google.com/spreadsheets/d/11VBF5TIRJTfRwkRIK1XH-k40dZqCd3g3a0sBY-zJU4Q/edit#gid=0
 HL7 Segment - FHIR R4: ORC[Task-CancelOrder],Under Construction,Craig,,https://docs.google.com/spreadsheets/d/1c90sEyXTv_U-SorzsRUylaSo0WKK1zkEFe-SsZxZjeI/edit#gid=0
 HL7 Segment - FHIR R4: ORC[Task-NewOrder],Under Construction,Craig,,https://docs.google.com/spreadsheets/d/17oT3ymSKb36XKoy7zxzvMOt7V_rWQ8dYeK_lHlVbNIk/edit#gid=0
+HL7 Segment - FHIR R4: PD1[Observation-LivingWill],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1v2Ip_zAEz8INIx7tLmTa4PwyG6IfEUD1wjzVLJls4Ik/edit#gid=0
 HL7 Segment - FHIR R4: PD1[Patient],Ready for Ballot,Craig,,https://docs.google.com/spreadsheets/d/1SieDEcKFbQbB2N7c3elw4JTTDFAAwZDklwnGT5Y8tGE/edit#gid=0
 HL7 Segment - FHIR R4: PID[Account],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1i1A5E-IkTnWarRsHoz-ii_0m2tYyhRjCe1TEodq18fA/edit#gid=0
 HL7 Segment - FHIR R4: PID[Appointment],Ready for Ballot,Camila,,https://docs.google.com/spreadsheets/d/179qbacXadBfYInQC-qj3gcfozPKqhxq109i4GgaHocQ/edit#gid=0
-HL7 Segment - FHIR R4: PID[Observation-EthnicGroup],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1H6LeQTfX-Dmy_OH-3PrUWbRYppreBEz5RlbbTZT6afA/edit#gid=0
-HL7 Segment - FHIR R4: PID[Observation-Race],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1sYh9IqPN2_KBsQIjgMe83CZGUkdfWBu4Exo1C11VhLI/edit#gid=0
+HL7 Segment - FHIR R4: PID[Observation-EthnicGroup],Obsolete - Do Not Use,Hans,,https://docs.google.com/spreadsheets/d/1H6LeQTfX-Dmy_OH-3PrUWbRYppreBEz5RlbbTZT6afA/edit#gid=0
+HL7 Segment - FHIR R4: PID[Observation-Race],Obsolete - Do Not Use,Hans,,https://docs.google.com/spreadsheets/d/1sYh9IqPN2_KBsQIjgMe83CZGUkdfWBu4Exo1C11VhLI/edit#gid=0
 HL7 Segment - FHIR R4: PID[Patient],Ready for Ballot,Craig,,https://docs.google.com/spreadsheets/d/1_MOAJOykRWct_9cBG-EcPcWSpSObQFLboPB579DIoAI/edit#gid=0
 HL7 Segment - FHIR R4: PID[Provenance-Patient],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1n_mRDFUD-LI6_fVxNurlTCU53Rn6AfDnE75wPH6hC4I/edit#gid=0
 HL7 Segment - FHIR R4: PID[RelatedPerson-Mother],Obsolete - Do Not Use,Hans,,https://docs.google.com/spreadsheets/d/1wBtC5pRBlFVuqSCiBY2tcOTBqslBUAvcuFsIkTfdX7E/edit#gid=0
@@ -71,6 +72,7 @@ HL7 Segment - FHIR R4: PRT[Patient-GeneralPractitioner-PractitionerRole],Ready f
 HL7 Segment - FHIR R4: PRT[PractitionerRole],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1UBY3MvsvJhw7jhUfVjywvLacO54CcnInnAkjTT0Jp5I/edit#gid=0
 HL7 Segment - FHIR R4: PRT[RelatedPerson],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/17gCMgdR8Jq9viGiCTN67QvGEnJLNMlyVaMT5325tmh4/edit#gid=0
 HL7 Segment - FHIR R4: PV1[Encounter],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1Sqt8f_LpBVMIdJxcAlB4emDOBqXV8rhy60V2_yaDp7c/edit#gid=0
+HL7 Segment - FHIR R4: PV1[EncounterHistory],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1IImvKb98HDkCh-Gf0cRkBhfU1L8K9dT4KMJayiYwZ78/edit?gid=0#gid=0
 HL7 Segment - FHIR R4: PV1[Patient],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1SeTn6m72yUh4hho7jqN-YmuHbnO6LlGlZur7BVrpfrI/edit#gid=0
 HL7 Segment - FHIR R4: PV2[Encounter],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1ILbJ8GmvNdEW4XmvrmEHtZxsRM1bk5hHl5WD2oDSa4Q/edit#gid=0
 HL7 Segment - FHIR R4: ROL[CareTeam],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/176RU_RNmoJK2pR0Ri-x-S93l3F7g2mfK22S-q7bh5Ik/edit#gid=0
@@ -101,3 +103,4 @@ HL7 Segment - FHIR R4: TQ1[ServiceRequest],Ready for Ballot,Craig,,https://docs.
 HL7 Segment - FHIR R4: TQ2[MedicationRequest],Under Construction,Hans,,https://docs.google.com/spreadsheets/d/1O4Vt9TMKcaZjU1ucGPR9W8Mtz60KoRropWEmFNvx6hc/edit#gid=0
 HL7 Segment - FHIR R4: TQ2[ServiceRequest],Under Construction,Hans,,https://docs.google.com/spreadsheets/d/1YbLePvTOLPmC36bvfEHEY-q8XT_DYXGYDyI-LjcTf4c/edit#gid=0
 HL7 Segment - FHIR R4: TXA[DocumentReference],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/1KG7hMdxhhmXcRL12IJz_e8OAf-6iMACovo6KtsM1Tpk/edit#gid=0
+HL7 Segment - FHIR R4: TXA[Provenance],Ready for Ballot,Hans,,https://docs.google.com/spreadsheets/d/14WD1YPRWINIG4WQ4GuBI77_6xTSdFW17aH3IrbHUyvo/edit?gid=0#gid=0

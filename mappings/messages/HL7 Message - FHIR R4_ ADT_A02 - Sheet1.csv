@@ -16,7 +16,7 @@ Provenance[1].entity.role=""source""",,
 6,ADT_A02.PID,PID,Patient Identification,1,1,,,,Account,PID[Account],Account.subject.reference=Patient[1].id,,
 6,ADT_A02.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance-Patient],Provenance.target.reference=Patient[1].id,,
 7,ADT_A02.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
-7,ADT_A01.PD1,[ PD1 ],Additional Demographics,0,1,IF PD1-7 VALUED,,,Observation[1],PD1[Observation-LivingWill],Observation[1].subject.reference=Patient[1].id,,
+7,ADT_A02.PD1,[ PD1 ],Additional Demographics,0,1,IF PD1-7 VALUED,,,Observation[1],PD1[Observation-LivingWill],Observation[1].subject.reference=Patient[1].id,,
 8,ADT_A02.OH1,[{ OH1 }],Employment Status,0,-1,,,,,,,,
 9,ADT_A02.OH2,[{ OH2 }],Past or Present Job,0,-1,,,,,,,,
 10,ADT_A02.OH3,[  OH3  ],Usual Work,0,1,,,,,,,,
@@ -27,7 +27,9 @@ Provenance[1].entity.role=""source""",,
 14,ADT_A02:follow:PID.PRT,[{ PRT }],Participation,0,-1,"IF PRT-4 IS ""PP""",,,Patient[1],PRT[Patient-GeneralPractitioner-Practitioner],,,
 14,ADT_A02:follow:PID.PRT,[{ PRT }],Participation,0,-1,"IF PRT-4 IS IN (""AD"", ""AP"", ""ARI"", ""AT"", ""CP"", ""FHCP"", ""OP"", ""PH"", ""PP"", ""PRI"", ""RP"", ""RT"", ""VP"", ""PO"")",,,CareTeam[1],PRT[CareTeam],CareTeam[1].subject.reference=Patient[1].id,,
 15,ADT_A02.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter[1].subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
+15,ADT_A02.PV1,PV1,Patient Visit,1,1,IF PV1-43 VALUED,,,EncounterHistory,PV1[EncounterHistory],EncounterHistory.subject.reference=Patient[1].id,,
 15,ADT_A02.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
+15,ADT_A02.PV1,PV1,Patient Visit,1,1,IF PV1-20 VALUE,,,Coverage[1],PV1[Coverage],Coverage.beneficiary.reference=Patient[1].id,,
 16,ADT_A02.PV2,[ PV2 ],Patient Visit - Additional Info.,0,1,,,,Encounter[1],PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.
 17,ADT_A02:follow:PV1.ARV,[{ ARV }],Access Restrictions,0,-1,,,,,,,,"FHIR does not yet support field level security tags.  The ARV, when located with the PV1/PV2 in the v2 message, is meant to only apply to the encounter.  However, technically it could point to other places in the messageas as well.  That is considered out of scope as."
 18,ADT_A02:follow:PV1.ROL,[{ ROL }],Role,0,-1,,,,Encounter[1],ROL[Encounter-PractitionerRole],,,

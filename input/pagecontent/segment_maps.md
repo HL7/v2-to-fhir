@@ -31,13 +31,13 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [NK1](ConceptMap-segment-nk1-to-patient.html) - Next of Kin / Associated Parties to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [NK1](ConceptMap-segment-nk1-to-relatedperson.html) - Next of Kin / Associated Parties to FHIR [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)
 * [PD1](ConceptMap-segment-pd1-to-patient.html) - Patient Additional Demographic to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
+* [PD1[LivingWill]](ConceptMap-segment-pd1-livingwill-to-observation.html) - Patient Additional Demographic to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [PID](ConceptMap-segment-pid-to-account.html) - Patient Identification to FHIR [Account](http://hl7.org/fhir/R4/account.html)
 * [PID](ConceptMap-segment-pid-to-appointment.html) - Patient Identification to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
 * [PID](ConceptMap-segment-pid-to-patient.html) - Patient Identification to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
-* [PID[EthnicGroup]](ConceptMap-segment-pid-ethnicgroup-to-observation.html) - Patient Identification to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [PID[Patient]](ConceptMap-segment-pid-patient-to-provenance.html) - Patient Identification to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
-* [PID[Race]](ConceptMap-segment-pid-race-to-observation.html) - Patient Identification to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [PV1](ConceptMap-segment-pv1-to-encounter.html) - Patient Visit to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
+* [PV1](ConceptMap-segment-pv1-to-encounterhistory.html) - Patient Visit to FHIR [EncounterHistory](http://hl7.org/fhir/R4/codesystem-encounterhistory.html)
 * [PV1](ConceptMap-segment-pv1-to-patient.html) - Patient Visit to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [PV2](ConceptMap-segment-pv2-to-encounter.html) - Patient Visit - Additional Information to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 
@@ -87,6 +87,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 ### Chapter  8  Master Files
 
 * [TXA](ConceptMap-segment-txa-to-documentreference.html) - Transcription Document Header to FHIR [DocumentReference](http://hl7.org/fhir/R4/documentreference.html)
+* [TXA](ConceptMap-segment-txa-to-provenance.html) - Transcription Document Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
 
 ### Chapter 10  Scheduling
 

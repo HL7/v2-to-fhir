@@ -7,7 +7,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 4,OBX-4,Observation Sub-ID,OG,0,1,,,"Map to Observation.partOf or Observation.hasMember or Observation.DerivedFrom according to the implementation guidance for the v2 message at hand, otherwise map to the extension-sub-id to enable the final destination to determine how to structure the observations.",$this,,,,,OG[Extension-Subidentifier],,,,"OBX-4 Sub Identifier would determine how to use Observation.partOf or Observation.hasMember or Observation.DerivedFrom, but is highly dependent on the local implementation of OBX-4 or an implementation guide (e.g., LRI, Clinical Genomics).  That is not known at the standard level, so we cannot provide specific mapping guidance here.  However, if the mapper does not have access to the syntax used and its meaning, we need to be able to pass on OBX-4 Sub Identifier to the final destination that should know how to then structure it using FHIR attributes."
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NM""",,,valueQuantity.value,,quantity,0,1,NM[Quantity],,,,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 IN (""ST"", ""FT"", ""TX"")",,"Any markup in ST, FT or TX data may not present properly given that valueString is a string data type",valueString,,string,0,1,,,,,
-5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""CF""",,,valueCodeableConcept,,CodeableConcept,0,1,CF[CodeableConcept],,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""CF""",,,valueCodeableConcept[1],,CodeableConcept,0,1,CF[CodeableConcept],,,,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""CNE""",,,valueCodeableConcept,,CodeableConcept,0,1,CNE[CodeableConcept],,,,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""CE""",,,valueCodeableConcept,,CodeableConcept,0,1,CE[CodeableConcept],,,,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""CWE""",,,valueCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
@@ -17,31 +17,33 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NR""",,,valueRange,,Range,0,1,NR[Range],,,,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""VR""",,,valueString,,string,0,1,,,"OBX-5.1+""-""+OBX-5.2",,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""TM""",,,valueTime,,time,0,1,,,,,
-5,OBX-5,Observation Value,varies,0,-1,"IF (OBX-2 EQUALS ""SN"" AND OBX-5.3 IN ("":"", ""/"")",,,valueRatio,,Ratio,0,1,SN[Ratio],,,,
-5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" and OBX-5.3 EQUALS ""-""",,,valueRange,,Range,0,1,SN[Range],,,,
-5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" and OBX-5.3 EQUALS ""+""",,,valueString,,string,0,1,,,"OBX-5.1+"" ""+OBX-5.2+"" ""+OBX-5.3+"" ""+OBX-5.4",,
-5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" and OBX-5.3 NOT IN ("":"", ""/"", ""-"", ""+"")",,,valueQuantity,,Quantity,0,1,SN[Quantity],,,,Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type.
-5,OBX-5,Observation Value,varies,0,-1,,,If line 19 through 22 all fail while OBX-2 = SN,valueString,,string,0,1,,,"OBX-5.1+"" ""+OBX-5.2+"" ""+OBX-5.3+"" ""+OBX-5.4",,
+5,OBX-5,Observation Value,varies,0,-1,"IF (OBX-2 EQUALS ""SN""  AND OBX-5.1  EQUALS ""<>""",,,valueString,,string,0,1,,,"OBX-5.1+"" ""+OBX-5.2+"" ""+OBX-5.3+"" ""+OBX-5.4"" ""OBX-6""",,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.1  NOT EQUALS ""<>"" AND OBX-5.3 IN ("":"", ""/"")",,,valueRatio[1],,Ratio,0,1,SN[Ratio],,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.1  NOT EQUALS ""<>"" AND OBX-5.3 EQUALS ""-""",,,valueRange[1],,Range,0,1,SN[Range],,,,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.1  NOT EQUALS ""<>"" AND OBX-5.3 EQUALS ""+""",,,valueString,,string,0,1,,,"OBX-5.1+"" ""+OBX-5.2+"" ""+OBX-5.3+"" ""+OBX-5.4"" ""OBX-6""",,
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.1  NOT EQUALS ""<>"" AND OBX-5.3 NOT IN ("":"", ""/"", ""-"", ""+"")",,,valueQuantity[1],,Quantity,0,1,SN[Quantity],,,,Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type.
+5,OBX-5,Observation Value,varies,0,-1,,,If line 19 through 23 all fail while OBX-2 = SN,valueString,,string,0,1,,,"OBX-5.1+"" ""+OBX-5.2+"" ""+OBX-5.3+"" ""+OBX-5.4"" ""OBX-6""",,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NA""",,,valueSampledData,,SampledData,,,,,,,Need to add text on converting NA to SampledData
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""ED"" AND IF OBX-5.4 EQUALS ""Base64""",,,extension[1].url,,uri,1,1,,,"""https://hl7.org/fhir/R5/StructureDefinition/extension-Observation.valueAttachment",,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""ED"" AND IF OBX-5.4 EQUALS ""Base64""",,,extension[1].valueAttachment,,Attachment,1,1,ED[Attachment],,,,"We are for now addressing Base64 that cover .pdf, pictures and other binaries.  If somebody does this, we will address those."
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""EI""",,,,,,,,,,,,"Requires more work to properly map.  Use case: An OBX under OBR that points to the calibration/quality control/etc. settings/values/result/etc. that the other OBX-s under the OBR would be ""subject"" to."
 ,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""RP""",,,extension[1].url,,uri,1,1,,,"""https://hl7.org/fhir/R5/StructureDefinition/extension-Observation.valueAttachment",,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""RP""",,,extension[1].valueAttachment,,Attachment,1,1,ED[Attachment],,,,To be resolved when we resolve DocumentReference and valueAttachment
-6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" and OBX-5.3 NOT IN ("":"", ""/"", ""-"", ""+"")",,,valueQuantity,,Quantity,,,CWE[Quantity],,,,Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type.
-6,OBX-6,Units,CWE,0,1,"IF OBX-2 IN (""NA"", ""NM"")",,,valueQuantity,,Quantity,,,CWE[Quantity],,,,Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type.
-6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.3 EQUALS ""-""",,,valueRange.low,,SimpleQuantity,,,CWE[Quantity],,,,
-6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.3 EQUALS ""-""",,,valueRange.high,,SimpleQuantity,,,CWE[Quantity],,,,
-6,OBX-6,Units,CWE,0,1,"IF (OBX-2 EQUALS ""SN"" AND (OBX-5.3 IN ("":"", ""/""))",,,valueRatio.numerator,,Quantity,,,CWE[Quantity],,,,
-6,OBX-6,Units,CWE,0,1,"IF (OBX-2 EQUALS ""SN"" AND (OBX-5.3 IN ("":"", ""/""))",,,valueRatio.denominator,,Quantity,,,CWE[Quantity],,,,
+6,OBX-6,Units,CWE,0,1,"IF OBX-2 IN (""NA"", ""NM"")",,,valueQuantity[1],,Quantity,,,CWE[Quantity],,,,Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type.
+6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.1  NOT EQUALS ""<>"" AND OBX-5.3 NOT IN ("":"", ""/"", ""-"", ""+"")",,,valueQuantity[1],,Quantity,,,CWE[Quantity],,,,Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type.
+6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.1  NOT EQUALS ""<>"" AND OBX-5.3 EQUALS ""-""",,,valueRange[1].low,,SimpleQuantity,,,CWE[Quantity],,,,
+6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.1  NOT EQUALS ""<>"" AND OBX-5.3 EQUALS ""-""",,,valueRange[1].high,,SimpleQuantity,,,CWE[Quantity],,,,
+6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.1  NOT EQUALS ""<>"" AND OBX-5.3 IN ("":"", ""/"")",,,valueRatio[1].numerator,,Quantity,,,CWE[Quantity],,,,
+6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.1  NOT EQUALS ""<>"" AND OBX-5.3 IN ("":"", ""/"")",,,valueRatio[1].denominator,,Quantity,,,CWE[Quantity],,,,
 7,OBX-7,References Range,ST,0,1,,,,referenceRange.text ,,string,0,-1,,,,,"If OBX-7 is sufficiently parseable, then the low, high, type, appliesTo, and/or age may be used."
 8,OBX-8,Interpretation Codes,CWE,0,-1,,,,interpretation,,CodeableConcept,0,-1,CWE[CodeableConcept],InterpretationCode,,,
 9,OBX-9,Probability,NM,0,1,,,,,,,,,,,,,
 10,OBX-10,Nature of Abnormal Test,ID,0,-1,,,,extension[2].uri,,uri,0,-1,,,"""http://hl7.org/fhir/StructureDefinition/observation-nature-of-abnormal-test""",,
 10,OBX-10,Nature of Abnormal Test,ID,0,-1,,,,extension[2].valueCodeableConcept,,CodeableConcept,0,-1,CWE[CodeableConcept],NatureOfAbnormalTesting,,,
 11,OBX-11,Observation Result Status,ID,1,1,,,,status,,code,1,1,,ObservationStatus,,,
-11,OBX-11,Observation Result Status,ID,1,1,"IF OBX-11 IS ""X""",,,dataAbsentReason.coding[1].code,,CodeableConcept,,,,,/cannot-be-obtained/,,Needs to be requested
-11,OBX-11,Observation Result Status,ID,1,1,"IF OBX-11 IS ""X""",,,dataAbsentReason.coding[1].system,,uri,,,,,"""http://terminology.hl7.org/CodeSystem/data-absent-reason""",,
+11,OBX-11,Observation Result Status,ID,1,1,"IF OBX-11 IS ""X""",,,status.extension[1].url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/alternate-codes""",,
+11,OBX-11,Observation Result Status,ID,1,1,"IF OBX-11 IS ""X""",,,status.extension[1].valueCodeableConcept.coding.code,,CodeableConcept,,,,,"""X""",,
+11,OBX-11,Observation Result Status,ID,1,1,"IF OBX-11 IS ""X""",,,status.extension[1].valueCodeableConcept.coding.system,,string,,,,,"""http://terminology.hl7.org/CodeSystem/v2-0085""",,
 11,OBX-11,Observation Result Status,ID,1,1,"IF OBX-11 IS ""N""",,,dataAbsentReason.coding[2].code,,,,,,,"""not-asked""",,
 11,OBX-11,Observation Result Status,ID,1,1,"IF OBX-11 IS ""N""",,,dataAbsentReason.coding[2].system,,,,,,,"""http://terminology.hl7.org/CodeSystem/data-absent-reason""",,
 12,OBX-12,Effective Date of Reference Range,DTM,0,1,,,,,,,,,,,,,
@@ -70,8 +72,11 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 26,OBX-26,Patient Results Release Category,ID,0,1,,,,,,,,,,,,,
 27,OBX-27,Root Cause,CWE,0,1,,,,,,,,,,,,,
 28,OBX-28,Local Process Control,CWE,0,-1,,,,,,,,,,,,,
-29,OBX-29,Observation Type,ID,0,1,,,,,,,,,,,,,
-30,OBX-30,Observation Sub-Type,ID,0,1,,,,,extension??-subType,code,0,1,,,,,"The sub type was necessary in v2 to distinguish purpose of the observation when it appears in a message in the same group (e.g., answers to ask at order entry questions with actual results ).  Within FHIR flagging the observation may not be necessary, but that is not yet clear.  Until then, we will keep the thought of needing an extension, but not create it yet."
+29,OBX-29,Observation Type,ID,0,1,,,,category[1].coding.code,,code,0,-1,,,,,
+29,OBX-29,Observation Type,ID,0,1,,,,category[1].coding.system,,uri,0,-1,,,,,
+30,OBX-30,Observation Sub-Type,ID,0,1,,,,extension[2].url,,uri,0,1,,,"""http://hl7.org/fhir/StructureDefinition/observation-structure-type""",,"The sub type was necessary in v2 to distinguish purpose of the observation when it appears in a message in the same group (e.g., answers to ask at order entry questions with actual results ).  Within FHIR flagging the observation may not be necessary, but that is not yet clear.  Until then, we will keep the thought of needing an extension, but not create it yet."
+30,OBX-30,Observation Sub-Type,ID,0,1,,,,extension[2].valueCodeableConcept.coding.code,,code,0,1,,,,,
+30,OBX-30,Observation Sub-Type,ID,0,1,,,,extension[2].valueCodeableConcept.coding.system,,uri,0,1,,,"""http://hl7.org/fhir/StructureDefinition/observation-structure-type""",,
 31,OBX-31,Action Code,ID,0,1,,,,,,,,,,,,,
 32,OBX-32,Observation Value Absent Reason,CWE,0,-1,,,,,,,,,,,,,
 33,OBX-33,Observation Related Specimen Identifier,EIP,0,-1,IF OBX-33 COUNT>1,,,extension[1].uri,,Reference,0,1,,,"""http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.specimen",,"Note that in v2 messages the observations that a calculated observation is derived from on and involve multiple specimens are typically not included with the message. To enable relating the calculated observation to the correct specimens it relates to, the v2 message should include the originating observations that in turn use OBX-33 to link to the correct specimens.  Without that, and if there are multiple specimens in OBX-33, there is no standard method to correctly associate the observation with the correct specimens.  The implementer will have to devise an appropriate method for that in their context."

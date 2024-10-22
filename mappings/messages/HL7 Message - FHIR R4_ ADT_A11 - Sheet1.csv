@@ -19,7 +19,9 @@ Provenance[1].entity.role=""source""",,
 7,ADT_A11.PD1,[ PD1 ],Additional Demographics,0,1,,,,Patient[1],PD1[Patient],,,Incorporate PD1 content into the Patient created from the PID segment.
 7,ADT_A01.PD1,[ PD1 ],Additional Demographics,0,1,IF PD1-7 VALUED,,,Observation[1],PD1[Observation-LivingWill],Observation[1].subject.reference=Patient[1].id,,
 8,ADT_A11.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter[1].subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
+8,ADT_A11.PV1,PV1,Patient Visit,1,1,IF PV1-43 VALUED,,,EncounterHistory,PV1[EncounterHistory],EncounterHistory.subject.reference=Patient[1].id,,
 8,ADT_A11.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
+8,ADT_A11.PV1,PV1,Patient Visit,1,1,IF PV1-20 VALUE,,,Coverage[1],PV1[Coverage],Coverage.beneficiary.reference=Patient[1].id,,
 9,ADT_A11.PV2,[ PV2 ],Patient Visit - Additional Info.,0,1,,,,Encounter[1],PV2[Encounter],Encounter[1].subject.reference=Patient[1].id,,Incorporate PV2 content into the Encounter created from the PV1 segment.
 10,ADT_A11.DB1,[{ DB1 }],Disability Information,0,-1,,,,,,,,
 11,ADT_A11.OBSERVATION,[{,--- OBSERVATION begin,0,-1,,,,,,,,

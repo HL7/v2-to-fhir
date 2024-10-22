@@ -81,7 +81,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [NM[LengthOfStay]](ConceptMap-datatype-nm-lengthofstay-to-quantity.html) - Numeric to FHIR [Quantity](http://hl7.org/fhir/R4/datatypes.html#quantity)
 * [NR](ConceptMap-datatype-nr-to-range.html) - Numeric Range to FHIR [Range](http://hl7.org/fhir/R4/datatypes.html#range)
 * [OG[Subidentifier]](ConceptMap-datatype-og-subidentifier-to-extension.html) - Observation Grouper to FHIR [Extension](http://hl7.org/fhir/R4/datatypes.html#extension)
-* [PL](ConceptMap-datatype-pl-to-encounter-location.html) - Person Location to FHIR [Encounter.location](http://hl7.org/fhir/R4/encounter-definitions.html#encounter.location)
+* [PL](ConceptMap-datatype-pl-to-location.html) - Person Location to FHIR [Location](http://hl7.org/fhir/R4/location.html)
 * [PLN](ConceptMap-datatype-pln-to-identifier.html) - Practitioner License Or Other Id Number to FHIR [Identifier](http://hl7.org/fhir/R4/datatypes.html#identifier)
 * [PT](ConceptMap-datatype-pt-to-meta.html) - Processing Type to FHIR [Meta](http://hl7.org/fhir/R4/datatypes.html#meta)
 * [RI](ConceptMap-datatype-ri-to-timing.html) - Repeat Interval to FHIR [Timing](http://hl7.org/fhir/R4/datatypes.html#timing)

@@ -29,7 +29,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 21,TXA,Document Change Reason,ST,0,1,,,,,,,,,,,,,
 22,TXA,"Authentication Person, Time Stamp (set)",PPN,0,-1,,,,,,,,,,,,,
 23,TXA,Distributed Copies (Code and Name of Recipient(s) ),XCN,0,-1,,,,,,,,,,,,,
-24,TXA,Folder Assignment,CWE,0,-1,,,,category,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
+24,TXA,Folder Assignment,CWE,0,-1,,,,,,,,,,,,,
 25,TXA,Document Title,ST,0,-1,,,,description,,string,,,,,,,
 26,TXA,Agreed Due Date/Time,DTM,0,1,,,,,,,,,,,,,
 27,TXA,Creating Facility,HD,0,1,,,,,,,,,,,,,
