@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CQ[Code] - Sheet1.csv
 Instance: DatatypeCQToCode
 InstanceOf: ConceptMap
-Title: "Datatype CQnull to Code Map"
-* title = "Datatype CQnull to Code Map"
+Title: "Datatype CQ to Code Map"
+* title = "Datatype CQ to Code Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CQ to the FHIR Code Data Type."
 * id = "datatype-cq-to-code"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cq-to-code"
@@ -10,7 +10,7 @@ Title: "Datatype CQnull to Code Map"
 * name = "DatatypeCQToCode"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

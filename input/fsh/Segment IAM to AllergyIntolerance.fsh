@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv
 Instance: SegmentIAMToAllergyIntolerance
 InstanceOf: ConceptMap
-Title: "Segment IAMnull to AllergyIntolerance Map"
-* title = "Segment IAMnull to AllergyIntolerance Map"
+Title: "Segment IAM to AllergyIntolerance Map"
+* title = "Segment IAM to AllergyIntolerance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment IAM to the FHIR AllergyIntolerance Resource."
 * id = "segment-iam-to-allergyintolerance"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-iam-to-allergyintolerance"
@@ -10,7 +10,7 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * name = "SegmentIAMToAllergyIntolerance"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,10 +43,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "category"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CWE[Code]"
-* group.element[0].target.dependsOn[1].property = "vocabulary-map"
-* group.element[0].target.dependsOn[1].value = "AllergyCategory"
 * group.element[1].code = #IAM-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -66,10 +62,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "type"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "CWE[Code]"
-* group.element[1].target.dependsOn[1].property = "vocabulary-map"
-* group.element[1].target.dependsOn[1].value = "AllergyType"
 * group.element[2].code = #IAM-3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -89,8 +81,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "code[1]"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[3].code = #IAM-4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -110,10 +100,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "reaction.severity"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "CWE[Code]"
-* group.element[3].target.dependsOn[1].property = "vocabulary-map"
-* group.element[3].target.dependsOn[1].value = "AllergySeverity"
 * group.element[4].code = #IAM-4
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -133,8 +119,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "criticality.extension[1].url"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[5].code = #IAM-4
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -173,8 +157,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "reaction.manifestation.text"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[7].code = #IAM-7
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -194,8 +176,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = -1
 * group.element[7].target.display = "identifier"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[8].code = #IAM-11
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -235,8 +215,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "onsetString"
 * group.element[9].target.comment = "Cannot map to both onsetDateTime and onsetString, so take onsetDateTime if available."
-* group.element[9].target.product[0].property = "antlr"
-* group.element[9].target.product[0].value = "IF IAM-11 NOT VALUED"
 * group.element[10].code = #IAM-13
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -275,12 +253,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "recorder.reference(Practitioner.name)"
-* group.element[11].target.dependsOn[0].property = "data-type-map"
-* group.element[11].target.dependsOn[0].value = "XPN[HumanName]"
-* group.element[11].target.product[0].property = "antlr"
-* group.element[11].target.product[0].value = "IF IAM-15 NOT VALUED"
-* group.element[11].target.product[1].property = "narrative"
-* group.element[11].target.product[1].value = "If IAM-15 is not valued, not always 100% clear this is a practitioner, so much review locally."
 * group.element[12].code = #IAM-14
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -300,10 +272,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "recorder.reference(Patient[1].name)"
-* group.element[12].target.dependsOn[0].property = "data-type-map"
-* group.element[12].target.dependsOn[0].value = "XPN[HumanName]"
-* group.element[12].target.product[0].property = "antlr"
-* group.element[12].target.product[0].value = "IF IAM-15 EQUALS \"SEL\""
 * group.element[13].code = #IAM-14
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -323,10 +291,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "recorder.reference(RelatedPerson.name)"
-* group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "XPN[HumanName]"
-* group.element[13].target.product[0].property = "antlr"
-* group.element[13].target.product[0].value = "IF IAM-15 VALUED AND NOT \"SEL\""
 * group.element[14].code = #IAM-15
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -346,12 +310,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = -1
 * group.element[14].target.display = "recorder.reference(RelatedPerson.relationship)"
-* group.element[14].target.dependsOn[0].property = "data-type-map"
-* group.element[14].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[14].target.dependsOn[1].property = "vocabulary-map"
-* group.element[14].target.dependsOn[1].value = "Relationship"
-* group.element[14].target.product[0].property = "antlr"
-* group.element[14].target.product[0].value = "IF IAM-15 VALUED AND NOT \"SEL\""
 * group.element[15].code = #IAM-17
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -371,8 +329,6 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "clinicalStatus"
-* group.element[15].target.dependsOn[0].property = "data-type-map"
-* group.element[15].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[16].code = #IAM-27
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -389,5 +345,3 @@ Title: "Segment IAMnull to AllergyIntolerance Map"
 * group.element[16].target.extension[0].extension[0].valueCode = #"CodeableConcept"
 * group.element[16].target.display = "code[1]"
 * group.element[16].target.comment = "The values are added as additional .coding entries in the CodeableConcept for AllergyIntolerance.code"
-* group.element[16].target.dependsOn[0].property = "data-type-map"
-* group.element[16].target.dependsOn[0].value = "CWE[CodeableConcept]"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CE[CodeableConcept] - Sheet1.csv
 Instance: DatatypeCEToCodeableConcept
 InstanceOf: ConceptMap
-Title: "Datatype CEnull to CodeableConcept Map"
-* title = "Datatype CEnull to CodeableConcept Map"
+Title: "Datatype CE to CodeableConcept Map"
+* title = "Datatype CE to CodeableConcept Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CE to the FHIR CodeableConcept Data Type."
 * id = "datatype-ce-to-codeableconcept"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ce-to-codeableconcept"
@@ -10,7 +10,7 @@ Title: "Datatype CEnull to CodeableConcept Map"
 * name = "DatatypeCEToCodeableConcept"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Datatype CEnull to CodeableConcept Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "coding[1].code"
-* group.element[0].target.product[0].property = "narrative"
-* group.element[0].target.product[0].value = "If mapped to FHIR, use Code System and Display"
 * group.element[1].code = #CE.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"

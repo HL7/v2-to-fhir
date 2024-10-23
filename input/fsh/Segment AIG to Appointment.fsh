@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ AIG[Appointment] - Sheet1.csv
 Instance: SegmentAIGToAppointment
 InstanceOf: ConceptMap
-Title: "Segment AIGnull to Appointment Map"
-* title = "Segment AIGnull to Appointment Map"
+Title: "Segment AIG to Appointment Map"
+* title = "Segment AIG to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment AIG to the FHIR Appointment Resource."
 * id = "segment-aig-to-appointment"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-aig-to-appointment"
@@ -10,7 +10,7 @@ Title: "Segment AIGnull to Appointment Map"
 * name = "SegmentAIGToAppointment"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,10 +43,6 @@ Title: "Segment AIGnull to Appointment Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "participant.actor(Location.identifier)"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CWE[Identifier]"
-* group.element[0].target.product[0].property = "narrative"
-* group.element[0].target.product[0].value = "If AIG-4 reflects a location"
 * group.element[1].code = #AIG-4
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -66,8 +62,6 @@ Title: "Segment AIGnull to Appointment Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "participant.type"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[2].code = #AIG-8
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -92,10 +86,6 @@ Title: "Segment AIGnull to Appointment Map"
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #participant.period.start
 * group.element[3].target.display = "participant.period.start"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "/.start + AIG-9 according to AIG-10 units/"
-* group.element[3].target.product[0].property = "antlr"
-* group.element[3].target.product[0].value = "IF AIG-8 NOT VALUED"
 * group.element[4].code = #AIG-11
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -108,7 +98,3 @@ Title: "Segment AIGnull to Appointment Map"
 * group.element[4].target.equivalence = #equivalent
 * group.element[4].target.code = #participant.period.end
 * group.element[4].target.display = "participant.period.end"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "Appointment.participant.period.start + AIG-11"
-* group.element[4].target.product[0].property = "antlr"
-* group.element[4].target.product[0].value = "IF AIG-8 IS VALUED"

@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv
 Instance: SegmentSPMToSpecimen
 InstanceOf: ConceptMap
-Title: "Segment SPMnull to Specimen Map"
-* title = "Segment SPMnull to Specimen Map"
+Title: "Segment SPM to Specimen Map"
+* title = "Segment SPM to Specimen Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment SPM to the FHIR Specimen Resource."
 * id = "segment-spm-to-specimen"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-spm-to-specimen"
@@ -10,7 +10,7 @@ Title: "Segment SPMnull to Specimen Map"
 * name = "SegmentSPMToSpecimen"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "identifier[1]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "EIP[Identifier-PlacerAssignedIdentifier]"
 * group.element[1].code = #SPM-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,8 +62,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "identifier[2]"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "EIP[Identifier-FillerAssignedIdentifier]"
 * group.element[2].code = #SPM-3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -85,8 +81,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "parent[1](Specimen.identifier[1])"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "EIP[Identifier-PlacerAssignedIdentifier]"
 * group.element[3].code = #SPM-3
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -106,8 +100,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = -1
 * group.element[3].target.display = "parent[1](Specimen.identifier[2])"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "EIP[Identifier-FillerAssignedIdentifier]"
 * group.element[4].code = #SPM-4
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -127,10 +119,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "type"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[4].target.dependsOn[1].property = "vocabulary-map"
-* group.element[4].target.dependsOn[1].value = "SpecimenType"
 * group.element[5].code = #SPM-6
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -150,10 +138,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "container.additiveCodeableConcept"
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[5].target.dependsOn[1].property = "vocabulary-map"
-* group.element[5].target.dependsOn[1].value = "Addition/Preservative"
 * group.element[6].code = #SPM-7
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -174,10 +158,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "collection.method"
 * group.element[6].target.comment = "This should not be populated in a message corresponding to a ServiceRequest (eg ORM)"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[6].target.dependsOn[1].property = "vocabulary-map"
-* group.element[6].target.dependsOn[1].value = "SpecimenCollectionMethod"
 * group.element[7].code = #SPM-8
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -198,10 +178,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "collection.bodySite"
 * group.element[7].target.comment = "This should not be populated in a message corresponding to a ServiceRequest (eg ORM)"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[7].target.dependsOn[1].property = "vocabulary-map"
-* group.element[7].target.dependsOn[1].value = "SpecimenSourceSite"
 * group.element[8].code = #SPM-12
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -221,8 +197,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "collection.quantity"
-* group.element[8].target.dependsOn[0].property = "data-type-map"
-* group.element[8].target.dependsOn[0].value = "CQ[Quantity]"
 * group.element[9].code = #SPM-14
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -254,10 +228,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[10].target.equivalence = #equivalent
 * group.element[10].target.code = #collection.collectedPeriod
 * group.element[10].target.display = "collection.collectedPeriod"
-* group.element[10].target.dependsOn[0].property = "data-type-map"
-* group.element[10].target.dependsOn[0].value = "DR[Period]"
-* group.element[10].target.product[0].property = "antlr"
-* group.element[10].target.product[0].value = "IF SPM-17.2 VALUED"
 * group.element[11].code = #SPM-17
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -270,10 +240,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[11].target.equivalence = #equivalent
 * group.element[11].target.code = #collection.collectedDateTime
 * group.element[11].target.display = "collection.collectedDateTime"
-* group.element[11].target.dependsOn[0].property = "data-type-map"
-* group.element[11].target.dependsOn[0].value = "DR[dateTime]"
-* group.element[11].target.product[0].property = "antlr"
-* group.element[11].target.product[0].value = "IF SPM-17.2 NOT VALUED"
 * group.element[12].code = #SPM-18
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -312,8 +278,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "status"
-* group.element[13].target.dependsOn[0].property = "vocabulary-map"
-* group.element[13].target.dependsOn[0].value = "Yes/No"
 * group.element[14].code = #SPM-24
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -333,10 +297,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = -1
 * group.element[14].target.display = "condition"
-* group.element[14].target.dependsOn[0].property = "data-type-map"
-* group.element[14].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[14].target.dependsOn[1].property = "vocabulary-map"
-* group.element[14].target.dependsOn[1].value = "SpecimenCondition"
 * group.element[15].code = #SPM-27
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -356,10 +316,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "container.type"
-* group.element[15].target.dependsOn[0].property = "data-type-map"
-* group.element[15].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[15].target.dependsOn[1].property = "vocabulary-map"
-* group.element[15].target.dependsOn[1].value = "ContainerType"
 * group.element[16].code = #SPM-30
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -379,8 +335,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "accessionIdentifier"
-* group.element[16].target.dependsOn[0].property = "data-type-map"
-* group.element[16].target.dependsOn[0].value = "CX[Identifier]"
 * group.element[17].code = #SPM-31
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -400,8 +354,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[17].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[17].target.extension[0].extension[2].valueInteger = -1
 * group.element[17].target.display = "identifier[2]"
-* group.element[17].target.dependsOn[0].property = "data-type-map"
-* group.element[17].target.dependsOn[0].value = "CX[Identifier]"
 * group.element[18].code = #SPM-32
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"
@@ -421,8 +373,6 @@ Title: "Segment SPMnull to Specimen Map"
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = -1
 * group.element[18].target.display = "identifier[3]"
-* group.element[18].target.dependsOn[0].property = "data-type-map"
-* group.element[18].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[19].code = #SPM-32
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "type"

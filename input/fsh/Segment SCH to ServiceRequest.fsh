@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ SCH[ServiceRequest] - Sheet1.csv
 Instance: SegmentSCHToServiceRequest
 InstanceOf: ConceptMap
-Title: "Segment SCHnull to ServiceRequest Map"
-* title = "Segment SCHnull to ServiceRequest Map"
+Title: "Segment SCH to ServiceRequest Map"
+* title = "Segment SCH to ServiceRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment SCH to the FHIR ServiceRequest Resource."
 * id = "segment-sch-to-servicerequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-sch-to-servicerequest"
@@ -10,7 +10,7 @@ Title: "Segment SCHnull to ServiceRequest Map"
 * name = "SegmentSCHToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -28,10 +28,6 @@ Title: "Segment SCHnull to ServiceRequest Map"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #status
 * group.element[0].target.display = "status"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"active\""
-* group.element[0].target.product[0].property = "antlr"
-* group.element[0].target.product[0].value = "IF SCH-25 NOT VALUED"
 * group.element[1].code = #SCH-6
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -51,8 +47,6 @@ Title: "Segment SCHnull to ServiceRequest Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "intent"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"order\""
 * group.element[2].code = #SCH-25
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -72,10 +66,6 @@ Title: "Segment SCHnull to ServiceRequest Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "status"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "CWE[code]"
-* group.element[2].target.dependsOn[1].property = "vocabulary-map"
-* group.element[2].target.dependsOn[1].value = "FillerStatus[Appointment]"
 * group.element[3].code = #SCH-26
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -107,5 +97,3 @@ Title: "Segment SCHnull to ServiceRequest Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = -1
 * group.element[4].target.display = "identifier[2]"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "EI[Identifier-Extension]"

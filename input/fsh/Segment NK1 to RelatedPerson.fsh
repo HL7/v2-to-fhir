@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ NK1[RelatedPerson] - Sheet1.csv
 Instance: SegmentNK1ToRelatedPerson
 InstanceOf: ConceptMap
-Title: "Segment NK1null to RelatedPerson Map"
-* title = "Segment NK1null to RelatedPerson Map"
+Title: "Segment NK1 to RelatedPerson Map"
+* title = "Segment NK1 to RelatedPerson Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment NK1 to the FHIR RelatedPerson Resource."
 * id = "segment-nk1-to-relatedperson"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-nk1-to-relatedperson"
@@ -10,7 +10,7 @@ Title: "Segment NK1null to RelatedPerson Map"
 * name = "SegmentNK1ToRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment NK1null to RelatedPerson Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "name[1]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "XPN[HumanName]"
 * group.element[1].code = #NK1-3
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -68,10 +66,6 @@ Title: "Segment NK1null to RelatedPerson Map"
 Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.
 See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPersonfor further discussion\
 """
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[1].target.dependsOn[1].property = "vocabulary-map"
-* group.element[1].target.dependsOn[1].value = "Relationship"
 * group.element[2].code = #NK1-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -91,8 +85,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "address[1]"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "XAD[Address]"
 * group.element[3].code = #NK1-5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -113,8 +105,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[3].target.extension[0].extension[2].valueInteger = -1
 * group.element[3].target.display = "telecom[1]"
 * group.element[3].target.comment = "ContactPoint.use would likely be \"home\" or \"mobile\", but picked up from XTN.2"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "XTN[ContactPoint]"
 * group.element[4].code = #NK1-6
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -134,8 +124,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = -1
 * group.element[4].target.display = "telecom[2]"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "XTN[ContactPoint]"
 * group.element[5].code = #NK1-6
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -148,8 +136,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #telecom[2].use
 * group.element[5].target.display = "telecom[2].use"
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "\"work\""
 * group.element[6].code = #NK1-7
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -174,10 +160,6 @@ Note that the value sets between Patient.contact.relationship and RelatedPerson.
 RelatedPerson.relationship is allowed to repeat and so can accept values from both NK1-3 and NK1-7
 See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPerson for further discussion\
 """
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[6].target.dependsOn[1].property = "vocabulary-map"
-* group.element[6].target.dependsOn[1].value = "Relationship"
 * group.element[7].code = #NK1-8
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -235,8 +217,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = -1
 * group.element[9].target.display = "identifier[1]"
-* group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "CX[Identifier]"
 * group.element[10].code = #NK1-15
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -256,10 +236,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "gender"
-* group.element[10].target.dependsOn[0].property = "data-type-map"
-* group.element[10].target.dependsOn[0].value = "CWE[Code]"
-* group.element[10].target.dependsOn[1].property = "vocabulary-map"
-* group.element[10].target.dependsOn[1].value = "Gender"
 * group.element[11].code = #NK1-16
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -298,10 +274,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = -1
 * group.element[12].target.display = "communication.language"
-* group.element[12].target.dependsOn[0].property = "data-type-map"
-* group.element[12].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[12].target.dependsOn[1].property = "vocabulary-map"
-* group.element[12].target.dependsOn[1].value = "Language"
 * group.element[13].code = #NK1-30
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -322,8 +294,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[13].target.extension[0].extension[2].valueInteger = -1
 * group.element[13].target.display = "name[2]"
 * group.element[13].target.comment = "Do we need a way in RelatedPerson to distinguish between a \"next of kin\" and a \"contact Person\"?"
-* group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "XPN[HumanName]"
 * group.element[14].code = #NK1-31
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -343,8 +313,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = -1
 * group.element[14].target.display = "telecom[3]"
-* group.element[14].target.dependsOn[0].property = "data-type-map"
-* group.element[14].target.dependsOn[0].value = "XTN[ContactPoint]"
 * group.element[15].code = #NK1-32
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -364,8 +332,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = -1
 * group.element[15].target.display = "address[2]"
-* group.element[15].target.dependsOn[0].property = "data-type-map"
-* group.element[15].target.dependsOn[0].value = "XAD[Address]"
 * group.element[16].code = #NK1-33
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -385,8 +351,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = -1
 * group.element[16].target.display = "identifier[2]"
-* group.element[16].target.dependsOn[0].property = "data-type-map"
-* group.element[16].target.dependsOn[0].value = "CX[Identifier]"
 * group.element[17].code = #NK1-37
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -425,8 +389,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = -1
 * group.element[18].target.display = "identifier[3].system"
-* group.element[18].target.dependsOn[0].property = "value"
-* group.element[18].target.dependsOn[0].value = "\"http://hl7.org/fhir/sid/us-ssn\""
 * group.element[19].code = #NK1-37
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "type"
@@ -446,10 +408,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[19].target.extension[0].extension[2].valueInteger = 1
 * group.element[19].target.display = "identifier[3].type.coding.code"
-* group.element[19].target.dependsOn[0].property = "value"
-* group.element[19].target.dependsOn[0].value = "\"SS\""
-* group.element[19].target.product[0].property = "narrative"
-* group.element[19].target.product[0].value = "If in the US and various other jurisdictions"
 * group.element[20].code = #NK1-37
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "type"
@@ -469,10 +427,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
 * group.element[20].target.display = "identifier[3].type.coding.code"
-* group.element[20].target.dependsOn[0].property = "value"
-* group.element[20].target.dependsOn[0].value = "\"SB\""
-* group.element[20].target.product[0].property = "narrative"
-* group.element[20].target.product[0].value = "If outside the US for certain jurisdictions"
 * group.element[21].code = #NK1-40
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "type"
@@ -492,8 +446,6 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = -1
 * group.element[21].target.display = "telecom[4]"
-* group.element[21].target.dependsOn[0].property = "data-type-map"
-* group.element[21].target.dependsOn[0].value = "XTN[ContactPoint]"
 * group.element[22].code = #NK1-41
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "type"
@@ -513,5 +465,3 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[22].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[22].target.extension[0].extension[2].valueInteger = -1
 * group.element[22].target.display = "telecom[5]"
-* group.element[22].target.dependsOn[0].property = "data-type-map"
-* group.element[22].target.dependsOn[0].value = "XTN[ContactPoint]"

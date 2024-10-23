@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[PractitionerRole] - Sheet1.csv
 Instance: DatatypeCWEToPractitionerRole
 InstanceOf: ConceptMap
-Title: "Datatype CWEnull to PractitionerRole Map"
-* title = "Datatype CWEnull to PractitionerRole Map"
+Title: "Datatype CWE to PractitionerRole Map"
+* title = "Datatype CWE to PractitionerRole Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR PractitionerRole Resource."
 * id = "datatype-cwe-to-practitionerrole"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-practitionerrole"
@@ -10,7 +10,7 @@ Title: "Datatype CWEnull to PractitionerRole Map"
 * name = "DatatypeCWEToPractitionerRole"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

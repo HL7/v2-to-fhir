@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv
 Instance: SegmentSCHToAppointment
 InstanceOf: ConceptMap
-Title: "Segment SCHnull to Appointment Map"
-* title = "Segment SCHnull to Appointment Map"
+Title: "Segment SCH to Appointment Map"
+* title = "Segment SCH to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment SCH to the FHIR Appointment Resource."
 * id = "segment-sch-to-appointment"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-sch-to-appointment"
@@ -10,7 +10,7 @@ Title: "Segment SCHnull to Appointment Map"
 * name = "SegmentSCHToAppointment"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "identifier[1]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[1].code = #SCH-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,8 +62,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "identifier[2]"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[2].code = #SCH-7
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -85,12 +81,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "reasonCode[1]"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[2].target.dependsOn[1].property = "vocabulary-map"
-* group.element[2].target.dependsOn[1].value = "AppointmentReason"
-* group.element[2].target.product[0].property = "narrative"
-* group.element[2].target.product[0].value = "Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType."
 * group.element[3].code = #SCH-7
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -111,12 +101,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "appointmentType[1]"
 * group.element[3].target.comment = "Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[3].target.dependsOn[1].property = "vocabulary-map"
-* group.element[3].target.dependsOn[1].value = "AppointmentType"
-* group.element[3].target.product[0].property = "narrative"
-* group.element[3].target.product[0].value = "Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType."
 * group.element[4].code = #SCH-8
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -137,12 +121,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "appointmentType[1]"
 * group.element[4].target.comment = "Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[4].target.dependsOn[1].property = "vocabulary-map"
-* group.element[4].target.dependsOn[1].value = "AppointmentType"
-* group.element[4].target.product[0].property = "narrative"
-* group.element[4].target.product[0].value = "The mapping of SCH-8 to Appointment.appointmentType will depend on the codes being received in SCH-7 and SCH-8"
 * group.element[5].code = #SCH-9
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -162,8 +140,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "minutesDuration[1]"
-* group.element[5].target.product[0].property = "narrative"
-* group.element[5].target.product[0].value = "If SCH-10 indicates units of minutes"
 * group.element[6].code = #SCH-11
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -176,8 +152,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[6].target.equivalence = #equivalent
 * group.element[6].target.code = #$this
 * group.element[6].target.display = "$this"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "TQ[Appointment]"
 * group.element[7].code = #SCH-12
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -197,8 +171,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "participant[1].actor(Practitioner)"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[8].code = #SCH-12
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -211,8 +183,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[8].target.equivalence = #equivalent
 * group.element[8].target.code = #participant[1].type.coding.code
 * group.element[8].target.display = "participant[1].type.coding.code"
-* group.element[8].target.dependsOn[0].property = "value"
-* group.element[8].target.dependsOn[0].value = "#placer contact#"
 * group.element[9].code = #SCH-12
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -225,8 +195,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[9].target.equivalence = #equivalent
 * group.element[9].target.code = #participant[1].type.coding.system
 * group.element[9].target.display = "participant[1].type.coding.system"
-* group.element[9].target.dependsOn[0].property = "value"
-* group.element[9].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/participant-type\""
 * group.element[10].code = #SCH-16
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -246,8 +214,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "participant[2].actor(Practitioner)"
-* group.element[10].target.dependsOn[0].property = "data-type-map"
-* group.element[10].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[11].code = #SCH-16
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -260,8 +226,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[11].target.equivalence = #equivalent
 * group.element[11].target.code = #participant[2].type.coding.code
 * group.element[11].target.display = "participant[2].type.coding.code"
-* group.element[11].target.dependsOn[0].property = "value"
-* group.element[11].target.dependsOn[0].value = "#filler contact#"
 * group.element[12].code = #SCH-16
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -274,8 +238,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[12].target.equivalence = #equivalent
 * group.element[12].target.code = #participant[2].type.coding.system
 * group.element[12].target.display = "participant[2].type.coding.system"
-* group.element[12].target.dependsOn[0].property = "value"
-* group.element[12].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/participant-type\""
 * group.element[13].code = #SCH-20
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -295,8 +257,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "participant[3].actor(Practitioner)"
-* group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[14].code = #SCH-20
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -309,8 +269,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[14].target.equivalence = #equivalent
 * group.element[14].target.code = #participant[3].type[1].coding.code
 * group.element[14].target.display = "participant[3].type[1].coding.code"
-* group.element[14].target.dependsOn[0].property = "value"
-* group.element[14].target.dependsOn[0].value = "enterer"
 * group.element[15].code = #SCH-20
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -323,8 +281,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[15].target.equivalence = #equivalent
 * group.element[15].target.code = #participant[3].type[1].coding.system
 * group.element[15].target.display = "participant[3].type[1].coding.system"
-* group.element[15].target.dependsOn[0].property = "value"
-* group.element[15].target.dependsOn[0].value = "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
 * group.element[16].code = #SCH-25
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -344,10 +300,6 @@ Title: "Segment SCHnull to Appointment Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "status"
-* group.element[16].target.dependsOn[0].property = "data-type-map"
-* group.element[16].target.dependsOn[0].value = "CWE[code]"
-* group.element[16].target.dependsOn[1].property = "vocabulary-map"
-* group.element[16].target.dependsOn[1].value = "FillerStatus[Appointment]"
 * group.element[17].code = #SCH-26
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ EI[Identifier-Organization] - Sheet1.csv
 Instance: DatatypeEIOrganizationToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype EInull to Identifier Map"
-* title = "Datatype EInull to Identifier Map"
+Title: "Datatype EI to Identifier Map"
+* title = "Datatype EI to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype EI to the FHIR Identifier Data Type."
 * id = "datatype-ei-organization-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ei-organization-to-identifier"
@@ -10,7 +10,7 @@ Title: "Datatype EInull to Identifier Map"
 * name = "DatatypeEIOrganizationToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -82,5 +82,3 @@ Title: "Datatype EInull to Identifier Map"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"CodeableConcept"
 * group.element[3].target.display = "assigner(Organization[1].identifier[2].type)"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "ID[CodeableConcept]"

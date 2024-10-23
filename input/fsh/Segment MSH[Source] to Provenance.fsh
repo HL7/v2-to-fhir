@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ MSH[Provenance-Source] - R4.csv
 Instance: SegmentMSHSourceToProvenance
 InstanceOf: ConceptMap
-Title: "Segment MSHnull to Provenance Map"
-* title = "Segment MSHnull to Provenance Map"
+Title: "Segment MSH to Provenance Map"
+* title = "Segment MSH to Provenance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment MSH to the FHIR Provenance Resource."
 * id = "segment-msh-source-to-provenance"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-msh-source-to-provenance"
@@ -10,7 +10,7 @@ Title: "Segment MSHnull to Provenance Map"
 * name = "SegmentMSHSourceToProvenance"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -29,32 +29,20 @@ Title: "Segment MSHnull to Provenance Map"
 * group.element[0].target.code = #entity[1].what(DocumentReference.content.attachment.url)
 * group.element[0].target.display = "entity[1].what(DocumentReference.content.attachment.url)"
 * group.element[0].target.comment = "If there is an interest in holding to the original message by the recipient"
-* group.element[0].target.product[0].property = "narrative"
-* group.element[0].target.product[0].value = "when you hold on to/persist the v2 message in a data store"
 * group.element[1].code = #MSH
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #entity[1].what(DocumentReference.content.attachment.data)
 * group.element[1].target.display = "entity[1].what(DocumentReference.content.attachment.data)"
 * group.element[1].target.comment = "If there is an interest in holding to the original message by the recipient"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "/v2.txt or v2.xml into base 64/"
-* group.element[1].target.product[0].property = "narrative"
-* group.element[1].target.product[0].value = "when you do not hold on to/persist the v2 message in a data store"
 * group.element[2].code = #MSH
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #entity[1].what(DocumentReference.status)
 * group.element[2].target.display = "entity[1].what(DocumentReference.status)"
 * group.element[2].target.comment = "If there is an interest in holding to the original message by the recipient"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "\"current\""
-* group.element[2].target.product[0].property = "narrative"
-* group.element[2].target.product[0].value = "when you do not hold on to/persist the v2 message in a data store"
 * group.element[3].code = #MSH
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #entity[1].role
 * group.element[3].target.display = "entity[1].role"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "\"source\""
 * group.element[4].code = #MSH-3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -70,10 +58,6 @@ Title: "Segment MSHnull to Provenance Map"
 * group.element[4].target.extension[0].extension[0].url = "type"
 * group.element[4].target.extension[0].extension[0].valueCode = #"Reference(Device)"
 * group.element[4].target.display = "entity[2].what(Device)"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "HD[MessageHeader.source.endpoint]"
-* group.element[4].target.product[0].property = "antlr"
-* group.element[4].target.product[0].value = "IF MSH-3 AND MSH-24 VALUED"
 * group.element[5].code = #MSH-3
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -89,10 +73,6 @@ Title: "Segment MSHnull to Provenance Map"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"code"
 * group.element[5].target.display = "entity[2].role"
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "\"source\""
-* group.element[5].target.product[0].property = "antlr"
-* group.element[5].target.product[0].value = "IF MSH-3 AND MSH-24 VALUED"
 * group.element[6].code = #MSH-4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -112,10 +92,6 @@ Title: "Segment MSHnull to Provenance Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "agent[1].who(Organization)"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "HD[Organization]"
-* group.element[6].target.product[0].property = "antlr"
-* group.element[6].target.product[0].value = "IF MSH-22 NOT VALUED"
 * group.element[7].code = #MSH-4
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -135,10 +111,6 @@ Title: "Segment MSHnull to Provenance Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "agent[1].type.coding.code"
-* group.element[7].target.dependsOn[0].property = "value"
-* group.element[7].target.dependsOn[0].value = "\"author\""
-* group.element[7].target.product[0].property = "antlr"
-* group.element[7].target.product[0].value = "IF MSH-22 NOT VALUED"
 * group.element[8].code = #MSH-4
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -158,10 +130,6 @@ Title: "Segment MSHnull to Provenance Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "agent[1].type.coding.system"
-* group.element[8].target.dependsOn[0].property = "value"
-* group.element[8].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
-* group.element[8].target.product[0].property = "antlr"
-* group.element[8].target.product[0].value = "IF MSH-22 NOT VALUED"
 * group.element[9].code = #MSH-7
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -212,8 +180,6 @@ Title: "Segment MSHnull to Provenance Map"
 * group.element[11].target.extension[0].extension[0].url = "type"
 * group.element[11].target.extension[0].extension[0].valueCode = #"string"
 * group.element[11].target.display = "activity.coding.display"
-* group.element[11].target.dependsOn[0].property = "value"
-* group.element[11].target.dependsOn[0].value = "\"message - \"+MSG.1+\"^\"+MSG.2+\"^\"+MSG.3"
 * group.element[12].code = #MSH-22
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -233,8 +199,6 @@ Title: "Segment MSHnull to Provenance Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "agent[2].who(Organization)"
-* group.element[12].target.dependsOn[0].property = "data-type-map"
-* group.element[12].target.dependsOn[0].value = "XON[Organization]"
 * group.element[13].code = #MSH-22
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -254,8 +218,6 @@ Title: "Segment MSHnull to Provenance Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "agent[2].type.coding.code"
-* group.element[13].target.dependsOn[0].property = "value"
-* group.element[13].target.dependsOn[0].value = "\"author\""
 * group.element[14].code = #MSH-22
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -275,5 +237,3 @@ Title: "Segment MSHnull to Provenance Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "agent[2].type.coding.system"
-* group.element[14].target.dependsOn[0].property = "value"
-* group.element[14].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""

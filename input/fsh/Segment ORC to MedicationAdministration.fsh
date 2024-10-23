@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ ORC[MedicationAdministration] - Sheet1.csv
 Instance: SegmentORCToMedicationAdministration
 InstanceOf: ConceptMap
-Title: "Segment ORCnull to MedicationAdministration Map"
-* title = "Segment ORCnull to MedicationAdministration Map"
+Title: "Segment ORC to MedicationAdministration Map"
+* title = "Segment ORC to MedicationAdministration Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment ORC to the FHIR MedicationAdministration Resource."
 * id = "segment-orc-to-medicationadministration"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-orc-to-medicationadministration"
@@ -10,7 +10,7 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * name = "SegmentORCToMedicationAdministration"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "extension.url"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/businessEvent\""
 * group.element[1].code = #ORC-1
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,8 +62,6 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "extension[1].extension.url"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"value\""
 * group.element[2].code = #ORC-1
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -104,8 +100,6 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "extension[1].valueCodeableConcept.coding.system"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "\"http://terminology.hl7.org/ValueSet/v2-0119\""
 * group.element[4].code = #ORC-2
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -125,8 +119,6 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = -1
 * group.element[4].target.display = "identifier[1]"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[5].code = #ORC-2
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -146,8 +138,6 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "= \"PLAC\""
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "\"PLAC\""
 * group.element[6].code = #ORC-2
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -167,8 +157,6 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "identifier[1].type.coding.system"
-* group.element[6].target.dependsOn[0].property = "value"
-* group.element[6].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
 * group.element[7].code = #ORC-3
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -188,8 +176,6 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = -1
 * group.element[7].target.display = "identifier[2]"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[8].code = #ORC-3
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -209,8 +195,6 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "identifier[2].type.coding.code"
-* group.element[8].target.dependsOn[0].property = "value"
-* group.element[8].target.dependsOn[0].value = "\"FILL\""
 * group.element[9].code = #ORC-3
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -230,8 +214,6 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "identifier[2].type.coding.system"
-* group.element[9].target.dependsOn[0].property = "value"
-* group.element[9].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
 * group.element[10].code = #ORC-12
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -251,8 +233,6 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "performer.actor(Practitioner)"
-* group.element[10].target.dependsOn[0].property = "data-type-map"
-* group.element[10].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[11].code = #ORC-12
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -272,8 +252,6 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "performer.function.coding.code"
-* group.element[11].target.dependsOn[0].property = "value"
-* group.element[11].target.dependsOn[0].value = "\"OP\""
 * group.element[12].code = #ORC-12
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -293,5 +271,3 @@ Title: "Segment ORCnull to MedicationAdministration Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "performer.function.coding.system"
-* group.element[12].target.dependsOn[0].property = "value"
-* group.element[12].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0443\""

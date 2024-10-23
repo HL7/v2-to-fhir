@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PID[Appointment] - PID.csv
 Instance: SegmentPIDToAppointment
 InstanceOf: ConceptMap
-Title: "Segment PIDnull to Appointment Map"
-* title = "Segment PIDnull to Appointment Map"
+Title: "Segment PID to Appointment Map"
+* title = "Segment PID to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Appointment Resource."
 * id = "segment-pid-to-appointment"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pid-to-appointment"
@@ -10,7 +10,7 @@ Title: "Segment PIDnull to Appointment Map"
 * name = "SegmentPIDToAppointment"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -39,8 +39,6 @@ Title: "Segment PIDnull to Appointment Map"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[0].target.display = "extension[1].url"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"http://hl7.org/fhir/R5/StructureDefinition/extension-Appointment.subject\""
 * group.element[1].code = #PID-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -90,8 +88,6 @@ Title: "Segment PIDnull to Appointment Map"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[3].target.display = "extension[2].url"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "\"http://hl7.org/fhir/R5/StructureDefinition/extension-Appointment.subject\""
 * group.element[4].code = #PID-3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -141,8 +137,6 @@ Title: "Segment PIDnull to Appointment Map"
 * group.element[6].target.extension[0].extension[0].url = "type"
 * group.element[6].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[6].target.display = "extension[3].url"
-* group.element[6].target.dependsOn[0].property = "value"
-* group.element[6].target.dependsOn[0].value = "\"http://hl7.org/fhir/R5/StructureDefinition/extension-Appointment.subject\""
 * group.element[7].code = #PID-4
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"

@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ RXA[Immunization] - RXA.csv
 Instance: SegmentRXAToImmunization
 InstanceOf: ConceptMap
-Title: "Segment RXAnull to Immunization Map"
-* title = "Segment RXAnull to Immunization Map"
+Title: "Segment RXA to Immunization Map"
+* title = "Segment RXA to Immunization Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment RXA to the FHIR Immunization Resource."
 * id = "segment-rxa-to-immunization"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-rxa-to-immunization"
@@ -10,7 +10,7 @@ Title: "Segment RXAnull to Immunization Map"
 * name = "SegmentRXAToImmunization"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -62,8 +62,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "vaccineCode"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[2].code = #RXA-6
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -102,8 +100,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "doseQuantity"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "CWE[Quantity]"
 * group.element[4].code = #RXA-10
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -123,8 +119,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = -1
 * group.element[4].target.display = "performer.actor(Practitioner)"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[5].code = #RXA-10
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -140,8 +134,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"code"
 * group.element[5].target.display = "performer.function.coding.code"
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "\"AP\""
 * group.element[6].code = #RXA-10
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -157,8 +149,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[6].target.extension[0].extension[0].url = "type"
 * group.element[6].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[6].target.display = "performer.function.coding.system"
-* group.element[6].target.dependsOn[0].property = "value"
-* group.element[6].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0443\""
 * group.element[7].code = #RXA-15
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -216,8 +206,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "manufacturer(Organization)"
-* group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "CWE[Organization]"
 * group.element[10].code = #RXA-18
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -237,8 +225,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "statusReason"
-* group.element[10].target.dependsOn[0].property = "data-type-map"
-* group.element[10].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[11].code = #RXA-19
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -258,8 +244,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = -1
 * group.element[11].target.display = "reasonCode"
-* group.element[11].target.dependsOn[0].property = "data-type-map"
-* group.element[11].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[12].code = #RXA-20
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -279,10 +263,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "status"
-* group.element[12].target.dependsOn[0].property = "vocabulary-map"
-* group.element[12].target.dependsOn[0].value = "CompletionStatus"
-* group.element[12].target.product[0].property = "antlr"
-* group.element[12].target.product[0].value = "IF RXA-21 NOT EQUALS \"D\""
 * group.element[13].code = #RXA-20
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -302,10 +282,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "status"
-* group.element[13].target.dependsOn[0].property = "value"
-* group.element[13].target.dependsOn[0].value = "\"completed\""
-* group.element[13].target.product[0].property = "antlr"
-* group.element[13].target.product[0].value = "IF NOT VALUED AND RXA-21 NOT EQUALS \"D\""
 * group.element[14].code = #RXA-21
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -325,10 +301,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "status"
-* group.element[14].target.dependsOn[0].property = "value"
-* group.element[14].target.dependsOn[0].value = "\"entered-in-error\""
-* group.element[14].target.product[0].property = "antlr"
-* group.element[14].target.product[0].value = "IF RXA-21 EQUALS \"D\""
 * group.element[15].code = #RXA-22
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -348,8 +320,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "recorded"
-* group.element[15].target.product[0].property = "antlr"
-* group.element[15].target.product[0].value = "IF RXA-21 EQUALS \"A\""
 * group.element[16].code = #RXA-27
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -369,8 +339,6 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "location[1](Location)"
-* group.element[16].target.dependsOn[0].property = "data-type-map"
-* group.element[16].target.dependsOn[0].value = "PL[Location]"
 * group.element[17].code = #RXA-28
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -390,5 +358,3 @@ Title: "Segment RXAnull to Immunization Map"
 * group.element[17].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[17].target.extension[0].extension[2].valueInteger = 1
 * group.element[17].target.display = "location[1](Location.address)"
-* group.element[17].target.dependsOn[0].property = "data-type-map"
-* group.element[17].target.dependsOn[0].value = "XAD[Address]"

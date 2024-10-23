@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ NTE[Appointment-Comment] - NTE.csv
 Instance: SegmentNTECommentToAppointment
 InstanceOf: ConceptMap
-Title: "Segment NTEnull to Appointment Map"
-* title = "Segment NTEnull to Appointment Map"
+Title: "Segment NTE to Appointment Map"
+* title = "Segment NTE to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment NTE to the FHIR Appointment Resource."
 * id = "segment-nte-comment-to-appointment"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-nte-comment-to-appointment"
@@ -10,7 +10,7 @@ Title: "Segment NTEnull to Appointment Map"
 * name = "SegmentNTECommentToAppointment"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -44,8 +44,6 @@ Title: "Segment NTEnull to Appointment Map"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "extension[1].url"
 * group.element[0].target.comment = "When multiple comments are included, they should yield line feeds in Annotation.text."
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"http://hl7.org/fhir/R5/StructureDefinition/extension-Appointment.note\""
 * group.element[1].code = #NTE-3
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -65,8 +63,6 @@ Title: "Segment NTEnull to Appointment Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "extension[1].valueAnnotation"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "FT[Annotation-Comment]"
 * group.element[2].code = #NTE-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -86,8 +82,6 @@ Title: "Segment NTEnull to Appointment Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "extension[2].extension[1].url"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/annotationType\""
 * group.element[3].code = #NTE-4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -107,8 +101,6 @@ Title: "Segment NTEnull to Appointment Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = -1
 * group.element[3].target.display = "extension[2].valueCodeableConcept"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[4].code = #NTE-5
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -128,8 +120,6 @@ Title: "Segment NTEnull to Appointment Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = -1
 * group.element[4].target.display = "extension[1].url"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"http://hl7.org/fhir/R5/StructureDefinition/extension-Appointment.note\""
 * group.element[5].code = #NTE-5
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -149,8 +139,6 @@ Title: "Segment NTEnull to Appointment Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = -1
 * group.element[5].target.display = "extension[1].valueAnnotation"
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "XCN[Annotation-Author]"
 * group.element[6].code = #NTE-6
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -170,8 +158,6 @@ Title: "Segment NTEnull to Appointment Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = -1
 * group.element[6].target.display = "extension[1].url"
-* group.element[6].target.dependsOn[0].property = "value"
-* group.element[6].target.dependsOn[0].value = "\"http://hl7.org/fhir/R5/StructureDefinition/extension-Appointment.note\""
 * group.element[7].code = #NTE-6
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -191,8 +177,6 @@ Title: "Segment NTEnull to Appointment Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = -1
 * group.element[7].target.display = "extension[1].valueAnnotation"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "DTM[Annotation-Time]"
 * group.element[8].code = #NTE-9
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -212,8 +196,6 @@ Title: "Segment NTEnull to Appointment Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = -1
 * group.element[8].target.display = "extension[3].url"
-* group.element[8].target.dependsOn[0].property = "value"
-* group.element[8].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[9].code = #NTE-9
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -233,5 +215,3 @@ Title: "Segment NTEnull to Appointment Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = -1
 * group.element[9].target.display = "extension[3].valueCodeableConcept"
-* group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "CWE[CodeableConcept]"

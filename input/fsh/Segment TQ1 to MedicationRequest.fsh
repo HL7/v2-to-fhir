@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ TQ1[MedicationRequest] - Sheet1.csv
 Instance: SegmentTQ1ToMedicationRequest
 InstanceOf: ConceptMap
-Title: "Segment TQ1null to MedicationRequest Map"
-* title = "Segment TQ1null to MedicationRequest Map"
+Title: "Segment TQ1 to MedicationRequest Map"
+* title = "Segment TQ1 to MedicationRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment TQ1 to the FHIR MedicationRequest Resource."
 * id = "segment-tq1-to-medicationrequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-tq1-to-medicationrequest"
@@ -10,7 +10,7 @@ Title: "Segment TQ1null to MedicationRequest Map"
 * name = "SegmentTQ1ToMedicationRequest"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment TQ1null to MedicationRequest Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "dosageInstruction.doseAndRate.doseQuantity"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CQ[Quantity]"
 * group.element[1].code = #TQ1-3
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,8 +62,6 @@ Title: "Segment TQ1null to MedicationRequest Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "dosageInstruction.timing"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "RPT[Timing]"
 * group.element[2].code = #TQ1-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -104,10 +100,6 @@ Title: "Segment TQ1null to MedicationRequest Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "dosageInstruction.timing.repeat.offset"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "CQ[UnsignedInt]"
-* group.element[3].target.product[0].property = "antlr"
-* group.element[3].target.product[0].value = "IF TQ1-3.9 IS EMPTY"
 * group.element[4].code = #TQ1-6
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -128,10 +120,6 @@ Title: "Segment TQ1null to MedicationRequest Map"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "occurrenceTiming.boundsDuration"
 * group.element[4].target.comment = "The Duration data type is required to be an expression of time using UCUM units"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "CQ[Quantity]"
-* group.element[4].target.product[0].property = "antlr"
-* group.element[4].target.product[0].value = "IF TQ1-7 AND TQ1-8 NOT VALUED"
 * group.element[5].code = #TQ1-6
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -151,10 +139,6 @@ Title: "Segment TQ1null to MedicationRequest Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "occurrenceTiming.boundsPeriod.end"
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "occurrenceTiming.boundPeriod.start + TQ1-6"
-* group.element[5].target.product[0].property = "antlr"
-* group.element[5].target.product[0].value = "IF TQ1-7 VALUED AND TQ1-8 NOT VALUED"
 * group.element[6].code = #TQ1-6
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -174,10 +158,6 @@ Title: "Segment TQ1null to MedicationRequest Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "occurneceTiming.boundsPeriod.start"
-* group.element[6].target.dependsOn[0].property = "value"
-* group.element[6].target.dependsOn[0].value = "occurrenceTiming.boundPeriod.end - TQ1-6"
-* group.element[6].target.product[0].property = "antlr"
-* group.element[6].target.product[0].value = "IF TQ1-7 NOT VALUED AND TQ1-8 VALUED"
 * group.element[7].code = #TQ1-7
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -235,8 +215,6 @@ Title: "Segment TQ1null to MedicationRequest Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "priority"
-* group.element[9].target.dependsOn[0].property = "vocabulary-map"
-* group.element[9].target.dependsOn[0].value = "Priority"
 * group.element[10].code = #TQ1-10
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -294,8 +272,6 @@ Title: "Segment TQ1null to MedicationRequest Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "dosageInstruction.timing.repeat.duration"
-* group.element[12].target.dependsOn[0].property = "data-type-map"
-* group.element[12].target.dependsOn[0].value = "CQ[Decimal]"
 * group.element[13].code = #TQ1-13
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -315,8 +291,6 @@ Title: "Segment TQ1null to MedicationRequest Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "dosageInstruction.timing.repeat.durationUnit"
-* group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "CQ[Code]"
 * group.element[14].code = #TQ1-14
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -336,5 +310,3 @@ Title: "Segment TQ1null to MedicationRequest Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "dosageInstruction.timing.repeat.countMax"
-* group.element[14].target.dependsOn[0].property = "data-type-map"
-* group.element[14].target.dependsOn[0].value = "NM[PositiveInt]"

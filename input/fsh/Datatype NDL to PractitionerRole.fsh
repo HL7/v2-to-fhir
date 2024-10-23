@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ NDL[PractitionerRole] - Sheet1.csv
 Instance: DatatypeNDLToPractitionerRole
 InstanceOf: ConceptMap
-Title: "Datatype NDLnull to PractitionerRole Map"
-* title = "Datatype NDLnull to PractitionerRole Map"
+Title: "Datatype NDL to PractitionerRole Map"
+* title = "Datatype NDL to PractitionerRole Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype NDL to the FHIR PractitionerRole Resource."
 * id = "datatype-ndl-to-practitionerrole"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ndl-to-practitionerrole"
@@ -10,7 +10,7 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * name = "DatatypeNDLToPractitionerRole"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "practitioner(Practitioner)"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CNN[Practitioner]"
 * group.element[1].code = #NDL.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -98,8 +96,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[3].target.display = "[1].identifier"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "HD[Identifier]"
 * group.element[4].code = #NDL.4
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -119,8 +115,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "[1].mode"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"instance\""
 * group.element[5].code = #NDL.4
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -140,8 +134,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "[1].physicalType.coding.code"
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "/extension??-poc/"
 * group.element[6].code = #NDL.4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -161,8 +153,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "[1].physicalType.coding.system"
-* group.element[6].target.dependsOn[0].property = "value"
-* group.element[6].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[7].code = #NDL.4
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -197,8 +187,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[8].target.extension[0].extension[0].url = "type"
 * group.element[8].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[8].target.display = "[2].identifier"
-* group.element[8].target.dependsOn[0].property = "data-type-map"
-* group.element[8].target.dependsOn[0].value = "HD[Identifier]"
 * group.element[9].code = #NDL.5
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -218,8 +206,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "[2].mode"
-* group.element[9].target.dependsOn[0].property = "value"
-* group.element[9].target.dependsOn[0].value = "\"instance\""
 * group.element[10].code = #NDL.5
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -239,8 +225,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "[2].physicalType.coding.code"
-* group.element[10].target.dependsOn[0].property = "value"
-* group.element[10].target.dependsOn[0].value = "\"ro\""
 * group.element[11].code = #NDL.5
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -260,8 +244,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "[2].physicalType.coding.system"
-* group.element[11].target.dependsOn[0].property = "value"
-* group.element[11].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[12].code = #NDL.5
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -296,8 +278,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[13].target.extension[0].extension[0].url = "type"
 * group.element[13].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[13].target.display = "[3].identifier"
-* group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "HD[Identifier]"
 * group.element[14].code = #NDL.6
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -317,8 +297,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "[3].mode"
-* group.element[14].target.dependsOn[0].property = "value"
-* group.element[14].target.dependsOn[0].value = "\"instance\""
 * group.element[15].code = #NDL.6
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -338,8 +316,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "[3].physicalType.coding.code"
-* group.element[15].target.dependsOn[0].property = "value"
-* group.element[15].target.dependsOn[0].value = "\"bd\""
 * group.element[16].code = #NDL.6
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -359,8 +335,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "[3].physicalType.coding.system"
-* group.element[16].target.dependsOn[0].property = "value"
-* group.element[16].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[17].code = #NDL.6
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -395,8 +369,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[18].target.extension[0].extension[0].url = "type"
 * group.element[18].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[18].target.display = "[4].identifier"
-* group.element[18].target.dependsOn[0].property = "data-type-map"
-* group.element[18].target.dependsOn[0].value = "HD[Identifier]"
 * group.element[19].code = #NDL.7
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "type"
@@ -416,8 +388,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[19].target.extension[0].extension[2].valueInteger = 1
 * group.element[19].target.display = "[4].mode"
-* group.element[19].target.dependsOn[0].property = "value"
-* group.element[19].target.dependsOn[0].value = "\"instance\""
 * group.element[20].code = #NDL.7
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "type"
@@ -437,8 +407,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
 * group.element[20].target.display = "[4].physicalType.coding.code"
-* group.element[20].target.dependsOn[0].property = "value"
-* group.element[20].target.dependsOn[0].value = "\"si\""
 * group.element[21].code = #NDL.7
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "type"
@@ -458,8 +426,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = 1
 * group.element[21].target.display = "[4].physicalType.coding.system"
-* group.element[21].target.dependsOn[0].property = "value"
-* group.element[21].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[22].code = #NDL.8
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "type"
@@ -477,10 +443,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[22].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[22].target.extension[0].extension[1].valueInteger = 1
 * group.element[22].target.display = "[1].status"
-* group.element[22].target.dependsOn[0].property = "data-type-map"
-* group.element[22].target.dependsOn[0].value = "IS[code]"
-* group.element[22].target.product[0].property = "antlr"
-* group.element[22].target.product[0].value = "IF PL.1 AND PL.2 AND PL.3 AND PL.4 AND PL.7 AND PL.8 NOT VALUED"
 * group.element[23].code = #NDL.8
 * group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].extension[0].extension[0].url = "type"
@@ -498,10 +460,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[23].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[23].target.extension[0].extension[1].valueInteger = 1
 * group.element[23].target.display = "[2].status"
-* group.element[23].target.dependsOn[0].property = "data-type-map"
-* group.element[23].target.dependsOn[0].value = "IS[code]"
-* group.element[23].target.product[0].property = "antlr"
-* group.element[23].target.product[0].value = "IF PL.2 VALUED"
 * group.element[24].code = #NDL.8
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[24].extension[0].extension[0].url = "type"
@@ -519,10 +477,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[24].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[24].target.extension[0].extension[1].valueInteger = 1
 * group.element[24].target.display = "[3].status"
-* group.element[24].target.dependsOn[0].property = "data-type-map"
-* group.element[24].target.dependsOn[0].value = "IS[code]"
-* group.element[24].target.product[0].property = "antlr"
-* group.element[24].target.product[0].value = "IF PL.3 VALUED"
 * group.element[25].code = #NDL.8
 * group.element[25].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[25].extension[0].extension[0].url = "type"
@@ -540,10 +494,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[25].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[25].target.extension[0].extension[1].valueInteger = 1
 * group.element[25].target.display = "[4].status"
-* group.element[25].target.dependsOn[0].property = "data-type-map"
-* group.element[25].target.dependsOn[0].value = "IS[code]"
-* group.element[25].target.product[0].property = "antlr"
-* group.element[25].target.product[0].value = "IF PL.4 VALUED"
 * group.element[26].code = #NDL.8
 * group.element[26].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[26].extension[0].extension[0].url = "type"
@@ -561,10 +511,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[26].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[26].target.extension[0].extension[1].valueInteger = 1
 * group.element[26].target.display = "[5].status"
-* group.element[26].target.dependsOn[0].property = "data-type-map"
-* group.element[26].target.dependsOn[0].value = "IS[code]"
-* group.element[26].target.product[0].property = "antlr"
-* group.element[26].target.product[0].value = "IF PL.7 VALUED"
 * group.element[27].code = #NDL.8
 * group.element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[27].extension[0].extension[0].url = "type"
@@ -582,10 +528,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[27].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[27].target.extension[0].extension[1].valueInteger = 1
 * group.element[27].target.display = "[6].status"
-* group.element[27].target.dependsOn[0].property = "data-type-map"
-* group.element[27].target.dependsOn[0].value = "IS[code]"
-* group.element[27].target.product[0].property = "antlr"
-* group.element[27].target.product[0].value = "IF PL.8 VALUED"
 * group.element[28].code = #NDL.10
 * group.element[28].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[28].extension[0].extension[0].url = "type"
@@ -601,8 +543,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[28].target.extension[0].extension[0].url = "type"
 * group.element[28].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[28].target.display = "[5].identifier"
-* group.element[28].target.dependsOn[0].property = "data-type-map"
-* group.element[28].target.dependsOn[0].value = "HD[Identifier]"
 * group.element[29].code = #NDL.10
 * group.element[29].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[29].extension[0].extension[0].url = "type"
@@ -622,8 +562,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[29].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[29].target.extension[0].extension[2].valueInteger = 1
 * group.element[29].target.display = "[5].mode"
-* group.element[29].target.dependsOn[0].property = "value"
-* group.element[29].target.dependsOn[0].value = "\"instance\""
 * group.element[30].code = #NDL.10
 * group.element[30].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[30].extension[0].extension[0].url = "type"
@@ -643,8 +581,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[30].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[30].target.extension[0].extension[2].valueInteger = 1
 * group.element[30].target.display = "[5].physicalType.coding.code"
-* group.element[30].target.dependsOn[0].property = "value"
-* group.element[30].target.dependsOn[0].value = "\"bu\""
 * group.element[31].code = #NDL.10
 * group.element[31].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[31].extension[0].extension[0].url = "type"
@@ -664,8 +600,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[31].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[31].target.extension[0].extension[2].valueInteger = 1
 * group.element[31].target.display = "[5].physicalType.coding.system"
-* group.element[31].target.dependsOn[0].property = "value"
-* group.element[31].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[32].code = #NDL.10
 * group.element[32].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[32].extension[0].extension[0].url = "type"
@@ -700,8 +634,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[33].target.extension[0].extension[0].url = "type"
 * group.element[33].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[33].target.display = "[6].identifier"
-* group.element[33].target.dependsOn[0].property = "data-type-map"
-* group.element[33].target.dependsOn[0].value = "HD[Identifier]"
 * group.element[34].code = #NDL.11
 * group.element[34].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[34].extension[0].extension[0].url = "type"
@@ -721,8 +653,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[34].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[34].target.extension[0].extension[2].valueInteger = 1
 * group.element[34].target.display = "[6].mode"
-* group.element[34].target.dependsOn[0].property = "value"
-* group.element[34].target.dependsOn[0].value = "\"instance\""
 * group.element[35].code = #NDL.11
 * group.element[35].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[35].extension[0].extension[0].url = "type"
@@ -742,8 +672,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[35].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[35].target.extension[0].extension[2].valueInteger = 1
 * group.element[35].target.display = "[6].physicalType.coding.code"
-* group.element[35].target.dependsOn[0].property = "value"
-* group.element[35].target.dependsOn[0].value = "\"lvl\""
 * group.element[36].code = #NDL.11
 * group.element[36].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[36].extension[0].extension[0].url = "type"
@@ -763,8 +691,6 @@ Title: "Datatype NDLnull to PractitionerRole Map"
 * group.element[36].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[36].target.extension[0].extension[2].valueInteger = 1
 * group.element[36].target.display = "[6].physicalType.coding.system"
-* group.element[36].target.dependsOn[0].property = "value"
-* group.element[36].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[37].code = #NDL.11
 * group.element[37].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[37].extension[0].extension[0].url = "type"

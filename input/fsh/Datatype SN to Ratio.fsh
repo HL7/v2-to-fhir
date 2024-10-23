@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ SN[Ratio] - Sheet1.csv
 Instance: DatatypeSNToRatio
 InstanceOf: ConceptMap
-Title: "Datatype SNnull to Ratio Map"
-* title = "Datatype SNnull to Ratio Map"
+Title: "Datatype SN to Ratio Map"
+* title = "Datatype SN to Ratio Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype SN to the FHIR Ratio Data Type."
 * id = "datatype-sn-to-ratio"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-sn-to-ratio"
@@ -10,7 +10,7 @@ Title: "Datatype SNnull to Ratio Map"
 * name = "DatatypeSNToRatio"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -36,8 +36,6 @@ Title: "Datatype SNnull to Ratio Map"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #numerator.comparator
 * group.element[0].target.display = "numerator.comparator"
-* group.element[0].target.product[0].property = "antlr"
-* group.element[0].target.product[0].value = "IF NOT EQUAL TO \"=\""
 * group.element[1].code = #SN.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"

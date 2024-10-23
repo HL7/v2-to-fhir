@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ RXR[Immunization] - RXR.csv
 Instance: SegmentRXRToImmunization
 InstanceOf: ConceptMap
-Title: "Segment RXRnull to Immunization Map"
-* title = "Segment RXRnull to Immunization Map"
+Title: "Segment RXR to Immunization Map"
+* title = "Segment RXR to Immunization Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment RXR to the FHIR Immunization Resource."
 * id = "segment-rxr-to-immunization"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-rxr-to-immunization"
@@ -10,7 +10,7 @@ Title: "Segment RXRnull to Immunization Map"
 * name = "SegmentRXRToImmunization"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,10 +43,6 @@ Title: "Segment RXRnull to Immunization Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "route"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[0].target.dependsOn[1].property = "vocabulary-map"
-* group.element[0].target.dependsOn[1].value = "RouteOfAdministration"
 * group.element[1].code = #RXR-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -66,7 +62,3 @@ Title: "Segment RXRnull to Immunization Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "site"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[1].target.dependsOn[1].property = "vocabulary-map"
-* group.element[1].target.dependsOn[1].value = "AdministrationSite"

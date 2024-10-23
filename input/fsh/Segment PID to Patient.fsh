@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PID[Patient] - PID.csv
 Instance: SegmentPIDToPatient
 InstanceOf: ConceptMap
-Title: "Segment PIDnull to Patient Map"
-* title = "Segment PIDnull to Patient Map"
+Title: "Segment PID to Patient Map"
+* title = "Segment PID to Patient Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Patient Resource."
 * id = "segment-pid-to-patient"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pid-to-patient"
@@ -10,7 +10,7 @@ Title: "Segment PIDnull to Patient Map"
 * name = "SegmentPIDToPatient"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "identifier[1]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CX[Identifier]"
 * group.element[1].code = #PID-3
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,8 +62,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "identifier[2]"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "CX[Identifier]"
 * group.element[2].code = #PID-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -85,8 +81,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "identifier[3]"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "CX[Identifier]"
 * group.element[3].code = #PID-5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -106,8 +100,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = -1
 * group.element[3].target.display = "name[1]"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "XPN[HumanName]"
 * group.element[4].code = #PID-6
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -127,8 +119,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "extension[1].url"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName\""
 * group.element[5].code = #PID-6
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -149,8 +139,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "extension[1].valueString"
 * group.element[5].target.comment = "This may not be the second name if there are repeats in PID-5. ext.patientMothersMaiden (string) also exists if we prefer."
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "XPN[String]"
 * group.element[6].code = #PID-7
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -190,10 +178,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "birthDate.extension[1].url"
-* group.element[7].target.dependsOn[0].property = "value"
-* group.element[7].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-birthTime\""
-* group.element[7].target.product[0].property = "antlr"
-* group.element[7].target.product[0].value = "IF PID-7 LENGTH GREATER THAN 8"
 * group.element[8].code = #PID-7
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -213,8 +197,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "birthDate.extension[1].valueDateTime"
-* group.element[8].target.product[0].property = "antlr"
-* group.element[8].target.product[0].value = "IF PID-7 LENGTH GREATER THAN 8"
 * group.element[9].code = #PID-8
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -234,10 +216,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "gender"
-* group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "CWE[code]"
-* group.element[9].target.dependsOn[1].property = "vocabulary-map"
-* group.element[9].target.dependsOn[1].value = "Gender"
 * group.element[10].code = #PID-9
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -257,8 +235,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = -1
 * group.element[10].target.display = "name[2]"
-* group.element[10].target.dependsOn[0].property = "data-type-map"
-* group.element[10].target.dependsOn[0].value = "XPN[HumanName]"
 * group.element[11].code = #PID-11
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -278,8 +254,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = -1
 * group.element[11].target.display = "address[1]"
-* group.element[11].target.dependsOn[0].property = "data-type-map"
-* group.element[11].target.dependsOn[0].value = "XAD[Address]"
 * group.element[12].code = #PID-12
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -300,10 +274,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "address[1].district"
 * group.element[12].target.comment = "This may not be the second occurrence if PID-11 repeats. Because PID-11 can repeat but PID-12 cannot, it's not appropriate to include PID-12 in an iteration of .address populated from PID-11"
-* group.element[12].target.dependsOn[0].property = "data-type-map"
-* group.element[12].target.dependsOn[0].value = "ID[String]"
-* group.element[12].target.product[0].property = "antlr"
-* group.element[12].target.product[0].value = "IF PID-11 LST.COUNT EQUALS 1 AND PID-11.9 IS NOT VALUED"
 * group.element[13].code = #PID-12
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -319,10 +289,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[13].target.extension[0].extension[0].url = "type"
 * group.element[13].target.extension[0].extension[0].valueCode = #"string"
 * group.element[13].target.display = "address[2].district"
-* group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "ID[String]"
-* group.element[13].target.product[0].property = "antlr"
-* group.element[13].target.product[0].value = "IF PID-11 LST.COUNT EQUALS 1 AND PID-11.9 IS VALUED NOT EQUAL PID-12"
 * group.element[14].code = #PID-12
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -342,10 +308,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "address[2].district"
-* group.element[14].target.dependsOn[0].property = "data-type-map"
-* group.element[14].target.dependsOn[0].value = "ID[String]"
-* group.element[14].target.product[0].property = "antlr"
-* group.element[14].target.product[0].value = "IF PID-11 LST.COUNT GREATER THAN 1"
 * group.element[15].code = #PID-12
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -365,10 +327,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "address[1].district"
-* group.element[15].target.dependsOn[0].property = "data-type-map"
-* group.element[15].target.dependsOn[0].value = "ID[String]"
-* group.element[15].target.product[0].property = "antlr"
-* group.element[15].target.product[0].value = "IF PID-11 IS NOT VALUED"
 * group.element[16].code = #PID-13
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -388,8 +346,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = -1
 * group.element[16].target.display = "telecom[1]"
-* group.element[16].target.dependsOn[0].property = "data-type-map"
-* group.element[16].target.dependsOn[0].value = "XTN[ContactPoint]"
 * group.element[17].code = #PID-13
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -402,10 +358,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[17].target.equivalence = #equivalent
 * group.element[17].target.code = #telecom[1].use
 * group.element[17].target.display = "telecom[1].use"
-* group.element[17].target.dependsOn[0].property = "value"
-* group.element[17].target.dependsOn[0].value = "\"home\""
-* group.element[17].target.product[0].property = "antlr"
-* group.element[17].target.product[0].value = "IF PID-13.2 IS NOT VALUED"
 * group.element[18].code = #PID-14
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"
@@ -425,8 +377,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = -1
 * group.element[18].target.display = "telecom[2]"
-* group.element[18].target.dependsOn[0].property = "data-type-map"
-* group.element[18].target.dependsOn[0].value = "XTN[ContactPoint]"
 * group.element[19].code = #PID-14
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "type"
@@ -439,10 +389,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[19].target.equivalence = #equivalent
 * group.element[19].target.code = #telecom[2].use
 * group.element[19].target.display = "telecom[2].use"
-* group.element[19].target.dependsOn[0].property = "value"
-* group.element[19].target.dependsOn[0].value = "\"work\""
-* group.element[19].target.product[0].property = "antlr"
-* group.element[19].target.product[0].value = "IF PID-14.2 IS NOT VALUED"
 * group.element[20].code = #PID-15
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "type"
@@ -463,10 +409,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[20].target.extension[0].extension[2].valueInteger = -1
 * group.element[20].target.display = "communication.language"
 * group.element[20].target.comment = "During implementation, if you know that the value in PID-15 is the preferred patient language, then Patient.communication.preferred can be set to \"true\"."
-* group.element[20].target.dependsOn[0].property = "data-type-map"
-* group.element[20].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[20].target.dependsOn[1].property = "vocabulary-map"
-* group.element[20].target.dependsOn[1].value = "Language"
 * group.element[21].code = #PID-16
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "type"
@@ -486,10 +428,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = 1
 * group.element[21].target.display = "maritalStatus"
-* group.element[21].target.dependsOn[0].property = "data-type-map"
-* group.element[21].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[21].target.dependsOn[1].property = "vocabulary-map"
-* group.element[21].target.dependsOn[1].value = "MaritalStatus"
 * group.element[22].code = #PID-17
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "type"
@@ -509,8 +447,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[22].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[22].target.extension[0].extension[2].valueInteger = 1
 * group.element[22].target.display = "extension[2].url"
-* group.element[22].target.dependsOn[0].property = "value"
-* group.element[22].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-religion\""
 * group.element[23].code = #PID-17
 * group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].extension[0].extension[0].url = "type"
@@ -530,10 +466,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[23].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[23].target.extension[0].extension[2].valueInteger = 1
 * group.element[23].target.display = "extension[2].valueCodeableConcept"
-* group.element[23].target.dependsOn[0].property = "data-type-map"
-* group.element[23].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[23].target.dependsOn[1].property = "vocabulary-map"
-* group.element[23].target.dependsOn[1].value = "Religion"
 * group.element[24].code = #PID-19
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[24].extension[0].extension[0].url = "type"
@@ -573,10 +505,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[25].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[25].target.extension[0].extension[2].valueInteger = 1
 * group.element[25].target.display = "identifier[4].type.coding.code"
-* group.element[25].target.dependsOn[0].property = "value"
-* group.element[25].target.dependsOn[0].value = "\"SS\""
-* group.element[25].target.product[0].property = "narrative"
-* group.element[25].target.product[0].value = "If in the US and various other jurisdictions"
 * group.element[26].code = #PID-19
 * group.element[26].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[26].extension[0].extension[0].url = "type"
@@ -596,10 +524,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[26].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[26].target.extension[0].extension[2].valueInteger = 1
 * group.element[26].target.display = "identifier[4].type.coding.code"
-* group.element[26].target.dependsOn[0].property = "value"
-* group.element[26].target.dependsOn[0].value = "\"SB\""
-* group.element[26].target.product[0].property = "narrative"
-* group.element[26].target.product[0].value = "If outside the US for certain jurisdictions"
 * group.element[27].code = #PID-19
 * group.element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[27].extension[0].extension[0].url = "type"
@@ -619,8 +543,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[27].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[27].target.extension[0].extension[2].valueInteger = 1
 * group.element[27].target.display = "identifier[4].type.coding.system"
-* group.element[27].target.dependsOn[0].property = "value"
-* group.element[27].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
 * group.element[28].code = #PID-19
 * group.element[28].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[28].extension[0].extension[0].url = "type"
@@ -641,8 +563,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[28].target.extension[0].extension[2].valueInteger = 1
 * group.element[28].target.display = "identifier[4].system"
 * group.element[28].target.comment = "If working in a jurisdiction other than the US and this field is used for the local SSN equivalent, a different system will need to be identified."
-* group.element[28].target.dependsOn[0].property = "value"
-* group.element[28].target.dependsOn[0].value = "\"http://hl7.org/fhir/sid/us-ssn.\""
 * group.element[29].code = #PID-20
 * group.element[29].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[29].extension[0].extension[0].url = "type"
@@ -662,8 +582,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[29].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[29].target.extension[0].extension[2].valueInteger = 1
 * group.element[29].target.display = "identifier[5]"
-* group.element[29].target.dependsOn[0].property = "data-type-map"
-* group.element[29].target.dependsOn[0].value = "DLN[Identifier]"
 * group.element[30].code = #PID-21
 * group.element[30].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[30].extension[0].extension[0].url = "type"
@@ -676,8 +594,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[30].target.equivalence = #equivalent
 * group.element[30].target.code = #$this
 * group.element[30].target.display = "$this"
-* group.element[30].target.dependsOn[0].property = "data-type-map"
-* group.element[30].target.dependsOn[0].value = "CX[RelatedPerson-Mother]"
 * group.element[31].code = #PID-23
 * group.element[31].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[31].extension[0].extension[0].url = "type"
@@ -697,8 +613,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[31].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[31].target.extension[0].extension[2].valueInteger = 1
 * group.element[31].target.display = "extension[3].url"
-* group.element[31].target.dependsOn[0].property = "value"
-* group.element[31].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-birthPlace\""
 * group.element[32].code = #PID-23
 * group.element[32].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[32].extension[0].extension[0].url = "type"
@@ -737,12 +651,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[33].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[33].target.extension[0].extension[2].valueInteger = 1
 * group.element[33].target.display = "multipleBirthBoolean"
-* group.element[33].target.dependsOn[0].property = "data-type-map"
-* group.element[33].target.dependsOn[0].value = "ID[Boolean]"
-* group.element[33].target.dependsOn[1].property = "vocabulary-map"
-* group.element[33].target.dependsOn[1].value = "Yes/No"
-* group.element[33].target.product[0].property = "antlr"
-* group.element[33].target.product[0].value = "IF PID-25 NOT VALUED"
 * group.element[34].code = #PID-25
 * group.element[34].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[34].extension[0].extension[0].url = "type"
@@ -781,8 +689,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[35].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[35].target.extension[0].extension[2].valueInteger = 1
 * group.element[35].target.display = "extension[4].url"
-* group.element[35].target.dependsOn[0].property = "value"
-* group.element[35].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-citizenship\""
 * group.element[36].code = #PID-26
 * group.element[36].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[36].extension[0].extension[0].url = "type"
@@ -802,8 +708,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[36].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[36].target.extension[0].extension[2].valueInteger = 1
 * group.element[36].target.display = "extension[4].extension[1].url"
-* group.element[36].target.dependsOn[0].property = "value"
-* group.element[36].target.dependsOn[0].value = "\"code\""
 * group.element[37].code = #PID-26
 * group.element[37].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[37].extension[0].extension[0].url = "type"
@@ -824,8 +728,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[37].target.extension[0].extension[2].valueInteger = 1
 * group.element[37].target.display = "extension[4].extension[1].valueCodeableConcept"
 * group.element[37].target.comment = "The standard extension does not include a value set"
-* group.element[37].target.dependsOn[0].property = "data-type-map"
-* group.element[37].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[38].code = #PID-28
 * group.element[38].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[38].extension[0].extension[0].url = "type"
@@ -845,8 +747,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[38].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[38].target.extension[0].extension[2].valueInteger = 1
 * group.element[38].target.display = "extension[5].url"
-* group.element[38].target.dependsOn[0].property = "value"
-* group.element[38].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-nationality\""
 * group.element[39].code = #PID-28
 * group.element[39].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[39].extension[0].extension[0].url = "type"
@@ -866,8 +766,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[39].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[39].target.extension[0].extension[2].valueInteger = 1
 * group.element[39].target.display = "extension[5].extension[1].url"
-* group.element[39].target.dependsOn[0].property = "value"
-* group.element[39].target.dependsOn[0].value = "\"code\""
 * group.element[40].code = #PID-28
 * group.element[40].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[40].extension[0].extension[0].url = "type"
@@ -888,8 +786,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[40].target.extension[0].extension[2].valueInteger = 1
 * group.element[40].target.display = "extension[5].extension[1].valueCodeableConcept"
 * group.element[40].target.comment = "The standard extension does not include a value set"
-* group.element[40].target.dependsOn[0].property = "data-type-map"
-* group.element[40].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[41].code = #PID-29
 * group.element[41].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[41].extension[0].extension[0].url = "type"
@@ -928,12 +824,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[42].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[42].target.extension[0].extension[2].valueInteger = 1
 * group.element[42].target.display = "deceasedBoolean"
-* group.element[42].target.dependsOn[0].property = "data-type-map"
-* group.element[42].target.dependsOn[0].value = "ID[Boolean]"
-* group.element[42].target.dependsOn[1].property = "vocabulary-map"
-* group.element[42].target.dependsOn[1].value = "Yes/No"
-* group.element[42].target.product[0].property = "antlr"
-* group.element[42].target.product[0].value = "IF PID-29 NOT VALUED"
 * group.element[43].code = #PID-35
 * group.element[43].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[43].extension[0].extension[0].url = "type"
@@ -953,8 +843,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[43].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[43].target.extension[0].extension[2].valueInteger = -1
 * group.element[43].target.display = "extension[6].url"
-* group.element[43].target.dependsOn[0].property = "value"
-* group.element[43].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-animal\""
 * group.element[44].code = #PID-35
 * group.element[44].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[44].extension[0].extension[0].url = "type"
@@ -974,8 +862,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[44].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[44].target.extension[0].extension[2].valueInteger = 1
 * group.element[44].target.display = "extension[6].extension[1].url"
-* group.element[44].target.dependsOn[0].property = "value"
-* group.element[44].target.dependsOn[0].value = "\"species\""
 * group.element[45].code = #PID-35
 * group.element[45].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[45].extension[0].extension[0].url = "type"
@@ -995,8 +881,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[45].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[45].target.extension[0].extension[2].valueInteger = 1
 * group.element[45].target.display = "extension[6].extension[1].valueCodeableConcept"
-* group.element[45].target.dependsOn[0].property = "data-type-map"
-* group.element[45].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[46].code = #PID-36
 * group.element[46].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[46].extension[0].extension[0].url = "type"
@@ -1016,8 +900,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[46].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[46].target.extension[0].extension[2].valueInteger = -1
 * group.element[46].target.display = "extension[6].url"
-* group.element[46].target.dependsOn[0].property = "value"
-* group.element[46].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-animal\""
 * group.element[47].code = #PID-36
 * group.element[47].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[47].extension[0].extension[0].url = "type"
@@ -1037,8 +919,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[47].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[47].target.extension[0].extension[2].valueInteger = 1
 * group.element[47].target.display = "extension[6].extension[2].url"
-* group.element[47].target.dependsOn[0].property = "value"
-* group.element[47].target.dependsOn[0].value = "\"breed\""
 * group.element[48].code = #PID-36
 * group.element[48].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[48].extension[0].extension[0].url = "type"
@@ -1058,8 +938,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[48].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[48].target.extension[0].extension[2].valueInteger = 1
 * group.element[48].target.display = "extension[6].extension[2].valueCodeableConcept"
-* group.element[48].target.dependsOn[0].property = "data-type-map"
-* group.element[48].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[49].code = #PID-39
 * group.element[49].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[49].extension[0].extension[0].url = "type"
@@ -1079,8 +957,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[49].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[49].target.extension[0].extension[2].valueInteger = 1
 * group.element[49].target.display = "extension[7].url"
-* group.element[49].target.dependsOn[0].property = "value"
-* group.element[49].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-citizenship\""
 * group.element[50].code = #PID-39
 * group.element[50].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[50].extension[0].extension[0].url = "type"
@@ -1100,8 +976,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[50].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[50].target.extension[0].extension[2].valueInteger = 1
 * group.element[50].target.display = "extension[7].extension[1].url"
-* group.element[50].target.dependsOn[0].property = "value"
-* group.element[50].target.dependsOn[0].value = "\"code\""
 * group.element[51].code = #PID-39
 * group.element[51].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[51].extension[0].extension[0].url = "type"
@@ -1122,8 +996,6 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[51].target.extension[0].extension[2].valueInteger = 1
 * group.element[51].target.display = "extension[7].extension[1].valueCodeableConcept"
 * group.element[51].target.comment = "The standard extension does not include a value set.  Also suggest that the extension should not be limited to \"country\".  Consider adding a .type to the extension to distinguish tribal vs. \"country\" (or whatever we call it), or otherwise add an extension for tribal citizenship to accommodate the return flow."
-* group.element[51].target.dependsOn[0].property = "data-type-map"
-* group.element[51].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[52].code = #PID-40
 * group.element[52].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[52].extension[0].extension[0].url = "type"
@@ -1143,5 +1015,3 @@ Title: "Segment PIDnull to Patient Map"
 * group.element[52].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[52].target.extension[0].extension[2].valueInteger = -1
 * group.element[52].target.display = "telecom[3]"
-* group.element[52].target.dependsOn[0].property = "data-type-map"
-* group.element[52].target.dependsOn[0].value = "XTN[ContactPoint]"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ MSG[Coding] - Sheet1.csv
 Instance: DatatypeMSGToCoding
 InstanceOf: ConceptMap
-Title: "Datatype MSGnull to Coding Map"
-* title = "Datatype MSGnull to Coding Map"
+Title: "Datatype MSG to Coding Map"
+* title = "Datatype MSG to Coding Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype MSG to the FHIR Coding Data Type."
 * id = "datatype-msg-to-coding"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-msg-to-coding"
@@ -10,7 +10,7 @@ Title: "Datatype MSGnull to Coding Map"
 * name = "DatatypeMSGToCoding"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -28,8 +28,6 @@ Title: "Datatype MSGnull to Coding Map"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #display
 * group.element[0].target.display = "display"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "MSG.1+\"^\"+MSG.2+\"^\"+MSG.3"
 * group.element[1].code = #MSG.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -54,5 +52,3 @@ Title: "Datatype MSGnull to Coding Map"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #system
 * group.element[2].target.display = "system"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0003\""

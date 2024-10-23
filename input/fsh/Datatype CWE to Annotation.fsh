@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[Annotation] - Sheet1.csv
 Instance: DatatypeCWEToAnnotation
 InstanceOf: ConceptMap
-Title: "Datatype CWEnull to Annotation Map"
-* title = "Datatype CWEnull to Annotation Map"
+Title: "Datatype CWE to Annotation Map"
+* title = "Datatype CWE to Annotation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Annotation Data Type."
 * id = "datatype-cwe-to-annotation"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-annotation"
@@ -10,7 +10,7 @@ Title: "Datatype CWEnull to Annotation Map"
 * name = "DatatypeCWEToAnnotation"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -31,5 +31,3 @@ Title: "Datatype CWEnull to Annotation Map"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"markdown"
 * group.element[0].target.display = "text"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "/include full field (inlcuding delimiters or xml tags)/"

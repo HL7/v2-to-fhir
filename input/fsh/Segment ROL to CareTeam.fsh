@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ ROL[CareTeam] - Sheet1.csv
 Instance: SegmentROLToCareTeam
 InstanceOf: ConceptMap
-Title: "Segment ROLnull to CareTeam Map"
-* title = "Segment ROLnull to CareTeam Map"
+Title: "Segment ROL to CareTeam Map"
+* title = "Segment ROL to CareTeam Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment ROL to the FHIR CareTeam Resource."
 * id = "segment-rol-to-careteam"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-rol-to-careteam"
@@ -10,7 +10,7 @@ Title: "Segment ROLnull to CareTeam Map"
 * name = "SegmentROLToCareTeam"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,10 +43,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "participant.role[1]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[0].target.dependsOn[1].property = "vocabulary-map"
-* group.element[0].target.dependsOn[1].value = "Role"
 * group.element[1].code = #ROL-4
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -66,10 +62,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "participant.member(Practitioner[1])"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "XCN[Practitioner]"
-* group.element[1].target.product[0].property = "narrative"
-* group.element[1].target.product[0].value = "Depending on ROL-3"
 * group.element[2].code = #ROL-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -89,10 +81,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "participant.member(Patient[1])"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "XCN[Patient]"
-* group.element[2].target.product[0].property = "narrative"
-* group.element[2].target.product[0].value = "Depending on ROL-3"
 * group.element[3].code = #ROL-4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -112,10 +100,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "participant.member(RelatedPerson[1])"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "XCN[RelatedPerson]"
-* group.element[3].target.product[0].property = "narrative"
-* group.element[3].target.product[0].value = "Depending on ROL-3"
 * group.element[4].code = #ROL-5
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -135,8 +119,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "participant.period.start"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "DTM[DateTime]"
 * group.element[5].code = #ROL-6
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -156,8 +138,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "participant.period.end"
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "DTM[DateTime]"
 * group.element[6].code = #ROL-8
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -177,8 +157,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = -1
 * group.element[6].target.display = "reasonCode"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[7].code = #ROL-9
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -198,8 +176,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = -1
 * group.element[7].target.display = "participant.role[2]"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[8].code = #ROL-10
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -219,10 +195,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "participant.onBehalfOf(Organization[1])"
-* group.element[8].target.dependsOn[0].property = "data-type-map"
-* group.element[8].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[8].target.product[0].property = "antlr"
-* group.element[8].target.product[0].value = "IF ROL-4 VALUED"
 * group.element[9].code = #ROL-10
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -242,12 +214,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "participant.member(Organization[1].type)"
-* group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[9].target.dependsOn[1].property = "vocabulary-map"
-* group.element[9].target.dependsOn[1].value = "OrganizationUnitType"
-* group.element[9].target.product[0].property = "antlr"
-* group.element[9].target.product[0].value = "IF ROL-4 NOT VALUED"
 * group.element[10].code = #ROL-12
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -267,8 +233,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = -1
 * group.element[10].target.display = "telecom"
-* group.element[10].target.dependsOn[0].property = "data-type-map"
-* group.element[10].target.dependsOn[0].value = "XTN[ContactPoint]"
 * group.element[11].code = #ROL-14
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -284,10 +248,6 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[11].target.extension[0].extension[0].url = "type"
 * group.element[11].target.extension[0].extension[0].valueCode = #"Reference"
 * group.element[11].target.display = "participant.onBehalfOf(Organization[1])"
-* group.element[11].target.dependsOn[0].property = "data-type-map"
-* group.element[11].target.dependsOn[0].value = "XON[Organization]"
-* group.element[11].target.product[0].property = "antlr"
-* group.element[11].target.product[0].value = "IF ROL-4 VALUED"
 * group.element[12].code = #ROL-14
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -303,7 +263,3 @@ Title: "Segment ROLnull to CareTeam Map"
 * group.element[12].target.extension[0].extension[0].url = "type"
 * group.element[12].target.extension[0].extension[0].valueCode = #"Reference"
 * group.element[12].target.display = "participant.member(Organization[1])"
-* group.element[12].target.dependsOn[0].property = "data-type-map"
-* group.element[12].target.dependsOn[0].value = "XON[Organization]"
-* group.element[12].target.product[0].property = "antlr"
-* group.element[12].target.product[0].value = "IF ROL-4 NOT VALUED"

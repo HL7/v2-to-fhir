@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ TQ[Task-ExecutionPeriod] - Sheet1.csv
 Instance: DatatypeTQExecutionPeriodToTask
 InstanceOf: ConceptMap
-Title: "Datatype TQnull to Task Map"
-* title = "Datatype TQnull to Task Map"
+Title: "Datatype TQ to Task Map"
+* title = "Datatype TQ to Task Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TQ to the FHIR Task Resource."
 * id = "datatype-tq-executionperiod-to-task"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-tq-executionperiod-to-task"
@@ -10,7 +10,7 @@ Title: "Datatype TQnull to Task Map"
 * name = "DatatypeTQExecutionPeriodToTask"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Datatype TQnull to Task Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "executionPeriod.start"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "TS[DateTime]"
 * group.element[1].code = #TQ.5
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,5 +62,3 @@ Title: "Datatype TQnull to Task Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "executionPeriod.end"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "TS[DateTime]"

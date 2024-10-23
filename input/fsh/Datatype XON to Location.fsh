@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XON[Location] - Sheet1.csv
 Instance: DatatypeXONToLocation
 InstanceOf: ConceptMap
-Title: "Datatype XONnull to Location Map"
-* title = "Datatype XONnull to Location Map"
+Title: "Datatype XON to Location Map"
+* title = "Datatype XON to Location Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XON to the FHIR Location Resource."
 * id = "datatype-xon-to-location"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xon-to-location"
@@ -10,7 +10,7 @@ Title: "Datatype XONnull to Location Map"
 * name = "DatatypeXONToLocation"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -62,8 +62,6 @@ Title: "Datatype XONnull to Location Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "identifier[1].value"
-* group.element[1].target.product[0].property = "antlr"
-* group.element[1].target.product[0].value = "IF XON.10 NOT VALUED"
 * group.element[2].code = #XON.4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -83,8 +81,6 @@ Title: "Datatype XONnull to Location Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "identifier[1].extension[1].url"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/identifier-checkDigit\""
 * group.element[3].code = #XON.4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -123,8 +119,6 @@ Title: "Datatype XONnull to Location Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "identifier[1].extension[2].url"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/namingsystem-checkDigit\""
 * group.element[5].code = #XON.5
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -163,10 +157,6 @@ Title: "Datatype XONnull to Location Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "identifier[1].assigner(Organization)"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "HD[Organization]"
-* group.element[6].target.product[0].property = "narrative"
-* group.element[6].target.product[0].value = "If organization"
 * group.element[7].code = #XON.6
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -187,10 +177,6 @@ Title: "Datatype XONnull to Location Map"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "identifier[1].system"
 * group.element[7].target.comment = "Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then XCN.9 should be mapped to .system"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "HD[uri]"
-* group.element[7].target.product[0].property = "narrative"
-* group.element[7].target.product[0].value = "If system"
 * group.element[8].code = #XON.7
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -229,8 +215,6 @@ Title: "Datatype XONnull to Location Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = -1
 * group.element[9].target.display = "identifier[2].type.coding.system"
-* group.element[9].target.dependsOn[0].property = "value"
-* group.element[9].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
 * group.element[10].code = #XON.10
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"

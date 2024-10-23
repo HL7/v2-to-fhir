@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv
 Instance: SegmentPV2ToEncounter
 InstanceOf: ConceptMap
-Title: "Segment PV2null to Encounter Map"
-* title = "Segment PV2null to Encounter Map"
+Title: "Segment PV2 to Encounter Map"
+* title = "Segment PV2 to Encounter Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PV2 to the FHIR Encounter Resource."
 * id = "segment-pv2-to-encounter"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pv2-to-encounter"
@@ -10,7 +10,7 @@ Title: "Segment PV2null to Encounter Map"
 * name = "SegmentPV2ToEncounter"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "location[5].location(Location)"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "PL[Location]"
 * group.element[1].code = #PV2-1
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -57,8 +55,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #location[5].status
 * group.element[1].target.display = "location[5].status"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"planned\""
 * group.element[2].code = #PV2-3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -79,8 +75,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "reasonCode[1]"
 * group.element[2].target.comment = "PV2-3 doesn't have an associated table so no vocabulary mapping is provided"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[3].code = #PV2-8
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -100,8 +94,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "extension[1].url"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "\"http://hl7.org/fhir/v5.0/StructureDefinition/extension-Encounter.plannedStartDate\""
 * group.element[4].code = #PV2-8
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -140,8 +132,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "extension[2].url"
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "\"http://hl7.org/fhir/v5.0/StructureDefinition/extension-Encounter.plannedEndDate\""
 * group.element[6].code = #PV2-9
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -180,8 +170,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "length"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "NM[Quantity-LengthOfStay]"
 * group.element[8].code = #PV2-12
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -220,8 +208,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "participant.individual(Practitioner)"
-* group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[10].code = #PV2-13
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -241,8 +227,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "participant.type.coding.code"
-* group.element[10].target.dependsOn[0].property = "value"
-* group.element[10].target.dependsOn[0].value = "\"REF\""
 * group.element[11].code = #PV2-13
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -262,8 +246,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "participant.type.coding.system"
-* group.element[11].target.dependsOn[0].property = "value"
-* group.element[11].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""
 * group.element[12].code = #PV2-13
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -283,8 +265,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "participant.type.text"
-* group.element[12].target.dependsOn[0].property = "value"
-* group.element[12].target.dependsOn[0].value = "\"referrer\""
 * group.element[13].code = #PV2-22
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -304,10 +284,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = -1
 * group.element[13].target.display = "meta.security"
-* group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "ID[Coding]"
-* group.element[13].target.dependsOn[1].property = "vocabulary-map"
-* group.element[13].target.dependsOn[1].value = "Yes/No"
 * group.element[14].code = #PV2-25
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -327,10 +303,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "priority"
-* group.element[14].target.dependsOn[0].property = "data-type-map"
-* group.element[14].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[14].target.dependsOn[1].property = "vocabulary-map"
-* group.element[14].target.dependsOn[1].value = "EncounterPriority"
 * group.element[15].code = #PV2-38
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -343,8 +315,6 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[15].target.equivalence = #equivalent
 * group.element[15].target.code = #extension[1].url
 * group.element[15].target.display = "extension[1].url"
-* group.element[15].target.dependsOn[0].property = "value"
-* group.element[15].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/encounter-modeOfArrival\""
 * group.element[16].code = #PV2-38
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -364,7 +334,3 @@ Title: "Segment PV2null to Encounter Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "extension[1].valueCoding"
-* group.element[16].target.dependsOn[0].property = "data-type-map"
-* group.element[16].target.dependsOn[0].value = "CWE[Coding]"
-* group.element[16].target.dependsOn[1].property = "vocabulary-map"
-* group.element[16].target.dependsOn[1].value = "ModeOfArrival"

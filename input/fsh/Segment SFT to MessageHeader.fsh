@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv
 Instance: SegmentSFTToMessageHeader
 InstanceOf: ConceptMap
-Title: "Segment SFTnull to MessageHeader Map"
-* title = "Segment SFTnull to MessageHeader Map"
+Title: "Segment SFT to MessageHeader Map"
+* title = "Segment SFT to MessageHeader Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment SFT to the FHIR MessageHeader Resource."
 * id = "segment-sft-to-messageheader"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-sft-to-messageheader"
@@ -10,7 +10,7 @@ Title: "Segment SFTnull to MessageHeader Map"
 * name = "SegmentSFTToMessageHeader"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -35,8 +35,6 @@ Title: "Segment SFTnull to MessageHeader Map"
 * group.element[0].target.code = #source.version
 * group.element[0].target.display = "source.version"
 * group.element[0].target.comment = "1"
-* group.element[0].target.dependsOn[0].property = "references"
-* group.element[0].target.dependsOn[0].value = "string"
 * group.element[1].code = #SFT-3
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "cardinalityMin"
@@ -48,5 +46,3 @@ Title: "Segment SFTnull to MessageHeader Map"
 * group.element[1].target.code = #source.software
 * group.element[1].target.display = "source.software"
 * group.element[1].target.comment = "1"
-* group.element[1].target.dependsOn[0].property = "references"
-* group.element[1].target.dependsOn[0].value = "string"

@@ -1,8 +1,8 @@
 // HL7 Concept Map_ ConsentStatus - Sheet1.csv
 Instance: TableHL70498ToConsentStateCodes
 InstanceOf: ConceptMap
-Title: "Table HL70498null to Consent State Codes Map"
-* title = "Table HL70498null to Consent State Codes Map"
+Title: "Table HL70498 to Consent State Codes Map"
+* title = "Table HL70498 to Consent State Codes Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70498 to the FHIR Consent State Codes Value Set."
 * id = "table-hl70498-to-consent-state-codes"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70498-to-consent-state-codes"
@@ -10,7 +10,7 @@ Title: "Table HL70498null to Consent State Codes Map"
 * name = "TableHL70498ToConsentStateCodes"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

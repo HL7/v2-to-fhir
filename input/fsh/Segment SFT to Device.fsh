@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ SFT[Device] - Sheet1.csv
 Instance: SegmentSFTToDevice
 InstanceOf: ConceptMap
-Title: "Segment SFTnull to Device Map"
-* title = "Segment SFTnull to Device Map"
+Title: "Segment SFT to Device Map"
+* title = "Segment SFT to Device Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment SFT to the FHIR Device Resource."
 * id = "segment-sft-to-device"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-sft-to-device"
@@ -10,7 +10,7 @@ Title: "Segment SFTnull to Device Map"
 * name = "SegmentSFTToDevice"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -39,10 +39,6 @@ Title: "Segment SFTnull to Device Map"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"string"
 * group.element[0].target.display = "manufacturer"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "XON[string]"
-* group.element[0].target.product[0].property = "antlr"
-* group.element[0].target.product[0].value = "If XON.1 IS VALUED AND XON.10 NOT VALUED"
 * group.element[1].code = #SFT-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -96,8 +92,6 @@ Title: "Segment SFTnull to Device Map"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"code"
 * group.element[3].target.display = "deviceName.type"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "\"manufacturer-name\""
 * group.element[4].code = #SFT-4
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -151,8 +145,6 @@ Title: "Segment SFTnull to Device Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "version.extension[1].url"
-* group.element[6].target.dependsOn[0].property = "value"
-* group.element[6].target.dependsOn[0].value = "\"https://hl7.org/fhir/R5/StructureDefinition/extension-Device.version.installDate\""
 * group.element[7].code = #SFT-6
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -172,5 +164,3 @@ Title: "Segment SFTnull to Device Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "version.extension[1].valueDateTime"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "DTM[DateTime]"

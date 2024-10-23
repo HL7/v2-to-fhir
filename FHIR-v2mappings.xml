@@ -6,289 +6,299 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="ConceptMap/datatype-ce-to-codeableconcept" key="ConceptMap-datatype-ce-to-codeableconcept" name="Datatype CEnull to CodeableConcept Map"/>
-<artifact id="ConceptMap/datatype-cf-to-codeableconcept" key="ConceptMap-unsupported-datatype-cf-to-codeableconcept" name="Datatype CFnull to CodeableConcept Map"/>
-<artifact id="ConceptMap/datatype-cm-source-to-specimen" key="ConceptMap-datatype-cm-source-to-specimen" name="Datatype CMnull to Specimen Map"/>
-<artifact id="ConceptMap/datatype-cne-to-codeableconcept" key="ConceptMap-datatype-cne-to-codeableconcept" name="Datatype CNEnull to CodeableConcept Map"/>
-<artifact id="ConceptMap/datatype-cnn-to-practitioner" key="ConceptMap-datatype-cnn-to-practitioner" name="Datatype CNNnull to Practitioner Map"/>
+<artifact id="ConceptMap/datatype-ce-to-codeableconcept" key="ConceptMap-datatype-ce-to-codeableconcept" name="Datatype CE to CodeableConcept Map"/>
+<artifact id="ConceptMap/datatype-cf-to-codeableconcept" key="ConceptMap-unsupported-datatype-cf-to-codeableconcept" name="Datatype CF to CodeableConcept Map"/>
+<artifact id="ConceptMap/datatype-cm-source-to-specimen" key="ConceptMap-datatype-cm-source-to-specimen" name="Datatype CM to Specimen Map"/>
+<artifact id="ConceptMap/datatype-cne-to-codeableconcept" key="ConceptMap-datatype-cne-to-codeableconcept" name="Datatype CNE to CodeableConcept Map"/>
+<artifact id="ConceptMap/datatype-cnn-to-practitioner" key="ConceptMap-datatype-cnn-to-practitioner" name="Datatype CNN to Practitioner Map"/>
+<artifact id="ConceptMap/datatype-cq-to-code" key="ConceptMap-datatype-cq-to-code" name="Datatype CQ to Code Map"/>
+<artifact id="ConceptMap/datatype-cq-to-decimal" key="ConceptMap-datatype-cq-to-decimal" name="Datatype CQ to Decimal Map"/>
+<artifact id="ConceptMap/datatype-cq-to-quantity" key="ConceptMap-datatype-cq-to-quantity" name="Datatype CQ to Quantity Map"/>
 <artifact deprecated="true" id="ConceptMap/datatype-cq-to-servicerequest-occurencetiming" key="ConceptMap-datatype-cq-to-servicerequest-occurencetiming" name="Datatype CQ to ServiceRequest.occurenceTiming Map"/>
+<artifact id="ConceptMap/datatype-cq-to-unsignedint" key="ConceptMap-datatype-cq-to-unsignedint" name="Datatype CQ to UnsignedInt Map"/>
 <artifact deprecated="true" id="ConceptMap/datatype-cq-duration-to-repeat" key="ConceptMap-datatype-cq-duration-to-repeat" name="Datatype CQ[Duration] to Repeat Map"/>
 <artifact deprecated="true" id="ConceptMap/datatype-cq-period-to-repeat" key="ConceptMap-datatype-cq-period-to-repeat" name="Datatype CQ[Period] to Repeat Map"/>
-<artifact id="ConceptMap/datatype-cq-to-code" key="ConceptMap-datatype-cq-to-code" name="Datatype CQnull to Code Map"/>
-<artifact id="ConceptMap/datatype-cq-to-decimal" key="ConceptMap-datatype-cq-to-decimal" name="Datatype CQnull to Decimal Map"/>
-<artifact id="ConceptMap/datatype-cq-to-quantity" key="ConceptMap-datatype-cq-to-quantity" name="Datatype CQnull to Quantity Map"/>
-<artifact id="ConceptMap/datatype-cq-to-unsignedint" key="ConceptMap-datatype-cq-to-unsignedint" name="Datatype CQnull to UnsignedInt Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-annotation" key="ConceptMap-datatype-cwe-to-annotation" name="Datatype CWEnull to Annotation Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-codeableconcept" key="ConceptMap-datatype-cwe-to-codeableconcept" name="Datatype CWEnull to CodeableConcept Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-coding" key="ConceptMap-datatype-cwe-to-coding" name="Datatype CWEnull to Coding Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-device" key="ConceptMap-unsupported-datatype-cwe-to-device" name="Datatype CWEnull to Device Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-duration" key="ConceptMap-datatype-cwe-to-duration" name="Datatype CWEnull to Duration Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-identifier" key="ConceptMap-unsupported-datatype-cwe-to-identifier" name="Datatype CWEnull to Identifier Map"/>
-<artifact id="ConceptMap/datatype-cwe-supportinginfo-to-observation" key="ConceptMap-datatype-cwe-supportinginfo-to-observation" name="Datatype CWEnull to Observation Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-organization" key="ConceptMap-datatype-cwe-to-organization" name="Datatype CWEnull to Organization Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-practitionerrole" key="ConceptMap-datatype-cwe-to-practitionerrole" name="Datatype CWEnull to PractitionerRole Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-quantity" key="ConceptMap-datatype-cwe-to-quantity" name="Datatype CWEnull to Quantity Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-timing-duration" key="ConceptMap-datatype-cwe-to-timing-duration" name="Datatype CWEnull to Timing.duration Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-code" key="ConceptMap-datatype-cwe-to-code" name="Datatype CWEnull to code Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-string" key="ConceptMap-datatype-cwe-to-string" name="Datatype CWEnull to string Map"/>
-<artifact id="ConceptMap/datatype-cwe-to-uri" key="ConceptMap-datatype-cwe-to-uri" name="Datatype CWEnull to uri Map"/>
-<artifact id="ConceptMap/datatype-cx-to-identifier" key="ConceptMap-datatype-cx-to-identifier" name="Datatype CXnull to Identifier Map"/>
-<artifact id="ConceptMap/datatype-cx-mother-to-relatedperson" key="ConceptMap-datatype-cx-mother-to-relatedperson" name="Datatype CXnull to RelatedPerson Map"/>
-<artifact id="ConceptMap/datatype-cx-to-string" key="ConceptMap-datatype-cx-to-string" name="Datatype CXnull to string Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-annotation" key="ConceptMap-datatype-cwe-to-annotation" name="Datatype CWE to Annotation Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-codeableconcept" key="ConceptMap-datatype-cwe-to-codeableconcept" name="Datatype CWE to CodeableConcept Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-coding" key="ConceptMap-datatype-cwe-to-coding" name="Datatype CWE to Coding Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-device" key="ConceptMap-unsupported-datatype-cwe-to-device" name="Datatype CWE to Device Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-duration" key="ConceptMap-datatype-cwe-to-duration" name="Datatype CWE to Duration Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-identifier" key="ConceptMap-unsupported-datatype-cwe-to-identifier" name="Datatype CWE to Identifier Map"/>
+<artifact id="ConceptMap/datatype-cwe-supportinginfo-to-observation" key="ConceptMap-datatype-cwe-supportinginfo-to-observation" name="Datatype CWE to Observation Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-organization" key="ConceptMap-datatype-cwe-to-organization" name="Datatype CWE to Organization Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-practitionerrole" key="ConceptMap-datatype-cwe-to-practitionerrole" name="Datatype CWE to PractitionerRole Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-quantity" key="ConceptMap-datatype-cwe-to-quantity" name="Datatype CWE to Quantity Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-timing-duration" key="ConceptMap-datatype-cwe-to-timing-duration" name="Datatype CWE to Timing.duration Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-code" key="ConceptMap-datatype-cwe-to-code" name="Datatype CWE to code Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-string" key="ConceptMap-datatype-cwe-to-string" name="Datatype CWE to string Map"/>
+<artifact id="ConceptMap/datatype-cwe-to-uri" key="ConceptMap-datatype-cwe-to-uri" name="Datatype CWE to uri Map"/>
+<artifact id="ConceptMap/datatype-cx-to-identifier" key="ConceptMap-datatype-cx-to-identifier" name="Datatype CX to Identifier Map"/>
+<artifact id="ConceptMap/datatype-cx-mother-to-relatedperson" key="ConceptMap-datatype-cx-mother-to-relatedperson" name="Datatype CX to RelatedPerson Map"/>
+<artifact id="ConceptMap/datatype-cx-to-string" key="ConceptMap-datatype-cx-to-string" name="Datatype CX to string Map"/>
+<artifact id="ConceptMap/datatype-dld-discharge-to-location" key="ConceptMap-datatype-dld-discharge-to-location" name="Datatype DLD to Location Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-dld-to-location" key="ConceptMap-unsupported-datatype-dld-to-location" name="Datatype DLD to Location Map - Unsupported"/>
-<artifact id="ConceptMap/datatype-dld-discharge-to-location" key="ConceptMap-datatype-dld-discharge-to-location" name="Datatype DLDnull to Location Map"/>
-<artifact id="ConceptMap/datatype-dln-to-identifier" key="ConceptMap-datatype-dln-to-identifier" name="Datatype DLNnull to Identifier Map"/>
-<artifact id="ConceptMap/datatype-dr-to-datetime" key="ConceptMap-datatype-dr-to-datetime" name="Datatype DRnull to DateTime Map"/>
-<artifact id="ConceptMap/datatype-dr-to-period" key="ConceptMap-datatype-dr-to-period" name="Datatype DRnull to Period Map"/>
-<artifact id="ConceptMap/datatype-dtm-time-to-annotation" key="ConceptMap-datatype-dtm-time-to-annotation" name="Datatype DTMnull to Annotation Map"/>
-<artifact id="ConceptMap/datatype-dtm-to-datetime" key="ConceptMap-datatype-dtm-to-datetime" name="Datatype DTMnull to DateTime Map"/>
-<artifact id="ConceptMap/datatype-ed-to-attachment" key="ConceptMap-datatype-ed-to-attachment" name="Datatype EDnull to Attachment Map"/>
-<artifact id="ConceptMap/datatype-ed-to-documentreference" key="ConceptMap-datatype-ed-to-documentreference" name="Datatype EDnull to DocumentReference Map"/>
+<artifact id="ConceptMap/datatype-dln-to-identifier" key="ConceptMap-datatype-dln-to-identifier" name="Datatype DLN to Identifier Map"/>
+<artifact id="ConceptMap/datatype-dr-to-datetime" key="ConceptMap-datatype-dr-to-datetime" name="Datatype DR to DateTime Map"/>
+<artifact id="ConceptMap/datatype-dr-to-period" key="ConceptMap-datatype-dr-to-period" name="Datatype DR to Period Map"/>
+<artifact id="ConceptMap/datatype-dtm-time-to-annotation" key="ConceptMap-datatype-dtm-time-to-annotation" name="Datatype DTM to Annotation Map"/>
+<artifact id="ConceptMap/datatype-dtm-to-datetime" key="ConceptMap-datatype-dtm-to-datetime" name="Datatype DTM to DateTime Map"/>
+<artifact id="ConceptMap/datatype-ed-to-attachment" key="ConceptMap-datatype-ed-to-attachment" name="Datatype ED to Attachment Map"/>
+<artifact id="ConceptMap/datatype-ed-to-documentreference" key="ConceptMap-datatype-ed-to-documentreference" name="Datatype ED to DocumentReference Map"/>
+<artifact id="ConceptMap/datatype-ei-to-coding" key="ConceptMap-datatype-ei-to-coding" name="Datatype EI to Coding Map"/>
+<artifact id="ConceptMap/datatype-ei-to-condition" key="ConceptMap-datatype-ei-to-condition" name="Datatype EI to Condition Map"/>
+<artifact id="ConceptMap/datatype-ei-udicarrier-to-device" key="ConceptMap-datatype-ei-udicarrier-to-device" name="Datatype EI to Device Map"/>
+<artifact id="ConceptMap/datatype-ei-defaultassigner-to-identifier" key="ConceptMap-datatype-ei-defaultassigner-to-identifier" name="Datatype EI to Identifier Map"/>
+<artifact id="ConceptMap/datatype-ei-extension-to-identifier" key="ConceptMap-datatype-ei-extension-to-identifier" name="Datatype EI to Identifier Map"/>
+<artifact id="ConceptMap/datatype-ei-organization-to-identifier" key="ConceptMap-datatype-ei-organization-to-identifier" name="Datatype EI to Identifier Map"/>
+<artifact id="ConceptMap/datatype-ei-system-to-identifier" key="ConceptMap-datatype-ei-system-to-identifier" name="Datatype EI to Identifier Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-ei-to-identifier" key="ConceptMap-unsupported-datatype-ei-to-identifier" name="Datatype EI to Identifier Map - Unsupported"/>
+<artifact id="ConceptMap/datatype-ei-to-procedure" key="ConceptMap-datatype-ei-to-procedure" name="Datatype EI to Procedure Map"/>
+<artifact id="ConceptMap/datatype-eip-fillerassignedidentifier-to-identifier" key="ConceptMap-datatype-eip-fillerassignedidentifer-to-identifier" name="Datatype EIP to Identifier Map"/>
+<artifact id="ConceptMap/datatype-eip-placerassignedidentifier-to-identifier" key="ConceptMap-datatype-eip-placerassignedidentifier-to-identifier" name="Datatype EIP to Identifier Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-eip-to-identifier" key="ConceptMap-unsupported-datatype-eip-to-identifier" name="Datatype EIP to Identifier Map - Unsupported"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-eip-fillerassignedidentifier-to-identifier" key="ConceptMap-unsupported-datatype-eip-fillerassignedidentifier-to-identifier" name="Datatype EIP[FillerAssignedIdentifier] to Identifier Map - Unsupported"/>
-<artifact id="ConceptMap/datatype-eip-fillerassignedidentifier-to-identifier" key="ConceptMap-datatype-eip-fillerassignedidentifer-to-identifier" name="Datatype EIPnull to Identifier Map"/>
-<artifact id="ConceptMap/datatype-eip-placerassignedidentifier-to-identifier" key="ConceptMap-datatype-eip-placerassignedidentifier-to-identifier" name="Datatype EIPnull to Identifier Map"/>
-<artifact id="ConceptMap/datatype-ei-to-coding" key="ConceptMap-datatype-ei-to-coding" name="Datatype EInull to Coding Map"/>
-<artifact id="ConceptMap/datatype-ei-to-condition" key="ConceptMap-datatype-ei-to-condition" name="Datatype EInull to Condition Map"/>
-<artifact id="ConceptMap/datatype-ei-udicarrier-to-device" key="ConceptMap-datatype-ei-udicarrier-to-device" name="Datatype EInull to Device Map"/>
-<artifact id="ConceptMap/datatype-ei-defaultassigner-to-identifier" key="ConceptMap-datatype-ei-defaultassigner-to-identifier" name="Datatype EInull to Identifier Map"/>
-<artifact id="ConceptMap/datatype-ei-extension-to-identifier" key="ConceptMap-datatype-ei-extension-to-identifier" name="Datatype EInull to Identifier Map"/>
-<artifact id="ConceptMap/datatype-ei-organization-to-identifier" key="ConceptMap-datatype-ei-organization-to-identifier" name="Datatype EInull to Identifier Map"/>
-<artifact id="ConceptMap/datatype-ei-system-to-identifier" key="ConceptMap-datatype-ei-system-to-identifier" name="Datatype EInull to Identifier Map"/>
-<artifact id="ConceptMap/datatype-ei-to-procedure" key="ConceptMap-datatype-ei-to-procedure" name="Datatype EInull to Procedure Map"/>
-<artifact id="ConceptMap/datatype-fn-to-humanname" key="ConceptMap-datatype-fn-to-humanname" name="Datatype FNnull to HumanName Map"/>
+<artifact id="ConceptMap/datatype-fn-to-humanname" key="ConceptMap-datatype-fn-to-humanname" name="Datatype FN to HumanName Map"/>
 <artifact id="ConceptMap/unsupported-datatype-ft-comment-to-annotation" key="ConceptMap-unsupported-datatype-ft-comment-to-annotation" name="Datatype FT[Comment] to Annotation Map - Unsupported"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-hd-to-device" key="ConceptMap-unsupported-datatype-hd-to-device" name="Datatype HD to Device Map - Unsupported"/>
+<artifact id="ConceptMap/datatype-hd-to-identifier" key="ConceptMap-datatype-hd-to-identifier" name="Datatype HD to Identifier Map"/>
+<artifact id="ConceptMap/datatype-hd-to-location" key="ConceptMap-datatype-hd-to-location" name="Datatype HD to Location Map"/>
+<artifact id="ConceptMap/datatype-hd-to-messageheader-destination" key="ConceptMap-datatype-hd-to-messageheader-destination" name="Datatype HD to MessageHeader.destination Map"/>
+<artifact id="ConceptMap/datatype-hd-to-messageheader-destination-name" key="ConceptMap-datatype-hd-to-messageheader-destination-name" name="Datatype HD to MessageHeader.destination.name Map"/>
+<artifact deprecated="true" id="ConceptMap/datatype-hd-to-messageheader-source" key="ConceptMap-datatype-hd-to-messageheader-source" name="Datatype HD to MessageHeader.source Map"/>
 <artifact deprecated="true" id="ConceptMap/datatype-hd-to-messageheader-source-endpoint" key="ConceptMap-datatype-hd-to-messageheader-source-endpoint" name="Datatype HD to MessageHeader.source.endpoint Map"/>
+<artifact id="ConceptMap/datatype-hd-to-messageheader-source-name" key="ConceptMap-datatype-hd-to-messageheader-source-name" name="Datatype HD to MessageHeader.source.name Map"/>
+<artifact id="ConceptMap/datatype-hd-to-organization" key="ConceptMap-datatype-hd-to-organization" name="Datatype HD to Organization Map"/>
+<artifact id="ConceptMap/datatype-hd-assigningauthority-to-extension" key="ConceptMap-datatype-hd-assigningauthority-to-extension" name="Datatype HD to extension Map"/>
+<artifact id="ConceptMap/datatype-hd-to-uri" key="ConceptMap-unsupported-datatype-hd-to-uri" name="Datatype HD to uri Map"/>
 <artifact deprecated="true" id="ConceptMap/datatype-hd-to-url" key="ConceptMap-datatype-hd-to-url" name="Datatype HD to url Map"/>
 <artifact deprecated="true" id="ConceptMap/datatype-hd-endpoint-to-messageheader-destination" key="ConceptMap-datatype-hd-endpoint-to-messageheader-destination" name="Datatype HD[endpoint] to MessageHeader.destination Map"/>
-<artifact id="ConceptMap/datatype-hd-to-identifier" key="ConceptMap-datatype-hd-to-identifier" name="Datatype HDnull to Identifier Map"/>
-<artifact id="ConceptMap/datatype-hd-to-location" key="ConceptMap-datatype-hd-to-location" name="Datatype HDnull to Location Map"/>
-<artifact id="ConceptMap/datatype-hd-to-messageheader-destination" key="ConceptMap-datatype-hd-to-messageheader-destination" name="Datatype HDnull to MessageHeader.destination Map"/>
-<artifact id="ConceptMap/datatype-hd-to-messageheader-destination-name" key="ConceptMap-datatype-hd-to-messageheader-destination-name" name="Datatype HDnull to MessageHeader.destination.name Map"/>
-<artifact deprecated="true" id="ConceptMap/datatype-hd-to-messageheader-source" key="ConceptMap-datatype-hd-to-messageheader-source" name="Datatype HDnull to MessageHeader.source Map"/>
-<artifact id="ConceptMap/datatype-hd-to-messageheader-source-name" key="ConceptMap-datatype-hd-to-messageheader-source-name" name="Datatype HDnull to MessageHeader.source.name Map"/>
-<artifact id="ConceptMap/datatype-hd-to-organization" key="ConceptMap-datatype-hd-to-organization" name="Datatype HDnull to Organization Map"/>
-<artifact id="ConceptMap/datatype-hd-assigningauthority-to-extension" key="ConceptMap-datatype-hd-assigningauthority-to-extension" name="Datatype HDnull to extension Map"/>
-<artifact id="ConceptMap/datatype-hd-to-uri" key="ConceptMap-unsupported-datatype-hd-to-uri" name="Datatype HDnull to uri Map"/>
-<artifact id="ConceptMap/datatype-id-to-codeableconcept" key="ConceptMap-datatype-id-to-codeableconcept" name="Datatype IDnull to CodeableConcept Map"/>
-<artifact id="ConceptMap/datatype-id-universalid-to-codeableconcept" key="ConceptMap-unsupported-datatype-id-universalid-to-codeableconcept" name="Datatype IDnull to CodeableConcept Map"/>
-<artifact id="ConceptMap/datatype-id-to-coding" key="ConceptMap-unsupported-datatype-id-to-coding" name="Datatype IDnull to Coding Map"/>
-<artifact id="ConceptMap/datatype-id-to-boolean" key="ConceptMap-datatype-id-to-boolean" name="Datatype IDnull to boolean Map"/>
-<artifact id="ConceptMap/datatype-id-to-code" key="ConceptMap-datatype-id-to-code" name="Datatype IDnull to code Map"/>
-<artifact id="ConceptMap/datatype-id-to-string" key="ConceptMap-datatype-id-to-string" name="Datatype IDnull to string Map"/>
-<artifact id="ConceptMap/datatype-is-to-codeableconcept" key="ConceptMap-datatype-is-to-codeableconcept" name="Datatype ISnull to CodeableConcept Map"/>
-<artifact id="ConceptMap/datatype-is-to-code" key="ConceptMap-datatype-is-to-code" name="Datatype ISnull to code Map"/>
-<artifact id="ConceptMap/datatype-is-to-string" key="ConceptMap-datatype-is-to-string" name="Datatype ISnull to string Map"/>
-<artifact id="ConceptMap/datatype-msg-to-coding" key="ConceptMap-datatype-msg-to-coding" name="Datatype MSGnull to Coding Map"/>
-<artifact id="ConceptMap/datatype-msg-to-messageheader" key="ConceptMap-datatype-msg-to-messageheader" name="Datatype MSGnull to MessageHeader Map"/>
-<artifact id="ConceptMap/datatype-msg-to-code" key="ConceptMap-datatype-msg-to-code" name="Datatype MSGnull to code Map"/>
-<artifact id="ConceptMap/datatype-na-to-numericarray" key="ConceptMap-datatype-na-to-numericarray" name="Datatype NAnull to NumericArray Map"/>
+<artifact id="ConceptMap/datatype-id-to-codeableconcept" key="ConceptMap-datatype-id-to-codeableconcept" name="Datatype ID to CodeableConcept Map"/>
+<artifact id="ConceptMap/datatype-id-universalid-to-codeableconcept" key="ConceptMap-datatype-id-to-codeableconcept" name="Datatype ID to CodeableConcept Map"/>
+<artifact id="ConceptMap/datatype-id-to-coding" key="ConceptMap-unsupported-datatype-id-to-coding" name="Datatype ID to Coding Map"/>
+<artifact id="ConceptMap/datatype-id-to-boolean" key="ConceptMap-datatype-id-to-boolean" name="Datatype ID to boolean Map"/>
+<artifact id="ConceptMap/datatype-id-to-code" key="ConceptMap-datatype-id-to-code" name="Datatype ID to code Map"/>
+<artifact id="ConceptMap/datatype-id-to-string" key="ConceptMap-datatype-id-to-string" name="Datatype ID to string Map"/>
+<artifact deprecated="true" id="ConceptMap/datatype-id-universalid-to-codeableconcept" key="ConceptMap-unsupported-datatype-id-universalid-to-codeableconcept" name="Datatype ID[UniversalID] to CodeableConcept Map"/>
+<artifact id="ConceptMap/datatype-is-to-codeableconcept" key="ConceptMap-datatype-is-to-codeableconcept" name="Datatype IS to CodeableConcept Map"/>
+<artifact id="ConceptMap/datatype-is-to-code" key="ConceptMap-datatype-is-to-code" name="Datatype IS to code Map"/>
+<artifact id="ConceptMap/datatype-is-to-string" key="ConceptMap-datatype-is-to-string" name="Datatype IS to string Map"/>
+<artifact id="ConceptMap/datatype-msg-to-coding" key="ConceptMap-datatype-msg-to-coding" name="Datatype MSG to Coding Map"/>
+<artifact id="ConceptMap/datatype-msg-to-messageheader" key="ConceptMap-datatype-msg-to-messageheader" name="Datatype MSG to MessageHeader Map"/>
+<artifact id="ConceptMap/datatype-msg-to-code" key="ConceptMap-datatype-msg-to-code" name="Datatype MSG to code Map"/>
+<artifact id="ConceptMap/datatype-na-to-numericarray" key="ConceptMap-datatype-na-to-numericarray" name="Datatype NA to NumericArray Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-ndl-to-codeableconcept" key="ConceptMap-unsupported-datatype-ndl-to-codeableconcept" name="Datatype NDL to CodeableConcept Map - Unsupported"/>
-<artifact id="ConceptMap/datatype-ndl-to-practitionerrole" key="ConceptMap-datatype-ndl-to-practitionerrole" name="Datatype NDLnull to PractitionerRole Map"/>
-<artifact id="ConceptMap/datatype-nm-to-positiveint" key="ConceptMap-datatype-nm-to-positiveint" name="Datatype NMnull to PositiveInt Map"/>
-<artifact id="ConceptMap/datatype-nm-lengthofstay-to-quantity" key="ConceptMap-datatype-nm-lengthofstay-to-quantity" name="Datatype NMnull to Quantity Map"/>
-<artifact id="ConceptMap/datatype-nm-to-quantity" key="ConceptMap-unsupported-datatype-nm-to-quantity" name="Datatype NMnull to Quantity Map"/>
-<artifact id="ConceptMap/datatype-nr-to-range" key="ConceptMap-datatype-nr-to-range" name="Datatype NRnull to Range Map"/>
-<artifact id="ConceptMap/datatype-og-subidentifier-to-extension" key="ConceptMap-datatype-og-subidentifier-to-extension" name="Datatype OGnull to Extension Map"/>
-<artifact deprecated="true" id="ConceptMap/datatype-pl-to-location" key="ConceptMap-datatype-pl-to-location" name="Datatype PL to Location Map"/>
+<artifact id="ConceptMap/datatype-ndl-to-practitionerrole" key="ConceptMap-datatype-ndl-to-practitionerrole" name="Datatype NDL to PractitionerRole Map"/>
+<artifact id="ConceptMap/datatype-nm-to-positiveint" key="ConceptMap-datatype-nm-to-positiveint" name="Datatype NM to PositiveInt Map"/>
+<artifact id="ConceptMap/datatype-nm-lengthofstay-to-quantity" key="ConceptMap-unsupported-datatype-nm-to-quantity" name="Datatype NM to Quantity Map"/>
+<artifact id="ConceptMap/datatype-nm-to-quantity" key="ConceptMap-unsupported-datatype-nm-to-quantity" name="Datatype NM to Quantity Map"/>
+<artifact deprecated="true" id="ConceptMap/datatype-nm-lengthofstay-to-quantity" key="ConceptMap-datatype-nm-lengthofstay-to-quantity" name="Datatype NM[LengthOfStay] to Quantity Map"/>
+<artifact id="ConceptMap/datatype-nr-to-range" key="ConceptMap-datatype-nr-to-range" name="Datatype NR to Range Map"/>
+<artifact id="ConceptMap/datatype-og-subidentifier-to-extension" key="ConceptMap-datatype-og-subidentifier-to-extension" name="Datatype OG to Extension Map"/>
+<artifact id="ConceptMap/datatype-pl-to-location" key="ConceptMap-datatype-pl-to-location" name="Datatype PL to Location Map"/>
 <artifact id="ConceptMap/unsupported-datatype-pl-to-location" key="ConceptMap-unsupported-datatype-pl-to-location" name="Datatype PL to Location Map - Unsupported"/>
+<artifact id="ConceptMap/datatype-pln-to-identifier" key="ConceptMap-datatype-pln-to-identifier" name="Datatype PLN to Identifier Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-pln-to-location" key="ConceptMap-unsupported-datatype-pln-to-location" name="Datatype PLN to Location Map - Unsupported"/>
-<artifact id="ConceptMap/datatype-pln-to-identifier" key="ConceptMap-datatype-pln-to-identifier" name="Datatype PLNnull to Identifier Map"/>
 <artifact id="ConceptMap/datatype-pl-to-encounter-location" key="ConceptMap-datatype-pl-to-encounter-location" name="Datatype PLnull to Encounter.location Map"/>
-<artifact id="ConceptMap/datatype-pt-to-meta" key="ConceptMap-datatype-pt-to-meta" name="Datatype PTnull to Meta Map"/>
-<artifact id="ConceptMap/datatype-ri-to-timing" key="ConceptMap-datatype-ri-to-timing" name="Datatype RInull to Timing Map"/>
+<artifact id="ConceptMap/datatype-pt-to-meta" key="ConceptMap-datatype-pt-to-meta" name="Datatype PT to Meta Map"/>
+<artifact id="ConceptMap/datatype-ri-to-timing" key="ConceptMap-datatype-ri-to-timing" name="Datatype RI to Timing Map"/>
+<artifact id="ConceptMap/datatype-rp-to-attachment" key="ConceptMap-datatype-rp-to-attachment" name="Datatype RP to Attachment Map"/>
+<artifact id="ConceptMap/datatype-rp-to-documentreference" key="ConceptMap-datatype-rp-to-documentreference" name="Datatype RP to DocumentReference Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-rpt-to-servicerequest" key="ConceptMap-unsupported-datatype-rpt-to-servicerequest" name="Datatype RPT to ServiceRequest Map - Unsupported"/>
-<artifact id="ConceptMap/datatype-rpt-to-timing" key="ConceptMap-datatype-rpt-to-timing" name="Datatype RPTnull to Timing Map"/>
-<artifact id="ConceptMap/datatype-rp-to-attachment" key="ConceptMap-datatype-rp-to-attachment" name="Datatype RPnull to Attachment Map"/>
-<artifact id="ConceptMap/datatype-rp-to-documentreference" key="ConceptMap-datatype-rp-to-documentreference" name="Datatype RPnull to DocumentReference Map"/>
-<artifact id="ConceptMap/datatype-sad-to-address" key="ConceptMap-datatype-sad-to-address" name="Datatype SADnull to Address Map"/>
-<artifact id="ConceptMap/datatype-sn-to-quantity" key="ConceptMap-datatype-sn-to-quantity" name="Datatype SNnull to Quantity Map"/>
-<artifact id="ConceptMap/datatype-sn-to-range" key="ConceptMap-datatype-sn-to-range" name="Datatype SNnull to Range Map"/>
-<artifact id="ConceptMap/datatype-sn-to-ratio" key="ConceptMap-datatype-sn-to-ratio" name="Datatype SNnull to Ratio Map"/>
-<artifact id="ConceptMap/datatype-st-to-codeableconcept" key="ConceptMap-datatype-st-to-codeableconcept" name="Datatype STnull to CodeableConcept Map"/>
-<artifact id="ConceptMap/datatype-st-to-identifier" key="ConceptMap-datatype-st-to-identifier" name="Datatype STnull to Identifier Map"/>
-<artifact id="ConceptMap/datatype-tq-to-appointment" key="ConceptMap-unsupported-datatype-tq-to-appointment" name="Datatype TQnull to Appointment Map"/>
-<artifact id="ConceptMap/datatype-tq-to-medicationrequest" key="ConceptMap-datatype-tq-to-medicationrequest" name="Datatype TQnull to MedicationRequest Map"/>
-<artifact id="ConceptMap/datatype-tq-to-servicerequest" key="ConceptMap-datatype-tq-to-servicerequest" name="Datatype TQnull to ServiceRequest Map"/>
-<artifact id="ConceptMap/datatype-tq-executionperiod-to-task" key="ConceptMap-datatype-tq-executionperiod-to-task" name="Datatype TQnull to Task Map"/>
-<artifact id="ConceptMap/datatype-tq-priority-to-task" key="ConceptMap-datatype-tq-priority-to-task" name="Datatype TQnull to Task Map"/>
-<artifact id="ConceptMap/datatype-ts-to-datetime" key="ConceptMap-datatype-ts-to-datetime" name="Datatype TSnull to DateTime Map"/>
+<artifact id="ConceptMap/datatype-rpt-to-timing" key="ConceptMap-datatype-rpt-to-timing" name="Datatype RPT to Timing Map"/>
+<artifact id="ConceptMap/datatype-sad-to-address" key="ConceptMap-datatype-sad-to-address" name="Datatype SAD to Address Map"/>
+<artifact id="ConceptMap/datatype-sn-to-quantity" key="ConceptMap-datatype-sn-to-quantity" name="Datatype SN to Quantity Map"/>
+<artifact id="ConceptMap/datatype-sn-to-range" key="ConceptMap-datatype-sn-to-range" name="Datatype SN to Range Map"/>
+<artifact id="ConceptMap/datatype-sn-to-ratio" key="ConceptMap-datatype-sn-to-ratio" name="Datatype SN to Ratio Map"/>
+<artifact id="ConceptMap/datatype-st-to-codeableconcept" key="ConceptMap-datatype-st-to-codeableconcept" name="Datatype ST to CodeableConcept Map"/>
+<artifact id="ConceptMap/datatype-st-to-identifier" key="ConceptMap-datatype-st-to-identifier" name="Datatype ST to Identifier Map"/>
+<artifact id="ConceptMap/datatype-tq-to-appointment" key="ConceptMap-unsupported-datatype-tq-to-appointment" name="Datatype TQ to Appointment Map"/>
+<artifact id="ConceptMap/datatype-tq-to-medicationrequest" key="ConceptMap-datatype-tq-to-medicationrequest" name="Datatype TQ to MedicationRequest Map"/>
+<artifact id="ConceptMap/datatype-tq-to-servicerequest" key="ConceptMap-datatype-tq-to-servicerequest" name="Datatype TQ to ServiceRequest Map"/>
+<artifact id="ConceptMap/datatype-tq-executionperiod-to-task" key="ConceptMap-datatype-tq-executionperiod-to-task" name="Datatype TQ to Task Map"/>
+<artifact id="ConceptMap/datatype-tq-priority-to-task" key="ConceptMap-datatype-tq-priority-to-task" name="Datatype TQ to Task Map"/>
+<artifact id="ConceptMap/datatype-ts-to-datetime" key="ConceptMap-datatype-ts-to-datetime" name="Datatype TS to DateTime Map"/>
+<artifact id="ConceptMap/datatype-xad-to-address" key="ConceptMap-datatype-xad-to-address" name="Datatype XAD to Address Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-xad-to-organization" key="ConceptMap-unsupported-datatype-xad-to-organization" name="Datatype XAD to Organization Map - Unsupported"/>
-<artifact id="ConceptMap/datatype-xad-to-address" key="ConceptMap-datatype-xad-to-address" name="Datatype XADnull to Address Map"/>
-<artifact id="ConceptMap/datatype-xcn-author-to-annotation" key="ConceptMap-datatype-xcn-author-to-annotation" name="Datatype XCNnull to Annotation Map"/>
-<artifact id="ConceptMap/datatype-xcn-to-patient" key="ConceptMap-datatype-xcn-to-patient" name="Datatype XCNnull to Patient Map"/>
-<artifact id="ConceptMap/datatype-xcn-to-practitioner" key="ConceptMap-datatype-xcn-to-practitioner" name="Datatype XCNnull to Practitioner Map"/>
-<artifact id="ConceptMap/datatype-xcn-to-practitionerrole" key="ConceptMap-datatype-xcn-to-practitionerrole" name="Datatype XCNnull to PractitionerRole Map"/>
-<artifact id="ConceptMap/datatype-xcn-to-relatedperson" key="ConceptMap-datatype-xcn-to-relatedperson" name="Datatype XCNnull to RelatedPerson Map"/>
+<artifact id="ConceptMap/datatype-xcn-author-to-annotation" key="ConceptMap-datatype-xcn-author-to-annotation" name="Datatype XCN to Annotation Map"/>
+<artifact id="ConceptMap/datatype-xcn-to-patient" key="ConceptMap-datatype-xcn-to-patient" name="Datatype XCN to Patient Map"/>
+<artifact id="ConceptMap/datatype-xcn-to-practitioner" key="ConceptMap-datatype-xcn-to-practitioner" name="Datatype XCN to Practitioner Map"/>
+<artifact id="ConceptMap/datatype-xcn-to-practitionerrole" key="ConceptMap-datatype-xcn-to-practitionerrole" name="Datatype XCN to PractitionerRole Map"/>
+<artifact id="ConceptMap/datatype-xcn-to-relatedperson" key="ConceptMap-datatype-xcn-to-relatedperson" name="Datatype XCN to RelatedPerson Map"/>
+<artifact id="ConceptMap/datatype-xon-to-location" key="ConceptMap-datatype-xon-to-location" name="Datatype XON to Location Map"/>
+<artifact id="ConceptMap/datatype-xon-to-organization" key="ConceptMap-datatype-xon-to-organization" name="Datatype XON to Organization Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-xon-to-organization" key="ConceptMap-unsupported-datatype-xon-to-organization" name="Datatype XON to Organization Map - Unsupported"/>
-<artifact id="ConceptMap/datatype-xon-to-location" key="ConceptMap-datatype-xon-to-location" name="Datatype XONnull to Location Map"/>
-<artifact id="ConceptMap/datatype-xon-to-organization" key="ConceptMap-datatype-xon-to-organization" name="Datatype XONnull to Organization Map"/>
-<artifact id="ConceptMap/datatype-xon-to-string" key="ConceptMap-datatype-xon-to-string" name="Datatype XONnull to string Map"/>
-<artifact id="ConceptMap/datatype-xpn-to-humanname" key="ConceptMap-datatype-xpn-to-humanname" name="Datatype XPNnull to HumanName Map"/>
-<artifact id="ConceptMap/datatype-xpn-to-string" key="ConceptMap-datatype-xpn-to-string" name="Datatype XPNnull to string Map"/>
-<artifact id="ConceptMap/datatype-xtn-to-contactpoint" key="ConceptMap-datatype-xtn-to-contactpoint" name="Datatype XTNnull to ContactPoint Map"/>
-<artifact id="ConceptMap/message-adt-a01-to-bundle" key="ConceptMap-message-adt-a01-to-bundle" name="Message ADT_A01null to Bundle Map"/>
-<artifact id="ConceptMap/message-adt-a02-to-bundle" key="ConceptMap-message-adt-a02-to-bundle" name="Message ADT_A02null to Bundle Map"/>
-<artifact id="ConceptMap/message-adt-a05-to-bundle" key="ConceptMap-message-adt-a05-to-bundle" name="Message ADT_A05null to Bundle Map"/>
-<artifact id="ConceptMap/message-adt-a06-to-bundle" key="ConceptMap-message-adt-a06-to-bundle" name="Message ADT_A06null to Bundle Map"/>
-<artifact id="ConceptMap/message-adt-a09-to-bundle" key="ConceptMap-message-adt-a09-to-bundle" name="Message ADT_A09null to Bundle Map"/>
-<artifact id="ConceptMap/message-adt-a11-to-bundle" key="ConceptMap-message-adt-a11-to-bundle" name="Message ADT_A11null to Bundle Map"/>
-<artifact id="ConceptMap/message-adt-a17-to-bundle" key="ConceptMap-message-adt-a17-to-bundle" name="Message ADT_A17null to Bundle Map"/>
-<artifact id="ConceptMap/message-mdm-t02-to-bundle" key="ConceptMap-message-mdm-t02-to-bundle" name="Message MDM_T02null to Bundle Map"/>
-<artifact id="ConceptMap/message-oml-o21-to-bundle" key="ConceptMap-message-oml-o21-to-bundle" name="Message OML_O21null to Bundle Map"/>
-<artifact id="ConceptMap/message-orm-o01-to-bundle" key="ConceptMap-message-orm-o01-to-bundle" name="Message ORM_O01null to Bundle Map"/>
-<artifact id="ConceptMap/message-oru-r01-to-bundle" key="ConceptMap-message-oru-r01-to-bundle" name="Message ORU_R01null to Bundle Map"/>
-<artifact id="ConceptMap/message-siu-s12-to-bundle" key="ConceptMap-message-siu-s12-to-bundle" name="Message SIU_S12null to Bundle Map"/>
-<artifact id="ConceptMap/message-vxu-v04-to-bundle" key="ConceptMap-message-vxu-v04-to-bundle" name="Message VXU_V04null to Bundle Map"/>
+<artifact id="ConceptMap/datatype-xon-to-string" key="ConceptMap-datatype-xon-to-string" name="Datatype XON to string Map"/>
+<artifact id="ConceptMap/datatype-xpn-to-humanname" key="ConceptMap-datatype-xpn-to-humanname" name="Datatype XPN to HumanName Map"/>
+<artifact id="ConceptMap/datatype-xpn-to-string" key="ConceptMap-datatype-xpn-to-string" name="Datatype XPN to string Map"/>
+<artifact id="ConceptMap/datatype-xtn-to-contactpoint" key="ConceptMap-datatype-xtn-to-contactpoint" name="Datatype XTN to ContactPoint Map"/>
+<artifact id="ConceptMap/message-adt-a01-to-bundle" key="ConceptMap-message-adt-a01-to-bundle" name="Message ADT_A01 to Bundle Map"/>
+<artifact id="ConceptMap/message-adt-a02-to-bundle" key="ConceptMap-message-adt-a02-to-bundle" name="Message ADT_A02 to Bundle Map"/>
+<artifact id="ConceptMap/message-adt-a05-to-bundle" key="ConceptMap-message-adt-a05-to-bundle" name="Message ADT_A05 to Bundle Map"/>
+<artifact id="ConceptMap/message-adt-a06-to-bundle" key="ConceptMap-message-adt-a06-to-bundle" name="Message ADT_A06 to Bundle Map"/>
+<artifact id="ConceptMap/message-adt-a09-to-bundle" key="ConceptMap-message-adt-a09-to-bundle" name="Message ADT_A09 to Bundle Map"/>
+<artifact id="ConceptMap/message-adt-a11-to-bundle" key="ConceptMap-message-adt-a11-to-bundle" name="Message ADT_A11 to Bundle Map"/>
+<artifact id="ConceptMap/message-adt-a17-to-bundle" key="ConceptMap-message-adt-a17-to-bundle" name="Message ADT_A17 to Bundle Map"/>
+<artifact id="ConceptMap/message-mdm-t02-to-bundle" key="ConceptMap-message-mdm-t02-to-bundle" name="Message MDM_T02 to Bundle Map"/>
+<artifact id="ConceptMap/message-oml-o21-to-bundle" key="ConceptMap-message-oml-o21-to-bundle" name="Message OML_O21 to Bundle Map"/>
+<artifact id="ConceptMap/message-orm-o01-to-bundle" key="ConceptMap-message-orm-o01-to-bundle" name="Message ORM_O01 to Bundle Map"/>
+<artifact id="ConceptMap/message-oru-r01-to-bundle" key="ConceptMap-message-oru-r01-to-bundle" name="Message ORU_R01 to Bundle Map"/>
+<artifact id="ConceptMap/message-siu-s12-to-bundle" key="ConceptMap-message-siu-s12-to-bundle" name="Message SIU_S12 to Bundle Map"/>
+<artifact id="ConceptMap/message-vxu-v04-to-bundle" key="ConceptMap-message-vxu-v04-to-bundle" name="Message VXU_V04 to Bundle Map"/>
 <artifact id="StructureDefinition/RelatedArtifact" key="StructureDefinition-RelatedArtifact" name="RelatedArtifact"/>
-<artifact id="ConceptMap/segment-aig-to-appointment" key="ConceptMap-segment-aig-to-appointment" name="Segment AIGnull to Appointment Map"/>
-<artifact id="ConceptMap/segment-ail-to-appointment" key="ConceptMap-segment-ail-to-appointment" name="Segment AILnull to Appointment Map"/>
-<artifact id="ConceptMap/segment-aip-to-appointment" key="ConceptMap-segment-aip-to-appointment" name="Segment AIPnull to Appointment Map"/>
-<artifact id="ConceptMap/segment-ais-to-appointment" key="ConceptMap-segment-ais-to-appointment" name="Segment AISnull to Appointment Map"/>
-<artifact id="ConceptMap/segment-ais-to-servicerequest" key="ConceptMap-segment-ais-to-servicerequest" name="Segment AISnull to ServiceRequest Map"/>
-<artifact id="ConceptMap/segment-al1-to-allergyintolerance" key="ConceptMap-segment-al1-to-allergyintolerance" name="Segment AL1null to AllergyIntolerance Map"/>
-<artifact id="ConceptMap/segment-dg1-to-condition" key="ConceptMap-segment-dg1-to-condition" name="Segment DG1null to Condition Map"/>
-<artifact id="ConceptMap/segment-dg1-to-encounter" key="ConceptMap-segment-dg1-to-encounter" name="Segment DG1null to Encounter Map"/>
-<artifact id="ConceptMap/segment-dg1-to-episodeofcare" key="ConceptMap-segment-dg1-to-episodeofcare" name="Segment DG1null to EpisodeOfCare Map"/>
+<artifact id="ConceptMap/segment-aig-to-appointment" key="ConceptMap-segment-aig-to-appointment" name="Segment AIG to Appointment Map"/>
+<artifact id="ConceptMap/segment-ail-to-appointment" key="ConceptMap-segment-ail-to-appointment" name="Segment AIL to Appointment Map"/>
+<artifact id="ConceptMap/segment-aip-to-appointment" key="ConceptMap-segment-aip-to-appointment" name="Segment AIP to Appointment Map"/>
+<artifact id="ConceptMap/segment-ais-to-appointment" key="ConceptMap-segment-ais-to-appointment" name="Segment AIS to Appointment Map"/>
+<artifact id="ConceptMap/segment-ais-to-servicerequest" key="ConceptMap-segment-ais-to-servicerequest" name="Segment AIS to ServiceRequest Map"/>
+<artifact id="ConceptMap/segment-al1-to-allergyintolerance" key="ConceptMap-segment-al1-to-allergyintolerance" name="Segment AL1 to AllergyIntolerance Map"/>
+<artifact id="ConceptMap/segment-dg1-to-condition" key="ConceptMap-segment-dg1-to-condition" name="Segment DG1 to Condition Map"/>
+<artifact id="ConceptMap/segment-dg1-to-encounter" key="ConceptMap-segment-dg1-to-encounter" name="Segment DG1 to Encounter Map"/>
+<artifact id="ConceptMap/segment-dg1-to-episodeofcare" key="ConceptMap-segment-dg1-to-episodeofcare" name="Segment DG1 to EpisodeOfCare Map"/>
+<artifact id="ConceptMap/segment-evn-to-provenance" key="ConceptMap-segment-evn-to-provenance" name="Segment EVN to Provenance Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-segment-evn-activity-to-provenance" key="ConceptMap-unsupported-segment-evn-activity-to-provenance" name="Segment EVN[Activity] to Provenance Map - Unsupported"/>
-<artifact id="ConceptMap/segment-evn-to-provenance" key="ConceptMap-segment-evn-to-provenance" name="Segment EVNnull to Provenance Map"/>
-<artifact id="ConceptMap/segment-iam-to-allergyintolerance" key="ConceptMap-segment-iam-to-allergyintolerance" name="Segment IAMnull to AllergyIntolerance Map"/>
-<artifact id="ConceptMap/segment-in1-to-coverage" key="ConceptMap-segment-in1-to-coverage" name="Segment IN1null to Coverage Map"/>
+<artifact id="ConceptMap/segment-iam-to-allergyintolerance" key="ConceptMap-segment-iam-to-allergyintolerance" name="Segment IAM to AllergyIntolerance Map"/>
+<artifact id="ConceptMap/segment-in1-to-coverage" key="ConceptMap-segment-in1-to-coverage" name="Segment IN1 to Coverage Map"/>
 <artifact deprecated="true" id="ConceptMap/segment-in2-to-coverage" key="ConceptMap-segment-in2-to-coverage" name="Segment IN2 to Coverage Map"/>
+<artifact id="ConceptMap/segment-in3-to-careteam" key="ConceptMap-unsupported-segment-in3-to-careteam" name="Segment IN3 to CareTeam Map"/>
 <artifact deprecated="true" id="ConceptMap/segment-in3-to-careteam-participant" key="ConceptMap-segment-in3-to-careteam-participant" name="Segment IN3 to CareTeam.participant Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-segment-in3-to-coverage" key="ConceptMap-unsupported-segment-in3-to-coverage" name="Segment IN3 to Coverage Map - Unsupported"/>
-<artifact id="ConceptMap/segment-in3-to-careteam" key="ConceptMap-unsupported-segment-in3-to-careteam" name="Segment IN3null to CareTeam Map"/>
-<artifact id="ConceptMap/segment-mrg-to-account" key="ConceptMap-segment-mrg-to-account" name="Segment MRGnull to Account Map"/>
-<artifact id="ConceptMap/segment-msa-to-messageheader" key="ConceptMap-segment-msa-to-messageheader" name="Segment MSAnull to MessageHeader Map"/>
+<artifact id="ConceptMap/segment-mrg-to-account" key="ConceptMap-segment-mrg-to-account" name="Segment MRG to Account Map"/>
+<artifact id="ConceptMap/segment-msa-to-messageheader" key="ConceptMap-segment-msa-to-messageheader" name="Segment MSA to MessageHeader Map"/>
+<artifact id="ConceptMap/segment-msh-to-bundle" key="ConceptMap-segment-msh-to-bundle" name="Segment MSH to Bundle Map"/>
+<artifact id="ConceptMap/segment-msh-to-encounter" key="ConceptMap-segment-msh-to-encounter" name="Segment MSH to Encounter Map"/>
+<artifact id="ConceptMap/segment-msh-to-messageheader" key="ConceptMap-segment-msh-to-messageheader" name="Segment MSH to MessageHeader Map"/>
+<artifact id="ConceptMap/segment-msh-operator-to-provenance" key="ConceptMap-segment-msh-operator-to-provenance" name="Segment MSH to Provenance Map"/>
+<artifact id="ConceptMap/segment-msh-source-to-provenance" key="ConceptMap-segment-msh-source-to-provenance" name="Segment MSH to Provenance Map"/>
+<artifact id="ConceptMap/segment-msh-transformation-to-provenance" key="ConceptMap-segment-msh-transformation-to-provenance" name="Segment MSH to Provenance Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-segment-msh-to-provenance" key="ConceptMap-unsupported-segment-msh-to-provenance" name="Segment MSH to Provenance Map - Unsupported"/>
-<artifact id="ConceptMap/segment-msh-to-bundle" key="ConceptMap-segment-msh-to-bundle" name="Segment MSHnull to Bundle Map"/>
-<artifact id="ConceptMap/segment-msh-to-encounter" key="ConceptMap-segment-msh-to-encounter" name="Segment MSHnull to Encounter Map"/>
-<artifact id="ConceptMap/segment-msh-to-messageheader" key="ConceptMap-segment-msh-to-messageheader" name="Segment MSHnull to MessageHeader Map"/>
-<artifact id="ConceptMap/segment-msh-operator-to-provenance" key="ConceptMap-segment-msh-operator-to-provenance" name="Segment MSHnull to Provenance Map"/>
-<artifact id="ConceptMap/segment-msh-source-to-provenance" key="ConceptMap-segment-msh-source-to-provenance" name="Segment MSHnull to Provenance Map"/>
-<artifact id="ConceptMap/segment-msh-transformation-to-provenance" key="ConceptMap-segment-msh-transformation-to-provenance" name="Segment MSHnull to Provenance Map"/>
-<artifact id="ConceptMap/segment-nk1-to-patient" key="ConceptMap-segment-nk1-to-patient" name="Segment NK1null to Patient Map"/>
-<artifact id="ConceptMap/segment-nk1-to-relatedperson" key="ConceptMap-segment-nk1-to-relatedperson" name="Segment NK1null to RelatedPerson Map"/>
+<artifact id="ConceptMap/segment-nk1-to-patient" key="ConceptMap-segment-nk1-to-patient" name="Segment NK1 to Patient Map"/>
+<artifact id="ConceptMap/segment-nk1-to-relatedperson" key="ConceptMap-segment-nk1-to-relatedperson" name="Segment NK1 to RelatedPerson Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-segment-nte-to-annotation" key="ConceptMap-unsupported-segment-nte-to-annotation" name="Segment NTE to Annotation Map - Unsupported"/>
-<artifact id="ConceptMap/segment-nte-comment-to-appointment" key="ConceptMap-segment-nte-comment-to-appointment" name="Segment NTEnull to Appointment Map"/>
-<artifact id="ConceptMap/segment-nte-to-documentreference" key="ConceptMap-segment-nte-to-documentreference" name="Segment NTEnull to DocumentReference Map"/>
-<artifact id="ConceptMap/segment-nte-to-observation" key="ConceptMap-segment-nte-to-observation" name="Segment NTEnull to Observation Map"/>
-<artifact id="ConceptMap/segment-nte-to-servicerequest" key="ConceptMap-segment-nte-to-servicerequest" name="Segment NTEnull to ServiceRequest Map"/>
-<artifact id="ConceptMap/segment-obr-to-diagnosticreport" key="ConceptMap-segment-obr-to-diagnosticreport" name="Segment OBRnull to DiagnosticReport Map"/>
-<artifact id="ConceptMap/segment-obr-to-servicerequest" key="ConceptMap-segment-obr-to-servicerequest" name="Segment OBRnull to ServiceRequest Map"/>
-<artifact id="ConceptMap/segment-obr-to-specimen" key="ConceptMap-segment-obr-to-specimen" name="Segment OBRnull to Specimen Map"/>
-<artifact id="ConceptMap/segment-obx-to-documentreference" key="ConceptMap-segment-obx-to-documentreference" name="Segment OBXnull to DocumentReference Map"/>
-<artifact id="ConceptMap/segment-obx-component-to-observation" key="ConceptMap-segment-obx-component-to-observation" name="Segment OBXnull to Observation Map"/>
-<artifact id="ConceptMap/segment-obx-to-observation" key="ConceptMap-segment-obx-to-observation" name="Segment OBXnull to Observation Map"/>
-<artifact id="ConceptMap/segment-orc-to-diagnosticreport" key="ConceptMap-segment-orc-to-diagnosticreport" name="Segment ORCnull to DiagnosticReport Map"/>
-<artifact id="ConceptMap/segment-orc-to-immunization" key="ConceptMap-segment-orc-to-immunization" name="Segment ORCnull to Immunization Map"/>
-<artifact id="ConceptMap/segment-orc-to-medicationadministration" key="ConceptMap-segment-orc-to-medicationadministration" name="Segment ORCnull to MedicationAdministration Map"/>
-<artifact id="ConceptMap/segment-orc-to-provenance" key="ConceptMap-segment-orc-to-provenance" name="Segment ORCnull to Provenance Map"/>
-<artifact id="ConceptMap/segment-orc-to-servicerequest" key="ConceptMap-segment-orc-to-servicerequest" name="Segment ORCnull to ServiceRequest Map"/>
+<artifact id="ConceptMap/segment-nte-comment-to-appointment" key="ConceptMap-segment-nte-comment-to-appointment" name="Segment NTE to Appointment Map"/>
+<artifact id="ConceptMap/segment-nte-to-documentreference" key="ConceptMap-segment-nte-to-documentreference" name="Segment NTE to DocumentReference Map"/>
+<artifact id="ConceptMap/segment-nte-to-observation" key="ConceptMap-segment-nte-to-observation" name="Segment NTE to Observation Map"/>
+<artifact id="ConceptMap/segment-nte-to-servicerequest" key="ConceptMap-segment-nte-to-servicerequest" name="Segment NTE to ServiceRequest Map"/>
+<artifact id="ConceptMap/segment-obr-to-diagnosticreport" key="ConceptMap-segment-obr-to-diagnosticreport" name="Segment OBR to DiagnosticReport Map"/>
+<artifact id="ConceptMap/segment-obr-to-servicerequest" key="ConceptMap-segment-obr-to-servicerequest" name="Segment OBR to ServiceRequest Map"/>
+<artifact id="ConceptMap/segment-obr-to-specimen" key="ConceptMap-segment-obr-to-specimen" name="Segment OBR to Specimen Map"/>
+<artifact id="ConceptMap/segment-obx-to-documentreference" key="ConceptMap-segment-obx-to-documentreference" name="Segment OBX to DocumentReference Map"/>
+<artifact id="ConceptMap/segment-obx-component-to-observation" key="ConceptMap-segment-obx-to-observation" name="Segment OBX to Observation Map"/>
+<artifact id="ConceptMap/segment-obx-to-observation" key="ConceptMap-segment-obx-to-observation" name="Segment OBX to Observation Map"/>
+<artifact deprecated="true" id="ConceptMap/segment-obx-component-to-observation" key="ConceptMap-segment-obx-component-to-observation" name="Segment OBX[Component] to Observation Map"/>
+<artifact id="ConceptMap/segment-orc-to-diagnosticreport" key="ConceptMap-segment-orc-to-diagnosticreport" name="Segment ORC to DiagnosticReport Map"/>
+<artifact id="ConceptMap/segment-orc-to-immunization" key="ConceptMap-segment-orc-to-immunization" name="Segment ORC to Immunization Map"/>
+<artifact id="ConceptMap/segment-orc-to-medicationadministration" key="ConceptMap-segment-orc-to-medicationadministration" name="Segment ORC to MedicationAdministration Map"/>
+<artifact id="ConceptMap/segment-orc-to-provenance" key="ConceptMap-segment-orc-to-provenance" name="Segment ORC to Provenance Map"/>
+<artifact id="ConceptMap/segment-orc-to-servicerequest" key="ConceptMap-segment-orc-to-servicerequest" name="Segment ORC to ServiceRequest Map"/>
+<artifact id="ConceptMap/segment-pd1-livingwill-to-observation" key="ConceptMap-segment-pd1-livingwill-to-observation" name="Segment PD1 to Observation Map"/>
+<artifact id="ConceptMap/segment-pd1-to-patient" key="ConceptMap-segment-pd1-to-patient" name="Segment PD1 to Patient Map"/>
 <artifact id="ConceptMap/unsupported-segment-pd1-livingwill-to-observation" key="ConceptMap-unsupported-segment-pd1-livingwill-to-observation" name="Segment PD1[LivingWill] to Observation Map - Unsupported"/>
-<artifact id="ConceptMap/segment-pd1-to-patient" key="ConceptMap-segment-pd1-to-patient" name="Segment PD1null to Patient Map"/>
+<artifact id="ConceptMap/segment-pid-to-account" key="ConceptMap-segment-pid-to-account" name="Segment PID to Account Map"/>
+<artifact id="ConceptMap/segment-pid-to-appointment" key="ConceptMap-segment-pid-to-appointment" name="Segment PID to Appointment Map"/>
+<artifact id="ConceptMap/segment-pid-to-patient" key="ConceptMap-segment-pid-to-patient" name="Segment PID to Patient Map"/>
+<artifact id="ConceptMap/segment-pid-patient-to-provenance" key="ConceptMap-segment-pid-patient-to-provenance" name="Segment PID to Provenance Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-segment-pid-to-provenance" key="ConceptMap-unsupported-segment-pid-to-provenance" name="Segment PID to Provenance Map - Unsupported"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-segment-pid-mother-to-relatedperson" key="ConceptMap-unsupported-segment-pid-mother-to-relatedperson" name="Segment PID[Mother] to RelatedPerson Map - Unsupported"/>
-<artifact id="ConceptMap/segment-pid-to-account" key="ConceptMap-segment-pid-to-account" name="Segment PIDnull to Account Map"/>
-<artifact id="ConceptMap/segment-pid-to-appointment" key="ConceptMap-segment-pid-to-appointment" name="Segment PIDnull to Appointment Map"/>
 <artifact id="ConceptMap/segment-pid-ethnicgroup-to-observation" key="ConceptMap-segment-pid-ethnicgroup-to-observation" name="Segment PIDnull to Observation Map"/>
 <artifact id="ConceptMap/segment-pid-race-to-observation" key="ConceptMap-segment-pid-race-to-observation" name="Segment PIDnull to Observation Map"/>
-<artifact id="ConceptMap/segment-pid-to-patient" key="ConceptMap-segment-pid-to-patient" name="Segment PIDnull to Patient Map"/>
-<artifact id="ConceptMap/segment-pid-patient-to-provenance" key="ConceptMap-segment-pid-patient-to-provenance" name="Segment PIDnull to Provenance Map"/>
-<artifact id="ConceptMap/segment-pr1-to-procedure" key="ConceptMap-segment-pr1-to-procedure" name="Segment PR1null to Procedure Map"/>
+<artifact id="ConceptMap/segment-pr1-to-procedure" key="ConceptMap-segment-pr1-to-procedure" name="Segment PR1 to Procedure Map"/>
+<artifact id="ConceptMap/segment-prt-to-careteam" key="ConceptMap-segment-prt-to-careteam" name="Segment PRT to CareTeam Map"/>
+<artifact id="ConceptMap/segment-prt-to-device" key="ConceptMap-segment-prt-to-device" name="Segment PRT to Device Map"/>
+<artifact id="ConceptMap/segment-prt-location-to-observation" key="ConceptMap-segment-prt-location-to-observation" name="Segment PRT to Observation Map"/>
+<artifact id="ConceptMap/segment-prt-generalpractitioner-practitioner-to-patient" key="ConceptMap-segment-prt-generalpractitioner-practitioner-to-patient" name="Segment PRT to Patient Map"/>
+<artifact id="ConceptMap/segment-prt-generalpractitioner-practitionerrole-to-patient" key="ConceptMap-segment-prt-generalpractitioner-practitionerrole-to-patient" name="Segment PRT to Patient Map"/>
+<artifact id="ConceptMap/segment-prt-to-practitionerrole" key="ConceptMap-segment-prt-to-practitionerrole" name="Segment PRT to PractitionerRole Map"/>
+<artifact id="ConceptMap/segment-prt-to-relatedperson" key="ConceptMap-segment-prt-to-relatedperson" name="Segment PRT to RelatedPerson Map"/>
 <artifact deprecated="true" id="ConceptMap/segment-prt-generalpractitioner-to-patient" key="ConceptMap-segment-prt-generalpractitioner-to-patient" name="Segment PRT[GeneralPractitioner] to Patient Map"/>
-<artifact id="ConceptMap/segment-prt-to-careteam" key="ConceptMap-segment-prt-to-careteam" name="Segment PRTnull to CareTeam Map"/>
-<artifact id="ConceptMap/segment-prt-to-device" key="ConceptMap-segment-prt-to-device" name="Segment PRTnull to Device Map"/>
-<artifact id="ConceptMap/segment-prt-location-to-observation" key="ConceptMap-segment-prt-location-to-observation" name="Segment PRTnull to Observation Map"/>
-<artifact id="ConceptMap/segment-prt-generalpractitioner-practitioner-to-patient" key="ConceptMap-segment-prt-generalpractitioner-practitioner-to-patient" name="Segment PRTnull to Patient Map"/>
-<artifact id="ConceptMap/segment-prt-generalpractitioner-practitionerrole-to-patient" key="ConceptMap-segment-prt-generalpractitioner-practitionerrole-to-patient" name="Segment PRTnull to Patient Map"/>
-<artifact id="ConceptMap/segment-prt-to-practitionerrole" key="ConceptMap-segment-prt-to-practitionerrole" name="Segment PRTnull to PractitionerRole Map"/>
-<artifact id="ConceptMap/segment-prt-to-relatedperson" key="ConceptMap-segment-prt-to-relatedperson" name="Segment PRTnull to RelatedPerson Map"/>
-<artifact id="ConceptMap/segment-pv1-to-encounter" key="ConceptMap-segment-pv1-to-encounter" name="Segment PV1null to Encounter Map"/>
-<artifact id="ConceptMap/segment-pv1-to-patient" key="ConceptMap-segment-pv1-to-patient" name="Segment PV1null to Patient Map"/>
-<artifact id="ConceptMap/segment-pv2-to-encounter" key="ConceptMap-segment-pv2-to-encounter" name="Segment PV2null to Encounter Map"/>
+<artifact id="ConceptMap/unsupported-segment-pv1-to-coverage" key="ConceptMap-unsupported-segment-pv1-to-coverage" name="Segment PV1 to Coverage Map - Unsupported"/>
+<artifact id="ConceptMap/segment-pv1-to-encounter" key="ConceptMap-segment-pv1-to-encounter" name="Segment PV1 to Encounter Map"/>
+<artifact id="ConceptMap/segment-pv1-to-encounterhistory" key="ConceptMap-segment-pv1-to-encounterhistory" name="Segment PV1 to EncounterHistory Map"/>
+<artifact id="ConceptMap/segment-pv1-to-patient" key="ConceptMap-segment-pv1-to-patient" name="Segment PV1 to Patient Map"/>
+<artifact id="ConceptMap/segment-pv2-to-encounter" key="ConceptMap-segment-pv2-to-encounter" name="Segment PV2 to Encounter Map"/>
+<artifact id="ConceptMap/segment-rol-to-careteam" key="ConceptMap-segment-rol-to-careteam" name="Segment ROL to CareTeam Map"/>
+<artifact id="ConceptMap/segment-rol-practitionerrole-to-encounter" key="ConceptMap-segment-rol-practitionerrole-to-encounter" name="Segment ROL to Encounter Map"/>
+<artifact id="ConceptMap/segment-rol-generalpractitioner-to-patient" key="ConceptMap-segment-rol-generalpractioner-to-patient" name="Segment ROL to Patient Map"/>
+<artifact id="ConceptMap/segment-rol-to-relatedperson" key="ConceptMap-segment-rol-to-relatedperson" name="Segment ROL to RelatedPerson Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-segment-rol-generalpractitioner-to-patient" key="ConceptMap-unsupported-segment-rol-generalpractitioner-to-patient" name="Segment ROL[GeneralPractitioner] to Patient Map - Unsupported"/>
-<artifact id="ConceptMap/segment-rol-to-careteam" key="ConceptMap-segment-rol-to-careteam" name="Segment ROLnull to CareTeam Map"/>
-<artifact id="ConceptMap/segment-rol-practitionerrole-to-encounter" key="ConceptMap-segment-rol-practitionerrole-to-encounter" name="Segment ROLnull to Encounter Map"/>
-<artifact id="ConceptMap/segment-rol-generalpractitioner-to-patient" key="ConceptMap-segment-rol-generalpractioner-to-patient" name="Segment ROLnull to Patient Map"/>
-<artifact id="ConceptMap/segment-rol-to-relatedperson" key="ConceptMap-segment-rol-to-relatedperson" name="Segment ROLnull to RelatedPerson Map"/>
-<artifact id="ConceptMap/segment-rxa-to-immunization" key="ConceptMap-segment-rxa-to-immunization" name="Segment RXAnull to Immunization Map"/>
-<artifact id="ConceptMap/segment-rxo-to-medicationrequest" key="ConceptMap-unsupported-segment-rxo-to-medicationrequest" name="Segment RXOnull to MedicationRequest Map"/>
-<artifact id="ConceptMap/segment-rxr-to-immunization" key="ConceptMap-segment-rxr-to-immunization" name="Segment RXRnull to Immunization Map"/>
-<artifact id="ConceptMap/segment-rxr-to-medicationrequest" key="ConceptMap-segment-rxr-to-medicationrequest" name="Segment RXRnull to MedicationRequest Map"/>
-<artifact id="ConceptMap/segment-sch-to-appointment" key="ConceptMap-segment-sch-to-appointment" name="Segment SCHnull to Appointment Map"/>
-<artifact id="ConceptMap/segment-sch-to-provenance" key="ConceptMap-segment-sch-to-provenance" name="Segment SCHnull to Provenance Map"/>
-<artifact id="ConceptMap/segment-sch-to-servicerequest" key="ConceptMap-segment-sch-to-servicerequest" name="Segment SCHnull to ServiceRequest Map"/>
-<artifact id="ConceptMap/segment-sft-to-device" key="ConceptMap-segment-sft-to-device" name="Segment SFTnull to Device Map"/>
-<artifact id="ConceptMap/segment-sft-to-messageheader" key="ConceptMap-unsupported-segment-sft-to-messageheader" name="Segment SFTnull to MessageHeader Map"/>
-<artifact id="ConceptMap/segment-spm-to-specimen" key="ConceptMap-segment-spm-to-specimen" name="Segment SPMnull to Specimen Map"/>
-<artifact id="ConceptMap/segment-tq1-to-medicationrequest" key="ConceptMap-segment-tq1-to-medicationrequest" name="Segment TQ1null to MedicationRequest Map"/>
-<artifact id="ConceptMap/segment-tq1-to-servicerequest" key="ConceptMap-segment-tq1-to-servicerequest" name="Segment TQ1null to ServiceRequest Map"/>
+<artifact id="ConceptMap/segment-rxa-to-immunization" key="ConceptMap-segment-rxa-to-immunization" name="Segment RXA to Immunization Map"/>
+<artifact id="ConceptMap/segment-rxo-to-medicationrequest" key="ConceptMap-unsupported-segment-rxo-to-medicationrequest" name="Segment RXO to MedicationRequest Map"/>
+<artifact id="ConceptMap/segment-rxr-to-immunization" key="ConceptMap-segment-rxr-to-immunization" name="Segment RXR to Immunization Map"/>
+<artifact id="ConceptMap/segment-rxr-to-medicationrequest" key="ConceptMap-segment-rxr-to-medicationrequest" name="Segment RXR to MedicationRequest Map"/>
+<artifact id="ConceptMap/segment-sch-to-appointment" key="ConceptMap-segment-sch-to-appointment" name="Segment SCH to Appointment Map"/>
+<artifact id="ConceptMap/segment-sch-to-provenance" key="ConceptMap-segment-sch-to-provenance" name="Segment SCH to Provenance Map"/>
+<artifact id="ConceptMap/segment-sch-to-servicerequest" key="ConceptMap-segment-sch-to-servicerequest" name="Segment SCH to ServiceRequest Map"/>
+<artifact id="ConceptMap/segment-sft-to-device" key="ConceptMap-segment-sft-to-device" name="Segment SFT to Device Map"/>
+<artifact id="ConceptMap/segment-sft-to-messageheader" key="ConceptMap-unsupported-segment-sft-to-messageheader" name="Segment SFT to MessageHeader Map"/>
+<artifact id="ConceptMap/segment-spm-to-specimen" key="ConceptMap-segment-spm-to-specimen" name="Segment SPM to Specimen Map"/>
+<artifact id="ConceptMap/segment-tq1-to-medicationrequest" key="ConceptMap-segment-tq1-to-medicationrequest" name="Segment TQ1 to MedicationRequest Map"/>
+<artifact id="ConceptMap/segment-tq1-to-servicerequest" key="ConceptMap-segment-tq1-to-servicerequest" name="Segment TQ1 to ServiceRequest Map"/>
 <artifact deprecated="true" id="ConceptMap/segment-tq2-to-servicerequest" key="ConceptMap-segment-tq2-to-servicerequest" name="Segment TQ2 to ServiceRequest Map"/>
+<artifact id="ConceptMap/segment-txa-to-documentreference" key="ConceptMap-segment-txa-to-documentreference" name="Segment TXA to DocumentReference Map"/>
+<artifact id="ConceptMap/segment-txa-to-provenance" key="ConceptMap-segment-txa-to-provenance" name="Segment TXA to Provenance Map"/>
 <artifact id="ConceptMap/unsupported-segment-txa-to-provenance" key="ConceptMap-unsupported-segment-txa-to-provenance" name="Segment TXA to Provenance Map - Unsupported"/>
-<artifact id="ConceptMap/segment-txa-to-documentreference" key="ConceptMap-segment-txa-to-documentreference" name="Segment TXAnull to DocumentReference Map"/>
 <artifact deprecated="true" id="ConceptMap/table-hl0052-to-diagnosis-role" key="ConceptMap-table-hl0052-to-diagnosis-role" name="Table HL0052 to Diagnosis Role Map"/>
-<artifact id="ConceptMap/table-hl70001-to-administrative-gender" key="ConceptMap-table-hl70001-to-administrative-gender" name="Table HL70001null to Administrative Gender Map"/>
-<artifact id="ConceptMap/table-hl70002-to-v3-maritalstatus" key="ConceptMap-table-hl70002-to-v3-maritalstatus" name="Table HL70002null to V3 MaritalStatus Map"/>
-<artifact id="ConceptMap/table-hl70003-to-encounter-status" key="ConceptMap-table-hl70003-to-encounter-status" name="Table HL70003null to Encounter Status Map"/>
-<artifact id="ConceptMap/table-hl70004-to-encounter-status" key="ConceptMap-table-hl70004-to-encounter-status" name="Table HL70004null to Encounter Status Map"/>
-<artifact id="ConceptMap/table-hl70004-to-v3-actcode" key="ConceptMap-table-hl70004-to-v3-actcode" name="Table HL70004null to V3 ActCode Map"/>
-<artifact id="ConceptMap/table-hl70006-to-v3-religiousaffiliation" key="ConceptMap-table-hl70006-to-v3-religiousaffiliation" name="Table HL70006null to V3 ReligiousAffiliation Map"/>
-<artifact id="ConceptMap/table-hl70007-to-v2-0007" key="ConceptMap-table-hl70007-to-v2-0007" name="Table HL70007null to V2 0007 Map"/>
-<artifact id="ConceptMap/table-hl70052-to-diagnosis-role" key="ConceptMap-table-hl70052-to-diagnosis-role" name="Table HL70052null to Diagnosis Role Map"/>
-<artifact id="ConceptMap/table-hl70062-to-v3-actreason" key="ConceptMap-table-hl70062-to-v3-actreason" name="Table HL70062null to V3 ActReason Map"/>
-<artifact id="ConceptMap/table-hl70063-to-v3-rolecode" key="ConceptMap-table-hl70063-to-v3-rolecode" name="Table HL70063null to V3 RoleCode Map"/>
-<artifact id="ConceptMap/table-hl70074-to-v2-0074" key="ConceptMap-table-hl70074-to-v2-0074" name="Table HL70074null to V2 0074 Map"/>
-<artifact id="ConceptMap/table-hl70078-to-v3-observationinterpretation" key="ConceptMap-table-hl70078-to-v3-observationinterpretation" name="Table HL70078null to V3 ObservationInterpretation Map"/>
-<artifact id="ConceptMap/table-hl70080-to-v2-0080" key="ConceptMap-table-hl70080-to-v2-0080" name="Table HL70080null to V2 0080 Map"/>
-<artifact id="ConceptMap/table-hl70085-to-observation-status" key="ConceptMap-table-hl70085-to-observation-status" name="Table HL70085null to Observation Status Map"/>
-<artifact id="ConceptMap/table-hl70092-to-v2-0092" key="ConceptMap-table-hl70092-to-v2-0092" name="Table HL70092null to V2 0092 Map"/>
-<artifact id="ConceptMap/table-hl70123-queries-to-diagnostic-report-status" key="ConceptMap-table-hl70123-queries-to-diagnostic-report-status" name="Table HL70123null to Diagnostic Report Status Map"/>
-<artifact id="ConceptMap/table-hl70127-to-allergy-intolerance-category" key="ConceptMap-table-hl70127-to-allergy-intolerance-category" name="Table HL70127null to Allergy Intolerance Category Map"/>
-<artifact id="ConceptMap/table-hl70127-to-allergy-intolerance-type" key="ConceptMap-table-hl70127-to-allergy-intolerance-type" name="Table HL70127null to Allergy Intolerance Type Map"/>
-<artifact id="ConceptMap/table-hl70127-to-v2-0127" key="ConceptMap-table-hl70127-original-to-v2-0127" name="Table HL70127null to V2 0127 Map"/>
+<artifact id="ConceptMap/table-hl70001-to-administrative-gender" key="ConceptMap-table-hl70001-to-administrative-gender" name="Table HL70001 to Administrative Gender Map"/>
+<artifact id="ConceptMap/table-hl70002-to-v3-maritalstatus" key="ConceptMap-table-hl70002-to-v3-maritalstatus" name="Table HL70002 to V3 MaritalStatus Map"/>
+<artifact id="ConceptMap/table-hl70003-to-encounter-status" key="ConceptMap-table-hl70003-to-encounter-status" name="Table HL70003 to Encounter Status Map"/>
+<artifact id="ConceptMap/table-hl70004-to-encounter-status" key="ConceptMap-table-hl70004-to-encounter-status" name="Table HL70004 to Encounter Status Map"/>
+<artifact id="ConceptMap/table-hl70004-to-v3-actcode" key="ConceptMap-table-hl70004-to-v3-actcode" name="Table HL70004 to V3 ActCode Map"/>
+<artifact id="ConceptMap/table-hl70006-to-v3-religiousaffiliation" key="ConceptMap-table-hl70006-to-v3-religiousaffiliation" name="Table HL70006 to V3 ReligiousAffiliation Map"/>
+<artifact id="ConceptMap/table-hl70007-to-v2-0007" key="ConceptMap-table-hl70007-to-v2-0007" name="Table HL70007 to V2 0007 Map"/>
+<artifact id="ConceptMap/table-hl70052-to-diagnosis-role" key="ConceptMap-table-hl70052-to-diagnosis-role" name="Table HL70052 to Diagnosis Role Map"/>
+<artifact id="ConceptMap/table-hl70062-to-v3-actreason" key="ConceptMap-table-hl70062-to-v3-actreason" name="Table HL70062 to V3 ActReason Map"/>
+<artifact id="ConceptMap/table-hl70063-to-v3-rolecode" key="ConceptMap-table-hl70063-to-v3-rolecode" name="Table HL70063 to V3 RoleCode Map"/>
+<artifact id="ConceptMap/table-hl70074-to-v2-0074" key="ConceptMap-table-hl70074-to-v2-0074" name="Table HL70074 to V2 0074 Map"/>
+<artifact id="ConceptMap/table-hl70078-to-v3-observationinterpretation" key="ConceptMap-table-hl70078-to-v3-observationinterpretation" name="Table HL70078 to V3 ObservationInterpretation Map"/>
+<artifact id="ConceptMap/table-hl70080-to-v2-0080" key="ConceptMap-table-hl70080-to-v2-0080" name="Table HL70080 to V2 0080 Map"/>
+<artifact id="ConceptMap/table-hl70085-to-observation-status" key="ConceptMap-table-hl70085-to-observation-status" name="Table HL70085 to Observation Status Map"/>
+<artifact id="ConceptMap/table-hl70092-to-v2-0092" key="ConceptMap-table-hl70092-to-v2-0092" name="Table HL70092 to V2 0092 Map"/>
+<artifact id="ConceptMap/table-hl70119-to-request-status" key="ConceptMap-table-hl70119-to-request-status" name="Table HL70119 to Request Status Map"/>
+<artifact id="ConceptMap/table-hl70123-queries-to-diagnostic-report-status" key="ConceptMap-table-hl70123-queries-to-diagnostic-report-status" name="Table HL70123 to Diagnostic Report Status Map"/>
+<artifact id="ConceptMap/table-hl70127-to-allergy-intolerance-category" key="ConceptMap-table-hl70127-to-allergy-intolerance-category" name="Table HL70127 to Allergy Intolerance Category Map"/>
+<artifact id="ConceptMap/table-hl70127-to-allergy-intolerance-type" key="ConceptMap-table-hl70127-to-allergy-intolerance-type" name="Table HL70127 to Allergy Intolerance Type Map"/>
+<artifact id="ConceptMap/table-hl70127-to-v2-0127" key="ConceptMap-table-hl70127-original-to-v2-0127" name="Table HL70127 to V2 0127 Map"/>
+<artifact id="ConceptMap/table-hl70128-to-codesystem-reaction-event-severity" key="ConceptMap-table-hl70128-to-codesystem-reaction-event-severity" name="Table HL70128 to Codesystem Reaction Event Severity Map"/>
+<artifact id="ConceptMap/table-hl70128-original-to-v2-0128" key="ConceptMap-table-hl70128-original-to-v2-0128" name="Table HL70128 to V2 0128 Map"/>
 <artifact id="ConceptMap/table-hl70128-original-to-allergy-intolerance-criticality" key="ConceptMap-table-hl70128-original-to-allergy-intolerance-criticality" name="Table HL70128null to Allergy Intolerance Criticality Map"/>
-<artifact id="ConceptMap/table-hl70128-to-codesystem-reaction-event-severity" key="ConceptMap-table-hl70128-to-codesystem-reaction-event-severity" name="Table HL70128null to Codesystem Reaction Event Severity Map"/>
-<artifact id="ConceptMap/table-hl70130-to-v2-0130" key="ConceptMap-table-hl70130-to-v2-0130" name="Table HL70130null to V2 0130 Map"/>
-<artifact id="ConceptMap/table-hl70131-to-v2-0131" key="ConceptMap-table-hl70131-to-v2-0131" name="Table HL70131null to V2 0131 Map"/>
-<artifact id="ConceptMap/table-hl70136-to-specimen-status" key="ConceptMap-table-hl70136-to-specimen-status" name="Table HL70136null to Specimen Status Map"/>
-<artifact id="ConceptMap/table-hl70155-to-messageheader-response-request" key="ConceptMap-table-hl70155-to-messageheader-response-request" name="Table HL70155null to Messageheader Response Request Map"/>
-<artifact id="ConceptMap/table-hl70161-to-v2-0161" key="ConceptMap-table-hl70161-to-v2-0161" name="Table HL70161null to V2 0161 Map"/>
-<artifact id="ConceptMap/table-hl70162-to-v2-0162" key="ConceptMap-table-hl70162-to-v2-0162" name="Table HL70162null to V2 0162 Map"/>
-<artifact id="ConceptMap/table-hl70165-to-sct" key="ConceptMap-table-hl70165-to-sct" name="Table HL70165null to Sct Map"/>
-<artifact id="ConceptMap/table-hl70185-to-v2-0185" key="ConceptMap-table-hl70185-to-v2-0185" name="Table HL70185null to V2 0185 Map"/>
-<artifact id="ConceptMap/table-hl70190-to-address-use" key="ConceptMap-table-hl70190-to-address-use" name="Table HL70190null to Address Use Map"/>
-<artifact id="ConceptMap/table-hl70201-to-contact-point-use" key="ConceptMap-table-hl70201-to-contact-point-use" name="Table HL70201null to Contact Point Use Map"/>
-<artifact id="ConceptMap/table-hl70202-to-contact-point-system" key="ConceptMap-table-hl70202-to-contact-point-system" name="Table HL70202null to Contact Point System Map"/>
-<artifact id="ConceptMap/table-hl70203-to-v2-0203" key="ConceptMap-table-hl70203-to-v2-0203" name="Table HL70203null to V2 0203 Map"/>
-<artifact id="ConceptMap/table-hl70204-to-v2-0204" key="ConceptMap-table-hl70204-to-v2-0204" name="Table HL70204null to V2 0204 Map"/>
-<artifact id="ConceptMap/table-hl70215-to-v2-0215" key="ConceptMap-table-hl70215-to-v2-0215" name="Table HL70215null to V2 0215 Map"/>
-<artifact id="ConceptMap/table-hl70217-to-v3-actpriority" key="ConceptMap-table-hl70217-to-v3-actpriority" name="Table HL70217null to V3 ActPriority Map"/>
-<artifact id="ConceptMap/table-hl70231-to-v2-0231" key="ConceptMap-table-hl70231-to-v2-0231" name="Table HL70231null to V2 0231 Map"/>
-<artifact id="ConceptMap/table-hl70276-to-encounter-reason" key="ConceptMap-table-hl70276-to-encounter-reason" name="Table HL70276null to Encounter Reason Map"/>
-<artifact id="ConceptMap/table-hl70278-to-codesystem-appointmentstatus" key="ConceptMap-table-hl70278-to-codesystem-appointmentstatus" name="Table HL70278null to Codesystem Appointmentstatus Map"/>
-<artifact id="ConceptMap/table-hl70301-to-v2-0301" key="ConceptMap-table-hl70301-to-v2-0301" name="Table HL70301null to V2 0301 Map"/>
-<artifact id="ConceptMap/table-hl70315-to-v2-0315" key="ConceptMap-table-hl70315-to-v2-0315" name="Table HL70315null to V2 0315 Map"/>
-<artifact id="ConceptMap/table-hl70322-to-event-status" key="ConceptMap-table-hl70322-to-event-status" name="Table HL70322null to Event Status Map"/>
-<artifact id="ConceptMap/table-hl70335-to-v2-0335" key="ConceptMap-table-hl70335-to-v2-0335" name="Table HL70335null to V2 0335 Map"/>
-<artifact id="ConceptMap/table-hl70364-to-v2-0364" key="ConceptMap-table-hl70364-to-v2-0364" name="Table HL70364null to V2 0364 Map"/>
-<artifact id="ConceptMap/table-hl70371-to-v2-0371" key="ConceptMap-table-hl70371-to-v2-0371" name="Table HL70371null to V2 0371 Map"/>
-<artifact id="ConceptMap/table-hl70406-to-v2-0406" key="ConceptMap-table-hl70406-to-v2-0406" name="Table HL70406null to V2 0406 Map"/>
-<artifact id="ConceptMap/table-hl70430-to-v2-0430" key="ConceptMap-table-hl70430-to-v2-0430" name="Table HL70430null to V2 0430 Map"/>
-<artifact id="ConceptMap/table-hl70432-to-v2-0432" key="ConceptMap-table-hl70432-to-v2-0432" name="Table HL70432null to V2 0432 Map"/>
-<artifact id="ConceptMap/table-hl70443-to-v3-participationtype" key="ConceptMap-table-hl70443-to-v3-participationtype" name="Table HL70443null to V3 ParticipationType Map"/>
-<artifact id="ConceptMap/table-hl70444-to-v2-0444" key="ConceptMap-table-hl70444-to-v2-0444" name="Table HL70444null to V2 0444 Map"/>
-<artifact id="ConceptMap/table-hl70480-to-v3-rolecode" key="ConceptMap-table-hl70480-to-v3-rolecode" name="Table HL70480null to V3 RoleCode Map"/>
-<artifact id="ConceptMap/table-hl70485-to-request-priority" key="ConceptMap-table-hl70485-to-request-priority" name="Table HL70485null to Request Priority Map"/>
-<artifact id="ConceptMap/table-hl70487-to-v2-0487" key="ConceptMap-table-hl70487-to-v2-0487" name="Table HL70487null to V2 0487 Map"/>
-<artifact id="ConceptMap/table-hl70488-to-v2-0488" key="ConceptMap-table-hl70488-to-v2-0488" name="Table HL70488null to V2 0488 Map"/>
-<artifact id="ConceptMap/table-hl70490-to-v2-0490" key="ConceptMap-table-hl70490-to-v2-0490" name="Table HL70490null to V2 0490 Map"/>
-<artifact id="ConceptMap/table-hl70498-to-consent-state-codes" key="ConceptMap-table-hl70498-to-consent-state-codes" name="Table HL70498null to Consent State Codes Map"/>
-<artifact id="ConceptMap/table-hl70528-to-v3-timingevent" key="ConceptMap-table-hl70528-to-v3-timingevent" name="Table HL70528null to V3 TimingEvent Map"/>
-<artifact id="ConceptMap/table-hl70549-to-v3-rolecode" key="ConceptMap-table-hl70549-to-v3-rolecode" name="Table HL70549null to V3 RoleCode Map"/>
-<artifact id="ConceptMap/table-hl70550-to-v2-0550" key="ConceptMap-table-hl70550-to-v2-0550" name="Table HL70550null to V2 0550 Map"/>
+<artifact id="ConceptMap/table-hl70130-to-v2-0130" key="ConceptMap-table-hl70130-to-v2-0130" name="Table HL70130 to V2 0130 Map"/>
+<artifact id="ConceptMap/table-hl70131-to-v2-0131" key="ConceptMap-table-hl70131-to-v2-0131" name="Table HL70131 to V2 0131 Map"/>
+<artifact id="ConceptMap/table-hl70136-to-specimen-status" key="ConceptMap-table-hl70136-to-specimen-status" name="Table HL70136 to Specimen Status Map"/>
+<artifact id="ConceptMap/table-hl70155-to-messageheader-response-request" key="ConceptMap-table-hl70155-to-messageheader-response-request" name="Table HL70155 to Messageheader Response Request Map"/>
+<artifact id="ConceptMap/table-hl70161-to-v2-0161" key="ConceptMap-table-hl70161-to-v2-0161" name="Table HL70161 to V2 0161 Map"/>
+<artifact id="ConceptMap/table-hl70162-to-v2-0162" key="ConceptMap-table-hl70162-to-v2-0162" name="Table HL70162 to V2 0162 Map"/>
+<artifact id="ConceptMap/table-hl70165-to-sct" key="ConceptMap-table-hl70165-to-sct" name="Table HL70165 to Sct Map"/>
+<artifact id="ConceptMap/table-hl70185-to-v2-0185" key="ConceptMap-table-hl70185-to-v2-0185" name="Table HL70185 to V2 0185 Map"/>
+<artifact id="ConceptMap/table-hl70190-to-address-use" key="ConceptMap-table-hl70190-to-address-use" name="Table HL70190 to Address Use Map"/>
+<artifact id="ConceptMap/table-hl70201-to-contact-point-use" key="ConceptMap-table-hl70201-to-contact-point-use" name="Table HL70201 to Contact Point Use Map"/>
+<artifact id="ConceptMap/table-hl70202-to-contact-point-system" key="ConceptMap-table-hl70202-to-contact-point-system" name="Table HL70202 to Contact Point System Map"/>
+<artifact id="ConceptMap/table-hl70203-to-v2-0203" key="ConceptMap-table-hl70203-to-v2-0203" name="Table HL70203 to V2 0203 Map"/>
+<artifact id="ConceptMap/table-hl70204-to-v2-0204" key="ConceptMap-table-hl70204-to-v2-0204" name="Table HL70204 to V2 0204 Map"/>
+<artifact id="ConceptMap/table-hl70215-to-v2-0215" key="ConceptMap-table-hl70215-to-v2-0215" name="Table HL70215 to V2 0215 Map"/>
+<artifact id="ConceptMap/table-hl70217-to-v3-actpriority" key="ConceptMap-table-hl70217-to-v3-actpriority" name="Table HL70217 to V3 ActPriority Map"/>
+<artifact id="ConceptMap/table-hl70231-to-v2-0231" key="ConceptMap-table-hl70231-to-v2-0231" name="Table HL70231 to V2 0231 Map"/>
+<artifact id="ConceptMap/table-hl70272-to-v2-0272" key="ConceptMap-table-hl70272-to-v2-0272" name="Table HL70272 to V2 0272 Map"/>
+<artifact id="ConceptMap/table-hl70276-to-encounter-reason" key="ConceptMap-table-hl70276-to-encounter-reason" name="Table HL70276 to Encounter Reason Map"/>
+<artifact id="ConceptMap/table-hl70278-to-codesystem-appointmentstatus" key="ConceptMap-table-hl70278-to-codesystem-appointmentstatus" name="Table HL70278 to Codesystem Appointmentstatus Map"/>
+<artifact id="ConceptMap/table-hl70301-to-v2-0301" key="ConceptMap-table-hl70301-to-v2-0301" name="Table HL70301 to V2 0301 Map"/>
+<artifact id="ConceptMap/table-hl70315-to-v2-0315" key="ConceptMap-table-hl70315-to-v2-0315" name="Table HL70315 to V2 0315 Map"/>
+<artifact id="ConceptMap/table-hl70322-to-event-status" key="ConceptMap-table-hl70322-to-event-status" name="Table HL70322 to Event Status Map"/>
+<artifact id="ConceptMap/table-hl70335-to-v2-0335" key="ConceptMap-table-hl70335-to-v2-0335" name="Table HL70335 to V2 0335 Map"/>
+<artifact id="ConceptMap/table-hl70364-to-v2-0364" key="ConceptMap-table-hl70364-to-v2-0364" name="Table HL70364 to V2 0364 Map"/>
+<artifact id="ConceptMap/table-hl70371-to-v2-0371" key="ConceptMap-table-hl70371-to-v2-0371" name="Table HL70371 to V2 0371 Map"/>
+<artifact id="ConceptMap/table-hl70406-to-v2-0406" key="ConceptMap-table-hl70406-to-v2-0406" name="Table HL70406 to V2 0406 Map"/>
+<artifact id="ConceptMap/table-hl70430-to-v2-0430" key="ConceptMap-table-hl70430-to-v2-0430" name="Table HL70430 to V2 0430 Map"/>
+<artifact id="ConceptMap/table-hl70432-to-v2-0432" key="ConceptMap-table-hl70432-to-v2-0432" name="Table HL70432 to V2 0432 Map"/>
+<artifact id="ConceptMap/table-hl70443-to-v3-participationtype" key="ConceptMap-table-hl70443-to-v3-participationtype" name="Table HL70443 to V3 ParticipationType Map"/>
+<artifact id="ConceptMap/table-hl70444-to-v2-0444" key="ConceptMap-table-hl70444-to-v2-0444" name="Table HL70444 to V2 0444 Map"/>
+<artifact id="ConceptMap/table-hl70480-to-v3-rolecode" key="ConceptMap-table-hl70480-to-v3-rolecode" name="Table HL70480 to V3 RoleCode Map"/>
+<artifact id="ConceptMap/table-hl70485-to-request-priority" key="ConceptMap-table-hl70485-to-request-priority" name="Table HL70485 to Request Priority Map"/>
+<artifact id="ConceptMap/table-hl70487-to-v2-0487" key="ConceptMap-table-hl70487-to-v2-0487" name="Table HL70487 to V2 0487 Map"/>
+<artifact id="ConceptMap/table-hl70488-to-v2-0488" key="ConceptMap-table-hl70488-to-v2-0488" name="Table HL70488 to V2 0488 Map"/>
+<artifact id="ConceptMap/table-hl70490-to-v2-0490" key="ConceptMap-table-hl70490-to-v2-0490" name="Table HL70490 to V2 0490 Map"/>
+<artifact id="ConceptMap/table-hl70498-to-consent-state-codes" key="ConceptMap-table-hl70498-to-consent-state-codes" name="Table HL70498 to Consent State Codes Map"/>
+<artifact id="ConceptMap/table-hl70528-to-v3-timingevent" key="ConceptMap-table-hl70528-to-v3-timingevent" name="Table HL70528 to V3 TimingEvent Map"/>
+<artifact id="ConceptMap/table-hl70549-to-v3-rolecode" key="ConceptMap-table-hl70549-to-v3-rolecode" name="Table HL70549 to V3 RoleCode Map"/>
+<artifact id="ConceptMap/table-hl70550-to-v2-0550" key="ConceptMap-table-hl70550-to-v2-0550" name="Table HL70550 to V2 0550 Map"/>
 <artifact id="StructureDefinition/TypeInfo" key="StructureDefinition-TypeInfo" name="TypeInfo"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>

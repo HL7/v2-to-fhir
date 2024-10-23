@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ MSH[Bundle] - Sheet1.csv
 Instance: SegmentMSHToBundle
 InstanceOf: ConceptMap
-Title: "Segment MSHnull to Bundle Map"
-* title = "Segment MSHnull to Bundle Map"
+Title: "Segment MSH to Bundle Map"
+* title = "Segment MSH to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment MSH to the FHIR Bundle Resource."
 * id = "segment-msh-to-bundle"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-msh-to-bundle"
@@ -10,7 +10,7 @@ Title: "Segment MSHnull to Bundle Map"
 * name = "SegmentMSHToBundle"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -36,8 +36,6 @@ Title: "Segment MSHnull to Bundle Map"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "type"
 * group.element[0].target.comment = "Note that the assignment is according to the mapping principles for mapping definitions only.  There is no expectation that this is the actual Bundle.type being mapped to based on local implementation considerations.  Unless the progression actually is a FHIR Message."
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"message\""
 * group.element[1].code = #MSH-7
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -96,5 +94,3 @@ Title: "Segment MSHnull to Bundle Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "identifier.system"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "/to be determined by the implementer/"

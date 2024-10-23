@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ OG[Extension-Subidentifier] - Sheet1.csv
 Instance: DatatypeOGSubidentifierToExtension
 InstanceOf: ConceptMap
-Title: "Datatype OGnull to Extension Map"
-* title = "Datatype OGnull to Extension Map"
+Title: "Datatype OG to Extension Map"
+* title = "Datatype OG to Extension Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype OG to the FHIR Extension Data Type."
 * id = "datatype-og-subidentifier-to-extension"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-og-subidentifier-to-extension"
@@ -10,7 +10,7 @@ Title: "Datatype OGnull to Extension Map"
 * name = "DatatypeOGSubidentifierToExtension"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -41,8 +41,6 @@ Title: "Datatype OGnull to Extension Map"
 * group.element[0].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.display = "extension[1]:group.url"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/observation-v2-subid\""
 * group.element[1].code = #OG.1
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -79,8 +77,6 @@ Title: "Datatype OGnull to Extension Map"
 * group.element[2].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[1].valueInteger = 1
 * group.element[2].target.display = "extension[1]:group.url"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/observation-v2-subid\""
 * group.element[3].code = #OG.2
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -117,8 +113,6 @@ Title: "Datatype OGnull to Extension Map"
 * group.element[4].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
 * group.element[4].target.display = "extension[1]:group.url"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/observation-v2-subid\""
 * group.element[5].code = #OG.3
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -155,8 +149,6 @@ Title: "Datatype OGnull to Extension Map"
 * group.element[6].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[1].valueInteger = 1
 * group.element[6].target.display = "extension[1]:group.url"
-* group.element[6].target.dependsOn[0].property = "value"
-* group.element[6].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/observation-v2-subid\""
 * group.element[7].code = #OG.4
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"

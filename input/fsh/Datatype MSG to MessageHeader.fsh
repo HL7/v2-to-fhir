@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ MSG[MessageHeader] - Sheet1.csv
 Instance: DatatypeMSGToMessageHeader
 InstanceOf: ConceptMap
-Title: "Datatype MSGnull to MessageHeader Map"
-* title = "Datatype MSGnull to MessageHeader Map"
+Title: "Datatype MSG to MessageHeader Map"
+* title = "Datatype MSG to MessageHeader Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype MSG to the FHIR MessageHeader Resource."
 * id = "datatype-msg-to-messageheader"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-msg-to-messageheader"
@@ -10,7 +10,7 @@ Title: "Datatype MSGnull to MessageHeader Map"
 * name = "DatatypeMSGToMessageHeader"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Datatype MSGnull to MessageHeader Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "eventCoding.code"
-* group.element[0].target.dependsOn[0].property = "vocabulary-map"
-* group.element[0].target.dependsOn[0].value = "EventCodes"
 * group.element[1].code = #MSG.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,8 +62,6 @@ Title: "Datatype MSGnull to MessageHeader Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "eventCoding.system"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0003\""
 * group.element[2].code = #MSG.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -85,5 +81,3 @@ Title: "Datatype MSGnull to MessageHeader Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "definition"
-* group.element[2].target.dependsOn[0].property = "vocabulary-map"
-* group.element[2].target.dependsOn[0].value = "MessageStructure"

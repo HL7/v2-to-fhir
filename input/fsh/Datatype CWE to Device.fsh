@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[Device] - Sheet1.csv
 Instance: DatatypeCWEToDevice
 InstanceOf: ConceptMap
-Title: "Datatype CWEnull to Device Map"
-* title = "Datatype CWEnull to Device Map"
+Title: "Datatype CWE to Device Map"
+* title = "Datatype CWE to Device Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Device Resource."
 * id = "datatype-cwe-to-device"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-device"
@@ -10,7 +10,7 @@ Title: "Datatype CWEnull to Device Map"
 * name = "DatatypeCWEToDevice"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -36,8 +36,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #identifier[1].value
 * group.element[0].target.display = "identifier[1].value"
-* group.element[0].target.product[0].property = "narrative"
-* group.element[0].target.product[0].value = "If instance identifier"
 * group.element[1].code = #CWE.1
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -50,8 +48,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #definition(DeviceDefinition.identifier[1].value)
 * group.element[1].target.display = "definition(DeviceDefinition.identifier[1].value)"
-* group.element[1].target.product[0].property = "narrative"
-* group.element[1].target.product[0].value = "If kind identifier"
 * group.element[2].code = #CWE.2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -76,8 +72,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #deviceName[1].type
 * group.element[3].target.display = "deviceName[1].type"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "/select most appropriate value for actual use/"
 * group.element[4].code = #CWE.3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -90,10 +84,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[4].target.equivalence = #equivalent
 * group.element[4].target.code = #identifier[1].system
 * group.element[4].target.display = "identifier[1].system"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "/map HL7 code system to appropriate url/"
-* group.element[4].target.product[0].property = "narrative"
-* group.element[4].target.product[0].value = "If instance identifier"
 * group.element[5].code = #CWE.3
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -106,10 +96,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #definition(DeviceDefinition.identifier[1].system)
 * group.element[5].target.display = "definition(DeviceDefinition.identifier[1].system)"
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "/map HL7 code system to appropriate url/"
-* group.element[5].target.product[0].property = "narrative"
-* group.element[5].target.product[0].value = "If kind identifier"
 * group.element[6].code = #CWE.4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -122,8 +108,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[6].target.equivalence = #equivalent
 * group.element[6].target.code = #identifier[2].value
 * group.element[6].target.display = "identifier[2].value"
-* group.element[6].target.product[0].property = "narrative"
-* group.element[6].target.product[0].value = "If instance identifier"
 * group.element[7].code = #CWE.4
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -136,8 +120,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[7].target.equivalence = #equivalent
 * group.element[7].target.code = #definition(DeviceDefinition.identifier[2].value)
 * group.element[7].target.display = "definition(DeviceDefinition.identifier[2].value)"
-* group.element[7].target.product[0].property = "narrative"
-* group.element[7].target.product[0].value = "If kind identifier"
 * group.element[8].code = #CWE.5
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -162,8 +144,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[9].target.equivalence = #equivalent
 * group.element[9].target.code = #deviceName[2].type
 * group.element[9].target.display = "deviceName[2].type"
-* group.element[9].target.dependsOn[0].property = "value"
-* group.element[9].target.dependsOn[0].value = "/select most appropriate value for actual use/"
 * group.element[10].code = #CWE.6
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -176,10 +156,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[10].target.equivalence = #equivalent
 * group.element[10].target.code = #identifier[2].system
 * group.element[10].target.display = "identifier[2].system"
-* group.element[10].target.dependsOn[0].property = "value"
-* group.element[10].target.dependsOn[0].value = "/map HL7 code system to appropriate url/"
-* group.element[10].target.product[0].property = "narrative"
-* group.element[10].target.product[0].value = "If instance identifier"
 * group.element[11].code = #CWE.6
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -192,10 +168,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[11].target.equivalence = #equivalent
 * group.element[11].target.code = #definition(DeviceDefinition.identifier[2].system)
 * group.element[11].target.display = "definition(DeviceDefinition.identifier[2].system)"
-* group.element[11].target.dependsOn[0].property = "value"
-* group.element[11].target.dependsOn[0].value = "/map HL7 code system to appropriate url/"
-* group.element[11].target.product[0].property = "narrative"
-* group.element[11].target.product[0].value = "If kind identifier"
 * group.element[12].code = #CWE.9
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -220,8 +192,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[13].target.equivalence = #equivalent
 * group.element[13].target.code = #deviceName[4].type
 * group.element[13].target.display = "deviceName[4].type"
-* group.element[13].target.dependsOn[0].property = "value"
-* group.element[13].target.dependsOn[0].value = "/select most appropriate value for actual use/"
 * group.element[14].code = #CWE.10
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -234,8 +204,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[14].target.equivalence = #equivalent
 * group.element[14].target.code = #identifier[3].value
 * group.element[14].target.display = "identifier[3].value"
-* group.element[14].target.product[0].property = "narrative"
-* group.element[14].target.product[0].value = "If instance identifier"
 * group.element[15].code = #CWE.10
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -248,8 +216,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[15].target.equivalence = #equivalent
 * group.element[15].target.code = #definition(DeviceDefinition.identifier[3].value)
 * group.element[15].target.display = "definition(DeviceDefinition.identifier[3].value)"
-* group.element[15].target.product[0].property = "narrative"
-* group.element[15].target.product[0].value = "If kind identifier"
 * group.element[16].code = #CWE.11
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -274,8 +240,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[17].target.equivalence = #equivalent
 * group.element[17].target.code = #deviceName[3].type
 * group.element[17].target.display = "deviceName[3].type"
-* group.element[17].target.dependsOn[0].property = "value"
-* group.element[17].target.dependsOn[0].value = "/select most appropriate value for actual use/"
 * group.element[18].code = #CWE.12
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"
@@ -288,10 +252,6 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[18].target.equivalence = #equivalent
 * group.element[18].target.code = #identifier[3].system
 * group.element[18].target.display = "identifier[3].system"
-* group.element[18].target.dependsOn[0].property = "value"
-* group.element[18].target.dependsOn[0].value = "/map HL7 code system to appropriate url/"
-* group.element[18].target.product[0].property = "narrative"
-* group.element[18].target.product[0].value = "If instance identifier"
 * group.element[19].code = #CWE.12
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "type"
@@ -304,7 +264,3 @@ Title: "Datatype CWEnull to Device Map"
 * group.element[19].target.equivalence = #equivalent
 * group.element[19].target.code = #definition(DeviceDefinition.identifier[3].system)
 * group.element[19].target.display = "definition(DeviceDefinition.identifier[3].system)"
-* group.element[19].target.dependsOn[0].property = "value"
-* group.element[19].target.dependsOn[0].value = "/map HL7 code system to appropriate url/"
-* group.element[19].target.product[0].property = "narrative"
-* group.element[19].target.product[0].value = "If kind identifier"

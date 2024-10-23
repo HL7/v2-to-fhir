@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ EVN[Provenance] - Sheet1.csv
 Instance: SegmentEVNToProvenance
 InstanceOf: ConceptMap
-Title: "Segment EVNnull to Provenance Map"
-* title = "Segment EVNnull to Provenance Map"
+Title: "Segment EVN to Provenance Map"
+* title = "Segment EVN to Provenance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment EVN to the FHIR Provenance Resource."
 * id = "segment-evn-to-provenance"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-evn-to-provenance"
@@ -10,7 +10,7 @@ Title: "Segment EVNnull to Provenance Map"
 * name = "SegmentEVNToProvenance"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -35,8 +35,6 @@ Title: "Segment EVNnull to Provenance Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "activity.coding.display"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"event - :\"+MSG.1+\"^\"+MSG.2"
 * group.element[1].code = #EVN-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -75,12 +73,6 @@ Title: "Segment EVNnull to Provenance Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "reason"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[2].target.dependsOn[1].property = "vocabulary-map"
-* group.element[2].target.dependsOn[1].value = "EventReason"
-* group.element[2].target.product[0].property = "antlr"
-* group.element[2].target.product[0].value = "IF EVN-4 NOT \"U\""
 * group.element[3].code = #EVN-4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -100,10 +92,6 @@ Title: "Segment EVNnull to Provenance Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "reason.extension[1].url"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/data-absent-reason\""
-* group.element[3].target.product[0].property = "antlr"
-* group.element[3].target.product[0].value = "IF EVN-4 IS \"U\""
 * group.element[4].code = #EVN-4
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -123,10 +111,6 @@ Title: "Segment EVNnull to Provenance Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "reason.extension[1].valueCodeableConcept"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"unknown\""
-* group.element[4].target.product[0].property = "antlr"
-* group.element[4].target.product[0].value = "IF EVN-4 IS \"U\""
 * group.element[5].code = #EVN-5
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -146,10 +130,6 @@ Title: "Segment EVNnull to Provenance Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = -1
 * group.element[5].target.display = "agent.who(Practitioner)"
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "XCN[Practitioner]"
-* group.element[5].target.dependsOn[1].property = "vocabulary-map"
-* group.element[5].target.dependsOn[1].value = "OperatorID"
 * group.element[6].code = #EVN-6
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -186,5 +166,3 @@ Title: "Segment EVNnull to Provenance Map"
 * group.element[7].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[1].valueInteger = 1
 * group.element[7].target.display = "location(Location)"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "HD[Location]"

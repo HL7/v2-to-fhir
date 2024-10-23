@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XON[string] - Sheet1.csv
 Instance: DatatypeXONToString
 InstanceOf: ConceptMap
-Title: "Datatype XONnull to string Map"
-* title = "Datatype XONnull to string Map"
+Title: "Datatype XON to string Map"
+* title = "Datatype XON to string Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XON to the FHIR string Data Type."
 * id = "datatype-xon-to-string"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xon-to-string"
@@ -10,7 +10,7 @@ Title: "Datatype XONnull to string Map"
 * name = "DatatypeXONToString"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -62,5 +62,3 @@ Title: "Datatype XONnull to string Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "$value"
-* group.element[1].target.product[0].property = "antlr"
-* group.element[1].target.product[0].value = "IF XON.1 NOT VALUED"

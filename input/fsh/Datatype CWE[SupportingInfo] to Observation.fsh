@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[Observation-SupportingInfo] - Sheet1.csv
 Instance: DatatypeCWESupportingInfoToObservation
 InstanceOf: ConceptMap
-Title: "Datatype CWEnull to Observation Map"
-* title = "Datatype CWEnull to Observation Map"
+Title: "Datatype CWE to Observation Map"
+* title = "Datatype CWE to Observation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Observation Resource."
 * id = "datatype-cwe-supportinginfo-to-observation"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-supportinginfo-to-observation"
@@ -10,7 +10,7 @@ Title: "Datatype CWEnull to Observation Map"
 * name = "DatatypeCWESupportingInfoToObservation"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -35,8 +35,6 @@ Title: "Datatype CWEnull to Observation Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "code"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "/to be determined by implementer based on use of OBR-13/"
 * group.element[1].code = #CWE
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #status
@@ -48,8 +46,6 @@ Title: "Datatype CWEnull to Observation Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "status"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"final\""
 * group.element[2].code = #CWE.1
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"

@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ AIL[Appointment] - Sheet1.csv
 Instance: SegmentAILToAppointment
 InstanceOf: ConceptMap
-Title: "Segment AILnull to Appointment Map"
-* title = "Segment AILnull to Appointment Map"
+Title: "Segment AIL to Appointment Map"
+* title = "Segment AIL to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment AIL to the FHIR Appointment Resource."
 * id = "segment-ail-to-appointment"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-ail-to-appointment"
@@ -10,7 +10,7 @@ Title: "Segment AILnull to Appointment Map"
 * name = "SegmentAILToAppointment"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment AILnull to Appointment Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "participant.actor[1]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "PL[location]"
 * group.element[1].code = #AIL-6
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -69,10 +67,6 @@ Title: "Segment AILnull to Appointment Map"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #participant.period.start
 * group.element[2].target.display = "participant.period.start"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "/.start + AIL-7 according to AIL-8 units/"
-* group.element[2].target.product[0].property = "antlr"
-* group.element[2].target.product[0].value = "IF AIL-6 NOT VALUED"
 * group.element[3].code = #AIL-9
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -85,7 +79,3 @@ Title: "Segment AILnull to Appointment Map"
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #participant.period.end
 * group.element[3].target.display = "participant.period.end"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "Appointment.participant.period.start + AIL-9"
-* group.element[3].target.product[0].property = "antlr"
-* group.element[3].target.product[0].value = "IF AIL-6 IS VALUED"

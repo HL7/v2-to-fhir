@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PID[Provenance-Patient] - PID.csv
 Instance: SegmentPIDPatientToProvenance
 InstanceOf: ConceptMap
-Title: "Segment PIDnull to Provenance Map"
-* title = "Segment PIDnull to Provenance Map"
+Title: "Segment PID to Provenance Map"
+* title = "Segment PID to Provenance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Provenance Resource."
 * id = "segment-pid-patient-to-provenance"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pid-patient-to-provenance"
@@ -10,7 +10,7 @@ Title: "Segment PIDnull to Provenance Map"
 * name = "SegmentPIDPatientToProvenance"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -28,8 +28,6 @@ Title: "Segment PIDnull to Provenance Map"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #recorded
 * group.element[0].target.display = "recorded"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "/time of transformation/"
 * group.element[1].code = #PID
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #activity.coding.code
@@ -41,8 +39,6 @@ Title: "Segment PIDnull to Provenance Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "activity.coding.code"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"UPDATE\""
 * group.element[2].code = #PID
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #activity.coding.system
@@ -54,8 +50,6 @@ Title: "Segment PIDnull to Provenance Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "activity.coding.system"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v3-DataOperation\""
 * group.element[3].code = #PID-33
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -94,8 +88,6 @@ Title: "Segment PIDnull to Provenance Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "agent.who(Organization)"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "HD[Organization]"
 * group.element[5].code = #PID-34
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -115,8 +107,6 @@ Title: "Segment PIDnull to Provenance Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "agent.type.coding.code"
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "\"performer\""
 * group.element[6].code = #PID-34
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -136,5 +126,3 @@ Title: "Segment PIDnull to Provenance Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "agent.type.coding.system"
-* group.element[6].target.dependsOn[0].property = "value"
-* group.element[6].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""

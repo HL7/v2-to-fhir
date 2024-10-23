@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ ID[boolean] - Sheet1.csv
 Instance: DatatypeIDToBoolean
 InstanceOf: ConceptMap
-Title: "Datatype IDnull to boolean Map"
-* title = "Datatype IDnull to boolean Map"
+Title: "Datatype ID to boolean Map"
+* title = "Datatype ID to boolean Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype ID to the FHIR boolean Data Type."
 * id = "datatype-id-to-boolean"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-id-to-boolean"
@@ -10,7 +10,7 @@ Title: "Datatype IDnull to boolean Map"
 * name = "DatatypeIDToBoolean"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

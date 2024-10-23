@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ OBR[Specimen] - Sheet1.csv
 Instance: SegmentOBRToSpecimen
 InstanceOf: ConceptMap
-Title: "Segment OBRnull to Specimen Map"
-* title = "Segment OBRnull to Specimen Map"
+Title: "Segment OBR to Specimen Map"
+* title = "Segment OBR to Specimen Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment OBR to the FHIR Specimen Resource."
 * id = "segment-obr-to-specimen"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-obr-to-specimen"
@@ -10,7 +10,7 @@ Title: "Segment OBRnull to Specimen Map"
 * name = "SegmentOBRToSpecimen"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,10 +43,6 @@ Title: "Segment OBRnull to Specimen Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "accessionIdentifier"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CX[Identifier]"
-* group.element[0].target.product[0].property = "narrative"
-* group.element[0].target.product[0].value = "If the placer number is also the accession identifier."
 * group.element[1].code = #OBR-7
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -66,8 +62,6 @@ Title: "Segment OBRnull to Specimen Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "collection.collectedDateTime"
-* group.element[1].target.product[0].property = "antlr"
-* group.element[1].target.product[0].value = "IF OBR-8 NOT VALUED"
 * group.element[2].code = #OBR-7
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -87,8 +81,6 @@ Title: "Segment OBRnull to Specimen Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "collection.collectedPeriod.start"
-* group.element[2].target.product[0].property = "antlr"
-* group.element[2].target.product[0].value = "IF OBR-8 VALUED"
 * group.element[3].code = #OBR-8
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -127,8 +119,6 @@ Title: "Segment OBRnull to Specimen Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "collection.quantity"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "CQ[Quantity]"
 * group.element[5].code = #OBR-10
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -148,8 +138,6 @@ Title: "Segment OBRnull to Specimen Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "collection.collector(Practitioner)"
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[6].code = #OBR-13
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -162,8 +150,6 @@ Title: "Segment OBRnull to Specimen Map"
 * group.element[6].target.equivalence = #equivalent
 * group.element[6].target.code = #collection.fastingStatusCodeableConcept
 * group.element[6].target.display = "collection.fastingStatusCodeableConcept"
-* group.element[6].target.product[0].property = "narrative"
-* group.element[6].target.product[0].value = "If information represents fasting status"
 * group.element[7].code = #OBR-13
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -176,8 +162,6 @@ Title: "Segment OBRnull to Specimen Map"
 * group.element[7].target.equivalence = #equivalent
 * group.element[7].target.code = #collection.fastingStatusDuration
 * group.element[7].target.display = "collection.fastingStatusDuration"
-* group.element[7].target.product[0].property = "narrative"
-* group.element[7].target.product[0].value = "If information represents fasting duration"
 * group.element[8].code = #OBR-14
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -209,8 +193,6 @@ Title: "Segment OBRnull to Specimen Map"
 * group.element[9].target.equivalence = #equivalent
 * group.element[9].target.code = #$this
 * group.element[9].target.display = "$this"
-* group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "CM[Specimen-Source]"
 * group.element[10].code = #OBR-39
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"

@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PR1[Procedure] - PR1[Procedure].csv
 Instance: SegmentPR1ToProcedure
 InstanceOf: ConceptMap
-Title: "Segment PR1null to Procedure Map"
-* title = "Segment PR1null to Procedure Map"
+Title: "Segment PR1 to Procedure Map"
+* title = "Segment PR1 to Procedure Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PR1 to the FHIR Procedure Resource."
 * id = "segment-pr1-to-procedure"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pr1-to-procedure"
@@ -10,7 +10,7 @@ Title: "Segment PR1null to Procedure Map"
 * name = "SegmentPR1ToProcedure"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -35,8 +35,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "status"
-* group.element[0].target.product[0].property = "narrative"
-* group.element[0].target.product[0].value = "The value mapping depends on the message context where the PR1 is used and to be determined by the implementer.  If not clear, use \"unknown\"."
 * group.element[1].code = #PR1-3
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -56,8 +54,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "code"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "CNE[CodeableConcept]"
 * group.element[2].code = #PR1-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -78,8 +74,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "code.text"
 * group.element[2].target.comment = "PR1-4 was deprecated in v2.3"
-* group.element[2].target.product[0].property = "antlr"
-* group.element[2].target.product[0].value = "IF PR1-3.9 NOT VALUED"
 * group.element[3].code = #PR1-5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -99,8 +93,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "performedDateTime"
-* group.element[3].target.product[0].property = "antlr"
-* group.element[3].target.product[0].value = "IF PR1-7 NOT VALUED"
 * group.element[4].code = #PR1-5
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -121,8 +113,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "performedDateTime"
 * group.element[4].target.comment = "The Procedure date/time must be at least to the granularity of minutes if a performedPeriod is to be created from PR1-5 and PR1-7"
-* group.element[4].target.product[0].property = "antlr"
-* group.element[4].target.product[0].value = "IF PR1-7 VALUED AND PR1-5.5 NOT VALUED"
 * group.element[5].code = #PR1-5
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -142,8 +132,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "performedPeriod.start"
-* group.element[5].target.product[0].property = "antlr"
-* group.element[5].target.product[0].value = "IF PR1-7 VALUED AND PR1-5.5 VALUED"
 * group.element[6].code = #PR1-6
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -163,8 +151,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "category"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[7].code = #PR1-7
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -185,10 +171,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "performedPeriod.end"
 * group.element[7].target.comment = "The number of minutes in PR1-7 must be added to the time in PR1-5 to get the endpoint of the performedPeriod (note that other elements of the date/time (hours, date, etc) may also need to be changed depending on the length of the procedure)"
-* group.element[7].target.dependsOn[0].property = "value"
-* group.element[7].target.dependsOn[0].value = "Procedure.performedPeriod.start+PR1-7"
-* group.element[7].target.product[0].property = "antlr"
-* group.element[7].target.product[0].value = "IF PR1-5.5 IS VALUED"
 * group.element[8].code = #PR1-8
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -208,8 +190,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "perfomer[1].actor(Practitioner)"
-* group.element[8].target.dependsOn[0].property = "data-type-map"
-* group.element[8].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[9].code = #PR1-8
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -229,8 +209,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "perfomer[1].function.coding.code"
-* group.element[9].target.dependsOn[0].property = "value"
-* group.element[9].target.dependsOn[0].value = "\"88189002\""
 * group.element[10].code = #PR1-8
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -250,8 +228,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "perfomer[1].function.coding.uri"
-* group.element[10].target.dependsOn[0].property = "value"
-* group.element[10].target.dependsOn[0].value = "\"http://snomed.info/sct\""
 * group.element[11].code = #PR1-11
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -271,8 +247,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "perfomer[2].actor(Practitioner)"
-* group.element[11].target.dependsOn[0].property = "data-type-map"
-* group.element[11].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[12].code = #PR1-11
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -292,8 +266,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "perfomer[2].function.coding.code"
-* group.element[12].target.dependsOn[0].property = "value"
-* group.element[12].target.dependsOn[0].value = "\"304292004\""
 * group.element[13].code = #PR1-11
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -313,8 +285,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "perfomer[2].function.coding.uri"
-* group.element[13].target.dependsOn[0].property = "value"
-* group.element[13].target.dependsOn[0].value = "\"http://snomed.info/sct\""
 * group.element[14].code = #PR1-12
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -335,8 +305,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "perfomer[3].actor(Practitioner)"
 * group.element[14].target.comment = "Because PR1-12 is less specific than other fields in PR1 in regards to the role of the practitioner, this mapping is not providing a default code for performer.function. But if an implementation knows the function of the providers being exchanged in PR1-12, than a implementation-specific value for performer.function may be assigned on a case by case basis."
-* group.element[14].target.dependsOn[0].property = "data-type-map"
-* group.element[14].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[15].code = #PR1-15
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -356,8 +324,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = -1
 * group.element[15].target.display = "reasonCode"
-* group.element[15].target.dependsOn[0].property = "data-type-map"
-* group.element[15].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[16].code = #PR1-19
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -377,8 +343,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = -1
 * group.element[16].target.display = "identifier"
-* group.element[16].target.dependsOn[0].property = "data-type-map"
-* group.element[16].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[17].code = #PR1-23
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -399,8 +363,6 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[17].target.extension[0].extension[2].valueInteger = 1
 * group.element[17].target.display = "location(Location)"
 * group.element[17].target.comment = "We will address >=2 cardinality if somebody raises the need."
-* group.element[17].target.dependsOn[0].property = "data-type-map"
-* group.element[17].target.dependsOn[0].value = "PL[Location]"
 * group.element[18].code = #PR1-25
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"
@@ -421,5 +383,3 @@ Title: "Segment PR1null to Procedure Map"
 * group.element[18].target.extension[0].extension[2].valueInteger = -1
 * group.element[18].target.display = "partOf(Procedure.identifier)"
 * group.element[18].target.comment = "Procedure.partOf should contain the reference to another Procedure resource where Procedure.identifier matches the value of PR1-25"
-* group.element[18].target.dependsOn[0].property = "data-type-map"
-* group.element[18].target.dependsOn[0].value = "EI[Identifier-Extension]"

@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ IN3[CareTeam] - Sheet1.csv
 Instance: SegmentIN3ToCareTeam
 InstanceOf: ConceptMap
-Title: "Segment IN3null to CareTeam Map"
-* title = "Segment IN3null to CareTeam Map"
+Title: "Segment IN3 to CareTeam Map"
+* title = "Segment IN3 to CareTeam Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment IN3 to the FHIR CareTeam Resource."
 * id = "segment-in3-to-careteam"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-in3-to-careteam"
@@ -10,7 +10,7 @@ Title: "Segment IN3null to CareTeam Map"
 * name = "SegmentIN3ToCareTeam"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -39,8 +39,6 @@ Title: "Segment IN3null to CareTeam Map"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"string"
 * group.element[0].target.display = "participant.role.coding.value"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"768832004\""
 * group.element[1].code = #IN3-21
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -56,8 +54,6 @@ Title: "Segment IN3null to CareTeam Map"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[1].target.display = "participant.role.coding.system"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"http://snomed.info/sct\""
 * group.element[2].code = #IN3-21
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -70,5 +66,3 @@ Title: "Segment IN3null to CareTeam Map"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #participant.role.text
 * group.element[2].target.display = "participant.role.text"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "\"case manager\""

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ FN[HumanName] - Sheet1.csv
 Instance: DatatypeFNToHumanName
 InstanceOf: ConceptMap
-Title: "Datatype FNnull to HumanName Map"
-* title = "Datatype FNnull to HumanName Map"
+Title: "Datatype FN to HumanName Map"
+* title = "Datatype FN to HumanName Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype FN to the FHIR HumanName Data Type."
 * id = "datatype-fn-to-humanname"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-fn-to-humanname"
@@ -10,7 +10,7 @@ Title: "Datatype FNnull to HumanName Map"
 * name = "DatatypeFNToHumanName"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -62,8 +62,6 @@ Title: "Datatype FNnull to HumanName Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "family.extension[1].url"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/humanname-own-prefix\""
 * group.element[2].code = #FN.2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -102,8 +100,6 @@ Title: "Datatype FNnull to HumanName Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "family.extension[2].url"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/humanname-own-name\""
 * group.element[4].code = #FN.3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -142,8 +138,6 @@ Title: "Datatype FNnull to HumanName Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "family.extension[3].url"
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix\""
 * group.element[6].code = #FN.4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -182,8 +176,6 @@ Title: "Datatype FNnull to HumanName Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "family.extension[3].url"
-* group.element[7].target.dependsOn[0].property = "value"
-* group.element[7].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/humanname-partner-name\""
 * group.element[8].code = #FN.5
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"

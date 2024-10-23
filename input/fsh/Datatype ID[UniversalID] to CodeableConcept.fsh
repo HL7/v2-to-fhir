@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ ID[CodeableConcept-UniversalID] - Sheet1.csv
 Instance: DatatypeIDUniversalIDToCodeableConcept
 InstanceOf: ConceptMap
-Title: "Datatype IDnull to CodeableConcept Map"
-* title = "Datatype IDnull to CodeableConcept Map"
+Title: "Datatype ID to CodeableConcept Map"
+* title = "Datatype ID to CodeableConcept Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype ID to the FHIR CodeableConcept Data Type."
 * id = "datatype-id-universalid-to-codeableconcept"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-id-universalid-to-codeableconcept"
@@ -10,7 +10,7 @@ Title: "Datatype IDnull to CodeableConcept Map"
 * name = "DatatypeIDUniversalIDToCodeableConcept"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -62,5 +62,3 @@ Title: "Datatype IDnull to CodeableConcept Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "coding.system"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0301\""

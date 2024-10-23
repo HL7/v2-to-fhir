@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[code] - Sheet1.csv
 Instance: DatatypeCWEToCode
 InstanceOf: ConceptMap
-Title: "Datatype CWEnull to code Map"
-* title = "Datatype CWEnull to code Map"
+Title: "Datatype CWE to code Map"
+* title = "Datatype CWE to code Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR code Data Type."
 * id = "datatype-cwe-to-code"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-code"
@@ -10,7 +10,7 @@ Title: "Datatype CWEnull to code Map"
 * name = "DatatypeCWEToCode"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -62,5 +62,3 @@ Title: "Datatype CWEnull to code Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "$value"
-* group.element[1].target.product[0].property = "antlr"
-* group.element[1].target.product[0].value = "IF CWE.1 NOT VALUED"

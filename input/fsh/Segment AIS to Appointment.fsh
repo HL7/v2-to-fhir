@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ AIS[Appointment] - Sheet1.csv
 Instance: SegmentAISToAppointment
 InstanceOf: ConceptMap
-Title: "Segment AISnull to Appointment Map"
-* title = "Segment AISnull to Appointment Map"
+Title: "Segment AIS to Appointment Map"
+* title = "Segment AIS to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment AIS to the FHIR Appointment Resource."
 * id = "segment-ais-to-appointment"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-ais-to-appointment"
@@ -10,7 +10,7 @@ Title: "Segment AISnull to Appointment Map"
 * name = "SegmentAISToAppointment"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment AISnull to Appointment Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "serviceType"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[1].code = #AIS-4
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -69,10 +67,6 @@ Title: "Segment AISnull to Appointment Map"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #participant.period.start
 * group.element[2].target.display = "participant.period.start"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "/.start + AIS-5 according to AIS-6 units/"
-* group.element[2].target.product[0].property = "antlr"
-* group.element[2].target.product[0].value = "IF AIS-4 NOT VALUED"
 * group.element[3].code = #AIS-7
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -85,10 +79,6 @@ Title: "Segment AISnull to Appointment Map"
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #participant.period.end
 * group.element[3].target.display = "participant.period.end"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "Appointment.participant.period.start + AIS-7"
-* group.element[3].target.product[0].property = "antlr"
-* group.element[3].target.product[0].value = "IF AIS-4 IS VALUED"
 * group.element[4].code = #AIS-10
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -108,7 +98,3 @@ Title: "Segment AISnull to Appointment Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "status"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[4].target.dependsOn[1].property = "vocabulary-map"
-* group.element[4].target.dependsOn[1].value = "FillerStatus[Appointment]"

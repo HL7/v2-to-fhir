@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PRT[Patient-GeneralPractitioner-Practitioner] - Sheet1.csv
 Instance: SegmentPRTGeneralPractitionerPractitionerToPatient
 InstanceOf: ConceptMap
-Title: "Segment PRTnull to Patient Map"
-* title = "Segment PRTnull to Patient Map"
+Title: "Segment PRT to Patient Map"
+* title = "Segment PRT to Patient Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PRT to the FHIR Patient Resource."
 * id = "segment-prt-generalpractitioner-practitioner-to-patient"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-prt-generalpractitioner-practitioner-to-patient"
@@ -10,7 +10,7 @@ Title: "Segment PRTnull to Patient Map"
 * name = "SegmentPRTGeneralPractitionerPractitionerToPatient"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,5 +43,3 @@ Title: "Segment PRTnull to Patient Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "generalPractitioner[Practitioner]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "XCN[Practitioner]"

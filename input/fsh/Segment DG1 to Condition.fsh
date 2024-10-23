@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ DG1[Condition] - Sheet1.csv
 Instance: SegmentDG1ToCondition
 InstanceOf: ConceptMap
-Title: "Segment DG1null to Condition Map"
-* title = "Segment DG1null to Condition Map"
+Title: "Segment DG1 to Condition Map"
+* title = "Segment DG1 to Condition Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment DG1 to the FHIR Condition Resource."
 * id = "segment-dg1-to-condition"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-dg1-to-condition"
@@ -10,7 +10,7 @@ Title: "Segment DG1null to Condition Map"
 * name = "SegmentDG1ToCondition"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment DG1null to Condition Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "code[1]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[1].code = #DG1-4
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -102,8 +100,6 @@ Title: "Segment DG1null to Condition Map"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "asserter(Practitioner)"
 * group.element[3].target.comment = "Condition.recorder is also an option. Neither of these fields can repeat like DG1-16 can."
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[4].code = #DG1-19
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -123,8 +119,6 @@ Title: "Segment DG1null to Condition Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "extension[1].url"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"http://www.hl7.org/fhir/extension-condition-asserteddate\""
 * group.element[5].code = #DG1-19
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -184,8 +178,6 @@ Title: "Segment DG1null to Condition Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = -1
 * group.element[7].target.display = "identifier"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[8].code = #DG1-21
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -206,8 +198,6 @@ Title: "Segment DG1null to Condition Map"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "verificationStatus.coding.code"
 * group.element[8].target.comment = "Other values (A and U) don't map to anything"
-* group.element[8].target.dependsOn[0].property = "value"
-* group.element[8].target.dependsOn[0].value = "\"entered-in-error\""
 * group.element[9].code = #DG1-21
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -227,8 +217,6 @@ Title: "Segment DG1null to Condition Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "verificationStatus.coding.system"
-* group.element[9].target.dependsOn[0].property = "value"
-* group.element[9].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/condition-ver-status\""
 * group.element[10].code = #DG1-22
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -248,8 +236,6 @@ Title: "Segment DG1null to Condition Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "extension[2].url"
-* group.element[10].target.dependsOn[0].property = "value"
-* group.element[10].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/condition-dueTo\""
 * group.element[11].code = #DG1-22
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -270,5 +256,3 @@ Title: "Segment DG1null to Condition Map"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "extension[2].valueReference(Condition)"
 * group.element[11].target.comment = "Extensions for occurredFollowing and related also exist"
-* group.element[11].target.dependsOn[0].property = "data-type-map"
-* group.element[11].target.dependsOn[0].value = "EI[Condition]"

@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv
 Instance: SegmentRXRToMedicationRequest
 InstanceOf: ConceptMap
-Title: "Segment RXRnull to MedicationRequest Map"
-* title = "Segment RXRnull to MedicationRequest Map"
+Title: "Segment RXR to MedicationRequest Map"
+* title = "Segment RXR to MedicationRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment RXR to the FHIR MedicationRequest Resource."
 * id = "segment-rxr-to-medicationrequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-rxr-to-medicationrequest"
@@ -10,7 +10,7 @@ Title: "Segment RXRnull to MedicationRequest Map"
 * name = "SegmentRXRToMedicationRequest"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment RXRnull to MedicationRequest Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "dosageInstruction.route"
-* group.element[0].target.dependsOn[0].property = "vocabulary-map"
-* group.element[0].target.dependsOn[0].value = "RouteOfAdministration"
 * group.element[1].code = #RXR-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,8 +62,6 @@ Title: "Segment RXRnull to MedicationRequest Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "dosageInstruction.site"
-* group.element[1].target.dependsOn[0].property = "vocabulary-map"
-* group.element[1].target.dependsOn[0].value = "AdministrationSite"
 * group.element[2].code = #RXR-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -85,10 +81,6 @@ Title: "Segment RXRnull to MedicationRequest Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "dosageInstruciton.method"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[2].target.dependsOn[1].property = "vocabulary-map"
-* group.element[2].target.dependsOn[1].value = "AdministrationMethod"
 * group.element[3].code = #RXR-5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -108,7 +100,3 @@ Title: "Segment RXRnull to MedicationRequest Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = -1
 * group.element[3].target.display = "dosageInstruction.additionalInstruction"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[3].target.dependsOn[1].property = "vocabulary-map"
-* group.element[3].target.dependsOn[1].value = "RoutingInstruction"

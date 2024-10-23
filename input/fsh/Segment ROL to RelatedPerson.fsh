@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ ROL[RelatedPerson] - Sheet1.csv
 Instance: SegmentROLToRelatedPerson
 InstanceOf: ConceptMap
-Title: "Segment ROLnull to RelatedPerson Map"
-* title = "Segment ROLnull to RelatedPerson Map"
+Title: "Segment ROL to RelatedPerson Map"
+* title = "Segment ROL to RelatedPerson Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment ROL to the FHIR RelatedPerson Resource."
 * id = "segment-rol-to-relatedperson"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-rol-to-relatedperson"
@@ -10,7 +10,7 @@ Title: "Segment ROLnull to RelatedPerson Map"
 * name = "SegmentROLToRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment ROLnull to RelatedPerson Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "identifier"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[1].code = #ROL-3
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,10 +62,6 @@ Title: "Segment ROLnull to RelatedPerson Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "relationship"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[1].target.dependsOn[1].property = "vocabulary-map"
-* group.element[1].target.dependsOn[1].value = "Role"
 * group.element[2].code = #ROL-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -81,8 +75,6 @@ Title: "Segment ROLnull to RelatedPerson Map"
 * group.element[2].target.code = #$this
 * group.element[2].target.display = "$this"
 * group.element[2].target.comment = "A given ROL segment should create a single RelatedPerson resource, with the name coming from ROL-4 via the Data Type Map provided here and other attributes (eg. address, phone number) from other ROL fields. Therefor, when performing $this, the data type map updates the RelatedPerson resource created from this ROL[RelatedPerson] map."
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "XCN[RelatedPerson]"
 * group.element[3].code = #ROL-5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -140,8 +132,6 @@ Title: "Segment ROLnull to RelatedPerson Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = -1
 * group.element[5].target.display = "address"
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "XAD[Address]"
 * group.element[6].code = #ROL-12
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -161,5 +151,3 @@ Title: "Segment ROLnull to RelatedPerson Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = -1
 * group.element[6].target.display = "telecom"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "XTN[ContactPoint]"

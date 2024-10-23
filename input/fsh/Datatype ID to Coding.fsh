@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ ID[Coding] - Sheet1.csv
 Instance: DatatypeIDToCoding
 InstanceOf: ConceptMap
-Title: "Datatype IDnull to Coding Map"
-* title = "Datatype IDnull to Coding Map"
+Title: "Datatype ID to Coding Map"
+* title = "Datatype ID to Coding Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype ID to the FHIR Coding Data Type."
 * id = "datatype-id-to-coding"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-id-to-coding"
@@ -10,7 +10,7 @@ Title: "Datatype IDnull to Coding Map"
 * name = "DatatypeIDToCoding"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

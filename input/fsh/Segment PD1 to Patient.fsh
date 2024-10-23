@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PD1[Patient] - PD1.csv
 Instance: SegmentPD1ToPatient
 InstanceOf: ConceptMap
-Title: "Segment PD1null to Patient Map"
-* title = "Segment PD1null to Patient Map"
+Title: "Segment PD1 to Patient Map"
+* title = "Segment PD1 to Patient Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PD1 to the FHIR Patient Resource."
 * id = "segment-pd1-to-patient"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pd1-to-patient"
@@ -10,7 +10,7 @@ Title: "Segment PD1null to Patient Map"
 * name = "SegmentPD1ToPatient"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment PD1null to Patient Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "generalPractitioner[1](Organization)"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "XON[Organization]"
 * group.element[1].code = #PD1-4
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,8 +62,6 @@ Title: "Segment PD1null to Patient Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "generalPractitioner[2](Practitioner)"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[2].code = #PD1-6
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -85,8 +81,6 @@ Title: "Segment PD1null to Patient Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "extension[1].url"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-disability\""
 * group.element[3].code = #PD1-6
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -107,8 +101,6 @@ Title: "Segment PD1null to Patient Map"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "extension[1].valueCodeableConcept"
 * group.element[3].target.comment = "The FHIR extension does not include a value set"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[4].code = #PD1-14
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -121,8 +113,6 @@ Title: "Segment PD1null to Patient Map"
 * group.element[4].target.equivalence = #equivalent
 * group.element[4].target.code = #extension[2].url
 * group.element[4].target.display = "extension[2].url"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-congregation\""
 * group.element[5].code = #PD1-14
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -142,5 +132,3 @@ Title: "Segment PD1null to Patient Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "extension[2].valueString"
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "XON[string]"

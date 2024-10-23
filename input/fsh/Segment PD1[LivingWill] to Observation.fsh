@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv
 Instance: SegmentPD1LivingWillToObservation
 InstanceOf: ConceptMap
-Title: "Segment PD1null to Observation Map"
-* title = "Segment PD1null to Observation Map"
+Title: "Segment PD1 to Observation Map"
+* title = "Segment PD1 to Observation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PD1 to the FHIR Observation Resource."
 * id = "segment-pd1-livingwill-to-observation"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pd1-livingwill-to-observation"
@@ -10,7 +10,7 @@ Title: "Segment PD1null to Observation Map"
 * name = "SegmentPD1LivingWillToObservation"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,5 +43,3 @@ Title: "Segment PD1null to Observation Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "valueCodeableConcept"
-* group.element[0].target.dependsOn[0].property = "vocabulary-map"
-* group.element[0].target.dependsOn[0].value = "LivingWill"

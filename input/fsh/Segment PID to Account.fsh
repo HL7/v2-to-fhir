@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PID[Account] - Sheet1.csv
 Instance: SegmentPIDToAccount
 InstanceOf: ConceptMap
-Title: "Segment PIDnull to Account Map"
-* title = "Segment PIDnull to Account Map"
+Title: "Segment PID to Account Map"
+* title = "Segment PID to Account Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Account Resource."
 * id = "segment-pid-to-account"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pid-to-account"
@@ -10,7 +10,7 @@ Title: "Segment PIDnull to Account Map"
 * name = "SegmentPIDToAccount"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -28,8 +28,6 @@ Title: "Segment PIDnull to Account Map"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #status
 * group.element[0].target.display = "status"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"active\""
 * group.element[1].code = #PID-18
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -49,5 +47,3 @@ Title: "Segment PIDnull to Account Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "identifier"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "CX[Identifier]"

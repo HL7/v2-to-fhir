@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ TXA[Provenance] - Sheet1.csv
 Instance: SegmentTXAToProvenance
 InstanceOf: ConceptMap
-Title: "Segment TXAnull to Provenance Map"
-* title = "Segment TXAnull to Provenance Map"
+Title: "Segment TXA to Provenance Map"
+* title = "Segment TXA to Provenance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment TXA to the FHIR Provenance Resource."
 * id = "segment-txa-to-provenance"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-txa-to-provenance"
@@ -10,7 +10,7 @@ Title: "Segment TXAnull to Provenance Map"
 * name = "SegmentTXAToProvenance"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment TXAnull to Provenance Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "agent[1].role[1].coding[1].code"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"IRCP\""
 * group.element[1].code = #TXA
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,8 +62,6 @@ Title: "Segment TXAnull to Provenance Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "agent[1].role[1].coding[1].system"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"https://hl7.org/fhir/R4/v3/ParticipationType/cs.html\""
 * group.element[2].code = #TXA
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -85,5 +81,3 @@ Title: "Segment TXAnull to Provenance Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "agent[1].who(Practicitioner)"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "XCN[Practitioner]"

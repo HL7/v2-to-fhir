@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv
 Instance: SegmentAL1ToAllergyIntolerance
 InstanceOf: ConceptMap
-Title: "Segment AL1null to AllergyIntolerance Map"
-* title = "Segment AL1null to AllergyIntolerance Map"
+Title: "Segment AL1 to AllergyIntolerance Map"
+* title = "Segment AL1 to AllergyIntolerance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment AL1 to the FHIR AllergyIntolerance Resource."
 * id = "segment-al1-to-allergyintolerance"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-al1-to-allergyintolerance"
@@ -10,7 +10,7 @@ Title: "Segment AL1null to AllergyIntolerance Map"
 * name = "SegmentAL1ToAllergyIntolerance"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -36,8 +36,6 @@ Title: "Segment AL1null to AllergyIntolerance Map"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "clinicalStatus.coding.code"
 * group.element[0].target.comment = "While .clinicalStatus is not required, constraint ait-1 (AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error.) does necessitate populating this element in the map as it's not possible to infer a verificationStatus of \"entered-in-error\" based on the data in AL1."
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"active\""
 * group.element[1].code = #AL1
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #clinicalStatus.coding.system
@@ -49,8 +47,6 @@ Title: "Segment AL1null to AllergyIntolerance Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "clinicalStatus.coding.system"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical\""
 * group.element[2].code = #AL1-2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -80,10 +76,6 @@ Animal Allergy
 
 HL70127 is a user defined table\
 """
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "CWE[code]"
-* group.element[2].target.dependsOn[1].property = "vocabulary-map"
-* group.element[2].target.dependsOn[1].value = "AllergenType[AllergyIntoleranceCategory]"
 * group.element[3].code = #AL1-2
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -103,8 +95,6 @@ HL70127 is a user defined table\
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "category.extension[1].url"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[4].code = #AL1-2
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -124,10 +114,6 @@ HL70127 is a user defined table\
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "category.extension[1].valueCodeableConcept"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[4].target.dependsOn[1].property = "vocabulary-map"
-* group.element[4].target.dependsOn[1].value = "AllergenType[AllergyIntoleranceOriginalCategory]"
 * group.element[5].code = #AL1-2
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -147,10 +133,6 @@ HL70127 is a user defined table\
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "type"
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "CWE[code]"
-* group.element[5].target.dependsOn[1].property = "vocabulary-map"
-* group.element[5].target.dependsOn[1].value = "AllergyType"
 * group.element[6].code = #AL1-3
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -170,8 +152,6 @@ HL70127 is a user defined table\
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "code"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[7].code = #AL1-4
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -192,12 +172,6 @@ HL70127 is a user defined table\
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "criticality"
 * group.element[7].target.comment = "Note that AllergyIntolerance.reaction.severity is available in FHIR but from a base standard perspective that is actually not the most appropriate and would require that AL1-6 is valued as well.  However, a local implementation may have used vocabulary that better fits AllergyIntolerance.reaction.severity and should then consider that instead as a local variation.  Note that the .reaction though is at a particular time, while .criticality is an overall assement that matches HL7 v2 generally better."
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "CWE[code]"
-* group.element[7].target.dependsOn[1].property = "vocabulary-map"
-* group.element[7].target.dependsOn[1].value = "AllergySeverity[AllergyIntolerance.criticality]"
-* group.element[7].target.product[0].property = "narrative"
-* group.element[7].target.product[0].value = "If severity was used equivalent to criticality"
 * group.element[8].code = #AL1-4
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -217,10 +191,6 @@ HL70127 is a user defined table\
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "criticality.extension[1].url"
-* group.element[8].target.dependsOn[0].property = "value"
-* group.element[8].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
-* group.element[8].target.product[0].property = "narrative"
-* group.element[8].target.product[0].value = "If severity was used equivalent to criticality"
 * group.element[9].code = #AL1-4
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -240,12 +210,6 @@ HL70127 is a user defined table\
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "criticality.extension[1].valueCodeableConcept"
-* group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[9].target.dependsOn[1].property = "vocabulary-map"
-* group.element[9].target.dependsOn[1].value = "AllergyTyp[AllergyIntolerance.criticality-original]"
-* group.element[9].target.product[0].property = "narrative"
-* group.element[9].target.product[0].value = "If severity was used equivalent to criticality"
 * group.element[10].code = #AL1-5
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -268,8 +232,6 @@ HL70127 is a user defined table\
 * group.element[10].target.comment = """
 AllergyIntolerance.reaction can repeat, presumably to capture both multiple manifestations of the reaction (rash and nausea) as well as reactions to independent exposures (last week and last month) - we may want to confirm this understanding.\
 """
-* group.element[10].target.dependsOn[0].property = "data-type-map"
-* group.element[10].target.dependsOn[0].value = "ST[CodeableConcept]"
 * group.element[11].code = #AL1-6
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"

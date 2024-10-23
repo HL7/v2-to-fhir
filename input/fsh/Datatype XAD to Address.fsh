@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XAD[Address] - Sheet1.csv
 Instance: DatatypeXADToAddress
 InstanceOf: ConceptMap
-Title: "Datatype XADnull to Address Map"
-* title = "Datatype XADnull to Address Map"
+Title: "Datatype XAD to Address Map"
+* title = "Datatype XAD to Address Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XAD to the FHIR Address Data Type."
 * id = "datatype-xad-to-address"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xad-to-address"
@@ -10,7 +10,7 @@ Title: "Datatype XADnull to Address Map"
 * name = "DatatypeXADToAddress"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Datatype XADnull to Address Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "line[1-3]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "SAD[Address]"
 * group.element[1].code = #XAD.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -160,10 +158,6 @@ Title: "Datatype XADnull to Address Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "type"
-* group.element[6].target.dependsOn[0].property = "vocabulary-map"
-* group.element[6].target.dependsOn[0].value = "AddressType"
-* group.element[6].target.product[0].property = "antlr"
-* group.element[6].target.product[0].value = "IF XAD.7 IN (\"M\", \"SH\")"
 * group.element[7].code = #XAD.7
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -183,10 +177,6 @@ Title: "Datatype XADnull to Address Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "use"
-* group.element[7].target.dependsOn[0].property = "vocabulary-map"
-* group.element[7].target.dependsOn[0].value = "AddressUse"
-* group.element[7].target.product[0].property = "antlr"
-* group.element[7].target.product[0].value = "IF XAD.7 IN (\"BA\", \"BI\", \"C\", \"B\", \"H\", \"O\")"
 * group.element[8].code = #XAD.7
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -206,10 +196,6 @@ Title: "Datatype XADnull to Address Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "extension[1].url"
-* group.element[8].target.dependsOn[0].property = "value"
-* group.element[8].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-AD-use\""
-* group.element[8].target.product[0].property = "antlr"
-* group.element[8].target.product[0].value = "IF XAD.7 EQUALS \"HV\""
 * group.element[9].code = #XAD.7
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -229,8 +215,6 @@ Title: "Datatype XADnull to Address Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "extension[1].valueCode"
-* group.element[9].target.product[0].property = "antlr"
-* group.element[9].target.product[0].value = "IF XAD.7 EQUALS \"HV\""
 * group.element[10].code = #XAD.7
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -273,8 +257,6 @@ Title: "Datatype XADnull to Address Map"
 * group.element[12].target.extension[0].extension[0].url = "type"
 * group.element[12].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[12].target.display = "extension[2].valueCodeableConcept.coding.system"
-* group.element[12].target.dependsOn[0].property = "value"
-* group.element[12].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0190\""
 * group.element[13].code = #XAD.9
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -294,8 +276,6 @@ Title: "Datatype XADnull to Address Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "district"
-* group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "CWE[string]"
 * group.element[14].code = #XAD.10
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -315,8 +295,6 @@ Title: "Datatype XADnull to Address Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "extension[3].url"
-* group.element[14].target.dependsOn[0].property = "value"
-* group.element[14].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract\""
 * group.element[15].code = #XAD.10
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -336,8 +314,6 @@ Title: "Datatype XADnull to Address Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "extension[3].valueCode"
-* group.element[15].target.dependsOn[0].property = "data-type-map"
-* group.element[15].target.dependsOn[0].value = "CWE[string]"
 * group.element[16].code = #XAD.12
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -357,8 +333,6 @@ Title: "Datatype XADnull to Address Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "period"
-* group.element[16].target.dependsOn[0].property = "data-type-map"
-* group.element[16].target.dependsOn[0].value = "DR[Period]"
 * group.element[17].code = #XAD.13
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"

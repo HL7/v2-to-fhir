@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CM[Specimen-Source] - Sheet1.csv
 Instance: DatatypeCMSourceToSpecimen
 InstanceOf: ConceptMap
-Title: "Datatype CMnull to Specimen Map"
-* title = "Datatype CMnull to Specimen Map"
+Title: "Datatype CM to Specimen Map"
+* title = "Datatype CM to Specimen Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CM to the FHIR Specimen Resource."
 * id = "datatype-cm-source-to-specimen"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cm-source-to-specimen"
@@ -10,7 +10,7 @@ Title: "Datatype CMnull to Specimen Map"
 * name = "DatatypeCMSourceToSpecimen"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Datatype CMnull to Specimen Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "type"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[1].code = #CM.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -102,8 +100,6 @@ Title: "Datatype CMnull to Specimen Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "collection.site"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[4].code = #CM.6
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -123,7 +119,3 @@ Title: "Datatype CMnull to Specimen Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "condition"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[4].target.dependsOn[1].property = "vocabulary-map"
-* group.element[4].target.dependsOn[1].value = "CollectionMethodModifier"

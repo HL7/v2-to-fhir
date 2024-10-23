@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv
 Instance: SegmentPRTToRelatedPerson
 InstanceOf: ConceptMap
-Title: "Segment PRTnull to RelatedPerson Map"
-* title = "Segment PRTnull to RelatedPerson Map"
+Title: "Segment PRT to RelatedPerson Map"
+* title = "Segment PRT to RelatedPerson Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PRT to the FHIR RelatedPerson Resource."
 * id = "segment-prt-to-relatedperson"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-prt-to-relatedperson"
@@ -10,7 +10,7 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * name = "SegmentPRTToRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,10 +43,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "relationship"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[0].target.dependsOn[1].property = "vocabulary-map"
-* group.element[0].target.dependsOn[1].value = "Participation"
 * group.element[1].code = #PRT-5
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -59,8 +55,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #$this
 * group.element[1].target.display = "$this"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "XCN[RelatedPerson]"
 * group.element[2].code = #PRT-11
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -118,8 +112,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = -1
 * group.element[4].target.display = "address"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "XAD[Address]"
 * group.element[5].code = #PRT-15
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -139,10 +131,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = -1
 * group.element[5].target.display = "telecom"
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[5].target.product[0].property = "antlr"
-* group.element[5].target.product[0].value = "IF PRT-23 NOT VALUED"
 * group.element[6].code = #PRT-15
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -162,10 +150,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = -1
 * group.element[6].target.display = "telecom[1]"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[6].target.product[0].property = "antlr"
-* group.element[6].target.product[0].value = "IF PRT-23 IS \"B\""
 * group.element[7].code = #PRT-15
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -185,10 +169,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = -1
 * group.element[7].target.display = "telecom[2]"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[7].target.product[0].property = "antlr"
-* group.element[7].target.product[0].value = "IF PRT-23 IS \"C\""
 * group.element[8].code = #PRT-15
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -208,10 +188,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = -1
 * group.element[8].target.display = "telecom[3]"
-* group.element[8].target.dependsOn[0].property = "data-type-map"
-* group.element[8].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[8].target.product[0].property = "antlr"
-* group.element[8].target.product[0].value = "IF PRT-23 IS \"E\""
 * group.element[9].code = #PRT-15
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -231,10 +207,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = -1
 * group.element[9].target.display = "telecom[4]"
-* group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[9].target.product[0].property = "antlr"
-* group.element[9].target.product[0].value = "IF PRT-23 IS \"F\""
 * group.element[10].code = #PRT-15
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -254,10 +226,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = -1
 * group.element[10].target.display = "telecom[5]"
-* group.element[10].target.dependsOn[0].property = "data-type-map"
-* group.element[10].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[10].target.product[0].property = "antlr"
-* group.element[10].target.product[0].value = "IF PRT-23 IS \"H\""
 * group.element[11].code = #PRT-15
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -277,10 +245,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = -1
 * group.element[11].target.display = "telecom[6]"
-* group.element[11].target.dependsOn[0].property = "data-type-map"
-* group.element[11].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[11].target.product[0].property = "antlr"
-* group.element[11].target.product[0].value = "IF PRT-23 IS \"O\""
 * group.element[12].code = #PRT-23
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -300,10 +264,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "telecom[1].extension[1].url"
-* group.element[12].target.dependsOn[0].property = "value"
-* group.element[12].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[12].target.product[0].property = "antlr"
-* group.element[12].target.product[0].value = "IF PRT-23.1 IS \"B\""
 * group.element[13].code = #PRT-23
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -323,10 +283,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "telecom[1].extension[1].valueBoolean"
-* group.element[13].target.dependsOn[0].property = "value"
-* group.element[13].target.dependsOn[0].value = "\"true\""
-* group.element[13].target.product[0].property = "antlr"
-* group.element[13].target.product[0].value = "IF PRT-23.1 IS \"B\""
 * group.element[14].code = #PRT-23
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -346,10 +302,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "telecom[2].extension[1].url"
-* group.element[14].target.dependsOn[0].property = "value"
-* group.element[14].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[14].target.product[0].property = "antlr"
-* group.element[14].target.product[0].value = "IF PRT-23.1 IS \"C\""
 * group.element[15].code = #PRT-23
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -369,10 +321,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "telecom[2].extension[1].valueBoolean"
-* group.element[15].target.dependsOn[0].property = "value"
-* group.element[15].target.dependsOn[0].value = "\"true\""
-* group.element[15].target.product[0].property = "antlr"
-* group.element[15].target.product[0].value = "IF PRT-23.1 IS \"C\""
 * group.element[16].code = #PRT-23
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -392,10 +340,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "telecom[3].extension[1].url"
-* group.element[16].target.dependsOn[0].property = "value"
-* group.element[16].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[16].target.product[0].property = "antlr"
-* group.element[16].target.product[0].value = "IF PRT-23.1 IS \"E\""
 * group.element[17].code = #PRT-23
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -415,10 +359,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[17].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[17].target.extension[0].extension[2].valueInteger = 1
 * group.element[17].target.display = "telecom[3].extension[1].valueBoolean"
-* group.element[17].target.dependsOn[0].property = "value"
-* group.element[17].target.dependsOn[0].value = "\"true\""
-* group.element[17].target.product[0].property = "antlr"
-* group.element[17].target.product[0].value = "IF PRT-23.1 IS \"E\""
 * group.element[18].code = #PRT-23
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"
@@ -438,10 +378,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = 1
 * group.element[18].target.display = "telecom[4].extension[1].url"
-* group.element[18].target.dependsOn[0].property = "value"
-* group.element[18].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[18].target.product[0].property = "antlr"
-* group.element[18].target.product[0].value = "IF PRT-23 IS \"F\""
 * group.element[19].code = #PRT-23
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "type"
@@ -461,10 +397,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[19].target.extension[0].extension[2].valueInteger = 1
 * group.element[19].target.display = "telecom[4].extension[1].valueBoolean"
-* group.element[19].target.dependsOn[0].property = "value"
-* group.element[19].target.dependsOn[0].value = "\"true\""
-* group.element[19].target.product[0].property = "antlr"
-* group.element[19].target.product[0].value = "IF PRT-23 IS \"F\""
 * group.element[20].code = #PRT-23
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "type"
@@ -484,10 +416,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
 * group.element[20].target.display = "telecom[5].extension[1].url"
-* group.element[20].target.dependsOn[0].property = "value"
-* group.element[20].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[20].target.product[0].property = "antlr"
-* group.element[20].target.product[0].value = "IF PRT-23 IS \"H\""
 * group.element[21].code = #PRT-23
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "type"
@@ -507,10 +435,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = 1
 * group.element[21].target.display = "telecom[5].extension[1].valueBoolean"
-* group.element[21].target.dependsOn[0].property = "value"
-* group.element[21].target.dependsOn[0].value = "\"true\""
-* group.element[21].target.product[0].property = "antlr"
-* group.element[21].target.product[0].value = "IF PRT-23 IS \"H\""
 * group.element[22].code = #PRT-23
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "type"
@@ -530,10 +454,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[22].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[22].target.extension[0].extension[2].valueInteger = 1
 * group.element[22].target.display = "telecom[6].extension[1].url"
-* group.element[22].target.dependsOn[0].property = "value"
-* group.element[22].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[22].target.product[0].property = "antlr"
-* group.element[22].target.product[0].value = "IF PRT-23 IS \"O\""
 * group.element[23].code = #PRT-23
 * group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].extension[0].extension[0].url = "type"
@@ -553,10 +473,6 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[23].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[23].target.extension[0].extension[2].valueInteger = 1
 * group.element[23].target.display = "telecom[6].extension[1].valueBoolean"
-* group.element[23].target.dependsOn[0].property = "value"
-* group.element[23].target.dependsOn[0].value = "\"true\""
-* group.element[23].target.product[0].property = "antlr"
-* group.element[23].target.product[0].value = "IF PRT-23 IS \"O\""
 * group.element[24].code = #PRT-24
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[24].extension[0].extension[0].url = "type"
@@ -572,5 +488,3 @@ Title: "Segment PRTnull to RelatedPerson Map"
 * group.element[24].target.extension[0].extension[0].url = "type"
 * group.element[24].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[24].target.display = "identifier[2]"
-* group.element[24].target.dependsOn[0].property = "data-type-map"
-* group.element[24].target.dependsOn[0].value = "PLN[Identifier]"

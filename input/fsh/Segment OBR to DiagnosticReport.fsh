@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv
 Instance: SegmentOBRToDiagnosticReport
 InstanceOf: ConceptMap
-Title: "Segment OBRnull to DiagnosticReport Map"
-* title = "Segment OBRnull to DiagnosticReport Map"
+Title: "Segment OBR to DiagnosticReport Map"
+* title = "Segment OBR to DiagnosticReport Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment OBR to the FHIR DiagnosticReport Resource."
 * id = "segment-obr-to-diagnosticreport"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-obr-to-diagnosticreport"
@@ -10,7 +10,7 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * name = "SegmentOBRToDiagnosticReport"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,10 +43,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "identifier[1]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "EI[Identifier-Extension]"
-* group.element[0].target.product[0].property = "narrative"
-* group.element[0].target.product[0].value = "If ORC-2 of the same ORC/OBR pair is not valued OR there is ORC segment in the current ORDER_OBSERVATION segment group"
 * group.element[1].code = #OBR-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -66,10 +62,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "identifier[1].type.coding.code"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"PLAC\""
-* group.element[1].target.product[0].property = "narrative"
-* group.element[1].target.product[0].value = "If ORC-2 of the same ORC/OBR pair is not valued OR there is ORC segment in the current ORDER_OBSERVATION segment group"
 * group.element[2].code = #OBR-2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -89,10 +81,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "identifier[1].type.coding.system"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
-* group.element[2].target.product[0].property = "narrative"
-* group.element[2].target.product[0].value = "If ORC-2 of the same ORC/OBR pair is not valued OR there is ORC segment in the current ORDER_OBSERVATION segment group"
 * group.element[3].code = #OBR-3
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -112,10 +100,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "identifier[2]"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "EI[Identifier-Extension]"
-* group.element[3].target.product[0].property = "narrative"
-* group.element[3].target.product[0].value = "If ORC-3 of the same ORC/OBR pair is not valued OR there is ORC segment in the current ORDER_OBSERVATION segment group"
 * group.element[4].code = #OBR-3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -135,10 +119,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "identifier[2].type.coding.code"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"FILL\""
-* group.element[4].target.product[0].property = "narrative"
-* group.element[4].target.product[0].value = "If ORC-3 of the same ORC/OBR pair is not valued OR there is ORC segment in the current ORDER_OBSERVATION segment group"
 * group.element[5].code = #OBR-3
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -158,10 +138,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "identifier[2].type.coding.system"
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
-* group.element[5].target.product[0].property = "narrative"
-* group.element[5].target.product[0].value = "If ORC-3 of the same ORC/OBR pair is not valued OR there is ORC segment in the current ORDER_OBSERVATION segment group"
 * group.element[6].code = #OBR-4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -181,8 +157,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "code"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[7].code = #OBR-7
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -203,8 +177,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "effectiveDateTime"
 * group.element[7].target.comment = "This should not be populated in a message corresponding to a ServiceRequest (eg ORM)"
-* group.element[7].target.product[0].property = "antlr"
-* group.element[7].target.product[0].value = "IF OBR-8 NOT VALUED"
 * group.element[8].code = #OBR-7
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -224,8 +196,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "effectivePeriod.start"
-* group.element[8].target.product[0].property = "antlr"
-* group.element[8].target.product[0].value = "IF OBR-8 VALUED"
 * group.element[9].code = #OBR-8
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -284,10 +254,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = -1
 * group.element[11].target.display = "category"
-* group.element[11].target.dependsOn[0].property = "data-type-map"
-* group.element[11].target.dependsOn[0].value = "ID[CodeableConcept]"
-* group.element[11].target.dependsOn[1].property = "vocabulary-map"
-* group.element[11].target.dependsOn[1].value = "DiagnosticServiceSection"
 * group.element[12].code = #OBR-25
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -307,10 +273,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "status"
-* group.element[12].target.dependsOn[0].property = "vocabulary-map"
-* group.element[12].target.dependsOn[0].value = "ResultStatus[Non-Queries]"
-* group.element[12].target.product[0].property = "antlr"
-* group.element[12].target.product[0].value = "IF OBR-25 VALUED"
 * group.element[13].code = #OBR-32
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -330,8 +292,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = -1
 * group.element[13].target.display = "resultsInterpreter(PractitionerRole)"
-* group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "NDL[PractitionerRole]"
 * group.element[14].code = #OBR-34
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -351,8 +311,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = -1
 * group.element[14].target.display = "performer[1](PractitionerRole)"
-* group.element[14].target.dependsOn[0].property = "data-type-map"
-* group.element[14].target.dependsOn[0].value = "NDL[PractitionerRole]"
 * group.element[15].code = #OBR-34
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -372,8 +330,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "performer[1].extension[1].url"
-* group.element[15].target.dependsOn[0].property = "value"
-* group.element[15].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/event-performerFunction\""
 * group.element[16].code = #OBR-34
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -393,8 +349,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "performer[1].extension[1].valueCodeableConcept.coding.code"
-* group.element[16].target.dependsOn[0].property = "value"
-* group.element[16].target.dependsOn[0].value = "\"SPRF\""
 * group.element[17].code = #OBR-34
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -414,8 +368,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[17].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[17].target.extension[0].extension[2].valueInteger = 1
 * group.element[17].target.display = "performer[1].extension[1].valueCodeableConcept.coding.system"
-* group.element[17].target.dependsOn[0].property = "value"
-* group.element[17].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""
 * group.element[18].code = #OBR-35
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"
@@ -435,8 +387,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = -1
 * group.element[18].target.display = "performer[2](PractitionerRole)"
-* group.element[18].target.dependsOn[0].property = "data-type-map"
-* group.element[18].target.dependsOn[0].value = "NDL[PractitionerRole]"
 * group.element[19].code = #OBR-35
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "type"
@@ -456,8 +406,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[19].target.extension[0].extension[2].valueInteger = 1
 * group.element[19].target.display = "performer[2].extension[1].url"
-* group.element[19].target.dependsOn[0].property = "value"
-* group.element[19].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/event-performerFunction\""
 * group.element[20].code = #OBR-35
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "type"
@@ -477,8 +425,6 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
 * group.element[20].target.display = "performer[2].extension[1].valueCodeableConcept.coding.code"
-* group.element[20].target.dependsOn[0].property = "value"
-* group.element[20].target.dependsOn[0].value = "\"TRANS\""
 * group.element[21].code = #OBR-35
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "type"
@@ -498,5 +444,3 @@ Title: "Segment OBRnull to DiagnosticReport Map"
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = 1
 * group.element[21].target.display = "performer[2].extension[1].valueCodeableConcept.coding.system"
-* group.element[21].target.dependsOn[0].property = "value"
-* group.element[21].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""

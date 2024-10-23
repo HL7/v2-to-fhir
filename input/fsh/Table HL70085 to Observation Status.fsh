@@ -1,8 +1,8 @@
 // HL7 Concept Map_ ObservationStatus - Sheet1.csv
 Instance: TableHL70085ToObservationStatus
 InstanceOf: ConceptMap
-Title: "Table HL70085null to Observation Status Map"
-* title = "Table HL70085null to Observation Status Map"
+Title: "Table HL70085 to Observation Status Map"
+* title = "Table HL70085 to Observation Status Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70085 to the FHIR Observation Status Value Set."
 * id = "table-hl70085-to-observation-status"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70085-to-observation-status"
@@ -10,7 +10,7 @@ Title: "Table HL70085null to Observation Status Map"
 * name = "TableHL70085ToObservationStatus"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

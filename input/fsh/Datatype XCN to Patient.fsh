@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XCN[Patient] - Sheet1.csv
 Instance: DatatypeXCNToPatient
 InstanceOf: ConceptMap
-Title: "Datatype XCNnull to Patient Map"
-* title = "Datatype XCNnull to Patient Map"
+Title: "Datatype XCN to Patient Map"
+* title = "Datatype XCN to Patient Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XCN to the FHIR Patient Resource."
 * id = "datatype-xcn-to-patient"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xcn-to-patient"
@@ -10,7 +10,7 @@ Title: "Datatype XCNnull to Patient Map"
 * name = "DatatypeXCNToPatient"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -62,8 +62,6 @@ Title: "Datatype XCNnull to Patient Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "name"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "FN[HumanName]"
 * group.element[2].code = #XCN.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -176,10 +174,6 @@ Title: "Datatype XCNnull to Patient Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "identifier[1].assigner(Organization)"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "HD[Organization]"
-* group.element[7].target.product[0].property = "narrative"
-* group.element[7].target.product[0].value = "If organization"
 * group.element[8].code = #XCN.9
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -200,10 +194,6 @@ Title: "Datatype XCNnull to Patient Map"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "identifier[1].system"
 * group.element[8].target.comment = "Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then XCN.9 should be mapped to .system"
-* group.element[8].target.dependsOn[0].property = "data-type-map"
-* group.element[8].target.dependsOn[0].value = "HD[uri]"
-* group.element[8].target.product[0].property = "narrative"
-* group.element[8].target.product[0].value = "If system"
 * group.element[9].code = #XCN.10
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -223,8 +213,6 @@ Title: "Datatype XCNnull to Patient Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "name.use"
-* group.element[9].target.dependsOn[0].property = "vocabulary-map"
-* group.element[9].target.dependsOn[0].value = "NameType"
 * group.element[10].code = #XCN.11
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -244,8 +232,6 @@ Title: "Datatype XCNnull to Patient Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "identifier[1].extension[1].url"
-* group.element[10].target.dependsOn[0].property = "value"
-* group.element[10].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/identifier-checkDigit\""
 * group.element[11].code = #XCN.11
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -284,8 +270,6 @@ Title: "Datatype XCNnull to Patient Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "identifier[1].extension[2].url"
-* group.element[12].target.dependsOn[0].property = "value"
-* group.element[12].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/namingsystem-checkDigit\""
 * group.element[13].code = #XCN.12
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -324,8 +308,6 @@ Title: "Datatype XCNnull to Patient Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "identifier[1].type.coding.code"
-* group.element[14].target.dependsOn[0].property = "vocabulary-map"
-* group.element[14].target.dependsOn[0].value = "IDType"
 * group.element[15].code = #XCN.17
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "cardinalityMin"
@@ -343,10 +325,6 @@ Title: "Datatype XCNnull to Patient Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "name.period"
-* group.element[15].target.dependsOn[0].property = "data-type-map"
-* group.element[15].target.dependsOn[0].value = "DR[Period]"
-* group.element[15].target.product[0].property = "antlr"
-* group.element[15].target.product[0].value = "IF XCN.19 DOES NOT EXIST AND IF XCN.20 DOES NOT EXIST"
 * group.element[16].code = #XCN.18
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -366,8 +344,6 @@ Title: "Datatype XCNnull to Patient Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "name.family.extension.url"
-* group.element[16].target.dependsOn[0].property = "value"
-* group.element[16].target.dependsOn[0].value = "\"http://hl7.org/fhir/R4/extension-humanname-assembly-order.html\""
 * group.element[17].code = #XCN.18
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -387,8 +363,6 @@ Title: "Datatype XCNnull to Patient Map"
 * group.element[17].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[17].target.extension[0].extension[2].valueInteger = 1
 * group.element[17].target.display = "name.family.extension.valueCode"
-* group.element[17].target.dependsOn[0].property = "vocabulary-map"
-* group.element[17].target.dependsOn[0].value = "NameAssemblyOrder"
 * group.element[18].code = #XCN.19
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"

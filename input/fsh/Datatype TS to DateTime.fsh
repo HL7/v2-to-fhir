@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ TS[DateTime] - Sheet1.csv
 Instance: DatatypeTSToDateTime
 InstanceOf: ConceptMap
-Title: "Datatype TSnull to DateTime Map"
-* title = "Datatype TSnull to DateTime Map"
+Title: "Datatype TS to DateTime Map"
+* title = "Datatype TS to DateTime Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TS to the FHIR DateTime Data Type."
 * id = "datatype-ts-to-datetime"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ts-to-datetime"
@@ -10,7 +10,7 @@ Title: "Datatype TSnull to DateTime Map"
 * name = "DatatypeTSToDateTime"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,7 +43,3 @@ Title: "Datatype TSnull to DateTime Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "$value"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "/must convert v2 date time format to FHIR date time format before populating according to FHIR date/time format https://build.fhir.org/datatypes.html#dateTime /"
-* group.element[0].target.dependsOn[1].property = "data-type-map"
-* group.element[0].target.dependsOn[1].value = "DTM[DateTime]"

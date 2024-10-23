@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PRT[Device] - Sheet1.csv
 Instance: SegmentPRTToDevice
 InstanceOf: ConceptMap
-Title: "Segment PRTnull to Device Map"
-* title = "Segment PRTnull to Device Map"
+Title: "Segment PRT to Device Map"
+* title = "Segment PRT to Device Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PRT to the FHIR Device Resource."
 * id = "segment-prt-to-device"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-prt-to-device"
@@ -10,7 +10,7 @@ Title: "Segment PRTnull to Device Map"
 * name = "SegmentPRTToDevice"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,10 +43,6 @@ Title: "Segment PRTnull to Device Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "udiCarrier[1]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "EI[Device-udiCarrier]"
-* group.element[0].target.product[0].property = "narrative"
-* group.element[0].target.product[0].value = "If it represents a HRF or AIDC"
 * group.element[1].code = #PRT-10
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -66,10 +62,6 @@ Title: "Segment PRTnull to Device Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
 * group.element[1].target.display = "identifier"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "EI[Identifier-Extension]"
-* group.element[1].target.product[0].property = "narrative"
-* group.element[1].target.product[0].value = "If not an HRF or AIDC"
 * group.element[2].code = #PRT-16
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -89,8 +81,6 @@ Title: "Segment PRTnull to Device Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "udiCarrier[2]"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "EI[Device-udiCarrier]"
 * group.element[3].code = #PRT-17
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -205,5 +195,3 @@ Title: "Segment PRTnull to Device Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "type"
-* group.element[8].target.dependsOn[0].property = "data-type-map"
-* group.element[8].target.dependsOn[0].value = "CNE[CodeableConcept]"

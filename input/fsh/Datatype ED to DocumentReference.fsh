@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ ED[DocumentReference] - Sheet1.csv
 Instance: DatatypeEDToDocumentReference
 InstanceOf: ConceptMap
-Title: "Datatype EDnull to DocumentReference Map"
-* title = "Datatype EDnull to DocumentReference Map"
+Title: "Datatype ED to DocumentReference Map"
+* title = "Datatype ED to DocumentReference Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype ED to the FHIR DocumentReference Resource."
 * id = "datatype-ed-to-documentreference"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ed-to-documentreference"
@@ -10,7 +10,7 @@ Title: "Datatype EDnull to DocumentReference Map"
 * name = "DatatypeEDToDocumentReference"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,10 +43,6 @@ Title: "Datatype EDnull to DocumentReference Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "content.attachment.extension[1].url"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"https://hl7.org/fhir/StructureDefinition/alternate-codes\""
-* group.element[0].target.product[0].property = "antlr"
-* group.element[0].target.product[0].value = "IF ED.3 NOT VALUED"
 * group.element[1].code = #ED.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -66,8 +62,6 @@ Title: "Datatype EDnull to DocumentReference Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "content.attachment.extension[1].valueCodeableConcept"
-* group.element[1].target.product[0].property = "antlr"
-* group.element[1].target.product[0].value = "IF ED.3 NOT VALUED"
 * group.element[2].code = #ED.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -107,8 +101,6 @@ Title: "Datatype EDnull to DocumentReference Map"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "content.attachment.data"
 * group.element[3].target.comment = "Implementations are not always accurate, so to be safe you may want to always assess OBX-5.5 to determine the correct .contentType."
-* group.element[3].target.product[0].property = "antlr"
-* group.element[3].target.product[0].value = "IF ED.4 IN (\"Base64\")"
 * group.element[4].code = #ED.5
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -129,7 +121,3 @@ Title: "Datatype EDnull to DocumentReference Map"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "content.attachment.data"
 * group.element[4].target.comment = "Implementations are not always accurate, so to be safe you may want to always assess OBX-5.5 to determine the correct .contentType."
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "/convert from A or HEX to binary64/"
-* group.element[4].target.product[0].property = "antlr"
-* group.element[4].target.product[0].value = "IF ED.4 IN (\"A\", (HEX\")"

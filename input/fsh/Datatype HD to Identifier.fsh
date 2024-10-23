@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ HD[Identifier] - Sheet1.csv
 Instance: DatatypeHDToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype HDnull to Identifier Map"
-* title = "Datatype HDnull to Identifier Map"
+Title: "Datatype HD to Identifier Map"
+* title = "Datatype HD to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype HD to the FHIR Identifier Data Type."
 * id = "datatype-hd-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-hd-to-identifier"
@@ -10,7 +10,7 @@ Title: "Datatype HDnull to Identifier Map"
 * name = "DatatypeHDToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -81,5 +81,3 @@ Title: "Datatype HDnull to Identifier Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "type[2]"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "ID[CodeableConcept]"

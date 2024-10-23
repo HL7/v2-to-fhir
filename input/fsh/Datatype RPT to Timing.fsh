@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ RPT[Timing] - Sheet1.csv
 Instance: DatatypeRPTToTiming
 InstanceOf: ConceptMap
-Title: "Datatype RPTnull to Timing Map"
-* title = "Datatype RPTnull to Timing Map"
+Title: "Datatype RPT to Timing Map"
+* title = "Datatype RPT to Timing Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype RPT to the FHIR Timing Data Type."
 * id = "datatype-rpt-to-timing"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-rpt-to-timing"
@@ -10,7 +10,7 @@ Title: "Datatype RPTnull to Timing Map"
 * name = "DatatypeRPTToTiming"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Datatype RPTnull to Timing Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "code"
-* group.element[0].target.dependsOn[0].property = "vocabulary-map"
-* group.element[0].target.dependsOn[0].value = "RepeatPattern"
 * group.element[1].code = #RPT.3
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,10 +62,6 @@ Title: "Datatype RPTnull to Timing Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "repeat.dayOfWeek[1]"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "/translate number to day/"
-* group.element[1].target.product[0].property = "antlr"
-* group.element[1].target.product[0].value = "IF RPT.2 = \"DW\""
 * group.element[2].code = #RPT.4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -87,10 +81,6 @@ Title: "Datatype RPTnull to Timing Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "repeat.dayOfWeek[2]"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "/translate number to day/"
-* group.element[2].target.product[0].property = "antlr"
-* group.element[2].target.product[0].value = "IF RPT.2 = \"DW\""
 * group.element[3].code = #RPT.5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -148,8 +138,6 @@ Title: "Datatype RPTnull to Timing Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "repeat.when"
-* group.element[5].target.dependsOn[0].property = "vocabulary-map"
-* group.element[5].target.dependsOn[0].value = "EventRelatedPeriod"
 * group.element[6].code = #RPT.9
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -169,5 +157,3 @@ Title: "Datatype RPTnull to Timing Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "repeat.offset"
-* group.element[6].target.dependsOn[0].property = "value"
-* group.element[6].target.dependsOn[0].value = "/convert to minutes based on RPT.10/"

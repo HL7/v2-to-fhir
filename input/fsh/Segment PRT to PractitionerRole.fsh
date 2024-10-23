@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PRT[PractitionerRole] - Sheet1.csv
 Instance: SegmentPRTToPractitionerRole
 InstanceOf: ConceptMap
-Title: "Segment PRTnull to PractitionerRole Map"
-* title = "Segment PRTnull to PractitionerRole Map"
+Title: "Segment PRT to PractitionerRole Map"
+* title = "Segment PRT to PractitionerRole Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PRT to the FHIR PractitionerRole Resource."
 * id = "segment-prt-to-practitionerrole"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-prt-to-practitionerrole"
@@ -10,7 +10,7 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * name = "SegmentPRTToPractitionerRole"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,10 +43,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "code"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[0].target.dependsOn[1].property = "vocabulary-map"
-* group.element[0].target.dependsOn[1].value = "Participation"
 * group.element[1].code = #PRT-5
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -67,8 +63,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "practitioner[Practitioner]"
 * group.element[1].target.comment = "While PRT may contain multiple persons within one PRT, we believe this to be rare, and when it happens, the implementer needs to determine how to best resolve that."
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "XCN[Practitioner]"
 * group.element[2].code = #PRT-6
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -88,8 +82,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
 * group.element[2].target.display = "specialty"
-* group.element[2].target.dependsOn[0].property = "data-type-map"
-* group.element[2].target.dependsOn[0].value = "CWE[CodeableConcept]"
 * group.element[3].code = #PRT-7
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -109,10 +101,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "organization[Organization.type]"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[3].target.dependsOn[1].property = "vocabulary-map"
-* group.element[3].target.dependsOn[1].value = "OrganizationUnitType"
 * group.element[4].code = #PRT-8
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -133,8 +121,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "organization[Organization]"
 * group.element[4].target.comment = "While PRT may contain multiple organizations within one PRT, we believe this to be rare, and when it happens, the implementer needs to determine how to best resolve that."
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "XON[Organization]"
 * group.element[5].code = #PRT-9
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -155,8 +141,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "location[Location]"
 * group.element[5].target.comment = "While PRT may contain multiple locations within one PRT, we believe this to be rare, and when it happens, the implementer needs to determine how to best resolve that."
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "PL[Location]"
 * group.element[6].code = #PRT-11
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -214,8 +198,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = -1
 * group.element[8].target.display = "practitioner[Practitioner.address]"
-* group.element[8].target.dependsOn[0].property = "data-type-map"
-* group.element[8].target.dependsOn[0].value = "XAD[Address]"
 * group.element[9].code = #PRT-15
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -235,10 +217,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = -1
 * group.element[9].target.display = "telecom"
-* group.element[9].target.dependsOn[0].property = "data-type-map"
-* group.element[9].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[9].target.product[0].property = "antlr"
-* group.element[9].target.product[0].value = "IF PRT-23 NOT VALUED"
 * group.element[10].code = #PRT-15
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -258,10 +236,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = -1
 * group.element[10].target.display = "telecom[1]"
-* group.element[10].target.dependsOn[0].property = "data-type-map"
-* group.element[10].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[10].target.product[0].property = "antlr"
-* group.element[10].target.product[0].value = "IF PRT-23 IS \"B\""
 * group.element[11].code = #PRT-15
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -281,10 +255,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = -1
 * group.element[11].target.display = "telecom[2]"
-* group.element[11].target.dependsOn[0].property = "data-type-map"
-* group.element[11].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[11].target.product[0].property = "antlr"
-* group.element[11].target.product[0].value = "IF PRT-23 IS \"C\""
 * group.element[12].code = #PRT-15
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -304,10 +274,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = -1
 * group.element[12].target.display = "telecom[3]"
-* group.element[12].target.dependsOn[0].property = "data-type-map"
-* group.element[12].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[12].target.product[0].property = "antlr"
-* group.element[12].target.product[0].value = "IF PRT-23 IS \"E\""
 * group.element[13].code = #PRT-15
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -327,10 +293,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = -1
 * group.element[13].target.display = "telecom[4]"
-* group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[13].target.product[0].property = "antlr"
-* group.element[13].target.product[0].value = "IF PRT-23 IS \"F\""
 * group.element[14].code = #PRT-15
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -350,10 +312,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = -1
 * group.element[14].target.display = "telecom[5]"
-* group.element[14].target.dependsOn[0].property = "data-type-map"
-* group.element[14].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[14].target.product[0].property = "antlr"
-* group.element[14].target.product[0].value = "IF PRT-23 IS \"H\""
 * group.element[15].code = #PRT-15
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -373,10 +331,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = -1
 * group.element[15].target.display = "telecom[6]"
-* group.element[15].target.dependsOn[0].property = "data-type-map"
-* group.element[15].target.dependsOn[0].value = "XTN[ContactPoint]"
-* group.element[15].target.product[0].property = "antlr"
-* group.element[15].target.product[0].value = "IF PRT-23 IS \"O\""
 * group.element[16].code = #PRT-23
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -396,10 +350,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "telecom[1].extension[1].url"
-* group.element[16].target.dependsOn[0].property = "value"
-* group.element[16].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[16].target.product[0].property = "antlr"
-* group.element[16].target.product[0].value = "IF PRT-23.1 IS \"B\""
 * group.element[17].code = #PRT-23
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -419,10 +369,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[17].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[17].target.extension[0].extension[2].valueInteger = 1
 * group.element[17].target.display = "telecom[1].extension[1].valueBoolean"
-* group.element[17].target.dependsOn[0].property = "value"
-* group.element[17].target.dependsOn[0].value = "\"true\""
-* group.element[17].target.product[0].property = "antlr"
-* group.element[17].target.product[0].value = "IF PRT-23.1 IS \"B\""
 * group.element[18].code = #PRT-23
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"
@@ -442,10 +388,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = 1
 * group.element[18].target.display = "telecom[2].extension[1].url"
-* group.element[18].target.dependsOn[0].property = "value"
-* group.element[18].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[18].target.product[0].property = "antlr"
-* group.element[18].target.product[0].value = "IF PRT-23.1 IS \"C\""
 * group.element[19].code = #PRT-23
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "type"
@@ -465,10 +407,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[19].target.extension[0].extension[2].valueInteger = 1
 * group.element[19].target.display = "telecom[2].extension[1].valueBoolean"
-* group.element[19].target.dependsOn[0].property = "value"
-* group.element[19].target.dependsOn[0].value = "\"true\""
-* group.element[19].target.product[0].property = "antlr"
-* group.element[19].target.product[0].value = "IF PRT-23.1 IS \"C\""
 * group.element[20].code = #PRT-23
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "type"
@@ -488,10 +426,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
 * group.element[20].target.display = "telecom[3].extension[1].url"
-* group.element[20].target.dependsOn[0].property = "value"
-* group.element[20].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[20].target.product[0].property = "antlr"
-* group.element[20].target.product[0].value = "IF PRT-23.1 IS \"E\""
 * group.element[21].code = #PRT-23
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "type"
@@ -511,10 +445,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = 1
 * group.element[21].target.display = "telecom[3].extension[1].valueBoolean"
-* group.element[21].target.dependsOn[0].property = "value"
-* group.element[21].target.dependsOn[0].value = "\"true\""
-* group.element[21].target.product[0].property = "antlr"
-* group.element[21].target.product[0].value = "IF PRT-23.1 IS \"E\""
 * group.element[22].code = #PRT-23
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "type"
@@ -534,10 +464,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[22].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[22].target.extension[0].extension[2].valueInteger = 1
 * group.element[22].target.display = "telecom[4].extension[1].url"
-* group.element[22].target.dependsOn[0].property = "value"
-* group.element[22].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[22].target.product[0].property = "antlr"
-* group.element[22].target.product[0].value = "IF PRT-23 IS \"F\""
 * group.element[23].code = #PRT-23
 * group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].extension[0].extension[0].url = "type"
@@ -557,10 +483,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[23].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[23].target.extension[0].extension[2].valueInteger = 1
 * group.element[23].target.display = "telecom[4].extension[1].valueBoolean"
-* group.element[23].target.dependsOn[0].property = "value"
-* group.element[23].target.dependsOn[0].value = "\"true\""
-* group.element[23].target.product[0].property = "antlr"
-* group.element[23].target.product[0].value = "IF PRT-23 IS \"F\""
 * group.element[24].code = #PRT-23
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[24].extension[0].extension[0].url = "type"
@@ -580,10 +502,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[24].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[24].target.extension[0].extension[2].valueInteger = 1
 * group.element[24].target.display = "telecom[5].extension[1].url"
-* group.element[24].target.dependsOn[0].property = "value"
-* group.element[24].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[24].target.product[0].property = "antlr"
-* group.element[24].target.product[0].value = "IF PRT-23 IS \"H\""
 * group.element[25].code = #PRT-23
 * group.element[25].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[25].extension[0].extension[0].url = "type"
@@ -603,10 +521,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[25].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[25].target.extension[0].extension[2].valueInteger = 1
 * group.element[25].target.display = "telecom[5].extension[1].valueBoolean"
-* group.element[25].target.dependsOn[0].property = "value"
-* group.element[25].target.dependsOn[0].value = "\"true\""
-* group.element[25].target.product[0].property = "antlr"
-* group.element[25].target.product[0].value = "IF PRT-23 IS \"H\""
 * group.element[26].code = #PRT-23
 * group.element[26].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[26].extension[0].extension[0].url = "type"
@@ -626,10 +540,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[26].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[26].target.extension[0].extension[2].valueInteger = 1
 * group.element[26].target.display = "telecom[6].extension[1].url"
-* group.element[26].target.dependsOn[0].property = "value"
-* group.element[26].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
-* group.element[26].target.product[0].property = "antlr"
-* group.element[26].target.product[0].value = "IF PRT-23 IS \"O\""
 * group.element[27].code = #PRT-23
 * group.element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[27].extension[0].extension[0].url = "type"
@@ -649,10 +559,6 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[27].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[27].target.extension[0].extension[2].valueInteger = 1
 * group.element[27].target.display = "telecom[6].extension[1].valueBoolean"
-* group.element[27].target.dependsOn[0].property = "value"
-* group.element[27].target.dependsOn[0].value = "\"true\""
-* group.element[27].target.product[0].property = "antlr"
-* group.element[27].target.product[0].value = "IF PRT-23 IS \"O\""
 * group.element[28].code = #PRT-24
 * group.element[28].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[28].extension[0].extension[0].url = "type"
@@ -672,5 +578,3 @@ Title: "Segment PRTnull to PractitionerRole Map"
 * group.element[28].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[28].target.extension[0].extension[2].valueInteger = -1
 * group.element[28].target.display = "identifier[2]"
-* group.element[28].target.dependsOn[0].property = "data-type-map"
-* group.element[28].target.dependsOn[0].value = "PLN[Identifier]"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHRI R4_ TQ[MedicationRequest] - Sheet1.csv
 Instance: DatatypeTQToMedicationRequest
 InstanceOf: ConceptMap
-Title: "Datatype TQnull to MedicationRequest Map"
-* title = "Datatype TQnull to MedicationRequest Map"
+Title: "Datatype TQ to MedicationRequest Map"
+* title = "Datatype TQ to MedicationRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TQ to the FHIR MedicationRequest Resource."
 * id = "datatype-tq-to-medicationrequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-tq-to-medicationrequest"
@@ -10,7 +10,7 @@ Title: "Datatype TQnull to MedicationRequest Map"
 * name = "DatatypeTQToMedicationRequest"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Datatype TQnull to MedicationRequest Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "dosageInstruction.doseAndRate.doseQuantity"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CQ[Quantity]"
 * group.element[1].code = #TQ.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,8 +62,6 @@ Title: "Datatype TQnull to MedicationRequest Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "dosageInstruction.doseAndRate.timing"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "RI[Timing]"
 * group.element[2].code = #TQ.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -85,8 +81,6 @@ Title: "Datatype TQnull to MedicationRequest Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "dosageInstruction.doseAndRate.timing.repeat.duration"
-* group.element[2].target.product[0].property = "narrative"
-* group.element[2].target.product[0].value = "If the value and unit in TQ.3 can be unambiguously parsed where the unit is translatable into UCUM and the field contains nothing else."
 * group.element[3].code = #TQ.3
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -106,8 +100,6 @@ Title: "Datatype TQnull to MedicationRequest Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "occurenceTiming.repeat.boundsDuration.unit"
-* group.element[3].target.product[0].property = "narrative"
-* group.element[3].target.product[0].value = "If the value and unit in TQ.3 can be unambiguously parsed where the unit is translatable into UCUM and the field contains nothing else."
 * group.element[4].code = #TQ.3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -125,10 +117,6 @@ Title: "Datatype TQnull to MedicationRequest Map"
 * group.element[4].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
 * group.element[4].target.display = "occurenceTiming.repeat.boundsDuration.system"
-* group.element[4].target.dependsOn[0].property = "value"
-* group.element[4].target.dependsOn[0].value = "\"UCUM\""
-* group.element[4].target.product[0].property = "narrative"
-* group.element[4].target.product[0].value = "If the value and unit in TQ.3 can be unambiguously parsed where the unit is translatable into UCUM and the field contains nothing else."
 * group.element[5].code = #TQ.4
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -148,8 +136,6 @@ Title: "Datatype TQnull to MedicationRequest Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "occurrenceTiming.repeat.boundsPeriod.start"
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "TS[DateTime]"
 * group.element[6].code = #TQ.5
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -169,8 +155,6 @@ Title: "Datatype TQnull to MedicationRequest Map"
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "occurrenceTiming.repeat.boundsPeriod.end"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "TS[DateTime]"
 * group.element[7].code = #TQ.6
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -191,8 +175,6 @@ Title: "Datatype TQnull to MedicationRequest Map"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "priority"
 * group.element[7].target.comment = "A translation from the text priority in the v2 message to a coded value in the request-priority value set will be required."
-* group.element[7].target.dependsOn[0].property = "vocabulary-map"
-* group.element[7].target.dependsOn[0].value = "Priority"
 * group.element[8].code = #TQ.8
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"

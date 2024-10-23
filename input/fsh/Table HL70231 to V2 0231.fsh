@@ -1,8 +1,8 @@
 // HL7 Concept Map_ StudentStatus - Sheet1.csv
 Instance: TableHL70231ToV20231
 InstanceOf: ConceptMap
-Title: "Table HL70231null to V2 0231 Map"
-* title = "Table HL70231null to V2 0231 Map"
+Title: "Table HL70231 to V2 0231 Map"
+* title = "Table HL70231 to V2 0231 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70231 to the FHIR V2 0231 Value Set."
 * id = "table-hl70231-to-v2-0231"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70231-to-v2-0231"
@@ -10,7 +10,7 @@ Title: "Table HL70231null to V2 0231 Map"
 * name = "TableHL70231ToV20231"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ EI[Device-UDICarrier] - Sheet1.csv
 Instance: DatatypeEIUDICarrierToDevice
 InstanceOf: ConceptMap
-Title: "Datatype EInull to Device Map"
-* title = "Datatype EInull to Device Map"
+Title: "Datatype EI to Device Map"
+* title = "Datatype EI to Device Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype EI to the FHIR Device Resource."
 * id = "datatype-ei-udicarrier-to-device"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ei-udicarrier-to-device"
@@ -10,7 +10,7 @@ Title: "Datatype EInull to Device Map"
 * name = "DatatypeEIUDICarrierToDevice"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

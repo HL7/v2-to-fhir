@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ RI[Timing] - Sheet1.csv
 Instance: DatatypeRIToTiming
 InstanceOf: ConceptMap
-Title: "Datatype RInull to Timing Map"
-* title = "Datatype RInull to Timing Map"
+Title: "Datatype RI to Timing Map"
+* title = "Datatype RI to Timing Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype RI to the FHIR Timing Data Type."
 * id = "datatype-ri-to-timing"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ri-to-timing"
@@ -10,7 +10,7 @@ Title: "Datatype RInull to Timing Map"
 * name = "DatatypeRIToTiming"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Datatype RInull to Timing Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "code"
-* group.element[0].target.dependsOn[0].property = "vocabulary-map"
-* group.element[0].target.dependsOn[0].value = "RepeatPattern"
 * group.element[1].code = #RI-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"

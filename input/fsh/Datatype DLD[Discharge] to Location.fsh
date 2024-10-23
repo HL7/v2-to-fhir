@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ DLD[Location-Discharge] - Sheet1.csv
 Instance: DatatypeDLDDischargeToLocation
 InstanceOf: ConceptMap
-Title: "Datatype DLDnull to Location Map"
-* title = "Datatype DLDnull to Location Map"
+Title: "Datatype DLD to Location Map"
+* title = "Datatype DLD to Location Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype DLD to the FHIR Location Resource."
 * id = "datatype-dld-discharge-to-location"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-dld-discharge-to-location"
@@ -10,7 +10,7 @@ Title: "Datatype DLDnull to Location Map"
 * name = "DatatypeDLDDischargeToLocation"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -39,7 +39,3 @@ Title: "Datatype DLDnull to Location Map"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"CodeableConcept"
 * group.element[0].target.display = "type"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[0].target.dependsOn[1].property = "vocabulary-map"
-* group.element[0].target.dependsOn[1].value = "DischargedToLocation"

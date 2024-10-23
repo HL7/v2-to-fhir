@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PV1[Patient] - Sheet1.csv
 Instance: SegmentPV1ToPatient
 InstanceOf: ConceptMap
-Title: "Segment PV1null to Patient Map"
-* title = "Segment PV1null to Patient Map"
+Title: "Segment PV1 to Patient Map"
+* title = "Segment PV1 to Patient Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PV1 to the FHIR Patient Resource."
 * id = "segment-pv1-to-patient"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pv1-to-patient"
@@ -10,7 +10,7 @@ Title: "Segment PV1null to Patient Map"
 * name = "SegmentPV1ToPatient"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,10 +43,6 @@ Title: "Segment PV1null to Patient Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "extension[1].url"
-* group.element[0].target.dependsOn[0].property = "value"
-* group.element[0].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/patient-importance\""
-* group.element[0].target.product[0].property = "narrative"
-* group.element[0].target.product[0].value = "If person level VIP"
 * group.element[1].code = #PV1-16
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -66,9 +62,3 @@ Title: "Segment PV1null to Patient Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "extension[1].valueCodeableConcept"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "CWE[CodeableConcept]"
-* group.element[1].target.dependsOn[1].property = "vocabulary-map"
-* group.element[1].target.dependsOn[1].value = "VIPIndicator"
-* group.element[1].target.product[0].property = "narrative"
-* group.element[1].target.product[0].value = "If person level VIP"

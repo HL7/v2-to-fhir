@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ ORC[DiagnosticReport] - ORC.csv
 Instance: SegmentORCToDiagnosticReport
 InstanceOf: ConceptMap
-Title: "Segment ORCnull to DiagnosticReport Map"
-* title = "Segment ORCnull to DiagnosticReport Map"
+Title: "Segment ORC to DiagnosticReport Map"
+* title = "Segment ORC to DiagnosticReport Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment ORC to the FHIR DiagnosticReport Resource."
 * id = "segment-orc-to-diagnosticreport"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-orc-to-diagnosticreport"
@@ -10,7 +10,7 @@ Title: "Segment ORCnull to DiagnosticReport Map"
 * name = "SegmentORCToDiagnosticReport"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -43,8 +43,6 @@ Title: "Segment ORCnull to DiagnosticReport Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
 * group.element[0].target.display = "identifier[1]"
-* group.element[0].target.dependsOn[0].property = "data-type-map"
-* group.element[0].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[1].code = #ORC-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -64,8 +62,6 @@ Title: "Segment ORCnull to DiagnosticReport Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "identifier[1].type.coding.code"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"PLAC\""
 * group.element[2].code = #ORC-2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -85,8 +81,6 @@ Title: "Segment ORCnull to DiagnosticReport Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "identifier[1].type.coding.system"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
 * group.element[3].code = #ORC-2
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -129,8 +123,6 @@ Ideally, DiagnosticReport.identifier will be unique. Depending on how the result
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = -1
 * group.element[4].target.display = "identifier[2]"
-* group.element[4].target.dependsOn[0].property = "data-type-map"
-* group.element[4].target.dependsOn[0].value = "EI[Identifier-Extension]"
 * group.element[5].code = #ORC-3
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -150,8 +142,6 @@ Ideally, DiagnosticReport.identifier will be unique. Depending on how the result
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "identifier[2].type.coding.code"
-* group.element[5].target.dependsOn[0].property = "value"
-* group.element[5].target.dependsOn[0].value = "\"FILL\""
 * group.element[6].code = #ORC-3
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -171,8 +161,6 @@ Ideally, DiagnosticReport.identifier will be unique. Depending on how the result
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "identifier[2].type.coding.system"
-* group.element[6].target.dependsOn[0].property = "value"
-* group.element[6].target.dependsOn[0].value = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
 * group.element[7].code = #ORC-4
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -192,8 +180,6 @@ Ideally, DiagnosticReport.identifier will be unique. Depending on how the result
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = -1
 * group.element[7].target.display = "identifier[3]"
-* group.element[7].target.dependsOn[0].property = "data-type-map"
-* group.element[7].target.dependsOn[0].value = "EIP[Identifier-FillerAssignedIdentifier]"
 * group.element[8].code = #ORC-4
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -213,8 +199,6 @@ Ideally, DiagnosticReport.identifier will be unique. Depending on how the result
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = -1
 * group.element[8].target.display = "identifier[4]"
-* group.element[8].target.dependsOn[0].property = "data-type-map"
-* group.element[8].target.dependsOn[0].value = "EIP[Identifier-PlacerAssignedIdentifier]"
 * group.element[9].code = #ORC-16
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -234,8 +218,6 @@ Ideally, DiagnosticReport.identifier will be unique. Depending on how the result
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "extension[1].url"
-* group.element[9].target.dependsOn[0].property = "value"
-* group.element[9].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/event-statusReason\""
 * group.element[10].code = #ORC-16
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -255,5 +237,3 @@ Ideally, DiagnosticReport.identifier will be unique. Depending on how the result
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "extension[1].valueCodeableConcept"
-* group.element[10].target.dependsOn[0].property = "data-type-map"
-* group.element[10].target.dependsOn[0].value = "CWE[CodeableConcept]"

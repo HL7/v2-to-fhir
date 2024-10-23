@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv
 Instance: DatatypeXCNToRelatedPerson
 InstanceOf: ConceptMap
-Title: "Datatype XCNnull to RelatedPerson Map"
-* title = "Datatype XCNnull to RelatedPerson Map"
+Title: "Datatype XCN to RelatedPerson Map"
+* title = "Datatype XCN to RelatedPerson Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XCN to the FHIR RelatedPerson Resource."
 * id = "datatype-xcn-to-relatedperson"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xcn-to-relatedperson"
@@ -10,7 +10,7 @@ Title: "Datatype XCNnull to RelatedPerson Map"
 * name = "DatatypeXCNToRelatedPerson"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -58,8 +58,6 @@ Title: "Datatype XCNnull to RelatedPerson Map"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"HumanName"
 * group.element[1].target.display = "name"
-* group.element[1].target.dependsOn[0].property = "data-type-map"
-* group.element[1].target.dependsOn[0].value = "FN[HumanName]"
 * group.element[2].code = #XCN.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -172,8 +170,6 @@ Title: "Datatype XCNnull to RelatedPerson Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "name.use"
-* group.element[7].target.dependsOn[0].property = "vocabulary-map"
-* group.element[7].target.dependsOn[0].value = "NameType"
 * group.element[8].code = #XCN.11
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -193,8 +189,6 @@ Title: "Datatype XCNnull to RelatedPerson Map"
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "identifier[1].extension[1].url"
-* group.element[8].target.dependsOn[0].property = "value"
-* group.element[8].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/identifier-checkDigit\""
 * group.element[9].code = #XCN.11
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -233,8 +227,6 @@ Title: "Datatype XCNnull to RelatedPerson Map"
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "identifier[1].extension[2].url"
-* group.element[10].target.dependsOn[0].property = "value"
-* group.element[10].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/namingsystem-checkDigit\""
 * group.element[11].code = #XCN.12
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -273,8 +265,6 @@ Title: "Datatype XCNnull to RelatedPerson Map"
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "identifier.type.coding.code"
-* group.element[12].target.dependsOn[0].property = "vocabulary-map"
-* group.element[12].target.dependsOn[0].value = "IDType"
 * group.element[13].code = #XCN.17
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
@@ -292,10 +282,6 @@ Title: "Datatype XCNnull to RelatedPerson Map"
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "name.period"
-* group.element[13].target.dependsOn[0].property = "data-type-map"
-* group.element[13].target.dependsOn[0].value = "DR[Period]"
-* group.element[13].target.product[0].property = "antlr"
-* group.element[13].target.product[0].value = "IF XCN.19 NOT VALUED AND XCN.20 NOT VALUED"
 * group.element[14].code = #XCN.18
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -315,8 +301,6 @@ Title: "Datatype XCNnull to RelatedPerson Map"
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "name.family.extension.url"
-* group.element[14].target.dependsOn[0].property = "value"
-* group.element[14].target.dependsOn[0].value = "\"http://hl7.org/fhir/R4/extension-humanname-assembly-order.html\""
 * group.element[15].code = #XCN.18
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -336,8 +320,6 @@ Title: "Datatype XCNnull to RelatedPerson Map"
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "name.family.extension.valueCode"
-* group.element[15].target.dependsOn[0].property = "vocabulary-map"
-* group.element[15].target.dependsOn[0].value = "NameAssemblyOrder"
 * group.element[16].code = #XCN.19
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"

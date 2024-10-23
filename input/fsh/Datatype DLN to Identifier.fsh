@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ DLN[Identifier] - Sheet1.csv
 Instance: DatatypeDLNToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype DLNnull to Identifier Map"
-* title = "Datatype DLNnull to Identifier Map"
+Title: "Datatype DLN to Identifier Map"
+* title = "Datatype DLN to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype DLN to the FHIR Identifier Data Type."
 * id = "datatype-dln-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-dln-to-identifier"
@@ -10,7 +10,7 @@ Title: "Datatype DLNnull to Identifier Map"
 * name = "DatatypeDLNToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -62,8 +62,6 @@ Title: "Datatype DLNnull to Identifier Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "type.coding.code"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"DL\""
 * group.element[2].code = #DLN.1
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -83,10 +81,6 @@ Title: "Datatype DLNnull to Identifier Map"
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "type.coding.sytem"
-* group.element[2].target.dependsOn[0].property = "value"
-* group.element[2].target.dependsOn[0].value = """
-"http://terminology.hl7.org/CodeSystem/v2-0203"\
-"""
 * group.element[3].code = #DLN.2
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -106,8 +100,6 @@ Title: "Datatype DLNnull to Identifier Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "system"
-* group.element[3].target.dependsOn[0].property = "data-type-map"
-* group.element[3].target.dependsOn[0].value = "CWE[uri]"
 * group.element[4].code = #DLN.3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"

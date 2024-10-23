@@ -1,8 +1,8 @@
 // HL7 Concept Map_ OrderControlCode[ServiceRequest.status] - Sheet1.csv
 Instance: TableHL70119ToRequestStatus
 InstanceOf: ConceptMap
-Title: "Table HL70119null to Request Status Map"
-* title = "Table HL70119null to Request Status Map"
+Title: "Table HL70119 to Request Status Map"
+* title = "Table HL70119 to Request Status Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70119 to the FHIR Request Status Value Set."
 * id = "table-hl70119-to-request-status"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70119-to-request-status"
@@ -10,7 +10,7 @@ Title: "Table HL70119null to Request Status Map"
 * name = "TableHL70119ToRequestStatus"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ SN[Quantity] - Sheet1.csv
 Instance: DatatypeSNToQuantity
 InstanceOf: ConceptMap
-Title: "Datatype SNnull to Quantity Map"
-* title = "Datatype SNnull to Quantity Map"
+Title: "Datatype SN to Quantity Map"
+* title = "Datatype SN to Quantity Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype SN to the FHIR Quantity Data Type."
 * id = "datatype-sn-to-quantity"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-sn-to-quantity"
@@ -10,7 +10,7 @@ Title: "Datatype SNnull to Quantity Map"
 * name = "DatatypeSNToQuantity"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

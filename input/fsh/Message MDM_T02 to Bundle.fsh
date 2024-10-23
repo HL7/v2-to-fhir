@@ -1,8 +1,8 @@
 // HL7 Message - FHIR R4_ MDM _T02 - Sheet1.csv
 Instance: MessageMDM_T02ToBundle
 InstanceOf: ConceptMap
-Title: "Message MDM_T02null to Bundle Map"
-* title = "Message MDM_T02null to Bundle Map"
+Title: "Message MDM_T02 to Bundle Map"
+* title = "Message MDM_T02 to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message MDM_T02 to the FHIR Message Bundle."
 * id = "message-mdm-t02-to-bundle"
 * url = "http://hl7.org/fhir/uv/v2mappings/message-mdm-t02-to-bundle"
@@ -10,7 +10,7 @@ Title: "Message MDM_T02null to Bundle Map"
 * name = "MessageMDM_T02ToBundle"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -34,8 +34,6 @@ Title: "Message MDM_T02null to Bundle Map"
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #Bundle
 * group.element[0].target.display = "Bundle"
-* group.element[0].target.dependsOn[0].property = "segment-map"
-* group.element[0].target.dependsOn[0].value = "MSH[Bundle]"
 * group.element[1].code = #MDM_T02.MSH
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "cardinalityMin"
@@ -47,8 +45,6 @@ Title: "Message MDM_T02null to Bundle Map"
 * group.element[1].target.code = #MessageHeader[1]
 * group.element[1].target.display = "MessageHeader[1]"
 * group.element[1].target.comment = "Processing of the MSH segment results in the creation of a new MessageHeader resource"
-* group.element[1].target.dependsOn[0].property = "segment-map"
-* group.element[1].target.dependsOn[0].value = "MSH[MessageHeader]"
 * group.element[2].code = #MDM_T02.MSH
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "cardinalityMin"
@@ -60,10 +56,6 @@ Title: "Message MDM_T02null to Bundle Map"
 * group.element[2].target.code = #Provenance[1]
 * group.element[2].target.display = "Provenance[1]"
 * group.element[2].target.comment = "If the FHIR transformation does not yield a FHIR message, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
-* group.element[2].target.dependsOn[0].property = "segment-map"
-* group.element[2].target.dependsOn[0].value = "MSH[Provenance-Source]"
-* group.element[2].target.dependsOn[1].property = "references"
-* group.element[2].target.dependsOn[1].value = "Provenance[1].target.reference=Bundle.id; Provenance[1].target.reference=MessageHeader[1].id"
 * group.element[3].code = #MDM_T02.MSH
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "cardinalityMin"
@@ -75,10 +67,6 @@ Title: "Message MDM_T02null to Bundle Map"
 * group.element[3].target.code = #Provenance[2]
 * group.element[3].target.display = "Provenance[2]"
 * group.element[3].target.comment = "If the FHIR transformation does not yield a FHIR Bunlde, but only a set of resource (APIs, repository, etc.) than one should consider attaching this Provenance resource instance to the relevant FHIR resources generated."
-* group.element[3].target.dependsOn[0].property = "segment-map"
-* group.element[3].target.dependsOn[0].value = "MSH[Provenance-Transformation]"
-* group.element[3].target.dependsOn[1].property = "references"
-* group.element[3].target.dependsOn[1].value = "Provenance[2].target.reference=Bundle.id"
 * group.element[4].code = #MDM_T02.SFT
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "cardinalityMin"
@@ -89,15 +77,6 @@ Title: "Message MDM_T02null to Bundle Map"
 * group.element[4].target.equivalence = #equivalent
 * group.element[4].target.code = #Provenance[1].entity.what(Device)
 * group.element[4].target.display = "Provenance[1].entity.what(Device)"
-* group.element[4].target.dependsOn[0].property = "segment-map"
-* group.element[4].target.dependsOn[0].value = "SFT[Device]"
-* group.element[4].target.dependsOn[1].property = "references"
-* group.element[4].target.dependsOn[1].value = """
-Provenance[1].entity.what.reference=Device.id
-Provenance[1].entity.role="derivation"\
-"""
-* group.element[4].target.product[0].property = "narrative"
-* group.element[4].target.product[0].value = "If the software does represent not the original source system"
 * group.element[5].code = #MDM_T02.SFT
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "cardinalityMin"
@@ -108,15 +87,6 @@ Provenance[1].entity.role="derivation"\
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #Provenance[1].entity.what(Device)
 * group.element[5].target.display = "Provenance[1].entity.what(Device)"
-* group.element[5].target.dependsOn[0].property = "segment-map"
-* group.element[5].target.dependsOn[0].value = "SFT[Device]"
-* group.element[5].target.dependsOn[1].property = "references"
-* group.element[5].target.dependsOn[1].value = """
-Provenance[1].entity.what.reference=Device.id
-Provenance[1].entity.role="source"\
-"""
-* group.element[5].target.product[0].property = "narrative"
-* group.element[5].target.product[0].value = "If the software represents the original source system"
 * group.element[6].code = #MDM_T02.EVN
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "cardinalityMin"
@@ -127,10 +97,6 @@ Provenance[1].entity.role="source"\
 * group.element[6].target.equivalence = #equivalent
 * group.element[6].target.code = #Provenance[3]
 * group.element[6].target.display = "Provenance[3]"
-* group.element[6].target.dependsOn[0].property = "segment-map"
-* group.element[6].target.dependsOn[0].value = "EVN[Provenance]"
-* group.element[6].target.dependsOn[1].property = "references"
-* group.element[6].target.dependsOn[1].value = "Provenance[3].target.reference=MessageHeader[1].id"
 * group.element[7].code = #MDM_T02.PID
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "cardinalityMin"
@@ -142,8 +108,6 @@ Provenance[1].entity.role="source"\
 * group.element[7].target.code = #Patient[1]
 * group.element[7].target.display = "Patient[1]"
 * group.element[7].target.comment = "Processing of the PID segment results in the creation of a new Patient resource"
-* group.element[7].target.dependsOn[0].property = "segment-map"
-* group.element[7].target.dependsOn[0].value = "PID[Patient]"
 * group.element[8].code = #MDM_T02.PID
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
@@ -154,10 +118,6 @@ Provenance[1].entity.role="source"\
 * group.element[8].target.equivalence = #equivalent
 * group.element[8].target.code = #Provenance[4]
 * group.element[8].target.display = "Provenance[4]"
-* group.element[8].target.dependsOn[0].property = "segment-map"
-* group.element[8].target.dependsOn[0].value = "PID[Provenance-Patient]"
-* group.element[8].target.dependsOn[1].property = "references"
-* group.element[8].target.dependsOn[1].value = "Provenance.target.reference=Patient[1].id"
 * group.element[9].code = #MDM_T02.PV1
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "cardinalityMin"
@@ -169,10 +129,6 @@ Provenance[1].entity.role="source"\
 * group.element[9].target.code = #Encounter[1]
 * group.element[9].target.display = "Encounter[1]"
 * group.element[9].target.comment = "Processing of the PV1 segment results in the creation of a new Encounter resource"
-* group.element[9].target.dependsOn[0].property = "segment-map"
-* group.element[9].target.dependsOn[0].value = "PV1[Encounter]"
-* group.element[9].target.dependsOn[1].property = "references"
-* group.element[9].target.dependsOn[1].value = "Encounter.subject=Patient[PID]"
 * group.element[10].code = #MDM_T02.PV1
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "cardinalityMin"
@@ -183,12 +139,6 @@ Provenance[1].entity.role="source"\
 * group.element[10].target.equivalence = #equivalent
 * group.element[10].target.code = #EncounterHistory
 * group.element[10].target.display = "EncounterHistory"
-* group.element[10].target.dependsOn[0].property = "segment-map"
-* group.element[10].target.dependsOn[0].value = "PV1[EncounterHistory]"
-* group.element[10].target.dependsOn[1].property = "references"
-* group.element[10].target.dependsOn[1].value = "EncounterHistory.subject.reference=Patient[1].id"
-* group.element[10].target.product[0].property = "antlr"
-* group.element[10].target.product[0].value = "IF PV1-43 VALUED"
 * group.element[11].code = #MDM_T02.PV1
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
@@ -199,8 +149,6 @@ Provenance[1].entity.role="source"\
 * group.element[11].target.equivalence = #equivalent
 * group.element[11].target.code = #Patient[1]
 * group.element[11].target.display = "Patient[1]"
-* group.element[11].target.dependsOn[0].property = "segment-map"
-* group.element[11].target.dependsOn[0].value = "PV1[Patient]"
 * group.element[12].code = #MDM_T02.PV1
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "cardinalityMin"
@@ -211,12 +159,6 @@ Provenance[1].entity.role="source"\
 * group.element[12].target.equivalence = #equivalent
 * group.element[12].target.code = #Coverage[1]
 * group.element[12].target.display = "Coverage[1]"
-* group.element[12].target.dependsOn[0].property = "segment-map"
-* group.element[12].target.dependsOn[0].value = "PV1[Coverage]"
-* group.element[12].target.dependsOn[1].property = "references"
-* group.element[12].target.dependsOn[1].value = "Coverage.beneficiary.reference=Patient[1].id"
-* group.element[12].target.product[0].property = "antlr"
-* group.element[12].target.product[0].value = "IF PV1-20 VALUE"
 * group.element[13].code = #MDM_T02.COMMON_ORDER.ORC
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
@@ -228,10 +170,6 @@ Provenance[1].entity.role="source"\
 * group.element[13].target.code = #ServiceRequest[1]
 * group.element[13].target.display = "ServiceRequest[1]"
 * group.element[13].target.comment = "Processing of each ORC segment results in the creation of a new ServiceRequest resource"
-* group.element[13].target.dependsOn[0].property = "segment-map"
-* group.element[13].target.dependsOn[0].value = "ORC[ServiceRequest]"
-* group.element[13].target.dependsOn[1].property = "references"
-* group.element[13].target.dependsOn[1].value = "ServiceRequest.subject=Patient[PID]"
 * group.element[14].code = #MDM_T02.COMMON_ORDER.ORC
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "cardinalityMin"
@@ -243,10 +181,6 @@ Provenance[1].entity.role="source"\
 * group.element[14].target.code = #Provenance[3]
 * group.element[14].target.display = "Provenance[3]"
 * group.element[14].target.comment = "Using Provenance is the preferred way, but a local implementation may decide to add extensions to the main resource.  As the use and guidance of Provenance matures we wil revisit this later."
-* group.element[14].target.dependsOn[0].property = "segment-map"
-* group.element[14].target.dependsOn[0].value = "ORC[Provenance]"
-* group.element[14].target.dependsOn[1].property = "references"
-* group.element[14].target.dependsOn[1].value = "Provenance.target=ServiceRequest[ORC]"
 * group.element[15].code = #MDM_T02.COMMON_ORDER.TIMING.TQ1
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "cardinalityMin"
@@ -257,8 +191,6 @@ Provenance[1].entity.role="source"\
 * group.element[15].target.equivalence = #equivalent
 * group.element[15].target.code = #ServiceRequest[1]
 * group.element[15].target.display = "ServiceRequest[1]"
-* group.element[15].target.dependsOn[0].property = "segment-map"
-* group.element[15].target.dependsOn[0].value = "TQ1[ServiceRequest]"
 * group.element[16].code = #MDM_T02.COMMON_ORDER.OBR
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "cardinalityMin"
@@ -269,8 +201,6 @@ Provenance[1].entity.role="source"\
 * group.element[16].target.equivalence = #equivalent
 * group.element[16].target.code = #ServiceRequest[1]
 * group.element[16].target.display = "ServiceRequest[1]"
-* group.element[16].target.dependsOn[0].property = "segment-map"
-* group.element[16].target.dependsOn[0].value = "OBR[ServiceRequest]"
 * group.element[17].code = #MDM_T02.COMMON_ORDER.NTE
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "cardinalityMin"
@@ -281,8 +211,6 @@ Provenance[1].entity.role="source"\
 * group.element[17].target.equivalence = #equivalent
 * group.element[17].target.code = #ServiceRequest[1]
 * group.element[17].target.display = "ServiceRequest[1]"
-* group.element[17].target.dependsOn[0].property = "segment-map"
-* group.element[17].target.dependsOn[0].value = "NTE[ServiceRequest]"
 * group.element[18].code = #MDM_T02.TXA
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "cardinalityMin"
@@ -294,10 +222,6 @@ Provenance[1].entity.role="source"\
 * group.element[18].target.code = #DocumentReference[1]
 * group.element[18].target.display = "DocumentReference[1]"
 * group.element[18].target.comment = "Note for detailed mapping to use"
-* group.element[18].target.dependsOn[0].property = "segment-map"
-* group.element[18].target.dependsOn[0].value = "TXA[DocumentReference]"
-* group.element[18].target.dependsOn[1].property = "references"
-* group.element[18].target.dependsOn[1].value = "DocumentReference[1].context.related.reference=ServiceRequest[1].id"
 * group.element[19].code = #MDM_T02.TXA
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "cardinalityMin"
@@ -308,10 +232,6 @@ Provenance[1].entity.role="source"\
 * group.element[19].target.equivalence = #equivalent
 * group.element[19].target.code = #Provenance
 * group.element[19].target.display = "Provenance"
-* group.element[19].target.dependsOn[0].property = "segment-map"
-* group.element[19].target.dependsOn[0].value = "TXA[Provenance]"
-* group.element[19].target.dependsOn[1].property = "references"
-* group.element[19].target.dependsOn[1].value = "Provenance[1].target=DocumentReference[1].id"
 * group.element[20].code = #MDM_T02.OBSERVATION.OBX
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "cardinalityMin"
@@ -322,10 +242,6 @@ Provenance[1].entity.role="source"\
 * group.element[20].target.equivalence = #equivalent
 * group.element[20].target.code = #DocumentReference[1]
 * group.element[20].target.display = "DocumentReference[1]"
-* group.element[20].target.dependsOn[0].property = "segment-map"
-* group.element[20].target.dependsOn[0].value = "OBX[DocumentReference]"
-* group.element[20].target.dependsOn[1].property = "references"
-* group.element[20].target.dependsOn[1].value = "DocumentReference[1].context.related.reference=ServiceRequest[1].id"
 * group.element[21].code = #MDM_T02.OBSERVATION.NTE
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "cardinalityMin"
@@ -336,7 +252,3 @@ Provenance[1].entity.role="source"\
 * group.element[21].target.equivalence = #equivalent
 * group.element[21].target.code = #DocumentReference[1]
 * group.element[21].target.display = "DocumentReference[1]"
-* group.element[21].target.dependsOn[0].property = "segment-map"
-* group.element[21].target.dependsOn[0].value = "NTE[DocumentReference]"
-* group.element[21].target.dependsOn[1].property = "references"
-* group.element[21].target.dependsOn[1].value = "DocumentReference[1].context.related.reference=ServiceRequest[1].id"

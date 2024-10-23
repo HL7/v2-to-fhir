@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ HD[extension-AssigningAuthority] - Sheet1.csv
 Instance: DatatypeHDAssigningAuthorityToExtension
 InstanceOf: ConceptMap
-Title: "Datatype HDnull to extension Map"
-* title = "Datatype HDnull to extension Map"
+Title: "Datatype HD to extension Map"
+* title = "Datatype HD to extension Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype HD to the FHIR extension Data Type."
 * id = "datatype-hd-assigningauthority-to-extension"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-hd-assigningauthority-to-extension"
@@ -10,7 +10,7 @@ Title: "Datatype HDnull to extension Map"
 * name = "DatatypeHDAssigningAuthorityToExtension"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

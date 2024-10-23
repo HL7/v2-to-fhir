@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CX[Identifier] - Sheet1.csv
 Instance: DatatypeCXToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype CXnull to Identifier Map"
-* title = "Datatype CXnull to Identifier Map"
+Title: "Datatype CX to Identifier Map"
+* title = "Datatype CX to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CX to the FHIR Identifier Data Type."
 * id = "datatype-cx-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cx-to-identifier"
@@ -10,7 +10,7 @@ Title: "Datatype CXnull to Identifier Map"
 * name = "DatatypeCXToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -62,8 +62,6 @@ Title: "Datatype CXnull to Identifier Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "extension[1].url"
-* group.element[1].target.dependsOn[0].property = "value"
-* group.element[1].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/identifier-checkDigit\""
 * group.element[2].code = #CX.2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -102,8 +100,6 @@ Title: "Datatype CXnull to Identifier Map"
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "extension[2].url"
-* group.element[3].target.dependsOn[0].property = "value"
-* group.element[3].target.dependsOn[0].value = "\"http://hl7.org/fhir/StructureDefinition/namingsystem-checkDigit\""
 * group.element[4].code = #CX.3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -142,10 +138,6 @@ Title: "Datatype CXnull to Identifier Map"
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "assigner(Organization)"
-* group.element[5].target.dependsOn[0].property = "data-type-map"
-* group.element[5].target.dependsOn[0].value = "HD[Organization]"
-* group.element[5].target.product[0].property = "narrative"
-* group.element[5].target.product[0].value = "If not in http://hl7.org/implement/standards/fhir/identifier-registry.html then determine whether organization or system"
 * group.element[6].code = #CX.4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -166,10 +158,6 @@ Title: "Datatype CXnull to Identifier Map"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "system"
 * group.element[6].target.comment = "Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then CX.4 should be mapped to .system"
-* group.element[6].target.dependsOn[0].property = "data-type-map"
-* group.element[6].target.dependsOn[0].value = "HD[uri]"
-* group.element[6].target.product[0].property = "antlr"
-* group.element[6].target.product[0].value = "IF CX.4 IN http://hl7.org/implement/standards/fhir/identifier-registry.html"
 * group.element[7].code = #CX.5
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -189,8 +177,6 @@ Title: "Datatype CXnull to Identifier Map"
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "type.coding.code"
-* group.element[7].target.dependsOn[0].property = "vocabulary-map"
-* group.element[7].target.dependsOn[0].value = "IDType"
 * group.element[8].code = #CX.7
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"

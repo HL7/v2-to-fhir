@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[Duration] - Sheet1.csv
 Instance: DatatypeCWEToDuration
 InstanceOf: ConceptMap
-Title: "Datatype CWEnull to Duration Map"
-* title = "Datatype CWEnull to Duration Map"
+Title: "Datatype CWE to Duration Map"
+* title = "Datatype CWE to Duration Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Duration Data Type."
 * id = "datatype-cwe-to-duration"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-to-duration"
@@ -10,7 +10,7 @@ Title: "Datatype CWEnull to Duration Map"
 * name = "DatatypeCWEToDuration"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -62,5 +62,3 @@ Title: "Datatype CWEnull to Duration Map"
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "duration"
-* group.element[1].target.product[0].property = "antlr"
-* group.element[1].target.product[0].value = "IF CWE.1 IS NOT VALUED"

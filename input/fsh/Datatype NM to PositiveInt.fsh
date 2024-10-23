@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ NM[PositiveInt] - Sheet1.csv
 Instance: DatatypeNMToPositiveInt
 InstanceOf: ConceptMap
-Title: "Datatype NMnull to PositiveInt Map"
-* title = "Datatype NMnull to PositiveInt Map"
+Title: "Datatype NM to PositiveInt Map"
+* title = "Datatype NM to PositiveInt Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype NM to the FHIR PositiveInt Data Type."
 * id = "datatype-nm-to-positiveint"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-nm-to-positiveint"
@@ -10,7 +10,7 @@ Title: "Datatype NMnull to PositiveInt Map"
 * name = "DatatypeNMToPositiveInt"
 * status = #active
 * experimental = true
-* date = "2024-10-21"
+* date = "2024-10-23"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -39,5 +39,3 @@ Title: "Datatype NMnull to PositiveInt Map"
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "$value"
-* group.element[0].target.product[0].property = "narrative"
-* group.element[0].target.product[0].value = "If positive"
