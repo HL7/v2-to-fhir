@@ -1,14 +1,27 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
+0,,,,,,,,,clinicalStatus.coding.code,,code,0,1,,,"""active""",,"While .clinicalStatus is not required, constraint ait-1 (AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error.) does necessitate populating this element in the map as it's not possible to infer a verificationStatus of ""entered-in-error"" based on the data in IAM."
+0,,,,,,,,,clinicalStatus.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical""",,
 1,IAM-1,Set ID - IAM,SI,1,1,,,,,,,,,,,,,
-2,IAM-2,Allergen Type Code,CWE,0,1,,,,category,,code,0,-1,CWE[Code],AllergyCategory,,,
-2,IAM-2,Allergen Type Code,CWE,0,1,,,,type,,code,0,1,CWE[Code],AllergyType,,,
+2,IAM-2,Allergen Type Code,CWE,0,1,,,,category,,code,0,-1,CWE[code],AllergenType[AllergyIntoleranceCategory],,,"The FHIR table has a ""required"" binding. Do we need to expand the values in the FHIR table?
+
+Could other be used for:
+Miscellaneous allergy
+Miscellaneous contraindication
+Animal Allergy
+
+HL70127 is a user defined table"
+2,IAM-2,Allergen Type Code,CWE,0,1,,,,category.extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/alternate-codes""",,
+2,IAM-2,Allergen Type Code,CWE,0,1,,,,category.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergenType[AllergyIntoleranceOriginalCategory],,,
+2,IAM-2,Allergen Type Code,CWE,0,1,,,,type,,code,0,1,CWE[code],AllergyType,,,
 3,IAM-3,Allergen Code/Mnemonic/Description,CWE,1,1,,,,code[1],,CodeableConcept,0,1,CWE[CodeableConcept],,,,
-4,IAM-4,Allergy Severity Code,CWE,0,1,,,,reaction.severity,,code,0,1,CWE[Code],AllergySeverity,,,
-4,IAM-4,Allergy Severity Code,CWE,0,1,,,,criticality.extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/alternate-codes""",,
-4,IAM-4,Allergy Severity Code,CWE,0,1,,,,criticality.extension[1].valueCodeableConcept,,CodeableConcept,1,1,,,,,
+4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was not used equivalent to criticality,reaction.severity,,code,0,1,CWE[Code],AllergySeverity[AllergryIntolerance.reaction.severity],,,
+4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality,,code,0,1,CWE[code],AllergySeverity[AllergyIntolerance.criticality],,,"Note that AllergyIntolerance.reaction.severity is available in FHIR but from a base standard perspective that is actually not the most appropriate and would require that AL1-6 is valued as well.  However, a local implementation may have used vocabulary that better fits AllergyIntolerance.reaction.severity and should then consider that instead as a local variation.  Note that the .reaction though is at a particular time, while .criticality is an overall assement that matches HL7 v2 generally better."
+4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality.extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/alternate-codes""",,
+4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergyTyp[AllergyIntolerance.criticality-original],,,
 5,IAM-5,Allergy Reaction Code,ST,0,1,,,,reaction.manifestation.text,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
+5,IAM-5,Allergy Reaction Code,ST,0,1,,,,,,,,,,,,,
 6,IAM-6,Allergy Action Code,CNE,1,1,,,,,,,,,,,,,
 7,IAM-7,Allergy Unique Identifier,EI,0,1,,,,identifier,,identifier,0,-1,EI[Identifier-Extension],,,,
 8,IAM-8,Action Reason,ST,0,1,,,,,,,,,,,,,

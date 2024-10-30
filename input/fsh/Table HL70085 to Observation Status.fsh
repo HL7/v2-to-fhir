@@ -1,4 +1,4 @@
-// HL7 Concept Map_ ObservationStatus - Sheet1.csv
+// HL7 Concept Map_ ObservationResultStatusCodesInterpretation - Sheet1.csv
 Instance: TableHL70085ToObservationStatus
 InstanceOf: ConceptMap
 Title: "Table HL70085 to Observation Status Map"
@@ -10,7 +10,7 @@ Title: "Table HL70085 to Observation Status Map"
 * name = "TableHL70085ToObservationStatus"
 * status = #active
 * experimental = true
-* date = "2024-10-23"
+* date = "2024-10-30"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

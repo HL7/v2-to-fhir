@@ -2,7 +2,7 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 0,RXO,,,,,,,,"intent=""original-order""",,code,,,,,,,
-1,RXO-1,Requested Give Code,CWE,0,1,,,,medication(Medication.code),,CodeableConcept,1,,CWE[CodeableConcept],RequestedGiveCode,,,
+1,RXO-1,Requested Give Code,CWE,0,1,,,,medication(Medication.code),,CodeableConcept,1,,CWE[CodeableConcept],,,,
 2,RXO-2,Requested Give Amount - Minimum,NM,0,1,,,,dosageInstruction.doseAndRate[1].doseRange.low.value,,decimal,,,,,,,
 2,RXO-2,Requested Give Amount - Minimum,NM,0,1,,,,dosageInstruction.doseAndRate[1].type,,,,,,,"""ordered""",,
 3,RXO-3,Requested Give Amount - Maximum,NM,0,1,,,,dosageInstruction.doseAndRate[1].doseRange.high.value,,decimal,,,,,,,

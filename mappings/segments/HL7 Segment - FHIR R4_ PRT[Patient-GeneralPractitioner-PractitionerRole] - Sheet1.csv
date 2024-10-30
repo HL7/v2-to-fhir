@@ -2,7 +2,7 @@ HL7 v2,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,Comments
 Display Sequence,Identifier,Name,Data Type,Cardinality,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Derived Mapping,,
 01.00.00,PRT-1,Participation Instance ID,EI,0..1,,,,,,,,,,,,
-02.00.00,PRT-2,Action Code,ID,1..1,,,if mapped to a restful service to progress the message.,Operation,,,,,Operation,,,
+02.00.00,PRT-2,Action Code,ID,1..1,,,if mapped to a restful service to progress the message.,Operation,,,,,SegmentActionCode,,,
 03.00.00,PRT-3,Action Reason,CWE,0..1,,,,,,,,,,,,
 04.00.00,PRT-4,Role of Participation,CWE,1..1,,,,generalPractioner[PractitionerRole.code],,CodeableConcept,,CWE[CodeableConcept],Participation,,,
 05.00.00,PRT-5,Person,XCN,0..*,,,,generalPractitioner[PractitionerRole],,DomainResource,,XCN[PractitionerRole],,,,

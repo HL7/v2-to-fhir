@@ -10,7 +10,7 @@ Title: "Table HL70127 to Allergy Intolerance Category Map"
 * name = "TableHL70127ToAllergyIntoleranceCategory"
 * status = #active
 * experimental = true
-* date = "2024-10-23"
+* date = "2024-10-30"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -23,7 +23,7 @@ Title: "Table HL70127 to Allergy Intolerance Category Map"
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70127 to Allergy Intolerance Category.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kRIGg82psj97HFzQx5-t34LbHBzhAQzFqM1BT2uNVSI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kRIGg82psj97HFzQx5-t34LbHBzhAQzFqM1BT2uNVSI/edit?gid=0#gid=0"
 * group.element[0].code = #DA
 * group.element[0].display = "Drug allergy"
 * group.element[0].target.equivalence = #equivalent

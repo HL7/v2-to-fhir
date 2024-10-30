@@ -10,7 +10,7 @@ Title: "Segment PV1 to EncounterHistory Map"
 * name = "SegmentPV1ToEncounterHistory"
 * status = #active
 * experimental = true
-* date = "2024-10-23"
+* date = "2024-10-30"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -162,7 +162,7 @@ Title: "Segment PV1 to EncounterHistory Map"
 * group.element[8].extension[0].extension[2].valueInteger = -1
 * group.element[8].display = "Other Healthcare Provider"
 * group.element[8].target.equivalence = #equivalent
-* group.element[8].target.code = #participant[5].type.coding.system
+* group.element[8].target.code = #participant.type.coding.system
 * group.element[8].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].target.extension[0].extension[0].url = "type"
 * group.element[8].target.extension[0].extension[0].valueCode = #"uri"
@@ -170,7 +170,7 @@ Title: "Segment PV1 to EncounterHistory Map"
 * group.element[8].target.extension[0].extension[1].valueInteger = 0
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
-* group.element[8].target.display = "participant[5].type.coding.system"
+* group.element[8].target.display = "participant.type.coding.system"
 * group.element[9].code = #PV1-52
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -181,7 +181,7 @@ Title: "Segment PV1 to EncounterHistory Map"
 * group.element[9].extension[0].extension[2].valueInteger = -1
 * group.element[9].display = "Other Healthcare Provider"
 * group.element[9].target.equivalence = #equivalent
-* group.element[9].target.code = #participant[5].type.text
+* group.element[9].target.code = #participant.type.text
 * group.element[9].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].target.extension[0].extension[0].url = "type"
 * group.element[9].target.extension[0].extension[0].valueCode = #"string"

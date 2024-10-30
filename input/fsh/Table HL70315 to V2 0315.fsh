@@ -1,4 +1,4 @@
-// HL7 Concept Map_ LivingWill - Sheet1.csv
+// HL7 Concept Map_ LivingWillCode - Sheet1.csv
 Instance: TableHL70315ToV20315
 InstanceOf: ConceptMap
 Title: "Table HL70315 to V2 0315 Map"
@@ -10,7 +10,7 @@ Title: "Table HL70315 to V2 0315 Map"
 * name = "TableHL70315ToV20315"
 * status = #active
 * experimental = true
-* date = "2024-10-23"
+* date = "2024-10-30"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -23,7 +23,7 @@ Title: "Table HL70315 to V2 0315 Map"
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70315 to V2 0315.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13BsPLL6w_cY2WpvpikQcwD1T4X5Vg7cm94BNNwLwp5Q/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13BsPLL6w_cY2WpvpikQcwD1T4X5Vg7cm94BNNwLwp5Q/edit?gid=0#gid=0"
 * group.element[0].code = #Y
 * group.element[0].display = "Yes, patient has a living will"
 * group.element[0].target.equivalence = #equivalent

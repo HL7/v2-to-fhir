@@ -1,0 +1,9 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping (IS, ID, CE, CNE, CWE)",Assignment,,
+1,SPS.1,Specimen source name or code,CE,0,1,,,,type,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenType,,,
+2,SPS.2,Additives,CWE,0,1,,,,container.additiveCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],Additive/Preservative,,,
+3,SPS.3,Freetext,TX,0,1,,,,note(Annotation.text),,markdown,1,1,,,,,
+4,SPS.4,Body Site,CE,0,1,,,,collection.bodySite,,CodeableConcept,0,1,CWE[CodeableConcept],BodySite,,,
+5,SPS.5,Site modifier,CE,0,1,,,,,,,,,,,,,
+6,SPS.6,Collection method modifier code,CE,0,1,,,,condition,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenCondition,,,Note that in v2.5.1 only F (Frozen) and R(Refrigirated) are indicated without a full table.  SpecimenCondition would be used in more curent case and is referenced if somebody used that table already.
+7,SPS.7,Specimen role,CE,0,1,,,,,,,,,,,,,

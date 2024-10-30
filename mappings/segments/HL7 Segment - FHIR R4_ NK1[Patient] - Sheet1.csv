@@ -16,7 +16,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 12,NK1-12,Next of Kin / Associated Parties Employee Number,CX,0,1,,,,,,,,,,,,,
 13,NK1-13,Organization Name - NK1,XON,0,-1,,,,contact.organization[1](Organization),,Reference(Organization),0,1,XON[Organization],,,,
 14,NK1-14,Marital Status,CWE,0,1,,,,,,,,,,,,,
-15,NK1-15,Administrative Sex,CWE,0,1,,,,contact.gender,,code,0,1,CWE[Code],Gender,,,
+15,NK1-15,Administrative Sex,CWE,0,1,,,,contact.gender,,code,0,1,CWE[Code],AdministrativeSex,,,
 16,NK1-16,Date/Time of Birth,DTM,0,1,,,,,,,,,,,,,
 17,NK1-17,Living Dependency,CWE,0,-1,,,,,,,,,,,,,
 18,NK1-18,Ambulatory Status,CWE,0,-1,,,,,,,,,,,,,

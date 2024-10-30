@@ -3,7 +3,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,ROL-1,Role Instance ID,EI,0,1,,,,generalPractitioner(PractitionerRole.identifier),,Identifier,0,-1,EI[Identifier-Extension],,,,
 2,ROL-2,Action Code,ID,1,1,,,if mapped to a restful service to progress the message.,,,,,,,,,,
-3,ROL-3,Role-ROL,CWE,1,1,,,,generalPractitioner(PractitionerRole.code),,CodeableConcept,,,CWE[CodeableConcept],Role,,,
+3,ROL-3,Role-ROL,CWE,1,1,,,,generalPractitioner(PractitionerRole.code),,CodeableConcept,,,CWE[CodeableConcept],ProviderRole,,,
 4,ROL-4,Role Person,XCN,1,-1,,,,generalPractitioner(PractitionerRole.practitioner),,Reference(Practitioner),,,XCN[Practitioner],,,,
 5,ROL-5,Role Begin Date/Time,DTM,0,1,,,,generalPractitioner(PractitionerRole.period.start),,dateTime,,,,,,,
 6,ROL-6,Role End Date/Time,DTM,0,1,,,,generalPractitioner(PractitionerRole.period.end),,dateTime,,,,,,,

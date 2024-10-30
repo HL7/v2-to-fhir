@@ -1,6 +1,0 @@
-HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-2,Parent,HL70549,,,,PRN,,Parent,http://terminology.hl7.org/CodeSystem/v3-RoleCode,,
-3,Next of Kin,HL70549,,,,N,,Next-of-Kin,http://terminology.hl7.org/CodeSystem/v2-0131,,
-4,Durable Power of Attorney in Healthcare Affairs,HL70549,,,,O,,Other,http://terminology.hl7.org/CodeSystem/v2-0131,,
-5,Conservator,HL70549,,,,O,,Other,http://terminology.hl7.org/CodeSystem/v2-0131,,

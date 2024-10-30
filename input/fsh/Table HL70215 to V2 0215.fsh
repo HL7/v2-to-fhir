@@ -1,4 +1,4 @@
-// HL7 Concept Map_ VisitPublicityCode - Sheet1.csv
+// HL7 Concept Map_ PublicityCode - Sheet1.csv
 Instance: TableHL70215ToV20215
 InstanceOf: ConceptMap
 Title: "Table HL70215 to V2 0215 Map"
@@ -10,7 +10,7 @@ Title: "Table HL70215 to V2 0215 Map"
 * name = "TableHL70215ToV20215"
 * status = #active
 * experimental = true
-* date = "2024-10-23"
+* date = "2024-10-30"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

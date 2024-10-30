@@ -10,7 +10,7 @@ Title: "Segment RXR to MedicationRequest Map"
 * name = "SegmentRXRToMedicationRequest"
 * status = #active
 * experimental = true
-* date = "2024-10-23"
+* date = "2024-10-30"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

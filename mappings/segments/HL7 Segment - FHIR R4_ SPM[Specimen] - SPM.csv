@@ -8,7 +8,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 3,SPM-3,Specimen Parent IDs,EIP,0,-1,,,,parent[1](Specimen.identifier[2]),,Identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,
 4,SPM-4,Specimen Type,CWE,1,1,,,,type,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenType,,,
 5,SPM-5,Specimen Type Modifier,CWE,0,-1,,,,,,,,,,,,,
-6,SPM-6,Specimen Additives,CWE,0,-1,,,,container.additiveCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],Addition/Preservative,,,
+6,SPM-6,Specimen Additives,CWE,0,-1,,,,container.additiveCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],Additive/Preservative,,,
 7,SPM-7,Specimen Collection Method,CWE,0,1,,,,collection.method,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenCollectionMethod,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)
 8,SPM-8,Specimen Source Site,CWE,0,1,,,,collection.bodySite,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenSourceSite,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)
 9,SPM-9,Specimen Source Site Modifier,CWE,0,-1,,,,,collection.extension??-bodySiteModifier,CodeableConcept,0,-1,CWE[CodeableConcept],SpecimenSourceTypeModifier,,,"Note that when using SNOMED codes in SPM-8, these are covered."
@@ -23,7 +23,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 17,SPM-17,Specimen Collection Date/Time,DR,0,1,IF SPM-17.2 NOT VALUED,,,collection.collectedDateTime,,,,,DR[dateTime],,,,
 18,SPM-18,Specimen Received Date/Time,DTM,0,1,,,,receivedTime,,dateTime,0,1,,,,,
 19,SPM-19,Specimen Expiration Date/Time,DTM,0,1,,,,,,,,,,,,,
-20,SPM-20,Specimen Availability,ID,0,1,,,,status,,code,0,1,,Yes/No,,,
+20,SPM-20,Specimen Availability,ID,0,1,,,,status,,code,0,1,,Yes/NoIndicator,,,
 21,SPM-21,Specimen Reject Reason,CWE,0,-1,,,,,,,,,,SpecimenRejectReason,,,"This should be mapped top the correct ServiceRequest.dataAbsentReason as the speciman is rejected in the context of a particular test given the specimen condition.  Since the placement of the SPM in the message is not always clear as to which ORC/OBR it relates to, we cannot provide specific mapping beyond the vocabulary map."
 22,SPM-22,Specimen Quality,CWE,0,1,,,,,,,,,,,,,
 23,SPM-23,Specimen Appropriateness,CWE,0,1,,,,,,,,,,,,,

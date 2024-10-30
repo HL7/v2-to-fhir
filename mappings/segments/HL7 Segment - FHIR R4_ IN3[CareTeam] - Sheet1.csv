@@ -4,7 +4,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 1,IN3-1,Set ID - IN3,SI,1,1,,,,,,,,,,,,,
 2,IN3-2,Certification Number,CX,0,1,,,,,,,,,,,,,
 3,IN3-3,Certified By,XCN,0,-1,,,,,,,,,,,,,
-4,IN3-4,Certification Required,ID,0,1,,,,,,,,,,Yes/No,,,
+4,IN3-4,Certification Required,ID,0,1,,,,,,,,,,Yes/NoIndicator,,,
 5,IN3-5,Penalty,MOP,0,1,,,,,,,,,,,,,
 6,IN3-6,Certification Date/Time,DTM,0,1,,,,,,,,,,,,,
 7,IN3-7,Certification Modify Date/Time,DTM,0,1,,,,,,,,,,,,,

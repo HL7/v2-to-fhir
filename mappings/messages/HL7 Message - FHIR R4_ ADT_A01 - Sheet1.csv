@@ -1,4 +1,4 @@
-HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
+IN,,,,,,Condition (IF True),,,HL7 FHIR,,,,Comments
 Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,Primary Target,Segment Map,References,,
 1,ADT_A01.MSH,MSH,Message Header,1,1,,,,Bundle,MSH[Bundle],,,
 1,ADT_A01.MSH,MSH,Message Header,1,1,,,,MessageHeader[1],MSH[MessageHeader],,,Processing of the MSH segment results in the creation of a new MessageHeader resource.

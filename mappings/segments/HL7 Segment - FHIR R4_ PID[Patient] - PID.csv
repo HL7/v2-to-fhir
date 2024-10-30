@@ -11,7 +11,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 7,PID-7,Date/Time of Birth,DTM,0,1,,,,birthDate,,date,0,1,,,,,"PROPOSAL MOVE TO IG IMPLEMENTATION GUIDANCE SECTION: Use ISO 8601 to establish the re-formatting from HL7 v2 data type to HL7 FHIR data type, particularly when mapping a platform datetime to platform date.  ADD OTHER REFERENCES ON HOW TO ACHIEVE THESE CONVERSIONS in Java, CSHarp, etc., etc."
 7,PID-7,Date/Time of Birth,DTM,0,1,IF PID-7 LENGTH GREATER THAN 8,,,birthDate.extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-birthTime""",,
 7,PID-7,Date/Time of Birth,DTM,0,1,IF PID-7 LENGTH GREATER THAN 8,,,birthDate.extension[1].valueDateTime,,dateTime,1,1,,,,,
-8,PID-8,Administrative Sex,CWE,0,1,,,,gender,,code,0,1,CWE[code],Gender,,,
+8,PID-8,Administrative Sex,CWE,0,1,,,,gender,,code,0,1,CWE[code],AdministrativeSex,,,
 9,PID-9,Patient Alias,XPN,0,-1,,,,name[2],,HumanName,0,-1,XPN[HumanName],,,,
 10,PID-10,Race,CWE,0,-1,,,"PID-10 is may map different based on local requirements and should use the local extension, e.g., US = US Core Race Extension, AUS = indiginous extension.",,local implementation,,,,,,,,"For an international document, it may not be possible to come up with a FHIR value set for race.  Therefore the appropriate extension for the local implementation should be used based on preferably a country/realm specific extension, e.g., US Core Race Extension for the US or the Indiginous Extension for Australia."
 11,PID-11,Patient Address,XAD,0,-1,,,,address[1],,Address,0,-1,XAD[Address],,,,
@@ -23,7 +23,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 13,PID-13,Phone Number - Home,XTN,0,-1,IF PID-13.2 IS NOT VALUED,,,telecom[1].use,,,,,,,"""home""",,
 14,PID-14,Phone Number - Business,XTN,0,-1,,,,telecom[2],,ContactPoint,0,-1,XTN[ContactPoint],,,,
 14,PID-14,Phone Number - Business,XTN,0,-1,IF PID-14.2 IS NOT VALUED,,,telecom[2].use,,,,,,,"""work""",,
-15,PID-15,Primary Language,CWE,0,1,,,,communication.language,,CodeableConcept,0,-1,CWE[CodeableConcept],Language,,,"During implementation, if you know that the value in PID-15 is the preferred patient language, then Patient.communication.preferred can be set to ""true""."
+15,PID-15,Primary Language,CWE,0,1,,,,communication.language,,CodeableConcept,0,-1,CWE[CodeableConcept],PrimaryLanguage,,,"During implementation, if you know that the value in PID-15 is the preferred patient language, then Patient.communication.preferred can be set to ""true""."
 16,PID-16,Marital Status,CWE,0,1,,,,maritalStatus,,CodeableConcept,0,1,CWE[CodeableConcept],MaritalStatus,,,
 17,PID-17,Religion,CWE,0,1,,,,extension[2].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-religion""",,
 17,PID-17,Religion,CWE,0,1,,,,extension[2].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],Religion,,,
@@ -38,7 +38,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 22,PID-22,Ethnic Group,CWE,0,-1,,,"If PID-22 is for administrative purposes use, then use your local extension, e.g., for US = US Core Ethnicity.",,local implementation,,,,,,,,"For an international document, it may not be possible to come up with a FHIR value set for ethnic group.  Therefore the appropriate extension for the local implementation should be used based on preferably a country/realm specific extension, e.g., US Core Ethnicity for the US."
 23,PID-23,Birth Place,ST,0,1,,,,extension[3].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-birthPlace""",,
 23,PID-23,Birth Place,ST,0,1,,,,extension[3].valueAddress.text,,string,0,1,,,,,
-24,PID-24,Multiple Birth Indicator,ID,0,1,IF PID-25 NOT VALUED,,,multipleBirthBoolean,,boolean,0,1,ID[Boolean],Yes/No,,,
+24,PID-24,Multiple Birth Indicator,ID,0,1,IF PID-25 NOT VALUED,,,multipleBirthBoolean,,boolean,0,1,ID[Boolean],Yes/NoIndicator,,,
 25,PID-25,Birth Order,NM,0,1,,,,multipleBirthInteger,,integer,0,1,,,,,
 26,PID-26,Citizenship,CWE,0,-1,,,,extension[4].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/patient-citizenship""",,
 26,PID-26,Citizenship,CWE,0,-1,,,,extension[4].extension[1].url,,uri,1,1,,,"""code""",,
@@ -48,8 +48,8 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 28,PID-28,Nationality,CWE,0,1,,,,extension[5].extension[1].url,,uri,1,1,,,"""code""",,
 28,PID-28,Nationality,CWE,0,1,,,,extension[5].extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],,,,The standard extension does not include a value set
 29,PID-29,Patient Death Date and Time,DTM,0,1,,,,deceasedDateTime,,dateTime,0,1,,,,,
-30,PID-30,Patient Death Indicator,ID,0,1,IF PID-29 NOT VALUED,,,deceasedBoolean,,boolean,0,1,ID[Boolean],Yes/No,,,
-31,PID-31,Identity Unknown Indicator,ID,0,1,,,,,extension??-identityUnknown,boolean,0,1,ID[Boolean],Yes/No,,,
+30,PID-30,Patient Death Indicator,ID,0,1,IF PID-29 NOT VALUED,,,deceasedBoolean,,boolean,0,1,ID[Boolean],Yes/NoIndicator,,,
+31,PID-31,Identity Unknown Indicator,ID,0,1,,,,,extension??-identityUnknown,boolean,0,1,ID[Boolean],Yes/NoIndicator,,,
 32,PID-32,Identity Reliability Code,CWE,0,-1,,,,,,,,,,,,,
 33,PID-33,Last Update Date/Time,DTM,0,1,,,,,,,,,,,,,
 34,PID-34,Last Update Facility,HD,0,1,,,,,,,,,,,,,

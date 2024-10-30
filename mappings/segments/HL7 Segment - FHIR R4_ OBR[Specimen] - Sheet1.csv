@@ -17,7 +17,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 13,OBR-13,Relevant Clinical Information,CWE,0,-1,,,If information represents fasting status,collection.fastingStatusCodeableConcept,,,,,,,,,
 13,OBR-13,Relevant Clinical Information,CWE,0,-1,,,If information represents fasting duration,collection.fastingStatusDuration,,,,,,,,,
 14,OBR-14,Specimen Received Date/Time *,TS,0,1,,,,receivedTime,,dateTime,0,1,,,,,
-15,OBR-15,Specimen Source,CM,0,1,,,,$this,,,,,CM[Specimen-Source],,,,
+15,OBR-15,Specimen Source,SPS,0,1,,,,$this,,,,,SPS[Specimen-Source],,,,
 16,OBR-16,Ordering Provider,XCN,0,-1,,,,,,,,,,,,,
 17,OBR-17,Order Callback Phone Number,XTN,0..2,2,,,,,,,,,,,,,
 18,OBR-18,Placer Field 1,ST,0,1,,,,,,,,,,,,,

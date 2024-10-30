@@ -8,7 +8,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 4,PRT-4,Role of Participation,CWE,1,1,,,,relationship,,CodeableConcept,0,-1,CWE[CodeableConcept],Participation,,,
 5,PRT-5,Person,XCN,0,-1,,,,$this,,,,,XCN[RelatedPerson],,,,
 6,PRT-6,Person Provider Type,CWE,0,1,,,,,extension??-providerType,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
-7,PRT-7,Organization Unit Type,CWE,0,1,,,,,extension??-organizationType,CodeableConcept,0,1,CWE[CodeableConcept],OrganizationUnitType,,,
+7,PRT-7,Organization Unit Type,CWE,0,1,,,,,extension??-organizationType,CodeableConcept,0,1,CWE[CodeableConcept],ParticipantOrganizationUnitType,,,
 8,PRT-8,Organization,XON,0,-1,,,,,extension??-organization(Organization),Reference(Organization),0,1,XON[Organization],,,,
 9,PRT-9,Location,PL,0,-1,,,,,extension??-location(Location),Reference(Location),0,1,PL[Location],,,,
 10,PRT-10,Device,EI,0,-1,,,,,,,,,,,,,

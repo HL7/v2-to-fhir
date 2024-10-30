@@ -11,7 +11,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 3,OBR-3,Filler Order Number,EI,0,1,IF ORC-3 NOT VALUED,,,identifier[2].type.coding.code,,code,0,1,,,"""FILL""",,
 3,OBR-3,Filler Order Number,EI,0,1,IF ORC-3 NOT VALUED,,,identifier[2].type.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/v2-0203""",,
 4,OBR-4,Universal Service Identifier,CWE,1,1,,,,code,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
-5,OBR-5,Priority,ID,0,1,,,,priority,,code,0,1,ID[code],Priority,,,
+5,OBR-5,Priority,ID,0,1,,,,priority,,code,0,1,ID[code],ExtendedPriorityCodes,,,
 6,OBR-6,Requested Date/Time,TS,0,1,,,,occurrenceDateTime,,dateTime,0,1,,,,,
 7,OBR-7,Observation Date/Time,DTM,0,1,,,,,,,,,,,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)
 8,OBR-8,Observation End Date/Time,DTM,0,1,,,,,,,,,,,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)

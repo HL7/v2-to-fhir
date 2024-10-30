@@ -37,3 +37,6 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 23,MSH-23,Receiving Responsible Organization,XON,0,1,,,,,,,,,,,,,
 24,MSH-24,Sending Network Address,HD,0,1,,,,,,,,,,,,,
 25,MSH-25,Receiving Network Address,HD,0,1,,,,,,,,,,,,,
+26,MSH-26,Security Classification Tag,CWE,0,1,,,,,,,,,,,,,
+27,MSH-27,Security Handling Instructions,CWE,0,-1,,,,,,,,,,,,,
+28,MSH-28,Special Access Restriction Instructions,ST,0,-1,,,,,,,,,,,,,

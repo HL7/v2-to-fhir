@@ -11,7 +11,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 6,TQ1-6,Service Duration,CQ,0,1,IF TQ1-7 NOT VALUED AND TQ1-8 VALUED,,,occurneceTiming.boundsPeriod.start,,dateTime,0,1,,,occurrenceTiming.boundPeriod.end - TQ1-6,,
 7,TQ1-7,Start date/time,DTM,0,1,,,,dosageInstruction.timing.repeat.boundsPeriod.start,,dateTime,0,1,,,,,
 8,TQ1-8,End date/time,DTM,0,1,,,,dosageInstruction.timing.repeat.boundsPeriod.end,,dateTime,0,1,,,,,
-9,TQ1-9,Priority,CWE,0,-1,,,,priority,,code,0,1,,Priority,,,
+9,TQ1-9,Priority,CWE,0,-1,,,,priority,,code,0,1,,ExtendedPriorityCodes,,,
 10,TQ1-10,Condition text,TX,0,1,,,,dosageInstruction.additionalInstruction.text,,string,0,-1,,,,,
 11,TQ1-11,Text instruction,TX,0,1,,,,text,,string,0,1,,,,,
 12,TQ1-12,Conjunction,ID,0,1,,,,,extension??-conjunction,,,,,,,,

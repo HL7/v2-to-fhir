@@ -36,11 +36,11 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.1  NOT EQUALS ""<>"" AND OBX-5.3 IN ("":"", ""/"")",,,valueRatio[1].numerator,,Quantity,,,CWE[Quantity],,,,
 6,OBX-6,Units,CWE,0,1,"IF OBX-2 EQUALS ""SN"" AND OBX-5.1  NOT EQUALS ""<>"" AND OBX-5.3 IN ("":"", ""/"")",,,valueRatio[1].denominator,,Quantity,,,CWE[Quantity],,,,
 7,OBX-7,References Range,ST,0,1,,,,referenceRange.text ,,string,0,-1,,,,,"If OBX-7 is sufficiently parseable, then the low, high, type, appliesTo, and/or age may be used."
-8,OBX-8,Interpretation Codes,CWE,0,-1,,,,interpretation,,CodeableConcept,0,-1,CWE[CodeableConcept],InterpretationCode,,,
+8,OBX-8,Interpretation Codes,CWE,0,-1,,,,interpretation,,CodeableConcept,0,-1,CWE[CodeableConcept],InterpretationCodes,,,
 9,OBX-9,Probability,NM,0,1,,,,,,,,,,,,,
 10,OBX-10,Nature of Abnormal Test,ID,0,-1,,,,extension[2].uri,,uri,0,-1,,,"""http://hl7.org/fhir/StructureDefinition/observation-nature-of-abnormal-test""",,
 10,OBX-10,Nature of Abnormal Test,ID,0,-1,,,,extension[2].valueCodeableConcept,,CodeableConcept,0,-1,CWE[CodeableConcept],NatureOfAbnormalTesting,,,
-11,OBX-11,Observation Result Status,ID,1,1,,,,status,,code,1,1,,ObservationStatus,,,
+11,OBX-11,Observation Result Status,ID,1,1,,,,status,,code,1,1,,ObservationResultStatusCodesInterpretation,,,
 11,OBX-11,Observation Result Status,ID,1,1,"IF OBX-11 IS ""X""",,,status.extension[1].url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/alternate-codes""",,
 11,OBX-11,Observation Result Status,ID,1,1,"IF OBX-11 IS ""X""",,,status.extension[1].valueCodeableConcept.coding.code,,CodeableConcept,,,,,"""X""",,
 11,OBX-11,Observation Result Status,ID,1,1,"IF OBX-11 IS ""X""",,,status.extension[1].valueCodeableConcept.coding.system,,string,,,,,"""http://terminology.hl7.org/CodeSystem/v2-0085""",,

@@ -1,4 +1,4 @@
-// HL7 Concept Map_ TelecomUseCode - Sheet1.csv
+// HL7 Concept Map_ TelecommunicationUseCode - Sheet1.csv
 Instance: TableHL70201ToContactPointUse
 InstanceOf: ConceptMap
 Title: "Table HL70201 to Contact Point Use Map"
@@ -10,7 +10,7 @@ Title: "Table HL70201 to Contact Point Use Map"
 * name = "TableHL70201ToContactPointUse"
 * status = #active
 * experimental = true
-* date = "2024-10-23"
+* date = "2024-10-30"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

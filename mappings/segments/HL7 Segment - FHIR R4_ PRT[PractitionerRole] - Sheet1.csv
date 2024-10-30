@@ -8,7 +8,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 4,PRT-4,Role of Participation,CWE,1,1,,,,code,,CodeableConcept,0,-1,CWE[CodeableConcept],Participation,,,
 5,PRT-5,Person,XCN,0,-1,,,,practitioner[Practitioner],,Reference(Practitioner),0,1,XCN[Practitioner],,,,"While PRT may contain multiple persons within one PRT, we believe this to be rare, and when it happens, the implementer needs to determine how to best resolve that."
 6,PRT-6,Person Provider Type,CWE,0,1,,,,specialty,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
-7,PRT-7,Organization Unit Type,CWE,0,1,,,,organization[Organization.type],,CodeableConcept,0,1,CWE[CodeableConcept],OrganizationUnitType,,,
+7,PRT-7,Organization Unit Type,CWE,0,1,,,,organization[Organization.type],,CodeableConcept,0,1,CWE[CodeableConcept],ParticipantOrganizationUnitType,,,
 8,PRT-8,Organization,XON,0,-1,,,,organization[Organization],,Reference(Organization),0,1,XON[Organization],,,,"While PRT may contain multiple organizations within one PRT, we believe this to be rare, and when it happens, the implementer needs to determine how to best resolve that."
 9,PRT-9,Location,PL,0,-1,,,,location[Location],,Reference(Location),0,1,PL[Location],,,,"While PRT may contain multiple locations within one PRT, we believe this to be rare, and when it happens, the implementer needs to determine how to best resolve that."
 10,PRT-10,Device,EI,0,-1,,,,,,,,,,,,,

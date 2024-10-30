@@ -7,9 +7,9 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 4,SCH-4,Placer Group Number,EI,0,1,,,,,,,,,,,,,
 5,SCH-5,Schedule ID,CWE,0,1,,,,,,,,,,,,,
 6,SCH-6,Event Reason,CWE,1,1,,,,,,,,,,,,,
-7,SCH-7,Appointment Reason,CWE,0,1,,,"Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType.",reasonCode[1],,CodeableConcept,0,-1,CWE[CodeableConcept],AppointmentReason,,,
-7,SCH-7,Appointment Reason,CWE,0,1,,,"Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType.",appointmentType[1],,CodeableConcept,0,1,CWE[CodeableConcept],AppointmentType,,,"Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
-8,SCH-8,Appointment Type,CWE,0,1,,,The mapping of SCH-8 to Appointment.appointmentType will depend on the codes being received in SCH-7 and SCH-8,appointmentType[1],,CodeableConcept,0,1,CWE[CodeableConcept],AppointmentType,,,"Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
+7,SCH-7,Appointment Reason,CWE,0,1,,,"Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType.",reasonCode[1],,CodeableConcept,0,-1,CWE[CodeableConcept],AppointmentReasonCodes,,,
+7,SCH-7,Appointment Reason,CWE,0,1,,,"Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType.",appointmentType[1],,CodeableConcept,0,1,CWE[CodeableConcept],AppointmentTypeCodes,,,"Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
+8,SCH-8,Appointment Type,CWE,0,1,,,The mapping of SCH-8 to Appointment.appointmentType will depend on the codes being received in SCH-7 and SCH-8,appointmentType[1],,CodeableConcept,0,1,CWE[CodeableConcept],AppointmentTypeCodes,,,"Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
 9,SCH-9,Appointment Duration,NM,0,-1,,,If SCH-10 indicates units of minutes,minutesDuration[1],,positiveInt,0,1,,,,,
 10,SCH-10,Appointment Duration Units,CNE,0,-1,,,,,,,,,,,,,
 11,SCH-11,Appointment Timing Quantity,TQ,1,-1,,,,$this,,,,,TQ[Appointment],,,,
@@ -32,6 +32,6 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 22,SCH-22,Entered By Location,PL,0,1,,,,,,,,,,,,,
 23,SCH-23,Parent Placer Appointment ID,EI,0,1,,,,,,,,,,,,,
 24,SCH-24,Parent Filler Appointment ID,EI,0,1,,,,,,,,,,,,,
-25,SCH-25,Filler Status Code,CWE,0,1,,,,status,,code,1,1,CWE[code],FillerStatus[Appointment],,,
+25,SCH-25,Filler Status Code,CWE,0,1,,,,status,,code,1,1,CWE[code],FillerStatusCodes[Appointment],,,
 26,SCH-26,Placer Order Number,EI,0,-1,,,,basedOn(ServiceRequest),,Reference(ServiceRequest),,,,,,,"If valued, make sure that Appointment.basedOn is used to link to the ServiceRequest"
 27,SCH-27,Filler Order Number,EI,0,-1,,,,basedOn(ServiceRequest),,Reference(ServiceRequest),,,,,,,"If valued, make sure that Appointment.basedOn is used to link to the ServiceRequest"

@@ -11,7 +11,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 5,PD1-5,Student Indicator,CWE,0,1,,,,,,,,,,,,,
 6,PD1-6,Handicap,CWE,0,1,,,,,,,,,,,,,
 6,PD1-6,Handicap,CWE,,1,,,,,,,,,,,,,The FHIR extension does not include a value set
-7,PD1-7,Living Will Code,CWE,0,1,,,,valueCodeableConcept,,CodeableConcept,0,1,,LivingWill,,,
+7,PD1-7,Living Will Code,CWE,0,1,,,,valueCodeableConcept,,CodeableConcept,0,1,,LivingWillCode,,,
 8,PD1-8,Organ Donor Code,CWE,0,1,,,,,,,,,,,,,
 9,PD1-9,Separate Bill,ID,0,1,,,,,,,,,,,,,
 10,PD1-10,Duplicate Patient,CX,0,-1,,,,,,,,,,,,,

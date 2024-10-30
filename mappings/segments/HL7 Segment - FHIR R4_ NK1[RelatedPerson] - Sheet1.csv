@@ -9,7 +9,7 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 5,NK1-5,Phone Number,XTN,0,-1,,,,telecom[1],,ContactPoint,0,-1,XTN[ContactPoint],,,,"ContactPoint.use would likely be ""home"" or ""mobile"", but picked up from XTN.2"
 6,NK1-6,Business Phone Number,XTN,0,-1,,,,telecom[2],,ContactPoint,0,-1,XTN[ContactPoint],,,,
 6,NK1-6,Business Phone Number,XTN,0,-1,,,,telecom[2].use,,,,,,,"""work""",,
-7,NK1-7,Contact Role,CWE,0,1,,,,relationship[2],,CodeableConcept,0,-1,CWE[CodeableConcept],Relationship,,,"Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.
+7,NK1-7,Contact Role,CWE,0,1,,,,relationship[2],,CodeableConcept,0,-1,CWE[CodeableConcept],ContactRole,,,"Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.
 RelatedPerson.relationship is allowed to repeat and so can accept values from both NK1-3 and NK1-7
 See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPerson for further discussion"
 8,NK1-8,Start Date,DT,0,1,,,,period.start,,dateTime,0,1,,,,,
@@ -19,12 +19,12 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 12,NK1-12,Next of Kin / Associated Parties Employee Number,CX,0,1,,,,identifier[1]       ,,Identifier,0,-1,CX[Identifier],,,,
 13,NK1-13,Organization Name - NK1,XON,0,-1,,,,,,,,,,,,,Do we need to enhance the Organization resource to be able to serve as a next of kin or associated party?
 14,NK1-14,Marital Status,CWE,0,1,,,,,,,,,,,,,
-15,NK1-15,Administrative Sex,CWE,0,1,,,,gender,,code,0,1,CWE[Code],Gender,,,
+15,NK1-15,Administrative Sex,CWE,0,1,,,,gender,,code,0,1,CWE[Code],AdministrativeSex,,,
 16,NK1-16,Date/Time of Birth,DTM,0,1,,,,birthDate,,date,0,1,,,,,
 17,NK1-17,Living Dependency,CWE,0,-1,,,,,,,,,,,,,
 18,NK1-18,Ambulatory Status,CWE,0,-1,,,,,,,,,,,,,
 19,NK1-19,Citizenship,CWE,0,-1,,,,,,,,,,,,,
-20,NK1-20,Primary Language,CWE,0,1,,,,communication.language,,CodeableConcept,0,-1,CWE[CodeableConcept],Language,,,
+20,NK1-20,Primary Language,CWE,0,1,,,,communication.language,,CodeableConcept,0,-1,CWE[CodeableConcept],PrimaryLanguage,,,
 21,NK1-21,Living Arrangement,CWE,0,1,,,,,,,,,,,,,
 22,NK1-22,Publicity Code,CWE,0,1,,,,,,,,,,,,,
 23,NK1-23,Protection Indicator,ID,0,1,,,,,,,,,,,,,
