@@ -36,9 +36,10 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [PID](ConceptMap-segment-pid-to-appointment.html) - Patient Identification to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
 * [PID](ConceptMap-segment-pid-to-patient.html) - Patient Identification to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [PID[Patient]](ConceptMap-segment-pid-patient-to-provenance.html) - Patient Identification to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)
+* [PV1](ConceptMap-segment-pv1-to-coverage.html) - Patient Visit to FHIR [Coverage](http://hl7.org/fhir/R4/coverage.html)
 * [PV1](ConceptMap-segment-pv1-to-encounter.html) - Patient Visit to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
-* [PV1](ConceptMap-segment-pv1-to-encounterhistory.html) - Patient Visit to FHIR [EncounterHistory](http://hl7.org/fhir/R4/codesystem-encounterhistory.html)
 * [PV1](ConceptMap-segment-pv1-to-patient.html) - Patient Visit to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
+* [PV1[EncounterHistory]](ConceptMap-segment-pv1-encounterhistory-to-basic.html) - Patient Visit to FHIR [Basic](http://hl7.org/fhir/R4/basic.html)
 * [PV2](ConceptMap-segment-pv2-to-encounter.html) - Patient Visit - Additional Information to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 
 ### Chapter  4  Order Entry

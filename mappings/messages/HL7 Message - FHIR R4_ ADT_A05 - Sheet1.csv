@@ -33,7 +33,7 @@ Provenance[1].entity.role=""source""",,
 15.2,ADT_A05.NEXT_OF_KIN.OH3,[  OH3  ],Usual Work,0,1,,,,,,,,
 15.3,/ADT_A05.NEXT_OF_KIN,}],--- NEXT_OF_KIN end,,,,,,,,,,
 16,ADT_A05.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter[1].subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
-16,ADT_A05.PV1,PV1,Patient Visit,1,1,IF PV1-43 VALUED,,,EncounterHistory,PV1[EncounterHistory],EncounterHistory.subject.reference=Patient[1].id,,
+16,ADT_A05.PV1,PV1,Patient Visit,1,1,IF PV1-43 VALUED,,,Basic-EncounterHistory,PV1[Basic-EncounterHistory],Basic.extension-EncounterHistory.subject.reference=Patient[1].id,,
 16,ADT_A05.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
 16,ADT_A05.PV1,PV1,Patient Visit,1,1,IF PV1-20 VALUE,,,Coverage[1],PV1[Coverage],Coverage.beneficiary.reference=Patient[1].id,,
 17,ADT_A05.PV2,[ PV2 ],Patient Visit - Additional Info.,0,1,,,,Encounter[1],PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.

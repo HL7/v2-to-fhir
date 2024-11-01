@@ -10,7 +10,7 @@ Title: "Message ADT_A01 to Bundle Map"
 * name = "MessageADT_A01ToBundle"
 * status = #active
 * experimental = true
-* date = "2024-10-30"
+* date = "2024-11-01"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -250,8 +250,8 @@ Title: "Message ADT_A01 to Bundle Map"
 * group.element[21].extension[0].extension[1].valueInteger = 1
 * group.element[21].display = "Patient Visit"
 * group.element[21].target.equivalence = #equivalent
-* group.element[21].target.code = #EncounterHistory
-* group.element[21].target.display = "EncounterHistory"
+* group.element[21].target.code = #Basic-EncounterHistory
+* group.element[21].target.display = "Basic-EncounterHistory"
 * group.element[22].code = #ADT_A01.PV1
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "cardinalityMin"

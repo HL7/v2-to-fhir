@@ -1,0 +1,9 @@
+HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+,,,,,,vegetarian,,Vegetarian,http://terminology.hl7.org/CodeSystem/diet,,
+,,,,,,dairy-free,,Dairy Free,http://terminology.hl7.org/CodeSystem/diet,,
+,,,,,,nut-free,,Nut Free,http://terminology.hl7.org/CodeSystem/diet,,
+,,,,,,gluten-free,,Gluten Free,http://terminology.hl7.org/CodeSystem/diet,,
+,,,,,,vegan,,Vegan,http://terminology.hl7.org/CodeSystem/diet,,
+,,,,,,halal,,Halal,http://terminology.hl7.org/CodeSystem/diet,,
+,,,,,,kosher,,Kosher,http://terminology.hl7.org/CodeSystem/diet,,

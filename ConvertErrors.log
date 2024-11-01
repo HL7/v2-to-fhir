@@ -7,326 +7,282 @@ W2) mappings/codesystems/HL7 Concept Map_ AdministrationDevice - Sheet1.csv does
 W3) mappings/codesystems/HL7 Concept Map_ AppointmentTypeCodes - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ AppointmentTypeCodes - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W4) mappings/codesystems/HL7 Concept Map_ BodySite - Sheet1.csv does not have any FHIR Mapping Content
+W4) mappings/codesystems/HL7 Concept Map_ BedStatus - Sheet1.csv does not have any FHIR Mapping Content
+	at mappings/codesystems/HL7 Concept Map_ BedStatus - Sheet1.csv(:1)
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+W5) mappings/codesystems/HL7 Concept Map_ BodySite - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ BodySite - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W5) mappings/codesystems/HL7 Concept Map_ ConfidentialityClassification - Sheet1.csv does not have any FHIR Mapping Content
+W6) mappings/codesystems/HL7 Concept Map_ ConfidentialityClassification - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ConfidentialityClassification - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W6) mappings/codesystems/HL7 Concept Map_ ContainerType - Sheet1.csv does not have any FHIR Mapping Content
+W7) mappings/codesystems/HL7 Concept Map_ ContainerType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ContainerType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W7) mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv does not have any FHIR Mapping Content
+W8) mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W8) mappings/codesystems/HL7 Concept Map_ DischargedToLocation - Sheet1.csv does not have any FHIR Mapping Content
+W9) mappings/codesystems/HL7 Concept Map_ DietType - Sheet1.csv does not have any FHIR Mapping Content
+	at mappings/codesystems/HL7 Concept Map_ DietType - Sheet1.csv(:1)
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+W10) mappings/codesystems/HL7 Concept Map_ DischargeDisposition - Sheet1.csv does not have any FHIR Mapping Content
+	at mappings/codesystems/HL7 Concept Map_ DischargeDisposition - Sheet1.csv(:1)
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+W11) mappings/codesystems/HL7 Concept Map_ DischargedToLocation - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ DischargedToLocation - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W9) mappings/codesystems/HL7 Concept Map_ DurationUnit - Sheet1.csv does not have any FHIR Mapping Content
+W12) mappings/codesystems/HL7 Concept Map_ DurationUnit - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ DurationUnit - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W10) mappings/codesystems/HL7 Concept Map_ NameType - Sheet1.csv does not have any FHIR Mapping Content
+W13) mappings/codesystems/HL7 Concept Map_ FinancialClass - Sheet1.csv does not have any FHIR Mapping Content
+	at mappings/codesystems/HL7 Concept Map_ FinancialClass - Sheet1.csv(:1)
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+W14) mappings/codesystems/HL7 Concept Map_ NameType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ NameType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W11) mappings/codesystems/HL7 Concept Map_ OperatorID - Sheet1.csv does not have any FHIR Mapping Content
+W15) mappings/codesystems/HL7 Concept Map_ OperatorID - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ OperatorID - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W12) mappings/codesystems/HL7 Concept Map_ OrderStatus - Sheet1.csv does not have any FHIR Mapping Content
+W16) mappings/codesystems/HL7 Concept Map_ OrderStatus - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ OrderStatus - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
-W13) mappings/codesystems/HL7 Concept Map_ ParticipantOrganizationUnitType - Sheet1.csv does not have any FHIR Mapping Content
+W17) mappings/codesystems/HL7 Concept Map_ ParticipantOrganizationUnitType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ParticipantOrganizationUnitType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,
-W14) mappings/codesystems/HL7 Concept Map_ Participation - Sheet1.csv does not have any FHIR Mapping Content
+W18) mappings/codesystems/HL7 Concept Map_ Participation - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ Participation - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W15) mappings/codesystems/HL7 Concept Map_ PlanId - Sheet1.csv does not have any FHIR Mapping Content
+W19) mappings/codesystems/HL7 Concept Map_ PlanId - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ PlanId - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W16) mappings/codesystems/HL7 Concept Map_ PractionerIDNumberType - Sheet1.csv does not have any FHIR Mapping Content
+W20) mappings/codesystems/HL7 Concept Map_ PractionerIDNumberType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ PractionerIDNumberType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
-W17) mappings/codesystems/HL7 Concept Map_ PrimaryLanguage - Sheet1.csv does not have any FHIR Mapping Content
+W21) mappings/codesystems/HL7 Concept Map_ PrimaryLanguage - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ PrimaryLanguage - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W18) mappings/codesystems/HL7 Concept Map_ ProcessingID - Sheet1.csv does not have any FHIR Mapping Content
+W22) mappings/codesystems/HL7 Concept Map_ ProcessingID - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ProcessingID - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
-W19) mappings/codesystems/HL7 Concept Map_ ProcessingMode - Sheet1.csv does not have any FHIR Mapping Content
+W23) mappings/codesystems/HL7 Concept Map_ ProcessingMode - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ProcessingMode - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
-W20) mappings/codesystems/HL7 Concept Map_ RequestedDispenseUnits - Sheet1.csv does not have any FHIR Mapping Content
+W24) mappings/codesystems/HL7 Concept Map_ RequestedDispenseUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedDispenseUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W21) mappings/codesystems/HL7 Concept Map_ RequestedDosageForm - Sheet1.csv does not have any FHIR Mapping Content
+W25) mappings/codesystems/HL7 Concept Map_ RequestedDosageForm - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedDosageForm - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W22) mappings/codesystems/HL7 Concept Map_ RequestedDrugStrengthVolumeUnits - Sheet1.csv does not have any FHIR Mapping Content
+W26) mappings/codesystems/HL7 Concept Map_ RequestedDrugStrengthVolumeUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedDrugStrengthVolumeUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W23) mappings/codesystems/HL7 Concept Map_ RequestedGiveStrengthUnits - Sheet1.csv does not have any FHIR Mapping Content
+W27) mappings/codesystems/HL7 Concept Map_ RequestedGiveStrengthUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedGiveStrengthUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W24) mappings/codesystems/HL7 Concept Map_ RequestedGiveUnits - Sheet1.csv does not have any FHIR Mapping Content
+W28) mappings/codesystems/HL7 Concept Map_ RequestedGiveUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedGiveUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W25) mappings/codesystems/HL7 Concept Map_ RoutingInstruction - Sheet1.csv does not have any FHIR Mapping Content
+W29) mappings/codesystems/HL7 Concept Map_ RoutingInstruction - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RoutingInstruction - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W26) mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv does not have any FHIR Mapping Content
+W30) mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W27) mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv does not have any FHIR Mapping Content
+W31) mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W28) mappings/codesystems/HL7 Concept Map_ SpecimenSourceSite - Sheet1.csv does not have any FHIR Mapping Content
+W32) mappings/codesystems/HL7 Concept Map_ SpecimenSourceSite - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SpecimenSourceSite - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W29) mappings/codesystems/HL7 Concept Map_ SpecimenSourceTypeModifier - Sheet1.csv does not have any FHIR Mapping Content
+W33) mappings/codesystems/HL7 Concept Map_ SpecimenSourceTypeModifier - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SpecimenSourceTypeModifier - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W30) mappings/codesystems/HL7 Concept Map_ VIPIndicator - Sheet1.csv does not have any FHIR Mapping Content
+W34) mappings/codesystems/HL7 Concept Map_ VIPIndicator - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ VIPIndicator - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W31) mappings/codesystems/HL7 Concept Map_ ValueType - Sheet1.csv does not have any FHIR Mapping Content
+W35) mappings/codesystems/HL7 Concept Map_ ValueType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ValueType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W32) mappings/codesystems/HL7 Concept Map_ YesNoIndicator - Sheet1.csv does not have any FHIR Mapping Content
+W36) mappings/codesystems/HL7 Concept Map_ YesNoIndicator - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ YesNoIndicator - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W33) Code.$value used where code.$value meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[Code] - Sheet1.csv(:4)
-	near: No corresponding line (4) in source file!
-W34) Code.code used where code.code meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[Code] - Sheet1.csv(:4)
-	near: No corresponding line (4) in source file!
-W35) Decimal.$value used where decimal.$value meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[Decimal] - Sheet1.csv(:3)
-	near: 1,CQ.1,Quantity,NM,0,1,,,,$value,,decimal,0,1,,,,,
-W36) Decimal.decimal used where decimal.decimal meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[Decimal] - Sheet1.csv(:3)
-	near: 1,CQ.1,Quantity,NM,0,1,,,,$value,,decimal,0,1,,,,,
-W37) UnsignedInt.$value used where unsignedInt.$value meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[UnsignedInt] - Sheet1.csv(:3)
-	near: 1,CQ.1,Quantity,NM,0,1,,,,$value,,unsignedInt,0,1,,,/convert to minutes based on CQ.2/,,
-W38) UnsignedInt.unsignedInt used where unsignedInt.unsignedInt meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ CQ[UnsignedInt] - Sheet1.csv(:3)
-	near: 1,CQ.1,Quantity,NM,0,1,,,,$value,,unsignedInt,0,1,,,/convert to minutes based on CQ.2/,,
-W39) Missing vocabulary mapping for Test/ServiceDefaultDurationUnits	at mappings/datatypes/HL7 Data Type - FHIR R4_ CWE[Timing.duration] - Sheet1.csv(:3)
+W37) Missing vocabulary mapping for Test/ServiceDefaultDurationUnits	at mappings/datatypes/HL7 Data Type - FHIR R4_ CWE[Timing.duration] - Sheet1.csv(:3)
 	near: 1,CWE.1,Identifier,ST,0,1,,,,Timing.repeat.durationUnit,,code,0,1,,Test/ServiceDefaultDurationUnits,,,The durationUnit is limited to a required set of UCUM units
-W40) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[Identifier] - Sheet1.csv(:10)
+W38) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[Identifier] - Sheet1.csv(:10)
 	near: 5,CX.5,Identifier Type Code,ID,1,1,,,,type.coding.code,,code,0,1,,IdentifierType,,,
-W41) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:3)
+W39) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:3)
 	near: 0,,,,,,,,,patient(Patient.identifier),,,,,,,/one of the PID-3 or other available identifiers that uniquely links to the patient who's mother is represented in this RelatedPerson instance./,,
-W42) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:4)
+W40) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:4)
 	near: 0,,,,,,,,,relationship[1].coding[1].code,,,,,,,"/a relationship type that represents ""mother"" should be populated with ""MTH"" as default if no further context is known, or either of ""AOPTM"", ""GESTM"", ""NMTH"", ""NMTHF"", ""STPMTH"" if the context is known.",,
-W43) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:5)
+W41) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:5)
 	near: 0,,,,,,,,,relationship[1].coding[1].system,,,,,,,"""https://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-_PersonalRelationshipRoleType""",,
-W44) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:13)
+W42) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:13)
 	near: 5,CX.5,Identifier Type Code,ID,1,1,,,,identifier.type.coding.code,,code,0,1,,IdentifierType,,,
-W45) Missing vocabulary mapping for DischargedToLocation	at mappings/datatypes/HL7 Data Type - FHIR R4_ DLD[Location-Discharge] - Sheet1.csv(:3)
+W43) Missing vocabulary mapping for DischargedToLocation	at mappings/datatypes/HL7 Data Type - FHIR R4_ DLD[Location-Discharge] - Sheet1.csv(:3)
 	near: 1,DLD.1,Discharge to Location,CWE,1,1,,,,type,,CodeableConcept,,,CWE[CodeableConcept],DischargedToLocation,,,
-W46) DateTime.$value used where dateTime.$value meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ DR[DateTime] - Sheet1.csv(:3)
-	near: 1,DR.1,Range Start Date/Time,DTM,0,1,,,,$value,,dateTime,0,1,,,/must convert v2 date time format to FHIR date time format before populating/,,
-W47) DateTime.dateTime used where dateTime.dateTime meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ DR[DateTime] - Sheet1.csv(:3)
-	near: 1,DR.1,Range Start Date/Time,DTM,0,1,,,,$value,,dateTime,0,1,,,/must convert v2 date time format to FHIR date time format before populating/,,
-W48) DateTime.$value used where dateTime.$value meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ DTM[DateTime] - Sheet1.csv(:3)
-	near: No corresponding line (3) in source file!
-W49) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ ED[DocumentReference] - Sheet1.csv(:3)
+W44) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ ED[DocumentReference] - Sheet1.csv(:3)
 	near: 0,,,,,,,,,status,,,,,,,"""current""",,
-W50) Missing vocabulary mapping for UniversalIDType	at mappings/datatypes/HL7 Data Type - FHIR R4_ HD[Organization] - Sheet1.csv(:5)
+W45) Missing vocabulary mapping for UniversalIDType	at mappings/datatypes/HL7 Data Type - FHIR R4_ HD[Organization] - Sheet1.csv(:5)
 	near: 3,HD.3,Universal ID Type,ID,0,1,,,,identifier[2].type,,CodeableConcept,,,ID[CodeableConcept-UniversalID],UniversalIDType,,,"Request that DNS, ISO, and UUID (and other Table 0301 values) are added to: http://hl7.org/fhir/valueset-identifier-type.html"
-W51) extension.string used where Extension.string meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ HD[extension-AssigningAuthority] - Sheet1.csv(:3)
-	near: 1,HD.1,Namespace ID,IS,0,1,,,,,extension??-assigningauthority.nameSpaceID,string,0,1,,,,,
-W52) extension.string used where Extension.string meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ HD[extension-AssigningAuthority] - Sheet1.csv(:4)
-	near: 2,HD.2,Universal ID,ST,0,1,"IF HD.3 IN (""ISO"", ""UUID"")",,,,extension??-assigningauthority.universalID,string,0,1,,,,,
-W53) extension.code used where Extension.code meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ HD[extension-AssigningAuthority] - Sheet1.csv(:5)
-	near: No corresponding line (5) in source file!
-W54) Missing vocabulary mapping for EventCodes	at mappings/datatypes/HL7 Data Type - FHIR R4_ MSG[MessageHeader] - Sheet1.csv(:4)
+W46) Missing vocabulary mapping for EventCodes	at mappings/datatypes/HL7 Data Type - FHIR R4_ MSG[MessageHeader] - Sheet1.csv(:4)
 	near: 2,MSG.2,Trigger Event,ID,1,1,,,,eventCoding.code,,code,0,1,,EventCodes,,,
-W55) Missing vocabulary mapping for MessageStructure	at mappings/datatypes/HL7 Data Type - FHIR R4_ MSG[MessageHeader] - Sheet1.csv(:6)
+W47) Missing vocabulary mapping for MessageStructure	at mappings/datatypes/HL7 Data Type - FHIR R4_ MSG[MessageHeader] - Sheet1.csv(:6)
 	near: No corresponding line (6) in source file!
-W56) PositiveInt.$value used where positiveInt.$value meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ NM[PositiveInt] - Sheet1.csv(:3)
-	near: 1,NM.1,Numeric,ST,,,,,If positive,$value,,integer,0,1,,,,,
-W57) PositiveInt.integer used where positiveInt.integer meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ NM[PositiveInt] - Sheet1.csv(:3)
-	near: 1,NM.1,Numeric,ST,,,,,If positive,$value,,integer,0,1,,,,,
-W58) Missing vocabulary mapping for PractitionerIDNumberType	at mappings/datatypes/HL7 Data Type - FHIR R4_ PLN[Identifier] - Sheet1.csv(:4)
+W48) Missing vocabulary mapping for PractitionerIDNumberType	at mappings/datatypes/HL7 Data Type - FHIR R4_ PLN[Identifier] - Sheet1.csv(:4)
 	near: 2,PLN.2,Type of ID Number,CWE,1,1,,,,type,,CodeableConcept,0,1,CWE[CodeableConcept],PractitionerIDNumberType,,,
-W59) Missing vocabulary mapping for ProcessingID	at mappings/datatypes/HL7 Data Type - FHIR R4_ PT[Meta] - Sheet1.csv(:3)
+W49) Missing vocabulary mapping for ProcessingID	at mappings/datatypes/HL7 Data Type - FHIR R4_ PT[Meta] - Sheet1.csv(:3)
 	near: 1,PT.1,Processing ID,ID,1,1,,,,tag[1].code,,code,0,1,,ProcessingID,,,FHIR needs a code system.
-W60) Missing vocabulary mapping for ProcessingMode	at mappings/datatypes/HL7 Data Type - FHIR R4_ PT[Meta] - Sheet1.csv(:5)
+W50) Missing vocabulary mapping for ProcessingMode	at mappings/datatypes/HL7 Data Type - FHIR R4_ PT[Meta] - Sheet1.csv(:5)
 	near: 2,PT.2,Processing Mode,ID,0,1,,,,tag[2].code,,code,0,1,,ProcessingMode,,,FHIR needs a code system.
-W61) Missing vocabulary mapping for RepeatPattern	at mappings/datatypes/HL7 Data Type - FHIR R4_ RI[Timing] - Sheet1.csv(:3)
+W51) Missing vocabulary mapping for RepeatPattern	at mappings/datatypes/HL7 Data Type - FHIR R4_ RI[Timing] - Sheet1.csv(:3)
 	near: 1,RI-1,Repeat Pattern,IS,0,1,,,,code,,CodeableConcept,0,1,,RepeatPattern,,,
-W62) Missing vocabulary mapping for RepeatPattern	at mappings/datatypes/HL7 Data Type - FHIR R4_ RPT[Timing] - Sheet1.csv(:3)
+W52) Missing vocabulary mapping for RepeatPattern	at mappings/datatypes/HL7 Data Type - FHIR R4_ RPT[Timing] - Sheet1.csv(:3)
 	near: 1,RPT.1,Repeat Pattern Code,CWE,1,1,,,,code,,CodeableConcept,0,1,,RepeatPattern,,,
-W63) Missing vocabulary mapping for EventRelatedPeriod	at mappings/datatypes/HL7 Data Type - FHIR R4_ RPT[Timing] - Sheet1.csv(:10)
+W53) Missing vocabulary mapping for EventRelatedPeriod	at mappings/datatypes/HL7 Data Type - FHIR R4_ RPT[Timing] - Sheet1.csv(:10)
 	near: 8,RPT.8,Event,ID,0,1,,,,repeat.when,,code,0,1,,EventRelatedPeriod,,,
-W64) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Quantity] - Sheet1.csv(:3)
+W54) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Quantity] - Sheet1.csv(:3)
 	near: 0,,,,,,If SN.3 OR SN.4 VALUED,,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/originalText""",,
-W65) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Quantity] - Sheet1.csv(:4)
+W55) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Quantity] - Sheet1.csv(:4)
 	near: 0,,,,,,If SN.3 OR SN.4 VALUED,,,extension[1].valueString,,string,,,,,"SN.1+"" ""+SN.2+"" ""+SN.3+"" ""+SN.4",,
-W66) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Range] - Sheet1.csv(:3)
+W56) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Range] - Sheet1.csv(:3)
 	near: 0,,,,,,If SN.1 OR SN.3 VALUED,,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/originalText""",,
-W67) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Range] - Sheet1.csv(:4)
+W57) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Range] - Sheet1.csv(:4)
 	near: 0,,,,,,If SN.1 OR SN.3 VALUED,,,extension[1].valueString,,string,,,,,"SN.1+"" ""+SN.2+"" ""+SN.3+"" ""+SN.4",,
-W68) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Ratio] - Sheet1.csv(:3)
+W58) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Ratio] - Sheet1.csv(:3)
 	near: 0,,,,,,If SN.3 OR SN.4 VALUED,,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/originalText""",,
-W69) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Ratio] - Sheet1.csv(:4)
+W59) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Ratio] - Sheet1.csv(:4)
 	near: 0,,,,,,If SN.3 OR SN.4 VALUED,,,extension[1].valueString,,string,,,,,"SN.1+"" ""+SN.2+"" ""+SN.3+"" ""+SN.4",,
-W70) Missing vocabulary mapping for SpecimenType	at mappings/datatypes/HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv(:3)
+W60) Missing vocabulary mapping for SpecimenType	at mappings/datatypes/HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv(:3)
 	near: 1,SPS.1,Specimen source name or code,CE,0,1,,,,type,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenType,,,
-W71) Missing vocabulary mapping for Additive/Preservative	at mappings/datatypes/HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv(:4)
+W61) Missing vocabulary mapping for Additive/Preservative	at mappings/datatypes/HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv(:4)
 	near: 2,SPS.2,Additives,CWE,0,1,,,,container.additiveCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],Additive/Preservative,,,
-W72) Missing vocabulary mapping for BodySite	at mappings/datatypes/HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv(:6)
+W62) Missing vocabulary mapping for BodySite	at mappings/datatypes/HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv(:6)
 	near: 4,SPS.4,Body Site,CE,0,1,,,,collection.bodySite,,CodeableConcept,0,1,CWE[CodeableConcept],BodySite,,,
-W73) Missing vocabulary mapping for SpecimenCondition	at mappings/datatypes/HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv(:8)
+W63) Missing vocabulary mapping for SpecimenCondition	at mappings/datatypes/HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv(:8)
 	near: 6,SPS.6,Collection method modifier code,CE,0,1,,,,condition,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenCondition,,,Note that in v2.5.1 only F (Frozen) and R(Refrigirated) are indicated without a full table.  SpecimenCondition would be used in more curent case and is referenced if somebody used that table already.
-W74) Missing vocabulary mapping for ExtendedPriorityCodes	at mappings/datatypes/HL7 Data Type - FHIR R4_ TQ[ServiceRequest] - Sheet1.csv(:11)
+W64) Missing vocabulary mapping for ExtendedPriorityCodes	at mappings/datatypes/HL7 Data Type - FHIR R4_ TQ[ServiceRequest] - Sheet1.csv(:11)
 	near: 5,TQ.5,End Date/Time,TS,0,1,,,,"
-W75) Missing vocabulary mapping for ExtendedPriorityCodes	at mappings/datatypes/HL7 Data Type - FHIR R4_ TQ[Task-Priority] - Sheet1.csv(:9)
+W65) Missing vocabulary mapping for ExtendedPriorityCodes	at mappings/datatypes/HL7 Data Type - FHIR R4_ TQ[Task-Priority] - Sheet1.csv(:9)
 	near: 6,TQ.6,Priority,ST,0,1,,,,priority,,code,0,1,,ExtendedPriorityCodes,,,A translation from the text priority in the v2 message to a coded value in the request-priority value set will be required.
-W76) DateTime.$value used where dateTime.$value meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ TS[DateTime] - Sheet1.csv(:3)
-	near: 1,TS.1,Time,DTM,1,1,,,,$value,,dateTime,0,1,DTM[DateTime],,/must convert v2 date time format to FHIR date time format before populating according to FHIR date/time format https://build.fhir.org/datatypes.html#dateTime /,,
-W77) DateTime.dateTime used where dateTime.dateTime meant.
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ TS[DateTime] - Sheet1.csv(:3)
-	near: 1,TS.1,Time,DTM,1,1,,,,$value,,dateTime,0,1,DTM[DateTime],,/must convert v2 date time format to FHIR date time format before populating according to FHIR date/time format https://build.fhir.org/datatypes.html#dateTime /,,
-W78) Missing vocabulary mapping for AddressType[Type]	at mappings/datatypes/HL7 Data Type - FHIR R4_ XAD[Address] - Sheet1.csv(:9)
+W66) Missing vocabulary mapping for AddressType[Type]	at mappings/datatypes/HL7 Data Type - FHIR R4_ XAD[Address] - Sheet1.csv(:9)
 	near: 7,XAD.7,Address Type,ID,0,1,"IF XAD.7 IN (""M"", ""SH"")",,,type,,code,0,1,,AddressType[Type],,,
-W79) Missing vocabulary mapping for AddressType[Use]	at mappings/datatypes/HL7 Data Type - FHIR R4_ XAD[Address] - Sheet1.csv(:10)
+W67) Missing vocabulary mapping for AddressType[Use]	at mappings/datatypes/HL7 Data Type - FHIR R4_ XAD[Address] - Sheet1.csv(:10)
 	near: 7,XAD.7,Address Type,ID,0,1,"IF XAD.7 IN (""BA"", ""BI"", ""C"", ""B"", ""H"", ""O"")",,,use,,code,0,1,,AddressType[Use],,,
-W80) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Annotation-Author] - Sheet1.csv(:15)
-	near: ,,,,,,,,,authorReference(Practitioner.extension[1].valueString),,string,1,1,,,,,
-W81) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Annotation-Author] - Sheet1.csv(:17)
-	near: ,,,,,,,,,authorReference(Practitioner.extension[2].valueString),,string,1,1,,,,,
-W82) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Annotation-Author] - Sheet1.csv(:13)
+W68) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Annotation-Author] - Sheet1.csv(:13)
 	near: 10,XCN.10,Name Type Code,ID,0,1,,,,authorReference(Practitioner.name.use),,code,0,1,,NameType,,,
-W83) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Annotation-Author] - Sheet1.csv(:18)
+W69) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Annotation-Author] - Sheet1.csv(:18)
 	near: 13,XCN.13,Identifier Type Code,ID,0,1,,,,authorReference(Practitioner.identifier[1].type.coding.code),,code,0,1,,IdentifierType,,,
-W84) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Annotation-Author] - Sheet1.csv(:24)
+W70) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Annotation-Author] - Sheet1.csv(:24)
 	near: 18,XCN.18,Name Assembly Order,ID,0,1,,,,authorReference(Practitioner.name.family.extension.valueCode),,code,0,1,,NameAssemblyOrder,,,
-W85) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Patient] - Sheet1.csv(:13)
+W71) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Patient] - Sheet1.csv(:13)
 	near: 10,XCN.10,Name Type Code,ID,0,1,,,,name.use,,code,0,1,,NameType,,,
-W86) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Patient] - Sheet1.csv(:18)
+W72) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Patient] - Sheet1.csv(:18)
 	near: 13,XCN.13,Identifier Type Code,ID,0,1,,,,identifier[1].type.coding.code,,code,0,1,,IdentifierType,,,
-W87) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Patient] - Sheet1.csv(:24)
+W73) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Patient] - Sheet1.csv(:24)
 	near: 18,XCN.18,Name Assembly Order,ID,0,1,,,,name.family.extension.valueCode,,code,0,1,,NameAssemblyOrder,,,
-W88) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[PractitionerRole] - Sheet1.csv(:15)
-	near: ,,,,,,,,,practitioner(Practitioner.identifier.extension[1].valueString),,string,1,1,,,,,
-W89) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[PractitionerRole] - Sheet1.csv(:17)
-	near: ,,,,,,,,,practitioner(Practitioner.identifier.extension[2].valueString),,string,1,1,,,,,
-W90) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[PractitionerRole] - Sheet1.csv(:13)
+W74) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[PractitionerRole] - Sheet1.csv(:13)
 	near: 10,XCN.10,Name Type Code,ID,0,1,,,,practitioner(Practitioner.name.use),,code,0,1,,NameType,,,
-W91) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[PractitionerRole] - Sheet1.csv(:18)
+W75) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[PractitionerRole] - Sheet1.csv(:18)
 	near: 13,XCN.13,Identifier Type Code,ID,0,1,,,,practitioner(Practitioner.identifier.type.coding.code),,code,0,1,,IdentifierType,,,
-W92) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[PractitionerRole] - Sheet1.csv(:24)
+W76) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[PractitionerRole] - Sheet1.csv(:24)
 	near: 18,XCN.18,Name Assembly Order,ID,0,1,,,,practitioner(Practitioner.name.family.extension.valueCode),,code,0,1,,NameAssemblyOrder,,,
-W93) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Practitioner] - Sheet1.csv(:13)
+W77) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Practitioner] - Sheet1.csv(:13)
 	near: 10,XCN.10,Name Type Code,ID,0,1,,,,name.use,,code,0,1,,NameType,,,
-W94) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Practitioner] - Sheet1.csv(:18)
+W78) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Practitioner] - Sheet1.csv(:18)
 	near: 13,XCN.13,Identifier Type Code,ID,0,1,,,,identifier[1].type.coding.code,,code,0,1,,IdentifierType,,,
-W95) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Practitioner] - Sheet1.csv(:24)
+W79) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[Practitioner] - Sheet1.csv(:24)
 	near: 18,XCN.18,Name Assembly Order,ID,0,1,,,,name.family.extension.valueCode,,code,0,1,,NameAssemblyOrder,,,
-W96) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv(:12)
+W80) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv(:12)
 	near: 10,XCN.10,Name Type Code,ID,0,1,,,,name.use,,code,0,1,,NameType,,,
-W97) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv(:17)
+W81) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv(:17)
 	near: 13,XCN.13,Identifier Type Code,ID,0,1,,,,identifier.type.coding.code,,code,0,1,,IdentifierType,,,
-W98) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv(:23)
+W82) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv(:23)
 	near: 18,XCN.18,Name Assembly Order,ID,0,1,,,,name.family.extension.valueCode,,code,0,1,,NameAssemblyOrder,,,
-W99) Missing vocabulary mapping for OrganizationalNameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XON[Location] - Sheet1.csv(:4)
+W83) Missing vocabulary mapping for OrganizationalNameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XON[Location] - Sheet1.csv(:4)
 	near: 2,XON.2,Organization Name Type Code,CWE,0,1,,,,,Location.#ext-nameType#,coding,0,1,CWE[coding],OrganizationalNameType,,,
-W100) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XON[Location] - Sheet1.csv(:12)
+W84) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XON[Location] - Sheet1.csv(:12)
 	near: 7,XON.7,Identifier Type Code,ID,0,1,,,,identifier[1].type.coding.code,,code,0,-1,,IdentifierType,,,
-W101) Missing vocabulary mapping for OrganizationalNameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv(:4)
+W85) Missing vocabulary mapping for OrganizationalNameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv(:4)
 	near: 2,XON.2,Organization Name Type Code,CWE,0,1,,,,,extension??-nameType,coding,0,1,CWE[Coding],OrganizationalNameType,,,
-W102) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv(:12)
+W86) Missing vocabulary mapping for IdentifierType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv(:12)
 	near: 7,XON.7,Identifier Type Code,ID,0,1,,,,identifier.type.coding.code,,code,0,-1,,IdentifierType,,,
-W103) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XPN[HumanName] - Sheet1.csv(:9)
+W87) Missing vocabulary mapping for NameType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XPN[HumanName] - Sheet1.csv(:9)
 	near: 7,XPN.7,Name Type Code,ID,0,1,,,,[1].use,,code,0,1,,NameType,,,
-W104) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XPN[HumanName] - Sheet1.csv(:14)
+W88) Missing vocabulary mapping for NameAssemblyOrder	at mappings/datatypes/HL7 Data Type - FHIR R4_ XPN[HumanName] - Sheet1.csv(:14)
 	near: 11,XPN.11,Name Assembly Order,ID,0,1,,,,[1].extension.valueCode,,code,1,1,,NameAssemblyOrder,,,
-W105) Missing vocabulary mapping for TelecommunicationUseCode	at mappings/datatypes/HL7 Data Type - FHIR R4_ XTN[ContactPoint] - Sheet1.csv(:4)
+W89) Missing vocabulary mapping for TelecommunicationUseCode	at mappings/datatypes/HL7 Data Type - FHIR R4_ XTN[ContactPoint] - Sheet1.csv(:4)
 	near: 2,XTN.2,Telecommunication Use Code,ID,0,1,,,,use,,code,0,1,ID[Code],TelecommunicationUseCode,,,
-W106) Missing vocabulary mapping for TelecommunicationEquipmentType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XTN[ContactPoint] - Sheet1.csv(:5)
+W90) Missing vocabulary mapping for TelecommunicationEquipmentType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XTN[ContactPoint] - Sheet1.csv(:5)
 	near: 3,XTN.3,Telecommunication Equipment Type,ID,1,1,,,,system,,code,0,1,ID[Code],TelecommunicationEquipmentType,,,
-W107) Missing vocabulary mapping for ExtendedPriorityCodes	at mappings/datatypes/HL7 Data Type - FHRI R4_ TQ[MedicationRequest] - Sheet1.csv(:11)
+W91) Missing vocabulary mapping for ExtendedPriorityCodes	at mappings/datatypes/HL7 Data Type - FHRI R4_ TQ[MedicationRequest] - Sheet1.csv(:11)
 	near: 5,TQ.5,End Date/Time,TS,0,1,,,,"
 E1) Unexpected error generating map tables.	at N/A(:0)
-E2) Link to EncounterHistory not found.
+E2) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ ADT_A01 - Sheet1.csv(:36)
 	near: 16,ADT_A01.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-E3) Link to EncounterHistory not found.
+E3) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ ADT_A02 - Sheet1.csv(:29)
 	near: 15,ADT_A02.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-E4) Link to EncounterHistory not found.
+E4) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ ADT_A05 - Sheet1.csv(:35)
 	near: 16,ADT_A05.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-E5) Link to EncounterHistory not found.
+E5) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ ADT_A06 - Sheet1.csv(:36)
 	near: 17,ADT_A06.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-E6) Link to EncounterHistory not found.
+E6) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ ADT_A09 - Sheet1.csv(:20)
 	near: 8,ADT_A09.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-E7) Link to EncounterHistory not found.
+E7) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ ADT_A11 - Sheet1.csv(:21)
 	near: 8,ADT_A11.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-E8) Link to EncounterHistory not found.
+E8) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ ADT_A17 - Sheet1.csv(:33)
 	near: 15,ADT_A17.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-E9) Link to EncounterHistory not found.
+E9) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ MDM _T02 - Sheet1.csv(:15)
 	near: 6,MDM_T02.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-E10) Link to EncounterHistory not found.
+E10) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv(:25)
 	near: 5.8.1,OML_O21.PATIENT.PATIENT_VISIT.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-E11) Link to EncounterHistory not found.
+E11) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv(:17)
 	near: 3.4.1,ORM_O01.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-E12) Link to EncounterHistory not found.
+E12) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ ORU_R01 - Sheet1.csv(:32)
 	near: 4.1.8.1,ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-E13) Link to EncounterHistory not found.
+E13) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ SIU-S12 - Sheet1.csv(:17)
 	near: 4.2,SIU_S12.PATIENT.PV1,[ PV1 ],Patient Visit,0,1,,,,Patient[1],PV1[Patient],,,
-E14) Link to EncounterHistory not found.
+E14) Link to Basic-EncounterHistory not found.
 	at mappings/messages/HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv(:20)
 	near: 8.1,VXU_V04.PATIENT_VISIT.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
-W108) Missing vocabulary mapping for FillerStatus[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ AIS[Appointment] - Sheet1.csv(:12)
+W92) Missing vocabulary mapping for FillerStatus[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ AIS[Appointment] - Sheet1.csv(:12)
 	near: 10,AIS-10,Filler Status Code,CWE,0,1,,,,status,,CodeableConcept,0,1,CWE[CodeableConcept],FillerStatus[Appointment],,,
-W109) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:6)
+W93) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:6)
 	near: "
-W110) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:8)
+W94) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:8)
 	near: 2,AL1-2,Allergen Type Code,CWE,0,1,,,,category.extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/alternate-codes""",,
-W111) Missing vocabulary mapping for AllergyType	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:9)
+W95) Missing vocabulary mapping for AllergyType	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:9)
 	near: 2,AL1-2,Allergen Type Code,CWE,0,1,,,,category.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergenType[AllergyIntoleranceOriginalCategory],,,
-W112) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:11)
+W96) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:11)
 	near: 3,AL1-3,Allergen Code/Mnemonic/Description,CWE,1,1,,,,code,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
-W113) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:13)
+W97) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:13)
 	near: 4,AL1-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality.extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/alternate-codes""",,
-W114) Missing vocabulary mapping for AllergySeverity	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:14)
+W98) Missing vocabulary mapping for AllergySeverity	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:14)
 	near: 4,AL1-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergyTyp[AllergyIntolerance.criticality-original],,,
-W115) Missing vocabulary mapping for DiagnosisType	at mappings/segments/HL7 Segment - FHIR R4_ DG1[Encounter] - Sheet1.csv(:8)
+W99) Missing vocabulary mapping for DiagnosisType	at mappings/segments/HL7 Segment - FHIR R4_ DG1[Encounter] - Sheet1.csv(:8)
 	near: 6,DG1-6,Diagnosis Type,CWE,1,1,,,,diagnosis.use,,CodeableConcept,0,1,CWE[CodeableConcept],DiagnosisType,,,
-W116) Missing vocabulary mapping for DiagnosisType	at mappings/segments/HL7 Segment - FHIR R4_ DG1[EpisodeOfCare] - Sheet1.csv(:8)
+W100) Missing vocabulary mapping for DiagnosisType	at mappings/segments/HL7 Segment - FHIR R4_ DG1[EpisodeOfCare] - Sheet1.csv(:8)
 	near: 6,DG1-6,Diagnosis Type,CWE,1,1,,,,diagnosis.role,,CodeableConcept,0,1,CWE[CodeableConcept],DiagnosisType,,,
-W117) Missing vocabulary mapping for EventReason	at mappings/segments/HL7 Segment - FHIR R4_ EVN[Provenance] - Sheet1.csv(:7)
+W101) Missing vocabulary mapping for EventReason	at mappings/segments/HL7 Segment - FHIR R4_ EVN[Provenance] - Sheet1.csv(:7)
 	near: 4,EVN-4,Event Reason Code,CWE,0,1,"IF EVN-4 NOT ""U""",,,reason,,CodeableConcept,0,-1,CWE[CodeableConcept],EventReason,,,
-W118) Missing vocabulary mapping for OperatorID	at mappings/segments/HL7 Segment - FHIR R4_ EVN[Provenance] - Sheet1.csv(:10)
+W102) Missing vocabulary mapping for OperatorID	at mappings/segments/HL7 Segment - FHIR R4_ EVN[Provenance] - Sheet1.csv(:10)
 	near: 5,EVN-5,Operator ID,XCN,0,-1,,,,agent.who(Practitioner),,Reference(Practitioner),1,-1,XCN[Practitioner],OperatorID,,,
-W119) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:3)
+W103) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:3)
 	near: 0,,,,,,,,,clinicalStatus.coding.code,,code,0,1,,,"""active""",,"While .clinicalStatus is not required, constraint ait-1 (AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error.) does necessitate populating this element in the map as it's not possible to infer a verificationStatus of ""entered-in-error"" based on the data in IAM."
-W120) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:4)
+W104) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:4)
 	near: 0,,,,,,,,,clinicalStatus.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical""",,
-W121) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:6)
+W105) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:6)
 	near: 2,IAM-2,Allergen Type Code,CWE,0,1,,,,category,,code,0,-1,CWE[code],AllergenType[AllergyIntoleranceCategory],,,"The FHIR table has a ""required"" binding. Do we need to expand the values in the FHIR table?
 
 Could other be used for:
@@ -335,250 +291,200 @@ Miscellaneous contraindication
 Animal Allergy
 
 HL70127 is a user defined table"
-W122) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:8)
+W106) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:8)
 	near: 2,IAM-2,Allergen Type Code,CWE,0,1,,,,category.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergenType[AllergyIntoleranceOriginalCategory],,,
-W123) Missing vocabulary mapping for AllergyType	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:9)
+W107) Missing vocabulary mapping for AllergyType	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:9)
 	near: 2,IAM-2,Allergen Type Code,CWE,0,1,,,,type,,code,0,1,CWE[code],AllergyType,,,
-W124) Missing vocabulary mapping for AllergySeverity[AllergryIntolerance.reaction.severity]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:11)
+W108) Missing vocabulary mapping for AllergySeverity[AllergryIntolerance.reaction.severity]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:11)
 	near: 4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was not used equivalent to criticality,reaction.severity,,code,0,1,CWE[Code],AllergySeverity[AllergryIntolerance.reaction.severity],,,
-W125) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:12)
+W109) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:12)
 	near: 4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality,,code,0,1,CWE[code],AllergySeverity[AllergyIntolerance.criticality],,,"Note that AllergyIntolerance.reaction.severity is available in FHIR but from a base standard perspective that is actually not the most appropriate and would require that AL1-6 is valued as well.  However, a local implementation may have used vocabulary that better fits AllergyIntolerance.reaction.severity and should then consider that instead as a local variation.  Note that the .reaction though is at a particular time, while .criticality is an overall assement that matches HL7 v2 generally better."
-W126) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:14)
+W110) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:14)
 	near: 4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergyTyp[AllergyIntolerance.criticality-original],,,
-W127) Missing vocabulary mapping for Relationship	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:28)
+W111) Missing vocabulary mapping for Relationship	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:28)
 	near: 15,IAM-15,Relationship to Patient,CWE,0,1,"IF IAM-15 VALUED AND NOT ""SEL""",,,recorder.reference(RelatedPerson.relationship),,CodeableConcept,0,-1,CWE[CodeableConcept],Relationship,,,
-W128) Missing vocabulary mapping for PlanId	at mappings/segments/HL7 Segment - FHIR R4_ IN1[Coverage] - Sheet1.csv(:19)
+W112) Missing vocabulary mapping for PlanId	at mappings/segments/HL7 Segment - FHIR R4_ IN1[Coverage] - Sheet1.csv(:19)
 	near: 15,IN1-15,Plan Type,CWE,0,1,,,,type,,CodeableConcept,,,CWE[CodeableConcept],PlanId,,,
-W129) Missing vocabulary mapping for Relationship	at mappings/segments/HL7 Segment - FHIR R4_ IN1[Coverage] - Sheet1.csv(:22)
+W113) Missing vocabulary mapping for Relationship	at mappings/segments/HL7 Segment - FHIR R4_ IN1[Coverage] - Sheet1.csv(:22)
 	near: 17,IN1-17,Insured's Relationship To Patient,CWE,0,1,,,,relationship,,CondeableConcept,,,CWE[CodeableConcept],Relationship,,,
-W130) Missing vocabulary mapping for Yes/NoIndicator	at mappings/segments/HL7 Segment - FHIR R4_ IN3[CareTeam] - Sheet1.csv(:6)
+W114) Missing vocabulary mapping for Yes/NoIndicator	at mappings/segments/HL7 Segment - FHIR R4_ IN3[CareTeam] - Sheet1.csv(:6)
 	near: 4,IN3-4,Certification Required,ID,0,1,,,,,,,,,,Yes/NoIndicator,,,
-W131) Missing vocabulary mapping for Event[EncounterStatus]	at mappings/segments/HL7 Segment - FHIR R4_ MSH[Encounter] - Sheet1.csv(:11)
+W115) Missing vocabulary mapping for Event[EncounterStatus]	at mappings/segments/HL7 Segment - FHIR R4_ MSH[Encounter] - Sheet1.csv(:11)
 	near: 9,MSH-9,Message Type,MSG,1,1,,,,status,,code,1,1,MSG[Code],Event[EncounterStatus],,,
-W132) Missing vocabulary mapping for Relationship	at mappings/segments/HL7 Segment - FHIR R4_ NK1[Patient] - Sheet1.csv(:5)
+W116) Missing vocabulary mapping for Relationship	at mappings/segments/HL7 Segment - FHIR R4_ NK1[Patient] - Sheet1.csv(:5)
 	near: 3,NK1-3,Relationship,CWE,0,1,,,,contact.relationship[1],,CodeableConcept,0,1,CWE[CodeableConcept],Relationship,,,
-W133) Missing vocabulary mapping for Contact Role	at mappings/segments/HL7 Segment - FHIR R4_ NK1[Patient] - Sheet1.csv(:10)
+W117) Missing vocabulary mapping for Contact Role	at mappings/segments/HL7 Segment - FHIR R4_ NK1[Patient] - Sheet1.csv(:10)
 	near: 7,NK1-7,Contact Role,CWE,0,1,,,,contact.relationship[2],,CodeableConcept,0,-1,CWE[CodeableConcept],Contact Role,,,"Should we update the names in the base FHIR standard as the names and value sets are confusing?  It's normative, so has to have a very strong case."
-W134) Missing vocabulary mapping for AdministrativeSex	at mappings/segments/HL7 Segment - FHIR R4_ NK1[Patient] - Sheet1.csv(:18)
+W118) Missing vocabulary mapping for AdministrativeSex	at mappings/segments/HL7 Segment - FHIR R4_ NK1[Patient] - Sheet1.csv(:18)
 	near: 15,NK1-15,Administrative Sex,CWE,0,1,,,,contact.gender,,code,0,1,CWE[Code],AdministrativeSex,,,
-W135) Missing vocabulary mapping for Relationship	at mappings/segments/HL7 Segment - FHIR R4_ NK1[RelatedPerson] - Sheet1.csv(:5)
+W119) Missing vocabulary mapping for Relationship	at mappings/segments/HL7 Segment - FHIR R4_ NK1[RelatedPerson] - Sheet1.csv(:5)
 	near: 3,NK1-3,Relationship,CWE,0,1,,,,relationship[1],,CodeableConcept,0,-1,CWE[CodeableConcept],Relationship,,,"Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.
 See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPersonfor further discussion"
-W136) Missing vocabulary mapping for ContactRole	at mappings/segments/HL7 Segment - FHIR R4_ NK1[RelatedPerson] - Sheet1.csv(:10)
+W120) Missing vocabulary mapping for ContactRole	at mappings/segments/HL7 Segment - FHIR R4_ NK1[RelatedPerson] - Sheet1.csv(:10)
 	near: 7,NK1-7,Contact Role,CWE,0,1,,,,relationship[2],,CodeableConcept,0,-1,CWE[CodeableConcept],ContactRole,,,"Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.
 RelatedPerson.relationship is allowed to repeat and so can accept values from both NK1-3 and NK1-7
 See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.20in.20Patient.2Econtact.20and.20RelatedPerson for further discussion"
-W137) Missing vocabulary mapping for AdministrativeSex	at mappings/segments/HL7 Segment - FHIR R4_ NK1[RelatedPerson] - Sheet1.csv(:18)
+W121) Missing vocabulary mapping for AdministrativeSex	at mappings/segments/HL7 Segment - FHIR R4_ NK1[RelatedPerson] - Sheet1.csv(:18)
 	near: 15,NK1-15,Administrative Sex,CWE,0,1,,,,gender,,code,0,1,CWE[Code],AdministrativeSex,,,
-W138) Missing vocabulary mapping for PrimaryLanguage	at mappings/segments/HL7 Segment - FHIR R4_ NK1[RelatedPerson] - Sheet1.csv(:23)
+W122) Missing vocabulary mapping for PrimaryLanguage	at mappings/segments/HL7 Segment - FHIR R4_ NK1[RelatedPerson] - Sheet1.csv(:23)
 	near: 20,NK1-20,Primary Language,CWE,0,1,,,,communication.language,,CodeableConcept,0,-1,CWE[CodeableConcept],PrimaryLanguage,,,
-W139) Missing vocabulary mapping for CommentType	at mappings/segments/HL7 Segment - FHIR R4_ NTE[Observation] - Sheet1.csv(:6)
+W123) Missing vocabulary mapping for CommentType	at mappings/segments/HL7 Segment - FHIR R4_ NTE[Observation] - Sheet1.csv(:6)
 	near: 4,NTE-4,Comment Type,CWE,0,1,,,,,extension??-noteType,CodeableConcept,0,1,CWE[CodeableConcept],CommentType,,,
-W140) Missing vocabulary mapping for CommentType	at mappings/segments/HL7 Segment - FHIR R4_ NTE[ServiceRequest] - NTE.csv(:6)
+W124) Missing vocabulary mapping for CommentType	at mappings/segments/HL7 Segment - FHIR R4_ NTE[ServiceRequest] - NTE.csv(:6)
 	near: 4,NTE-4,Comment Type,CWE,0,1,,,,,extension??-noteType,CodeableConcept,0,1,CWE[CodeableConcept],CommentType,,,
-W141) Missing vocabulary mapping for DiagnosticServiceSectionID	at mappings/segments/HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv(:31)
+W125) Missing vocabulary mapping for DiagnosticServiceSectionID	at mappings/segments/HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv(:31)
 	near: 24,OBR-24,Diagnostic Serv Sect ID,ID,0,1,,,,category,,CodeableConcept,0,-1,ID[CodeableConcept],DiagnosticServiceSectionID,,,
-W142) Missing vocabulary mapping for ResultStatus[Non-Queries]	at mappings/segments/HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv(:32)
+W126) Missing vocabulary mapping for ResultStatus[Non-Queries]	at mappings/segments/HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv(:32)
 	near: 25,OBR-25,Result Status +,ID,0,1,IF OBR-25 VALUED,,,status,,code,1,1,,ResultStatus[Non-Queries],,,
-W143) Missing vocabulary mapping for ExtendedPriorityCodes	at mappings/segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv(:13)
+W127) Missing vocabulary mapping for ExtendedPriorityCodes	at mappings/segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv(:13)
 	near: 5,OBR-5,Priority,ID,0,1,,,,priority,,code,0,1,ID[code],ExtendedPriorityCodes,,,
-W144) Missing vocabulary mapping for ValueType	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:4)
+W128) Missing vocabulary mapping for ValueType	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:4)
 	near: 2,OBX-2,Value Type,ID,0,1,,,,,,,,,,ValueType,,,OBX-2 determines the flavor of Observation.value[x] is used in OBX-5
-W145) Missing vocabulary mapping for InterpretationCodes	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:41)
+W129) Missing vocabulary mapping for InterpretationCodes	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:41)
 	near: 8,OBX-8,Interpretation Codes,CWE,0,-1,,,,interpretation,,CodeableConcept,0,-1,CWE[CodeableConcept],InterpretationCodes,,,
-W146) Missing vocabulary mapping for NatureOfAbnormalTesting	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:44)
+W130) Missing vocabulary mapping for NatureOfAbnormalTesting	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:44)
 	near: 10,OBX-10,Nature of Abnormal Test,ID,0,-1,,,,extension[2].valueCodeableConcept,,CodeableConcept,0,-1,CWE[CodeableConcept],NatureOfAbnormalTesting,,,
-W147) Missing vocabulary mapping for ObservationResultStatusCodesInterpretation	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:45)
+W131) Missing vocabulary mapping for ObservationResultStatusCodesInterpretation	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:45)
 	near: 11,OBX-11,Observation Result Status,ID,1,1,,,,status,,code,1,1,,ObservationResultStatusCodesInterpretation,,,
-W148) Missing vocabulary mapping for ValueType	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:4)
+W132) Missing vocabulary mapping for ValueType	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:4)
 	near: 2,OBX-2,Value Type,ID,0,1,,,,,,,,,,ValueType,,,OBX-2 determines the flavor of Observation.value[x] is used in OBX-5.
-W149) Missing vocabulary mapping for InterpretationCodes	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:38)
+W133) Missing vocabulary mapping for InterpretationCodes	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:38)
 	near: 8,OBX-8,Interpretation Codes,CWE,0,-1,,,,interpretation,,CodeableConcept,0,-1,CWE[CodeableConcept],InterpretationCodes,,,
-W150) Missing vocabulary mapping for NatureOfAbnormalTesting	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:41)
+W134) Missing vocabulary mapping for NatureOfAbnormalTesting	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:41)
 	near: 10,OBX-10,Nature of Abnormal Test,ID,0,-1,,,,extension[2].valueCodeableConcept,,CodeableConcept,0,-1,CWE[CodeableConcept],NatureOfAbnormalTesting,,,
-W151) Missing vocabulary mapping for ObservationResultStatusCodesInterpretation	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:42)
+W135) Missing vocabulary mapping for ObservationResultStatusCodesInterpretation	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:42)
 	near: 11,OBX-11,Observation Result Status,ID,1,1,,,,status,,code,1,1,,ObservationResultStatusCodesInterpretation,,,
-W152) Missing vocabulary mapping for OrderControlCode[ServiceRequest.status]	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:3)
+W136) Missing vocabulary mapping for OrderControlCode[ServiceRequest.status]	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:3)
 	near: 1,ORC-1,Order Control,ID,1,1,IF ORC-5 NOT VALUED,"ORC.element(""5"").empty()",,status,,code,1,1,,OrderControlCode[ServiceRequest.status],,,"This is a complicated mapping where .status, .intent, and Task get involved that may have various localized interpretation."
-W153) Missing vocabulary mapping for OrderStatus	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:21)
+W137) Missing vocabulary mapping for OrderStatus	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:21)
 	near: 5,ORC-5,Order Status,ID,0,1,,,,status,,code,1,1,,OrderStatus,,,
-W154) Missing vocabulary mapping for OrderType	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:52)
+W138) Missing vocabulary mapping for OrderType	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:52)
 	near: 29,ORC-29,Order Type,CWE,0,1,,,,locationCode,,CodeableConcept,0,-1,CWE[CodeableConcept],OrderType,,,
-W155) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv(:3)
+W139) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv(:3)
 	near: 0,,,,,,,,,status,,code,1,1,,,"""final""",,
-W156) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv(:4)
+W140) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv(:4)
 	near: 0,,,,,,,,,code.coding.system,,uri,0,1,,,"""http://loinc.org""",,
-W157) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv(:5)
+W141) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv(:5)
 	near: 0,,,,,,,,,code.coding.code,,code,0,1,,,"""75320-2""",,
-W158) Missing vocabulary mapping for LivingWillCode	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv(:13)
+W142) Missing vocabulary mapping for LivingWillCode	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv(:13)
 	near: 7,PD1-7,Living Will Code,CWE,0,1,,,,valueCodeableConcept,,CodeableConcept,0,1,,LivingWillCode,,,
-W159) Missing vocabulary mapping for LivingWillCode	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Patient] - PD1.csv(:10)
+W143) Missing vocabulary mapping for LivingWillCode	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Patient] - PD1.csv(:10)
 	near: 7,PD1-7,Living Will Code,CWE,0,1,,,,,,,,,,LivingWillCode,,,
-W160) Missing vocabulary mapping for AdministrativeSex	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:13)
+W144) Missing vocabulary mapping for AdministrativeSex	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:13)
 	near: 8,PID-8,Administrative Sex,CWE,0,1,,,,gender,,code,0,1,CWE[code],AdministrativeSex,,,
-W161) Missing vocabulary mapping for PrimaryLanguage	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:25)
+W145) Missing vocabulary mapping for PrimaryLanguage	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:25)
 	near: 15,PID-15,Primary Language,CWE,0,1,,,,communication.language,,CodeableConcept,0,-1,CWE[CodeableConcept],PrimaryLanguage,,,"During implementation, if you know that the value in PID-15 is the preferred patient language, then Patient.communication.preferred can be set to ""true""."
-W162) Missing vocabulary mapping for MaritalStatus	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:26)
+W146) Missing vocabulary mapping for MaritalStatus	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:26)
 	near: 16,PID-16,Marital Status,CWE,0,1,,,,maritalStatus,,CodeableConcept,0,1,CWE[CodeableConcept],MaritalStatus,,,
-W163) Missing vocabulary mapping for Religion	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:28)
+W147) Missing vocabulary mapping for Religion	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:28)
 	near: 17,PID-17,Religion,CWE,0,1,,,,extension[2].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],Religion,,,
-W164) Missing vocabulary mapping for Yes/NoIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:40)
+W148) Missing vocabulary mapping for Yes/NoIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:40)
 	near: 24,PID-24,Multiple Birth Indicator,ID,0,1,IF PID-25 NOT VALUED,,,multipleBirthBoolean,,boolean,0,1,ID[Boolean],Yes/NoIndicator,,,
-W165) Missing vocabulary mapping for Yes/NoIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:50)
+W149) Missing vocabulary mapping for Yes/NoIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:50)
 	near: 30,PID-30,Patient Death Indicator,ID,0,1,IF PID-29 NOT VALUED,,,deceasedBoolean,,boolean,0,1,ID[Boolean],Yes/NoIndicator,,,
-W166) Missing vocabulary mapping for Yes/NoIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:51)
+W150) Missing vocabulary mapping for Yes/NoIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:51)
 	near: 31,PID-31,Identity Unknown Indicator,ID,0,1,,,,,extension??-identityUnknown,boolean,0,1,ID[Boolean],Yes/NoIndicator,,,
-W167) Missing vocabulary mapping for Participation	at mappings/segments/HL7 Segment - FHIR R4_ PRT[CareTeam] - Sheet1.csv(:7)
+W151) Missing vocabulary mapping for Participation	at mappings/segments/HL7 Segment - FHIR R4_ PRT[CareTeam] - Sheet1.csv(:7)
 	near: 4,PRT-4,Role of Participation,CWE,1,1,,,,participant.role,,CodeableConcept,,,CWE[CodeableConcept],Participation,,,
-W168) Missing vocabulary mapping for Participation	at mappings/segments/HL7 Segment - FHIR R4_ PRT[PractitionerRole] - Sheet1.csv(:7)
+W152) Missing vocabulary mapping for Participation	at mappings/segments/HL7 Segment - FHIR R4_ PRT[PractitionerRole] - Sheet1.csv(:7)
 	near: 4,PRT-4,Role of Participation,CWE,1,1,,,,code,,CodeableConcept,0,-1,CWE[CodeableConcept],Participation,,,
-W169) Missing vocabulary mapping for ParticipantOrganizationUnitType	at mappings/segments/HL7 Segment - FHIR R4_ PRT[PractitionerRole] - Sheet1.csv(:10)
+W153) Missing vocabulary mapping for ParticipantOrganizationUnitType	at mappings/segments/HL7 Segment - FHIR R4_ PRT[PractitionerRole] - Sheet1.csv(:10)
 	near: 7,PRT-7,Organization Unit Type,CWE,0,1,,,,organization[Organization.type],,CodeableConcept,0,1,CWE[CodeableConcept],ParticipantOrganizationUnitType,,,
-W170) Missing vocabulary mapping for Participation	at mappings/segments/HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv(:7)
+W154) Missing vocabulary mapping for Participation	at mappings/segments/HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv(:7)
 	near: 4,PRT-4,Role of Participation,CWE,1,1,,,,relationship,,CodeableConcept,0,-1,CWE[CodeableConcept],Participation,,,
-W171) Missing vocabulary mapping for ParticipantOrganizationUnitType	at mappings/segments/HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv(:10)
+W155) Missing vocabulary mapping for ParticipantOrganizationUnitType	at mappings/segments/HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv(:10)
 	near: 7,PRT-7,Organization Unit Type,CWE,0,1,,,,,extension??-organizationType,CodeableConcept,0,1,CWE[CodeableConcept],ParticipantOrganizationUnitType,,,
-W172) location used where Location meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:0)
-W173) location.extension.url used where Location.extension.url meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:15)
-	near: 11,PV1-11,Temporary Location,PL,0,1,,,,location[3].extension.url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/subject-locationClassification""",,
-W174) location used where Location meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:0)
-W175) location.extension.valueCodeableConcept.coding.code used where Location.extension.valueCodeableConcept.coding.code meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:16)
-	near: 11,PV1-11,Temporary Location,PL,0,1,,,,location[3].extension.valueCodeableConcept.coding.code,,code,,,,,"""temporary""",,
-W176) location used where Location meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:0)
-W177) location.extension.valueCodeableConcept.coding.system used where Location.extension.valueCodeableConcept.coding.system meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:17)
-	near: 11,PV1-11,Temporary Location,PL,0,1,,,,location[3].extension.valueCodeableConcept.coding.system,,uri,,,,,""" http://hl7.org/fhir/ValueSet/subject-location""",,
-W178) location used where Location meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:49)
-	near: 43,PV1-43,Prior Temporary Location,PL,0,1,,,,location,,Backbone,0,-1,PL[Location],,,,
-E15) Link to Backbone not found.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:50)
-	near: 43,PV1-43,Prior Temporary Location,PL,0,1,,,,location.status,,code,0,1,,,"""active""",,
-W179) location used where Location meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:0)
-W180) location.status used where Location.status meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:50)
-	near: 43,PV1-43,Prior Temporary Location,PL,0,1,,,,location.status,,code,0,1,,,"""active""",,
-W181) location used where Location meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:0)
-W182) location.extension.url used where Location.extension.url meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:51)
-	near: 43,PV1-43,Prior Temporary Location,PL,0,1,,,,location.extension.url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/subject-locationClassification""",,
-W183) location used where Location meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:0)
-W184) location.extension.valueCodeableConcept.coding.code used where Location.extension.valueCodeableConcept.coding.code meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:52)
-	near: 43,PV1-43,Prior Temporary Location,PL,0,1,,,,location.extension.valueCodeableConcept.coding.code,,code,,,,,"""temporary""",,
-W185) location used where Location meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:0)
-W186) location.extension.valueCodeableConcept.coding.system used where Location.extension.valueCodeableConcept.coding.system meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:53)
-	near: 43,PV1-43,Prior Temporary Location,PL,0,1,,,,location.extension.valueCodeableConcept.coding.system,,uri,,,,,""" http://hl7.org/fhir/ValueSet/subject-location""",,
-E16) Link to participant.type.coding.system not found.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:66)
-	near: 52,PV1-52,Other Healthcare Provider,XCN,0,-1,,,,"participant.type.text=""Participation""",,string,0,1,,,"""Participation""",,
-E17) Link to participant.type.text not found.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:67)
-	near: 53,PV1-53,Service Episode Description,ST,0,1,,,,,episodeOfCare(EpisodeOfCare[1].extension?-name),string,0,1,,,,,
-W187) episodeOfCare used where EpisodeOfCare meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[EncounterHistory] - PV1.csv(:68)
-	near: No corresponding line (68) in source file!
-W188) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:71)
-	near: ,,,,,,,,,location[5].extension.url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/subject-locationClassification""",,
-W189) Missing vocabulary mapping for PatientClass[EncounterClass]	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:4)
+W156) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Basic-EncounterHistory] - PV1.csv(:3)
+	near: 0,,,,,,,,,code.coding.code,,code,0,1,,"""EncounterHistory""",,,
+W157) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Basic-EncounterHistory] - PV1.csv(:4)
+	near: 0,,,,,,,,,code.coding.system,,uri,0,1,,"""http:/hl7.org/fhir/fhir-types""",,,
+W158) Missing vocabulary mapping for "EncounterHistory"	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Basic-EncounterHistory] - PV1.csv(:3)
+	near: 0,,,,,,,,,code.coding.code,,code,0,1,,"""EncounterHistory""",,,
+W159) Missing vocabulary mapping for "http:/hl7.org/fhir/fhir-types"	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Basic-EncounterHistory] - PV1.csv(:4)
+	near: 0,,,,,,,,,code.coding.system,,uri,0,1,,"""http:/hl7.org/fhir/fhir-types""",,,
+W160) Missing vocabulary mapping for FinancialClass	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Coverage] - PV1.csv(:22)
+	near: 20,PV1-20,Financial Class,FC,0,-1,,,,type,,CodeableConcept,0,-1,CWE[CodeableConcept],FinancialClass,,,
+W161) Missing vocabulary mapping for PatientClass[EncounterClass]	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:4)
 	near: 2,PV1-2,Patient Class,CWE,1,1,,,,class,,Coding,1,1,CWE[Coding],PatientClass[EncounterClass],,,
-W190) Missing vocabulary mapping for PatientClass[EncounterStatus]	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:5)
+W162) Missing vocabulary mapping for PatientClass[EncounterStatus]	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:5)
 	near: 2,PV1-2,Patient Class,CWE,1,1,IF PV1-45 NOT VALUED,,,status,,code,1,1,CWE[code],PatientClass[EncounterStatus],,,
-W191) Missing vocabulary mapping for AdmissionType	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:9)
+W163) Missing vocabulary mapping for AdmissionType	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:9)
 	near: 4,PV1-4,Admission Type,CWE,0,1,,,,type,,CodeableConcept,0,-1,CWE[CodeableConcept],AdmissionType,,,
-W192) Missing vocabulary mapping for HospitalService	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:25)
+W164) Missing vocabulary mapping for HospitalService	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:25)
 	near: 10,PV1-10,Hospital Service,CWE,0,1,,,,serviceType,,CodeableConcept,0,1,CWE[CodeableConcept],HospitalService,,,
-W193) Missing vocabulary mapping for ReadmissionIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:32)
+W165) Missing vocabulary mapping for ReadmissionIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:32)
 	near: 13,PV1-13,Re-admission Indicator,CWE,0,1,,,,hospitalization.reAdmission,,CodeableConcept,0,1,CWE[CodeableConcept],ReadmissionIndicator,,,
-W194) Missing vocabulary mapping for VIPIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:35)
+W166) Missing vocabulary mapping for VIPIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:35)
 	near: 16,PV1-16,VIP Indicator,CWE,0,1,,,,hospitalization.specialCourtesy,,CodeableConcept,0,1,CWE[CodeableConcept],VIPIndicator,,,"Depending on the vocabulary used in PV1-16, this may require additional mapping."
-W195) Missing vocabulary mapping for DischargeDisposition	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:61)
+W167) Missing vocabulary mapping for DischargeDisposition	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:61)
 	near: 36,PV1-36,Discharge Disposition,CWE,0,1,,,,hospitalization.dischargeDisposition,,CodeableConcept,0,1,CWE[CodeableConcept],DischargeDisposition,,,
-W196) Missing vocabulary mapping for DietType	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:63)
+W168) Missing vocabulary mapping for DietType	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:63)
 	near: 38,PV1-38,Diet Type,CWE,0,1,,,,hospitalization.dietPreference,,CodeableConcept,0,-1,CWE[CodeableConcept],DietType,,,
-W197) Missing vocabulary mapping for BedStatus	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:65)
+W169) Missing vocabulary mapping for BedStatus	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:65)
 	near: 40,PV1-40,Bed Status,IS,0,1,IF PV1-3.2 OR PV1-3.3 VALUED,,,location[1].location(Location.operationalStatus),,code,0,1,,BedStatus,,,The operational status is on the Location resource where the implementer must determine which of the Encounter.location(Location) instances reflect the Bed or Room and apply it to the most granular available.
-W198) Missing vocabulary mapping for VIPIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Patient] - Sheet1.csv(:19)
+W170) Missing vocabulary mapping for VIPIndicator	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Patient] - Sheet1.csv(:19)
 	near: 16,PV1-16,VIP Indicator,CWE,0,1,,,If person level VIP,extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],VIPIndicator,,,
-W199) Missing vocabulary mapping for VisitUserCode	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:11)
+W171) Missing vocabulary mapping for VisitUserCode	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:11)
 	near: 7,PV2-7,Visit User Code,CWE,0,-1,,,,,extension?-visitUserCode,CodeableConcept,0,-1,CWE[CodeableConcept],VisitUserCode,,,
-W200) Missing vocabulary mapping for PublicityCode	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:30)
+W172) Missing vocabulary mapping for PublicityCode	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:30)
 	near: 21,PV2-21,Visit Publicity Code,CWE,0,1,,,,,extension?-publicityCode,CodeableConcept,0,1,CWE[CodeableConcept],PublicityCode,,,
-W201) Missing vocabulary mapping for Yes/No	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:31)
+W173) Missing vocabulary mapping for Yes/No	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:31)
 	near: 22,PV2-22,Visit Protection Indicator,ID,0,1,,,,meta.security,,Coding,0,-1,ID[Coding],Yes/No,,,
-W202) Missing vocabulary mapping for EncounterPriority	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:34)
+W174) Missing vocabulary mapping for EncounterPriority	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:34)
 	near: 25,PV2-25,Visit Priority Code,CWE,0,1,,,,priority,,CodeableConcept,0,1,CWE[CodeableConcept],EncounterPriority,,,
-W203) Missing vocabulary mapping for ModeOfArrivalCode	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:48)
+W175) Missing vocabulary mapping for ModeOfArrivalCode	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:48)
 	near: 38,PV2-38,Mode of Arrival Code,CWE,0,1,,,,extension[1].valueCoding,,Coding,0,1,CWE[Coding],ModeOfArrivalCode,,,
-W204) Missing vocabulary mapping for AdmissionLevelOfCareCode	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:50)
+W176) Missing vocabulary mapping for AdmissionLevelOfCareCode	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:50)
 	near: 40,PV2-40,Admission Level of Care Code,CWE,0,1,,,,,extension?-admissionLevelOfCare,CodeableConcept,0,1,CWE[CodeableConcept],AdmissionLevelOfCareCode,,,
-W205) Missing vocabulary mapping for ProviderRole	at mappings/segments/HL7 Segment - FHIR R4_ ROL[CareTeam] - Sheet1.csv(:5)
+W177) Missing vocabulary mapping for ProviderRole	at mappings/segments/HL7 Segment - FHIR R4_ ROL[CareTeam] - Sheet1.csv(:5)
 	near: 3,ROL-3,Role-ROL,CWE,0,1,,,,participant.role[1],,CodeableConcept,0,-1,CWE[CodeableConcept],ProviderRole,,,
-W206) Missing vocabulary mapping for ParticipantOrganizationUnitType	at mappings/segments/HL7 Segment - FHIR R4_ ROL[CareTeam] - Sheet1.csv(:15)
+W178) Missing vocabulary mapping for ParticipantOrganizationUnitType	at mappings/segments/HL7 Segment - FHIR R4_ ROL[CareTeam] - Sheet1.csv(:15)
 	near: 10,ROL-10,Organization Unit Type,CWE,0,1,IF ROL-4 NOT VALUED,,,participant.member(Organization[1].type),,CodeableConcept,0,1,CWE[CodeableConcept],ParticipantOrganizationUnitType,,,
-W207) Missing vocabulary mapping for ProviderRole	at mappings/segments/HL7 Segment - FHIR R4_ ROL[Encounter-PractitionerRole] - Sheet1.csv(:6)
+W179) Missing vocabulary mapping for ProviderRole	at mappings/segments/HL7 Segment - FHIR R4_ ROL[Encounter-PractitionerRole] - Sheet1.csv(:6)
 	near: 3,ROL-3,Role-ROL,CWE,1,1,,,,participant[1].type,,CodeableConcept,0,-1,CWE[CodeableConcept],ProviderRole,,,
-W208) Missing vocabulary mapping for ProviderRole	at mappings/segments/HL7 Segment - FHIR R4_ ROL[Patient-GeneralPractitioner] - Sheet1.csv(:5)
+W180) Missing vocabulary mapping for ProviderRole	at mappings/segments/HL7 Segment - FHIR R4_ ROL[Patient-GeneralPractitioner] - Sheet1.csv(:5)
 	near: 3,ROL-3,Role-ROL,CWE,1,1,,,,generalPractitioner(PractitionerRole.code),,CodeableConcept,,,CWE[CodeableConcept],ProviderRole,,,
-W209) Missing vocabulary mapping for ProviderRole	at mappings/segments/HL7 Segment - FHIR R4_ ROL[RelatedPerson] - Sheet1.csv(:5)
+W181) Missing vocabulary mapping for ProviderRole	at mappings/segments/HL7 Segment - FHIR R4_ ROL[RelatedPerson] - Sheet1.csv(:5)
 	near: 3,ROL-3,Role-ROL,CWE,1,1,,,,relationship,,CodeableConcept,0,-1,CWE[CodeableConcept],ProviderRole,,,
-W210) Missing vocabulary mapping for ParticipantOrganizationUnitType	at mappings/segments/HL7 Segment - FHIR R4_ ROL[RelatedPerson] - Sheet1.csv(:12)
+W182) Missing vocabulary mapping for ParticipantOrganizationUnitType	at mappings/segments/HL7 Segment - FHIR R4_ ROL[RelatedPerson] - Sheet1.csv(:12)
 	near: 10,ROL-10,Organization Unit Type,CWE,0,1,,,,,extension?-organizationType,CodeableConcept,0,1,CWE[CodeableConcept],ParticipantOrganizationUnitType,,,
-W211) Missing vocabulary mapping for CompletionStatus	at mappings/segments/HL7 Segment - FHIR R4_ RXA[Immunization] - RXA.csv(:24)
+W183) Missing vocabulary mapping for CompletionStatus	at mappings/segments/HL7 Segment - FHIR R4_ RXA[Immunization] - RXA.csv(:24)
 	near: 20,RXA-20,Completion Status,ID,0,1,"IF RXA-21 NOT EQUALS ""D""",,,status,,code,1,1,,CompletionStatus,,,
-W212) Missing vocabulary mapping for RequestedGiveUnits	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:8)
+W184) Missing vocabulary mapping for RequestedGiveUnits	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:8)
 	near: 4,RXO-4,Requested Give Units,CWE,0,1,IF RXO-2 IS VALUED AND (IF RXO-4.1 IS VALUED OR RXO-4.3 IS VALUED),,,dosageInstruction.doseAndRate[1].doseRange.low.code,,code,,,CWE[Code],RequestedGiveUnits,,,
-W213) Missing vocabulary mapping for RequestedDosageForm	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:12)
+W185) Missing vocabulary mapping for RequestedDosageForm	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:12)
 	near: 5,RXO-5,Requested Dosage Form,CWE,0,1,,,,medication(Medication.doseForm),,CodeableConcept,,,CWE[CodeableConcept],RequestedDosageForm,,,
-W214) Missing vocabulary mapping for AllowSubstition	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:16)
+W186) Missing vocabulary mapping for AllowSubstition	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:16)
 	near: 9,RXO-9,Allow Substitutions,ID,0,1,,,,substitution.allowedCodeableConcept,,CodeableConcept,,,ID[CodeableConcept],AllowSubstition,,,
-W215) Missing vocabulary mapping for RequestedDispenseUnits	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:19)
+W187) Missing vocabulary mapping for RequestedDispenseUnits	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:19)
 	near: 12,RXO-12,Requested Dispense Units,CWE,0,1,IF RXO-12.1 IS VALUED OR RXO-12.3 IS VALUED,,,dispenseRequest.quantity.code,,code,,,CWE[Code],RequestedDispenseUnits,,,
-W216) Missing vocabulary mapping for RequestedGiveStrengthUnits	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:27)
+W188) Missing vocabulary mapping for RequestedGiveStrengthUnits	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:27)
 	near: 19,RXO-19,Requested Give Strength Units,CWE,0,1,IF RXO-19.1 IS VALUED OR RXO-19.3 IS VALUED,,,medicationReference(Medication.ingredient.strength.numerator.code,,code,,,CWE[Code],RequestedGiveStrengthUnits,,,
-W217) Missing vocabulary mapping for RequestedDrugStengthVolumeUnits	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:37)
+W189) Missing vocabulary mapping for RequestedDrugStengthVolumeUnits	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:37)
 	near: 26,RXO-26,Requested Drug Strength Volume Units,CWE,0,1,IF RXO-26.1 IS VALUED OR RXO-26.3 IS VALUED,,,medicationReference(Medication.ingredient.strength.denominator.code,,code,,,,RequestedDrugStengthVolumeUnits,,,
-W218) Missing vocabulary mapping for RouteOfAdministration	at mappings/segments/HL7 Segment - FHIR R4_ RXR[Immunization] - RXR.csv(:3)
+W190) Missing vocabulary mapping for RouteOfAdministration	at mappings/segments/HL7 Segment - FHIR R4_ RXR[Immunization] - RXR.csv(:3)
 	near: 1,RXR-1,Route,CWE,1,1,,,,route,,CodeableConcept,0,1,CWE[CodeableConcept],RouteOfAdministration,,,
-W219) Missing vocabulary mapping for BodyParts	at mappings/segments/HL7 Segment - FHIR R4_ RXR[Immunization] - RXR.csv(:4)
+W191) Missing vocabulary mapping for BodyParts	at mappings/segments/HL7 Segment - FHIR R4_ RXR[Immunization] - RXR.csv(:4)
 	near: 2,RXR-2,Administration Site,CWE,0,1,,,,site,,CodeableConcept,0,1,CWE[CodeableConcept],BodyParts,,,
-W220) Missing vocabulary mapping for RouteOfAdministration	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:3)
+W192) Missing vocabulary mapping for RouteOfAdministration	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:3)
 	near: 1,RXR-1,Route,CWE,1,1,,,,dosageInstruction.route,,code,0,1,,RouteOfAdministration,,,
-W221) Missing vocabulary mapping for BodyParts	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:4)
+W193) Missing vocabulary mapping for BodyParts	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:4)
 	near: 2,RXR-2,Administration Site,CWE,0,1,,,,dosageInstruction.site,,code,0,1,,BodyParts,,,
-W222) Missing vocabulary mapping for AdministrationDevice	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:5)
+W194) Missing vocabulary mapping for AdministrationDevice	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:5)
 	near: 3,RXR-3,Administration Device,CWE,0,1,,,,,MedicationRequest.dosageInstruction.#ext-device#,Reference(Device),0,-1,,AdministrationDevice,,,
-W223) Missing vocabulary mapping for AdministrationMethod	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:6)
+W195) Missing vocabulary mapping for AdministrationMethod	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:6)
 	near: 4,RXR-4,Administration Method,CWE,0,1,,,,dosageInstruciton.method,,CodeableConcept,0,1,CWE[CodeableConcept],AdministrationMethod,,,
-W224) Missing vocabulary mapping for RoutingInstruction	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:7)
+W196) Missing vocabulary mapping for RoutingInstruction	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:7)
 	near: 5,RXR-5,Routing Instruction,CWE,0,1,,,,dosageInstruction.additionalInstruction,,CodeableConcept,0,-1,CWE[CodeableConcept],RoutingInstruction,,,
-W225) Missing vocabulary mapping for AppointmentReasonCodes	at mappings/segments/HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv(:9)
+W197) Missing vocabulary mapping for AppointmentReasonCodes	at mappings/segments/HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv(:9)
 	near: 7,SCH-7,Appointment Reason,CWE,0,1,,,"Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType.",reasonCode[1],,CodeableConcept,0,-1,CWE[CodeableConcept],AppointmentReasonCodes,,,
-W226) Missing vocabulary mapping for AppointmentTypeCodes	at mappings/segments/HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv(:10)
+W198) Missing vocabulary mapping for AppointmentTypeCodes	at mappings/segments/HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv(:10)
 	near: 7,SCH-7,Appointment Reason,CWE,0,1,,,"Depending on whether the system uses the meaning of HL70276 or HL70277, this is mapped to either Appointment.reasonCode or Appointment.appointmentType.",appointmentType[1],,CodeableConcept,0,1,CWE[CodeableConcept],AppointmentTypeCodes,,,"Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
-W227) Missing vocabulary mapping for AppointmentTypeCodes	at mappings/segments/HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv(:11)
+W199) Missing vocabulary mapping for AppointmentTypeCodes	at mappings/segments/HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv(:11)
 	near: 8,SCH-8,Appointment Type,CWE,0,1,,,The mapping of SCH-8 to Appointment.appointmentType will depend on the codes being received in SCH-7 and SCH-8,appointmentType[1],,CodeableConcept,0,1,CWE[CodeableConcept],AppointmentTypeCodes,,,"Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
-W228) Missing vocabulary mapping for FillerStatusCodes[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv(:34)
+W200) Missing vocabulary mapping for FillerStatusCodes[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv(:34)
 	near: 25,SCH-25,Filler Status Code,CWE,0,1,,,,status,,code,1,1,CWE[code],FillerStatusCodes[Appointment],,,
-W229) Missing vocabulary mapping for FillerStatusCodes[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ SCH[ServiceRequest] - Sheet1.csv(:35)
+W201) Missing vocabulary mapping for FillerStatusCodes[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ SCH[ServiceRequest] - Sheet1.csv(:35)
 	near: 25,SCH-25,Filler Status Code,CWE,0,1,,,,status,,code,1,1,CWE[code],FillerStatusCodes[Appointment],,,
-W230) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ SFT[Device] - Sheet1.csv(:3)
-	near: 0,,,,,,,,,type,,CodeableConcept,0,-1,,,"/code for ""software"" has yet to be identified/",,
-W231) Missing vocabulary mapping for SpecimenType	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:8)
-	near: 4,SPM-4,Specimen Type,CWE,1,1,,,,type,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenType,,,
-W232) Missing vocabulary mapping for Additive/Preservative	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:10)
-	near: 6,SPM-6,Specimen Additives,CWE,0,-1,,,,container.additiveCodeableConcept,,CodeableConcept,0,1,CWE[CodeableConcept],Additive/Preservative,,,
-W233) Missing vocabulary mapping for SpecimenCollectionMethod	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:11)
-	near: 7,SPM-7,Specimen Collection Method,CWE,0,1,,,,collection.method,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenCollectionMethod,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)
-W234) Missing vocabulary mapping for SpecimenSourceSite	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:12)
-	near: 
+W202) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ SFT[Device] - Sheet1.csv(:3)
+	near: 0,,,
