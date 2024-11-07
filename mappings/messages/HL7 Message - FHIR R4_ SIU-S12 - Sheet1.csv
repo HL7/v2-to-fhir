@@ -14,7 +14,7 @@ ServiceRequest[1..n].subject=Patient[1].id",,
 4.1,SIU_S12.PATIENT.PID,PID,Patient Identification,1,1,,,,Appointment[1],PID[Appointment],Appointment.participant.actor=Patient[1].id,,
 4.1,SIU_S12.PATIENT.PID,PID,Patient Identification,1,1,IF PID-33 AND PID-34 VALUED,,One  may drop PID-33 from the condition if PID-34 Last Update Facility is still sufficient without a date.,Provenance[4],PID[Provenance-Patient],Provenance.target.reference=Patient[1].id,,
 4.2,SIU_S12.PATIENT.PV1,[ PV1 ],Patient Visit,0,1,,,,Encounter[1],PV1[Encounter],Encounter[1].subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
-4.2,SIU_S12.PATIENT.PV1,[ PV1 ],Patient Visit,0,1,IF PV1-43 VALUED,,,EncounterHistory,PV1[EncounterHistory],EncounterHistory.subject.reference=Patient[1].id,,
+4.2,SIU_S12.PATIENT.PV1,[ PV1 ],Patient Visit,0,1,IF PV1-43 VALUED,,,Basic-EncounterHistory,PV1[Basic-EncounterHistory],Basic.extension-EncounterHistory.subject.reference=Patient[1].id,,
 4.2,SIU_S12.PATIENT.PV1,[ PV1 ],Patient Visit,0,1,,,,Patient[1],PV1[Patient],,,
 4.2,SIU_S12.PATIENT.PV1,[ PV1 ],Patient Visit,0,1,IF PV1-20 VALUE,,,Coverage[1],PV1[Coverage],Coverage.beneficiary.reference=Patient[1].id,,
 4.3,SIU_S12.PATIENT.PV2,[ PV2 ] ,Patient Visit - Additional Info,0,1,,,,Encounter[1],PV2[Encounter],Encounter.subject=Patient[1].id,,Incorporate PV2 content into the Encounter created from the PV1 segment.

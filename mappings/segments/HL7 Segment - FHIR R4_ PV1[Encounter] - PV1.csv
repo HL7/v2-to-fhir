@@ -67,11 +67,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 41,PV1-41,Account Status,CWE,0,1,,,,,,,,,,,,,
 42,PV1-42,Pending Location,PL,0,1,,,,location[4].location(Location),,Reference(Location),1,1,PL[Location],,"""reserved""",,
 42,PV1-42,Pending Location,PL,0,1,,,,location[4].status,,code,0,1,,,,,"""reserved"""
-43,PV1-43,Prior Temporary Location,PL,0,1,,,,location[5].location(Location),,Reference(Location),1,1,PL[Location],,,,
-43,PV1-43,Prior Temporary Location,PL,0,1,,,,location[5].status,,code,0,1,,,"""completed""",,
-,,,,,,,,,location[5].extension.url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/subject-locationClassification""",,
-43,PV1-43,Prior Temporary Location,PL,0,1,,,,location[5].extension.valueCodeableConcept.coding.code,,code,,,,,"""temporary""",,
-43,PV1-43,Prior Temporary Location,PL,0,1,,,,location[5].extension.valueCodeableConcept.coding.system,,uri,,,,,""" http://hl7.org/fhir/ValueSet/subject-location""",,
+43,PV1-43,Prior Temporary Location,PL,0,1,,,,,,,,,,,,,
 44,PV1-44,Admit Date/Time,DTM,0,1,,,,period.start,,dateTime,0,1,,,,,
 45,PV1-45,Discharge Date/Time,DTM,0,1,,,,period.end,,dateTime,0,1,,,,,
 45,PV1-45,Discharge Date/Time,DTM,0,1,IF PV1-45 VALUED,,,"status=""finished""",,code,1,1,,,,,
