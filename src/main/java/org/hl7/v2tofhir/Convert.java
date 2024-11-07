@@ -43,7 +43,6 @@ import com.opencsv.CSVReader;
 public class Convert {
 
     private static String MAP_OUTPUT_DIR = "input/pagecontent/";
-    private static final String PAGE_CONTENT_DIR = "input/pagecontent";
     private static final String FHIR_PREFIX = "http://hl7.org/fhir/R4";
     private static final String FILE_TO_URLMAP = "filetourl.properties";
     private static int fileCount = 0;
@@ -486,21 +485,22 @@ public class Convert {
     }
 
     private static String getType(String name) {
-        if (name.contains("Inventory")) {
+    	name = name.toLowerCase().replace(" ", "");
+        if (name.contains("inventory")) {
             return "Inventory";
         } 
-        if (name.contains("Data Type")) {
+        if (name.contains("datatype")) {
             return "Data Type";
         } 
-        if (name.contains("Message")) {
-            return "Message";
-        } 
-        if (name.contains("Concept Map")) {
-        	return "Concept Map";
-        } 
-        if (name.contains("Segment")) {
+        if (name.contains("segment")) {
         	return "Segment";
         }
+        if (name.contains("conceptmap")) {
+        	return "Concept Map";
+        } 
+        if (name.contains("message")) {
+            return "Message";
+        } 
         return "Unknown";
     }
     private static void convert(File f, String outputLocation) {

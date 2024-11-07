@@ -28,14 +28,25 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
     public ConceptMapConverter(File f, String sourceUrl) throws IOException {
         super(ConceptMapInput.class, sourceUrl);
         load(f);
-        String name = StringUtils.substringBetween(
-        		f.getName().toLowerCase().replaceAll("[^a-z]+",""),  
-        		"map_ ", " ");
-        vocabToLinkMap.put(name, getHtmlFileName());
+        String name = f.getName().toLowerCase().replaceAll("[^a-z_ ]+","");
+        String link = StringUtils.substringBetween(name, "map_ ", " ");
+        if (link == null) {
+            warn("link is null for: %s%n", 0, name);
+            return;
+        }
+        if (StringUtils.containsIgnoreCase(getHtmlFileName(), "unknown")) {
+        	warn("Link to unknown for %s: %s%n", 0, name, getHtmlFileName());
+        }
+        vocabToLinkMap.put(link, getHtmlFileName());
     }
     
     public static String getLinkFromName(String name) {
-    	return vocabToLinkMap.get(name.toLowerCase().replaceAll("[^a-z]+",""));
+    	name = StringUtils.substringBefore(name, "[");
+    	String result = vocabToLinkMap.get(name.toLowerCase().replaceAll("[^a-z]+",""));
+    	if (result == null) {
+    		System.err.printf("Link not found for %s%n", name);
+    	}
+    	return result;
     }
 
     @Override

@@ -17,8 +17,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
-
 public class MessageConverter extends ConverterImpl<MessageInput> implements Converter {
 
     public MessageConverter(File f, String sourceUrl) throws IOException {

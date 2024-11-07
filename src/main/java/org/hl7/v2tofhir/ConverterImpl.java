@@ -130,6 +130,9 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
     @Override
     public void load(File f) throws IOException {
+    	if (f.getName().toLowerCase().contains("yes")) {
+    		System.err.println("Got here");
+    	}
         String[] parts = null;
         theSource = f;
         filename = f.getName();
@@ -148,7 +151,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                 qualifier = "";
             }
         }
-
+        filename = filename.replace("ConceptMap", "Concept Map");
         parts = filename.split("\\s*[\\._\\-]\\s*");
         sourceName = source = StringUtils.substringBefore(parts[2], "[");
         targetName = target;
@@ -160,7 +163,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             beans = new CsvToBeanBuilder<T>(r).withType(classType).build().parse();
         }
 
-        if (filename.contains("HL7 Concept Map")) {
+        if (filename.contains("HL7 Concept")) {
             type = TABLE_TYPE;
             sourceName = parts[1];
             setTableNames();
