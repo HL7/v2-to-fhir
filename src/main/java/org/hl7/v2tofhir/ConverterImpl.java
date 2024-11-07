@@ -130,9 +130,6 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
     @Override
     public void load(File f) throws IOException {
-    	if (f.getName().toLowerCase().contains("yes")) {
-    		System.err.println("Got here");
-    	}
         String[] parts = null;
         theSource = f;
         filename = f.getName();
