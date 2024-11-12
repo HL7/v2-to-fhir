@@ -10,7 +10,7 @@ Title: "Message ADT_A06 to Bundle Map"
 * name = "MessageADT_A06ToBundle"
 * status = #active
 * experimental = true
-* date = "2024-11-01"
+* date = "2024-11-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -254,8 +254,8 @@ Depending on the relationship between the old and new account, the implementer s
 * group.element[21].extension[0].extension[1].valueInteger = 1
 * group.element[21].display = "Patient Visit"
 * group.element[21].target.equivalence = #equivalent
-* group.element[21].target.code = #Basic-EncounterHistory
-* group.element[21].target.display = "Basic-EncounterHistory"
+* group.element[21].target.code = #Basic
+* group.element[21].target.display = "Basic"
 * group.element[22].code = #ADT_A06.PV1
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "cardinalityMin"

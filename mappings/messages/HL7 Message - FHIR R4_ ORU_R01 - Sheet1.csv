@@ -31,7 +31,7 @@ If PRT-2 is set to ""D"" and ""inactive"" cannot be used, please submit a JIRA w
 4.1.7.3,/ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION,}],--- PATIENT_OBSERVATION end,,,,,,,,,,
 4.1.8,ORU_R01.PATIENT_RESULT.PATIENT.VISIT,[,--- VISIT begin,0,1,,,,,,,,
 4.1.8.1,ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter.subject.reference=Patient[1].id,,Processing of the PV1 segment results in the creation of a new Encounter resource
-4.1.8.1,ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,IF PV1-43 VALUED,,,Basic-EncounterHistory,PV1[Basic-EncounterHistory],Basic.extension-EncounterHistory.subject.reference=Patient[1].id,,
+4.1.8.1,ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,IF PV1-43 VALUED,,,Basic,PV1[Basic-EncounterHistory],Basic.extension-EncounterHistory.subject.reference=Patient[1].id,,
 4.1.8.1,ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
 4.1.8.1,ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1,PV1,Patient Visit,1,1,IF PV1-20 VALUE,,,Coverage[1],PV1[Coverage],Coverage.beneficiary.reference=Patient[1].id,,
 4.1.8.2,ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV2,[PV2],Patient Visit - Additional Info,0,1,,,,Encounter[1],PV2[Encounter],Encounter.subject.reference=Patient[1].id,,Incorporate PV2 content into the Encounter created from the PV1 segment.

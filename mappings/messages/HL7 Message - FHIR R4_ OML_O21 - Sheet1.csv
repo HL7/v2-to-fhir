@@ -8,7 +8,7 @@ Sort Order,Identifier,Syntax,Name,Cardinality - Min,Cardinality - Max,Computable
 Provenance[1].entity.role=""derivation""",,
 2,OML_O21.SFT,[{SFT}],Software,0,-1,,,If the software represents the original source system,Provenance[1].entity.what(Device),SFT[Device],"Provenance[1].entity.what.reference=Device.id
 Provenance[1].entity.role=""source""",,
-3,OML_O21.UAC,[ UAC ],User Authentication Credential,0,1,,,,,,,,
+3,OML_O21.UAC,[ UAC ],User Authentication Credential,0,1,ic,,,,,,,
 4,OML_O21.NTE,[{NTE}],Notes and Comments (for Header),0,-1,,,,,,,,
 5,OML_O21.PATIENT,[,--- PATIENT begin,0,1,,,,,,,,
 5.1,OML_O21.PATIENT.PID,PID,Patient Identification,1,1,,,,Patient[1],PID[Patient],,,Processing of the PID segment results in the creation of a new Patient resource
@@ -23,7 +23,7 @@ Provenance[1].entity.role=""source""",,
 5.7,OML_O21.PATIENT.ARV,[{ARV}],Access Restrictions,0,-1,,,,,,,,
 5.8,OML_O21.PATIENT.PATIENT_VISIT,[,--- PATIENT_VISIT begin,0,1,,,,,,,,
 5.8.1,OML_O21.PATIENT.PATIENT_VISIT.PV1,PV1,Patient Visit,1,1,,,,Encounter[1],PV1[Encounter],Encounter.subject=Patient[PID],,Processing of the PV1 segment results in the creation of a new Encounter resource
-5.8.1,OML_O21.PATIENT.PATIENT_VISIT.PV1,PV1,Patient Visit,1,1,IF PV1-43 VALUED,,,Basic-EncounterHistory,PV1[Basic-EncounterHistory],Basic.extension-EncounterHistory.subject.reference=Patient[1].id,,
+5.8.1,OML_O21.PATIENT.PATIENT_VISIT.PV1,PV1,Patient Visit,1,1,IF PV1-43 VALUED,,,Basic,PV1[Basic-EncounterHistory],Basic.extension-EncounterHistory.subject.reference=Patient[1].id,,
 5.8.1,OML_O21.PATIENT.PATIENT_VISIT.PV1,PV1,Patient Visit,1,1,,,,Patient[1],PV1[Patient],,,
 5.8.1,OML_O21.PATIENT.PATIENT_VISIT.PV1,PV1,Patient Visit,1,1,IF PV1-20 VALUE,,,Coverage[1],PV1[Coverage],Coverage.beneficiary.reference=Patient[1].id,,
 5.8.2,OML_O21.PATIENT.PATIENT_VISIT.PV2,[ PV2 ],Patient Visit- Additional Info,0,1,,,,Encounter[1],PV2[Encounter],,,Incorporate PV2 content into the Encounter created from the PV1 segment.

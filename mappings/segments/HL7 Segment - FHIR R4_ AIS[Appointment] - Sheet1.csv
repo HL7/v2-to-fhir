@@ -10,6 +10,6 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 7,AIS-7,Duration,NM,0,1,IF AIS-4 IS VALUED,,,participant.period.end,,,,,,,Appointment.participant.period.start + AIS-7,,
 8,AIS-8,Duration Units,CNE,0,1,,,,,,,,,,,,,
 9,AIS-9,Allow Substitution Code,CWE,0,1,,,,,,,,,,,,,
-10,AIS-10,Filler Status Code,CWE,0,1,,,,status,,CodeableConcept,0,1,CWE[CodeableConcept],FillerStatus[Appointment],,,
+10,AIS-10,Filler Status Code,CWE,0,1,,,,status,,CodeableConcept,0,1,CWE[CodeableConcept],FillerStatusCodes[Appointment],,,
 11,AIS-11,Placer Supplemental Service Information,CWE,0,-1,,,,,,,,,,,,,
 12,AIS-12,Filler Supplemental Service Information,CWE,0,-1,,,,,,,,,,,,,

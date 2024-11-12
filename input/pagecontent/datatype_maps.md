@@ -25,7 +25,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [CWE](ConceptMap-datatype-cwe-to-organization.html) - Coded With Exceptions to FHIR [Organization](http://hl7.org/fhir/R4/organization.html)
 * [CWE](ConceptMap-datatype-cwe-to-practitionerrole.html) - Coded With Exceptions to FHIR [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html)
 * [CWE](ConceptMap-datatype-cwe-to-quantity.html) - Coded With Exceptions to FHIR [Quantity](http://hl7.org/fhir/R4/datatypes.html#quantity)
-* [CWE](ConceptMap-datatype-cwe-to-timing-duration.html) - Coded With Exceptions to FHIR [Timing.duration](http://hl7.org/fhir/R4/datatypes-definitions.html#timing.duration)
+* [CWE[DurationUnit]](ConceptMap-datatype-cwe-durationunit-to-timing.html) - Coded With Exceptions to FHIR [Timing](http://hl7.org/fhir/R4/datatypes.html#timing)
 * [CWE[SupportingInfo]](ConceptMap-datatype-cwe-supportinginfo-to-observation.html) - Coded With Exceptions to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [CWE](ConceptMap-datatype-cwe-to-code.html) - Coded With Exceptions to FHIR [code](http://hl7.org/fhir/R4/datatypes.html#code)
 * [CWE](ConceptMap-datatype-cwe-to-string.html) - Coded With Exceptions to FHIR [string](http://hl7.org/fhir/R4/datatypes.html#string)

@@ -10,7 +10,7 @@ Title: "Message MDM_T02 to Bundle Map"
 * name = "MessageMDM_T02ToBundle"
 * status = #active
 * experimental = true
-* date = "2024-11-01"
+* date = "2024-11-12"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -137,8 +137,8 @@ Title: "Message MDM_T02 to Bundle Map"
 * group.element[10].extension[0].extension[1].valueInteger = 1
 * group.element[10].display = "Patient Visit"
 * group.element[10].target.equivalence = #equivalent
-* group.element[10].target.code = #Basic-EncounterHistory
-* group.element[10].target.display = "Basic-EncounterHistory"
+* group.element[10].target.code = #Basic
+* group.element[10].target.display = "Basic"
 * group.element[11].code = #MDM_T02.PV1
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
