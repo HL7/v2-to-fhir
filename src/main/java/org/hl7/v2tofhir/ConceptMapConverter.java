@@ -24,6 +24,7 @@ import org.apache.commons.lang3.StringUtils;
 
 public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implements Converter {
 	public static Map<String, String> vocabToLinkMap = new LinkedHashMap<>();
+	public static final String UNSPECIFIED_MAPPING = "unspecified_mapping.html";
 	
     public ConceptMapConverter(File f, String sourceUrl) throws IOException {
         super(ConceptMapInput.class, sourceUrl);
@@ -36,8 +37,10 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
         }
         if (StringUtils.containsIgnoreCase(getHtmlFileName(), "unknown")) {
         	warn("Link to unknown for %s: %s%n", 0, name, getHtmlFileName());
+        	vocabToLinkMap.put(link, UNSPECIFIED_MAPPING);
+        } else {
+            vocabToLinkMap.put(link, getHtmlFileName());
         }
-        vocabToLinkMap.put(link, getHtmlFileName());
     }
     
     public static String getLinkFromName(String name) {

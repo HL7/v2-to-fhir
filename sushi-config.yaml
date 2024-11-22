@@ -81,6 +81,8 @@ pages:
     title: ANTLR Condition Syntax
   links.md:
     title: Links
+  unspecified_mapping.md:
+    title: Unspecified Mapping
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
