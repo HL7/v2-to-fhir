@@ -57,4 +57,5 @@ jobs:
           git add -A
           git commit -m "Add downloaded CSV files"
           git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git pull
           git push
