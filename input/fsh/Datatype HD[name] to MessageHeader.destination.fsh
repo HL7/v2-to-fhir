@@ -10,7 +10,7 @@ Title: "Datatype HD to MessageHeader.destination Map"
 * name = "DatatypeHDNameToMessageHeaderDestination"
 * status = #active
 * experimental = true
-* date = "2024-11-12"
+* date = "2024-11-25"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -34,8 +34,8 @@ Title: "Datatype HD to MessageHeader.destination Map"
 * group.element[0].extension[0].extension[2].valueInteger = 1
 * group.element[0].display = "Universal ID"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #software
+* group.element[0].target.code = #name
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"string"
-* group.element[0].target.display = "software"
+* group.element[0].target.display = "name"

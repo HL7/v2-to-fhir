@@ -1,7 +1,7 @@
 HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
 Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,Display,Code System
-D,Debugging,HL70103,,,,,,
-P,Production,HL70103,,,,,,
-T,Training,HL70103,,,,,,
-N,Non-Production Testing,HL70103,,,,,,
-V,Validation,HL70103,,,,,,
+D,Debugging,HL70103,,,,D,Debugging,http://terminology.hl7.org/CodeSystem/v2-0103
+P,Production,HL70103,,,,P,Production,http://terminology.hl7.org/CodeSystem/v2-0103
+T,Training,HL70103,,,,T,Training,http://terminology.hl7.org/CodeSystem/v2-0103
+N,Non-Production Testing,HL70103,,,,N,Non-Production Testing,http://terminology.hl7.org/CodeSystem/v2-0103
+V,Validation,HL70103,,,,V,Validation,http://terminology.hl7.org/CodeSystem/v2-0103

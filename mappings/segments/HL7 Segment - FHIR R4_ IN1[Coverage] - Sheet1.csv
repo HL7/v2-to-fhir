@@ -2,7 +2,7 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,IN1-1,Set ID - IN1,SI,1,1,,,,,,,,,,,,,
-2,IN1-2,Health Plan ID,CWE,1,1,,,,,,,,,,,,,
+2,IN1-2,Health Plan ID,CWE,1,1,,,,identifier,,Identifier,0,-1,CWE[Identifier],,,,
 3,IN1-3,Insurance Company ID,CX,1,-1,,,,,,,,,,,,,
 4,IN1-4,Insurance Company Name,XON,0,-1,,,,payor[1](Organization),,Reference,,,XON[Organization],,,,
 5,IN1-5,Insurance Company Address,XAD,0,-1,,,,payer[1](Organization.address),,Reference,,,XAD[Address],,,,
@@ -10,10 +10,10 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 7,IN1-7,Insurance Co Phone Number,XTN,0,-1,,,,,,,,,,,,,
 8,IN1-8,Group Number,ST,0,1,,,,,,,,,,,,,
 9,IN1-9,Group Name,XON,0,-1,,,,,,,,,,,,,
-10,IN1-10,Insured's Group Emp ID,CX,0,-1,"IF CX.5 IS ""SN""",,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/R5/StructureDefinition/extension-subscriberId""",,
-10,IN1-10,Insured's Group Emp ID,CX,0,-1,"IF CX.5 IS ""SN""",,,extension[1].valueIdentifier,,Identifier,,,CX[Identifier],,,,
-10,IN1-10,Insured's Group Emp ID,CX,0,-1,,,If CX.5 is not SN the implementer must review appropriate mapping.,,,,,,,,,,"If one has identifiers of other types, one must determine where it fits best."
-11,IN1-11,Insured's Group Emp Name,XON,0,-1,,,,policyHolder(Organization),,Reference,,,XON[Organization],,,,
+10,IN1-10,Insured's Group Emp ID,CX,0,-1,"IF CX.5 IS ""SN"" ",,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/R5/StructureDefinition/extension-subscriberId""",,
+10,IN1-10,Insured's Group Emp ID,CX,0,-1,"IF CX.5 IS ""SN"" ",,,extension[1].valueIdentifier,,Identifier,,,CX[Identifier],,,,
+10,IN1-10,Insured's Group Emp ID,CX,0,-1,,,,policyHolder([1]Organization.identifier),,Identifier,0,-1,CX[Identifier],,,,"If one has identifiers of other types, one must determine where it fits best."
+11,IN1-11,Insured's Group Emp Name,XON,0,-1,,,,policyHolder[1](Organization),,Reference,,,XON[Organization],,,,
 12,IN1-12,Plan Effective Date,DT,0,1,,,,period.start,,dateTime,,,,,,,
 13,IN1-13,Plan Expiration Date,DT,0,1,,,,period.end,,dateTime,,,,,,,
 14,IN1-14,Authorization Information,AUI,0,1,,,,,,,,,,,,,

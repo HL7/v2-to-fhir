@@ -3,239 +3,936 @@ W1) Link to unknown for hl concept map_ addresstypetype  sheetcsv: ConceptMap-ta
 W2) mappings/codesystems/HL7 Concept Map_ AddressType[Type] - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ AddressType[Type] - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W3) Link to unknown for hl concept map_ administrationdevice  sheetcsv: ConceptMap-table-hl70164-to-unknown.html
-	at mappings/codesystems/HL7 Concept Map_ AdministrationDevice - Sheet1.csv(:0)
-W4) mappings/codesystems/HL7 Concept Map_ AdministrationDevice - Sheet1.csv does not have any FHIR Mapping Content
-	at mappings/codesystems/HL7 Concept Map_ AdministrationDevice - Sheet1.csv(:1)
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W5) Link to unknown for hl concept map_ appointmenttypecodes  sheetcsv: ConceptMap-table-hl70277-to-unknown.html
-	at mappings/codesystems/HL7 Concept Map_ AppointmentTypeCodes - Sheet1.csv(:0)
-W6) mappings/codesystems/HL7 Concept Map_ AppointmentTypeCodes - Sheet1.csv does not have any FHIR Mapping Content
-	at mappings/codesystems/HL7 Concept Map_ AppointmentTypeCodes - Sheet1.csv(:1)
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W7) Link to unknown for hl concept map_ bedstatus  sheetcsv: ConceptMap-table-bedstatus-to-unknown.html
-	at mappings/codesystems/HL7 Concept Map_ BedStatus - Sheet1.csv(:0)
-W8) mappings/codesystems/HL7 Concept Map_ BedStatus - Sheet1.csv does not have any FHIR Mapping Content
-	at mappings/codesystems/HL7 Concept Map_ BedStatus - Sheet1.csv(:1)
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W9) Link to unknown for hl concept map_ bodysite  sheetcsv: ConceptMap-table-hl70163-to-unknown.html
-	at mappings/codesystems/HL7 Concept Map_ BodySite - Sheet1.csv(:0)
-W10) mappings/codesystems/HL7 Concept Map_ BodySite - Sheet1.csv does not have any FHIR Mapping Content
-	at mappings/codesystems/HL7 Concept Map_ BodySite - Sheet1.csv(:1)
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W11) Link to unknown for hl concept map_ confidentialityclassification  sheetcsv: ConceptMap-table-confidentialityclassification-to-unknown.html
+W3) Link to unknown for hl concept map_ confidentialityclassification  sheetcsv: ConceptMap-table-confidentialityclassification-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ ConfidentialityClassification - Sheet1.csv(:0)
-W12) mappings/codesystems/HL7 Concept Map_ ConfidentialityClassification - Sheet1.csv does not have any FHIR Mapping Content
+W4) mappings/codesystems/HL7 Concept Map_ ConfidentialityClassification - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ConfidentialityClassification - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W13) Link to unknown for hl concept map_ containertype  sheetcsv: ConceptMap-table-containertype-to-unknown.html
+W5) Link to unknown for hl concept map_ containertype  sheetcsv: ConceptMap-table-containertype-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ ContainerType - Sheet1.csv(:0)
-W14) mappings/codesystems/HL7 Concept Map_ ContainerType - Sheet1.csv does not have any FHIR Mapping Content
+W6) mappings/codesystems/HL7 Concept Map_ ContainerType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ContainerType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W15) Link to unknown for hl concept map_ countrycode  sheetcsv: ConceptMap-table-countrycode-to-unknown.html
-	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:0)
-W16) mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv does not have any FHIR Mapping Content
-	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:1)
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W17) Link to unknown for hl concept map_ diettype  sheetcsv: ConceptMap-table-diettype-to-unknown.html
+E1) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:4)
+	near: ALB,Albania,HL70399,,,,ALB,,Albania,ISO 3166-3,,
+E2) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:5)
+	near: DZA,Algeria,HL70399,,,,DZA,,Algeria,ISO 3166-3,,
+E3) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:6)
+	near: ASM,American Samoa,HL70399,,,,ASM,,American Samoa,ISO 3166-3,,
+E4) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:7)
+	near: AND,Andorra,HL70399,,,,AND,,Andorra,ISO 3166-3,,
+E5) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:8)
+	near: AGO,Angola,HL70399,,,,AGO,,Angola,ISO 3166-3,,
+E6) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:9)
+	near: AIA,Anguilla,HL70399,,,,AIA,,Anguilla,ISO 3166-3,,
+E7) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:10)
+	near: ATA,Antarctica,HL70399,,,,ATA,,Antarctica,ISO 3166-3,,
+E8) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:11)
+	near: ATG,Antigua and Barbuda,HL70399,,,,ATG,,Antigua and Barbuda,ISO 3166-3,,
+E9) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:12)
+	near: ARG,Argentina,HL70399,,,,ARG,,Argentina,ISO 3166-3,,
+E10) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:13)
+	near: ARM,Armenia,HL70399,,,,ARM,,Armenia,ISO 3166-3,,
+E11) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:14)
+	near: ABW,Aruba,HL70399,,,,ABW,,Aruba,ISO 3166-3,,
+E12) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:15)
+	near: AUS,Australia,HL70399,,,,AUS,,Australia,ISO 3166-3,,
+E13) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:16)
+	near: AUT,Austria,HL70399,,,,AUT,,Austria,ISO 3166-3,,
+E14) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:17)
+	near: AZE,Azerbaijan,HL70399,,,,AZE,,Azerbaijan,ISO 3166-3,,
+E15) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:18)
+	near: BHS,Bahamas (the),HL70399,,,,BHS,,Bahamas (the),ISO 3166-3,,
+E16) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:19)
+	near: BHR,Bahrain,HL70399,,,,BHR,,Bahrain,ISO 3166-3,,
+E17) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:20)
+	near: BGD,Bangladesh,HL70399,,,,BGD,,Bangladesh,ISO 3166-3,,
+E18) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:21)
+	near: BRB,Barbados,HL70399,,,,BRB,,Barbados,ISO 3166-3,,
+E19) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:22)
+	near: BLR,Belarus,HL70399,,,,BLR,,Belarus,ISO 3166-3,,
+E20) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:23)
+	near: BEL,Belgium,HL70399,,,,BEL,,Belgium,ISO 3166-3,,
+E21) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:24)
+	near: BLZ,Belize,HL70399,,,,BLZ,,Belize,ISO 3166-3,,
+E22) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:25)
+	near: BEN,Benin,HL70399,,,,BEN,,Benin,ISO 3166-3,,
+E23) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:26)
+	near: BMU,Bermuda,HL70399,,,,BMU,,Bermuda,ISO 3166-3,,
+E24) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:27)
+	near: BTN,Bhutan,HL70399,,,,BTN,,Bhutan,ISO 3166-3,,
+E25) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:28)
+	near: BOL,Bolivia (Plurinational State of),HL70399,,,,BOL,,Bolivia (Plurinational State of),ISO 3166-3,,
+E26) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:29)
+	near: BES,"Bonaire, Sint Eustatius and Saba",HL70399,,,,BES,,"Bonaire, Sint Eustatius and Saba",ISO 3166-3,,
+E27) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:30)
+	near: BIH,Bosnia and Herzegovina,HL70399,,,,BIH,,Bosnia and Herzegovina,ISO 3166-3,,
+E28) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:31)
+	near: BWA,Botswana,HL70399,,,,BWA,,Botswana,ISO 3166-3,,
+E29) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:32)
+	near: BVT,Bouvet Island,HL70399,,,,BVT,,Bouvet Island,ISO 3166-3,,
+E30) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:33)
+	near: BRA,Brazil,HL70399,,,,BRA,,Brazil,ISO 3166-3,,
+E31) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:34)
+	near: IOT,British Indian Ocean Territory (the),HL70399,,,,IOT,,British Indian Ocean Territory (the),ISO 3166-3,,
+E32) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:35)
+	near: BRN,Brunei Darussalam,HL70399,,,,BRN,,Brunei Darussalam,ISO 3166-3,,
+E33) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:36)
+	near: BGR,Bulgaria,HL70399,,,,BGR,,Bulgaria,ISO 3166-3,,
+E34) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:37)
+	near: BFA,Burkina Faso,HL70399,,,,BFA,,Burkina Faso,ISO 3166-3,,
+E35) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:38)
+	near: BDI,Burundi,HL70399,,,,BDI,,Burundi,ISO 3166-3,,
+E36) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:39)
+	near: CPV,Cabo Verde,HL70399,,,,CPV,,Cabo Verde,ISO 3166-3,,
+E37) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:40)
+	near: KHM,Cambodia,HL70399,,,,KHM,,Cambodia,ISO 3166-3,,
+E38) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:41)
+	near: CMR,Cameroon,HL70399,,,,CMR,,Cameroon,ISO 3166-3,,
+E39) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:42)
+	near: CAN,Canada,HL70399,,,,CAN,,Canada,ISO 3166-3,,
+E40) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:43)
+	near: CYM,Cayman Islands (the),HL70399,,,,CYM,,Cayman Islands (the),ISO 3166-3,,
+E41) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:44)
+	near: CAF,Central African Republic (the),HL70399,,,,CAF,,Central African Republic (the),ISO 3166-3,,
+E42) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:45)
+	near: TCD,Chad,HL70399,,,,TCD,,Chad,ISO 3166-3,,
+E43) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:46)
+	near: CHL,Chile,HL70399,,,,CHL,,Chile,ISO 3166-3,,
+E44) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:47)
+	near: CHN,China,HL70399,,,,CHN,,China,ISO 3166-3,,
+E45) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:48)
+	near: CXR,Christmas Island,HL70399,,,,CXR,,Christmas Island,ISO 3166-3,,
+E46) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:49)
+	near: CCK,Cocos (Keeling) Islands (the),HL70399,,,,CCK,,Cocos (Keeling) Islands (the),ISO 3166-3,,
+E47) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:50)
+	near: COL,Colombia,HL70399,,,,COL,,Colombia,ISO 3166-3,,
+E48) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:51)
+	near: COM,Comoros (the),HL70399,,,,COM,,Comoros (the),ISO 3166-3,,
+E49) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:52)
+	near: COD,Congo (the Democratic Republic of the),HL70399,,,,COD,,Congo (the Democratic Republic of the),ISO 3166-3,,
+E50) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:53)
+	near: COG,Congo (the),HL70399,,,,COG,,Congo (the),ISO 3166-3,,
+E51) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:54)
+	near: COK,Cook Islands (the),HL70399,,,,COK,,Cook Islands (the),ISO 3166-3,,
+E52) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:55)
+	near: CRI,Costa Rica,HL70399,,,,CRI,,Costa Rica,ISO 3166-3,,
+E53) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:56)
+	near: HRV,Croatia,HL70399,,,,HRV,,Croatia,ISO 3166-3,,
+E54) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:57)
+	near: CUB,Cuba,HL70399,,,,CUB,,Cuba,ISO 3166-3,,
+E55) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:58)
+	near: CUW,Curaçao,HL70399,,,,CUW,,Curaçao,ISO 3166-3,,
+E56) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:59)
+	near: CYP,Cyprus,HL70399,,,,CYP,,Cyprus,ISO 3166-3,,
+E57) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:60)
+	near: CZE,Czechia,HL70399,,,,CZE,,Czechia,ISO 3166-3,,
+E58) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:61)
+	near: CIV,Côte d'Ivoire,HL70399,,,,CIV,,Côte d'Ivoire,ISO 3166-3,,
+E59) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:62)
+	near: DNK,Denmark,HL70399,,,,DNK,,Denmark,ISO 3166-3,,
+E60) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:63)
+	near: DJI,Djibouti,HL70399,,,,DJI,,Djibouti,ISO 3166-3,,
+E61) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:64)
+	near: DMA,Dominica,HL70399,,,,DMA,,Dominica,ISO 3166-3,,
+E62) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:65)
+	near: DOM,Dominican Republic (the),HL70399,,,,DOM,,Dominican Republic (the),ISO 3166-3,,
+E63) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:66)
+	near: ECU,Ecuador,HL70399,,,,ECU,,Ecuador,ISO 3166-3,,
+E64) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:67)
+	near: EGY,Egypt,HL70399,,,,EGY,,Egypt,ISO 3166-3,,
+E65) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:68)
+	near: SLV,El Salvador,HL70399,,,,SLV,,El Salvador,ISO 3166-3,,
+E66) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:69)
+	near: GNQ,Equatorial Guinea,HL70399,,,,GNQ,,Equatorial Guinea,ISO 3166-3,,
+E67) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:70)
+	near: ERI,Eritrea,HL70399,,,,ERI,,Eritrea,ISO 3166-3,,
+E68) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:71)
+	near: EST,Estonia,HL70399,,,,EST,,Estonia,ISO 3166-3,,
+E69) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:72)
+	near: SWZ,Eswatini,HL70399,,,,SWZ,,Eswatini,ISO 3166-3,,
+E70) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:73)
+	near: ETH,Ethiopia,HL70399,,,,ETH,,Ethiopia,ISO 3166-3,,
+E71) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:74)
+	near: FLK,Falkland Islands (the) [Malvinas],HL70399,,,,FLK,,Falkland Islands (the) [Malvinas],ISO 3166-3,,
+E72) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:75)
+	near: FRO,Faroe Islands (the),HL70399,,,,FRO,,Faroe Islands (the),ISO 3166-3,,
+E73) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:76)
+	near: FJI,Fiji,HL70399,,,,FJI,,Fiji,ISO 3166-3,,
+E74) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:77)
+	near: FIN,Finland,HL70399,,,,FIN,,Finland,ISO 3166-3,,
+E75) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:78)
+	near: FRA,France,HL70399,,,,FRA,,France,ISO 3166-3,,
+E76) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:79)
+	near: GUF,French Guiana,HL70399,,,,GUF,,French Guiana,ISO 3166-3,,
+E77) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:80)
+	near: PYF,French Polynesia,HL70399,,,,PYF,,French Polynesia,ISO 3166-3,,
+E78) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:81)
+	near: ATF,French Southern Territories (the),HL70399,,,,ATF,,French Southern Territories (the),ISO 3166-3,,
+E79) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:82)
+	near: GAB,Gabon,HL70399,,,,GAB,,Gabon,ISO 3166-3,,
+E80) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:83)
+	near: GMB,Gambia (the),HL70399,,,,GMB,,Gambia (the),ISO 3166-3,,
+E81) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:84)
+	near: GEO,Georgia,HL70399,,,,GEO,,Georgia,ISO 3166-3,,
+E82) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:85)
+	near: DEU,Germany,HL70399,,,,DEU,,Germany,ISO 3166-3,,
+E83) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:86)
+	near: GHA,Ghana,HL70399,,,,GHA,,Ghana,ISO 3166-3,,
+E84) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:87)
+	near: GIB,Gibraltar,HL70399,,,,GIB,,Gibraltar,ISO 3166-3,,
+E85) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:88)
+	near: GRC,Greece,HL70399,,,,GRC,,Greece,ISO 3166-3,,
+E86) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:89)
+	near: GRL,Greenland,HL70399,,,,GRL,,Greenland,ISO 3166-3,,
+E87) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:90)
+	near: GRD,Grenada,HL70399,,,,GRD,,Grenada,ISO 3166-3,,
+E88) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:91)
+	near: GLP,Guadeloupe,HL70399,,,,GLP,,Guadeloupe,ISO 3166-3,,
+E89) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:92)
+	near: GUM,Guam,HL70399,,,,GUM,,Guam,ISO 3166-3,,
+E90) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:93)
+	near: GTM,Guatemala,HL70399,,,,GTM,,Guatemala,ISO 3166-3,,
+E91) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:94)
+	near: GGY,Guernsey,HL70399,,,,GGY,,Guernsey,ISO 3166-3,,
+E92) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:95)
+	near: GIN,Guinea,HL70399,,,,GIN,,Guinea,ISO 3166-3,,
+E93) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:96)
+	near: GNB,Guinea-Bissau,HL70399,,,,GNB,,Guinea-Bissau,ISO 3166-3,,
+E94) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:97)
+	near: GUY,Guyana,HL70399,,,,GUY,,Guyana,ISO 3166-3,,
+E95) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:98)
+	near: HTI,Haiti,HL70399,,,,HTI,,Haiti,ISO 3166-3,,
+E96) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:99)
+	near: HMD,Heard Island and McDonald Islands,HL70399,,,,HMD,,Heard Island and McDonald Islands,ISO 3166-3,,
+E97) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:100)
+	near: VAT,Holy See (the),HL70399,,,,VAT,,Holy See (the),ISO 3166-3,,
+E98) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:101)
+	near: HND,Honduras,HL70399,,,,HND,,Honduras,ISO 3166-3,,
+E99) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:102)
+	near: HKG,Hong Kong,HL70399,,,,HKG,,Hong Kong,ISO 3166-3,,
+E100) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:103)
+	near: HUN,Hungary,HL70399,,,,HUN,,Hungary,ISO 3166-3,,
+E101) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:104)
+	near: ISL,Iceland,HL70399,,,,ISL,,Iceland,ISO 3166-3,,
+E102) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:105)
+	near: IND,India,HL70399,,,,IND,,India,ISO 3166-3,,
+E103) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:106)
+	near: IDN,Indonesia,HL70399,,,,IDN,,Indonesia,ISO 3166-3,,
+E104) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:107)
+	near: IRN,Iran (Islamic Republic of),HL70399,,,,IRN,,Iran (Islamic Republic of),ISO 3166-3,,
+E105) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:108)
+	near: IRQ,Iraq,HL70399,,,,IRQ,,Iraq,ISO 3166-3,,
+E106) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:109)
+	near: IRL,Ireland,HL70399,,,,IRL,,Ireland,ISO 3166-3,,
+E107) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:110)
+	near: IMN,Isle of Man,HL70399,,,,IMN,,Isle of Man,ISO 3166-3,,
+E108) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:111)
+	near: ISR,Israel,HL70399,,,,ISR,,Israel,ISO 3166-3,,
+E109) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:112)
+	near: ITA,Italy,HL70399,,,,ITA,,Italy,ISO 3166-3,,
+E110) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:113)
+	near: JAM,Jamaica,HL70399,,,,JAM,,Jamaica,ISO 3166-3,,
+E111) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:114)
+	near: JPN,Japan,HL70399,,,,JPN,,Japan,ISO 3166-3,,
+E112) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:115)
+	near: JEY,Jersey,HL70399,,,,JEY,,Jersey,ISO 3166-3,,
+E113) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:116)
+	near: JOR,Jordan,HL70399,,,,JOR,,Jordan,ISO 3166-3,,
+E114) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:117)
+	near: KAZ,Kazakhstan,HL70399,,,,KAZ,,Kazakhstan,ISO 3166-3,,
+E115) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:118)
+	near: KEN,Kenya,HL70399,,,,KEN,,Kenya,ISO 3166-3,,
+E116) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:119)
+	near: KIR,Kiribati,HL70399,,,,KIR,,Kiribati,ISO 3166-3,,
+E117) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:120)
+	near: PRK,Korea (the Democratic People's Republic of),HL70399,,,,PRK,,Korea (the Democratic People's Republic of),ISO 3166-3,,
+E118) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:121)
+	near: KOR,Korea (the Republic of),HL70399,,,,KOR,,Korea (the Republic of),ISO 3166-3,,
+E119) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:122)
+	near: KWT,Kuwait,HL70399,,,,KWT,,Kuwait,ISO 3166-3,,
+E120) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:123)
+	near: KGZ,Kyrgyzstan,HL70399,,,,KGZ,,Kyrgyzstan,ISO 3166-3,,
+E121) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:124)
+	near: LAO,Lao People's Democratic Republic (the),HL70399,,,,LAO,,Lao People's Democratic Republic (the),ISO 3166-3,,
+E122) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:125)
+	near: LVA,Latvia,HL70399,,,,LVA,,Latvia,ISO 3166-3,,
+E123) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:126)
+	near: LBN,Lebanon,HL70399,,,,LBN,,Lebanon,ISO 3166-3,,
+E124) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:127)
+	near: LSO,Lesotho,HL70399,,,,LSO,,Lesotho,ISO 3166-3,,
+E125) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:128)
+	near: LBR,Liberia,HL70399,,,,LBR,,Liberia,ISO 3166-3,,
+E126) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:129)
+	near: LBY,Libya,HL70399,,,,LBY,,Libya,ISO 3166-3,,
+E127) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:130)
+	near: LIE,Liechtenstein,HL70399,,,,LIE,,Liechtenstein,ISO 3166-3,,
+E128) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:131)
+	near: LTU,Lithuania,HL70399,,,,LTU,,Lithuania,ISO 3166-3,,
+E129) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:132)
+	near: LUX,Luxembourg,HL70399,,,,LUX,,Luxembourg,ISO 3166-3,,
+E130) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:133)
+	near: MAC,Macao,HL70399,,,,MAC,,Macao,ISO 3166-3,,
+E131) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:134)
+	near: MDG,Madagascar,HL70399,,,,MDG,,Madagascar,ISO 3166-3,,
+E132) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:135)
+	near: MWI,Malawi,HL70399,,,,MWI,,Malawi,ISO 3166-3,,
+E133) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:136)
+	near: MYS,Malaysia,HL70399,,,,MYS,,Malaysia,ISO 3166-3,,
+E134) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:137)
+	near: MDV,Maldives,HL70399,,,,MDV,,Maldives,ISO 3166-3,,
+E135) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:138)
+	near: MLI,Mali,HL70399,,,,MLI,,Mali,ISO 3166-3,,
+E136) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:139)
+	near: MLT,Malta,HL70399,,,,MLT,,Malta,ISO 3166-3,,
+E137) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:140)
+	near: MHL,Marshall Islands (the),HL70399,,,,MHL,,Marshall Islands (the),ISO 3166-3,,
+E138) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:141)
+	near: MTQ,Martinique,HL70399,,,,MTQ,,Martinique,ISO 3166-3,,
+E139) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:142)
+	near: MRT,Mauritania,HL70399,,,,MRT,,Mauritania,ISO 3166-3,,
+E140) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:143)
+	near: MUS,Mauritius,HL70399,,,,MUS,,Mauritius,ISO 3166-3,,
+E141) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:144)
+	near: MYT,Mayotte,HL70399,,,,MYT,,Mayotte,ISO 3166-3,,
+E142) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:145)
+	near: MEX,Mexico,HL70399,,,,MEX,,Mexico,ISO 3166-3,,
+E143) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:146)
+	near: FSM,Micronesia (Federated States of),HL70399,,,,FSM,,Micronesia (Federated States of),ISO 3166-3,,
+E144) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:147)
+	near: MDA,Moldova (the Republic of),HL70399,,,,MDA,,Moldova (the Republic of),ISO 3166-3,,
+E145) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:148)
+	near: MCO,Monaco,HL70399,,,,MCO,,Monaco,ISO 3166-3,,
+E146) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:149)
+	near: MNG,Mongolia,HL70399,,,,MNG,,Mongolia,ISO 3166-3,,
+E147) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:150)
+	near: MNE,Montenegro,HL70399,,,,MNE,,Montenegro,ISO 3166-3,,
+E148) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:151)
+	near: MSR,Montserrat,HL70399,,,,MSR,,Montserrat,ISO 3166-3,,
+E149) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:152)
+	near: MAR,Morocco,HL70399,,,,MAR,,Morocco,ISO 3166-3,,
+E150) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:153)
+	near: MOZ,Mozambique,HL70399,,,,MOZ,,Mozambique,ISO 3166-3,,
+E151) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:154)
+	near: MMR,Myanmar,HL70399,,,,MMR,,Myanmar,ISO 3166-3,,
+E152) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:155)
+	near: NAM,Namibia,HL70399,,,,NAM,,Namibia,ISO 3166-3,,
+E153) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:156)
+	near: NRU,Nauru,HL70399,,,,NRU,,Nauru,ISO 3166-3,,
+E154) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:157)
+	near: NPL,Nepal,HL70399,,,,NPL,,Nepal,ISO 3166-3,,
+E155) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:158)
+	near: NLD,Netherlands (Kingdom of the),HL70399,,,,NLD,,Netherlands (Kingdom of the),ISO 3166-3,,
+E156) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:159)
+	near: NCL,New Caledonia,HL70399,,,,NCL,,New Caledonia,ISO 3166-3,,
+E157) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:160)
+	near: NZL,New Zealand,HL70399,,,,NZL,,New Zealand,ISO 3166-3,,
+E158) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:161)
+	near: NIC,Nicaragua,HL70399,,,,NIC,,Nicaragua,ISO 3166-3,,
+E159) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:162)
+	near: NER,Niger (the),HL70399,,,,NER,,Niger (the),ISO 3166-3,,
+E160) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:163)
+	near: NGA,Nigeria,HL70399,,,,NGA,,Nigeria,ISO 3166-3,,
+E161) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:164)
+	near: NIU,Niue,HL70399,,,,NIU,,Niue,ISO 3166-3,,
+E162) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:165)
+	near: NFK,Norfolk Island,HL70399,,,,NFK,,Norfolk Island,ISO 3166-3,,
+E163) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:166)
+	near: MKD,North Macedonia,HL70399,,,,MKD,,North Macedonia,ISO 3166-3,,
+E164) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:167)
+	near: MNP,Northern Mariana Islands (the),HL70399,,,,MNP,,Northern Mariana Islands (the),ISO 3166-3,,
+E165) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:168)
+	near: NOR,Norway,HL70399,,,,NOR,,Norway,ISO 3166-3,,
+E166) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:169)
+	near: OMN,Oman,HL70399,,,,OMN,,Oman,ISO 3166-3,,
+E167) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:170)
+	near: PAK,Pakistan,HL70399,,,,PAK,,Pakistan,ISO 3166-3,,
+E168) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:171)
+	near: PLW,Palau,HL70399,,,,PLW,,Palau,ISO 3166-3,,
+E169) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:172)
+	near: PSE,"Palestine, State of",HL70399,,,,PSE,,"Palestine, State of",ISO 3166-3,,
+E170) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:173)
+	near: PAN,Panama,HL70399,,,,PAN,,Panama,ISO 3166-3,,
+E171) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:174)
+	near: PNG,Papua New Guinea,HL70399,,,,PNG,,Papua New Guinea,ISO 3166-3,,
+E172) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:175)
+	near: PRY,Paraguay,HL70399,,,,PRY,,Paraguay,ISO 3166-3,,
+E173) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:176)
+	near: PER,Peru,HL70399,,,,PER,,Peru,ISO 3166-3,,
+E174) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:177)
+	near: PHL,Philippines (the),HL70399,,,,PHL,,Philippines (the),ISO 3166-3,,
+E175) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:178)
+	near: PCN,Pitcairn,HL70399,,,,PCN,,Pitcairn,ISO 3166-3,,
+E176) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:179)
+	near: POL,Poland,HL70399,,,,POL,,Poland,ISO 3166-3,,
+E177) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:180)
+	near: PRT,Portugal,HL70399,,,,PRT,,Portugal,ISO 3166-3,,
+E178) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:181)
+	near: PRI,Puerto Rico,HL70399,,,,PRI,,Puerto Rico,ISO 3166-3,,
+E179) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:182)
+	near: QAT,Qatar,HL70399,,,,QAT,,Qatar,ISO 3166-3,,
+E180) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:183)
+	near: ROU,Romania,HL70399,,,,ROU,,Romania,ISO 3166-3,,
+E181) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:184)
+	near: RUS,Russian Federation (the),HL70399,,,,RUS,,Russian Federation (the),ISO 3166-3,,
+E182) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:185)
+	near: RWA,Rwanda,HL70399,,,,RWA,,Rwanda,ISO 3166-3,,
+E183) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:186)
+	near: REU,Réunion,HL70399,,,,REU,,Réunion,ISO 3166-3,,
+E184) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:187)
+	near: BLM,Saint Barthélemy,HL70399,,,,BLM,,Saint Barthélemy,ISO 3166-3,,
+E185) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:188)
+	near: SHN,"Saint Helena, Ascension and Tristan da Cunha",HL70399,,,,SHN,,"Saint Helena, Ascension and Tristan da Cunha",ISO 3166-3,,
+E186) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:189)
+	near: KNA,Saint Kitts and Nevis,HL70399,,,,KNA,,Saint Kitts and Nevis,ISO 3166-3,,
+E187) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:190)
+	near: LCA,Saint Lucia,HL70399,,,,LCA,,Saint Lucia,ISO 3166-3,,
+E188) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:191)
+	near: MAF,Saint Martin (French part),HL70399,,,,MAF,,Saint Martin (French part),ISO 3166-3,,
+E189) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:192)
+	near: SPM,Saint Pierre and Miquelon,HL70399,,,,SPM,,Saint Pierre and Miquelon,ISO 3166-3,,
+E190) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:193)
+	near: VCT,Saint Vincent and the Grenadines,HL70399,,,,VCT,,Saint Vincent and the Grenadines,ISO 3166-3,,
+E191) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:194)
+	near: WSM,Samoa,HL70399,,,,WSM,,Samoa,ISO 3166-3,,
+E192) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:195)
+	near: SMR,San Marino,HL70399,,,,SMR,,San Marino,ISO 3166-3,,
+E193) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:196)
+	near: STP,Sao Tome and Principe,HL70399,,,,STP,,Sao Tome and Principe,ISO 3166-3,,
+E194) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:197)
+	near: SAU,Saudi Arabia,HL70399,,,,SAU,,Saudi Arabia,ISO 3166-3,,
+E195) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:198)
+	near: SEN,Senegal,HL70399,,,,SEN,,Senegal,ISO 3166-3,,
+E196) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:199)
+	near: SRB,Serbia,HL70399,,,,SRB,,Serbia,ISO 3166-3,,
+E197) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:200)
+	near: SYC,Seychelles,HL70399,,,,SYC,,Seychelles,ISO 3166-3,,
+E198) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:201)
+	near: SLE,Sierra Leone,HL70399,,,,SLE,,Sierra Leone,ISO 3166-3,,
+E199) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:202)
+	near: SGP,Singapore,HL70399,,,,SGP,,Singapore,ISO 3166-3,,
+E200) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:203)
+	near: SXM,Sint Maarten (Dutch part),HL70399,,,,SXM,,Sint Maarten (Dutch part),ISO 3166-3,,
+E201) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:204)
+	near: SVK,Slovakia,HL70399,,,,SVK,,Slovakia,ISO 3166-3,,
+E202) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:205)
+	near: SVN,Slovenia,HL70399,,,,SVN,,Slovenia,ISO 3166-3,,
+E203) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:206)
+	near: SLB,Solomon Islands,HL70399,,,,SLB,,Solomon Islands,ISO 3166-3,,
+E204) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:207)
+	near: SOM,Somalia,HL70399,,,,SOM,,Somalia,ISO 3166-3,,
+E205) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:208)
+	near: ZAF,South Africa,HL70399,,,,ZAF,,South Africa,ISO 3166-3,,
+E206) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:209)
+	near: SGS,South Georgia and the South Sandwich Islands,HL70399,,,,SGS,,South Georgia and the South Sandwich Islands,ISO 3166-3,,
+E207) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:210)
+	near: SSD,South Sudan,HL70399,,,,SSD,,South Sudan,ISO 3166-3,,
+E208) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:211)
+	near: ESP,Spain,HL70399,,,,ESP,,Spain,ISO 3166-3,,
+E209) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:212)
+	near: LKA,Sri Lanka,HL70399,,,,LKA,,Sri Lanka,ISO 3166-3,,
+E210) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:213)
+	near: SDN,Sudan (the),HL70399,,,,SDN,,Sudan (the),ISO 3166-3,,
+E211) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:214)
+	near: SUR,Suriname,HL70399,,,,SUR,,Suriname,ISO 3166-3,,
+E212) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:215)
+	near: SJM,Svalbard and Jan Mayen,HL70399,,,,SJM,,Svalbard and Jan Mayen,ISO 3166-3,,
+E213) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:216)
+	near: SWE,Sweden,HL70399,,,,SWE,,Sweden,ISO 3166-3,,
+E214) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:217)
+	near: CHE,Switzerland,HL70399,,,,CHE,,Switzerland,ISO 3166-3,,
+E215) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:218)
+	near: SYR,Syrian Arab Republic (the),HL70399,,,,SYR,,Syrian Arab Republic (the),ISO 3166-3,,
+E216) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:219)
+	near: TWN,Taiwan (Province of China),HL70399,,,,TWN,,Taiwan (Province of China),ISO 3166-3,,
+E217) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:220)
+	near: TJK,Tajikistan,HL70399,,,,TJK,,Tajikistan,ISO 3166-3,,
+E218) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:221)
+	near: TZA,"Tanzania, the United Republic of",HL70399,,,,TZA,,"Tanzania, the United Republic of",ISO 3166-3,,
+E219) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:222)
+	near: THA,Thailand,HL70399,,,,THA,,Thailand,ISO 3166-3,,
+E220) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:223)
+	near: TLS,Timor-Leste,HL70399,,,,TLS,,Timor-Leste,ISO 3166-3,,
+E221) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:224)
+	near: TGO,Togo,HL70399,,,,TGO,,Togo,ISO 3166-3,,
+E222) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:225)
+	near: TKL,Tokelau,HL70399,,,,TKL,,Tokelau,ISO 3166-3,,
+E223) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:226)
+	near: TON,Tonga,HL70399,,,,TON,,Tonga,ISO 3166-3,,
+E224) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:227)
+	near: TTO,Trinidad and Tobago,HL70399,,,,TTO,,Trinidad and Tobago,ISO 3166-3,,
+E225) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:228)
+	near: TUN,Tunisia,HL70399,,,,TUN,,Tunisia,ISO 3166-3,,
+E226) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:229)
+	near: TKM,Turkmenistan,HL70399,,,,TKM,,Turkmenistan,ISO 3166-3,,
+E227) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:230)
+	near: TCA,Turks and Caicos Islands (the),HL70399,,,,TCA,,Turks and Caicos Islands (the),ISO 3166-3,,
+E228) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:231)
+	near: TUV,Tuvalu,HL70399,,,,TUV,,Tuvalu,ISO 3166-3,,
+E229) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:232)
+	near: TUR,Türkiye,HL70399,,,,TUR,,Türkiye,ISO 3166-3,,
+E230) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:233)
+	near: UGA,Uganda,HL70399,,,,UGA,,Uganda,ISO 3166-3,,
+E231) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:234)
+	near: UKR,Ukraine,HL70399,,,,UKR,,Ukraine,ISO 3166-3,,
+E232) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:235)
+	near: ARE,United Arab Emirates (the),HL70399,,,,ARE,,United Arab Emirates (the),ISO 3166-3,,
+E233) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:236)
+	near: GBR,United Kingdom of Great Britain and Northern Ireland (the),HL70399,,,,GBR,,United Kingdom of Great Britain and Northern Ireland (the),ISO 3166-3,,
+E234) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:237)
+	near: UMI,United States Minor Outlying Islands (the),HL70399,,,,UMI,,United States Minor Outlying Islands (the),ISO 3166-3,,
+E235) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:238)
+	near: USA,United States of America (the),HL70399,,,,USA,,United States of America (the),ISO 3166-3,,
+E236) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:239)
+	near: URY,Uruguay,HL70399,,,,URY,,Uruguay,ISO 3166-3,,
+E237) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:240)
+	near: UZB,Uzbekistan,HL70399,,,,UZB,,Uzbekistan,ISO 3166-3,,
+E238) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:241)
+	near: VUT,Vanuatu,HL70399,,,,VUT,,Vanuatu,ISO 3166-3,,
+E239) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:242)
+	near: VEN,Venezuela (Bolivarian Republic of),HL70399,,,,VEN,,Venezuela (Bolivarian Republic of),ISO 3166-3,,
+E240) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:243)
+	near: VNM,Viet Nam,HL70399,,,,VNM,,Viet Nam,ISO 3166-3,,
+E241) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:244)
+	near: VGB,Virgin Islands (British),HL70399,,,,VGB,,Virgin Islands (British),ISO 3166-3,,
+E242) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:245)
+	near: VIR,Virgin Islands (U.S.),HL70399,,,,VIR,,Virgin Islands (U.S.),ISO 3166-3,,
+E243) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:246)
+	near: WLF,Wallis and Futuna,HL70399,,,,WLF,,Wallis and Futuna,ISO 3166-3,,
+E244) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:247)
+	near: ESH,Western Sahara*,HL70399,,,,ESH,,Western Sahara*,ISO 3166-3,,
+E245) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:248)
+	near: YEM,Yemen,HL70399,,,,YEM,,Yemen,ISO 3166-3,,
+E246) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:249)
+	near: ZMB,Zambia,HL70399,,,,ZMB,,Zambia,ISO 3166-3,,
+E247) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:250)
+	near: ZWE,Zimbabwe,HL70399,,,,ZWE,,Zimbabwe,ISO 3166-3,,
+E248) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:251)
+	near: No corresponding line (251) in source file!
+E249) Link to ISO 3166-3 not found.
+	at mappings/codesystems/HL7 Concept Map_ CountryCode - Sheet1.csv(:252)
+	near: No corresponding line (252) in source file!
+W7) Link to unknown for hl concept map_ diettype  sheetcsv: ConceptMap-table-diettype-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ DietType - Sheet1.csv(:0)
-W18) mappings/codesystems/HL7 Concept Map_ DietType - Sheet1.csv does not have any FHIR Mapping Content
+W8) mappings/codesystems/HL7 Concept Map_ DietType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ DietType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W19) Link to unknown for hl concept map_ dischargedisposition  sheetcsv: ConceptMap-table-hl70112-to-unknown.html
+W9) Link to unknown for hl concept map_ dischargedisposition  sheetcsv: ConceptMap-table-dischargedisposition-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ DischargeDisposition - Sheet1.csv(:0)
-W20) mappings/codesystems/HL7 Concept Map_ DischargeDisposition - Sheet1.csv does not have any FHIR Mapping Content
+W10) mappings/codesystems/HL7 Concept Map_ DischargeDisposition - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ DischargeDisposition - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W21) Link to unknown for hl concept map_ dischargedtolocation  sheetcsv: ConceptMap-table-dischargedtolocation-to-unknown.html
+W11) Link to unknown for hl concept map_ dischargedtolocation  sheetcsv: ConceptMap-table-dischargedtolocation-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ DischargedToLocation - Sheet1.csv(:0)
-W22) mappings/codesystems/HL7 Concept Map_ DischargedToLocation - Sheet1.csv does not have any FHIR Mapping Content
+W12) mappings/codesystems/HL7 Concept Map_ DischargedToLocation - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ DischargedToLocation - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W23) Link to unknown for hl concept map_ durationunit  sheetcsv: ConceptMap-table-durationunit-to-unknown.html
-	at mappings/codesystems/HL7 Concept Map_ DurationUnit - Sheet1.csv(:0)
-W24) mappings/codesystems/HL7 Concept Map_ DurationUnit - Sheet1.csv does not have any FHIR Mapping Content
-	at mappings/codesystems/HL7 Concept Map_ DurationUnit - Sheet1.csv(:1)
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W25) Link to unknown for hl concept map_ eventtype  sheetcsv: ConceptMap-table-hl70003-to-unknown.html
-	at mappings/codesystems/HL7 Concept Map_ EventType - Sheet1.csv(:0)
-W26) mappings/codesystems/HL7 Concept Map_ EventType - Sheet1.csv does not have any FHIR Mapping Content
-	at mappings/codesystems/HL7 Concept Map_ EventType - Sheet1.csv(:1)
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W27) Link to unknown for hl concept map_ financialclass  sheetcsv: ConceptMap-table-financialclass-to-unknown.html
+W13) Link to unknown for hl concept map_ financialclass  sheetcsv: ConceptMap-table-financialclass-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ FinancialClass - Sheet1.csv(:0)
-W28) mappings/codesystems/HL7 Concept Map_ FinancialClass - Sheet1.csv does not have any FHIR Mapping Content
+W14) mappings/codesystems/HL7 Concept Map_ FinancialClass - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ FinancialClass - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W29) Link to unknown for hl concept map_ messagestructure  sheetcsv: ConceptMap-table-hl7-0354-to-unknown.html
+W15) Link to unknown for hl concept map_ messagestructure  sheetcsv: ConceptMap-table-hl7-0354-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ MessageStructure - Sheet1.csv(:0)
-W30) mappings/codesystems/HL7 Concept Map_ MessageStructure - Sheet1.csv does not have any FHIR Mapping Content
+W16) mappings/codesystems/HL7 Concept Map_ MessageStructure - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ MessageStructure - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W31) Link to unknown for hl concept map_ nametype  sheetcsv: ConceptMap-table-hl70200-to-unknown.html
-	at mappings/codesystems/HL7 Concept Map_ NameType - Sheet1.csv(:0)
-W32) mappings/codesystems/HL7 Concept Map_ NameType - Sheet1.csv does not have any FHIR Mapping Content
-	at mappings/codesystems/HL7 Concept Map_ NameType - Sheet1.csv(:1)
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W33) Link to unknown for hl concept map_ operatorid  sheetcsv: ConceptMap-table-operatorid-to-unknown.html
+W17) Link to unknown for hl concept map_ operatorid  sheetcsv: ConceptMap-table-operatorid-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ OperatorID - Sheet1.csv(:0)
-W34) mappings/codesystems/HL7 Concept Map_ OperatorID - Sheet1.csv does not have any FHIR Mapping Content
+W18) mappings/codesystems/HL7 Concept Map_ OperatorID - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ OperatorID - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W35) Link to unknown for hl concept map_ orderstatus  sheetcsv: ConceptMap-table-hl70038-to-unknown.html
+W19) Link to unknown for hl concept map_ orderstatus  sheetcsv: ConceptMap-table-hl70038-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ OrderStatus - Sheet1.csv(:0)
-W36) mappings/codesystems/HL7 Concept Map_ OrderStatus - Sheet1.csv does not have any FHIR Mapping Content
+W20) mappings/codesystems/HL7 Concept Map_ OrderStatus - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ OrderStatus - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
-W37) Link to unknown for hl concept map_ participantorganizationunittype  sheetcsv: ConceptMap-table-hl70406-to-unknown.html
-	at mappings/codesystems/HL7 Concept Map_ ParticipantOrganizationUnitType - Sheet1.csv(:0)
-W38) mappings/codesystems/HL7 Concept Map_ ParticipantOrganizationUnitType - Sheet1.csv does not have any FHIR Mapping Content
-	at mappings/codesystems/HL7 Concept Map_ ParticipantOrganizationUnitType - Sheet1.csv(:1)
-	near: HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,
-W39) Link to unknown for hl concept map_ participation  sheetcsv: ConceptMap-table-hl70912-to-unknown.html
-	at mappings/codesystems/HL7 Concept Map_ Participation - Sheet1.csv(:0)
-W40) mappings/codesystems/HL7 Concept Map_ Participation - Sheet1.csv does not have any FHIR Mapping Content
-	at mappings/codesystems/HL7 Concept Map_ Participation - Sheet1.csv(:1)
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W41) Link to unknown for hl concept map_ planid  sheetcsv: ConceptMap-table-planid-to-unknown.html
+W21) Link to unknown for hl concept map_ planid  sheetcsv: ConceptMap-table-planid-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ PlanId - Sheet1.csv(:0)
-W42) mappings/codesystems/HL7 Concept Map_ PlanId - Sheet1.csv does not have any FHIR Mapping Content
+W22) mappings/codesystems/HL7 Concept Map_ PlanId - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ PlanId - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W43) Link to unknown for hl concept map_ practitioneridnumbertype  sheetcsv: ConceptMap-table-hl70338-to-unknown.html
+W23) Link to unknown for hl concept map_ practitioneridnumbertype  sheetcsv: ConceptMap-table-hl70338-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ PractitionerIDNumberType - Sheet1.csv(:0)
-W44) mappings/codesystems/HL7 Concept Map_ PractitionerIDNumberType - Sheet1.csv does not have any FHIR Mapping Content
+W24) mappings/codesystems/HL7 Concept Map_ PractitionerIDNumberType - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ PractitionerIDNumberType - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
-W45) Link to unknown for hl concept map_ primarylanguage  sheetcsv: ConceptMap-table-primarylanguage-to-unknown.html
+W25) Link to unknown for hl concept map_ primarylanguage  sheetcsv: ConceptMap-table-primarylanguage-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ PrimaryLanguage - Sheet1.csv(:0)
-W46) mappings/codesystems/HL7 Concept Map_ PrimaryLanguage - Sheet1.csv does not have any FHIR Mapping Content
+W26) mappings/codesystems/HL7 Concept Map_ PrimaryLanguage - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ PrimaryLanguage - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W47) Link to unknown for hl concept map_ principallanguageofmessage  sheetcsv: ConceptMap-table-principallanguageofmessage-to-unknown.html
+W27) Link to unknown for hl concept map_ principallanguageofmessage  sheetcsv: ConceptMap-table-principallanguageofmessage-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ PrincipalLanguageOfMessage - Sheet1.csv(:0)
-W48) mappings/codesystems/HL7 Concept Map_ PrincipalLanguageOfMessage - Sheet1.csv does not have any FHIR Mapping Content
+W28) mappings/codesystems/HL7 Concept Map_ PrincipalLanguageOfMessage - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ PrincipalLanguageOfMessage - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W49) Link to unknown for hl concept map_ processingid  sheetcsv: ConceptMap-table-hl70103-to-unknown.html
+W29) Link to unknown for hl concept map_ processingid  sheetcsv: ConceptMap-table-hl70103-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ ProcessingID - Sheet1.csv(:0)
-W50) mappings/codesystems/HL7 Concept Map_ ProcessingID - Sheet1.csv does not have any FHIR Mapping Content
+W30) mappings/codesystems/HL7 Concept Map_ ProcessingID - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ProcessingID - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
-W51) Link to unknown for hl concept map_ processingmode  sheetcsv: ConceptMap-table-hl0207-to-unknown.html
+W31) Link to unknown for hl concept map_ processingmode  sheetcsv: ConceptMap-table-hl0207-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ ProcessingMode - Sheet1.csv(:0)
-W52) mappings/codesystems/HL7 Concept Map_ ProcessingMode - Sheet1.csv does not have any FHIR Mapping Content
+W32) mappings/codesystems/HL7 Concept Map_ ProcessingMode - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ ProcessingMode - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
-W53) Link to unknown for hl concept map_ requesteddispenseunits  sheetcsv: ConceptMap-table-requesteddispenseunits-to-unknown.html
+W33) Link to unknown for hl concept map_ requesteddispenseunits  sheetcsv: ConceptMap-table-requesteddispenseunits-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ RequestedDispenseUnits - Sheet1.csv(:0)
-W54) mappings/codesystems/HL7 Concept Map_ RequestedDispenseUnits - Sheet1.csv does not have any FHIR Mapping Content
+W34) mappings/codesystems/HL7 Concept Map_ RequestedDispenseUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedDispenseUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W55) Link to unknown for hl concept map_ requesteddosageform  sheetcsv: ConceptMap-table-requesteddosageform-to-unknown.html
+W35) Link to unknown for hl concept map_ requesteddosageform  sheetcsv: ConceptMap-table-requesteddosageform-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ RequestedDosageForm - Sheet1.csv(:0)
-W56) mappings/codesystems/HL7 Concept Map_ RequestedDosageForm - Sheet1.csv does not have any FHIR Mapping Content
+W36) mappings/codesystems/HL7 Concept Map_ RequestedDosageForm - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedDosageForm - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W57) Link to unknown for hl concept map_ requesteddrugstrengthvolumeunits  sheetcsv: ConceptMap-table-requesteddrugstrengthvolumeunits-to-unknown.html
+W37) Link to unknown for hl concept map_ requesteddrugstrengthvolumeunits  sheetcsv: ConceptMap-table-requesteddrugstrengthvolumeunits-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ RequestedDrugStrengthVolumeUnits - Sheet1.csv(:0)
-W58) mappings/codesystems/HL7 Concept Map_ RequestedDrugStrengthVolumeUnits - Sheet1.csv does not have any FHIR Mapping Content
+W38) mappings/codesystems/HL7 Concept Map_ RequestedDrugStrengthVolumeUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedDrugStrengthVolumeUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W59) Link to unknown for hl concept map_ requestedgivestrengthunits  sheetcsv: ConceptMap-table-requestedgivestrengthunits-to-unknown.html
+W39) Link to unknown for hl concept map_ requestedgivestrengthunits  sheetcsv: ConceptMap-table-requestedgivestrengthunits-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ RequestedGiveStrengthUnits - Sheet1.csv(:0)
-W60) mappings/codesystems/HL7 Concept Map_ RequestedGiveStrengthUnits - Sheet1.csv does not have any FHIR Mapping Content
+W40) mappings/codesystems/HL7 Concept Map_ RequestedGiveStrengthUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedGiveStrengthUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W61) Link to unknown for hl concept map_ requestedgiveunits  sheetcsv: ConceptMap-table-requestedgiveunits-to-unknown.html
+W41) Link to unknown for hl concept map_ requestedgiveunits  sheetcsv: ConceptMap-table-requestedgiveunits-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ RequestedGiveUnits - Sheet1.csv(:0)
-W62) mappings/codesystems/HL7 Concept Map_ RequestedGiveUnits - Sheet1.csv does not have any FHIR Mapping Content
+W42) mappings/codesystems/HL7 Concept Map_ RequestedGiveUnits - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RequestedGiveUnits - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W63) Link to unknown for hl concept map_ routinginstruction  sheetcsv: ConceptMap-table-routinginstruction-to-unknown.html
+W43) Link to unknown for hl concept map_ routinginstruction  sheetcsv: ConceptMap-table-routinginstruction-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ RoutingInstruction - Sheet1.csv(:0)
-W64) mappings/codesystems/HL7 Concept Map_ RoutingInstruction - Sheet1.csv does not have any FHIR Mapping Content
+W44) mappings/codesystems/HL7 Concept Map_ RoutingInstruction - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ RoutingInstruction - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W65) Link to unknown for hl concept map_ securitylabelhandlinginstructions  sheetcsv: ConceptMap-table-securitylabelhandlinginstructions-to-unknown.html
+W45) Link to unknown for hl concept map_ securitylabelhandlinginstructions  sheetcsv: ConceptMap-table-securitylabelhandlinginstructions-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv(:0)
-W66) mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv does not have any FHIR Mapping Content
+W46) mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SecurityLabelHandlingInstructions - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W67) Link to unknown for hl concept map_ specimensourcesite  sheetcsv: ConceptMap-table-specimensourcesite-to-unknown.html
+W47) Link to unknown for hl concept map_ specimensourcesite  sheetcsv: ConceptMap-table-specimensourcesite-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ SpecimenSourceSite - Sheet1.csv(:0)
-W68) mappings/codesystems/HL7 Concept Map_ SpecimenSourceSite - Sheet1.csv does not have any FHIR Mapping Content
+W48) mappings/codesystems/HL7 Concept Map_ SpecimenSourceSite - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SpecimenSourceSite - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W69) Link to unknown for hl concept map_ specimensourcetypemodifier  sheetcsv: ConceptMap-table-specimensourcetypemodifier-to-unknown.html
+W49) Link to unknown for hl concept map_ specimensourcetypemodifier  sheetcsv: ConceptMap-table-specimensourcetypemodifier-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ SpecimenSourceTypeModifier - Sheet1.csv(:0)
-W70) mappings/codesystems/HL7 Concept Map_ SpecimenSourceTypeModifier - Sheet1.csv does not have any FHIR Mapping Content
+W50) mappings/codesystems/HL7 Concept Map_ SpecimenSourceTypeModifier - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SpecimenSourceTypeModifier - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W71) Link to unknown for hl concept map_ vipindicator  sheetcsv: ConceptMap-table-vipindicator-to-unknown.html
+W51) Link to unknown for hl concept map_ testservicedefaultdurationunits  sheetcsv: ConceptMap-table-testservicedefaultdurationunits-to-unknown.html
+	at mappings/codesystems/HL7 Concept Map_ TestServiceDefaultDurationUnits - Sheet1.csv(:0)
+W52) mappings/codesystems/HL7 Concept Map_ TestServiceDefaultDurationUnits - Sheet1.csv does not have any FHIR Mapping Content
+	at mappings/codesystems/HL7 Concept Map_ TestServiceDefaultDurationUnits - Sheet1.csv(:1)
+	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+W53) Link to unknown for hl concept map_ vipindicator  sheetcsv: ConceptMap-table-vipindicator-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ VIPIndicator - Sheet1.csv(:0)
-W72) mappings/codesystems/HL7 Concept Map_ VIPIndicator - Sheet1.csv does not have any FHIR Mapping Content
+W54) mappings/codesystems/HL7 Concept Map_ VIPIndicator - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ VIPIndicator - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W73) Link to unknown for hl concept map_ valuetype  sheetcsv: ConceptMap-table-hl70125-to-unknown.html
-	at mappings/codesystems/HL7 Concept Map_ ValueType - Sheet1.csv(:0)
-W74) mappings/codesystems/HL7 Concept Map_ ValueType - Sheet1.csv does not have any FHIR Mapping Content
-	at mappings/codesystems/HL7 Concept Map_ ValueType - Sheet1.csv(:1)
-	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W75) Link to unknown for hl concept map_ yesnoindicator  sheetcsv: ConceptMap-table-hl70136-to-unknown.html
+W55) Link to unknown for hl concept map_ yesnoindicator  sheetcsv: ConceptMap-table-hl70136-to-unknown.html
 	at mappings/codesystems/HL7 Concept Map_ YesNoIndicator - Sheet1.csv(:0)
-W76) mappings/codesystems/HL7 Concept Map_ YesNoIndicator - Sheet1.csv does not have any FHIR Mapping Content
+W56) mappings/codesystems/HL7 Concept Map_ YesNoIndicator - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ YesNoIndicator - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W77) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:3)
+W57) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:3)
 	near: 0,,,,,,,,,patient(Patient.identifier),,,,,,,/one of the PID-3 or other available identifiers that uniquely links to the patient who's mother is represented in this RelatedPerson instance./,,
-W78) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:4)
+W58) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:4)
 	near: 0,,,,,,,,,relationship[1].coding[1].code,,,,,,,"/a relationship type that represents ""mother"" should be populated with ""MTH"" as default if no further context is known, or either of ""AOPTM"", ""GESTM"", ""NMTH"", ""NMTHF"", ""STPMTH"" if the context is known.",,
-W79) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:5)
+W59) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv(:5)
 	near: 0,,,,,,,,,relationship[1].coding[1].system,,,,,,,"""https://hl7.org/fhir/R4/v3/RoleCode/cs.html#v3-RoleCode-_PersonalRelationshipRoleType""",,
-W80) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ ED[DocumentReference] - Sheet1.csv(:3)
+W60) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ ED[DocumentReference] - Sheet1.csv(:3)
 	near: 0,,,,,,,,,status,,,,,,,"""current""",,
-W81) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Quantity] - Sheet1.csv(:3)
+W61) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Quantity] - Sheet1.csv(:3)
 	near: 0,,,,,,If SN.3 OR SN.4 VALUED,,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/originalText""",,
-W82) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Quantity] - Sheet1.csv(:4)
+W62) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Quantity] - Sheet1.csv(:4)
 	near: 0,,,,,,If SN.3 OR SN.4 VALUED,,,extension[1].valueString,,string,,,,,"SN.1+"" ""+SN.2+"" ""+SN.3+"" ""+SN.4",,
-W83) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Range] - Sheet1.csv(:3)
+W63) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Range] - Sheet1.csv(:3)
 	near: 0,,,,,,If SN.1 OR SN.3 VALUED,,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/originalText""",,
-W84) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Range] - Sheet1.csv(:4)
+W64) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Range] - Sheet1.csv(:4)
 	near: 0,,,,,,If SN.1 OR SN.3 VALUED,,,extension[1].valueString,,string,,,,,"SN.1+"" ""+SN.2+"" ""+SN.3+"" ""+SN.4",,
-W85) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Ratio] - Sheet1.csv(:3)
+W65) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Ratio] - Sheet1.csv(:3)
 	near: 0,,,,,,If SN.3 OR SN.4 VALUED,,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/StructureDefinition/originalText""",,
-W86) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Ratio] - Sheet1.csv(:4)
+W66) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR R4_ SN[Ratio] - Sheet1.csv(:4)
 	near: 0,,,,,,If SN.3 OR SN.4 VALUED,,,extension[1].valueString,,string,,,,,"SN.1+"" ""+SN.2+"" ""+SN.3+"" ""+SN.4",,
-W87) Missing vocabulary mapping for SpecimenCondition	at mappings/datatypes/HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv(:8)
+W67) Missing vocabulary mapping for SpecimenCondition	at mappings/datatypes/HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv(:8)
 	near: 6,SPS.6,Collection method modifier code,CE,0,1,,,,condition,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenCondition,,,Note that in v2.5.1 only F (Frozen) and R(Refrigirated) are indicated without a full table.  SpecimenCondition would be used in more curent case and is referenced if somebody used that table already.
-W88) Missing vocabulary mapping for AddressType[Type]	at mappings/datatypes/HL7 Data Type - FHIR R4_ XAD[Address] - Sheet1.csv(:9)
+W68) Missing vocabulary mapping for AddressType[Type]	at mappings/datatypes/HL7 Data Type - FHIR R4_ XAD[Address] - Sheet1.csv(:9)
 	near: 7,XAD.7,Address Type,ID,0,1,"IF XAD.7 IN (""M"", ""SH"")",,,type,,code,0,1,,AddressType[Type],,,
-W89) Missing vocabulary mapping for AddressType[Use]	at mappings/datatypes/HL7 Data Type - FHIR R4_ XAD[Address] - Sheet1.csv(:10)
+W69) Missing vocabulary mapping for AddressType[Use]	at mappings/datatypes/HL7 Data Type - FHIR R4_ XAD[Address] - Sheet1.csv(:10)
 	near: 7,XAD.7,Address Type,ID,0,1,"IF XAD.7 IN (""BA"", ""BI"", ""C"", ""B"", ""H"", ""O"")",,,use,,code,0,1,,AddressType[Use],,,
-W90) Missing vocabulary mapping for TelecommunicationEquipmentType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XTN[ContactPoint] - Sheet1.csv(:5)
+W70) Missing vocabulary mapping for TelecommunicationEquipmentType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XTN[ContactPoint] - Sheet1.csv(:5)
 	near: 3,XTN.3,Telecommunication Equipment Type,ID,1,1,,,,system,,code,0,1,ID[Code],TelecommunicationEquipmentType,,,
-W91) mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv does not have any FHIR Mapping Content
+W71) mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W92) Missing vocabulary mapping for FillerStatusCodes[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ AIS[Appointment] - Sheet1.csv(:12)
+W72) Missing vocabulary mapping for FillerStatusCodes[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ AIS[Appointment] - Sheet1.csv(:12)
 	near: 10,AIS-10,Filler Status Code,CWE,0,1,,,,status,,CodeableConcept,0,1,CWE[CodeableConcept],FillerStatusCodes[Appointment],,,
-W93) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:6)
+W73) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:6)
 	near: "
-W94) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:8)
+W74) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:8)
 	near: 2,AL1-2,Allergen Type Code,CWE,0,1,,,,category.extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/alternate-codes""",,
-W95) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:11)
+W75) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:11)
 	near: 3,AL1-3,Allergen Code/Mnemonic/Description,CWE,1,1,,,,code,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
-W96) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:13)
+W76) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:13)
 	near: 4,AL1-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality.extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/alternate-codes""",,
-W97) Missing vocabulary mapping for AllergySeverity	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:14)
+W77) Missing vocabulary mapping for AllergySeverity	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:14)
 	near: 4,AL1-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergyTyp[AllergyIntolerance.criticality-original],,,
-W98) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:3)
+W78) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:3)
 	near: 0,,,,,,,,,clinicalStatus.coding.code,,code,0,1,,,"""active""",,"While .clinicalStatus is not required, constraint ait-1 (AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error.) does necessitate populating this element in the map as it's not possible to infer a verificationStatus of ""entered-in-error"" based on the data in IAM."
-W99) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:4)
+W79) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:4)
 	near: 0,,,,,,,,,clinicalStatus.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical""",,
-W100) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:6)
+W80) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:6)
 	near: 2,IAM-2,Allergen Type Code,CWE,0,1,,,,category,,code,0,-1,CWE[code],AllergenType[AllergyIntoleranceCategory],,,"The FHIR table has a ""required"" binding. Do we need to expand the values in the FHIR table?
 
 Could other be used for:
@@ -244,159 +941,15 @@ Miscellaneous contraindication
 Animal Allergy
 
 HL70127 is a user defined table"
-W101) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:8)
+W81) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:8)
 	near: 2,IAM-2,Allergen Type Code,CWE,0,1,,,,category.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergenType[AllergyIntoleranceOriginalCategory],,,
-W102) Missing vocabulary mapping for AllergySeverity[AllergryIntolerance.reaction.severity]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:11)
+W82) Missing vocabulary mapping for AllergySeverity[AllergryIntolerance.reaction.severity]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:11)
 	near: 4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was not used equivalent to criticality,reaction.severity,,code,0,1,CWE[Code],AllergySeverity[AllergryIntolerance.reaction.severity],,,
-W103) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:12)
+W83) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:12)
 	near: 4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality,,code,0,1,CWE[code],AllergySeverity[AllergyIntolerance.criticality],,,"Note that AllergyIntolerance.reaction.severity is available in FHIR but from a base standard perspective that is actually not the most appropriate and would require that AL1-6 is valued as well.  However, a local implementation may have used vocabulary that better fits AllergyIntolerance.reaction.severity and should then consider that instead as a local variation.  Note that the .reaction though is at a particular time, while .criticality is an overall assement that matches HL7 v2 generally better."
-W104) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:14)
+W84) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:14)
 	near: 4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergyTyp[AllergyIntolerance.criticality-original],,,
-W105) Missing vocabulary mapping for Event[EncounterStatus]	at mappings/segments/HL7 Segment - FHIR R4_ MSH[Encounter] - Sheet1.csv(:11)
+W85) Missing vocabulary mapping for Event[EncounterStatus]	at mappings/segments/HL7 Segment - FHIR R4_ MSH[Encounter] - Sheet1.csv(:11)
 	near: 9,MSH-9,Message Type,MSG,1,1,,,,status,,code,1,1,MSG[Code],Event[EncounterStatus],,,
-W106) Missing vocabulary mapping for ResultStatus[Non-Queries]	at mappings/segments/HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv(:32)
-	near: 25,OBR-25,Result Status +,ID,0,1,IF OBR-25 VALUED,,,status,,code,1,1,,ResultStatus[Non-Queries],,,
-W107) Missing vocabulary mapping for OrderControlCode[ServiceRequest.status]	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:3)
-	near: 1,ORC-1,Order Control,ID,1,1,IF ORC-5 NOT VALUED,"ORC.element(""5"").empty()",,status,,code,1,1,,OrderControlCode[ServiceRequest.status],,,"This is a complicated mapping where .status, .intent, and Task get involved that may have various localized interpretation."
-W108) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv(:3)
-	near: 0,,,,,,,,,status,,code,1,1,,,"""final""",,
-W109) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv(:4)
-	near: 0,,,,,,,,,code.coding.system,,uri,0,1,,,"""http://loinc.org""",,
-W110) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv(:5)
-	near: 0,,,,,,,,,code.coding.code,,code,0,1,,,"""75320-2""",,
-W111) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Basic-EncounterHistory] - PV1.csv(:3)
-	near: 0,,,,,,,,,code.coding.code,,code,0,1,,"""EncounterHistory""",,,
-W112) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Basic-EncounterHistory] - PV1.csv(:4)
-	near: 0,,,,,,,,,code.coding.system,,uri,0,1,,"""http:/hl7.org/fhir/fhir-types""",,,
-W113) Missing vocabulary mapping for "EncounterHistory"	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Basic-EncounterHistory] - PV1.csv(:3)
-	near: 0,,,,,,,,,code.coding.code,,code,0,1,,"""EncounterHistory""",,,
-W114) Missing vocabulary mapping for "http:/hl7.org/fhir/fhir-types"	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Basic-EncounterHistory] - PV1.csv(:4)
-	near: 0,,,,,,,,,code.coding.system,,uri,0,1,,"""http:/hl7.org/fhir/fhir-types""",,,
-W115) Missing vocabulary mapping for PatientClass[EncounterClass]	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:4)
-	near: 2,PV1-2,Patient Class,CWE,1,1,,,,class,,Coding,1,1,CWE[Coding],PatientClass[EncounterClass],,,
-W116) Missing vocabulary mapping for PatientClass[EncounterStatus]	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:5)
-	near: 2,PV1-2,Patient Class,CWE,1,1,IF PV1-45 NOT VALUED,,,status,,code,1,1,CWE[code],PatientClass[EncounterStatus],,,
-W117) Missing vocabulary mapping for HospitalService	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:25)
-	near: 10,PV1-10,Hospital Service,CWE,0,1,,,,serviceType,,CodeableConcept,0,1,CWE[CodeableConcept],HospitalService,,,
-W118) Missing vocabulary mapping for Yes/No	at mappings/segments/HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv(:31)
-	near: 22,PV2-22,Visit Protection Indicator,ID,0,1,,,,meta.security,,Coding,0,-1,ID[Coding],Yes/No,,,
-W119) Missing vocabulary mapping for AllowSubstition	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:16)
-	near: 9,RXO-9,Allow Substitutions,ID,0,1,,,,substitution.allowedCodeableConcept,,CodeableConcept,,,ID[CodeableConcept],AllowSubstition,,,
-W120) Missing vocabulary mapping for RequestedDrugStengthVolumeUnits	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:37)
-	near: 26,RXO-26,Requested Drug Strength Volume Units,CWE,0,1,IF RXO-26.1 IS VALUED OR RXO-26.3 IS VALUED,,,medicationReference(Medication.ingredient.strength.denominator.code,,code,,,,RequestedDrugStengthVolumeUnits,,,
-W121) Missing vocabulary mapping for FillerStatusCodes[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv(:34)
-	near: 25,SCH-25,Filler Status Code,CWE,0,1,,,,status,,code,1,1,CWE[code],FillerStatusCodes[Appointment],,,
-W122) Missing vocabulary mapping for FillerStatusCodes[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ SCH[ServiceRequest] - Sheet1.csv(:35)
-	near: 25,SCH-25,Filler Status Code,CWE,0,1,,,,status,,code,1,1,CWE[code],FillerStatusCodes[Appointment],,,
-W123) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ SFT[Device] - Sheet1.csv(:3)
-	near: 0,,,,,,,,,type,,CodeableConcept,0,-1,,,"/code for ""software"" has yet to be identified/",,
-W124) Missing vocabulary mapping for SpecimenCondition	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:29)
-	near: 24,SPM-24,Specimen Condition,CWE,0,-1,,,,condition,,CodeableConcept,0,-1,CWE[CodeableConcept],SpecimenCondition,,,
-W125) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ TXA[DocumentReference] - Sheet1.csv(:3)
-	near: 0,,,,,,IF TXA-19 NOT VALUED,,,status,,,,,,,"""current""",,
-W126) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ TXA[Provenance] - Sheet1.csv(:3)
-	near: 0,,,,,,,,,recorded,,,,,,,,,
-E1) BedStatus is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:65)
-	near: 40,PV1-40,Bed Status,IS,0,1,IF PV1-3.2 OR PV1-3.3 VALUED,,,location[1].location(Location.operationalStatus),,code,0,1,,BedStatus,,,The operational status is on the Location resource where the implementer must determine which of the Encounter.location(Location) instances reflect the Bed or Room and apply it to the most granular available.
-E2) ConfidentialityClassification is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv(:37)
-	near: 26,MSH-26,Security Classification Tag,CWE,0,1,,,,meta.security[2],,Coding,0,-1,CWE[Coding],ConfidentialityClassification,,,
-E3) ContainerType is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:32)
-	near: 27,SPM-27,Container Type,CWE,0,1,,,,container.type,,CodeableConcept,0,1,CWE[CodeableConcept],ContainerType,,,
-E4) CountryCode is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv(:23)
-	near: 17,MSH-17,Country Code,ID,0,1,,,,sender(Organization.address.country),,string,0,1,,CountryCode,,,
-E5) DietType is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:63)
-	near: 38,PV1-38,Diet Type,CWE,0,1,,,,hospitalization.dietPreference,,CodeableConcept,0,-1,CWE[CodeableConcept],DietType,,,
-E6) DischargedToLocation is not a recognized V2 artifact
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ DLD[Location-Discharge] - Sheet1.csv(:3)
-	near: 1,DLD.1,Discharge to Location,CWE,1,1,,,,type,,CodeableConcept,,,CWE[CodeableConcept],DischargedToLocation,,,
-E7) DurationUnit is not a recognized V2 artifact
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ CWE[Timing-DurationUnit] - Sheet1.csv(:3)
-	near: 1,CWE.1,Identifier,ST,0,1,,,,repeat.durationUnit,,code,0,1,,DurationUnit,,,The durationUnit is limited to a required set of UCUM units
-E8) FinancialClass is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Coverage] - PV1.csv(:22)
-	near: 20,PV1-20,Financial Class,FC,0,-1,,,,type,,CodeableConcept,0,-1,CWE[CodeableConcept],FinancialClass,,,
-E9) ProcessingMode is not a recognized V2 artifact
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ PT[Meta] - Sheet1.csv(:5)
-	near: 2,PT.2,Processing Mode,ID,0,1,,,,tag[2].code,,code,0,1,,ProcessingMode,,,FHIR needs a code system.
-E10) MessageStructure is not a recognized V2 artifact
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ MSG[MessageHeader] - Sheet1.csv(:6)
-	near: No corresponding line (6) in source file!
-E11) EventType is not a recognized V2 artifact
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ MSG[MessageHeader] - Sheet1.csv(:4)
-	near: 2,MSG.2,Trigger Event,ID,1,1,,,,eventCoding.code,,code,0,1,,EventType,,,
-E12) OrderStatus is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:21)
-	near: 5,ORC-5,Order Status,ID,0,1,,,,status,,code,1,1,,OrderStatus,,,
-E13) ProcessingID is not a recognized V2 artifact
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ PT[Meta] - Sheet1.csv(:3)
-	near: 1,PT.1,Processing ID,ID,1,1,,,,tag[1].code,,code,0,1,,ProcessingID,,,FHIR needs a code system.
-E14) DischargeDisposition is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:61)
-	near: 36,PV1-36,Discharge Disposition,CWE,0,1,,,,hospitalization.dischargeDisposition,,CodeableConcept,0,1,CWE[CodeableConcept],DischargeDisposition,,,
-E15) ValueType is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:4)
-	near: 2,OBX-2,Value Type,ID,0,1,,,,,,,,,,ValueType,,,OBX-2 determines the flavor of Observation.value[x] is used in OBX-5.
-E16) Yes/NoIndicator is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:25)
-	near: 20,SPM-20,Specimen Availability,ID,0,1,,,,status,,code,0,1,,Yes/NoIndicator,,,
-E17) BodySite is not a recognized V2 artifact
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv(:6)
-	near: 4,SPS.4,Body Site,CE,0,1,,,,collection.bodySite,,CodeableConcept,0,1,CWE[CodeableConcept],BodySite,,,
-E18) AdministrationDevice is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:5)
-	near: 3,RXR-3,Administration Device,CWE,0,1,,,,,MedicationRequest.dosageInstruction.#ext-device#,Reference(Device),0,-1,,AdministrationDevice,,,
-E19) NameType is not a recognized V2 artifact
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ XPN[HumanName] - Sheet1.csv(:9)
-	near: 7,XPN.7,Name Type Code,ID,0,1,,,,[1].use,,code,0,1,,NameType,,,
-E20) AppointmentTypeCodes is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv(:11)
-	near: 8,SCH-8,Appointment Type,CWE,0,1,,,The mapping of SCH-8 to Appointment.appointmentType will depend on the codes being received in SCH-7 and SCH-8,appointmentType[1],,CodeableConcept,0,1,CWE[CodeableConcept],AppointmentTypeCodes,,,"Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
-E21) PractitionerIDNumberType is not a recognized V2 artifact
-	at mappings/datatypes/HL7 Data Type - FHIR R4_ PLN[Identifier] - Sheet1.csv(:4)
-	near: 2,PLN.2,Type of ID Number,CWE,1,1,,,,type,,CodeableConcept,0,1,CWE[CodeableConcept],PractitionerIDNumberType,,,
-E22) ParticipantOrganizationUnitType is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ ROL[RelatedPerson] - Sheet1.csv(:12)
-	near: 10,ROL-10,Organization Unit Type,CWE,0,1,,,,,extension?-organizationType,CodeableConcept,0,1,CWE[CodeableConcept],ParticipantOrganizationUnitType,,,
-E23) Participation is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv(:7)
-	near: 4,PRT-4,Role of Participation,CWE,1,1,,,,relationship,,CodeableConcept,0,-1,CWE[CodeableConcept],Participation,,,
-E24) OperatorID is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ EVN[Provenance] - Sheet1.csv(:10)
-	near: 5,EVN-5,Operator ID,XCN,0,-1,,,,agent.who(Practitioner),,Reference(Practitioner),1,-1,XCN[Practitioner],OperatorID,,,
-E25) PlanId is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ IN1[Coverage] - Sheet1.csv(:19)
-	near: 15,IN1-15,Plan Type,CWE,0,1,,,,type,,CodeableConcept,,,CWE[CodeableConcept],PlanId,,,
-E26) PrimaryLanguage is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:25)
-	near: 15,PID-15,Primary Language,CWE,0,1,,,,communication.language,,CodeableConcept,0,-1,CWE[CodeableConcept],PrimaryLanguage,,,"During implementation, if you know that the value in PID-15 is the preferred patient language, then Patient.communication.preferred can be set to ""true""."
-E27) PrincipalLanguageOfMessage is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv(:25)
-	near: 19,MSH-19,Principal Language Of Message,CWE,0,1,,,,language,,code,0,1,CWE[Code],PrincipalLanguageOfMessage,,,"This does only cover the MessageHeader resource. Need to have clarity that if other resources that are part of the message that do not have Resource.meta.language valued, then it is assumed to follow MessageHeader.meta.language?? Doesn't seem RESTful, so what is the default for Resource.meta.language?"
-E28) RequestedDispenseUnits is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:19)
-	near: 12,RXO-12,Requested Dispense Units,CWE,0,1,IF RXO-12.1 IS VALUED OR RXO-12.3 IS VALUED,,,dispenseRequest.quantity.code,,code,,,CWE[Code],RequestedDispenseUnits,,,
-E29) RequestedDosageForm is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:12)
-	near: 5,RXO-5,Requested Dosage Form,CWE,0,1,,,,medication(Medication.doseForm),,CodeableConcept,,,CWE[CodeableConcept],RequestedDosageForm,,,
-E30) RequestedGiveStrengthUnits is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:27)
-	near: 19,RXO-19,Requested Give Strength Units,CWE,0,1,IF RXO-19.1 IS VALUED OR RXO-19.3 IS VALUED,,,medicationReference(Medication.ingredient.strength.numerator.code,,code,,,CWE[Code],RequestedGiveStrengthUnits,,,
-E31) RequestedGiveUnits is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv(:8)
-	near: 4,RXO-4,Requested Give Units,CWE,0,1,IF RXO-2 IS VALUED AND (IF RXO-4.1 IS VALUED OR RXO-4.3 IS VALUED),,,dosageInstruction.doseAndRate[1].doseRange.low.code,,code,,,CWE[Code],RequestedGiveUnits,,,
-E32) RoutingInstruction is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv(:7)
-	near: 5,RXR-5,Routing Instruction,CWE,0,1,,,,dosageInstruction.additionalInstruction,,CodeableConcept,0,-1,CWE[CodeableConcept],RoutingInstruction,,,
-E33) SecurityLabelHandlingInstructions is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv(:38)
-	near: 27,MSH-27,Security Handling Instructions,CWE,0,-1,,,,meta.security[2],,Coding,0,-1,CWE[Coding],SecurityLabelHandlingInstructions,,,
-E34) SpecimenSourceSite is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv(:12)
-	near: 8,SPM-8,Specimen Source Site,CWE,0,1,,,,collection.bodySite,,CodeableConcept,0,1,CWE[CodeableConcept],SpecimenSourceSite,,,This should not be populated in a message corresponding to a ServiceRequest (eg ORM)
-E35) SpecimenSourceTypeModifier is not a recognized V2 artifact
-	at mappings/segments/HL7 Segment - FHIR R4_ SPM[Spe
+W86) Missing vocabulary mapping for ResultStatus[Non-Queries]	at mappings/segments/HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv(:32)
+	near: 25,OBR-25,Result Status +,ID,0

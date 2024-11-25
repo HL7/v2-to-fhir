@@ -10,7 +10,7 @@ Title: "Segment MSH to Provenance Map"
 * name = "SegmentMSHSourceToProvenance"
 * status = #active
 * experimental = true
-* date = "2024-11-12"
+* date = "2024-11-25"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -53,11 +53,11 @@ Title: "Segment MSH to Provenance Map"
 * group.element[4].extension[0].extension[2].valueInteger = 1
 * group.element[4].display = "Sending Application"
 * group.element[4].target.equivalence = #equivalent
-* group.element[4].target.code = #entity[2].what(Device)
+* group.element[4].target.code = #entity[2].what(Device.identifier)
 * group.element[4].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].target.extension[0].extension[0].url = "type"
 * group.element[4].target.extension[0].extension[0].valueCode = #"Reference(Device)"
-* group.element[4].target.display = "entity[2].what(Device)"
+* group.element[4].target.display = "entity[2].what(Device.identifier)"
 * group.element[5].code = #MSH-3
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"

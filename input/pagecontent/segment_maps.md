@@ -93,6 +93,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 ### Chapter 10  Scheduling
 
 * [AIG](ConceptMap-segment-aig-to-appointment.html) - Appointment Information - General Resource to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
+* [AIL](ConceptMap-segment-ail-to-appointment.html) - Appointment Information - Location Resource to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
 * [AIP](ConceptMap-segment-aip-to-appointment.html) - Appointment Information - Personnel Resource to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
 * [AIS](ConceptMap-segment-ais-to-appointment.html) - Appointment Information to FHIR [Appointment](http://hl7.org/fhir/R4/appointment.html)
 * [AIS](ConceptMap-segment-ais-to-servicerequest.html) - Appointment Information to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)

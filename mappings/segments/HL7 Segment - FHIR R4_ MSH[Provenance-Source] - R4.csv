@@ -7,7 +7,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 0,MSH,,,,,,,,entity[1].role,,,,,,,"""source""",,
 1,MSH-1,Field Separator,ST,1,1,,,,,,,,,,,,,
 2,MSH-2,Encoding Characters,ST,1,1,,,,,,,,,,,,,
-3,MSH-3,Sending Application,HD,0,1,IF MSH-3 AND MSH-24 VALUED,,,entity[2].what(Device),,Reference(Device),,,HD[MessageHeader.source],,,,
+3,MSH-3,Sending Application,HD,0,1,IF MSH-3 AND MSH-24 VALUED,,,entity[2].what(Device.identifier),,Reference(Device),,,HD[Identifier],,,,
 3,MSH-3,Sending Application,HD,0,1,IF MSH-3 AND MSH-24 VALUED,,,entity[2].role,,code,,,,,"""source""",,
 4,MSH-4,Sending Facility,HD,0,1,IF MSH-22 NOT VALUED,,,agent[1].who(Organization),,Reference(Organization),1,1,HD[Organization],,,,
 4,MSH-4,Sending Facility,HD,0,1,IF MSH-22 NOT VALUED,,,agent[1].type.coding.code,,code,0,1,,,"""author""",,

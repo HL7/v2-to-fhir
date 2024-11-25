@@ -9,7 +9,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 6,XCN.6,"Prefix (e.g., DR)",ST,0,1,,,,name.prefix,,string,0,-1,,,,,
 7,XCN.7,"Degree (e.g., MD)",,0,1,,,,name.suffix[2],,string,0,-1,,,,,
 8,XCN.8,Source Table,CWE,0,1,,,,,,,,,,,,,
-9,XCN.9,Assigning Authority,HD,0,1,,,,,identifier.extension??-assigningAuthority,,,,HD[extension-AssigningAuthority],,,,
+9,XCN.9,Assigning Authority,HD,0,1,,,,,identifier.extension??-assigningAuthority,,,,,,,,
 10,XCN.10,Name Type Code,ID,0,1,,,,name.use,,code,0,1,,NameType,,,
 11,XCN.11,Identifier Check Digit,ST,0,1,,,,identifier[1].extension[1].url,,uri,0,1,,,"""http://hl7.org/fhir/StructureDefinition/identifier-checkDigit""",,
 11,XCN.11,Identifier Check Digit,ST,0,1,,,,identifier[1].extension[1].valueString,,string,1,1,,,,,

@@ -10,7 +10,7 @@ Title: "Message VXU_V04 to Bundle Map"
 * name = "MessageVXU_V04ToBundle"
 * status = #active
 * experimental = true
-* date = "2024-11-12"
+* date = "2024-11-25"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

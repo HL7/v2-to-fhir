@@ -1,6 +1,7 @@
 HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,
 Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,Display,Code System
-A,Archive,HL0207,,,,,,
-R,Restore from archive,HL0207,,,,,,
-I,Initial load,HL0207,,,,,,
-T,"Current processing, transmitted at intervals (scheduled or on demand)",HL0207,,,,,,
+A,Archive,HL0207,,,,A,Archive,http://terminology.hl7.org/CodeSystem/v2-0207
+R,Restore from archive,HL0207,,,,R,Restore from archive,http://terminology.hl7.org/CodeSystem/v2-0207
+I,Initial load,HL0207,,,,I,Initial load,http://terminology.hl7.org/CodeSystem/v2-0207
+T,"Current processing, transmitted at intervals (scheduled or on demand)",HL0207,,,,T,"Current processing, transmitted at intervals (scheduled or on demand)",http://terminology.hl7.org/CodeSystem/v2-0207
+,,,,,,actionable,Actionable,http://terminology.hl7.org/CodeSystem/common-tags

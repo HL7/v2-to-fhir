@@ -1,4 +1,4 @@
-// HL7 Concept Map_ SpecimenAvailability - Sheet1.csv
+// HL7 Concept Map_ YesNoIndicator[AvailabilityStatus] - Sheet1.csv
 Instance: TableHL70136ToSpecimenStatus
 InstanceOf: ConceptMap
 Title: "Table HL70136 to Specimen Status Map"
@@ -10,7 +10,7 @@ Title: "Table HL70136 to Specimen Status Map"
 * name = "TableHL70136ToSpecimenStatus"
 * status = #active
 * experimental = true
-* date = "2024-10-23"
+* date = "2024-11-25"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -23,7 +23,7 @@ Title: "Table HL70136 to Specimen Status Map"
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70136 to Specimen Status.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1jVCdH4v9dJwOnjM0gm20x8QgbN8HZwWJZwP2L14UWHI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1A0BO7VVM63LqFDBt0sD_4jqI_tZJcFsng3O-fcCnHz8/edit?gid=0#gid=0"
 * group.element[0].code = #Y
 * group.element[0].display = "Yes"
 * group.element[0].target.equivalence = #equivalent

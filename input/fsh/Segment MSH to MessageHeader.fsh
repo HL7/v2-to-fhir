@@ -10,7 +10,7 @@ Title: "Segment MSH to MessageHeader Map"
 * name = "SegmentMSHToMessageHeader"
 * status = #active
 * experimental = true
-* date = "2024-11-12"
+* date = "2024-11-25"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -117,8 +117,8 @@ If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer ne
 * group.element[4].extension[0].extension[2].valueInteger = 1
 * group.element[4].display = "Receiving Application"
 * group.element[4].target.equivalence = #equivalent
-* group.element[4].target.code = #destination[1].name
-* group.element[4].target.display = "destination[1].name"
+* group.element[4].target.code = #destination[1]
+* group.element[4].target.display = "destination[1]"
 * group.element[5].code = #MSH-5
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -129,8 +129,8 @@ If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer ne
 * group.element[5].extension[0].extension[2].valueInteger = 1
 * group.element[5].display = "Receiving Application"
 * group.element[5].target.equivalence = #equivalent
-* group.element[5].target.code = #destination[1].endpoint
-* group.element[5].target.display = "destination[1].endpoint"
+* group.element[5].target.code = #destination[1]
+* group.element[5].target.display = "destination[1]"
 * group.element[6].code = #MSH-6
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"

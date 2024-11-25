@@ -1,2 +1,8 @@
 HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
 Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+C,Closed,HL70116,,,,C,,Closed,http://terminology.hl7.org/CodeSystem/v2-0116,,
+H,Housekeeping,HL70116,,,,H,,Housekeeping,http://terminology.hl7.org/CodeSystem/v2-0116,,
+O,Occupied,HL70116,,,,O,,Occupied,http://terminology.hl7.org/CodeSystem/v2-0116,,
+U,Unoccupied,HL70116,,,,U,,Unoccupied,http://terminology.hl7.org/CodeSystem/v2-0116,,
+K,Contaminated,HL70116,,,,K,,Contaminated,http://terminology.hl7.org/CodeSystem/v2-0116,,
+I,Isolated,HL70116,,,,I,,Isolated,http://terminology.hl7.org/CodeSystem/v2-0116,,

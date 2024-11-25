@@ -23,7 +23,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 17,SPM-17,Specimen Collection Date/Time,DR,0,1,IF SPM-17.2 NOT VALUED,,,collection.collectedDateTime,,,,,DR[dateTime],,,,
 18,SPM-18,Specimen Received Date/Time,DTM,0,1,,,,receivedTime,,dateTime,0,1,,,,,
 19,SPM-19,Specimen Expiration Date/Time,DTM,0,1,,,,,,,,,,,,,
-20,SPM-20,Specimen Availability,ID,0,1,,,,status,,code,0,1,,Yes/NoIndicator,,,
+20,SPM-20,Specimen Availability,ID,0,1,,,,status,,code,0,1,,Yes/NoIndicator[AvailabilityStatus],,,
 21,SPM-21,Specimen Reject Reason,CWE,0,-1,,,,,,,,,,SpecimenRejectReason,,,"This should be mapped top the correct ServiceRequest.dataAbsentReason as the speciman is rejected in the context of a particular test given the specimen condition.  Since the placement of the SPM in the message is not always clear as to which ORC/OBR it relates to, we cannot provide specific mapping beyond the vocabulary map."
 22,SPM-22,Specimen Quality,CWE,0,1,,,,,,,,,,,,,
 23,SPM-23,Specimen Appropriateness,CWE,0,1,,,,,,,,,,,,,
