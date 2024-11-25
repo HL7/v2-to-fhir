@@ -1,8 +1,8 @@
 Code System,v2 Table,Status,Owner,Comment,Link
 Additive/Preservative,HL70371,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1u8m8K-QMGTs7IT0nbw1jh4lGUH58XXmleONGkuxgOR0/edit#gid=0
-Address[Type[Use],HL70190,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1eJAihkIzcTOd9SY-xoXaboRDdUM6T8Wabi73wurU1hA/edit#gid=0
 AddressType[Type],HL70190,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1NwT6PQDhxnzaKcGOdZkioyHlt6WgaZBe_0KM_UJFNxE/edit#gid=0
-AdministrationDevice,HL70164,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1jo5HR0gWH5jj08LyD89PsdU99bMAg3j7ZReg_IE1hrY/edit#gid=0
+AddressType[Use],HL70190,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1eJAihkIzcTOd9SY-xoXaboRDdUM6T8Wabi73wurU1hA/edit#gid=0
+AdministrationDevice,HL70164,Under Construction,,,https://docs.google.com/spreadsheets/d/1jo5HR0gWH5jj08LyD89PsdU99bMAg3j7ZReg_IE1hrY/edit#gid=0
 AdministrationMethod,HL70165,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1hCWNjv3S_VkWTC5U7QFbWJIvF-3sm1Vlj12rFkMcPGc/edit#gid=0
 AdministrativeSex,HL70001,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1VxG2IpKlMJE_aC4hDB-PXKM6q2vC_E950WO2Nbctr5U/edit#gid=0
 AdmissionLevelOfCareCode,HL70432,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1Va5F4KJWOsdZ02fAh_LpIR_FBhHn99uJnNqxGoaFcnc/edit#gid=0
@@ -24,7 +24,7 @@ CompletionStatus,HL70322,Ready for Ballot,,,https://docs.google.com/spreadsheets
 ConfidentialityClassification,HL70952,Ready for Ballot,Kathleen,,https://docs.google.com/spreadsheets/d/1G5yms1bqKpvcegUwE7jqN46q6U6yWj-RQBCcxhNMlTY/edit#gid=0
 ContactRole,HL70131,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1IKIju2kedkokH5NGLWUlR1_Xsbdcplfb3wInd-W2lFE/edit#gid=0
 ContainerType,HL70785,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1sIOy4ZVPIzHxFo5a6MZUGKC7Un69sxLD7DOwJsyAk2k/edit#gid=0
-CountryCode,ISO 3166-1,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1LMZem4sRx927Ye02ZYEOCDHjjgVzdCcF5NIr7-Wfj-o/edit#gid=0
+CountryCode,ISO 3166-3,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1LMZem4sRx927Ye02ZYEOCDHjjgVzdCcF5NIr7-Wfj-o/edit#gid=0
 DiagnosisType,HL70052,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1MWVgzweS_o7Hy9ftUGElhuobSdxsZ0vb2O8hKzh-RDU/edit#gid=0
 DiagnosticServiceSectionID,HL70074,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/190IK3DXu5_bpGgesA5ZZ_YxN009gyutbuT5yztzB3BI/edit#gid=0
 DietType,HL70114,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1U784ZQS6EZfykD8AU0a5ZODn4Cbh9YV0i7uB9bZADho/edit#gid=0
@@ -55,7 +55,7 @@ OrderControlCode[ServiceRequest.status],HL70119,Ready for Ballot,,,https://docs.
 OrderStatus,HL70038,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1yfFl5Zg_qfB6TZeM1e6tB33Mpprw0czJ3PyBCe4g07o/edit#gid=0
 OrderType,HL70482,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1uTlF1ZBSs6GIksOREp3pcBLGNphcpxOrn5NBBEiRTd4/edit#gid=0
 OrganizationalNameType,HL70204,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/16h7s6tlvAS0vjsbTxHUdAhojioKgK7Jmxxu1rFaDHDc/edit#gid=0
-ParticipantOrganizationUnitType,HL70406,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1maxr5ZKoj33VRuyeTX8KbzLBK4iSboPMK2bJ0toIDkY/edit?gid=0#gid=0
+ParticipantOrganizationUnitType,HL70406,Under Construction,,,https://docs.google.com/spreadsheets/d/1maxr5ZKoj33VRuyeTX8KbzLBK4iSboPMK2bJ0toIDkY/edit?gid=0#gid=0
 Participation,HL70912,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1rbjK6-XxY2BoCpVRWy_Mrvkl9PTk_8zw0GIeng8zz-4/edit#gid=0
 PatientClass[EncounterClass],HL70004,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1T8Q6rSolB8lh56sXr3SVZ6AAPQGqD8D0zCoxz2dzdkM/edit#gid=0
 PatientClass[EncounterStatus],HL70004,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1-g6mrN1Q_Y_foJjlOXY32UAtMWwPi245mh3kRc8FBQ4/edit#gid=0
@@ -92,10 +92,10 @@ TelecommunicationEquipmentType,HL70202,Ready for Ballot,,,https://docs.google.co
 TelecommunicationUseCode,HL70201,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1EE3a5UIGXLi8wMDr49fWTEVx8QS2GFqYgitE3vLOQTQ/edit#gid=0
 Test/ServiceDefaultDurationUnits,HL70663,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1mCuQYhWWQJ0h4s4GG0txW4PCFF1JtsJACZ05MgkbLMs/edit#gid=0
 UniversalIDType,HL70301,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1YC0HqPfyRswWwvWh_9iHaTECvY8m2vk4DjYl0K56pc0/edit#gid=0
-ValueType,HL70125,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1eaVJ4Cjdc5YB97SuEOquV3Fz6UO3DgwqS6-OVjjuPSY/edit#gid=0
 VIPIndicator,HL70099,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1kavxeEgd3NP8v55sjyDPmhRMj6UVgb0VoF7reX4_YM4/edit#gid=0
 VisitUserCode,HL70130,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/11sSjJv_FutvNhkDs-S81ARyRj5_D1J2kPGEJATjhQWk/edit#gid=0
 Yes/NoIndicator,HL70136,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1MyCLfcQhfwFMXIqTKkSsWrhkPj4FueY1qg0EuMW8tmU/edit#gid=0
+Yes/NoIndicator[AvailabilityStatus],HL70136,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1A0BO7VVM63LqFDBt0sD_4jqI_tZJcFsng3O-fcCnHz8/edit?gid=0#gid=0
 AccessRestrictionReasonCode,HL70719,Under Construction,Kathleen,,https://docs.google.com/spreadsheets/d/1zyZIiKA7SGVey7LLZXxpZ23R2-sqWR5HL2ZECy2-mnI/edit#gid=0
 AccessRestrictionValue,HL70717,Under Construction,Kathleen,,https://docs.google.com/spreadsheets/d/1qc2nfw4KT_GGSYcTX0WdNRfQmvkYRAH0vJgh910GClc/edit#gid=0
 Acknowledgements,HL70155,Under Construction,,,https://docs.google.com/spreadsheets/d/12TJrysXA2lpcnYd-2TRljHmjYxn8nzPUh1AYbM4IFxw/edit#gid=0
@@ -152,3 +152,4 @@ StudentStatus,HL70231,Under Construction,,,https://docs.google.com/spreadsheets/
 SubstitutionStates,HL70167,Under Construction,,,
 TypeOfAgreement,HL70098,Under Construction,,,
 VaccineAdministered,HL70292,Under Construction,,,https://docs.google.com/spreadsheets/d/1IlH-q_sMbysPtOKaIG0EKvEv_YD73kOM0Ids6sYFa60/edit#gid=0
+ValueType,HL70125,Under Construction,,,https://docs.google.com/spreadsheets/d/1eaVJ4Cjdc5YB97SuEOquV3Fz6UO3DgwqS6-OVjjuPSY/edit#gid=0

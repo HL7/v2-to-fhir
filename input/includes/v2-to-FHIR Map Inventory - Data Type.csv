@@ -46,7 +46,6 @@ HL7 Data Type - FHIR R4: EIP[Identifier-PlacerAssignedIdentifier],Ready for Ball
 HL7 Data Type - FHIR R4: FN[HumanName],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/16_unbJhBhLcdgy0KhkwtNfZiK2RzGOVghUlm6VKjWmc/edit#gid=0
 HL7 Data Type - FHIR R4: FT[Annotation-Comment],Ready for Ballot,,To force a change for load.,https://docs.google.com/spreadsheets/d/1dHH3qkL9xxzPYl4gMeyjI2IZgTK9OaR1ssIVZyxsAEg/edit?gid=0#gid=0
 HL7 Data Type - FHIR R4: HD[Device],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/18o2QLSHQPkRr1S0vax7G4tuuXQnhE9wJl0n1kjupS7U/edit#gid=0
-HL7 Data Type - FHIR R4: HD[Extension-AssigningAuthority],Under Construction,,,https://docs.google.com/spreadsheets/d/1thMC8Et_hA-VC-DyerLrpNDcNdzPOIql9Z7SP7u9h_w/edit#gid=0
 HL7 Data Type - FHIR R4: HD[Identifier],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1Ao9N1tFgkzTMGA1y0stCr0sgDk6vVtzT6TnpdByshC4/edit#gid=0
 HL7 Data Type - FHIR R4: HD[Location],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/126xjG_YCcKYzO7f10dtlBOBUMNZZXkteoE2zNu-_J40/edit#gid=0
 HL7 Data Type - FHIR R4: HD[MessageHeader.destination-endpoint],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1T99UdnCSjoGpbamAvfVEZMDN5wKRtc0gUlWZ0ufRd6c/edit#gid=0
@@ -107,6 +106,7 @@ HL7 Data Type - FHIR R4: XPN[HumanName],Ready for Ballot,,,https://docs.google.c
 HL7 Data Type - FHIR R4: XPN[string],Ready for Ballot,,in PID-6,https://docs.google.com/spreadsheets/d/1zHm3NajbYrJs5mo1xzQIt99Nerdj6VFfX3hDwvKOtdM/edit#gid=0
 HL7 Data Type - FHIR R4: XTN[ContactPoint],Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1g4TA7CC4zHkWmGvGQdskKJ3DrOdVQVS3MooE_iU9CuU/edit#gid=0
 HL7 Data Type - FHIR R4: ERL,Under Construction,Kathleen,,https://docs.google.com/spreadsheets/d/1zgohCF9AdUx1K3l2a2OrJhg9FFKs9MIfJ0iOyOPDtUU/edit#gid=0
+HL7 Data Type - FHIR R4: HD[Extension-AssigningAuthority],Under Construction,,,https://docs.google.com/spreadsheets/d/1thMC8Et_hA-VC-DyerLrpNDcNdzPOIql9Z7SP7u9h_w/edit#gid=0
 HL7 Data Type - FHIR R4: HD[MessageHeader.destination.target],Under Construction,,,
 HL7 Data Type - FHIR R4: NM[SimpleQuantity],Under Construction,,,
 HL7 Data Type - FHIR R4: PLN[Location],Under Construction,,,
