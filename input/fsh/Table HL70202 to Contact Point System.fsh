@@ -1,4 +1,4 @@
-// HL7 Concept Map_ TelecomEquipmentType - Sheet1.csv
+// HL7 Concept Map_ TelecommunicationEquipmentType - Sheet1.csv
 Instance: TableHL70202ToContactPointSystem
 InstanceOf: ConceptMap
 Title: "Table HL70202 to Contact Point System Map"
@@ -10,7 +10,7 @@ Title: "Table HL70202 to Contact Point System Map"
 * name = "TableHL70202ToContactPointSystem"
 * status = #active
 * experimental = true
-* date = "2024-11-25"
+* date = "2024-12-05"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

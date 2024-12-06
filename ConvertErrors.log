@@ -911,28 +911,26 @@ W68) Missing vocabulary mapping for AddressType[Type]	at mappings/datatypes/HL7 
 	near: 7,XAD.7,Address Type,ID,0,1,"IF XAD.7 IN (""M"", ""SH"")",,,type,,code,0,1,,AddressType[Type],,,
 W69) Missing vocabulary mapping for AddressType[Use]	at mappings/datatypes/HL7 Data Type - FHIR R4_ XAD[Address] - Sheet1.csv(:10)
 	near: 7,XAD.7,Address Type,ID,0,1,"IF XAD.7 IN (""BA"", ""BI"", ""C"", ""B"", ""H"", ""O"")",,,use,,code,0,1,,AddressType[Use],,,
-W70) Missing vocabulary mapping for TelecommunicationEquipmentType	at mappings/datatypes/HL7 Data Type - FHIR R4_ XTN[ContactPoint] - Sheet1.csv(:5)
-	near: 3,XTN.3,Telecommunication Equipment Type,ID,1,1,,,,system,,code,0,1,ID[Code],TelecommunicationEquipmentType,,,
-W71) mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv does not have any FHIR Mapping Content
+W70) mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv does not have any FHIR Mapping Content
 	at mappings/codesystems/HL7 Concept Map_ SegmentActionCode - Sheet1.csv(:1)
 	near: HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-W72) Missing vocabulary mapping for FillerStatusCodes[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ AIS[Appointment] - Sheet1.csv(:12)
+W71) Missing vocabulary mapping for FillerStatusCodes[Appointment]	at mappings/segments/HL7 Segment - FHIR R4_ AIS[Appointment] - Sheet1.csv(:12)
 	near: 10,AIS-10,Filler Status Code,CWE,0,1,,,,status,,CodeableConcept,0,1,CWE[CodeableConcept],FillerStatusCodes[Appointment],,,
-W73) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:6)
+W72) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:6)
 	near: "
-W74) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:8)
+W73) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:8)
 	near: 2,AL1-2,Allergen Type Code,CWE,0,1,,,,category.extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/alternate-codes""",,
-W75) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:11)
+W74) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:11)
 	near: 3,AL1-3,Allergen Code/Mnemonic/Description,CWE,1,1,,,,code,,CodeableConcept,0,1,CWE[CodeableConcept],,,,
-W76) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:13)
+W75) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:13)
 	near: 4,AL1-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality.extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/alternate-codes""",,
-W77) Missing vocabulary mapping for AllergySeverity	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:14)
+W76) Missing vocabulary mapping for AllergySeverity	at mappings/segments/HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv(:14)
 	near: 4,AL1-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergyTyp[AllergyIntolerance.criticality-original],,,
-W78) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:3)
+W77) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:3)
 	near: 0,,,,,,,,,clinicalStatus.coding.code,,code,0,1,,,"""active""",,"While .clinicalStatus is not required, constraint ait-1 (AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error.) does necessitate populating this element in the map as it's not possible to infer a verificationStatus of ""entered-in-error"" based on the data in IAM."
-W79) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:4)
+W78) Missing source for mapping	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:4)
 	near: 0,,,,,,,,,clinicalStatus.coding.system,,uri,0,1,,,"""http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical""",,
-W80) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:6)
+W79) Missing vocabulary mapping for AllergenType[AllergyIntoleranceCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:6)
 	near: 2,IAM-2,Allergen Type Code,CWE,0,1,,,,category,,code,0,-1,CWE[code],AllergenType[AllergyIntoleranceCategory],,,"The FHIR table has a ""required"" binding. Do we need to expand the values in the FHIR table?
 
 Could other be used for:
@@ -941,15 +939,17 @@ Miscellaneous contraindication
 Animal Allergy
 
 HL70127 is a user defined table"
-W81) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:8)
+W80) Missing vocabulary mapping for AllergenType[AllergyIntoleranceOriginalCategory]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:8)
 	near: 2,IAM-2,Allergen Type Code,CWE,0,1,,,,category.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergenType[AllergyIntoleranceOriginalCategory],,,
-W82) Missing vocabulary mapping for AllergySeverity[AllergryIntolerance.reaction.severity]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:11)
+W81) Missing vocabulary mapping for AllergySeverity[AllergryIntolerance.reaction.severity]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:11)
 	near: 4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was not used equivalent to criticality,reaction.severity,,code,0,1,CWE[Code],AllergySeverity[AllergryIntolerance.reaction.severity],,,
-W83) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:12)
+W82) Missing vocabulary mapping for AllergySeverity[AllergyIntolerance.criticality]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:12)
 	near: 4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality,,code,0,1,CWE[code],AllergySeverity[AllergyIntolerance.criticality],,,"Note that AllergyIntolerance.reaction.severity is available in FHIR but from a base standard perspective that is actually not the most appropriate and would require that AL1-6 is valued as well.  However, a local implementation may have used vocabulary that better fits AllergyIntolerance.reaction.severity and should then consider that instead as a local variation.  Note that the .reaction though is at a particular time, while .criticality is an overall assement that matches HL7 v2 generally better."
-W84) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:14)
+W83) Missing vocabulary mapping for AllergyTyp[AllergyIntolerance.criticality-original]	at mappings/segments/HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv(:14)
 	near: 4,IAM-4,Allergy Severity Code,CWE,0,1,,,If severity was used equivalent to criticality,criticality.extension[1].valueCodeableConcept,,CodeableConcept,1,1,CWE[CodeableConcept],AllergyTyp[AllergyIntolerance.criticality-original],,,
-W85) Missing vocabulary mapping for Event[EncounterStatus]	at mappings/segments/HL7 Segment - FHIR R4_ MSH[Encounter] - Sheet1.csv(:11)
+W84) Missing vocabulary mapping for Event[EncounterStatus]	at mappings/segments/HL7 Segment - FHIR R4_ MSH[Encounter] - Sheet1.csv(:11)
 	near: 9,MSH-9,Message Type,MSG,1,1,,,,status,,code,1,1,MSG[Code],Event[EncounterStatus],,,
-W86) Missing vocabulary mapping for ResultStatus[Non-Queries]	at mappings/segments/HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv(:32)
-	near: 25,OBR-25,Result Status +,ID,0
+W85) Missing vocabulary mapping for ResultStatus[Non-Queries]	at mappings/segments/HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv(:32)
+	near: 25,OBR-25,Result Status +,ID,0,1,IF OBR-25 VALUED,,,status,,code,1,1,,ResultStatus[Non-Queries],,,
+W86) Missing vocabulary mapping for ValueType	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:4)
+	near: 2,OBX-2,Value Type,ID,0,1,,,,,,,,,,ValueType,,,OBX-2 determi

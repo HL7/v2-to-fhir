@@ -10,7 +10,7 @@ Title: "Table HL70399 to ISO 3166 3 Map"
 * name = "TableHL70399ToISO31663"
 * status = #active
 * experimental = true
-* date = "2024-11-25"
+* date = "2024-12-05"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
