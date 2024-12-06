@@ -1,27 +1,27 @@
 // HL7 Concept Map_ CountryCode - Sheet1.csv
-Instance: TableHL70399ToISO31663
+Instance: TableHL70399ToIso31661edition2alpha3
 InstanceOf: ConceptMap
-Title: "Table HL70399 to ISO 3166 3 Map"
-* title = "Table HL70399 to ISO 3166 3 Map"
-* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70399 to the FHIR ISO 3166 3 Value Set."
-* id = "table-hl70399-to-iso-3166-3"
-* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70399-to-iso-3166-3"
+Title: "Table HL70399 to Iso3166 1edition2alpha3 Map"
+* title = "Table HL70399 to Iso3166 1edition2alpha3 Map"
+* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70399 to the FHIR Iso3166 1edition2alpha3 Value Set."
+* id = "table-hl70399-to-iso3166-1edition2alpha3"
+* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70399-to-iso3166-1edition2alpha3"
 * version = "1.0"
-* name = "TableHL70399ToISO31663"
+* name = "TableHL70399ToIso31661edition2alpha3"
 * status = #active
 * experimental = true
-* date = "2024-12-05"
+* date = "2024-12-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "HL70399"
-* targetUri = "ISO 3166-3"
+* targetUri = "http://terminology.hl7.org/CodeSystem/iso3166-1edition2alpha3"
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Table HL70399 to ISO 3166 3.fsh"
+* extension[0].extension[1].valueString = "Table HL70399 to Iso3166 1edition2alpha3.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1LMZem4sRx927Ye02ZYEOCDHjjgVzdCcF5NIr7-Wfj-o/edit#gid=0"
 * group.element[0].code = #AFG

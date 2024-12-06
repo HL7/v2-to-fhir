@@ -10,7 +10,7 @@ Title: "Datatype EIP to Identifier Map"
 * name = "DatatypeEIPPlacerAssignedIdentifierToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-12-05"
+* date = "2024-12-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
