@@ -35,7 +35,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 23,RXE-19,Total Daily Dose,CQ,0,1,,,,dosageInstruction.maxDosePerPeriod.denominator.code,,,,,,,"""d""",,
 24,RXO-24,Supplementary Code,CWE,0,-1,,,,,,,,,,,,,
 25,RXO-25,Requested Drug Strength Volume,NM,0,1,,,,medicationReference(Medication.ingredient.strength.denominator.value,,decimal,,,,,,,
-26,RXO-26,Requested Drug Strength Volume Units,CWE,0,1,IF RXO-26.1 IS VALUED OR RXO-26.3 IS VALUED,,,medicationReference(Medication.ingredient.strength.denominator.code,,code,,,,RequestedDrugStengthVolumeUnits,,,
+26,RXO-26,Requested Drug Strength Volume Units,CWE,0,1,IF RXO-26.1 IS VALUED OR RXO-26.3 IS VALUED,,,medicationReference(Medication.ingredient.strength.denominator.code,,code,,,,RequestedDrugStrengthVolumeUnits,,,
 26,RXO-26,Requested Drug Strength Volume Units,CWE,0,1,IF RXO-26.1 IS NOT VALUED AND RXO-26.3 IS NOT VALUED,,,medicationReference(Medication.ingredient.strength.denominator.unit,,string,,,CWE[String],,,,
 27,RXO-27,Pharmacy Order Type,ID,0,1,,,,,,,,,,,,,
 28,RXO-28,Dispensing Interval,NM,0,1,,,,,,,,,,,,,
