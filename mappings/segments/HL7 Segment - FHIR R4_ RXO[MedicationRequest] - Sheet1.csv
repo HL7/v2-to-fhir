@@ -14,7 +14,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 6,RXO-6,Provider's Pharmacy/Treatment Instructions,CWE,0,-1,,,,,,,,,,,,,
 7,RXO-7,Provider's Administration Instructions,CWE,0,-1,,,,,,,,,,,,,
 8,RXO-8,Deliver-To Location,CM,0,1,,,,,,,,,,,,,
-9,RXO-9,Allow Substitutions,ID,0,1,,,,substitution.allowedCodeableConcept,,CodeableConcept,,,ID[CodeableConcept],AllowSubstition,,,
+9,RXO-9,Allow Substitutions,ID,0,1,,,,substitution.allowedCodeableConcept,,CodeableConcept,,,ID[CodeableConcept],AllowSubstitution,,,
 10,RXO-10,Requested Dispense Code,CWE,0,1,,,,,,,,,,,,,
 11,RXO-11,Requested Dispense Amount,NM,0,1,,,,dispenseRequest.quantity.value,,decimal,,,,,,,
 12,RXO-12,Requested Dispense Units,CWE,0,1,IF RXO-12.1 IS VALUED OR RXO-12.3 IS VALUED,,,dispenseRequest.quantity.code,,code,,,CWE[Code],RequestedDispenseUnits,,,

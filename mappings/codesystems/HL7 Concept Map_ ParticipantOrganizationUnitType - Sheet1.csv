@@ -1,0 +1,21 @@
+HL7 v2,,,Condition (IF TRUE),,HL7 FHIR,,
+Code,Text,Code System,Computable,Narrative,Code,Display,Code System
+H,Home,HL70406,,,,,
+O,Office,HL70406,,,,,
+1,Hospital,HL70406,,,,,
+2,Physician Clinic,HL70406,,,,,
+3,Long Term Care,HL70406,,,,,
+4,Acute Care,HL70406,,,,,
+5,Other,HL70406,,,,,
+,,,,,prov,Healthcare Provider,An organization that provides healthcare services.
+,,,,,dept,Hospital Department,A department or ward within a hospital (Generally is not applicable to top level organizations)
+,,,,,team,Organizational team,"An organizational team is usually a grouping of practitioners that perform a specific function within an organization (which could be a top level organization, or a department)."
+,,,,,govt,Government,"A political body, often used when including organization records for government bodies such as a Federal Government, State or Local Government."
+,,,,,ins,Insurance Company,A company that provides insurance to its subscribers that may include healthcare related policies.
+,,,,,pay,Payer,"A company, charity, or governmental organization, which processes claims and/or issues payments to providers on behalf of patients or groups of patients."
+,,,,,edu,Educational Institute,An educational institution that provides education or research facilities.
+,,,,,reli,Religious Institution,An organization that is identified as a part of a religious institution.
+,,,,,crs,Clinical Research Sponsor,An organization that is identified as a Pharmaceutical/Clinical Research Sponsor.
+,,,,,cg,Community Group,An un-incorporated community group.
+,,,,,bus,Non-Healthcare Business or Corporation,An organization that is a registered business or corporation but not identified by other types.
+,,,,,other,Other,Other type of organization not already specified.

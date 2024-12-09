@@ -53,6 +53,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [EI[UDICarrier]](ConceptMap-datatype-ei-udicarrier-to-device.html) - Entity Identifier to FHIR [Device](http://hl7.org/fhir/R4/device.html)
 * [FN](ConceptMap-datatype-fn-to-humanname.html) - Family Name to FHIR [HumanName](http://hl7.org/fhir/R4/datatypes.html#humanname)
 * [FT[Comment]](ConceptMap-datatype-ft-comment-to-annotation.html) - Formatted Text Data to FHIR [Annotation](http://hl7.org/fhir/R4/datatypes.html#annotation)
+* [HD](ConceptMap-datatype-hd-to-device.html) - Hierarchic Designator to FHIR [Device](http://hl7.org/fhir/R4/device.html)
 * [HD](ConceptMap-datatype-hd-to-identifier.html) - Hierarchic Designator to FHIR [Identifier](http://hl7.org/fhir/R4/datatypes.html#identifier)
 * [HD](ConceptMap-datatype-hd-to-location.html) - Hierarchic Designator to FHIR [Location](http://hl7.org/fhir/R4/location.html)
 * [HD](ConceptMap-datatype-hd-to-organization.html) - Hierarchic Designator to FHIR [Organization](http://hl7.org/fhir/R4/organization.html)

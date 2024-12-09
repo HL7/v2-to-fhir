@@ -1,0 +1,7 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,HD.1,Namespace ID,IS,0,1,,,,identifier[1].value,,string,,,,,,,Need gForge (#20522) to change MessageHeader.destination.endpoint from 1..1 to 0..1.  Must be a reachable address.
+2,HD.2,Universal ID,ST,0,1,,,,identifier[2].value,,string,,,,,,,
+3,HD.3,Universal ID Type,ID,0,1,,,,identifier[2].type,,CodeableConcept,,,ID[CodeableConcept-UniversalID],UniversalIDType,,,"Request that DNS, ISO, and UUID (and other Table 0301 values) are added to: http://hl7.org/fhir/valueset-identifier-type.html"
+3,HD.3,Universal ID Type,ID,0,1,"IF HD.3 IN (""ISO"", ""UUID"")",,,identifier[2].system,,uri,,,,,"""urn:ietf:rfc:3986""",,

@@ -2,7 +2,7 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 1,OBX-1,Set ID – OBX,SI,0,1,,,,,,,,,,,,,
-2,OBX-2,Value Type,ID,0,1,,,,,,,,,,ValueType,,,OBX-2 determines the flavor of Observation.value[x] is used in OBX-5
+2,OBX-2,Value Type,ID,0,1,,,,,,,,,,,,,OBX-2 determines the flavor of Observation.value[x] is used in OBX-5
 3,OBX-3,Observation Identifier,CWE,1,1,,,,code,,CodeableConcept,1,1,CWE[CodeableConcept],,,,
 3,OBX-3,Observation Identifier,CWE,1,1,,,,component[each].code,,CodeableConcept,1,1,CWE[CodeableConcept],,,,
 4,OBX-4,Observation Sub-ID,ST,0,1,,,"Map to Observation.partOf or Observation.hasMember or Observation.DerivedFrom according to the implementation guidance for the v2 message at hand, otherwise map to the extension-sub-id to enable the final destination to determine how to structure the observations.",$this,,,,,OG[Extension-Subidentifier],,,,"OBX-4 Sub Identifier would determine how to use Observation.partOf or Observation.hasMember or Observation.DerivedFrom, but is highly dependent on the local implementation of OBX-4 or an implementation guide (e.g., LRI, Clinical Genomics).  That is not known at the standard level, so we cannot provide specific mapping guidance here.  However, if the mapper does not have access to the syntax used and its meaning, we need to be able to pass on OBX-4 Sub Identifier to the final destination that should know how to then structure it using FHIR attributes."
