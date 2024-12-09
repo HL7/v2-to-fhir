@@ -68,7 +68,6 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [DG1](ConceptMap-segment-dg1-to-encounter.html) - Diagnosis to FHIR [Encounter](http://hl7.org/fhir/R4/encounter.html)
 * [DG1](ConceptMap-segment-dg1-to-episodeofcare.html) - Diagnosis to FHIR [EpisodeOfCare](http://hl7.org/fhir/R4/episodeofcare.html)
 * [IN1](ConceptMap-segment-in1-to-coverage.html) - Insurance to FHIR [Coverage](http://hl7.org/fhir/R4/coverage.html)
-* [IN3](ConceptMap-segment-in3-to-careteam.html) - Insurance Additional Information, Certification to FHIR [CareTeam](http://hl7.org/fhir/R4/careteam.html)
 * [PR1](ConceptMap-segment-pr1-to-procedure.html) - Procedures to FHIR [Procedure](http://hl7.org/fhir/R4/procedure.html)
 
 ### Chapter  7  Observation Reporting

@@ -1,4 +1,4 @@
-// HL7 Concept Map_ PatientClass[Encounter Class] - Sheet1.csv
+// HL7 Concept Map_ PatientClass[EncounterClass] - Sheet1.csv
 Instance: TableHL70004ToV3ActCode
 InstanceOf: ConceptMap
 Title: "Table HL70004 to V3 ActCode Map"
@@ -10,7 +10,7 @@ Title: "Table HL70004 to V3 ActCode Map"
 * name = "TableHL70004ToV3ActCode"
 * status = #active
 * experimental = true
-* date = "2024-12-06"
+* date = "2024-12-09"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

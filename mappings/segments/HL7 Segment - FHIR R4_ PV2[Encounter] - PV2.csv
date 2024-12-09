@@ -29,7 +29,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 19,PV2-19,Retention Indicator,ID,0,1,,,,,,,,,,,,,
 20,PV2-20,Expected Number of Insurance Plans,NM,0,1,,,,,,,,,,,,,
 21,PV2-21,Visit Publicity Code,CWE,0,1,,,,,extension?-publicityCode,CodeableConcept,0,1,CWE[CodeableConcept],PublicityCode,,,
-22,PV2-22,Visit Protection Indicator,ID,0,1,,,,meta.security,,Coding,0,-1,ID[Coding],Yes/No,,,
+22,PV2-22,Visit Protection Indicator,ID,0,1,,,,meta.security,,Coding,0,-1,ID[Coding],Yes/NoIndicator,,,
 23,PV2-23,Clinic Organization Name,XON,0,-1,,,,,,,,,,,,,
 24,PV2-24,Patient Status Code,CWE,0,1,,,,,,,,,,,,,
 25,PV2-25,Visit Priority Code,CWE,0,1,,,,priority,,CodeableConcept,0,1,CWE[CodeableConcept],EncounterPriority,,,

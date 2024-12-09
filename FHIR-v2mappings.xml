@@ -161,7 +161,7 @@
 <artifact id="ConceptMap/segment-iam-to-allergyintolerance" key="ConceptMap-segment-iam-to-allergyintolerance" name="Segment IAM to AllergyIntolerance Map"/>
 <artifact id="ConceptMap/segment-in1-to-coverage" key="ConceptMap-segment-in1-to-coverage" name="Segment IN1 to Coverage Map"/>
 <artifact deprecated="true" id="ConceptMap/segment-in2-to-coverage" key="ConceptMap-segment-in2-to-coverage" name="Segment IN2 to Coverage Map"/>
-<artifact id="ConceptMap/segment-in3-to-careteam" key="ConceptMap-unsupported-segment-in3-to-careteam" name="Segment IN3 to CareTeam Map"/>
+<artifact id="ConceptMap/unsupported-segment-in3-to-careteam" key="ConceptMap-unsupported-segment-in3-to-careteam" name="Segment IN3 to CareTeam Map - Unsupported"/>
 <artifact deprecated="true" id="ConceptMap/segment-in3-to-careteam-participant" key="ConceptMap-segment-in3-to-careteam-participant" name="Segment IN3 to CareTeam.participant Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-segment-in3-to-coverage" key="ConceptMap-unsupported-segment-in3-to-coverage" name="Segment IN3 to Coverage Map - Unsupported"/>
 <artifact id="ConceptMap/segment-mrg-to-account" key="ConceptMap-segment-mrg-to-account" name="Segment MRG to Account Map"/>
