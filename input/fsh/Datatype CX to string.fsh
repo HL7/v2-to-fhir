@@ -10,7 +10,7 @@ Title: "Datatype CX to string Map"
 * name = "DatatypeCXToString"
 * status = #active
 * experimental = true
-* date = "2024-12-09"
+* date = "2024-12-11"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

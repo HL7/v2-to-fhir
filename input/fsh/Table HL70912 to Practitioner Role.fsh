@@ -10,7 +10,7 @@ Title: "Table HL70912 to Practitioner Role Map"
 * name = "TableHL70912ToPractitionerRole"
 * status = #active
 * experimental = true
-* date = "2024-12-09"
+* date = "2024-12-11"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

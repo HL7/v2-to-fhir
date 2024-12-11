@@ -1,6 +1,5 @@
 HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
 Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-,,,,,,Code,System,Display,Definition,,
 ,,,,,,pay,,Pay,http://terminology.hl7.org/CodeSystem/coverage-selfpay,,
 ,,,,,,EHCPOL,,extended healthcare,http://terminology.hl7.org/CodeSystem/v3-ActCode,,
 ,,,,,,HSAPOL,,health spending account,http://terminology.hl7.org/CodeSystem/v3-ActCode,,

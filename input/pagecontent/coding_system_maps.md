@@ -41,6 +41,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [HL70163](ConceptMap-table-hl70163-to-v2-0163.html) - Body Site  to FHIR [V2 0163](http://hl7.org/fhir/R4/v2/0163/index.html)
 * [User0165](ConceptMap-table-hl70165-to-sct.html) - Administration Method  to FHIR [Sct](http://hl7.org/fhir/R4/codesystem-sct.html)
 * [HL70185](ConceptMap-table-hl70185-to-v2-0185.html) - Preferred Method of Contact  to FHIR [V2 0185](http://hl7.org/fhir/R4/v2/0185/index.html)
+* [HL70190](ConceptMap-table-hl70190-to-address-type.html) - Address Type  to FHIR [Address Type](http://hl7.org/fhir/R4/codesystem-address-type.html)
 * [HL70190](ConceptMap-table-hl70190-to-address-use.html) - Address Type  to FHIR [Address Use](http://hl7.org/fhir/R4/codesystem-address-use.html)
 * [HL70200](ConceptMap-table-hl70200-to-name-use.html) - Name Type  to FHIR [Name Use](http://hl7.org/fhir/R4/codesystem-name-use.html)
 * [HL70201](ConceptMap-table-hl70201-to-contact-point-use.html) - Telecommunication Use Code  to FHIR [Contact Point Use](http://hl7.org/fhir/R4/codesystem-contact-point-use.html)
