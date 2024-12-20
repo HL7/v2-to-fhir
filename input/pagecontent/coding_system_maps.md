@@ -35,6 +35,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [User0128[original]](ConceptMap-table-hl70128-original-to-v2-0128.html) - Allergy Severity  to FHIR [V2 0128](http://hl7.org/fhir/R4/v2/0128/index.html)
 * [User0130](ConceptMap-table-hl70130-to-v2-0130.html) - Visit User Code  to FHIR [V2 0130](http://hl7.org/fhir/R4/v2/0130/index.html)
 * [User0131](ConceptMap-table-hl70131-to-v2-0131.html) - Contact Role  to FHIR [V2 0131](http://hl7.org/fhir/R4/v2/0131/index.html)
+* [HL70136](ConceptMap-table-hl70136-to-special-values'.html) - Yes/no Indicator  to FHIR [Special Values'](http://hl7.org/fhir/R4/codesystem-special-values'.html)
 * [HL70136](ConceptMap-table-hl70136-to-specimen-status.html) - Yes/no Indicator  to FHIR [Specimen Status](http://hl7.org/fhir/R4/codesystem-specimen-status.html)
 * [HL70161](ConceptMap-table-hl70161-to-v2-0161.html) - Allow Substitution  to FHIR [V2 0161](http://hl7.org/fhir/R4/v2/0161/index.html)
 * [User0162](ConceptMap-table-hl70162-to-v2-0162.html) - Route of Administration  to FHIR [V2 0162](http://hl7.org/fhir/R4/v2/0162/index.html)
