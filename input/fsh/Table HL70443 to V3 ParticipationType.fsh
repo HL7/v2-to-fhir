@@ -10,7 +10,7 @@ Title: "Table HL70443 to V3 ParticipationType Map"
 * name = "TableHL70443ToV3ParticipationType"
 * status = #active
 * experimental = true
-* date = "2024-12-11"
+* date = "2024-12-20"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
