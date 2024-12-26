@@ -95,5 +95,9 @@ public class DatatypeInput implements Convertible, Cloneable {
             return null;
         }
     }
+    
+    public String getSort() {
+    	return v2Sort;
+    }
 
 }

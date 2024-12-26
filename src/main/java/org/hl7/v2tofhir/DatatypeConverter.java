@@ -87,7 +87,7 @@ public class DatatypeConverter extends ConverterImpl<DatatypeInput> implements C
                 escapeHtmlString(bean.fhirValue),
                 escapeHtmlString(bean.comments)
             };
-            w.print("<tr>");
+            w.print("<tr> ");
             for (String col: cols) {
                 if (col == bean.v2Max || col == bean.conditionNarrative) {
                     w.printf("<td style='border-right: 2px'>%s</td>", col);

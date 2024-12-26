@@ -1,4 +1,4 @@
-// HL7 Message - FHIR R4_ MDM _T02 - Sheet1.csv
+// HL7 Message - FHIR R4_ MDM_T02 - Sheet1.csv
 Instance: MessageMDM_T02ToBundle
 InstanceOf: ConceptMap
 Title: "Message MDM_T02 to Bundle Map"
@@ -10,7 +10,7 @@ Title: "Message MDM_T02 to Bundle Map"
 * name = "MessageMDM_T02ToBundle"
 * status = #active
 * experimental = true
-* date = "2024-12-20"
+* date = "2024-12-26"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

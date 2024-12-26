@@ -19,7 +19,7 @@ InsurancePlanID,HL70072,Under Construction,,,https://docs.google.com/spreadsheet
 DiagnosticServiceSectionID,HL70074,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/190IK3DXu5_bpGgesA5ZZ_YxN009gyutbuT5yztzB3BI/edit#gid=0
 InterpretationCode,HL70078,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1mxMfcCgpRM2gH6QBOxndzjZcy22MzlskspqEmNADLp8/edit#gid=0
 NatureOfAbnormalTesting,HL70080,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1xwKH-TZTVdS5-CrBlJ6nPE-EvH2bUlYPpeoT-v794q8/edit#gid=0
-ObservationStatus,HL70085,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1RsA6SEYsjfrR6TbwY1JHBetrPyRED2RDzTa1jvHRvX0/edit#gid=0
+ObservationResultStatusCodesInterpretation,HL70085,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1RsA6SEYsjfrR6TbwY1JHBetrPyRED2RDzTa1jvHRvX0/edit#gid=0
 ReadmissionIndicator,HL70092,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1etqlWirZVdqipXGQ_9Uq1Wl6bN4DMp-SdL6Y8MnE4WE/edit#gid=0
 TypeOfAgreement,HL70098,Under Construction,,,
 VIPIndicator,HL70099,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1kavxeEgd3NP8v55sjyDPmhRMj6UVgb0VoF7reX4_YM4/edit#gid=0
@@ -33,7 +33,7 @@ ResultStatus[Non-Queries],HL70123,Ready for Ballot,,,https://docs.google.com/spr
 ValueType,HL70125,Under Construction,,,https://docs.google.com/spreadsheets/d/1eaVJ4Cjdc5YB97SuEOquV3Fz6UO3DgwqS6-OVjjuPSY/edit#gid=0
 AllergenType,HL70127,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1UpQTB_IaM7hHAqz6gpmenkcPt2_BWSymicKQMtmZKN0/edit#gid=0
 AllergenType[AllergyIntoleranceOriginalCategory],HL70127,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1MnZzLYKreOvD41o_OaOfZIhUFF3B-93cAmEcNs_Q9BY/edit#gid=0
-AllergySeverity[AllergryIntolerance.reaction.severity],HL70128,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1sMIR0cGVDt34suaYtk-yH0DA6lVdpV3yrthqOcZLOKg/edit#gid=0
+AllergySeverity[AllergyIntolerance.reaction.severity],HL70128,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1sMIR0cGVDt34suaYtk-yH0DA6lVdpV3yrthqOcZLOKg/edit#gid=0
 AllergySeverity[AllergyIntolerance.criticality-original],HL70128,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1F3YGZuimTTxay5ngXQKu2Gvy5VvEom5xLvtWvHWJbkk/edit#gid=0
 AllergySeverity[AllergyIntolerance.criticality],HL70128,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1au42G-4z1OKLQp9hQkGVtauaiyYl6rHaGjLswnCgPjo/edit#gid=0
 VisitUserCode,HL70130,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/11sSjJv_FutvNhkDs-S81ARyRj5_D1J2kPGEJATjhQWk/edit#gid=0
@@ -73,7 +73,7 @@ AppointmentTypeCodes,HL70277,Ready for Ballot,Camila,,https://docs.google.com/sp
 FillerStatusCodes[Appointment],HL70278,Ready for Ballot,Camila,,https://docs.google.com/spreadsheets/d/1JSunQweA2Ab70tLNJUR8gZTYDq3ToDJv0mXS1cwJmd4/edit#gid=0
 VaccineAdministered,HL70292,Under Construction,,,https://docs.google.com/spreadsheets/d/1IlH-q_sMbysPtOKaIG0EKvEv_YD73kOM0Ids6sYFa60/edit#gid=0
 PrimaryLanguage,HL70296,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1dY1zNepYquB_hTngHEAmuAU7F18g6tBQpEBp_xo0EEk/edit?gid=0#gid=0
-PrincipalLanguageOfNessage,HL70296,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1zPHUFEcOLuIhdG1yyDGDpYd-LAuUKn9hdJNlqYPTkGc/edit#gid=0
+PrincipalLanguageOfMessage,HL70296,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1zPHUFEcOLuIhdG1yyDGDpYd-LAuUKn9hdJNlqYPTkGc/edit#gid=0
 UniversalIDType,HL70301,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1YC0HqPfyRswWwvWh_9iHaTECvY8m2vk4DjYl0K56pc0/edit#gid=0
 CoverageType,HL70309,Under Construction,,,
 JobStatus,HL70311,Under Construction,,,
@@ -96,7 +96,7 @@ ExtendedPriorityCodes,HL70485,Ready for Ballot,,,https://docs.google.com/spreads
 SpecimenType,HL70487,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1lJmLyEs1rNyvr4Xepf5qTCJKQ_nHmeBMANqafle4Hpc/edit#gid=0
 SpecimenCollectionMethod,HL70488,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/16PWKqbE5NVvIKHTcyOCwXDUe6VkfE6rZn-bPF2bIPP4/edit#gid=0
 SpecimenRejectReason,HL70490,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1r1-CV9pi_ravlxzhSjB97bDs4Jp0HSOa8r_2-0UuMGg/edit#gid=0
-SpecimenCondition,HL70493,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1r1-CV9pi_ravlxzhSjB97bDs4Jp0HSOa8r_2-0UuMGg/edit#gid=0
+SpecimenCondition,HL70493,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/1U7r8bjIN7VdzCVTnWOpxSSTbiCkuwSOqdlUuM6yrMk4/edit#gid=0
 ConsentStatus,HL70498,Under Construction,,,https://docs.google.com/spreadsheets/d/1Jxs_J6VkV_KCScPUjbEjpzjgP15tjxPpbpXJQmvIZxs/edit#gid=0
 EventRelatedPeriod,HL70528,Ready for Ballot,,,https://docs.google.com/spreadsheets/d/17o6vrrfJcGXA4EBuYcVhZs98dAJe5VS_TZ0LJYmVoTU/edit#gid=0
 ExpandedYes/NoIndicator,HL70532,Under Construction,,,https://docs.google.com/spreadsheets/d/1MyCLfcQhfwFMXIqTKkSsWrhkPj4FueY1qg0EuMW8tmU/edit#gid=0

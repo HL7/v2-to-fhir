@@ -242,10 +242,10 @@ public class Convert {
             pw.printf("%n### %s %s%n%n", chap.getData().getLeft(), chap.getData().getMiddle());
             for (Chapter subchap: chap.parts()) {
                 String link = subchap.getData().getLeft();
-                if (link.equals("Unknown")) {
-                    System.err.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle().replaceAll("/V2/", "/v2/"));
+                if (link.equals(Convert.UNKNOWN)) {
+                    System.err.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle().replace("/V2/", "/v2/"));
                 } else {
-                    pw.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle().replaceAll("/V2/", "/v2/"));
+                    pw.printf("* [%s](%s) - %s%n", link, subchap.getData().getRight(), subchap.getData().getMiddle().replace("/V2/", "/v2/"));
                 }
             }
         }
@@ -302,7 +302,7 @@ public class Convert {
         chap.setData(chapData);
         subchap = chap.get(c.getSourceName() + c.getQualifier() + c.getTargetName());
         if (dtData == null) {
-            subchap.setData(Triple.of("Unknown",
+            subchap.setData(Triple.of(Convert.UNKNOWN,
                 c.getSourceFileName() + " to FHIR " + c.getTargetName(), c.getHtmlFileName()));
         } else {
             subchap.setData(Triple.of(dtData.getRight() + c.getQualifier(),
@@ -416,46 +416,55 @@ public class Convert {
                     continue;
                 }
 
-                try {
-                    //Relationship,HL70063,,,,https://docs.google.com/spreadsheets/d/1BDbtJ9kKKpDXIG8GAaRyqpb_iUKBaaU4b0bcxHo0KoI/edit#gid=0
-                    // 1 = FHIR, 2 = V2, 3-5, 6 = URL
-
-                    theUrl = null;
-                    for (int i = 3; i < 6 && i < nextLine.length; i++) {
-                        if (nextLine[i].startsWith("https")) {
-                            theUrl = nextLine[i];
-                            break;
-                        }
-                    }
-                    if (theUrl == null) {
-                        continue;
-                    }
-                    URLConnection con = getConnection(theUrl);
-                    try (InputStream s = con.getInputStream()) {
-                        String fn = con.getHeaderField("Content-Disposition");
-                        // Set a default value for the output file name.
-                        String outputFn = getOutputFilename(nextLine, fn);
-                        System.out.printf("Downloading: from %s to %s%n", StringUtils.substringBeforeLast(theUrl,"/"), outputFn);
-                        String content = IOUtils.toString(s, StandardCharsets.UTF_8);
-                        if (content.contains("DOCTYPE") || content.contains("<html")) {
-                            ConverterImpl.report(true, outputFn, 1, "Cannot access content for '%s'.%n", outputFn);
-                        } else {
-                            File outputFile = new File(output, outputFn);
-                            FileUtils.writeStringToFile(outputFile, content, StandardCharsets.UTF_8);
-                            outputFileMap.put(outputFile.getName(), theUrl);
-                        }
-                    }
-                    fileCount++;
-                } catch (IOException ioex) {
-                    System.err.printf("Failure downloading %s to %s.csv%n", theUrl, nextLine[0]);
-                    ioex.printStackTrace();
-                }
+                theUrl = downloadFile(output, nextLine);
             }
         } catch (IOException ioex) {
             System.err.printf("Failure reading from %s%n", download);
             ioex.printStackTrace();
         }
     }
+    
+	private static String downloadFile(String output, String[] nextLine) {
+		String theUrl = null;
+		try {
+		    //Relationship,HL70063,,,,https://docs.google.com/spreadsheets/d/1BDbtJ9kKKpDXIG8GAaRyqpb_iUKBaaU4b0bcxHo0KoI/edit#gid=0
+		    // 1 = FHIR, 2 = V2, 3-5, 6 = URL
+
+		    for (int i = 3; i < 6 && i < nextLine.length; i++) {
+		        if (nextLine[i].startsWith("https")) {
+		            theUrl = nextLine[i];
+		            break;
+		        }
+		    }
+		    if (theUrl == null) {
+		        return theUrl;
+		    }
+		    URLConnection con = getConnection(theUrl);
+		    try (InputStream s = con.getInputStream()) {
+		        String fn = con.getHeaderField("Content-Disposition");
+		        // Set a default value for the output file name.
+		        String outputFn = getOutputFilename(nextLine, fn);
+	            if (!outputFn.toLowerCase().contains(nextLine[0].toLowerCase().replace("/", "").replace(":", "_"))) {
+	            	ConverterImpl.report(false, outputFn, 1, "Filename mismatch for %s, expecting it to contain %s%nLine: %s%n", outputFn, nextLine[0], 
+	            			StringUtils.join(nextLine, ", "));
+	            }
+		        System.out.printf("Downloading: from %s to %s%n", StringUtils.substringBeforeLast(theUrl,"/"), outputFn);
+		        String content = IOUtils.toString(s, StandardCharsets.UTF_8);
+		        if (content.contains("DOCTYPE") || content.contains("<html")) {
+		            ConverterImpl.report(true, outputFn, 1, "Cannot access content for '%s'.%n", outputFn);
+		        } else {
+		            File outputFile = new File(output, outputFn);
+		            FileUtils.writeStringToFile(outputFile, content, StandardCharsets.UTF_8);
+		            outputFileMap.put(outputFile.getName(), theUrl);
+		        }
+		    }
+		    fileCount++;
+		} catch (IOException ioex) {
+		    System.err.printf("Failure downloading %s to %s.csv%n", theUrl, nextLine[0]);
+		    ioex.printStackTrace();
+		}
+		return theUrl;
+	}
 
     private static URLConnection getConnection(String theUrl) throws IOException, MalformedURLException {
         URLConnection con = new URL(StringUtils.substringBeforeLast(theUrl,"/") + "/export?format=csv").openConnection();
@@ -481,7 +490,7 @@ public class Convert {
     }
 
     private static String toFilename(String string) {
-        return string.replace(":","_").replace("/", "");
+        return string.replace(":", "_").replace("/", "");
     }
 
     private static String getType(String name) {
@@ -501,7 +510,7 @@ public class Convert {
         if (name.contains("message")) {
             return "Message";
         } 
-        return "Unknown";
+        return Convert.UNKNOWN;
     }
     private static void convert(File f, String outputLocation) {
         String name = f.getName();
@@ -525,7 +534,7 @@ public class Convert {
     		case "Segment":
                 c = new SegmentConverter(f, sourceUrl);
                 break;
-    		case "Unknown":
+    		case Convert.UNKNOWN:
             default:
                 System.err.printf("Don't know know how to convert '%s'.\n", f);
                 return;
@@ -533,7 +542,8 @@ public class Convert {
         	
             String output = c.getFishFileName();
             if (output.contains("to Unknown.fsh")) {
-                ConverterImpl.report(false, c.getSourceFileName(), 1, "%s does not have any FHIR Mapping Content%n", c.getSourceFileName());
+            	// We don't need two warnings for this.
+                // ConverterImpl.report(false, c.getSourceFileName(), 1, "%s does not have any FHIR Mapping Content%n", c.getSourceFileName());
                 return;
             }
             File out = new File(outputLocation, output);
@@ -571,4 +581,6 @@ public class Convert {
             }
         }
     }
+
+	public static final String UNKNOWN = "Unknown";
 }

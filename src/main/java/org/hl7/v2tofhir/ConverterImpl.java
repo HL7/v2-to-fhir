@@ -46,7 +46,6 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 	private static final String SEGMENT_TYPE = "Segment";
 	private static final String TABLE_TYPE = "Table";
 	private static final String CONCEPT_MAP_FILENAME = "ConceptMap-";
-	private static final String UNKNOWN = "Unknown";
 	private static final String FHIR_BASE = "https://hl7.org/fhir/R4/";
 	private static final String FHIR_TERM = "http://terminology.hl7.org/";
     private static final String IG_URL = "http://hl7.org/fhir/uv/v2mappings";
@@ -138,7 +137,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
         qualifier = StringUtils.substringBefore(StringUtils.substringAfter(filename,"["),"]");
         target = null;
-        if (qualifier.length() > 0) {
+        if (!qualifier.isEmpty()) {
             qualifier = qualifier.replace(" ", "");
             if (qualifier.contains("-")) {
                 target = StringUtils.substringBefore(qualifier, "-");
@@ -177,34 +176,34 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
     public void setTableNames() {
         T first = getFirstMappedBean();
-
+        
+        if (target == null) {
+            target = Convert.UNKNOWN;
+        }
+        
+        if (targetName == null) {
+            targetName = Convert.UNKNOWN;
+        }
+        
         if (first == null) {
             source = makeId(sourceName);
-            if (target == null) {
-                target = UNKNOWN;
-            }
-            if (targetName == null) {
-                targetName = UNKNOWN;
-            }
-        }
-
-        ConceptMapInput bean = (ConceptMapInput)first;
-        if (bean == null) {
-            target = UNKNOWN;
-            targetName = UNKNOWN;
+            target = Convert.UNKNOWN;
+            targetName = Convert.UNKNOWN;
             return;
+        } else if (first instanceof ConceptMapInput) {
+            ConceptMapInput bean = (ConceptMapInput)first;
+            source = bean.v2CodeSystem;
+            target = bean.fhirCodeSystem;
+            if (StringUtils.isBlank(target)) {
+                target = Convert.UNKNOWN;
+            }
         }
 
-        source = bean.v2CodeSystem;
         String v2TermPrefix = "http://terminology.hl7.org/CodeSystem/v2-";
         if (source.startsWith(v2TermPrefix)) {
             sourceName = "HL7" + source.substring(v2TermPrefix.length());
         } else {
             sourceName = source;
-        }
-        target = bean.fhirCodeSystem;
-        if (StringUtils.isBlank(target)) {
-            target = UNKNOWN;
         }
         targetName = toFhirName(target);
     }
@@ -313,7 +312,10 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                 }
 
                 if (StringUtils.isBlank(row.sourceCode)) {
-                    warn("Missing source for mapping", count);
+                	// Don't worry about lines with sort order of "0".
+                	if (bean instanceof DatatypeInput && !"0".equals(((DatatypeInput)bean).getSort())) {
+                		warn("Missing source for mapping", count);
+                	}
                     continue;
                 }
 
@@ -731,6 +733,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         	link = ConceptMapConverter.getLinkFromName(fhirVocab);
         	if (link == null) {
         		this.warn("Missing vocabulary mapping for %s", count, fhirVocab);
+            	link = ConceptMapConverter.getLinkFromName(fhirVocab);
         	} else {
         		tableLinks.put(link, Triple.of(fhirVocab, count, link));
         	}
@@ -824,6 +827,9 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             for (Map.Entry<String, Triple<String, Integer, String>> link: maps.get(i).entrySet()) {
                 // Verify the link target, and report if not valid
                 String page = link.getKey();
+                if (page.equals(ConceptMapConverter.UNSPECIFIED_MAPPING)) {
+                	continue;
+                }
                 if (page.contains(HTML_SUFFIX) && !htmlFiles.contains(page)) {
                     report(true, link.getValue().getRight(), link.getValue().getMiddle(), "%s%n",
                         explainProblem(link.getValue(), output));

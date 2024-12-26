@@ -36,7 +36,8 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
             return;
         }
         if (StringUtils.containsIgnoreCase(getHtmlFileName(), "unknown")) {
-        	warn("Link to unknown for %s: %s%n", 0, name, getHtmlFileName());
+        	// TODO: Skip these for now.
+        	// warn("Linking to unknown (no FHIR Mapping Content) for %s%n", 0, getSourceFileName());
         	vocabToLinkMap.put(link, UNSPECIFIED_MAPPING);
         } else {
             vocabToLinkMap.put(link, getHtmlFileName());
@@ -44,12 +45,7 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
     }
     
     public static String getLinkFromName(String name) {
-    	name = StringUtils.substringBefore(name, "[");
-    	String result = vocabToLinkMap.get(name.toLowerCase().replaceAll("[^a-z]+",""));
-    	if (result == null) {
-    		System.err.printf("Link not found for %s%n", name);
-    	}
-    	return result;
+    	return vocabToLinkMap.get(name.toLowerCase().replaceAll("[^a-z]+",""));
     }
 
     @Override
