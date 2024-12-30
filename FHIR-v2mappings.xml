@@ -249,6 +249,7 @@
 <artifact id="ConceptMap/table-hl70052-to-diagnosis-role" key="ConceptMap-table-hl70052-to-diagnosis-role" name="Table HL70052 to Diagnosis Role Map"/>
 <artifact id="ConceptMap/table-hl70062-to-v3-actreason" key="ConceptMap-table-hl70062-to-v3-actreason" name="Table HL70062 to V3 ActReason Map"/>
 <artifact id="ConceptMap/table-hl70063-to-v3-rolecode" key="ConceptMap-table-hl70063-to-v3-rolecode" name="Table HL70063 to V3 RoleCode Map"/>
+<artifact id="ConceptMap/table-hl70069-to-service-type" key="ConceptMap-table-hl70069-to-service-type" name="Table HL70069 to Service Type Map"/>
 <artifact id="ConceptMap/table-hl70074-to-v2-0074" key="ConceptMap-table-hl70074-to-v2-0074" name="Table HL70074 to V2 0074 Map"/>
 <artifact id="ConceptMap/table-hl70078-to-v3-observationinterpretation" key="ConceptMap-table-hl70078-to-v3-observationinterpretation" name="Table HL70078 to V3 ObservationInterpretation Map"/>
 <artifact id="ConceptMap/table-hl70080-to-v2-0080" key="ConceptMap-table-hl70080-to-v2-0080" name="Table HL70080 to V2 0080 Map"/>
@@ -266,6 +267,7 @@
 <artifact deprecated="true" id="ConceptMap/table-hl70128-original-to-allergy-intolerance-criticality" key="ConceptMap-table-hl70128-original-to-allergy-intolerance-criticality" name="Table HL70128[original] to Allergy Intolerance Criticality Map"/>
 <artifact id="ConceptMap/table-hl70130-to-v2-0130" key="ConceptMap-table-hl70130-to-v2-0130" name="Table HL70130 to V2 0130 Map"/>
 <artifact id="ConceptMap/table-hl70131-to-v2-0131" key="ConceptMap-table-hl70131-to-v2-0131" name="Table HL70131 to V2 0131 Map"/>
+<artifact id="ConceptMap/table-hl70136-to-special-values" key="ConceptMap-table-hl70136-to-special-values" name="Table HL70136 to Special Values Map"/>
 <artifact id="ConceptMap/table-hl70136-to-specimen-status" key="ConceptMap-table-hl70136-to-specimen-status" name="Table HL70136 to Specimen Status Map"/>
 <artifact deprecated="true" id="ConceptMap/table-hl70155-to-messageheader-response-request" key="ConceptMap-table-hl70155-to-messageheader-response-request" name="Table HL70155 to Messageheader Response Request Map"/>
 <artifact id="ConceptMap/table-hl70161-to-v2-0161" key="ConceptMap-table-hl70161-to-v2-0161" name="Table HL70161 to V2 0161 Map"/>
@@ -305,6 +307,7 @@
 <artifact id="ConceptMap/table-hl70487-to-v2-0487" key="ConceptMap-table-hl70487-to-v2-0487" name="Table HL70487 to V2 0487 Map"/>
 <artifact id="ConceptMap/table-hl70488-to-v2-0488" key="ConceptMap-table-hl70488-to-v2-0488" name="Table HL70488 to V2 0488 Map"/>
 <artifact id="ConceptMap/table-hl70490-to-v2-0490" key="ConceptMap-table-hl70490-to-v2-0490" name="Table HL70490 to V2 0490 Map"/>
+<artifact id="ConceptMap/table-hl70493-to-v2-0493" key="ConceptMap-table-hl70493-to-v2-0493" name="Table HL70493 to V2 0493 Map"/>
 <artifact deprecated="true" id="ConceptMap/table-hl70498-to-consent-state-codes" key="ConceptMap-table-hl70498-to-consent-state-codes" name="Table HL70498 to Consent State Codes Map"/>
 <artifact id="ConceptMap/table-hl70528-to-v3-timingevent" key="ConceptMap-table-hl70528-to-v3-timingevent" name="Table HL70528 to V3 TimingEvent Map"/>
 <artifact deprecated="true" id="ConceptMap/table-hl70549-to-v3-rolecode" key="ConceptMap-table-hl70549-to-v3-rolecode" name="Table HL70549 to V3 RoleCode Map"/>

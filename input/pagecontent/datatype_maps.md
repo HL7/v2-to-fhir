@@ -50,7 +50,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [EI[Extension]](ConceptMap-datatype-ei-extension-to-identifier.html) - Entity Identifier to FHIR [Identifier](http://hl7.org/fhir/R4/datatypes.html#identifier)
 * [EI[Organization]](ConceptMap-datatype-ei-organization-to-identifier.html) - Entity Identifier to FHIR [Identifier](http://hl7.org/fhir/R4/datatypes.html#identifier)
 * [EI[System]](ConceptMap-datatype-ei-system-to-identifier.html) - Entity Identifier to FHIR [Identifier](http://hl7.org/fhir/R4/datatypes.html#identifier)
-* [EI[UDICarrier]](ConceptMap-datatype-ei-udicarrier-to-device.html) - Entity Identifier to FHIR [Device](http://hl7.org/fhir/R4/device.html)
+* [EI[udiCarrier]](ConceptMap-datatype-ei-udicarrier-to-device.html) - Entity Identifier to FHIR [Device](http://hl7.org/fhir/R4/device.html)
 * [FN](ConceptMap-datatype-fn-to-humanname.html) - Family Name to FHIR [HumanName](http://hl7.org/fhir/R4/datatypes.html#humanname)
 * [FT[Comment]](ConceptMap-datatype-ft-comment-to-annotation.html) - Formatted Text Data to FHIR [Annotation](http://hl7.org/fhir/R4/datatypes.html#annotation)
 * [HD](ConceptMap-datatype-hd-to-device.html) - Hierarchic Designator to FHIR [Device](http://hl7.org/fhir/R4/device.html)

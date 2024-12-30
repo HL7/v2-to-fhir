@@ -1,5 +1,5 @@
-// HL7 Data Type - FHIR R4_ EI[Device-UDICarrier] - Sheet1.csv
-Instance: DatatypeEIUDICarrierToDevice
+// HL7 Data Type - FHIR R4_ EI[Device-udiCarrier] - Sheet1.csv
+Instance: DatatypeEIUdiCarrierToDevice
 InstanceOf: ConceptMap
 Title: "Datatype EI to Device Map"
 * title = "Datatype EI to Device Map"
@@ -7,16 +7,23 @@ Title: "Datatype EI to Device Map"
 * id = "datatype-ei-udicarrier-to-device"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ei-udicarrier-to-device"
 * version = "1.0"
-* name = "DatatypeEIUDICarrierToDevice"
+* name = "DatatypeEIUdiCarrierToDevice"
 * status = #active
 * experimental = true
-* date = "2024-12-26"
+* date = "2024-12-29"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
 * copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
 * sourceUri = "EI"
 * targetUri = "Device"
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
+* extension[0].extension[0].url = "type"
+* extension[0].extension[0].valueCode = #derived-from
+* extension[0].extension[1].url = "label"
+* extension[0].extension[1].valueString = "Datatype EI[udiCarrier] to Device.fsh"
+* extension[0].extension[2].url = "url"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1uMZ5C8gEzU9qMKXYUUdesF9HFubW6s8BFYzD-DOgRro/edit#gid=0"
 * group.element[0].code = #EI.1
 * group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "type"
