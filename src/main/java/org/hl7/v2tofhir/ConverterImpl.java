@@ -382,7 +382,12 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         String source, String target, String qualifier
     ) {
         String filename = fn;
-        String titleStr = type + " " + sourceName + " " + qualifier + " to " + targetName + " Map";
+        String titleStr;
+        if (!qualifier.equals("")) {
+            titleStr = type + " " + sourceName + " " + qualifier + " to " + targetName + " Map";
+        } else {
+            titleStr = type + " " + sourceName + " to " + targetName + " Map";
+        }
         if (source == null) {
             titleStr = titleStr + " - Unsupported";
             filename = "Unsupported " + filename;
