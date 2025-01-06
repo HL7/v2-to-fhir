@@ -284,7 +284,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             PrintWriter introWriter = new PrintWriter(new FileWriter(intro));
             PrintWriter notesWriter = new PrintWriter(new FileWriter(notes));
         ) {
-            writeHeader(loc.getName(), pw, filename, type, sourceName, targetName, getFHIRDescription(), source, target);
+            writeHeader(loc.getName(), pw, filename, type, sourceName, targetName, getFHIRDescription(), source, target, qualifier);
             if (sourceUrl != null) {
                 pw.printf("* extension[0].url = \"%s/StructureDefinition/RelatedArtifact\"%n", IG_URL);
                 pw.printf("* extension[0].extension[0].url = \"type\"%n");
@@ -379,10 +379,10 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
     private static void writeHeader(String fn, PrintWriter pw,
         String sourceFilename, String type, String sourceName, String targetName, String fhirType,
-        String source, String target
+        String source, String target, String qualifier
     ) {
         String filename = fn;
-        String titleStr = type + " " + sourceName + StringUtils.defaultString(staticQualifier) + " to " + targetName + " Map";
+        String titleStr = type + " " + sourceName + " " + qualifier + " to " + targetName + " Map";
         if (source == null) {
             titleStr = titleStr + " - Unsupported";
             filename = "Unsupported " + filename;
@@ -944,7 +944,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         if (!f.exists() || f.lastModified() - System.currentTimeMillis() > 20000) {
             try (FileWriter fw = new FileWriter(f);
                 PrintWriter pw = new PrintWriter(fw);) {
-                writeHeader(fshFilename, pw, sourceFileName, typeFound, v2Type, fhirType, fhirType, null, null);
+                writeHeader(fshFilename, pw, sourceFileName, typeFound, v2Type, fhirType, fhirType, null, null, null);
             } catch (Exception e) {
                 e.printStackTrace(log);
             }
