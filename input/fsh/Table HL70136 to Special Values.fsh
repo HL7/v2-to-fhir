@@ -1,8 +1,8 @@
 // HL7 Concept Map_ YesNoIndicator - Sheet1.csv
 Instance: TableHL70136ToSpecialValues
 InstanceOf: ConceptMap
-Title: "Table HL70136 to Special Values Map"
-* title = "Table HL70136 to Special Values Map"
+Title: "Table HL70136  to Special Values Map"
+* title = "Table HL70136  to Special Values Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70136 to the FHIR Special Values Value Set."
 * id = "table-hl70136-to-special-values"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70136-to-special-values"
@@ -10,7 +10,7 @@ Title: "Table HL70136 to Special Values Map"
 * name = "TableHL70136ToSpecialValues"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

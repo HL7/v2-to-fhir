@@ -1,8 +1,8 @@
 // HL7 Concept Map_ InterpretationCodes - Sheet1.csv
 Instance: TableHL70078ToV3ObservationInterpretation
 InstanceOf: ConceptMap
-Title: "Table HL70078 to V3 ObservationInterpretation Map"
-* title = "Table HL70078 to V3 ObservationInterpretation Map"
+Title: "Table HL70078  to V3 ObservationInterpretation Map"
+* title = "Table HL70078  to V3 ObservationInterpretation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70078 to the FHIR V3 ObservationInterpretation Value Set."
 * id = "table-hl70078-to-v3-observationinterpretation"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70078-to-v3-observationinterpretation"
@@ -10,7 +10,7 @@ Title: "Table HL70078 to V3 ObservationInterpretation Map"
 * name = "TableHL70078ToV3ObservationInterpretation"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

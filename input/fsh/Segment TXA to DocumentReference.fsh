@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ TXA[DocumentReference] - Sheet1.csv
 Instance: SegmentTXAToDocumentReference
 InstanceOf: ConceptMap
-Title: "Segment TXA to DocumentReference Map"
-* title = "Segment TXA to DocumentReference Map"
+Title: "Segment TXA  to DocumentReference Map"
+* title = "Segment TXA  to DocumentReference Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment TXA to the FHIR DocumentReference Resource."
 * id = "segment-txa-to-documentreference"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-txa-to-documentreference"
@@ -10,7 +10,7 @@ Title: "Segment TXA to DocumentReference Map"
 * name = "SegmentTXAToDocumentReference"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

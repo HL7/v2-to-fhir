@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CX[string] - Sheet1.csv
 Instance: DatatypeCXToString
 InstanceOf: ConceptMap
-Title: "Datatype CX to string Map"
-* title = "Datatype CX to string Map"
+Title: "Datatype CX  to string Map"
+* title = "Datatype CX  to string Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CX to the FHIR string Data Type."
 * id = "datatype-cx-to-string"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cx-to-string"
@@ -10,7 +10,7 @@ Title: "Datatype CX to string Map"
 * name = "DatatypeCXToString"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

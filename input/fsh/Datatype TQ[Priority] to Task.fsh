@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ TQ[Task-Priority] - Sheet1.csv
 Instance: DatatypeTQPriorityToTask
 InstanceOf: ConceptMap
-Title: "Datatype TQ to Task Map"
-* title = "Datatype TQ to Task Map"
+Title: "Datatype TQ [Priority] to Task Map"
+* title = "Datatype TQ [Priority] to Task Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TQ to the FHIR Task Resource."
 * id = "datatype-tq-priority-to-task"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-tq-priority-to-task"
@@ -10,7 +10,7 @@ Title: "Datatype TQ to Task Map"
 * name = "DatatypeTQPriorityToTask"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

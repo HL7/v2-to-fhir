@@ -1,8 +1,8 @@
 // HL7 Concept Map_ Religion - Sheet1.csv
 Instance: TableHL70006ToV3ReligiousAffiliation
 InstanceOf: ConceptMap
-Title: "Table HL70006 to V3 ReligiousAffiliation Map"
-* title = "Table HL70006 to V3 ReligiousAffiliation Map"
+Title: "Table HL70006  to V3 ReligiousAffiliation Map"
+* title = "Table HL70006  to V3 ReligiousAffiliation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70006 to the FHIR V3 ReligiousAffiliation Value Set."
 * id = "table-hl70006-to-v3-religiousaffiliation"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70006-to-v3-religiousaffiliation"
@@ -10,7 +10,7 @@ Title: "Table HL70006 to V3 ReligiousAffiliation Map"
 * name = "TableHL70006ToV3ReligiousAffiliation"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

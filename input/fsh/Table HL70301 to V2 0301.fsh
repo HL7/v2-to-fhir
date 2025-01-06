@@ -1,8 +1,8 @@
 // HL7 Concept Map_ UniversalIDType - Sheet1.csv
 Instance: TableHL70301ToV20301
 InstanceOf: ConceptMap
-Title: "Table HL70301 to V2 0301 Map"
-* title = "Table HL70301 to V2 0301 Map"
+Title: "Table HL70301  to V2 0301 Map"
+* title = "Table HL70301  to V2 0301 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70301 to the FHIR V2 0301 Value Set."
 * id = "table-hl70301-to-v2-0301"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70301-to-v2-0301"
@@ -10,7 +10,7 @@ Title: "Table HL70301 to V2 0301 Map"
 * name = "TableHL70301ToV20301"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

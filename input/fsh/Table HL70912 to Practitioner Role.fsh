@@ -1,8 +1,8 @@
 // HL7 Concept Map_ Participation - Sheet1.csv
 Instance: TableHL70912ToPractitionerRole
 InstanceOf: ConceptMap
-Title: "Table HL70912 to Practitioner Role Map"
-* title = "Table HL70912 to Practitioner Role Map"
+Title: "Table HL70912  to Practitioner Role Map"
+* title = "Table HL70912  to Practitioner Role Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70912 to the FHIR Practitioner Role Value Set."
 * id = "table-hl70912-to-practitioner-role"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70912-to-practitioner-role"
@@ -10,7 +10,7 @@ Title: "Table HL70912 to Practitioner Role Map"
 * name = "TableHL70912ToPractitionerRole"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

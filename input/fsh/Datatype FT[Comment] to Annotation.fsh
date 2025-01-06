@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ FT[Annotation-Comment] - Sheet1.csv
 Instance: DatatypeFTCommentToAnnotation
 InstanceOf: ConceptMap
-Title: "Datatype FT to Annotation Map"
-* title = "Datatype FT to Annotation Map"
+Title: "Datatype FT [Comment] to Annotation Map"
+* title = "Datatype FT [Comment] to Annotation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype FT to the FHIR Annotation Data Type."
 * id = "datatype-ft-comment-to-annotation"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ft-comment-to-annotation"
@@ -10,7 +10,7 @@ Title: "Datatype FT to Annotation Map"
 * name = "DatatypeFTCommentToAnnotation"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

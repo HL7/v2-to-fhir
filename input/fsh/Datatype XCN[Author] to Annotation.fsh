@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XCN[Annotation-Author] - Sheet1.csv
 Instance: DatatypeXCNAuthorToAnnotation
 InstanceOf: ConceptMap
-Title: "Datatype XCN to Annotation Map"
-* title = "Datatype XCN to Annotation Map"
+Title: "Datatype XCN [Author] to Annotation Map"
+* title = "Datatype XCN [Author] to Annotation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XCN to the FHIR Annotation Data Type."
 * id = "datatype-xcn-author-to-annotation"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xcn-author-to-annotation"
@@ -10,7 +10,7 @@ Title: "Datatype XCN to Annotation Map"
 * name = "DatatypeXCNAuthorToAnnotation"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

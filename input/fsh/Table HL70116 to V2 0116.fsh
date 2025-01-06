@@ -1,8 +1,8 @@
 // HL7 Concept Map_ BedStatus - Sheet1.csv
 Instance: TableHL70116ToV20116
 InstanceOf: ConceptMap
-Title: "Table HL70116 to V2 0116 Map"
-* title = "Table HL70116 to V2 0116 Map"
+Title: "Table HL70116  to V2 0116 Map"
+* title = "Table HL70116  to V2 0116 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70116 to the FHIR V2 0116 Value Set."
 * id = "table-hl70116-to-v2-0116"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70116-to-v2-0116"
@@ -10,7 +10,7 @@ Title: "Table HL70116 to V2 0116 Map"
 * name = "TableHL70116ToV20116"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

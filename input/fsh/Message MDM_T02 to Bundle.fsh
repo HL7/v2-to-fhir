@@ -1,8 +1,8 @@
 // HL7 Message - FHIR R4_ MDM_T02 - Sheet1.csv
 Instance: MessageMDM_T02ToBundle
 InstanceOf: ConceptMap
-Title: "Message MDM_T02 to Bundle Map"
-* title = "Message MDM_T02 to Bundle Map"
+Title: "Message MDM_T02  to Bundle Map"
+* title = "Message MDM_T02  to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message MDM_T02 to the FHIR Message Bundle."
 * id = "message-mdm-t02-to-bundle"
 * url = "http://hl7.org/fhir/uv/v2mappings/message-mdm-t02-to-bundle"
@@ -10,7 +10,7 @@ Title: "Message MDM_T02 to Bundle Map"
 * name = "MessageMDM_T02ToBundle"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

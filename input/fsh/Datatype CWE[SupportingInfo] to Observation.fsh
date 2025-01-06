@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[Observation-SupportingInfo] - Sheet1.csv
 Instance: DatatypeCWESupportingInfoToObservation
 InstanceOf: ConceptMap
-Title: "Datatype CWE to Observation Map"
-* title = "Datatype CWE to Observation Map"
+Title: "Datatype CWE [SupportingInfo] to Observation Map"
+* title = "Datatype CWE [SupportingInfo] to Observation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Observation Resource."
 * id = "datatype-cwe-supportinginfo-to-observation"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-supportinginfo-to-observation"
@@ -10,7 +10,7 @@ Title: "Datatype CWE to Observation Map"
 * name = "DatatypeCWESupportingInfoToObservation"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

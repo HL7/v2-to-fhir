@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ EI[Identifier-DefaultAssigner] - Sheet1.csv
 Instance: DatatypeEIDefaultAssignerToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype EI to Identifier Map"
-* title = "Datatype EI to Identifier Map"
+Title: "Datatype EI [DefaultAssigner] to Identifier Map"
+* title = "Datatype EI [DefaultAssigner] to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype EI to the FHIR Identifier Data Type."
 * id = "datatype-ei-defaultassigner-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-ei-defaultassigner-to-identifier"
@@ -10,7 +10,7 @@ Title: "Datatype EI to Identifier Map"
 * name = "DatatypeEIDefaultAssignerToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

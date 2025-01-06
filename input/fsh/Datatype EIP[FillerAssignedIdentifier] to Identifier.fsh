@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ EIP[Identifier-FillerAssignedIdentifier] - Sheet1.csv
 Instance: DatatypeEIPFillerAssignedIdentifierToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype EIP to Identifier Map"
-* title = "Datatype EIP to Identifier Map"
+Title: "Datatype EIP [FillerAssignedIdentifier] to Identifier Map"
+* title = "Datatype EIP [FillerAssignedIdentifier] to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype EIP to the FHIR Identifier Data Type."
 * id = "datatype-eip-fillerassignedidentifier-to-identifier"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-eip-fillerassignedidentifier-to-identifier"
@@ -10,7 +10,7 @@ Title: "Datatype EIP to Identifier Map"
 * name = "DatatypeEIPFillerAssignedIdentifierToIdentifier"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
@@ -27,7 +27,7 @@ Title: "Datatype EIP to Identifier Map"
 * group.element[0].code = #EIP.2
 * group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "type"
-* group.element[0].extension[0].extension[0].valueCode = #"EI"
+* group.element[0].extension[0].extension[0].valueCode = #"IS"
 * group.element[0].extension[0].extension[1].url = "cardinalityMin"
 * group.element[0].extension[0].extension[1].valueInteger = 0
 * group.element[0].extension[0].extension[2].url = "cardinalityMax"
@@ -42,7 +42,7 @@ Title: "Datatype EIP to Identifier Map"
 * group.element[1].code = #EIP.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
-* group.element[1].extension[0].extension[0].valueCode = #"EI"
+* group.element[1].extension[0].extension[0].valueCode = #"IS"
 * group.element[1].extension[0].extension[1].url = "cardinalityMin"
 * group.element[1].extension[0].extension[1].valueInteger = 0
 * group.element[1].extension[0].extension[2].url = "cardinalityMax"
@@ -61,7 +61,7 @@ Title: "Datatype EIP to Identifier Map"
 * group.element[2].code = #EIP.2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
-* group.element[2].extension[0].extension[0].valueCode = #"EI"
+* group.element[2].extension[0].extension[0].valueCode = #"IS"
 * group.element[2].extension[0].extension[1].url = "cardinalityMin"
 * group.element[2].extension[0].extension[1].valueInteger = 0
 * group.element[2].extension[0].extension[2].url = "cardinalityMax"

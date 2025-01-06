@@ -1,8 +1,8 @@
 // HL7 Concept Map_ AllergySeverity[AllergyIntolerance.reaction.severity] - Sheet1.csv
 Instance: TableHL70128ToCodesystemReactionEventSeverity
 InstanceOf: ConceptMap
-Title: "Table HL70128 to Codesystem Reaction Event Severity Map"
-* title = "Table HL70128 to Codesystem Reaction Event Severity Map"
+Title: "Table HL70128  to Codesystem Reaction Event Severity Map"
+* title = "Table HL70128  to Codesystem Reaction Event Severity Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70128 to the FHIR Codesystem Reaction Event Severity Value Set."
 * id = "table-hl70128-to-codesystem-reaction-event-severity"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70128-to-codesystem-reaction-event-severity"
@@ -10,7 +10,7 @@ Title: "Table HL70128 to Codesystem Reaction Event Severity Map"
 * name = "TableHL70128ToCodesystemReactionEventSeverity"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

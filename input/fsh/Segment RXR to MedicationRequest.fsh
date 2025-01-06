@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv
 Instance: SegmentRXRToMedicationRequest
 InstanceOf: ConceptMap
-Title: "Segment RXR to MedicationRequest Map"
-* title = "Segment RXR to MedicationRequest Map"
+Title: "Segment RXR  to MedicationRequest Map"
+* title = "Segment RXR  to MedicationRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment RXR to the FHIR MedicationRequest Resource."
 * id = "segment-rxr-to-medicationrequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-rxr-to-medicationrequest"
@@ -10,7 +10,7 @@ Title: "Segment RXR to MedicationRequest Map"
 * name = "SegmentRXRToMedicationRequest"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PID[Account] - Sheet1.csv
 Instance: SegmentPIDToAccount
 InstanceOf: ConceptMap
-Title: "Segment PID to Account Map"
-* title = "Segment PID to Account Map"
+Title: "Segment PID  to Account Map"
+* title = "Segment PID  to Account Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Account Resource."
 * id = "segment-pid-to-account"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pid-to-account"
@@ -10,7 +10,7 @@ Title: "Segment PID to Account Map"
 * name = "SegmentPIDToAccount"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

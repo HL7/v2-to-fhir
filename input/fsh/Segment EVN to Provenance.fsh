@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ EVN[Provenance] - Sheet1.csv
 Instance: SegmentEVNToProvenance
 InstanceOf: ConceptMap
-Title: "Segment EVN to Provenance Map"
-* title = "Segment EVN to Provenance Map"
+Title: "Segment EVN  to Provenance Map"
+* title = "Segment EVN  to Provenance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment EVN to the FHIR Provenance Resource."
 * id = "segment-evn-to-provenance"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-evn-to-provenance"
@@ -10,7 +10,7 @@ Title: "Segment EVN to Provenance Map"
 * name = "SegmentEVNToProvenance"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

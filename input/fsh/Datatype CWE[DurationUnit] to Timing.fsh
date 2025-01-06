@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ CWE[Timing-DurationUnit] - Sheet1.csv
 Instance: DatatypeCWEDurationUnitToTiming
 InstanceOf: ConceptMap
-Title: "Datatype CWE to Timing Map"
-* title = "Datatype CWE to Timing Map"
+Title: "Datatype CWE [DurationUnit] to Timing Map"
+* title = "Datatype CWE [DurationUnit] to Timing Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CWE to the FHIR Timing Data Type."
 * id = "datatype-cwe-durationunit-to-timing"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-cwe-durationunit-to-timing"
@@ -10,7 +10,7 @@ Title: "Datatype CWE to Timing Map"
 * name = "DatatypeCWEDurationUnitToTiming"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

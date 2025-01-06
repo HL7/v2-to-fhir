@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ SAD[Address] - Sheet1.csv
 Instance: DatatypeSADToAddress
 InstanceOf: ConceptMap
-Title: "Datatype SAD to Address Map"
-* title = "Datatype SAD to Address Map"
+Title: "Datatype SAD  to Address Map"
+* title = "Datatype SAD  to Address Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype SAD to the FHIR Address Data Type."
 * id = "datatype-sad-to-address"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-sad-to-address"
@@ -10,7 +10,7 @@ Title: "Datatype SAD to Address Map"
 * name = "DatatypeSADToAddress"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

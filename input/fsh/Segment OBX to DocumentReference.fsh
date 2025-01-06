@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ OBX[DocumentReference] - Sheet1.csv
 Instance: SegmentOBXToDocumentReference
 InstanceOf: ConceptMap
-Title: "Segment OBX to DocumentReference Map"
-* title = "Segment OBX to DocumentReference Map"
+Title: "Segment OBX  to DocumentReference Map"
+* title = "Segment OBX  to DocumentReference Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment OBX to the FHIR DocumentReference Resource."
 * id = "segment-obx-to-documentreference"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-obx-to-documentreference"
@@ -10,7 +10,7 @@ Title: "Segment OBX to DocumentReference Map"
 * name = "SegmentOBXToDocumentReference"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

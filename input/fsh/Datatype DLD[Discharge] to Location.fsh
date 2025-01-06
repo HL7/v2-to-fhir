@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ DLD[Location-Discharge] - Sheet1.csv
 Instance: DatatypeDLDDischargeToLocation
 InstanceOf: ConceptMap
-Title: "Datatype DLD to Location Map"
-* title = "Datatype DLD to Location Map"
+Title: "Datatype DLD [Discharge] to Location Map"
+* title = "Datatype DLD [Discharge] to Location Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype DLD to the FHIR Location Resource."
 * id = "datatype-dld-discharge-to-location"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-dld-discharge-to-location"
@@ -10,7 +10,7 @@ Title: "Datatype DLD to Location Map"
 * name = "DatatypeDLDDischargeToLocation"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

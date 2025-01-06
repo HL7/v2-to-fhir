@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ TQ1[ServiceRequest] - TQ1.csv
 Instance: SegmentTQ1ToServiceRequest
 InstanceOf: ConceptMap
-Title: "Segment TQ1 to ServiceRequest Map"
-* title = "Segment TQ1 to ServiceRequest Map"
+Title: "Segment TQ1  to ServiceRequest Map"
+* title = "Segment TQ1  to ServiceRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment TQ1 to the FHIR ServiceRequest Resource."
 * id = "segment-tq1-to-servicerequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-tq1-to-servicerequest"
@@ -10,7 +10,7 @@ Title: "Segment TQ1 to ServiceRequest Map"
 * name = "SegmentTQ1ToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

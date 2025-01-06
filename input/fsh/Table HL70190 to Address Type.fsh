@@ -1,8 +1,8 @@
 // HL7 Concept Map_ AddressType[Type] - Sheet1.csv
 Instance: TableHL70190ToAddressType
 InstanceOf: ConceptMap
-Title: "Table HL70190 to Address Type Map"
-* title = "Table HL70190 to Address Type Map"
+Title: "Table HL70190  to Address Type Map"
+* title = "Table HL70190  to Address Type Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70190 to the FHIR Address Type Value Set."
 * id = "table-hl70190-to-address-type"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70190-to-address-type"
@@ -10,7 +10,7 @@ Title: "Table HL70190 to Address Type Map"
 * name = "TableHL70190ToAddressType"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

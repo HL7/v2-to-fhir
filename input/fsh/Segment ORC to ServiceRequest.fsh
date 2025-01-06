@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv
 Instance: SegmentORCToServiceRequest
 InstanceOf: ConceptMap
-Title: "Segment ORC to ServiceRequest Map"
-* title = "Segment ORC to ServiceRequest Map"
+Title: "Segment ORC  to ServiceRequest Map"
+* title = "Segment ORC  to ServiceRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment ORC to the FHIR ServiceRequest Resource."
 * id = "segment-orc-to-servicerequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-orc-to-servicerequest"
@@ -10,7 +10,7 @@ Title: "Segment ORC to ServiceRequest Map"
 * name = "SegmentORCToServiceRequest"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

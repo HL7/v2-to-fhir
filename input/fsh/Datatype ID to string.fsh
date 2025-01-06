@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ ID[string] - Sheet1.csv
 Instance: DatatypeIDToString
 InstanceOf: ConceptMap
-Title: "Datatype ID to string Map"
-* title = "Datatype ID to string Map"
+Title: "Datatype ID  to string Map"
+* title = "Datatype ID  to string Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype ID to the FHIR string Data Type."
 * id = "datatype-id-to-string"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-id-to-string"
@@ -10,7 +10,7 @@ Title: "Datatype ID to string Map"
 * name = "DatatypeIDToString"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

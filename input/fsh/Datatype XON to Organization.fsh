@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv
 Instance: DatatypeXONToOrganization
 InstanceOf: ConceptMap
-Title: "Datatype XON to Organization Map"
-* title = "Datatype XON to Organization Map"
+Title: "Datatype XON  to Organization Map"
+* title = "Datatype XON  to Organization Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XON to the FHIR Organization Resource."
 * id = "datatype-xon-to-organization"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-xon-to-organization"
@@ -10,7 +10,7 @@ Title: "Datatype XON to Organization Map"
 * name = "DatatypeXONToOrganization"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

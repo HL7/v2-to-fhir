@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ ORC[DiagnosticReport] - ORC.csv
 Instance: SegmentORCToDiagnosticReport
 InstanceOf: ConceptMap
-Title: "Segment ORC to DiagnosticReport Map"
-* title = "Segment ORC to DiagnosticReport Map"
+Title: "Segment ORC  to DiagnosticReport Map"
+* title = "Segment ORC  to DiagnosticReport Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment ORC to the FHIR DiagnosticReport Resource."
 * id = "segment-orc-to-diagnosticreport"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-orc-to-diagnosticreport"
@@ -10,7 +10,7 @@ Title: "Segment ORC to DiagnosticReport Map"
 * name = "SegmentORCToDiagnosticReport"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

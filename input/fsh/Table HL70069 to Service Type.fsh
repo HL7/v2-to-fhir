@@ -1,8 +1,8 @@
 // HL7 Concept Map_ HospitalService - Sheet1.csv
 Instance: TableHL70069ToServiceType
 InstanceOf: ConceptMap
-Title: "Table HL70069 to Service Type Map"
-* title = "Table HL70069 to Service Type Map"
+Title: "Table HL70069  to Service Type Map"
+* title = "Table HL70069  to Service Type Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70069 to the FHIR Service Type Value Set."
 * id = "table-hl70069-to-service-type"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70069-to-service-type"
@@ -10,7 +10,7 @@ Title: "Table HL70069 to Service Type Map"
 * name = "TableHL70069ToServiceType"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

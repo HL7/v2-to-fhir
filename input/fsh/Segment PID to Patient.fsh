@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PID[Patient] - PID.csv
 Instance: SegmentPIDToPatient
 InstanceOf: ConceptMap
-Title: "Segment PID to Patient Map"
-* title = "Segment PID to Patient Map"
+Title: "Segment PID  to Patient Map"
+* title = "Segment PID  to Patient Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Patient Resource."
 * id = "segment-pid-to-patient"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pid-to-patient"
@@ -10,7 +10,7 @@ Title: "Segment PID to Patient Map"
 * name = "SegmentPIDToPatient"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

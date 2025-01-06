@@ -1,8 +1,8 @@
 // HL7 Concept Map_ SpecimenCondition - Sheet1.csv
 Instance: TableHL70493ToV20493
 InstanceOf: ConceptMap
-Title: "Table HL70493 to V2 0493 Map"
-* title = "Table HL70493 to V2 0493 Map"
+Title: "Table HL70493  to V2 0493 Map"
+* title = "Table HL70493  to V2 0493 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70493 to the FHIR V2 0493 Value Set."
 * id = "table-hl70493-to-v2-0493"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70493-to-v2-0493"
@@ -10,7 +10,7 @@ Title: "Table HL70493 to V2 0493 Map"
 * name = "TableHL70493ToV20493"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

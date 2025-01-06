@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ TQ1[MedicationRequest] - Sheet1.csv
 Instance: SegmentTQ1ToMedicationRequest
 InstanceOf: ConceptMap
-Title: "Segment TQ1 to MedicationRequest Map"
-* title = "Segment TQ1 to MedicationRequest Map"
+Title: "Segment TQ1  to MedicationRequest Map"
+* title = "Segment TQ1  to MedicationRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment TQ1 to the FHIR MedicationRequest Resource."
 * id = "segment-tq1-to-medicationrequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-tq1-to-medicationrequest"
@@ -10,7 +10,7 @@ Title: "Segment TQ1 to MedicationRequest Map"
 * name = "SegmentTQ1ToMedicationRequest"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

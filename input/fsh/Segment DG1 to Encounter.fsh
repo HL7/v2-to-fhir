@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ DG1[Encounter] - Sheet1.csv
 Instance: SegmentDG1ToEncounter
 InstanceOf: ConceptMap
-Title: "Segment DG1 to Encounter Map"
-* title = "Segment DG1 to Encounter Map"
+Title: "Segment DG1  to Encounter Map"
+* title = "Segment DG1  to Encounter Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment DG1 to the FHIR Encounter Resource."
 * id = "segment-dg1-to-encounter"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-dg1-to-encounter"
@@ -10,7 +10,7 @@ Title: "Segment DG1 to Encounter Map"
 * name = "SegmentDG1ToEncounter"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

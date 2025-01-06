@@ -1,8 +1,8 @@
 // HL7 Concept Map_ DocumentConfidentialityStatus - Sheet1.csv
 Instance: TableHL70272ToV20272
 InstanceOf: ConceptMap
-Title: "Table HL70272 to V2 0272 Map"
-* title = "Table HL70272 to V2 0272 Map"
+Title: "Table HL70272  to V2 0272 Map"
+* title = "Table HL70272  to V2 0272 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70272 to the FHIR V2 0272 Value Set."
 * id = "table-hl70272-to-v2-0272"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70272-to-v2-0272"
@@ -10,7 +10,7 @@ Title: "Table HL70272 to V2 0272 Map"
 * name = "TableHL70272ToV20272"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

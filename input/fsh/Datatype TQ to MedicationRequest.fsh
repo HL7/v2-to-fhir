@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ TQ[MedicationRequest] - Sheet1.csv
 Instance: DatatypeTQToMedicationRequest
 InstanceOf: ConceptMap
-Title: "Datatype TQ to MedicationRequest Map"
-* title = "Datatype TQ to MedicationRequest Map"
+Title: "Datatype TQ  to MedicationRequest Map"
+* title = "Datatype TQ  to MedicationRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TQ to the FHIR MedicationRequest Resource."
 * id = "datatype-tq-to-medicationrequest"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-tq-to-medicationrequest"
@@ -10,7 +10,7 @@ Title: "Datatype TQ to MedicationRequest Map"
 * name = "DatatypeTQToMedicationRequest"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

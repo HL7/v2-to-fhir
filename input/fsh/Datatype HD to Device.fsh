@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ HD[Device] - Sheet1.csv
 Instance: DatatypeHDToDevice
 InstanceOf: ConceptMap
-Title: "Datatype HD to Device Map"
-* title = "Datatype HD to Device Map"
+Title: "Datatype HD  to Device Map"
+* title = "Datatype HD  to Device Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype HD to the FHIR Device Resource."
 * id = "datatype-hd-to-device"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-hd-to-device"
@@ -10,7 +10,7 @@ Title: "Datatype HD to Device Map"
 * name = "DatatypeHDToDevice"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

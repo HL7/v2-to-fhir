@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ NM[Quantity-LengthOfStay] - Sheet1.csv
 Instance: DatatypeNMLengthOfStayToQuantity
 InstanceOf: ConceptMap
-Title: "Datatype NM to Quantity Map"
-* title = "Datatype NM to Quantity Map"
+Title: "Datatype NM [LengthOfStay] to Quantity Map"
+* title = "Datatype NM [LengthOfStay] to Quantity Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype NM to the FHIR Quantity Data Type."
 * id = "datatype-nm-lengthofstay-to-quantity"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-nm-lengthofstay-to-quantity"
@@ -10,7 +10,7 @@ Title: "Datatype NM to Quantity Map"
 * name = "DatatypeNMLengthOfStayToQuantity"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

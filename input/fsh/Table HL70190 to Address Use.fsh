@@ -1,8 +1,8 @@
 // HL7 Concept Map_ AddressType[Use] - Sheet1.csv
 Instance: TableHL70190ToAddressUse
 InstanceOf: ConceptMap
-Title: "Table HL70190 to Address Use Map"
-* title = "Table HL70190 to Address Use Map"
+Title: "Table HL70190  to Address Use Map"
+* title = "Table HL70190  to Address Use Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70190 to the FHIR Address Use Value Set."
 * id = "table-hl70190-to-address-use"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70190-to-address-use"
@@ -10,7 +10,7 @@ Title: "Table HL70190 to Address Use Map"
 * name = "TableHL70190ToAddressUse"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

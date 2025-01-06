@@ -1,8 +1,8 @@
 // HL7 Data Type - FHIR R4_ HD[Location] - Sheet1.csv
 Instance: DatatypeHDToLocation
 InstanceOf: ConceptMap
-Title: "Datatype HD to Location Map"
-* title = "Datatype HD to Location Map"
+Title: "Datatype HD  to Location Map"
+* title = "Datatype HD  to Location Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype HD to the FHIR Location Resource."
 * id = "datatype-hd-to-location"
 * url = "http://hl7.org/fhir/uv/v2mappings/datatype-hd-to-location"
@@ -10,7 +10,7 @@ Title: "Datatype HD to Location Map"
 * name = "DatatypeHDToLocation"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

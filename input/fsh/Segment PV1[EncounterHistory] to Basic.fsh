@@ -1,8 +1,8 @@
 // HL7 Segment - FHIR R4_ PV1[Basic-EncounterHistory] - PV1.csv
 Instance: SegmentPV1EncounterHistoryToBasic
 InstanceOf: ConceptMap
-Title: "Segment PV1 to Basic Map"
-* title = "Segment PV1 to Basic Map"
+Title: "Segment PV1 [EncounterHistory] to Basic Map"
+* title = "Segment PV1 [EncounterHistory] to Basic Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PV1 to the FHIR Basic Resource."
 * id = "segment-pv1-encounterhistory-to-basic"
 * url = "http://hl7.org/fhir/uv/v2mappings/segment-pv1-encounterhistory-to-basic"
@@ -10,7 +10,7 @@ Title: "Segment PV1 to Basic Map"
 * name = "SegmentPV1EncounterHistoryToBasic"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"

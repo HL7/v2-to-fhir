@@ -1,8 +1,8 @@
 // HL7 Concept Map_ BodyParts - Sheet1.csv
 Instance: TableHL70550ToV20550
 InstanceOf: ConceptMap
-Title: "Table HL70550 to V2 0550 Map"
-* title = "Table HL70550 to V2 0550 Map"
+Title: "Table HL70550  to V2 0550 Map"
+* title = "Table HL70550  to V2 0550 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70550 to the FHIR V2 0550 Value Set."
 * id = "table-hl70550-to-v2-0550"
 * url = "http://hl7.org/fhir/uv/v2mappings/table-hl70550-to-v2-0550"
@@ -10,7 +10,7 @@ Title: "Table HL70550 to V2 0550 Map"
 * name = "TableHL70550ToV20550"
 * status = #active
 * experimental = true
-* date = "2024-12-29"
+* date = "2025-01-06"
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
