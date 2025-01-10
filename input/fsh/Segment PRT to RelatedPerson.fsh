@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv
 Instance: SegmentPRTToRelatedPerson
 InstanceOf: ConceptMap
-Title: "Segment PRT  to RelatedPerson Map"
-* title = "Segment PRT  to RelatedPerson Map"
+Title: "Segment PRT to RelatedPerson Map"
+Usage: #definition
+* title = "Segment PRT to RelatedPerson Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PRT to the FHIR RelatedPerson Resource."
 * id = "segment-prt-to-relatedperson"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-prt-to-relatedperson"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-prt-to-relatedperson"
 * name = "SegmentPRTToRelatedPerson"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "PRT"
-* targetUri = "RelatedPerson"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

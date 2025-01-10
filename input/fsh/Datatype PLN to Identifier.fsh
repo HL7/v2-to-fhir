@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ PLN[Identifier] - Sheet1.csv
 Instance: DatatypePLNToIdentifier
 InstanceOf: ConceptMap
-Title: "Datatype PLN  to Identifier Map"
-* title = "Datatype PLN  to Identifier Map"
+Title: "Datatype PLN to Identifier Map"
+Usage: #definition
+* title = "Datatype PLN to Identifier Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype PLN to the FHIR Identifier Data Type."
 * id = "datatype-pln-to-identifier"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-pln-to-identifier"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-pln-to-identifier"
 * name = "DatatypePLNToIdentifier"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "PLN"
-* targetUri = "Identifier"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

@@ -49,7 +49,7 @@
 <artifact id="ConceptMap/datatype-ei-extension-to-identifier" key="ConceptMap-datatype-ei-extension-to-identifier" name="Datatype EI [Extension] to Identifier Map"/>
 <artifact id="ConceptMap/datatype-ei-organization-to-identifier" key="ConceptMap-datatype-ei-organization-to-identifier" name="Datatype EI [Organization] to Identifier Map"/>
 <artifact id="ConceptMap/datatype-ei-system-to-identifier" key="ConceptMap-datatype-ei-system-to-identifier" name="Datatype EI [System] to Identifier Map"/>
-<artifact id="ConceptMap/datatype-ei-udicarrier-to-device" key="ConceptMap-datatype-ei-udicarrier-to-device" name="Datatype EI [udiCarrier] to Device Map"/>
+<artifact id="ConceptMap/datatype-ei-udicarrier-to-device" key="ConceptMap-datatype-ei-udicarrier-to-device" name="Datatype EI [UDICarrier] to Device Map"/>
 <artifact id="ConceptMap/datatype-ei-to-coding" key="ConceptMap-datatype-ei-to-coding" name="Datatype EI to Coding Map"/>
 <artifact id="ConceptMap/datatype-ei-to-condition" key="ConceptMap-datatype-ei-to-condition" name="Datatype EI to Condition Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-ei-to-identifier" key="ConceptMap-unsupported-datatype-ei-to-identifier" name="Datatype EI to Identifier Map - Unsupported"/>
@@ -89,7 +89,8 @@
 <artifact id="ConceptMap/datatype-msg-to-coding" key="ConceptMap-datatype-msg-to-coding" name="Datatype MSG to Coding Map"/>
 <artifact id="ConceptMap/datatype-msg-to-messageheader" key="ConceptMap-datatype-msg-to-messageheader" name="Datatype MSG to MessageHeader Map"/>
 <artifact id="ConceptMap/datatype-msg-to-code" key="ConceptMap-datatype-msg-to-code" name="Datatype MSG to code Map"/>
-<artifact id="ConceptMap/datatype-na-to-numericarray" key="ConceptMap-datatype-na-to-numericarray" name="Datatype NA to NumericArray Map"/>
+<artifact deprecated="true" id="ConceptMap/datatype-na-to-numericarray" key="ConceptMap-datatype-na-to-numericarray" name="Datatype NA to NumericArray Map"/>
+<artifact id="ConceptMap/datatype-na-to-sampleddata" key="ConceptMap-datatype-na-to-sampleddata" name="Datatype NA to SampledData Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-ndl-to-codeableconcept" key="ConceptMap-unsupported-datatype-ndl-to-codeableconcept" name="Datatype NDL to CodeableConcept Map - Unsupported"/>
 <artifact id="ConceptMap/datatype-ndl-to-practitionerrole" key="ConceptMap-datatype-ndl-to-practitionerrole" name="Datatype NDL to PractitionerRole Map"/>
 <artifact id="ConceptMap/datatype-nm-lengthofstay-to-quantity" key="ConceptMap-datatype-nm-lengthofstay-to-quantity" name="Datatype NM [LengthOfStay] to Quantity Map"/>
@@ -261,7 +262,8 @@
 <artifact id="ConceptMap/table-hl70127-to-v2-0127" key="ConceptMap-table-hl70127-original-to-v2-0127" name="Table HL70127 to V2 0127 Map"/>
 <artifact id="ConceptMap/table-hl70128-original-to-v2-0128" key="ConceptMap-table-hl70128-original-to-v2-0128" name="Table HL70128 [original] to V2 0128 Map"/>
 <artifact id="ConceptMap/table-hl70128-to-allergy-intolerance-criticality" key="ConceptMap-table-hl70128-to-allergy-intolerance-criticality" name="Table HL70128 to Allergy Intolerance Criticality Map"/>
-<artifact id="ConceptMap/table-hl70128-to-codesystem-reaction-event-severity" key="ConceptMap-table-hl70128-to-codesystem-reaction-event-severity" name="Table HL70128 to Codesystem Reaction Event Severity Map"/>
+<artifact deprecated="true" id="ConceptMap/table-hl70128-to-codesystem-reaction-event-severity" key="ConceptMap-table-hl70128-to-codesystem-reaction-event-severity" name="Table HL70128 to Codesystem Reaction Event Severity Map"/>
+<artifact id="ConceptMap/table-hl70128-to-reaction-event-severity" key="ConceptMap-table-hl70128-to-reaction-event-severity" name="Table HL70128 to Reaction Event Severity Map"/>
 <artifact deprecated="true" id="ConceptMap/table-hl70128-original-to-allergy-intolerance-criticality" key="ConceptMap-table-hl70128-original-to-allergy-intolerance-criticality" name="Table HL70128[original] to Allergy Intolerance Criticality Map"/>
 <artifact id="ConceptMap/table-hl70130-to-v2-0130" key="ConceptMap-table-hl70130-to-v2-0130" name="Table HL70130 to V2 0130 Map"/>
 <artifact id="ConceptMap/table-hl70131-to-v2-0131" key="ConceptMap-table-hl70131-to-v2-0131" name="Table HL70131 to V2 0131 Map"/>
@@ -284,9 +286,11 @@
 <artifact id="ConceptMap/table-hl70217-to-v3-actpriority" key="ConceptMap-table-hl70217-to-v3-actpriority" name="Table HL70217 to V3 ActPriority Map"/>
 <artifact deprecated="true" id="ConceptMap/table-hl70231-to-v2-0231" key="ConceptMap-table-hl70231-to-v2-0231" name="Table HL70231 to V2 0231 Map"/>
 <artifact id="ConceptMap/table-hl70272-to-v2-0272" key="ConceptMap-table-hl70272-to-v2-0272" name="Table HL70272 to V2 0272 Map"/>
-<artifact id="ConceptMap/table-hl70276-to-encounter-reason" key="ConceptMap-table-hl70276-to-encounter-reason" name="Table HL70276 to Encounter Reason Map"/>
+<artifact deprecated="true" id="ConceptMap/table-hl70276-to-encounter-reason" key="ConceptMap-table-hl70276-to-encounter-reason" name="Table HL70276 to Encounter Reason Map"/>
+<artifact id="ConceptMap/table-hl70276-to-sct" key="ConceptMap-table-hl70276-to-sct" name="Table HL70276 to Sct Map"/>
 <artifact id="ConceptMap/table-hl70277-to-v2-0277" key="ConceptMap-table-hl70277-to-v2-0277" name="Table HL70277 to V2 0277 Map"/>
-<artifact id="ConceptMap/table-hl70278-to-codesystem-appointmentstatus" key="ConceptMap-table-hl70278-to-codesystem-appointmentstatus" name="Table HL70278 to Codesystem Appointmentstatus Map"/>
+<artifact id="ConceptMap/table-hl70278-to-appointmentstatus" key="ConceptMap-table-hl70278-to-appointmentstatus" name="Table HL70278 to Appointmentstatus Map"/>
+<artifact deprecated="true" id="ConceptMap/table-hl70278-to-codesystem-appointmentstatus" key="ConceptMap-table-hl70278-to-codesystem-appointmentstatus" name="Table HL70278 to Codesystem Appointmentstatus Map"/>
 <artifact id="ConceptMap/table-hl70301-to-v2-0301" key="ConceptMap-table-hl70301-to-v2-0301" name="Table HL70301 to V2 0301 Map"/>
 <artifact id="ConceptMap/table-hl70315-to-v2-0315" key="ConceptMap-table-hl70315-to-v2-0315" name="Table HL70315 to V2 0315 Map"/>
 <artifact id="ConceptMap/table-hl70322-to-event-status" key="ConceptMap-table-hl70322-to-event-status" name="Table HL70322 to Event Status Map"/>

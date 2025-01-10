@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ IAM[AllergyIntolerance] - Sheet1.csv
 Instance: SegmentIAMToAllergyIntolerance
 InstanceOf: ConceptMap
-Title: "Segment IAM  to AllergyIntolerance Map"
-* title = "Segment IAM  to AllergyIntolerance Map"
+Title: "Segment IAM to AllergyIntolerance Map"
+Usage: #definition
+* title = "Segment IAM to AllergyIntolerance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment IAM to the FHIR AllergyIntolerance Resource."
 * id = "segment-iam-to-allergyintolerance"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-iam-to-allergyintolerance"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-iam-to-allergyintolerance"
 * name = "SegmentIAMToAllergyIntolerance"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "IAM"
-* targetUri = "AllergyIntolerance"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

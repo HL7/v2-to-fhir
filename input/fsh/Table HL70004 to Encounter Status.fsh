@@ -1,22 +1,16 @@
 // HL7 Concept Map_ PatientClass[EncounterStatus] - Sheet1.csv
 Instance: TableHL70004ToEncounterStatus
 InstanceOf: ConceptMap
-Title: "Table HL70004  to Encounter Status Map"
-* title = "Table HL70004  to Encounter Status Map"
+Title: "Table HL70004 to Encounter Status Map"
+Usage: #definition
+* title = "Table HL70004 to Encounter Status Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70004 to the FHIR Encounter Status Value Set."
 * id = "table-hl70004-to-encounter-status"
-* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70004-to-encounter-status"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70004-to-encounter-status"
 * name = "TableHL70004ToEncounterStatus"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "HL70004"
-* targetUri = "http://hl7.org/fhir/encounter-status"
+* sourceUri = "http://terminology.hl7.org/ValueSet/v2-0004"
+* targetUri = "http://hl7.org/fhir/ValueSet/encounter-status"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

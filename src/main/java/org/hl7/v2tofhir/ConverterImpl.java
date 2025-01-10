@@ -19,8 +19,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Collection;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -83,10 +83,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     private static Map<String,Triple<String,Integer,String>> segmentLinks = new TreeMap<>();
     private static Map<String,Triple<String,Integer,String>> tableLinks = new TreeMap<>();
     private static Map<String,Triple<String,Integer,String>> dataTypeLinks = new TreeMap<>();
-
-    private static final String[] KNOWN_CODESYSTEM_URLS = {
-        "http://snomed.info/sct"
-    };
+    private static final String[] KNOWN_CODESYSTEM_URLS = { Converter.SNOMEDCT_URL };
 
     private static Map<String, String> mappedLinks  = new HashMap<>();
     static {
@@ -396,29 +393,60 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         pw.printf("Instance: %s%n", makeName(filename));
         pw.println("InstanceOf: ConceptMap");
         pw.println("Title: \"" + titleStr + "\"");
+        pw.println("Usage: #definition");
         pw.println("* title = \"" + titleStr + "\"");
         pw.printf("* description = \"This ConceptMap represents a mapping from the HL7 V2 %s %s to the FHIR %s.%s\"%n",
             type, sourceName, fhirType, source == null ? " It is not yet supported." : "");
         pw.printf("* id = \"%s\"%n", makeId(filename));
-        pw.printf("* url = \"%s/%s\"%n", IG_URL, makeId(filename));
-        pw.println("* version = \"1.0\"");
+        pw.printf("* url = \"%s/ConceptMap/%s\"%n", IG_URL, makeId(filename));
         pw.printf("* name = \"%s\"%n", makeName(filename));
-        pw.println("* status = #active");
-        pw.println("* experimental = true");
-        pw.printf("* date = \"%tF\"%n", new Date());
-        pw.println("* publisher = \"HL7 International, Inc\"");
-        pw.println("* contact.telecom.system = #email");
-        pw.println("* contact.telecom.value = \"v2-to-fhir@lists.hl7.org\"");
-        pw.println("* copyright = \"Copyright (c) 2020, HL7 International, Inc., All Rights Reserved.\"");
-        if (source != null) {
-            pw.printf("* sourceUri = \"%s\"%n", source);
+        String vs = toValueSetUri(type, source);
+        if (vs != null) {
+            pw.printf("* sourceUri = \"%s\"%n", vs);
+        } else {
+        	System.err.printf("Source: %s %s %s%n", sourceName, type, source);
         }
-        if (target != null) {
-            pw.printf("* targetUri = \"%s\"%n", target);
+        vs = toValueSetUri(type, target);
+        if (vs != null) {
+            pw.printf("* targetUri = \"%s\"%n", toValueSetUri(type, vs));
+        } else {
+        	System.err.printf("Target: %s %s%n", targetName, target);
         }
+        pw.println("* insert PublicationData");
     }
 
-    private void addConstraints(PrintWriter pw, String string, int row, String dataType, String min, String max) {
+    /**
+     * Convert code system URIs and other special things to
+     * appropriate value set URIs.
+     * 
+     * @param uri	The input URI
+     * @return	The correct valueset URI for the code system or other thing (e.g., message, segment, data type, et cetera).
+     */
+	private static String toValueSetUri(String type, String uri) {
+		if (uri == null) {
+			return null;
+		}
+		if (uri.contains("/R4/")) {
+			uri = uri.replace("/R4/", "/");
+		}
+		if (StringUtils.startsWithIgnoreCase(uri, "HL7")) {
+			return "http://terminology.hl7.org/ValueSet/v2-" + uri.substring(3);
+		}
+		if (StringUtils.startsWithIgnoreCase(uri, "http://hl7.org/fhir/") && 
+			!StringUtils.startsWithIgnoreCase(uri, "http://hl7.org/fhir/ValueSet/")) {
+			return "http://hl7.org/fhir/ValueSet/" + StringUtils.substringAfter(uri, "/fhir/");
+		}
+		if (StringUtils.startsWithIgnoreCase(uri, "http://terminology.hl7.org/CodeSystem/")) {
+			return "http://terminology.hl7.org/ValueSet/" + StringUtils.substringAfter(uri, "/CodeSystem/");
+		}
+		if (StringUtils.startsWithIgnoreCase(uri, "http://hl7.org/fhir/ValueSet/")) {
+			return uri;
+		}
+		
+		return null;
+	}
+	
+	private void addConstraints(PrintWriter pw, String string, int row, String dataType, String min, String max) {
         if (!StringUtils.isAllBlank(dataType, min, max)) {
             pw.printf(string + ".extension[0].url = \"%s/StructureDefinition/TypeInfo\"%n", row, IG_URL);
 
@@ -572,6 +600,11 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     public String getTargetName() {
         return targetName;
     }
+    
+    @Override
+    public String getTarget() {
+    	return target;
+    }
 
     @Override
     public void store() throws IOException {
@@ -605,7 +638,8 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             if (fhirLink == null) {
                 continue;
             }
-            String mapped = mappedLinks.get(fhirLink), link = null;
+            String mapped = mappedLinks.get(fhirLink);
+            String link = null;
             if (mapped != null) {
                 links.append(makeLink(fhirLink, mapped));
             } else if (StringUtils.startsWith(fhirLink, "http://hl7.org/fhir") &&
@@ -628,7 +662,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                     fhirLink.replace(FHIR_TERM + "CodeSystem/v2-", FHIR_BASE + "v2/") + "/index.html")
                 );
             } else if (StringUtils.startsWith(fhirLink,  FHIR_TERM + "CodeSystem/")) {
-                links.append(makeLink(fhirLink, fhirLink + HTML_SUFFIX));
+                links.append(makeLink(fhirLink, fhirLink));
             } else if (Arrays.asList(KNOWN_CODESYSTEM_URLS).contains(fhirLink)) {
                 links.append(makeLink(fhirLink, fhirLink));
             } else if (isMetaField(fhirLink)) {
@@ -1023,4 +1057,28 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     protected static int getWarnCount() {
         return warnCount;
     }
+
+    /**
+     * Generate this file and include it in resources so that resources that change
+     * nothing other than publication date don't show up as changed files.
+     * 
+     * @param output	The location to put the publication data.
+     */
+	public static void generatePublicationData(String output) {
+		File f = new File(StringUtils.defaultIfEmpty(output, "."), "PublicationData.fsh");
+		try (PrintWriter pw = new PrintWriter(new FileWriter(f, StandardCharsets.UTF_8))) {
+			pw.println("RuleSet: PublicationData");
+	        pw.println("* version = \"1.0\"");
+	        pw.println("* status = #active");
+	        pw.println("* experimental = true");
+	        pw.println("* publisher = \"HL7 International, Inc\"");
+	        pw.println("* contact.telecom.system = #email");
+	        pw.println("* contact.telecom.value = \"v2-to-fhir@lists.hl7.org\"");
+	        Calendar cal = Calendar.getInstance();
+	        pw.printf("* date = \"%tF\"%n", cal);
+	        pw.printf("* copyright = \"Copyright (c) %d, HL7 International, Inc., All Rights Reserved.\"%n", cal.get(Calendar.YEAR));
+		} catch (IOException e) {
+			log.println("Cannot write to " + f + ": " + e.getMessage());
+		}
+	}
 }

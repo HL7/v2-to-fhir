@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv
 Instance: SegmentPV1ToEncounter
 InstanceOf: ConceptMap
-Title: "Segment PV1  to Encounter Map"
-* title = "Segment PV1  to Encounter Map"
+Title: "Segment PV1 to Encounter Map"
+Usage: #definition
+* title = "Segment PV1 to Encounter Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PV1 to the FHIR Encounter Resource."
 * id = "segment-pv1-to-encounter"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-pv1-to-encounter"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-pv1-to-encounter"
 * name = "SegmentPV1ToEncounter"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "PV1"
-* targetUri = "Encounter"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

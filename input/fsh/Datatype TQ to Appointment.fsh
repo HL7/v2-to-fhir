@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ TQ[Appointment] - Sheet1.csv
 Instance: DatatypeTQToAppointment
 InstanceOf: ConceptMap
-Title: "Datatype TQ  to Appointment Map"
-* title = "Datatype TQ  to Appointment Map"
+Title: "Datatype TQ to Appointment Map"
+Usage: #definition
+* title = "Datatype TQ to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TQ to the FHIR Appointment Resource."
 * id = "datatype-tq-to-appointment"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-tq-to-appointment"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-tq-to-appointment"
 * name = "DatatypeTQToAppointment"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "TQ"
-* targetUri = "Appointment"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ PL[Location] - Sheet1.csv
 Instance: DatatypePLToLocation
 InstanceOf: ConceptMap
-Title: "Datatype PL  to Location Map"
-* title = "Datatype PL  to Location Map"
+Title: "Datatype PL to Location Map"
+Usage: #definition
+* title = "Datatype PL to Location Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype PL to the FHIR Location Resource."
 * id = "datatype-pl-to-location"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-pl-to-location"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-pl-to-location"
 * name = "DatatypePLToLocation"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "PL"
-* targetUri = "Location"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

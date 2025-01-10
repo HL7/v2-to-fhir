@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ IS[CodeableConcept] - Sheet1.csv
 Instance: DatatypeISToCodeableConcept
 InstanceOf: ConceptMap
-Title: "Datatype IS  to CodeableConcept Map"
-* title = "Datatype IS  to CodeableConcept Map"
+Title: "Datatype IS to CodeableConcept Map"
+Usage: #definition
+* title = "Datatype IS to CodeableConcept Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype IS to the FHIR CodeableConcept Data Type."
 * id = "datatype-is-to-codeableconcept"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-is-to-codeableconcept"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-is-to-codeableconcept"
 * name = "DatatypeISToCodeableConcept"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "IS"
-* targetUri = "CodeableConcept"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

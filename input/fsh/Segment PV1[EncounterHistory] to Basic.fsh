@@ -2,21 +2,13 @@
 Instance: SegmentPV1EncounterHistoryToBasic
 InstanceOf: ConceptMap
 Title: "Segment PV1 [EncounterHistory] to Basic Map"
+Usage: #definition
 * title = "Segment PV1 [EncounterHistory] to Basic Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PV1 to the FHIR Basic Resource."
 * id = "segment-pv1-encounterhistory-to-basic"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-pv1-encounterhistory-to-basic"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-pv1-encounterhistory-to-basic"
 * name = "SegmentPV1EncounterHistoryToBasic"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "PV1"
-* targetUri = "Basic"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

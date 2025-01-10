@@ -2,21 +2,13 @@
 Instance: DatatypeHDNameToMessageHeaderSource
 InstanceOf: ConceptMap
 Title: "Datatype HD [name] to MessageHeader.source Map"
+Usage: #definition
 * title = "Datatype HD [name] to MessageHeader.source Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype HD to the FHIR MessageHeader.source Data Type."
 * id = "datatype-hd-name-to-messageheader-source"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-hd-name-to-messageheader-source"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-hd-name-to-messageheader-source"
 * name = "DatatypeHDNameToMessageHeaderSource"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "HD"
-* targetUri = "MessageHeader.source"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

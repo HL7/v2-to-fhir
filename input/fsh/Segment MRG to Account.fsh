@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ MRG[Account] - Sheet1.csv
 Instance: SegmentMRGToAccount
 InstanceOf: ConceptMap
-Title: "Segment MRG  to Account Map"
-* title = "Segment MRG  to Account Map"
+Title: "Segment MRG to Account Map"
+Usage: #definition
+* title = "Segment MRG to Account Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment MRG to the FHIR Account Resource."
 * id = "segment-mrg-to-account"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-mrg-to-account"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-mrg-to-account"
 * name = "SegmentMRGToAccount"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "MRG"
-* targetUri = "Account"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

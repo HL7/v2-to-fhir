@@ -1,22 +1,14 @@
 // HL7 Message - FHIR R4_ OML_O21 - Sheet1.csv
 Instance: MessageOML_O21ToBundle
 InstanceOf: ConceptMap
-Title: "Message OML_O21  to Bundle Map"
-* title = "Message OML_O21  to Bundle Map"
+Title: "Message OML_O21 to Bundle Map"
+Usage: #definition
+* title = "Message OML_O21 to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message OML_O21 to the FHIR Message Bundle."
 * id = "message-oml-o21-to-bundle"
-* url = "http://hl7.org/fhir/uv/v2mappings/message-oml-o21-to-bundle"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/message-oml-o21-to-bundle"
 * name = "MessageOML_O21ToBundle"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "OML_O21"
-* targetUri = "Bundle"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

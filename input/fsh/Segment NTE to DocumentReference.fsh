@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ NTE[DocumentReference] - Sheet1.csv
 Instance: SegmentNTEToDocumentReference
 InstanceOf: ConceptMap
-Title: "Segment NTE  to DocumentReference Map"
-* title = "Segment NTE  to DocumentReference Map"
+Title: "Segment NTE to DocumentReference Map"
+Usage: #definition
+* title = "Segment NTE to DocumentReference Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment NTE to the FHIR DocumentReference Resource."
 * id = "segment-nte-to-documentreference"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-nte-to-documentreference"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-nte-to-documentreference"
 * name = "SegmentNTEToDocumentReference"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "NTE"
-* targetUri = "DocumentReference"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

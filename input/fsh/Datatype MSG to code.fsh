@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ MSG[code] - Sheet1.csv
 Instance: DatatypeMSGToCode
 InstanceOf: ConceptMap
-Title: "Datatype MSG  to code Map"
-* title = "Datatype MSG  to code Map"
+Title: "Datatype MSG to code Map"
+Usage: #definition
+* title = "Datatype MSG to code Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype MSG to the FHIR code Data Type."
 * id = "datatype-msg-to-code"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-msg-to-code"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-msg-to-code"
 * name = "DatatypeMSGToCode"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "MSG"
-* targetUri = "code"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

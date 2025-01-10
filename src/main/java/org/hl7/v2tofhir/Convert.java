@@ -91,6 +91,7 @@ public class Convert {
             	addToConversions(f, output);
             }
         }
+    	ConverterImpl.generatePublicationData(output);
         convertAll();
         // For each converted piece of content, generate the mapping outputs.
         try {
@@ -306,7 +307,7 @@ public class Convert {
                 c.getSourceFileName() + " to FHIR " + c.getTargetName(), c.getHtmlFileName()));
         } else {
             subchap.setData(Triple.of(dtData.getRight() + c.getQualifier(),
-                dtData.getMiddle()  + " to FHIR [" + c.getTargetName() + "](" + getFhirLocation(m, c.getTargetName()) + ")",
+                dtData.getMiddle()  + " to FHIR [" + c.getTargetName() + "](" + getFhirLocation(m, c.getTargetName(), c.getTarget()) + ")",
                 c.getHtmlFileName()));
         }
     }
@@ -326,9 +327,11 @@ public class Convert {
         addTitlesToIndex(m, chapters, c, segData, chapData);
     }
 
-    private static String getFhirLocation(Map<String, Map<String, Triple<String, String, String>>> m, String targetName) {
-        String ucName = targetName;
+    private static String getFhirLocation(Map<String, Map<String, Triple<String, String, String>>> m, String targetName, String target) {
+
+    	String ucName = targetName;
         targetName = targetName.toLowerCase();
+        
         if (targetName.contains(".")) {
             String rootName = StringUtils.substringBefore(targetName, ".");
             if (m.get("FHIR Resource").get(rootName) != null) {
@@ -349,6 +352,10 @@ public class Convert {
         }
         if (targetName.contains("v3")) {
             return FHIR_PREFIX + ucName.replace("V3", "/v3/").replace(" ", "") + "/cs.html";
+        }
+        
+        if (target.startsWith("http://")) {
+        	return target;
         }
         return FHIR_PREFIX + "/codesystem-" + targetName.replace(" ", "-") + ".html";
     }

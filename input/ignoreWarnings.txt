@@ -12,3 +12,6 @@ EXTENSION_EXTM_CONTEXT_WRONG_XVER
 
 # The content uses the '<' and '>' characters, but it is not embedded HTML or XML and poses no security risk
 %The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+
+# This link is resolvable
+%The link 'http:/hl7.org/fhir/fhir-types' for "http:/hl7.org/fhir/fhir-types" cannot be resolved

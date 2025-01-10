@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv
 Instance: SegmentRXOToMedicationRequest
 InstanceOf: ConceptMap
-Title: "Segment RXO  to MedicationRequest Map"
-* title = "Segment RXO  to MedicationRequest Map"
+Title: "Segment RXO to MedicationRequest Map"
+Usage: #definition
+* title = "Segment RXO to MedicationRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment RXO to the FHIR MedicationRequest Resource."
 * id = "segment-rxo-to-medicationrequest"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-rxo-to-medicationrequest"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-rxo-to-medicationrequest"
 * name = "SegmentRXOToMedicationRequest"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "RXO"
-* targetUri = "MedicationRequest"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

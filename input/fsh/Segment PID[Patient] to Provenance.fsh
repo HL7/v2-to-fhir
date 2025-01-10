@@ -2,21 +2,13 @@
 Instance: SegmentPIDPatientToProvenance
 InstanceOf: ConceptMap
 Title: "Segment PID [Patient] to Provenance Map"
+Usage: #definition
 * title = "Segment PID [Patient] to Provenance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PID to the FHIR Provenance Resource."
 * id = "segment-pid-patient-to-provenance"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-pid-patient-to-provenance"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-pid-patient-to-provenance"
 * name = "SegmentPIDPatientToProvenance"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "PID"
-* targetUri = "Provenance"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

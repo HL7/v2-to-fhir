@@ -17,7 +17,9 @@ import java.io.IOException;
 
 public interface Converter {
 
-    /**
+    String SNOMEDCT_URL = "http://snomed.info/sct";
+
+	/**
      * Load the specified input into the converter
      * @param f The input file
      */
@@ -54,6 +56,12 @@ public interface Converter {
     String getTargetName();
 
     /**
+     * Get the URL of the target object
+     * @return  The URL of the target object.
+     */
+	String getTarget();
+
+    /**
      * Get the name of the HTML File that will be produced
      * @return  the name of the HTML File that will be produced
      */
@@ -76,4 +84,5 @@ public interface Converter {
      * @return  the name of the FHIR Shorthand File that will be produced
      */
     String getFishFileName();
+
 }

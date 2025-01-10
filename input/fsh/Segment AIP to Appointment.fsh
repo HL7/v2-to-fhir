@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ AIP[Appointment] - Sheet1.csv
 Instance: SegmentAIPToAppointment
 InstanceOf: ConceptMap
-Title: "Segment AIP  to Appointment Map"
-* title = "Segment AIP  to Appointment Map"
+Title: "Segment AIP to Appointment Map"
+Usage: #definition
+* title = "Segment AIP to Appointment Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment AIP to the FHIR Appointment Resource."
 * id = "segment-aip-to-appointment"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-aip-to-appointment"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-aip-to-appointment"
 * name = "SegmentAIPToAppointment"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "AIP"
-* targetUri = "Appointment"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ PR1[Procedure] - PR1[Procedure].csv
 Instance: SegmentPR1ToProcedure
 InstanceOf: ConceptMap
-Title: "Segment PR1  to Procedure Map"
-* title = "Segment PR1  to Procedure Map"
+Title: "Segment PR1 to Procedure Map"
+Usage: #definition
+* title = "Segment PR1 to Procedure Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment PR1 to the FHIR Procedure Resource."
 * id = "segment-pr1-to-procedure"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-pr1-to-procedure"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-pr1-to-procedure"
 * name = "SegmentPR1ToProcedure"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "PR1"
-* targetUri = "Procedure"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

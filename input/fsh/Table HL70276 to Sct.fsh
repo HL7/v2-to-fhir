@@ -1,27 +1,20 @@
 // HL7 Concept Map_ AppointmentReasonCodes - Sheet1.csv
-Instance: TableHL70276ToEncounterReason
+Instance: TableHL70276ToSct
 InstanceOf: ConceptMap
-Title: "Table HL70276  to Encounter Reason Map"
-* title = "Table HL70276  to Encounter Reason Map"
-* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70276 to the FHIR Encounter Reason Value Set."
-* id = "table-hl70276-to-encounter-reason"
-* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70276-to-encounter-reason"
-* version = "1.0"
-* name = "TableHL70276ToEncounterReason"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "HL70276"
-* targetUri = "http://hl7.org/fhir/ValueSet/encounter-reason"
+Title: "Table HL70276 to Sct Map"
+Usage: #definition
+* title = "Table HL70276 to Sct Map"
+* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70276 to the FHIR Sct Value Set."
+* id = "table-hl70276-to-sct"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70276-to-sct"
+* name = "TableHL70276ToSct"
+* sourceUri = "http://terminology.hl7.org/ValueSet/v2-0276"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Table HL70276 to Encounter Reason.fsh"
+* extension[0].extension[1].valueString = "Table HL70276 to Sct.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13B4B6YFRgukI2tipC7QOJ1J8i4iNJ2aYzQRuirCyFBg/edit#gid=0"
 * group.element[0].code = #ROUTINE

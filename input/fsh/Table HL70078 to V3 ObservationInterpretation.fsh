@@ -1,22 +1,16 @@
 // HL7 Concept Map_ InterpretationCodes - Sheet1.csv
 Instance: TableHL70078ToV3ObservationInterpretation
 InstanceOf: ConceptMap
-Title: "Table HL70078  to V3 ObservationInterpretation Map"
-* title = "Table HL70078  to V3 ObservationInterpretation Map"
+Title: "Table HL70078 to V3 ObservationInterpretation Map"
+Usage: #definition
+* title = "Table HL70078 to V3 ObservationInterpretation Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70078 to the FHIR V3 ObservationInterpretation Value Set."
 * id = "table-hl70078-to-v3-observationinterpretation"
-* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70078-to-v3-observationinterpretation"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70078-to-v3-observationinterpretation"
 * name = "TableHL70078ToV3ObservationInterpretation"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "HL70078"
-* targetUri = "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+* sourceUri = "http://terminology.hl7.org/ValueSet/v2-0078"
+* targetUri = "null"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

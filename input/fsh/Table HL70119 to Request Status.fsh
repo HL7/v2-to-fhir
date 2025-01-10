@@ -1,22 +1,16 @@
 // HL7 Concept Map_ OrderControlCode[ServiceRequest.status] - Sheet1.csv
 Instance: TableHL70119ToRequestStatus
 InstanceOf: ConceptMap
-Title: "Table HL70119  to Request Status Map"
-* title = "Table HL70119  to Request Status Map"
+Title: "Table HL70119 to Request Status Map"
+Usage: #definition
+* title = "Table HL70119 to Request Status Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70119 to the FHIR Request Status Value Set."
 * id = "table-hl70119-to-request-status"
-* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70119-to-request-status"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70119-to-request-status"
 * name = "TableHL70119ToRequestStatus"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "HL70119"
-* targetUri = "http://hl7.org/fhir/request-status"
+* sourceUri = "http://terminology.hl7.org/ValueSet/v2-0119"
+* targetUri = "http://hl7.org/fhir/ValueSet/request-status"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

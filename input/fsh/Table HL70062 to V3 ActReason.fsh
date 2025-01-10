@@ -1,22 +1,16 @@
 // HL7 Concept Map_ EventReason - Sheet1.csv
 Instance: TableHL70062ToV3ActReason
 InstanceOf: ConceptMap
-Title: "Table HL70062  to V3 ActReason Map"
-* title = "Table HL70062  to V3 ActReason Map"
+Title: "Table HL70062 to V3 ActReason Map"
+Usage: #definition
+* title = "Table HL70062 to V3 ActReason Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70062 to the FHIR V3 ActReason Value Set."
 * id = "table-hl70062-to-v3-actreason"
-* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70062-to-v3-actreason"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70062-to-v3-actreason"
 * name = "TableHL70062ToV3ActReason"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "HL70062"
-* targetUri = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+* sourceUri = "http://terminology.hl7.org/ValueSet/v2-0062"
+* targetUri = "null"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

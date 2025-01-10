@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ XCN[PractitionerRole] - Sheet1.csv
 Instance: DatatypeXCNToPractitionerRole
 InstanceOf: ConceptMap
-Title: "Datatype XCN  to PractitionerRole Map"
-* title = "Datatype XCN  to PractitionerRole Map"
+Title: "Datatype XCN to PractitionerRole Map"
+Usage: #definition
+* title = "Datatype XCN to PractitionerRole Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XCN to the FHIR PractitionerRole Resource."
 * id = "datatype-xcn-to-practitionerrole"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-xcn-to-practitionerrole"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-xcn-to-practitionerrole"
 * name = "DatatypeXCNToPractitionerRole"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "XCN"
-* targetUri = "PractitionerRole"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

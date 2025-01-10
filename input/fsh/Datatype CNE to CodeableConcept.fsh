@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ CNE[CodeableConcept] - Sheet1.csv
 Instance: DatatypeCNEToCodeableConcept
 InstanceOf: ConceptMap
-Title: "Datatype CNE  to CodeableConcept Map"
-* title = "Datatype CNE  to CodeableConcept Map"
+Title: "Datatype CNE to CodeableConcept Map"
+Usage: #definition
+* title = "Datatype CNE to CodeableConcept Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CNE to the FHIR CodeableConcept Data Type."
 * id = "datatype-cne-to-codeableconcept"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-cne-to-codeableconcept"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-cne-to-codeableconcept"
 * name = "DatatypeCNEToCodeableConcept"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "CNE"
-* targetUri = "CodeableConcept"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv
 Instance: DatatypeXCNToRelatedPerson
 InstanceOf: ConceptMap
-Title: "Datatype XCN  to RelatedPerson Map"
-* title = "Datatype XCN  to RelatedPerson Map"
+Title: "Datatype XCN to RelatedPerson Map"
+Usage: #definition
+* title = "Datatype XCN to RelatedPerson Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XCN to the FHIR RelatedPerson Resource."
 * id = "datatype-xcn-to-relatedperson"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-xcn-to-relatedperson"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-xcn-to-relatedperson"
 * name = "DatatypeXCNToRelatedPerson"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "XCN"
-* targetUri = "RelatedPerson"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

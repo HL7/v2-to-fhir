@@ -1,22 +1,14 @@
 // HL7 Message - FHIR R4_ ORU_R01 - Sheet1.csv
 Instance: MessageORU_R01ToBundle
 InstanceOf: ConceptMap
-Title: "Message ORU_R01  to Bundle Map"
-* title = "Message ORU_R01  to Bundle Map"
+Title: "Message ORU_R01 to Bundle Map"
+Usage: #definition
+* title = "Message ORU_R01 to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message ORU_R01 to the FHIR Message Bundle."
 * id = "message-oru-r01-to-bundle"
-* url = "http://hl7.org/fhir/uv/v2mappings/message-oru-r01-to-bundle"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/message-oru-r01-to-bundle"
 * name = "MessageORU_R01ToBundle"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "ORU_R01"
-* targetUri = "Bundle"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

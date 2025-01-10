@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ XTN[ContactPoint] - Sheet1.csv
 Instance: DatatypeXTNToContactPoint
 InstanceOf: ConceptMap
-Title: "Datatype XTN  to ContactPoint Map"
-* title = "Datatype XTN  to ContactPoint Map"
+Title: "Datatype XTN to ContactPoint Map"
+Usage: #definition
+* title = "Datatype XTN to ContactPoint Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XTN to the FHIR ContactPoint Data Type."
 * id = "datatype-xtn-to-contactpoint"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-xtn-to-contactpoint"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-xtn-to-contactpoint"
 * name = "DatatypeXTNToContactPoint"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "XTN"
-* targetUri = "ContactPoint"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

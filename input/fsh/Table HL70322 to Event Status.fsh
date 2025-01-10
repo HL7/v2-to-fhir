@@ -1,22 +1,16 @@
 // HL7 Concept Map_ CompletionStatus - Sheet1.csv
 Instance: TableHL70322ToEventStatus
 InstanceOf: ConceptMap
-Title: "Table HL70322  to Event Status Map"
-* title = "Table HL70322  to Event Status Map"
+Title: "Table HL70322 to Event Status Map"
+Usage: #definition
+* title = "Table HL70322 to Event Status Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70322 to the FHIR Event Status Value Set."
 * id = "table-hl70322-to-event-status"
-* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70322-to-event-status"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70322-to-event-status"
 * name = "TableHL70322ToEventStatus"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "HL70322"
-* targetUri = "http://hl7.org/fhir/event-status"
+* sourceUri = "http://terminology.hl7.org/ValueSet/v2-0322"
+* targetUri = "http://hl7.org/fhir/ValueSet/event-status"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

@@ -1,6 +1,7 @@
 REM TODO: Make this an ant build, and add the ant tasks to mvn
 REM Clean Folders
-rmdir /s/q output
+rmdir /s/q output 
+rmdir /s/q fsh-generated
 REM Remove generated mapping input files
 rm input/Datatype*.fsh input/Segment*.fsh input/Table*.fsh input/Message*.fsh
 REM Build the source

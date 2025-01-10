@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ TQ1[ServiceRequest] - TQ1.csv
 Instance: SegmentTQ1ToServiceRequest
 InstanceOf: ConceptMap
-Title: "Segment TQ1  to ServiceRequest Map"
-* title = "Segment TQ1  to ServiceRequest Map"
+Title: "Segment TQ1 to ServiceRequest Map"
+Usage: #definition
+* title = "Segment TQ1 to ServiceRequest Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment TQ1 to the FHIR ServiceRequest Resource."
 * id = "segment-tq1-to-servicerequest"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-tq1-to-servicerequest"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-tq1-to-servicerequest"
 * name = "SegmentTQ1ToServiceRequest"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "TQ1"
-* targetUri = "ServiceRequest"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

@@ -1,22 +1,14 @@
 // HL7 Message - FHIR R4_ ADT_A06 - Sheet1.csv
 Instance: MessageADT_A06ToBundle
 InstanceOf: ConceptMap
-Title: "Message ADT_A06  to Bundle Map"
-* title = "Message ADT_A06  to Bundle Map"
+Title: "Message ADT_A06 to Bundle Map"
+Usage: #definition
+* title = "Message ADT_A06 to Bundle Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Message ADT_A06 to the FHIR Message Bundle."
 * id = "message-adt-a06-to-bundle"
-* url = "http://hl7.org/fhir/uv/v2mappings/message-adt-a06-to-bundle"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/message-adt-a06-to-bundle"
 * name = "MessageADT_A06ToBundle"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "ADT_A06"
-* targetUri = "Bundle"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

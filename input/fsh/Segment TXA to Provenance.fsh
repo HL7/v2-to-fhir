@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ TXA[Provenance] - Sheet1.csv
 Instance: SegmentTXAToProvenance
 InstanceOf: ConceptMap
-Title: "Segment TXA  to Provenance Map"
-* title = "Segment TXA  to Provenance Map"
+Title: "Segment TXA to Provenance Map"
+Usage: #definition
+* title = "Segment TXA to Provenance Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment TXA to the FHIR Provenance Resource."
 * id = "segment-txa-to-provenance"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-txa-to-provenance"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-txa-to-provenance"
 * name = "SegmentTXAToProvenance"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "TXA"
-* targetUri = "Provenance"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

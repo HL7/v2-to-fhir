@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ IN3[CareTeam] - Sheet1.csv
 Instance: SegmentIN3ToCareTeam
 InstanceOf: ConceptMap
-Title: "Segment IN3  to CareTeam Map"
-* title = "Segment IN3  to CareTeam Map"
+Title: "Segment IN3 to CareTeam Map"
+Usage: #definition
+* title = "Segment IN3 to CareTeam Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment IN3 to the FHIR CareTeam Resource."
 * id = "segment-in3-to-careteam"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-in3-to-careteam"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-in3-to-careteam"
 * name = "SegmentIN3ToCareTeam"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "IN3"
-* targetUri = "CareTeam"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

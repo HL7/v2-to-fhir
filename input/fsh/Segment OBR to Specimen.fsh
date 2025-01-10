@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ OBR[Specimen] - Sheet1.csv
 Instance: SegmentOBRToSpecimen
 InstanceOf: ConceptMap
-Title: "Segment OBR  to Specimen Map"
-* title = "Segment OBR  to Specimen Map"
+Title: "Segment OBR to Specimen Map"
+Usage: #definition
+* title = "Segment OBR to Specimen Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment OBR to the FHIR Specimen Resource."
 * id = "segment-obr-to-specimen"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-obr-to-specimen"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-obr-to-specimen"
 * name = "SegmentOBRToSpecimen"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "OBR"
-* targetUri = "Specimen"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

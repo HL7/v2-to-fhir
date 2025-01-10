@@ -1,22 +1,14 @@
 // HL7 Segment - FHIR R4_ DG1[Condition] - Sheet1.csv
 Instance: SegmentDG1ToCondition
 InstanceOf: ConceptMap
-Title: "Segment DG1  to Condition Map"
-* title = "Segment DG1  to Condition Map"
+Title: "Segment DG1 to Condition Map"
+Usage: #definition
+* title = "Segment DG1 to Condition Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Segment DG1 to the FHIR Condition Resource."
 * id = "segment-dg1-to-condition"
-* url = "http://hl7.org/fhir/uv/v2mappings/segment-dg1-to-condition"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-dg1-to-condition"
 * name = "SegmentDG1ToCondition"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "DG1"
-* targetUri = "Condition"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

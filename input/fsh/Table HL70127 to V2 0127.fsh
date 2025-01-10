@@ -1,22 +1,16 @@
 // HL7 Concept Map_ AllergenType[AllergyIntoleranceOriginalCategory] - Sheet1.csv
 Instance: TableHL70127ToV20127
 InstanceOf: ConceptMap
-Title: "Table HL70127  to V2 0127 Map"
-* title = "Table HL70127  to V2 0127 Map"
+Title: "Table HL70127 to V2 0127 Map"
+Usage: #definition
+* title = "Table HL70127 to V2 0127 Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70127 to the FHIR V2 0127 Value Set."
 * id = "table-hl70127-to-v2-0127"
-* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70127-to-v2-0127"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70127-to-v2-0127"
 * name = "TableHL70127ToV20127"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "HL70127"
-* targetUri = "http://terminology.hl7.org/CodeSystem/v2-0127"
+* sourceUri = "http://terminology.hl7.org/ValueSet/v2-0127"
+* targetUri = "null"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ CQ[unsignedInt] - Sheet1.csv
 Instance: DatatypeCQToUnsignedInt
 InstanceOf: ConceptMap
-Title: "Datatype CQ  to unsignedInt Map"
-* title = "Datatype CQ  to unsignedInt Map"
+Title: "Datatype CQ to unsignedInt Map"
+Usage: #definition
+* title = "Datatype CQ to unsignedInt Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype CQ to the FHIR unsignedInt Data Type."
 * id = "datatype-cq-to-unsignedint"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-cq-to-unsignedint"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-cq-to-unsignedint"
 * name = "DatatypeCQToUnsignedInt"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "CQ"
-* targetUri = "unsignedInt"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

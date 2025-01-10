@@ -1,27 +1,20 @@
 // HL7 Concept Map_ AllergySeverity[AllergyIntolerance.reaction.severity] - Sheet1.csv
-Instance: TableHL70128ToCodesystemReactionEventSeverity
+Instance: TableHL70128ToReactionEventSeverity
 InstanceOf: ConceptMap
-Title: "Table HL70128  to Codesystem Reaction Event Severity Map"
-* title = "Table HL70128  to Codesystem Reaction Event Severity Map"
-* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70128 to the FHIR Codesystem Reaction Event Severity Value Set."
-* id = "table-hl70128-to-codesystem-reaction-event-severity"
-* url = "http://hl7.org/fhir/uv/v2mappings/table-hl70128-to-codesystem-reaction-event-severity"
-* version = "1.0"
-* name = "TableHL70128ToCodesystemReactionEventSeverity"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "HL70128"
-* targetUri = "https://www.hl7.org/fhir/codesystem-reaction-event-severity.html"
+Title: "Table HL70128 to Reaction Event Severity Map"
+Usage: #definition
+* title = "Table HL70128 to Reaction Event Severity Map"
+* description = "This ConceptMap represents a mapping from the HL7 V2 Table HL70128 to the FHIR Reaction Event Severity Value Set."
+* id = "table-hl70128-to-reaction-event-severity"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70128-to-reaction-event-severity"
+* name = "TableHL70128ToReactionEventSeverity"
+* sourceUri = "http://terminology.hl7.org/ValueSet/v2-0128"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
 * extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Table HL70128 to Codesystem Reaction Event Severity.fsh"
+* extension[0].extension[1].valueString = "Table HL70128 to Reaction Event Severity.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1sMIR0cGVDt34suaYtk-yH0DA6lVdpV3yrthqOcZLOKg/edit#gid=0"
 * group.element[0].code = #SV

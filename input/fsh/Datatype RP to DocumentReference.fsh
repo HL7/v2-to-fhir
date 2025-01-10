@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ RP[DocumentReference] - Sheet1.csv
 Instance: DatatypeRPToDocumentReference
 InstanceOf: ConceptMap
-Title: "Datatype RP  to DocumentReference Map"
-* title = "Datatype RP  to DocumentReference Map"
+Title: "Datatype RP to DocumentReference Map"
+Usage: #definition
+* title = "Datatype RP to DocumentReference Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype RP to the FHIR DocumentReference Resource."
 * id = "datatype-rp-to-documentreference"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-rp-to-documentreference"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-rp-to-documentreference"
 * name = "DatatypeRPToDocumentReference"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "RP"
-* targetUri = "DocumentReference"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

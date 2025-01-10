@@ -2,21 +2,13 @@
 Instance: DatatypeTQPriorityToTask
 InstanceOf: ConceptMap
 Title: "Datatype TQ [Priority] to Task Map"
+Usage: #definition
 * title = "Datatype TQ [Priority] to Task Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype TQ to the FHIR Task Resource."
 * id = "datatype-tq-priority-to-task"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-tq-priority-to-task"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-tq-priority-to-task"
 * name = "DatatypeTQPriorityToTask"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "TQ"
-* targetUri = "Task"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from

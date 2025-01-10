@@ -1,22 +1,14 @@
 // HL7 Data Type - FHIR R4_ XON[Organization] - Sheet1.csv
 Instance: DatatypeXONToOrganization
 InstanceOf: ConceptMap
-Title: "Datatype XON  to Organization Map"
-* title = "Datatype XON  to Organization Map"
+Title: "Datatype XON to Organization Map"
+Usage: #definition
+* title = "Datatype XON to Organization Map"
 * description = "This ConceptMap represents a mapping from the HL7 V2 Datatype XON to the FHIR Organization Resource."
 * id = "datatype-xon-to-organization"
-* url = "http://hl7.org/fhir/uv/v2mappings/datatype-xon-to-organization"
-* version = "1.0"
+* url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/datatype-xon-to-organization"
 * name = "DatatypeXONToOrganization"
-* status = #active
-* experimental = true
-* date = "2025-01-06"
-* publisher = "HL7 International, Inc"
-* contact.telecom.system = #email
-* contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* copyright = "Copyright (c) 2020, HL7 International, Inc., All Rights Reserved."
-* sourceUri = "XON"
-* targetUri = "Organization"
+* insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
 * extension[0].extension[0].valueCode = #derived-from
