@@ -72,7 +72,6 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [HL70487](ConceptMap-table-hl70487-to-v2-0487.html) - Specimen Type  to FHIR [V2 0487](http://hl7.org/fhir/R4/v2/0487/index.html)
 * [HL70488](ConceptMap-table-hl70488-to-v2-0488.html) - Specimen Collection Method  to FHIR [V2 0488](http://hl7.org/fhir/R4/v2/0488/index.html)
 * [HL70490](ConceptMap-table-hl70490-to-v2-0490.html) - Specimen Reject Reason  to FHIR [V2 0490](http://hl7.org/fhir/R4/v2/0490/index.html)
-* [User0493](ConceptMap-table-hl70493-to-v2-0493.html) - Specimen Condition  to FHIR [V2 0493](http://hl7.org/fhir/R4/v2/0493/index.html)
 * [HL70528](ConceptMap-table-hl70528-to-v3-timingevent.html) - Event Related Period  to FHIR [V3 TimingEvent](http://hl7.org/fhir/R4/v3/TimingEvent/cs.html)
 * [HL70550](ConceptMap-table-hl70550-to-v2-0550.html) - Body Parts  to FHIR [V2 0550](http://hl7.org/fhir/R4/v2/0550/index.html)
 * [HL70912](ConceptMap-table-hl70912-to-practitioner-role.html) - Participation  to FHIR [Practitioner Role](http://terminology.hl7.org/CodeSystem/practitioner-role)
