@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment OBX[Component] to Observation.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1otkCEXuRkQy7kJ--_4WycdG2yQSM7eSfT9t8AUtylck/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1otkCEXuRkQy7kJ--_4WycdG2yQSM7eSfT9t8AUtylck/edit#gid=0"
 * group.element[0].code = #OBX-3
 * group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].extension[0].extension[0].url = "type"
