@@ -75,6 +75,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 
 * [OBX](ConceptMap-segment-obx-to-documentreference.html) - Observation/Result to FHIR [DocumentReference](http://hl7.org/fhir/R4/documentreference.html)
 * [OBX](ConceptMap-segment-obx-to-observation.html) - Observation/Result to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
+* [OBX[Component]](ConceptMap-segment-obx-component-to-observation.html) - Observation/Result to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [PRT](ConceptMap-segment-prt-to-careteam.html) - Participation Information to FHIR [CareTeam](http://hl7.org/fhir/R4/careteam.html)
 * [PRT](ConceptMap-segment-prt-to-device.html) - Participation Information to FHIR [Device](http://hl7.org/fhir/R4/device.html)
 * [PRT](ConceptMap-segment-prt-to-practitionerrole.html) - Participation Information to FHIR [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html)
