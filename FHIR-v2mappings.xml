@@ -49,7 +49,7 @@
 <artifact id="ConceptMap/datatype-ei-extension-to-identifier" key="ConceptMap-datatype-ei-extension-to-identifier" name="Datatype EI [Extension] to Identifier Map"/>
 <artifact id="ConceptMap/datatype-ei-organization-to-identifier" key="ConceptMap-datatype-ei-organization-to-identifier" name="Datatype EI [Organization] to Identifier Map"/>
 <artifact id="ConceptMap/datatype-ei-system-to-identifier" key="ConceptMap-datatype-ei-system-to-identifier" name="Datatype EI [System] to Identifier Map"/>
-<artifact id="ConceptMap/datatype-ei-udicarrier-to-device" key="ConceptMap-datatype-ei-udicarrier-to-device" name="Datatype EI [UDICarrier] to Device Map"/>
+<artifact id="ConceptMap/datatype-ei-udicarrier-to-device" key="ConceptMap-datatype-ei-udicarrier-to-device" name="Datatype EI [udiCarrier] to Device Map"/>
 <artifact id="ConceptMap/datatype-ei-to-coding" key="ConceptMap-datatype-ei-to-coding" name="Datatype EI to Coding Map"/>
 <artifact id="ConceptMap/datatype-ei-to-condition" key="ConceptMap-datatype-ei-to-condition" name="Datatype EI to Condition Map"/>
 <artifact deprecated="true" id="ConceptMap/unsupported-datatype-ei-to-identifier" key="ConceptMap-unsupported-datatype-ei-to-identifier" name="Datatype EI to Identifier Map - Unsupported"/>
