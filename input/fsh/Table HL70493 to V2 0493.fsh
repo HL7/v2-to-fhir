@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70493 to V2 0493.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1U7r8bjIN7VdzCVTnWOpxSSTbiCkuwSOqdlUuM6yrMk4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1U7r8bjIN7VdzCVTnWOpxSSTbiCkuwSOqdlUuM6yrMk4/edit?gid=0#gid=0"
 * group.element[0].code = #AUT
 * group.element[0].display = "Autolyzed"
 * group.element[0].target.equivalence = #equivalent
