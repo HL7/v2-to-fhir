@@ -1,9 +1,9 @@
 {
   "package-id" : "hl7.fhir.uv.v2mappings",
-  "version" : "1.0.0-ballot",
-  "path" : "http://hl7.org/fhir/uv/v2mappings/2024Jan",
-  "mode" : "working",
-  "status" : "ballot",
+  "version" : "1.0.0",
+  "path" : "http://hl7.org/fhir/uv/v2mappings/STU1",
+  "mode" : "milestone",
+  "status" : "trial-use",
   "sequence" : "STU1",
-  "desc" : "The January 2024 Ballot version is the second STU ballot of this implementation guide."
+  "desc" : "This release is the STU 1 publication of this implementation guide."
 }
