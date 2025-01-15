@@ -9,7 +9,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70278-to-appointmentstatus"
 * name = "TableHL70278ToAppointmentstatus"
 * sourceUri = "http://terminology.hl7.org/ValueSet/v2-0278"
-* targetUri = "http://hl7.org/fhir/ValueSet/appointmentstatus.html"
+* targetUri = "http://hl7.org/fhir/ValueSet/appointmentstatus"
 * insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"

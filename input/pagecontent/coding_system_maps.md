@@ -55,7 +55,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [HL70272](ConceptMap-table-hl70272-to-v2-0272.html) - Document Confidentiality Status  to FHIR [V2 0272](http://hl7.org/fhir/R4/v2/0272/index.html)
 * [User0276](ConceptMap-table-hl70276-to-sct.html) - Appointment reason codes  to FHIR [Sct](http://snomed.info/sct)
 * [User0277](ConceptMap-table-hl70277-to-v2-0277.html) - Appointment Type Codes  to FHIR [V2 0277](http://hl7.org/fhir/R4/v2/0277/index.html)
-* [User0278](ConceptMap-table-hl70278-to-appointmentstatus.html) - Filler status codes  to FHIR [Appointmentstatus](http://hl7.org/fhir/appointmentstatus.html)
+* [User0278](ConceptMap-table-hl70278-to-appointmentstatus.html) - Filler status codes  to FHIR [Appointmentstatus](http://hl7.org/fhir/appointmentstatus)
 * [HL70301](ConceptMap-table-hl70301-to-v2-0301.html) - Universal ID Type  to FHIR [V2 0301](http://hl7.org/fhir/R4/v2/0301/index.html)
 * [User0315](ConceptMap-table-hl70315-to-v2-0315.html) - Living Will Code  to FHIR [V2 0315](http://hl7.org/fhir/R4/v2/0315/index.html)
 * [HL70322](ConceptMap-table-hl70322-to-event-status.html) - Completion Status  to FHIR [Event Status](http://hl7.org/fhir/event-status)
