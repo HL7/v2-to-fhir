@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.v2mappings
 canonical: http://hl7.org/fhir/uv/v2mappings
-version: 1.0.0-ballot
+version: 1.0.0
 name: HL7Version2toFHIR
 title: HL7 Version 2 to FHIR
 status: active
@@ -42,7 +42,7 @@ parameters:
   apply-version: true
 
 copyrightYear: 2020+
-releaseLabel: ballot
+releaseLabel: STU 1
 
 pages:
   index.md:
