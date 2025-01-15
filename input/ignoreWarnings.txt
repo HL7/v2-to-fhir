@@ -3,13 +3,6 @@
 %ConceptMap.group[0]: No Source Code System, so the source codes cannot be checked
 %ConceptMap.group[0]: No Target Code System, so the target codes cannot be checked
 
-# The "#broken" links are not intended to resolve.
-  # %The link '#broken' for "durationUnit" cannot be resolved%
-  # %The link '#broken' for "periodUnit" cannot be resolved%
-
-# These extensions do not appear in the ConceptMap instances and cannot be fixed in the IG
-EXTENSION_EXTM_CONTEXT_WRONG_XVER
-
 # The content uses the '<' and '>' characters, but it is not embedded HTML or XML and poses no security risk
 %The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
