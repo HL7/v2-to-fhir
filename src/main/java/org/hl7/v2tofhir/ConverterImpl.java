@@ -317,7 +317,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                 }
 
                 pw.printf("* group.element[%d].code = #%s%n", mappedRows, row.sourceCode.trim());
-                addConstraints(pw, "* group.element[%d]", mappedRows, row.sourceType, row.sourceMin, row.sourceMax);
+                addConstraints(pw, "* group.element[%d]", mappedRows, row.sourceType, row.sourceMin, row.sourceMax, null, null);
 
                 if (!StringUtils.isEmpty(row.sourceDisplay)) {
                     pw.printf("* group.element[%d].display = \"%s\"%n", mappedRows, escapeFshString(row.sourceDisplay));
@@ -343,8 +343,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
                     pw.printf("* group.element[%d].target.code = #%s%n", mappedRows, targetCode.trim());
 
-                    addConstraints(pw, "* group.element[%d].target", mappedRows, row.targetType, row.targetMin, row.targetMax);
-
+                    addConstraints(pw, "* group.element[%d].target", mappedRows, row.targetType, row.targetMin, row.targetMax, row.targetValue, row.vocab);
 
                     if (!StringUtils.isEmpty(escapeFshString(targetDisplay))) {
                         pw.printf("* group.element[%d].target.display = \"%s\"%n", mappedRows,
@@ -446,7 +445,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 		return null;
 	}
 	
-	private void addConstraints(PrintWriter pw, String string, int row, String dataType, String min, String max) {
+	private void addConstraints(PrintWriter pw, String string, int row, String dataType, String min, String max, String value, String vocab) {
         if (!StringUtils.isAllBlank(dataType, min, max)) {
             pw.printf(string + ".extension[0].url = \"%s/StructureDefinition/TypeInfo\"%n", row, IG_URL);
 
@@ -462,6 +461,18 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             if (!StringUtils.isBlank(max)) {
                 pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", row, parts, "cardinalityMax");
                 pw.printf(string + ".extension[0].extension[%d].valueInteger = %s%n", row, parts++, max);
+            }
+            if (!StringUtils.isBlank(value)) {
+                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", row, parts, "fixedValue");
+                pw.printf(string + ".extension[0].extension[%d].valueString = \"%s\"%n", row, parts++, escapeFshString(value));
+            }
+            if (!StringUtils.isBlank(vocab)) {
+            	String link = ConceptMapConverter.getLinkFromName(vocab);
+                if (link != null) {
+                	vocab = link.replace(HTML_SUFFIX, "").replace(CONCEPT_MAP_FILENAME, "ConceptMap/");
+                }
+                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", row, parts, "mappedVia");
+                pw.printf(string + ".extension[0].extension[%d].valueUrl = \"%s\"%n", row, parts++, vocab);
             }
         }
     }
@@ -667,14 +678,14 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                 links.append(makeLink(fhirLink, fhirLink));
             } else if (isMetaField(fhirLink)) {
                 links.append(makeLink(fhirLink, FHIR_BASE + "resource.html#Meta"));
+            } else if ((link = isFhirDataType(fhirLink, count)) != null) {
+                // If a FHIR Data Type, link to  http://hl7.org/fhir/R4/datatypes.html#{datatype}
+                links.append(makeLink(link, FHIR_BASE + "datatypes.html#" + link));
             } else if (((link = isFhirDataTypeField(fhirPart + "." + fhirLink, count)) != null)) {
                 links.append(makeLink(link, FHIR_BASE + "datatypes-definitions.html#" + fhirPart + "." + link));
             } else if ((link = isResourceField(fhirPart + "." + fhirLink, count)) != null) {
                 name = StringUtils.substringBefore(link, ".");
                 links.append(makeLink(link, FHIR_BASE + fhirPart + "." + name + "-definitions.html#" + link));
-            } else if ((link = isFhirDataType(fhirLink, count)) != null) {
-                // If a FHIR Data Type, link to  http://hl7.org/fhir/R4/datatypes.html#{datatype}
-                links.append(makeLink(link, FHIR_BASE + "datatypes.html#" + link));
             } else if ((link = isFhirDataTypeField(fhirLink, count)) != null) {
                 // If a FHIR Data Type field, link to fhir/R4/datatypes-definitions.html#{field}
                 links.append(makeLink(link, FHIR_BASE + "datatypes-definitions.html#" + link));
