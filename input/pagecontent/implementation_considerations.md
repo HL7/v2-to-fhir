@@ -139,6 +139,23 @@ maintained. Observation.component can be used to maintain the relationship betwe
 to read the base standard documentation available describing the use of Observation.component as well as think about how related
 observations will be identified during the transformation process.
 
+#### Numeric Array to Sampled Data Mapping
+When OBX 5 uses the Numeric Array (NA) data type, it must be mapped to the SampledData data type in FHIR using the following guidance and examples.
+The SampledData.dimensions is used to represent that number of dimensions present in OBX-5 when OBX-2 equals "NA"  That is based on the number of values present within each repeat (e.g., "~") separated by the component delimiter (e.g., "^").  Note that "dimensions" is not to be interpreted in the mathematical sense, rather just the cardinality of the 2nd dimension, or as FHIR describes it: "the number of sampled data points for each time point". 
+
+* Example 1: vector of 8 numbers
+** 125^34^-22^-234^569^442^-212^6
+** set .dimensions to "1"
+
+* Example 2: 3 x 3 array of numbers
+** 1.2^-3.5^5.2~2.0^3.1^-6.2~3.5^7.8^-1.3
+** set .dimensions to "3"
+
+*Example 3: 5 x 4 array of numbers with the values in positions (1,1), (2,2), (2,3), (3,3), (3,4), (4,1), (4,2), (4,3), and (4,4) not present
+** ^2^3^4~5^^^8~9^10~~17^18^19^20
+** set .dimensions to "4" and use "E" for the data points not present.
+
+
 ### Vocabulary Mapping
 
 #### Basics
