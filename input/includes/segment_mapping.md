@@ -18,6 +18,7 @@
 * HL7 FHIR
    * FHIR Attribute
       * The first column reflects an existing FHIR attribute in the target FHIR version.
+        * The full path to the attribute is derived from the source spreadsheets by combining the resource name in the spreadsheet name (e.g., Immunization in the HL7 Segment - FHIR R4: ORC[Immunization] spreadsheet with the attribute name in column J in the spreadsheet (e.g., identifier) yielindg "Immunization.identifier".
       * When there is not a single attribute to point to, rather a v2 field needs to be mapped to multiple FHIR attribute, e.g., ORC-27 Quantity/Timing where the TQ data type components need to be mapped to multiple ServiceRequest attributes, then the label "$this" is used.  Further mapping guidance is then provided in the Data Type mapping column.
       * The second column reflects a proposed extension.  It will be expressed with extension-[name] (when suggested as a full extension) or extension??-[name] (when it is open whether to include it in core and pre-adopt, or a full extension).  Once approved, the full extension paths will be put in the first column.
       * This approach will enable tooling to already process existing FHIR attributes and not have to create special handling for elements still being proposed.
