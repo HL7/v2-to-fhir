@@ -28,6 +28,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[0].valueInteger = 1
 * group.element[1].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
+* group.element[1].target.extension[0].extension[2].url = "fixedValue"
+* group.element[1].target.extension[0].extension[2].valueString = "/timestamp of tranformation/"
 * group.element[1].target.display = "recorded"
 * group.element[2].code = #MSH
 * group.element[2].target.equivalence = #equivalent
@@ -37,6 +39,8 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[0].valueInteger = 0
 * group.element[2].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[1].valueInteger = -1
+* group.element[2].target.extension[0].extension[2].url = "fixedValue"
+* group.element[2].target.extension[0].extension[2].valueString = "/uri of the policy governing transformation of the v2 to FHIR/"
 * group.element[2].target.display = "policy"
 * group.element[3].code = #MSH
 * group.element[3].target.equivalence = #equivalent
@@ -48,6 +52,8 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].valueInteger = 0
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
+* group.element[3].target.extension[0].extension[3].url = "fixedValue"
+* group.element[3].target.extension[0].extension[3].valueString = "\"assembler\""
 * group.element[3].target.display = "agent[1].type.coding.code"
 * group.element[4].code = #MSH
 * group.element[4].target.equivalence = #equivalent
@@ -59,6 +65,8 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 0
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "fixedValue"
+* group.element[4].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
 * group.element[4].target.display = "agent[1].type.coding.system"
 * group.element[5].code = #MSH
 * group.element[5].target.equivalence = #equivalent
@@ -70,6 +78,8 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[1].valueInteger = 1
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
+* group.element[5].target.extension[0].extension[3].url = "fixedValue"
+* group.element[5].target.extension[0].extension[3].valueString = "/the organization owning or device performing the transformation by the mapping tool/"
 * group.element[5].target.display = "agent[1].who(Organization|Device)"
 * group.element[6].code = #MSH
 * group.element[6].target.equivalence = #equivalent

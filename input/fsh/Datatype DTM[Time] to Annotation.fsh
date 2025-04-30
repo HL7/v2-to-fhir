@@ -27,4 +27,6 @@ Usage: #definition
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"dateTime"
+* group.element[0].target.extension[0].extension[1].url = "fixedValue"
+* group.element[0].target.extension[0].extension[1].valueString = "/must convert v2 date time format to FHIR date time format before populating according to FHIR date/time format https://build.fhir.org/datatypes.html#dateTime /"
 * group.element[0].target.display = "time"

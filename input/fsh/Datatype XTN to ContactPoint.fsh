@@ -53,6 +53,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "mappedVia"
+* group.element[1].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70201-to-contact-point-use"
 * group.element[1].target.display = "use"
 * group.element[2].code = #XTN.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -72,6 +74,8 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].valueInteger = 1
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
+* group.element[2].target.extension[0].extension[3].url = "mappedVia"
+* group.element[2].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70202-to-contact-point-system"
 * group.element[2].target.display = "system"
 * group.element[3].code = #XTN.3
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -91,6 +95,8 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].valueInteger = 1
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
+* group.element[3].target.extension[0].extension[3].url = "fixedValue"
+* group.element[3].target.extension[0].extension[3].valueString = "\"email\""
 * group.element[3].target.display = "system"
 * group.element[4].code = #XTN.3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -110,6 +116,8 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "fixedValue"
+* group.element[4].target.extension[0].extension[3].valueString = "\"unknown\""
 * group.element[4].target.display = "system.extension-data-absent-reason"
 * group.element[4].target.comment = "This element became required in v2.7, before that, it was optional. FHIR has a requirement that system be populated when a value is present. If the source v2 message does not contain an Equipment Type, a default system may be selected based on other information in the XTN instance (eg, if XTN.4 is valued, then the Equipment Type should default to \"email). However, if neither XTN.3 nor XTN.4 are valued then it is unclear what the ContactPoint.system would be, thus the data absent reason would clearly indicate it is \"unknown\"."
 * group.element[5].code = #XTN.4
@@ -149,6 +157,8 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[1].valueInteger = 1
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
+* group.element[6].target.extension[0].extension[3].url = "fixedValue"
+* group.element[6].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/contactpoint-country\""
 * group.element[6].target.display = "extension[1].url"
 * group.element[7].code = #XTN.5
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -187,6 +197,8 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[1].valueInteger = 1
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
+* group.element[8].target.extension[0].extension[3].url = "fixedValue"
+* group.element[8].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/contactpoint-area\""
 * group.element[8].target.display = "extension[2].url"
 * group.element[9].code = #XTN.6
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -225,6 +237,8 @@ Usage: #definition
 * group.element[10].target.extension[0].extension[1].valueInteger = 1
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
+* group.element[10].target.extension[0].extension[3].url = "fixedValue"
+* group.element[10].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/contactpoint-local\""
 * group.element[10].target.display = "extension[3].url"
 * group.element[11].code = #XTN.7
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -263,6 +277,8 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[1].valueInteger = 1
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
+* group.element[12].target.extension[0].extension[3].url = "fixedValue"
+* group.element[12].target.extension[0].extension[3].valueString = "XTN.6+\" \"+XTN.7"
 * group.element[12].target.display = "value"
 * group.element[13].code = #XTN.7
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -282,6 +298,8 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[1].valueInteger = 1
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
+* group.element[13].target.extension[0].extension[3].url = "fixedValue"
+* group.element[13].target.extension[0].extension[3].valueString = "\"+\"+XTN.5+\" \"+XTN.6+\" \"+XTN.7"
 * group.element[13].target.display = "value"
 * group.element[14].code = #XTN.7
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -301,6 +319,8 @@ Usage: #definition
 * group.element[14].target.extension[0].extension[1].valueInteger = 1
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
+* group.element[14].target.extension[0].extension[3].url = "fixedValue"
+* group.element[14].target.extension[0].extension[3].valueString = "\"+\"+XTN.5+\" \"+XTN.6+\" \"+XTN.7+\" X\"+XTN.8"
 * group.element[14].target.display = "value"
 * group.element[15].code = #XTN.7
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -320,6 +340,8 @@ Usage: #definition
 * group.element[15].target.extension[0].extension[1].valueInteger = 1
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
+* group.element[15].target.extension[0].extension[3].url = "fixedValue"
+* group.element[15].target.extension[0].extension[3].valueString = "XTN.6+\" \"+XTN.7+\" X\"+XTN.8"
 * group.element[15].target.display = "value"
 * group.element[16].code = #XTN.8
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -339,6 +361,8 @@ Usage: #definition
 * group.element[16].target.extension[0].extension[1].valueInteger = 1
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
+* group.element[16].target.extension[0].extension[3].url = "fixedValue"
+* group.element[16].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/contactpoint-extension\""
 * group.element[16].target.display = "extension[4].url"
 * group.element[17].code = #XTN.8
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

@@ -49,6 +49,8 @@ Usage: #definition
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"CodeableConcept"
+* group.element[1].target.extension[0].extension[1].url = "mappedVia"
+* group.element[1].target.extension[0].extension[1].valueUrl = "ConceptMap/table-hl70443-to-v3-participationtype"
 * group.element[1].target.display = "generalPractitioner(PractitionerRole.code)"
 * group.element[2].code = #ROL-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

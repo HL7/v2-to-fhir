@@ -110,6 +110,8 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "fixedValue"
+* group.element[4].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName\""
 * group.element[4].target.display = "extension[1].url"
 * group.element[5].code = #PID-6
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -169,6 +171,8 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[1].valueInteger = 1
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
+* group.element[7].target.extension[0].extension[3].url = "fixedValue"
+* group.element[7].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/patient-birthTime\""
 * group.element[7].target.display = "birthDate.extension[1].url"
 * group.element[8].code = #PID-7
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -207,6 +211,8 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[1].valueInteger = 0
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
+* group.element[9].target.extension[0].extension[3].url = "mappedVia"
+* group.element[9].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70001-to-administrative-gender"
 * group.element[9].target.display = "gender"
 * group.element[10].code = #PID-9
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -399,6 +405,8 @@ Usage: #definition
 * group.element[20].target.extension[0].extension[1].valueInteger = 0
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = -1
+* group.element[20].target.extension[0].extension[3].url = "mappedVia"
+* group.element[20].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[20].target.display = "communication.language"
 * group.element[20].target.comment = "During implementation, if you know that the value in PID-15 is the preferred patient language, then Patient.communication.preferred can be set to \"true\"."
 * group.element[21].code = #PID-16
@@ -419,6 +427,8 @@ Usage: #definition
 * group.element[21].target.extension[0].extension[1].valueInteger = 0
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = 1
+* group.element[21].target.extension[0].extension[3].url = "mappedVia"
+* group.element[21].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70002-to-v3-maritalstatus"
 * group.element[21].target.display = "maritalStatus"
 * group.element[22].code = #PID-17
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -438,6 +448,8 @@ Usage: #definition
 * group.element[22].target.extension[0].extension[1].valueInteger = 1
 * group.element[22].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[22].target.extension[0].extension[2].valueInteger = 1
+* group.element[22].target.extension[0].extension[3].url = "fixedValue"
+* group.element[22].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/patient-religion\""
 * group.element[22].target.display = "extension[2].url"
 * group.element[23].code = #PID-17
 * group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -457,6 +469,8 @@ Usage: #definition
 * group.element[23].target.extension[0].extension[1].valueInteger = 1
 * group.element[23].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[23].target.extension[0].extension[2].valueInteger = 1
+* group.element[23].target.extension[0].extension[3].url = "mappedVia"
+* group.element[23].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70006-to-v3-religiousaffiliation"
 * group.element[23].target.display = "extension[2].valueCodeableConcept"
 * group.element[24].code = #PID-19
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -496,6 +510,8 @@ Usage: #definition
 * group.element[25].target.extension[0].extension[1].valueInteger = 0
 * group.element[25].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[25].target.extension[0].extension[2].valueInteger = 1
+* group.element[25].target.extension[0].extension[3].url = "fixedValue"
+* group.element[25].target.extension[0].extension[3].valueString = "\"SS\""
 * group.element[25].target.display = "identifier[4].type.coding.code"
 * group.element[26].code = #PID-19
 * group.element[26].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -515,6 +531,8 @@ Usage: #definition
 * group.element[26].target.extension[0].extension[1].valueInteger = 0
 * group.element[26].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[26].target.extension[0].extension[2].valueInteger = 1
+* group.element[26].target.extension[0].extension[3].url = "fixedValue"
+* group.element[26].target.extension[0].extension[3].valueString = "\"SB\""
 * group.element[26].target.display = "identifier[4].type.coding.code"
 * group.element[27].code = #PID-19
 * group.element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -534,6 +552,8 @@ Usage: #definition
 * group.element[27].target.extension[0].extension[1].valueInteger = 0
 * group.element[27].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[27].target.extension[0].extension[2].valueInteger = 1
+* group.element[27].target.extension[0].extension[3].url = "fixedValue"
+* group.element[27].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
 * group.element[27].target.display = "identifier[4].type.coding.system"
 * group.element[28].code = #PID-19
 * group.element[28].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -553,6 +573,8 @@ Usage: #definition
 * group.element[28].target.extension[0].extension[1].valueInteger = 0
 * group.element[28].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[28].target.extension[0].extension[2].valueInteger = 1
+* group.element[28].target.extension[0].extension[3].url = "fixedValue"
+* group.element[28].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/sid/us-ssn.\""
 * group.element[28].target.display = "identifier[4].system"
 * group.element[28].target.comment = "If working in a jurisdiction other than the US and this field is used for the local SSN equivalent, a different system will need to be identified."
 * group.element[29].code = #PID-20
@@ -604,6 +626,8 @@ Usage: #definition
 * group.element[31].target.extension[0].extension[1].valueInteger = 1
 * group.element[31].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[31].target.extension[0].extension[2].valueInteger = 1
+* group.element[31].target.extension[0].extension[3].url = "fixedValue"
+* group.element[31].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/patient-birthPlace\""
 * group.element[31].target.display = "extension[3].url"
 * group.element[32].code = #PID-23
 * group.element[32].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -642,6 +666,8 @@ Usage: #definition
 * group.element[33].target.extension[0].extension[1].valueInteger = 0
 * group.element[33].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[33].target.extension[0].extension[2].valueInteger = 1
+* group.element[33].target.extension[0].extension[3].url = "mappedVia"
+* group.element[33].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70136-to-special-values"
 * group.element[33].target.display = "multipleBirthBoolean"
 * group.element[34].code = #PID-25
 * group.element[34].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -680,6 +706,8 @@ Usage: #definition
 * group.element[35].target.extension[0].extension[1].valueInteger = 1
 * group.element[35].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[35].target.extension[0].extension[2].valueInteger = 1
+* group.element[35].target.extension[0].extension[3].url = "fixedValue"
+* group.element[35].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/patient-citizenship\""
 * group.element[35].target.display = "extension[4].url"
 * group.element[36].code = #PID-26
 * group.element[36].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -699,6 +727,8 @@ Usage: #definition
 * group.element[36].target.extension[0].extension[1].valueInteger = 1
 * group.element[36].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[36].target.extension[0].extension[2].valueInteger = 1
+* group.element[36].target.extension[0].extension[3].url = "fixedValue"
+* group.element[36].target.extension[0].extension[3].valueString = "\"code\""
 * group.element[36].target.display = "extension[4].extension[1].url"
 * group.element[37].code = #PID-26
 * group.element[37].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -738,6 +768,8 @@ Usage: #definition
 * group.element[38].target.extension[0].extension[1].valueInteger = 1
 * group.element[38].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[38].target.extension[0].extension[2].valueInteger = 1
+* group.element[38].target.extension[0].extension[3].url = "fixedValue"
+* group.element[38].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/patient-nationality\""
 * group.element[38].target.display = "extension[5].url"
 * group.element[39].code = #PID-28
 * group.element[39].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -757,6 +789,8 @@ Usage: #definition
 * group.element[39].target.extension[0].extension[1].valueInteger = 1
 * group.element[39].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[39].target.extension[0].extension[2].valueInteger = 1
+* group.element[39].target.extension[0].extension[3].url = "fixedValue"
+* group.element[39].target.extension[0].extension[3].valueString = "\"code\""
 * group.element[39].target.display = "extension[5].extension[1].url"
 * group.element[40].code = #PID-28
 * group.element[40].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -815,6 +849,8 @@ Usage: #definition
 * group.element[42].target.extension[0].extension[1].valueInteger = 0
 * group.element[42].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[42].target.extension[0].extension[2].valueInteger = 1
+* group.element[42].target.extension[0].extension[3].url = "mappedVia"
+* group.element[42].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70136-to-special-values"
 * group.element[42].target.display = "deceasedBoolean"
 * group.element[43].code = #PID-35
 * group.element[43].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -834,6 +870,8 @@ Usage: #definition
 * group.element[43].target.extension[0].extension[1].valueInteger = 0
 * group.element[43].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[43].target.extension[0].extension[2].valueInteger = -1
+* group.element[43].target.extension[0].extension[3].url = "fixedValue"
+* group.element[43].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/patient-animal\""
 * group.element[43].target.display = "extension[6].url"
 * group.element[44].code = #PID-35
 * group.element[44].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -853,6 +891,8 @@ Usage: #definition
 * group.element[44].target.extension[0].extension[1].valueInteger = 0
 * group.element[44].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[44].target.extension[0].extension[2].valueInteger = 1
+* group.element[44].target.extension[0].extension[3].url = "fixedValue"
+* group.element[44].target.extension[0].extension[3].valueString = "\"species\""
 * group.element[44].target.display = "extension[6].extension[1].url"
 * group.element[45].code = #PID-35
 * group.element[45].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -891,6 +931,8 @@ Usage: #definition
 * group.element[46].target.extension[0].extension[1].valueInteger = 0
 * group.element[46].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[46].target.extension[0].extension[2].valueInteger = -1
+* group.element[46].target.extension[0].extension[3].url = "fixedValue"
+* group.element[46].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/patient-animal\""
 * group.element[46].target.display = "extension[6].url"
 * group.element[47].code = #PID-36
 * group.element[47].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -910,6 +952,8 @@ Usage: #definition
 * group.element[47].target.extension[0].extension[1].valueInteger = 0
 * group.element[47].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[47].target.extension[0].extension[2].valueInteger = 1
+* group.element[47].target.extension[0].extension[3].url = "fixedValue"
+* group.element[47].target.extension[0].extension[3].valueString = "\"breed\""
 * group.element[47].target.display = "extension[6].extension[2].url"
 * group.element[48].code = #PID-36
 * group.element[48].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -948,6 +992,8 @@ Usage: #definition
 * group.element[49].target.extension[0].extension[1].valueInteger = 1
 * group.element[49].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[49].target.extension[0].extension[2].valueInteger = 1
+* group.element[49].target.extension[0].extension[3].url = "fixedValue"
+* group.element[49].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/patient-citizenship\""
 * group.element[49].target.display = "extension[7].url"
 * group.element[50].code = #PID-39
 * group.element[50].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -967,6 +1013,8 @@ Usage: #definition
 * group.element[50].target.extension[0].extension[1].valueInteger = 1
 * group.element[50].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[50].target.extension[0].extension[2].valueInteger = 1
+* group.element[50].target.extension[0].extension[3].url = "fixedValue"
+* group.element[50].target.extension[0].extension[3].valueString = "\"code\""
 * group.element[50].target.display = "extension[7].extension[1].url"
 * group.element[51].code = #PID-39
 * group.element[51].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

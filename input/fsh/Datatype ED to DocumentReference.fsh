@@ -34,6 +34,8 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
+* group.element[0].target.extension[0].extension[3].url = "fixedValue"
+* group.element[0].target.extension[0].extension[3].valueString = "\"https://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[0].target.display = "content.attachment.extension[1].url"
 * group.element[1].code = #ED.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -111,5 +113,7 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "fixedValue"
+* group.element[4].target.extension[0].extension[3].valueString = "/convert from A or HEX to binary64/"
 * group.element[4].target.display = "content.attachment.data"
 * group.element[4].target.comment = "Implementations are not always accurate, so to be safe you may want to always assess OBX-5.5 to determine the correct .contentType."

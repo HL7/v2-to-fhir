@@ -26,6 +26,8 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
+* group.element[0].target.extension[0].extension[3].url = "fixedValue"
+* group.element[0].target.extension[0].extension[3].valueString = "/to be determined by implementer based on use of OBR-13/"
 * group.element[0].target.display = "code"
 * group.element[1].code = #CWE
 * group.element[1].target.equivalence = #equivalent
@@ -37,6 +39,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "fixedValue"
+* group.element[1].target.extension[0].extension[3].valueString = "\"final\""
 * group.element[1].target.display = "status"
 * group.element[2].code = #CWE.1
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

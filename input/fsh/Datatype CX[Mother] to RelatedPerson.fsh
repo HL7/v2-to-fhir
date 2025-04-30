@@ -53,6 +53,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "fixedValue"
+* group.element[1].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/identifier-checkDigit\""
 * group.element[1].target.display = "identifier.extension[1].url"
 * group.element[2].code = #CX.2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -91,6 +93,8 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].valueInteger = 1
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
+* group.element[3].target.extension[0].extension[3].url = "fixedValue"
+* group.element[3].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/namingsystem-checkDigit\""
 * group.element[3].target.display = "identifier.extension[2].url"
 * group.element[4].code = #CX.3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -168,6 +172,8 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[1].valueInteger = 1
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
+* group.element[7].target.extension[0].extension[3].url = "mappedVia"
+* group.element[7].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70203-to-v2-0203"
 * group.element[7].target.display = "identifier.type.coding.code"
 * group.element[8].code = #CX.7
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

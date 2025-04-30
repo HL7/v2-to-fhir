@@ -30,6 +30,8 @@ Usage: #definition
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[0].target.extension[0].extension[1].url = "fixedValue"
+* group.element[0].target.extension[0].extension[1].valueString = "\"http://hl7.org/fhir/StructureDefinition/subject-locationClassification\""
 * group.element[0].target.display = "location[3].extension.url"
 * group.element[1].code = #PV1-11
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -45,6 +47,8 @@ Usage: #definition
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"code"
+* group.element[1].target.extension[0].extension[1].url = "fixedValue"
+* group.element[1].target.extension[0].extension[1].valueString = "\"temporary\""
 * group.element[1].target.display = "location[3].extension.valueCodeableConcept.coding.code"
 * group.element[2].code = #PV1-11
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -60,6 +64,8 @@ Usage: #definition
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[2].target.extension[0].extension[1].url = "fixedValue"
+* group.element[2].target.extension[0].extension[1].valueString = "\" http://hl7.org/fhir/ValueSet/subject-location\""
 * group.element[2].target.display = "location[3].extension.valueCodeableConcept.coding.system"
 * group.element[3].code = #PV1-43
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -79,6 +85,8 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].valueInteger = 0
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
+* group.element[3].target.extension[0].extension[3].url = "fixedValue"
+* group.element[3].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-EncounterHistory.location.location"
 * group.element[3].target.display = "extension[1].url"
 * group.element[3].target.comment = "This is intended to be on EncounterHistory.location[1]"
 * group.element[4].code = #PV1-43
@@ -118,6 +126,8 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[1].valueInteger = 0
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
+* group.element[5].target.extension[0].extension[3].url = "fixedValue"
+* group.element[5].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-EncounterHistory.location.location.status\""
 * group.element[5].target.display = "extension[1].valueExtension[1].url"
 * group.element[6].code = #PV1-43
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -137,6 +147,8 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[1].valueInteger = 0
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
+* group.element[6].target.extension[0].extension[3].url = "fixedValue"
+* group.element[6].target.extension[0].extension[3].valueString = "\"complete\""
 * group.element[6].target.display = "extension[1].valueExtension[1].valueCode"
 * group.element[7].code = #PV1-43
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -156,6 +168,8 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[1].valueInteger = 0
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
+* group.element[7].target.extension[0].extension[3].url = "fixedValue"
+* group.element[7].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-EncounterHistory.location"
 * group.element[7].target.display = "extension[2].uri"
 * group.element[7].target.comment = "This is intended to be an extension on the same EncounterHistory.location[1]"
 * group.element[8].code = #PV1-43
@@ -176,6 +190,8 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[1].valueInteger = 0
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
+* group.element[8].target.extension[0].extension[3].url = "fixedValue"
+* group.element[8].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/subject-locationClassification\""
 * group.element[8].target.display = "extension[2].valueExtension[1].url"
 * group.element[9].code = #PV1-43
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -195,6 +211,8 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[1].valueInteger = 0
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
+* group.element[9].target.extension[0].extension[3].url = "fixedValue"
+* group.element[9].target.extension[0].extension[3].valueString = "\"temporary\""
 * group.element[9].target.display = "extension[2].valueExtension[1].valueCodeableConcept[1].coding.code"
 * group.element[10].code = #PV1-43
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -214,4 +232,6 @@ Usage: #definition
 * group.element[10].target.extension[0].extension[1].valueInteger = 0
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
+* group.element[10].target.extension[0].extension[3].url = "fixedValue"
+* group.element[10].target.extension[0].extension[3].valueString = "\" http://hl7.org/fhir/ValueSet/subject-location\""
 * group.element[10].target.display = "extension[2].valueExtension[1].valueCodeableConcept[1].coding.system"

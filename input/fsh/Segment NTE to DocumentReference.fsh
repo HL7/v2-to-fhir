@@ -53,6 +53,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 0
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "fixedValue"
+* group.element[1].target.extension[0].extension[3].valueString = "\"text/hl7v2\""
 * group.element[1].target.display = "content[2].contentType"
 * group.element[2].code = #NTE-9
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -72,5 +74,10 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].valueInteger = 0
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
+* group.element[2].target.extension[0].extension[3].url = "fixedValue"
+* group.element[2].target.extension[0].extension[3].valueString = """
+NTE-9.9 [line feed] 
+NTE-9.1 "-" NTE-9.2 "-" NTE-9.3\
+"""
 * group.element[2].target.display = "content[2].attachment.data"
 * group.element[2].target.comment = "If more values triplets are included, suggest to put in line feeds.  Additionally, if other components are of interest they can be included with the triplet it applies to."

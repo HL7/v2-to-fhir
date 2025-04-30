@@ -91,6 +91,8 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].valueInteger = 0
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
+* group.element[3].target.extension[0].extension[3].url = "fixedValue"
+* group.element[3].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/6.0/StructureDefinition/extension-date\""
 * group.element[3].target.display = "extension[1].url"
 * group.element[4].code = #TXA
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -221,6 +223,8 @@ Usage: #definition
 * group.element[10].target.extension[0].extension[1].valueInteger = 0
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = -1
+* group.element[10].target.extension[0].extension[3].url = "mappedVia"
+* group.element[10].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70272-to-v2-0272"
 * group.element[10].target.display = "securityLabel"
 * group.element[11].code = #TXA
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -240,6 +244,8 @@ Usage: #definition
 * group.element[11].target.extension[0].extension[1].valueInteger = 1
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
+* group.element[11].target.extension[0].extension[3].url = "fixedValue"
+* group.element[11].target.extension[0].extension[3].valueString = "\"current\""
 * group.element[11].target.display = "status"
 * group.element[12].code = #TXA
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -259,6 +265,8 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[1].valueInteger = 0
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
+* group.element[12].target.extension[0].extension[3].url = "fixedValue"
+* group.element[12].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[12].target.display = "status.extension[1].url"
 * group.element[13].code = #TXA
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

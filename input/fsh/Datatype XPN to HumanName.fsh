@@ -148,6 +148,8 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[1].valueInteger = 1
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
+* group.element[6].target.extension[0].extension[3].url = "mappedVia"
+* group.element[6].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70200-to-name-use"
 * group.element[6].target.display = "[1].use"
 * group.element[7].code = #XPN.10
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -186,6 +188,8 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[1].valueInteger = 1
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
+* group.element[8].target.extension[0].extension[3].url = "fixedValue"
+* group.element[8].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/humanname-assembly-order\""
 * group.element[8].target.display = "[1].extension.url"
 * group.element[9].code = #XPN.11
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -205,6 +209,8 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[1].valueInteger = 1
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
+* group.element[9].target.extension[0].extension[3].url = "mappedVia"
+* group.element[9].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70444-to-v2-0444"
 * group.element[9].target.display = "[1].extension.valueCode"
 * group.element[10].code = #XPN.12
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -304,4 +310,6 @@ Alternative a new extension could be created for HumanName.family.#ext-called-by
 * group.element[14].target.extension[0].extension[1].valueInteger = 1
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
+* group.element[14].target.extension[0].extension[3].url = "fixedValue"
+* group.element[14].target.extension[0].extension[3].valueString = "\"nickname\""
 * group.element[14].target.display = "[2].use"

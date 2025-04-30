@@ -96,6 +96,8 @@ Usage: #definition
 * group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"code"
+* group.element[5].target.extension[0].extension[1].url = "mappedVia"
+* group.element[5].target.extension[0].extension[1].valueUrl = "unspecified_mapping"
 * group.element[5].target.display = "dosageInstruction.doseAndRate[1].doseRange.low.code"
 * group.element[6].code = #RXO-4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -156,6 +158,8 @@ Usage: #definition
 * group.element[9].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].target.extension[0].extension[0].url = "type"
 * group.element[9].target.extension[0].extension[0].valueCode = #"CodeableConcept"
+* group.element[9].target.extension[0].extension[1].url = "mappedVia"
+* group.element[9].target.extension[0].extension[1].valueUrl = "unspecified_mapping"
 * group.element[9].target.display = "medication(Medication.doseForm)"
 * group.element[10].code = #RXO-9
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -171,6 +175,8 @@ Usage: #definition
 * group.element[10].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].target.extension[0].extension[0].url = "type"
 * group.element[10].target.extension[0].extension[0].valueCode = #"CodeableConcept"
+* group.element[10].target.extension[0].extension[1].url = "mappedVia"
+* group.element[10].target.extension[0].extension[1].valueUrl = "ConceptMap/table-hl70161-to-v2-0161"
 * group.element[10].target.display = "substitution.allowedCodeableConcept"
 * group.element[11].code = #RXO-11
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -201,6 +207,8 @@ Usage: #definition
 * group.element[12].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].target.extension[0].extension[0].url = "type"
 * group.element[12].target.extension[0].extension[0].valueCode = #"code"
+* group.element[12].target.extension[0].extension[1].url = "mappedVia"
+* group.element[12].target.extension[0].extension[1].valueUrl = "unspecified_mapping"
 * group.element[12].target.display = "dispenseRequest.quantity.code"
 * group.element[13].code = #RXO-12
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -273,6 +281,8 @@ Usage: #definition
 * group.element[17].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].target.extension[0].extension[0].url = "type"
 * group.element[17].target.extension[0].extension[0].valueCode = #"code"
+* group.element[17].target.extension[0].extension[1].url = "mappedVia"
+* group.element[17].target.extension[0].extension[1].valueUrl = "unspecified_mapping"
 * group.element[17].target.display = "medicationReference(Medication.ingredient.strength.numerator.code"
 * group.element[18].code = #RXO-19
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -326,6 +336,8 @@ Usage: #definition
 * group.element[20].target.extension[0].extension[1].valueInteger = 0
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
+* group.element[20].target.extension[0].extension[3].url = "fixedValue"
+* group.element[20].target.extension[0].extension[3].valueString = "\"1\""
 * group.element[20].target.display = "dosageInstruction.maxDosePerPeriod.denominator.value"
 * group.element[21].code = #RXE-19
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -368,6 +380,8 @@ Usage: #definition
 * group.element[23].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].target.extension[0].extension[0].url = "type"
 * group.element[23].target.extension[0].extension[0].valueCode = #"code"
+* group.element[23].target.extension[0].extension[1].url = "mappedVia"
+* group.element[23].target.extension[0].extension[1].valueUrl = "unspecified_mapping"
 * group.element[23].target.display = "medicationReference(Medication.ingredient.strength.denominator.code"
 * group.element[24].code = #RXO-26
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

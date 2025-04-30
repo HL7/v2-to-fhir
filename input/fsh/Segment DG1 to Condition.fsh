@@ -110,6 +110,8 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "fixedValue"
+* group.element[4].target.extension[0].extension[3].valueString = "\"http://www.hl7.org/fhir/extension-condition-asserteddate\""
 * group.element[4].target.display = "extension[1].url"
 * group.element[5].code = #DG1-19
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -188,6 +190,8 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[1].valueInteger = 0
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
+* group.element[8].target.extension[0].extension[3].url = "fixedValue"
+* group.element[8].target.extension[0].extension[3].valueString = "\"entered-in-error\""
 * group.element[8].target.display = "verificationStatus.coding.code"
 * group.element[8].target.comment = "Other values (A and U) don't map to anything"
 * group.element[9].code = #DG1-21
@@ -208,6 +212,8 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[1].valueInteger = 0
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
+* group.element[9].target.extension[0].extension[3].url = "fixedValue"
+* group.element[9].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/condition-ver-status\""
 * group.element[9].target.display = "verificationStatus.coding.system"
 * group.element[10].code = #DG1-22
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -227,6 +233,8 @@ Usage: #definition
 * group.element[10].target.extension[0].extension[1].valueInteger = 1
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
+* group.element[10].target.extension[0].extension[3].url = "fixedValue"
+* group.element[10].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/condition-dueTo\""
 * group.element[10].target.display = "extension[2].url"
 * group.element[11].code = #DG1-22
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

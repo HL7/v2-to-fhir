@@ -34,4 +34,6 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
+* group.element[0].target.extension[0].extension[3].url = "fixedValue"
+* group.element[0].target.extension[0].extension[3].valueString = "/concatenate according to XPN.11/"
 * group.element[0].target.display = "$this"

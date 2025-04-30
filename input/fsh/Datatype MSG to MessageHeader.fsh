@@ -34,6 +34,8 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
+* group.element[0].target.extension[0].extension[3].url = "mappedVia"
+* group.element[0].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70003-to-v2-0003"
 * group.element[0].target.display = "eventCoding.code"
 * group.element[1].code = #MSG.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -53,6 +55,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "fixedValue"
+* group.element[1].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0003\""
 * group.element[1].target.display = "eventCoding.system"
 * group.element[2].code = #MSG.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -72,4 +76,6 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].valueInteger = 1
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
+* group.element[2].target.extension[0].extension[3].url = "mappedVia"
+* group.element[2].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[2].target.display = "definition"

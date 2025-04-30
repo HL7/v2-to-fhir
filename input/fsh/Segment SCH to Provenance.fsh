@@ -53,6 +53,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 0
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "fixedValue"
+* group.element[1].target.extension[0].extension[3].valueString = "\"enterer\""
 * group.element[1].target.display = "agent[1].type.coding.code"
 * group.element[2].code = #SCH-20
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -72,4 +74,6 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].valueInteger = 0
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
+* group.element[2].target.extension[0].extension[3].url = "fixedValue"
+* group.element[2].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
 * group.element[2].target.display = "agent[1].type.coding.system"

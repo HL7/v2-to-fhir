@@ -34,6 +34,8 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 0
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
+* group.element[0].target.extension[0].extension[3].url = "mappedVia"
+* group.element[0].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70127-to-allergy-intolerance-category"
 * group.element[0].target.display = "category"
 * group.element[0].target.comment = """
 The FHIR table has a "required" binding. Do we need to expand the values in the FHIR table?
@@ -63,6 +65,8 @@ HL70127 is a user defined table\
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "fixedValue"
+* group.element[1].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[1].target.display = "category.extension[1].url"
 * group.element[2].code = #IAM-2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -82,6 +86,8 @@ HL70127 is a user defined table\
 * group.element[2].target.extension[0].extension[1].valueInteger = 1
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
+* group.element[2].target.extension[0].extension[3].url = "mappedVia"
+* group.element[2].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70127-to-v2-0127"
 * group.element[2].target.display = "category.extension[1].valueCodeableConcept"
 * group.element[3].code = #IAM-2
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -101,6 +107,8 @@ HL70127 is a user defined table\
 * group.element[3].target.extension[0].extension[1].valueInteger = 0
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
+* group.element[3].target.extension[0].extension[3].url = "mappedVia"
+* group.element[3].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70127-to-allergy-intolerance-type"
 * group.element[3].target.display = "type"
 * group.element[4].code = #IAM-3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -139,6 +147,8 @@ HL70127 is a user defined table\
 * group.element[5].target.extension[0].extension[1].valueInteger = 0
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
+* group.element[5].target.extension[0].extension[3].url = "mappedVia"
+* group.element[5].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70128-to-reaction-event-severity"
 * group.element[5].target.display = "reaction.severity"
 * group.element[6].code = #IAM-4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -158,6 +168,8 @@ HL70127 is a user defined table\
 * group.element[6].target.extension[0].extension[1].valueInteger = 0
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
+* group.element[6].target.extension[0].extension[3].url = "mappedVia"
+* group.element[6].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70128-to-allergy-intolerance-criticality"
 * group.element[6].target.display = "criticality"
 * group.element[6].target.comment = "Note that AllergyIntolerance.reaction.severity is available in FHIR but from a base standard perspective that is actually not the most appropriate and would require that AL1-6 is valued as well.  However, a local implementation may have used vocabulary that better fits AllergyIntolerance.reaction.severity and should then consider that instead as a local variation.  Note that the .reaction though is at a particular time, while .criticality is an overall assement that matches HL7 v2 generally better."
 * group.element[7].code = #IAM-4
@@ -178,6 +190,8 @@ HL70127 is a user defined table\
 * group.element[7].target.extension[0].extension[1].valueInteger = 1
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
+* group.element[7].target.extension[0].extension[3].url = "fixedValue"
+* group.element[7].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[7].target.display = "criticality.extension[1].url"
 * group.element[8].code = #IAM-4
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -197,6 +211,8 @@ HL70127 is a user defined table\
 * group.element[8].target.extension[0].extension[1].valueInteger = 1
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
+* group.element[8].target.extension[0].extension[3].url = "mappedVia"
+* group.element[8].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70128-original-to-v2-0128"
 * group.element[8].target.display = "criticality.extension[1].valueCodeableConcept"
 * group.element[9].code = #IAM-5
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -369,6 +385,8 @@ HL70127 is a user defined table\
 * group.element[17].target.extension[0].extension[1].valueInteger = 0
 * group.element[17].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[17].target.extension[0].extension[2].valueInteger = -1
+* group.element[17].target.extension[0].extension[3].url = "mappedVia"
+* group.element[17].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70063-to-v3-rolecode"
 * group.element[17].target.display = "recorder.reference(RelatedPerson.relationship)"
 * group.element[18].code = #IAM-17
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

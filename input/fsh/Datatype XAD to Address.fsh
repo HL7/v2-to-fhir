@@ -149,6 +149,8 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[1].valueInteger = 1
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
+* group.element[6].target.extension[0].extension[3].url = "mappedVia"
+* group.element[6].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70190-to-address-type"
 * group.element[6].target.display = "type"
 * group.element[7].code = #XAD.7
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -168,6 +170,8 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[1].valueInteger = 1
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
+* group.element[7].target.extension[0].extension[3].url = "mappedVia"
+* group.element[7].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70190-to-address-use"
 * group.element[7].target.display = "use"
 * group.element[8].code = #XAD.7
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -187,6 +191,8 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[1].valueInteger = 1
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
+* group.element[8].target.extension[0].extension[3].url = "fixedValue"
+* group.element[8].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/iso21090-AD-use\""
 * group.element[8].target.display = "extension[1].url"
 * group.element[9].code = #XAD.7
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -248,6 +254,8 @@ Usage: #definition
 * group.element[12].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].target.extension[0].extension[0].url = "type"
 * group.element[12].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[12].target.extension[0].extension[1].url = "fixedValue"
+* group.element[12].target.extension[0].extension[1].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0190\""
 * group.element[12].target.display = "extension[2].valueCodeableConcept.coding.system"
 * group.element[13].code = #XAD.9
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -286,6 +294,8 @@ Usage: #definition
 * group.element[14].target.extension[0].extension[1].valueInteger = 1
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
+* group.element[14].target.extension[0].extension[3].url = "fixedValue"
+* group.element[14].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract\""
 * group.element[14].target.display = "extension[3].url"
 * group.element[15].code = #XAD.10
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

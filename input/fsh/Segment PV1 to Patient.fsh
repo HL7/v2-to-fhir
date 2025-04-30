@@ -34,6 +34,8 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
+* group.element[0].target.extension[0].extension[3].url = "fixedValue"
+* group.element[0].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/patient-importance\""
 * group.element[0].target.display = "extension[1].url"
 * group.element[1].code = #PV1-16
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -53,4 +55,6 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "mappedVia"
+* group.element[1].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[1].target.display = "extension[1].valueCodeableConcept"

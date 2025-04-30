@@ -53,6 +53,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 0
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = -1
+* group.element[1].target.extension[0].extension[3].url = "mappedVia"
+* group.element[1].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70063-to-v3-rolecode"
 * group.element[1].target.display = "relationship[1]"
 * group.element[1].target.comment = """
 Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.
@@ -146,6 +148,8 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[6].target.extension[0].extension[1].valueInteger = 0
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = -1
+* group.element[6].target.extension[0].extension[3].url = "mappedVia"
+* group.element[6].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70131-to-v2-0131"
 * group.element[6].target.display = "relationship[2]"
 * group.element[6].target.comment = """
 Note that the value sets between Patient.contact.relationship and RelatedPerson.relationship are quite different.
@@ -227,6 +231,8 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[10].target.extension[0].extension[1].valueInteger = 0
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
+* group.element[10].target.extension[0].extension[3].url = "mappedVia"
+* group.element[10].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70001-to-administrative-gender"
 * group.element[10].target.display = "gender"
 * group.element[11].code = #NK1-16
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -265,6 +271,8 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[12].target.extension[0].extension[1].valueInteger = 0
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = -1
+* group.element[12].target.extension[0].extension[3].url = "mappedVia"
+* group.element[12].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[12].target.display = "communication.language"
 * group.element[13].code = #NK1-30
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -380,6 +388,8 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[18].target.extension[0].extension[1].valueInteger = 0
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = -1
+* group.element[18].target.extension[0].extension[3].url = "fixedValue"
+* group.element[18].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/sid/us-ssn\""
 * group.element[18].target.display = "identifier[3].system"
 * group.element[19].code = #NK1-37
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -399,6 +409,8 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[19].target.extension[0].extension[1].valueInteger = 0
 * group.element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[19].target.extension[0].extension[2].valueInteger = 1
+* group.element[19].target.extension[0].extension[3].url = "fixedValue"
+* group.element[19].target.extension[0].extension[3].valueString = "\"SS\""
 * group.element[19].target.display = "identifier[3].type.coding.code"
 * group.element[20].code = #NK1-37
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -418,6 +430,8 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[20].target.extension[0].extension[1].valueInteger = 0
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
+* group.element[20].target.extension[0].extension[3].url = "fixedValue"
+* group.element[20].target.extension[0].extension[3].valueString = "\"SB\""
 * group.element[20].target.display = "identifier[3].type.coding.code"
 * group.element[21].code = #NK1-40
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

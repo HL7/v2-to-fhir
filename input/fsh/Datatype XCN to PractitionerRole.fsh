@@ -197,6 +197,8 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[1].valueInteger = 1
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
+* group.element[9].target.extension[0].extension[3].url = "mappedVia"
+* group.element[9].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70200-to-name-use"
 * group.element[9].target.display = "practitioner(Practitioner.name.use)"
 * group.element[10].code = #XCN.11
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -216,6 +218,8 @@ Usage: #definition
 * group.element[10].target.extension[0].extension[1].valueInteger = 1
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
+* group.element[10].target.extension[0].extension[3].url = "fixedValue"
+* group.element[10].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/identifier-checkDigit\""
 * group.element[10].target.display = "practitioner(Practitioner.identifier.extension[1].url)"
 * group.element[11].code = #XCN.11
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -254,6 +258,8 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[1].valueInteger = 1
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
+* group.element[12].target.extension[0].extension[3].url = "fixedValue"
+* group.element[12].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/namingsystem-checkDigit\""
 * group.element[12].target.display = "practitioner(Practitioner.identifier.extension[2].url)"
 * group.element[13].code = #XCN.12
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -292,6 +298,8 @@ Usage: #definition
 * group.element[14].target.extension[0].extension[1].valueInteger = 1
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
+* group.element[14].target.extension[0].extension[3].url = "mappedVia"
+* group.element[14].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70203-to-v2-0203"
 * group.element[14].target.display = "practitioner(Practitioner.identifier.type.coding.code)"
 * group.element[15].code = #XCN.17
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -328,6 +336,8 @@ Usage: #definition
 * group.element[16].target.extension[0].extension[1].valueInteger = 1
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
+* group.element[16].target.extension[0].extension[3].url = "fixedValue"
+* group.element[16].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/R4/extension-humanname-assembly-order.html\""
 * group.element[16].target.display = "practitioner(Practitioner.name.family.extension.url)"
 * group.element[17].code = #XCN.18
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -347,6 +357,8 @@ Usage: #definition
 * group.element[17].target.extension[0].extension[1].valueInteger = 1
 * group.element[17].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[17].target.extension[0].extension[2].valueInteger = 1
+* group.element[17].target.extension[0].extension[3].url = "mappedVia"
+* group.element[17].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70444-to-v2-0444"
 * group.element[17].target.display = "practitioner(Practitioner.name.family.extension.valueCode)"
 * group.element[18].code = #XCN.19
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

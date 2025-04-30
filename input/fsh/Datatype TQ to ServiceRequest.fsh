@@ -110,6 +110,8 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[0].valueInteger = 1
 * group.element[4].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
+* group.element[4].target.extension[0].extension[2].url = "fixedValue"
+* group.element[4].target.extension[0].extension[2].valueString = "\"UCUM\""
 * group.element[4].target.display = "occurenceTiming.repeat.boundsDuration.system"
 * group.element[5].code = #TQ.4
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -167,6 +169,8 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[1].valueInteger = 1
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
+* group.element[7].target.extension[0].extension[3].url = "mappedVia"
+* group.element[7].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70485-to-request-priority"
 * group.element[7].target.display = "priority"
 * group.element[7].target.comment = "A translation from the text priority in the v2 message to a coded value in the request-priority value set will be required."
 * group.element[8].code = #TQ.8

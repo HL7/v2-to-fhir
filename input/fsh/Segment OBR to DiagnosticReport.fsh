@@ -53,6 +53,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 0
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "fixedValue"
+* group.element[1].target.extension[0].extension[3].valueString = "\"PLAC\""
 * group.element[1].target.display = "identifier[1].type.coding.code"
 * group.element[2].code = #OBR-2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -72,6 +74,8 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].valueInteger = 0
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
+* group.element[2].target.extension[0].extension[3].url = "fixedValue"
+* group.element[2].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
 * group.element[2].target.display = "identifier[1].type.coding.system"
 * group.element[3].code = #OBR-3
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -110,6 +114,8 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 0
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "fixedValue"
+* group.element[4].target.extension[0].extension[3].valueString = "\"FILL\""
 * group.element[4].target.display = "identifier[2].type.coding.code"
 * group.element[5].code = #OBR-3
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -129,6 +135,8 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[1].valueInteger = 0
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
+* group.element[5].target.extension[0].extension[3].url = "fixedValue"
+* group.element[5].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
 * group.element[5].target.display = "identifier[2].type.coding.system"
 * group.element[6].code = #OBR-4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -245,6 +253,8 @@ Usage: #definition
 * group.element[11].target.extension[0].extension[1].valueInteger = 0
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = -1
+* group.element[11].target.extension[0].extension[3].url = "mappedVia"
+* group.element[11].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70074-to-v2-0074"
 * group.element[11].target.display = "category"
 * group.element[12].code = #OBR-25
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -264,6 +274,8 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[1].valueInteger = 1
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
+* group.element[12].target.extension[0].extension[3].url = "mappedVia"
+* group.element[12].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70123-queries-to-diagnostic-report-status"
 * group.element[12].target.display = "status"
 * group.element[13].code = #OBR-32
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -321,6 +333,8 @@ Usage: #definition
 * group.element[15].target.extension[0].extension[1].valueInteger = 1
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
+* group.element[15].target.extension[0].extension[3].url = "fixedValue"
+* group.element[15].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/event-performerFunction\""
 * group.element[15].target.display = "performer[1].extension[1].url"
 * group.element[16].code = #OBR-34
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -340,6 +354,8 @@ Usage: #definition
 * group.element[16].target.extension[0].extension[1].valueInteger = 0
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
+* group.element[16].target.extension[0].extension[3].url = "fixedValue"
+* group.element[16].target.extension[0].extension[3].valueString = "\"SPRF\""
 * group.element[16].target.display = "performer[1].extension[1].valueCodeableConcept.coding.code"
 * group.element[17].code = #OBR-34
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -359,6 +375,8 @@ Usage: #definition
 * group.element[17].target.extension[0].extension[1].valueInteger = 0
 * group.element[17].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[17].target.extension[0].extension[2].valueInteger = 1
+* group.element[17].target.extension[0].extension[3].url = "fixedValue"
+* group.element[17].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""
 * group.element[17].target.display = "performer[1].extension[1].valueCodeableConcept.coding.system"
 * group.element[18].code = #OBR-35
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -397,6 +415,8 @@ Usage: #definition
 * group.element[19].target.extension[0].extension[1].valueInteger = 1
 * group.element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[19].target.extension[0].extension[2].valueInteger = 1
+* group.element[19].target.extension[0].extension[3].url = "fixedValue"
+* group.element[19].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/event-performerFunction\""
 * group.element[19].target.display = "performer[2].extension[1].url"
 * group.element[20].code = #OBR-35
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -416,6 +436,8 @@ Usage: #definition
 * group.element[20].target.extension[0].extension[1].valueInteger = 0
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
+* group.element[20].target.extension[0].extension[3].url = "fixedValue"
+* group.element[20].target.extension[0].extension[3].valueString = "\"TRANS\""
 * group.element[20].target.display = "performer[2].extension[1].valueCodeableConcept.coding.code"
 * group.element[21].code = #OBR-35
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -435,4 +457,6 @@ Usage: #definition
 * group.element[21].target.extension[0].extension[1].valueInteger = 0
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = 1
+* group.element[21].target.extension[0].extension[3].url = "fixedValue"
+* group.element[21].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\""
 * group.element[21].target.display = "performer[2].extension[1].valueCodeableConcept.coding.system"

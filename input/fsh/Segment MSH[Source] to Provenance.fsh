@@ -64,6 +64,8 @@ Usage: #definition
 * group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"code"
+* group.element[5].target.extension[0].extension[1].url = "fixedValue"
+* group.element[5].target.extension[0].extension[1].valueString = "\"source\""
 * group.element[5].target.display = "entity[2].role"
 * group.element[6].code = #MSH-4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -102,6 +104,8 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[1].valueInteger = 0
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
+* group.element[7].target.extension[0].extension[3].url = "fixedValue"
+* group.element[7].target.extension[0].extension[3].valueString = "\"author\""
 * group.element[7].target.display = "agent[1].type.coding.code"
 * group.element[8].code = #MSH-4
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -121,6 +125,8 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[1].valueInteger = 0
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
+* group.element[8].target.extension[0].extension[3].url = "fixedValue"
+* group.element[8].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
 * group.element[8].target.display = "agent[1].type.coding.system"
 * group.element[9].code = #MSH-7
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -171,6 +177,8 @@ Usage: #definition
 * group.element[11].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].target.extension[0].extension[0].url = "type"
 * group.element[11].target.extension[0].extension[0].valueCode = #"string"
+* group.element[11].target.extension[0].extension[1].url = "fixedValue"
+* group.element[11].target.extension[0].extension[1].valueString = "\"message - \"+MSG.1+\"^\"+MSG.2+\"^\"+MSG.3"
 * group.element[11].target.display = "activity.coding.display"
 * group.element[12].code = #MSH-22
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -209,6 +217,8 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[1].valueInteger = 0
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
+* group.element[13].target.extension[0].extension[3].url = "fixedValue"
+* group.element[13].target.extension[0].extension[3].valueString = "\"author\""
 * group.element[13].target.display = "agent[2].type.coding.code"
 * group.element[14].code = #MSH-22
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -228,4 +238,6 @@ Usage: #definition
 * group.element[14].target.extension[0].extension[1].valueInteger = 0
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
+* group.element[14].target.extension[0].extension[3].url = "fixedValue"
+* group.element[14].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
 * group.element[14].target.display = "agent[2].type.coding.system"

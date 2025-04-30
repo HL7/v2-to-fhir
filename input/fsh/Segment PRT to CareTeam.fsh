@@ -30,6 +30,8 @@ Usage: #definition
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"CodeableConcept"
+* group.element[0].target.extension[0].extension[1].url = "mappedVia"
+* group.element[0].target.extension[0].extension[1].valueUrl = "ConceptMap/table-hl70912-to-practitioner-role"
 * group.element[0].target.display = "participant.role"
 * group.element[1].code = #PRT-5
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

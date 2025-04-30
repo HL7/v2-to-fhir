@@ -32,7 +32,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 12,PV1-12,Preadmit Test Indicator,CWE,0,1,,,,,,,,,,,,,
 13,PV1-13,Re-admission Indicator,CWE,0,1,,,,hospitalization.reAdmission,,CodeableConcept,0,1,CWE[CodeableConcept],ReadmissionIndicator,,,
 14,PV1-14,Admit Source,CWE,0,1,,,,hospitalization.admitSource,,CodeableConcept,0,1,CWE[CodeableConcept],,,,"Table 0023 doesn't have any suggested values, therefore there is no vocabulary mapping"
-15,PV1-15,Ambulatory Status,CWE,0,-1,,,,,,,,,,,,,
+15,PV1-15,Ambulatory Status,CWE,0,-1,,,,hospitalization.specialArrangement,,CodeableConcept,0,-1,CWE[CodeableConcept],AmbulatoryStatus,,,
 16,PV1-16,VIP Indicator,CWE,0,1,,,,hospitalization.specialCourtesy,,CodeableConcept,0,1,CWE[CodeableConcept],VIPIndicator,,,"Depending on the vocabulary used in PV1-16, this may require additional mapping."
 17,PV1-17,Admitting Doctor,XCN,0,-1,,,,participant[4].individual(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
 17,PV1-17,Admitting Doctor,XCN,0,-1,,,,participant[4].type.coding.code,,code,0,1,,,"""ADM""",,

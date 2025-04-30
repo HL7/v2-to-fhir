@@ -85,7 +85,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [PRT[Location]](ConceptMap-segment-prt-location-to-observation.html) - Participation Information to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
 * [SPM](ConceptMap-segment-spm-to-specimen.html) - Specimen to FHIR [Specimen](http://hl7.org/fhir/R4/specimen.html)
 
-### Chapter  8  Master Files
+### Chapter  9  Medical Records/Information Management
 
 * [TXA](ConceptMap-segment-txa-to-documentreference.html) - Transcription Document Header to FHIR [DocumentReference](http://hl7.org/fhir/R4/documentreference.html)
 * [TXA](ConceptMap-segment-txa-to-provenance.html) - Transcription Document Header to FHIR [Provenance](http://hl7.org/fhir/R4/provenance.html)

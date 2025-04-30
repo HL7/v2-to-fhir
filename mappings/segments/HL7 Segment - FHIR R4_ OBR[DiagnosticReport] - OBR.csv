@@ -32,10 +32,10 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 24,OBR-24,Diagnostic Serv Sect ID,ID,0,1,,,,category,,CodeableConcept,0,-1,ID[CodeableConcept],DiagnosticServiceSectionID,,,
 25,OBR-25,Result Status +,ID,0,1,IF OBR-25 VALUED,,,status,,code,1,1,,ResultStatus[Non-Queries],,,
 25,OBR-25,Result Status +,ID,0,1,IF OBR-25 NOT VALUED ERROR,,"If OBR-25 is not valued, that is an error on the v2 side as in this use case it is required.",,,,,,,,,,
-26,OBR-26,Parent Result +,PRL,0,1,,,,,,,,,,,,,This will be mapped in the next phase with micro and other structures.
+26,OBR-26,Parent Result +,PRL,0,1,,,,,,,,,,,,,This will be mapped in a next edition with micro and other structures.
 27,OBR-27,Quantity/Timing,TQ,0,-1,,,,,,,,,,,,,
-28,OBR-28,Result Copies To,XCN,0,-1,,,,,,,,,,,,,This will be mapped in next phase.
-29,OBR-29,ParentResults Observation Identifier,EIP,0,1,,,,,,,,,,,,,This will be mapped in the next phase with micro and other structures.
+28,OBR-28,Result Copies To,XCN,0,-1,,,,,,,,,,,,,Deferred to a future edition and considering CommunicationRequest using .basedOn and .reason plus a means to indicate that the request to copy was made at the time of the request being made or later in the process.
+29,OBR-29,ParentResults Observation Identifier,EIP,0,1,,,,,,,,,,,,,This will be mapped in a next edition with micro and other structures.
 30,OBR-30,Transportation Mode,ID,0,1,,,,,,,,,,,,,
 31,OBR-31,Reason for Study,CWE,0,-1,,,,,,,,,,,,,
 32,OBR-32,Principal Result Interpreter +,NDL,0,1,,,,resultsInterpreter(PractitionerRole),,Reference(PractitionerRole),0,-1,NDL[PractitionerRole],,,,
@@ -67,3 +67,4 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 52,OBR-52,Parent Observation Group ID,EI,0,1,,,,,,,,,,,,,
 53,OBR-53,Alternate Placer Order Number,CX,0,-1,,,,,,,,,,,,,
 54,OBR-54,Parent Order,EIP,0,1,,,,,,,,,,,,,This will be mapped in the next phase with micro and other structures.
+54,OBR-54,Parent Order,EIP,0,1,,,,,,,,,,,,,

@@ -26,6 +26,8 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 0
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
+* group.element[0].target.extension[0].extension[3].url = "fixedValue"
+* group.element[0].target.extension[0].extension[3].valueString = "\"active\""
 * group.element[0].target.display = "clinicalStatus.coding.code"
 * group.element[0].target.comment = "While .clinicalStatus is not required, constraint ait-1 (AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error.) does necessitate populating this element in the map as it's not possible to infer a verificationStatus of \"entered-in-error\" based on the data in AL1."
 * group.element[1].code = #AL1
@@ -38,6 +40,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 0
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "fixedValue"
+* group.element[1].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical\""
 * group.element[1].target.display = "clinicalStatus.coding.system"
 * group.element[2].code = #AL1-2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -57,6 +61,8 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].valueInteger = 0
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
+* group.element[2].target.extension[0].extension[3].url = "mappedVia"
+* group.element[2].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70127-to-allergy-intolerance-category"
 * group.element[2].target.display = "category"
 * group.element[2].target.comment = """
 The FHIR table has a "required" binding. Do we need to expand the values in the FHIR table?
@@ -86,6 +92,8 @@ HL70127 is a user defined table\
 * group.element[3].target.extension[0].extension[1].valueInteger = 1
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
+* group.element[3].target.extension[0].extension[3].url = "fixedValue"
+* group.element[3].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[3].target.display = "category.extension[1].url"
 * group.element[4].code = #AL1-2
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -105,6 +113,8 @@ HL70127 is a user defined table\
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "mappedVia"
+* group.element[4].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70127-to-v2-0127"
 * group.element[4].target.display = "category.extension[1].valueCodeableConcept"
 * group.element[5].code = #AL1-2
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -124,6 +134,8 @@ HL70127 is a user defined table\
 * group.element[5].target.extension[0].extension[1].valueInteger = 0
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
+* group.element[5].target.extension[0].extension[3].url = "mappedVia"
+* group.element[5].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70127-to-allergy-intolerance-type"
 * group.element[5].target.display = "type"
 * group.element[6].code = #AL1-3
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -162,6 +174,8 @@ HL70127 is a user defined table\
 * group.element[7].target.extension[0].extension[1].valueInteger = 0
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
+* group.element[7].target.extension[0].extension[3].url = "mappedVia"
+* group.element[7].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70128-to-allergy-intolerance-criticality"
 * group.element[7].target.display = "criticality"
 * group.element[7].target.comment = "Note that AllergyIntolerance.reaction.severity is available in FHIR but from a base standard perspective that is actually not the most appropriate and would require that AL1-6 is valued as well.  However, a local implementation may have used vocabulary that better fits AllergyIntolerance.reaction.severity and should then consider that instead as a local variation.  Note that the .reaction though is at a particular time, while .criticality is an overall assement that matches HL7 v2 generally better."
 * group.element[8].code = #AL1-4
@@ -182,6 +196,8 @@ HL70127 is a user defined table\
 * group.element[8].target.extension[0].extension[1].valueInteger = 1
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
+* group.element[8].target.extension[0].extension[3].url = "fixedValue"
+* group.element[8].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[8].target.display = "criticality.extension[1].url"
 * group.element[9].code = #AL1-4
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -201,6 +217,8 @@ HL70127 is a user defined table\
 * group.element[9].target.extension[0].extension[1].valueInteger = 1
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
+* group.element[9].target.extension[0].extension[3].url = "mappedVia"
+* group.element[9].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70128-original-to-v2-0128"
 * group.element[9].target.display = "criticality.extension[1].valueCodeableConcept"
 * group.element[10].code = #AL1-4
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -220,6 +238,8 @@ HL70127 is a user defined table\
 * group.element[10].target.extension[0].extension[1].valueInteger = 0
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
+* group.element[10].target.extension[0].extension[3].url = "mappedVia"
+* group.element[10].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70128-to-reaction-event-severity"
 * group.element[10].target.display = "reaction.severity"
 * group.element[11].code = #AL1-5
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

@@ -275,6 +275,8 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[1].valueInteger = 0
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
+* group.element[13].target.extension[0].extension[3].url = "fixedValue"
+* group.element[13].target.extension[0].extension[3].valueString = "OBX-5.1+\"-\"+OBX-5.2"
 * group.element[13].target.display = "component[each].valueString"
 * group.element[14].code = #OBX-5
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -313,6 +315,8 @@ Usage: #definition
 * group.element[15].target.extension[0].extension[1].valueInteger = 0
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
+* group.element[15].target.extension[0].extension[3].url = "fixedValue"
+* group.element[15].target.extension[0].extension[3].valueString = "OBX-5.1+\" \"+OBX-5.2+\" \"+OBX-5.3+\" \"+OBX-5.4\" \"OBX-6\""
 * group.element[15].target.display = "component[each].valueString"
 * group.element[16].code = #OBX-5
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -370,6 +374,8 @@ Usage: #definition
 * group.element[18].target.extension[0].extension[1].valueInteger = 0
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = 1
+* group.element[18].target.extension[0].extension[3].url = "fixedValue"
+* group.element[18].target.extension[0].extension[3].valueString = "OBX-5.1+\" \"+OBX-5.2+\" \"+OBX-5.3+\" \"+OBX-5.4\" \"OBX-6\""
 * group.element[18].target.display = "component[each].valueString"
 * group.element[19].code = #OBX-5
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -408,6 +414,8 @@ Usage: #definition
 * group.element[20].target.extension[0].extension[1].valueInteger = 0
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
+* group.element[20].target.extension[0].extension[3].url = "fixedValue"
+* group.element[20].target.extension[0].extension[3].valueString = "OBX-5.1+\" \"+OBX-5.2+\" \"+OBX-5.3+\" \"+OBX-5.4\" \"OBX-6\""
 * group.element[20].target.display = "component[each].valueString"
 * group.element[21].code = #OBX-5
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -427,6 +435,8 @@ Usage: #definition
 * group.element[21].target.extension[0].extension[1].valueInteger = 1
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = 1
+* group.element[21].target.extension[0].extension[3].url = "fixedValue"
+* group.element[21].target.extension[0].extension[3].valueString = "\"https://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.valueAttachment\""
 * group.element[21].target.display = "component[each].extension[1].url"
 * group.element[21].target.comment = "Some implementers may include in OBX-5 the documentation that the other OBX-5 components are derived from.  In that situations"
 * group.element[22].code = #OBX-5
@@ -482,6 +492,8 @@ Usage: #definition
 * group.element[24].target.extension[0].extension[1].valueInteger = 1
 * group.element[24].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[24].target.extension[0].extension[2].valueInteger = 1
+* group.element[24].target.extension[0].extension[3].url = "fixedValue"
+* group.element[24].target.extension[0].extension[3].valueString = "\"https://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.valueAttachment\""
 * group.element[24].target.display = "component[each].extension[1].url"
 * group.element[25].code = #OBX-5
 * group.element[25].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -640,6 +652,8 @@ Usage: #definition
 * group.element[34].target.extension[0].extension[1].valueInteger = 0
 * group.element[34].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[34].target.extension[0].extension[2].valueInteger = -1
+* group.element[34].target.extension[0].extension[3].url = "mappedVia"
+* group.element[34].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70078-to-v3-observationinterpretation"
 * group.element[34].target.display = "interpretation"
 * group.element[35].code = #OBX-10
 * group.element[35].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -659,6 +673,8 @@ Usage: #definition
 * group.element[35].target.extension[0].extension[1].valueInteger = 0
 * group.element[35].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[35].target.extension[0].extension[2].valueInteger = -1
+* group.element[35].target.extension[0].extension[3].url = "fixedValue"
+* group.element[35].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/observation-nature-of-abnormal-test\""
 * group.element[35].target.display = "extension[2].uri"
 * group.element[36].code = #OBX-10
 * group.element[36].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -678,6 +694,8 @@ Usage: #definition
 * group.element[36].target.extension[0].extension[1].valueInteger = 0
 * group.element[36].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[36].target.extension[0].extension[2].valueInteger = -1
+* group.element[36].target.extension[0].extension[3].url = "mappedVia"
+* group.element[36].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70080-to-v2-0080"
 * group.element[36].target.display = "extension[2].valueCodeableConcept"
 * group.element[37].code = #OBX-11
 * group.element[37].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -697,6 +715,8 @@ Usage: #definition
 * group.element[37].target.extension[0].extension[1].valueInteger = 1
 * group.element[37].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[37].target.extension[0].extension[2].valueInteger = 1
+* group.element[37].target.extension[0].extension[3].url = "mappedVia"
+* group.element[37].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70085-to-observation-status"
 * group.element[37].target.display = "status"
 * group.element[38].code = #OBX-11
 * group.element[38].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -712,6 +732,8 @@ Usage: #definition
 * group.element[38].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[38].target.extension[0].extension[0].url = "type"
 * group.element[38].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[38].target.extension[0].extension[1].url = "fixedValue"
+* group.element[38].target.extension[0].extension[1].valueString = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[38].target.display = "status.extension[1].url"
 * group.element[39].code = #OBX-11
 * group.element[39].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -727,6 +749,8 @@ Usage: #definition
 * group.element[39].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[39].target.extension[0].extension[0].url = "type"
 * group.element[39].target.extension[0].extension[0].valueCode = #"CodeableConcept"
+* group.element[39].target.extension[0].extension[1].url = "fixedValue"
+* group.element[39].target.extension[0].extension[1].valueString = "\"X\""
 * group.element[39].target.display = "status.extension[1].valueCodeableConcept.coding.code"
 * group.element[40].code = #OBX-11
 * group.element[40].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -742,6 +766,8 @@ Usage: #definition
 * group.element[40].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[40].target.extension[0].extension[0].url = "type"
 * group.element[40].target.extension[0].extension[0].valueCode = #"string"
+* group.element[40].target.extension[0].extension[1].url = "fixedValue"
+* group.element[40].target.extension[0].extension[1].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0085\""
 * group.element[40].target.display = "status.extension[1].valueCodeableConcept.coding.system"
 * group.element[41].code = #OBX-11
 * group.element[41].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -823,6 +849,8 @@ Usage: #definition
 * group.element[45].target.extension[0].extension[1].valueInteger = 0
 * group.element[45].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[45].target.extension[0].extension[2].valueInteger = -1
+* group.element[45].target.extension[0].extension[3].url = "fixedValue"
+* group.element[45].target.extension[0].extension[3].valueString = "\"responsibleObserver\""
 * group.element[45].target.display = "performer[1](PractitionerRole.code.coding.code)"
 * group.element[46].code = #OBX-16
 * group.element[46].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -838,6 +866,8 @@ Usage: #definition
 * group.element[46].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[46].target.extension[0].extension[0].url = "type"
 * group.element[46].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[46].target.extension[0].extension[1].url = "fixedValue"
+* group.element[46].target.extension[0].extension[1].valueString = "\"http://terminology.hl7.org/CodeSystem/practitioner-role\""
 * group.element[46].target.display = "performer[1](PractitionerRole.code.coding.system)"
 * group.element[47].code = #OBX-17
 * group.element[47].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -974,6 +1004,8 @@ Usage: #definition
 * group.element[53].target.extension[0].extension[1].valueInteger = 0
 * group.element[53].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[53].target.extension[0].extension[2].valueInteger = 1
+* group.element[53].target.extension[0].extension[3].url = "fixedValue"
+* group.element[53].target.extension[0].extension[3].valueString = "\"FILL\""
 * group.element[53].target.display = "identifier.type.coding.code"
 * group.element[54].code = #OBX-23
 * group.element[54].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -1084,6 +1116,8 @@ Usage: #definition
 * group.element[59].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[59].target.extension[0].extension[0].url = "type"
 * group.element[59].target.extension[0].extension[0].valueCode = #"string"
+* group.element[59].target.extension[0].extension[1].url = "fixedValue"
+* group.element[59].target.extension[0].extension[1].valueString = "\"MDIR\""
 * group.element[59].target.display = "performer[2](PractitionerRole.code.coding.value)"
 * group.element[60].code = #OBX-25
 * group.element[60].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -1099,6 +1133,8 @@ Usage: #definition
 * group.element[60].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[60].target.extension[0].extension[0].url = "type"
 * group.element[60].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[60].target.extension[0].extension[1].url = "fixedValue"
+* group.element[60].target.extension[0].extension[1].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0912\""
 * group.element[60].target.display = "performer[2](PractitionerRole.code.coding.system)"
 * group.element[61].code = #OBX-29
 * group.element[61].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -1156,6 +1192,8 @@ Usage: #definition
 * group.element[63].target.extension[0].extension[1].valueInteger = 0
 * group.element[63].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[63].target.extension[0].extension[2].valueInteger = 1
+* group.element[63].target.extension[0].extension[3].url = "fixedValue"
+* group.element[63].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/observation-structure-type\""
 * group.element[63].target.display = "extension[2].url"
 * group.element[64].code = #OBX-30
 * group.element[64].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -1194,6 +1232,8 @@ Usage: #definition
 * group.element[65].target.extension[0].extension[1].valueInteger = 0
 * group.element[65].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[65].target.extension[0].extension[2].valueInteger = 1
+* group.element[65].target.extension[0].extension[3].url = "fixedValue"
+* group.element[65].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/observation-structure-type\""
 * group.element[65].target.display = "extension[2].valueCodeableConcept.coding.system"
 * group.element[66].code = #OBX-33
 * group.element[66].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -1213,6 +1253,8 @@ Usage: #definition
 * group.element[66].target.extension[0].extension[1].valueInteger = 0
 * group.element[66].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[66].target.extension[0].extension[2].valueInteger = 1
+* group.element[66].target.extension[0].extension[3].url = "fixedValue"
+* group.element[66].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.specimen\""
 * group.element[66].target.display = "extension[1].uri"
 * group.element[66].target.comment = "Note that in v2 messages the observations that a calculated observation is derived from on and involve multiple specimens are typically not included with the message. To enable relating the calculated observation to the correct specimens it relates to, the v2 message should include the originating observations that in turn use OBX-33 to link to the correct specimens.  Without that, and if there are multiple specimens in OBX-33, there is no standard method to correctly associate the observation with the correct specimens.  The implementer will have to devise an appropriate method for that in their context."
 * group.element[67].code = #OBX-33
@@ -1248,6 +1290,8 @@ Usage: #definition
 * group.element[68].target.extension[0].extension[0].valueInteger = 0
 * group.element[68].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[68].target.extension[0].extension[1].valueInteger = 1
+* group.element[68].target.extension[0].extension[2].url = "fixedValue"
+* group.element[68].target.extension[0].extension[2].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.specimen\""
 * group.element[68].target.display = "extension[2].uri"
 * group.element[69].code = #OBX-33
 * group.element[69].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

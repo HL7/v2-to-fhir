@@ -72,6 +72,8 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].valueInteger = 0
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = -1
+* group.element[2].target.extension[0].extension[3].url = "mappedVia"
+* group.element[2].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70276-to-sct"
 * group.element[2].target.display = "reasonCode[1]"
 * group.element[3].code = #SCH-7
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -91,6 +93,8 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].valueInteger = 0
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
+* group.element[3].target.extension[0].extension[3].url = "mappedVia"
+* group.element[3].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70277-to-v2-0277"
 * group.element[3].target.display = "appointmentType[1]"
 * group.element[3].target.comment = "Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
 * group.element[4].code = #SCH-8
@@ -111,6 +115,8 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 0
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "mappedVia"
+* group.element[4].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70277-to-v2-0277"
 * group.element[4].target.display = "appointmentType[1]"
 * group.element[4].target.comment = "Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
 * group.element[5].code = #SCH-9
@@ -291,6 +297,8 @@ Usage: #definition
 * group.element[16].target.extension[0].extension[1].valueInteger = 1
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
+* group.element[16].target.extension[0].extension[3].url = "mappedVia"
+* group.element[16].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70278-to-appointmentstatus"
 * group.element[16].target.display = "status"
 * group.element[17].code = #SCH-26
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

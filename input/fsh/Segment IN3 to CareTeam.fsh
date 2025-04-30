@@ -30,6 +30,8 @@ Usage: #definition
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"string"
+* group.element[0].target.extension[0].extension[1].url = "fixedValue"
+* group.element[0].target.extension[0].extension[1].valueString = "\"768832004\""
 * group.element[0].target.display = "participant.role.coding.value"
 * group.element[1].code = #IN3-21
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -45,6 +47,8 @@ Usage: #definition
 * group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].target.extension[0].extension[0].url = "type"
 * group.element[1].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[1].target.extension[0].extension[1].url = "fixedValue"
+* group.element[1].target.extension[0].extension[1].valueString = "\"http://snomed.info/sct\""
 * group.element[1].target.display = "participant.role.coding.system"
 * group.element[2].code = #IN3-21
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

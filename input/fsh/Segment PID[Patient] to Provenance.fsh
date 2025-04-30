@@ -30,6 +30,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 0
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "fixedValue"
+* group.element[1].target.extension[0].extension[3].valueString = "\"UPDATE\""
 * group.element[1].target.display = "activity.coding.code"
 * group.element[2].code = #PID
 * group.element[2].target.equivalence = #equivalent
@@ -41,6 +43,8 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].valueInteger = 0
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
+* group.element[2].target.extension[0].extension[3].url = "fixedValue"
+* group.element[2].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/v3-DataOperation\""
 * group.element[2].target.display = "activity.coding.system"
 * group.element[3].code = #PID-33
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -98,6 +102,8 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[1].valueInteger = 0
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
+* group.element[5].target.extension[0].extension[3].url = "fixedValue"
+* group.element[5].target.extension[0].extension[3].valueString = "\"performer\""
 * group.element[5].target.display = "agent.type.coding.code"
 * group.element[6].code = #PID-34
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -117,4 +123,6 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[1].valueInteger = 0
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
+* group.element[6].target.extension[0].extension[3].url = "fixedValue"
+* group.element[6].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/provenance-participant-type\""
 * group.element[6].target.display = "agent.type.coding.system"

@@ -72,6 +72,8 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].valueInteger = 1
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
+* group.element[2].target.extension[0].extension[3].url = "fixedValue"
+* group.element[2].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/identifier-checkDigit\""
 * group.element[2].target.display = "identifier[1].extension[1].url"
 * group.element[3].code = #XON.4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -110,6 +112,8 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "fixedValue"
+* group.element[4].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/namingsystem-checkDigit\""
 * group.element[4].target.display = "identifier[1].extension[2].url"
 * group.element[5].code = #XON.5
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -187,6 +191,8 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[1].valueInteger = -1
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = -1
+* group.element[8].target.extension[0].extension[3].url = "mappedVia"
+* group.element[8].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70203-to-v2-0203"
 * group.element[8].target.display = "identifier[1].type.coding.code"
 * group.element[9].code = #XON.7
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -206,6 +212,8 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[1].valueInteger = -1
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = -1
+* group.element[9].target.extension[0].extension[3].url = "fixedValue"
+* group.element[9].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0203\""
 * group.element[9].target.display = "identifier[2].type.coding.system"
 * group.element[10].code = #XON.10
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

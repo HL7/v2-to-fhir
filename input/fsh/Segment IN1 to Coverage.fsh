@@ -79,6 +79,8 @@ Usage: #definition
 * group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[3].target.extension[0].extension[1].url = "fixedValue"
+* group.element[3].target.extension[0].extension[1].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-subscriberId\""
 * group.element[3].target.display = "extension[1].url"
 * group.element[4].code = #IN1-10
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -174,6 +176,8 @@ Usage: #definition
 * group.element[9].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].target.extension[0].extension[0].url = "type"
 * group.element[9].target.extension[0].extension[0].valueCode = #"CodeableConcept"
+* group.element[9].target.extension[0].extension[1].url = "mappedVia"
+* group.element[9].target.extension[0].extension[1].valueUrl = "unspecified_mapping"
 * group.element[9].target.display = "type"
 * group.element[10].code = #IN1-16
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -219,6 +223,8 @@ Usage: #definition
 * group.element[12].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].target.extension[0].extension[0].url = "type"
 * group.element[12].target.extension[0].extension[0].valueCode = #"CondeableConcept"
+* group.element[12].target.extension[0].extension[1].url = "mappedVia"
+* group.element[12].target.extension[0].extension[1].valueUrl = "ConceptMap/table-hl70063-to-v3-rolecode"
 * group.element[12].target.display = "relationship"
 * group.element[13].code = #IN1-49
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -234,6 +240,8 @@ Usage: #definition
 * group.element[13].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].target.extension[0].extension[0].url = "type"
 * group.element[13].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[13].target.extension[0].extension[1].url = "fixedValue"
+* group.element[13].target.extension[0].extension[1].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-subscriberId\""
 * group.element[13].target.display = "extension[1].url"
 * group.element[14].code = #IN1-49
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

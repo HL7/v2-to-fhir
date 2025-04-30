@@ -1,17 +1,14 @@
 HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
-1,MSH-1,Field Separator,ST,1,1,,,,,,,,,,,,,Field separators are not used in FHIR. Either XML or JSON or ....
+1,MSH-1,Field Separator,ST,1,1,,,,,,,,,,,,,Field separators are not used in FHIR.
 2,MSH-2,Encoding Characters,ST,1,1,,,,,,,,,,,,,Encoding characters are not used in FHIR.
 3,MSH-3,Sending Application,HD,0,1,,,,source[1],,,1,1,HD[MessageHeader.source-name],,,,
-3,MSH-3,Sending Application,HD,0,1,IF MSH-24 NOT VALUED,,,source[1].endpoint,,uri,1,1,HD[MessageHeader.source-endpoint],,,,"We believe that if MSH-24 is vaued, although it is rarely valued, it contains better information for the MessageHeader.source.endpoint.  However, one may either still want to use MSH-3 in total or a combination of content from MSH-3 and MSH-24.  That is a local implementation decision to adjust the mapping accordingly.
+3,MSH-3,Sending Application,HD,0,1,IF MSH-24 NOT VALUED,,,source[1].endpoint,,uri,1,1,HD[MessageHeader.source-endpoint],,,,"We believe that if MSH-24 is vaued, although MSH-24 is rarely valued, it contains better information for the  MessageHeader.source.endpoint than MSH-3.  However, one may either still want to use MSH-3 in total or a combination of content from MSH-3 and MSH-24.  That is a local implementation decision to adjust the mapping accordingly based on clear knowledge of the content.
 
-Example: MSH|^~\%|LAB^2.16.840.1.113883.3.987.1^ISO|...
-Example: MSH|^~\%|LAB|…
-
-If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer needs to resolve whether to assign this a known value since they know the context, or add the data absent reason extension to provide a reason and satisfies the mandatory FHIR attribute rules.  Note that the use of the data-absent-reason extension may result  in a FHIR resource that is not usable by the recipient."
+If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the implementer needs to resolve how to assign MessageHeader.source as it is a required attribute.  Note that a data absent reason extension could be used to provide a reason and satisfy the mandatory FHIR attribute rules.  But do note that the use of the data-absent-reason extension may result  in a FHIR resource that is not usable by the recipient."
 4,MSH-4,Sending Facility,HD,0,1,,,,sender(Organization),,Reference(Organization),0,1,HD[Organization],,,,
-5,MSH-5,Receiving Application,HD,0,1,,,,destination[1].target(Device),,Reference(Device),0,1,HD[Device],,,,Example: MSH...|RH^2.16.840.1.113883.632.3^ISO|...
+5,MSH-5,Receiving Application,HD,0,1,,,,destination[1].target(Device),,Reference(Device),0,1,HD[Device],,,,"Similar as for MSH-3, MSH-5 is paired with MSH-25 and depending on local use may need to use one, the other, or a combination of both.  We believe that MSH-25, when valued, provides the better information given its addition to the standard more recently."
 5,MSH-5,Receiving Application,HD,0,1,IF MSH-25 VALUED,,,destination[1],,,,,HD[MessageHeader.destination-name],,,,
 5,MSH-5,Receiving Application,HD,0,1,IF MSH-25 NOT VALUED,,,destination[1],,,,,HD[MessageHeader.destination-endpoint],,,,
 6,MSH-6,Receiving Facility,HD,0,-1,IF MSH-23 NOT VALUED,,,destination[1].receiver(Organization),,Reference(Organization),0,1,HD[Organization],,,,

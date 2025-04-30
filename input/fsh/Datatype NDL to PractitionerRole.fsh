@@ -106,6 +106,8 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "fixedValue"
+* group.element[4].target.extension[0].extension[3].valueString = "\"instance\""
 * group.element[4].target.display = "[1].mode"
 * group.element[5].code = #NDL.4
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -125,6 +127,8 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[1].valueInteger = 1
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
+* group.element[5].target.extension[0].extension[3].url = "fixedValue"
+* group.element[5].target.extension[0].extension[3].valueString = "/extension??-poc/"
 * group.element[5].target.display = "[1].physicalType.coding.code"
 * group.element[6].code = #NDL.4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -144,6 +148,8 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[1].valueInteger = 1
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
+* group.element[6].target.extension[0].extension[3].url = "fixedValue"
+* group.element[6].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[6].target.display = "[1].physicalType.coding.system"
 * group.element[7].code = #NDL.4
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -197,6 +203,8 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[1].valueInteger = 1
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
+* group.element[9].target.extension[0].extension[3].url = "fixedValue"
+* group.element[9].target.extension[0].extension[3].valueString = "\"instance\""
 * group.element[9].target.display = "[2].mode"
 * group.element[10].code = #NDL.5
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -216,6 +224,8 @@ Usage: #definition
 * group.element[10].target.extension[0].extension[1].valueInteger = 1
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
+* group.element[10].target.extension[0].extension[3].url = "fixedValue"
+* group.element[10].target.extension[0].extension[3].valueString = "\"ro\""
 * group.element[10].target.display = "[2].physicalType.coding.code"
 * group.element[11].code = #NDL.5
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -235,6 +245,8 @@ Usage: #definition
 * group.element[11].target.extension[0].extension[1].valueInteger = 1
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
+* group.element[11].target.extension[0].extension[3].url = "fixedValue"
+* group.element[11].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[11].target.display = "[2].physicalType.coding.system"
 * group.element[12].code = #NDL.5
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -288,6 +300,8 @@ Usage: #definition
 * group.element[14].target.extension[0].extension[1].valueInteger = 1
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
+* group.element[14].target.extension[0].extension[3].url = "fixedValue"
+* group.element[14].target.extension[0].extension[3].valueString = "\"instance\""
 * group.element[14].target.display = "[3].mode"
 * group.element[15].code = #NDL.6
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -307,6 +321,8 @@ Usage: #definition
 * group.element[15].target.extension[0].extension[1].valueInteger = 1
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
+* group.element[15].target.extension[0].extension[3].url = "fixedValue"
+* group.element[15].target.extension[0].extension[3].valueString = "\"bd\""
 * group.element[15].target.display = "[3].physicalType.coding.code"
 * group.element[16].code = #NDL.6
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -326,6 +342,8 @@ Usage: #definition
 * group.element[16].target.extension[0].extension[1].valueInteger = 1
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
+* group.element[16].target.extension[0].extension[3].url = "fixedValue"
+* group.element[16].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[16].target.display = "[3].physicalType.coding.system"
 * group.element[17].code = #NDL.6
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -379,6 +397,8 @@ Usage: #definition
 * group.element[19].target.extension[0].extension[1].valueInteger = 1
 * group.element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[19].target.extension[0].extension[2].valueInteger = 1
+* group.element[19].target.extension[0].extension[3].url = "fixedValue"
+* group.element[19].target.extension[0].extension[3].valueString = "\"instance\""
 * group.element[19].target.display = "[4].mode"
 * group.element[20].code = #NDL.7
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -398,6 +418,8 @@ Usage: #definition
 * group.element[20].target.extension[0].extension[1].valueInteger = 1
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
+* group.element[20].target.extension[0].extension[3].url = "fixedValue"
+* group.element[20].target.extension[0].extension[3].valueString = "\"si\""
 * group.element[20].target.display = "[4].physicalType.coding.code"
 * group.element[21].code = #NDL.7
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -417,6 +439,8 @@ Usage: #definition
 * group.element[21].target.extension[0].extension[1].valueInteger = 1
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = 1
+* group.element[21].target.extension[0].extension[3].url = "fixedValue"
+* group.element[21].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[21].target.display = "[4].physicalType.coding.system"
 * group.element[22].code = #NDL.8
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -553,6 +577,8 @@ Usage: #definition
 * group.element[29].target.extension[0].extension[1].valueInteger = 1
 * group.element[29].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[29].target.extension[0].extension[2].valueInteger = 1
+* group.element[29].target.extension[0].extension[3].url = "fixedValue"
+* group.element[29].target.extension[0].extension[3].valueString = "\"instance\""
 * group.element[29].target.display = "[5].mode"
 * group.element[30].code = #NDL.10
 * group.element[30].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -572,6 +598,8 @@ Usage: #definition
 * group.element[30].target.extension[0].extension[1].valueInteger = 1
 * group.element[30].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[30].target.extension[0].extension[2].valueInteger = 1
+* group.element[30].target.extension[0].extension[3].url = "fixedValue"
+* group.element[30].target.extension[0].extension[3].valueString = "\"bu\""
 * group.element[30].target.display = "[5].physicalType.coding.code"
 * group.element[31].code = #NDL.10
 * group.element[31].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -591,6 +619,8 @@ Usage: #definition
 * group.element[31].target.extension[0].extension[1].valueInteger = 1
 * group.element[31].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[31].target.extension[0].extension[2].valueInteger = 1
+* group.element[31].target.extension[0].extension[3].url = "fixedValue"
+* group.element[31].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[31].target.display = "[5].physicalType.coding.system"
 * group.element[32].code = #NDL.10
 * group.element[32].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -644,6 +674,8 @@ Usage: #definition
 * group.element[34].target.extension[0].extension[1].valueInteger = 1
 * group.element[34].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[34].target.extension[0].extension[2].valueInteger = 1
+* group.element[34].target.extension[0].extension[3].url = "fixedValue"
+* group.element[34].target.extension[0].extension[3].valueString = "\"instance\""
 * group.element[34].target.display = "[6].mode"
 * group.element[35].code = #NDL.11
 * group.element[35].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -663,6 +695,8 @@ Usage: #definition
 * group.element[35].target.extension[0].extension[1].valueInteger = 1
 * group.element[35].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[35].target.extension[0].extension[2].valueInteger = 1
+* group.element[35].target.extension[0].extension[3].url = "fixedValue"
+* group.element[35].target.extension[0].extension[3].valueString = "\"lvl\""
 * group.element[35].target.display = "[6].physicalType.coding.code"
 * group.element[36].code = #NDL.11
 * group.element[36].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -682,6 +716,8 @@ Usage: #definition
 * group.element[36].target.extension[0].extension[1].valueInteger = 1
 * group.element[36].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[36].target.extension[0].extension[2].valueInteger = 1
+* group.element[36].target.extension[0].extension[3].url = "fixedValue"
+* group.element[36].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/location-physical-type\""
 * group.element[36].target.display = "[6].physicalType.coding.system"
 * group.element[37].code = #NDL.11
 * group.element[37].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

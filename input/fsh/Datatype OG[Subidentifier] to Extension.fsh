@@ -32,6 +32,8 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[0].valueInteger = 1
 * group.element[0].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
+* group.element[0].target.extension[0].extension[2].url = "fixedValue"
+* group.element[0].target.extension[0].extension[2].valueString = "\"http://hl7.org/fhir/StructureDefinition/observation-v2-subid\""
 * group.element[0].target.display = "extension[1]:group.url"
 * group.element[1].code = #OG.1
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -68,6 +70,8 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[0].valueInteger = 1
 * group.element[2].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[1].valueInteger = 1
+* group.element[2].target.extension[0].extension[2].url = "fixedValue"
+* group.element[2].target.extension[0].extension[2].valueString = "\"http://hl7.org/fhir/StructureDefinition/observation-v2-subid\""
 * group.element[2].target.display = "extension[1]:group.url"
 * group.element[3].code = #OG.2
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -104,6 +108,8 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[0].valueInteger = 1
 * group.element[4].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
+* group.element[4].target.extension[0].extension[2].url = "fixedValue"
+* group.element[4].target.extension[0].extension[2].valueString = "\"http://hl7.org/fhir/StructureDefinition/observation-v2-subid\""
 * group.element[4].target.display = "extension[1]:group.url"
 * group.element[5].code = #OG.3
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -140,6 +146,8 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[0].valueInteger = 1
 * group.element[6].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[1].valueInteger = 1
+* group.element[6].target.extension[0].extension[2].url = "fixedValue"
+* group.element[6].target.extension[0].extension[2].valueString = "\"http://hl7.org/fhir/StructureDefinition/observation-v2-subid\""
 * group.element[6].target.display = "extension[1]:group.url"
 * group.element[7].code = #OG.4
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

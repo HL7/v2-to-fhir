@@ -34,6 +34,8 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
+* group.element[0].target.extension[0].extension[3].url = "mappedVia"
+* group.element[0].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70487-to-v2-0487"
 * group.element[0].target.display = "type"
 * group.element[1].code = #SPS.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -53,6 +55,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "mappedVia"
+* group.element[1].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70371-to-v2-0371"
 * group.element[1].target.display = "container.additiveCodeableConcept"
 * group.element[2].code = #SPS.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -91,6 +95,8 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].valueInteger = 1
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
+* group.element[3].target.extension[0].extension[3].url = "mappedVia"
+* group.element[3].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70163-to-v2-0163"
 * group.element[3].target.display = "collection.bodySite"
 * group.element[4].code = #SPS.6
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -110,5 +116,7 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 1
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "mappedVia"
+* group.element[4].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70493-to-v2-0493"
 * group.element[4].target.display = "condition"
 * group.element[4].target.comment = "Note that in v2.5.1 only F (Frozen) and R(Refrigirated) are indicated without a full table.  SpecimenCondition would be used in more curent case and is referenced if somebody used that table already."

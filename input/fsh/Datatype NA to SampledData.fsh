@@ -32,6 +32,8 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[0].valueInteger = 1
 * group.element[0].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
+* group.element[0].target.extension[0].extension[2].url = "fixedValue"
+* group.element[0].target.extension[0].extension[2].valueString = "NA.1"
 * group.element[0].target.display = ".data"
 * group.element[1].code = #NA.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -49,6 +51,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[0].valueInteger = 1
 * group.element[1].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[1].valueInteger = 1
+* group.element[1].target.extension[0].extension[2].url = "fixedValue"
+* group.element[1].target.extension[0].extension[2].valueString = "NA.1 + \"^\" + NA.2"
 * group.element[1].target.display = ".data"
 * group.element[2].code = #NA.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -66,6 +70,8 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[0].valueInteger = 1
 * group.element[2].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[1].valueInteger = 1
+* group.element[2].target.extension[0].extension[2].url = "fixedValue"
+* group.element[2].target.extension[0].extension[2].valueString = "NA.1 + \"^\" + NA.2 + \"^\" + NA.3"
 * group.element[2].target.display = ".data"
 * group.element[3].code = #NA.4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -83,4 +89,6 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[0].valueInteger = 1
 * group.element[3].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[1].valueInteger = 1
+* group.element[3].target.extension[0].extension[2].url = "fixedValue"
+* group.element[3].target.extension[0].extension[2].valueString = "NA.1 + \"^\" + NA.2 + \"^\" + NA.3 + \"^\" NA.4"
 * group.element[3].target.display = ".data"

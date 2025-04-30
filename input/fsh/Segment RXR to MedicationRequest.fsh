@@ -34,6 +34,8 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 0
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
+* group.element[0].target.extension[0].extension[3].url = "mappedVia"
+* group.element[0].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70162-to-v2-0162"
 * group.element[0].target.display = "dosageInstruction.route"
 * group.element[1].code = #RXR-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -53,6 +55,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 0
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "mappedVia"
+* group.element[1].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70550-to-v2-0550"
 * group.element[1].target.display = "dosageInstruction.site"
 * group.element[2].code = #RXR-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -72,6 +76,8 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].valueInteger = 0
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
+* group.element[2].target.extension[0].extension[3].url = "mappedVia"
+* group.element[2].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70165-to-sct"
 * group.element[2].target.display = "dosageInstruciton.method"
 * group.element[3].code = #RXR-5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -91,4 +97,6 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].valueInteger = 0
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = -1
+* group.element[3].target.extension[0].extension[3].url = "mappedVia"
+* group.element[3].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[3].target.display = "dosageInstruction.additionalInstruction"

@@ -125,6 +125,8 @@ Usage: #definition
 * group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"code"
+* group.element[5].target.extension[0].extension[1].url = "fixedValue"
+* group.element[5].target.extension[0].extension[1].valueString = "\"AP\""
 * group.element[5].target.display = "performer.function.coding.code"
 * group.element[6].code = #RXA-10
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -140,6 +142,8 @@ Usage: #definition
 * group.element[6].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].target.extension[0].extension[0].url = "type"
 * group.element[6].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[6].target.extension[0].extension[1].url = "fixedValue"
+* group.element[6].target.extension[0].extension[1].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0443\""
 * group.element[6].target.display = "performer.function.coding.system"
 * group.element[7].code = #RXA-15
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -254,6 +258,8 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[1].valueInteger = 1
 * group.element[12].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
+* group.element[12].target.extension[0].extension[3].url = "mappedVia"
+* group.element[12].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70322-to-event-status"
 * group.element[12].target.display = "status"
 * group.element[13].code = #RXA-20
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -273,6 +279,8 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[1].valueInteger = 1
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
+* group.element[13].target.extension[0].extension[3].url = "fixedValue"
+* group.element[13].target.extension[0].extension[3].valueString = "\"completed\""
 * group.element[13].target.display = "status"
 * group.element[14].code = #RXA-21
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -292,6 +300,8 @@ Usage: #definition
 * group.element[14].target.extension[0].extension[1].valueInteger = 1
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
+* group.element[14].target.extension[0].extension[3].url = "fixedValue"
+* group.element[14].target.extension[0].extension[3].valueString = "\"entered-in-error\""
 * group.element[14].target.display = "status"
 * group.element[15].code = #RXA-22
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

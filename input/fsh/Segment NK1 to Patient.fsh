@@ -53,6 +53,8 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[1].valueInteger = 0
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
+* group.element[1].target.extension[0].extension[3].url = "mappedVia"
+* group.element[1].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70063-to-v3-rolecode"
 * group.element[1].target.display = "contact.relationship[1]"
 * group.element[2].code = #NK1-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -130,6 +132,8 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[1].valueInteger = 0
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
+* group.element[5].target.extension[0].extension[3].url = "fixedValue"
+* group.element[5].target.extension[0].extension[3].valueString = "\"work\""
 * group.element[5].target.display = "contact.telecom[2].type.use"
 * group.element[6].code = #NK1-7
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -149,6 +153,8 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[1].valueInteger = 0
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = -1
+* group.element[6].target.extension[0].extension[3].url = "mappedVia"
+* group.element[6].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70131-to-v2-0131"
 * group.element[6].target.display = "contact.relationship[2]"
 * group.element[6].target.comment = "Should we update the names in the base FHIR standard as the names and value sets are confusing?  It's normative, so has to have a very strong case."
 * group.element[7].code = #NK1-8
@@ -226,6 +232,8 @@ Usage: #definition
 * group.element[10].target.extension[0].extension[1].valueInteger = 0
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
+* group.element[10].target.extension[0].extension[3].url = "mappedVia"
+* group.element[10].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70001-to-administrative-gender"
 * group.element[10].target.display = "contact.gender"
 * group.element[11].code = #NK1-30
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

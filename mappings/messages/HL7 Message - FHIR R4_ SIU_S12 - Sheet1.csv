@@ -18,7 +18,8 @@ ServiceRequest[1..n].subject=Patient[1].id",,
 4.2,SIU_S12.PATIENT.PV1,[ PV1 ],Patient Visit,0,1,,,,Patient[1],PV1[Patient],,,
 4.2,SIU_S12.PATIENT.PV1,[ PV1 ],Patient Visit,0,1,IF PV1-20 VALUE,,,Coverage[1],PV1[Coverage],Coverage.beneficiary.reference=Patient[1].id,,
 4.3,SIU_S12.PATIENT.PV2,[ PV2 ] ,Patient Visit - Additional Info,0,1,,,,Encounter[1],PV2[Encounter],Encounter.subject=Patient[1].id,,Incorporate PV2 content into the Encounter created from the PV1 segment.
-4.4,SIU_S12.PATIENT.OBX,[ { OBX } ],Observation/Result,0,-1,,,,Observation,OBX[Observation],Observation.subject=Patient[1].id,,
+4.4,SIU_S12.PATIENT.OBX,[ { OBX } ],Observation/Result,0,-1,"IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS ""NA""",,,Observation[1],OBX[Observation],Observation.subject=Patient[1].id,,
+4.4,SIU_S12.PATIENT.OBX,[ { OBX } ],Observation/Result,0,-1,"IF  OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT ""NA""",,,Observation[1],OBX[Observation-Component],Observation.subject=Patient[1].id,,"Note that when OBX-5 repeats, the standard mapping is to use Observation.component (see OBX[Observation-Component] map) rather than creating separate Observation instances.  However, we are aware that some profiles and implementation guides do separate the OBX into multiple observations depending on the OBX-2 value.  This is an example of a non-standard interpretation as the OBX should have been separated into multiple OBX segments to start.  Please consider the local profiles and implementation guides on how to manage these variants."
 4.5,SIU_S12.PATIENT.DG1,[ { DG1 } ],Diagnosis,0,-1,,,If in context of the patient,Condition[1],DG1[Condition],Condition[1].subject.reference=Patient[1].id,,Processing of the DG1 segment results in the creation of a new Condition resource
 4.6,SIU_S12.PATIENT,}],--- PATIENT end,0,-1,,,,,,,,
 5,SIU_S12.RESOURCES,{,--- RESOURCES begin RGS,1,-1,,,,,,,,

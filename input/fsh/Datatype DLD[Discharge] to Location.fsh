@@ -30,4 +30,6 @@ Usage: #definition
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"CodeableConcept"
+* group.element[0].target.extension[0].extension[1].url = "mappedVia"
+* group.element[0].target.extension[0].extension[1].valueUrl = "unspecified_mapping"
 * group.element[0].target.display = "type"

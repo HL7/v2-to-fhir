@@ -34,5 +34,7 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 1
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
+* group.element[0].target.extension[0].extension[3].url = "mappedVia"
+* group.element[0].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70485-to-request-priority"
 * group.element[0].target.display = "priority"
 * group.element[0].target.comment = "A translation from the text priority in the v2 message to a coded value in the request-priority value set will be required."

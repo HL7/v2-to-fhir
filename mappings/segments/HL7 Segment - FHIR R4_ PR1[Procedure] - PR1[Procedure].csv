@@ -4,7 +4,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 0,PR1,,,,,,,"The value mapping depends on the message context where the PR1 is used and to be determined by the implementer.  If not clear, use ""unknown"".",status,,code,1,1,,,,,
 1,PR1-1,Set ID - PR1,SI,1,1,,,,,,,,,,,,,
 2,PR1-2,Procedure Coding Method,IS,1,-1,,,,,,,,,,,,,PR1-2 was deprecated in v2.3
-3,PR1-3,Procedure Code,CNE,1,-1,,,,code,,CodeableConcept,0,1,CNE[CodeableConcept],,,,
+3,PR1-3,Procedure Code,CNE,1,-1,,,,code[1],,CodeableConcept,0,1,CNE[CodeableConcept],,,,
 4,PR1-4,Procedure Description,ST,0,-1,IF PR1-3.9 NOT VALUED,,,code.text,,string,0,1,,,,,PR1-4 was deprecated in v2.3
 5,PR1-5,Procedure Date/Time,DTM,1,1,IF PR1-7 NOT VALUED,,,performedDateTime,,dateTime,0,1,,,,,
 5,PR1-5,Procedure Date/Time,DTM,1,1,IF PR1-7 VALUED AND PR1-5.5 NOT VALUED,,,performedDateTime,,dateTime,0,1,,,,,The Procedure date/time must be at least to the granularity of minutes if a performedPeriod is to be created from PR1-5 and PR1-7
@@ -24,7 +24,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 13,PR1-13,Consent Code,CWE,0,1,,,,,,,,,,,,,
 14,PR1-14,Procedure Priority,NM,0,1,,,,,,,,,,,,,
 15,PR1-15,Associated Diagnosis Code,CWE,0,1,,,,reasonCode,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
-16,PR1-16,Procedure Code Modifier,CNE,0,-1,,,,,,,,,,,,,
+16,PR1-16,Procedure Code Modifier,CNE,0,-1,,,,code[1].value,,CodeableConcept,0,1,CNE[CodeableConcept],,"PR1-3.1 + "":"" + PR1-16.1",,"If there are multiple modifiers, they are all further concatenated using the "":"" as the separator into Procedure.code.value in accordance to the guidance here: https://terminology.hl7.org/CPT.html#modifier-syntax"
 17,PR1-17,Procedure DRG Type,CWE,0,1,,,,,,,,,,,,,
 18,PR1-18,Tissue Type Code,CWE,0,-1,,,,,,,,,,,,,
 19,PR1-19,Procedure Identifier,EI,0,1,,,,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,

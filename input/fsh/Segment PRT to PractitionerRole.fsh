@@ -34,6 +34,8 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 0
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
+* group.element[0].target.extension[0].extension[3].url = "mappedVia"
+* group.element[0].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70912-to-practitioner-role"
 * group.element[0].target.display = "code"
 * group.element[1].code = #PRT-5
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -92,6 +94,8 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].valueInteger = 0
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
+* group.element[3].target.extension[0].extension[3].url = "mappedVia"
+* group.element[3].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[3].target.display = "organization[Organization.type]"
 * group.element[4].code = #PRT-8
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -341,6 +345,8 @@ Usage: #definition
 * group.element[16].target.extension[0].extension[1].valueInteger = 0
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
+* group.element[16].target.extension[0].extension[3].url = "fixedValue"
+* group.element[16].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
 * group.element[16].target.display = "telecom[1].extension[1].url"
 * group.element[17].code = #PRT-23
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -360,6 +366,8 @@ Usage: #definition
 * group.element[17].target.extension[0].extension[1].valueInteger = 0
 * group.element[17].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[17].target.extension[0].extension[2].valueInteger = 1
+* group.element[17].target.extension[0].extension[3].url = "fixedValue"
+* group.element[17].target.extension[0].extension[3].valueString = "\"true\""
 * group.element[17].target.display = "telecom[1].extension[1].valueBoolean"
 * group.element[18].code = #PRT-23
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -379,6 +387,8 @@ Usage: #definition
 * group.element[18].target.extension[0].extension[1].valueInteger = 0
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = 1
+* group.element[18].target.extension[0].extension[3].url = "fixedValue"
+* group.element[18].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
 * group.element[18].target.display = "telecom[2].extension[1].url"
 * group.element[19].code = #PRT-23
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -398,6 +408,8 @@ Usage: #definition
 * group.element[19].target.extension[0].extension[1].valueInteger = 0
 * group.element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[19].target.extension[0].extension[2].valueInteger = 1
+* group.element[19].target.extension[0].extension[3].url = "fixedValue"
+* group.element[19].target.extension[0].extension[3].valueString = "\"true\""
 * group.element[19].target.display = "telecom[2].extension[1].valueBoolean"
 * group.element[20].code = #PRT-23
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -417,6 +429,8 @@ Usage: #definition
 * group.element[20].target.extension[0].extension[1].valueInteger = 0
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
+* group.element[20].target.extension[0].extension[3].url = "fixedValue"
+* group.element[20].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
 * group.element[20].target.display = "telecom[3].extension[1].url"
 * group.element[21].code = #PRT-23
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -436,6 +450,8 @@ Usage: #definition
 * group.element[21].target.extension[0].extension[1].valueInteger = 0
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = 1
+* group.element[21].target.extension[0].extension[3].url = "fixedValue"
+* group.element[21].target.extension[0].extension[3].valueString = "\"true\""
 * group.element[21].target.display = "telecom[3].extension[1].valueBoolean"
 * group.element[22].code = #PRT-23
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -455,6 +471,8 @@ Usage: #definition
 * group.element[22].target.extension[0].extension[1].valueInteger = 0
 * group.element[22].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[22].target.extension[0].extension[2].valueInteger = 1
+* group.element[22].target.extension[0].extension[3].url = "fixedValue"
+* group.element[22].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
 * group.element[22].target.display = "telecom[4].extension[1].url"
 * group.element[23].code = #PRT-23
 * group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -474,6 +492,8 @@ Usage: #definition
 * group.element[23].target.extension[0].extension[1].valueInteger = 0
 * group.element[23].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[23].target.extension[0].extension[2].valueInteger = 1
+* group.element[23].target.extension[0].extension[3].url = "fixedValue"
+* group.element[23].target.extension[0].extension[3].valueString = "\"true\""
 * group.element[23].target.display = "telecom[4].extension[1].valueBoolean"
 * group.element[24].code = #PRT-23
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -493,6 +513,8 @@ Usage: #definition
 * group.element[24].target.extension[0].extension[1].valueInteger = 0
 * group.element[24].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[24].target.extension[0].extension[2].valueInteger = 1
+* group.element[24].target.extension[0].extension[3].url = "fixedValue"
+* group.element[24].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
 * group.element[24].target.display = "telecom[5].extension[1].url"
 * group.element[25].code = #PRT-23
 * group.element[25].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -512,6 +534,8 @@ Usage: #definition
 * group.element[25].target.extension[0].extension[1].valueInteger = 0
 * group.element[25].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[25].target.extension[0].extension[2].valueInteger = 1
+* group.element[25].target.extension[0].extension[3].url = "fixedValue"
+* group.element[25].target.extension[0].extension[3].valueString = "\"true\""
 * group.element[25].target.display = "telecom[5].extension[1].valueBoolean"
 * group.element[26].code = #PRT-23
 * group.element[26].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -531,6 +555,8 @@ Usage: #definition
 * group.element[26].target.extension[0].extension[1].valueInteger = 0
 * group.element[26].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[26].target.extension[0].extension[2].valueInteger = 1
+* group.element[26].target.extension[0].extension[3].url = "fixedValue"
+* group.element[26].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/iso21090-preferred\""
 * group.element[26].target.display = "telecom[6].extension[1].url"
 * group.element[27].code = #PRT-23
 * group.element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -550,6 +576,8 @@ Usage: #definition
 * group.element[27].target.extension[0].extension[1].valueInteger = 0
 * group.element[27].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[27].target.extension[0].extension[2].valueInteger = 1
+* group.element[27].target.extension[0].extension[3].url = "fixedValue"
+* group.element[27].target.extension[0].extension[3].valueString = "\"true\""
 * group.element[27].target.display = "telecom[6].extension[1].valueBoolean"
 * group.element[28].code = #PRT-24
 * group.element[28].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

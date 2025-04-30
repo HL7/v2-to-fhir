@@ -224,6 +224,10 @@ Usage: #definition
 * group.element[19].target.equivalence = #equivalent
 * group.element[19].target.code = #Provenance
 * group.element[19].target.display = "Provenance"
+* group.element[19].target.comment = """
+It is up to the implementer to be sensitive whether this message is new to the receiver or an update to a prior one and only update Provenance for new updates.
+Also, as TXA-8 Edit Date Time can repeat, a separate Provenance instance must be created for each edit date time of interest.\
+"""
 * group.element[20].code = #MDM_T02.OBSERVATION.OBX
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "cardinalityMin"

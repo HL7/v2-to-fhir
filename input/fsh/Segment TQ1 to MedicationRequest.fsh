@@ -130,6 +130,8 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[1].valueInteger = 0
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
+* group.element[5].target.extension[0].extension[3].url = "fixedValue"
+* group.element[5].target.extension[0].extension[3].valueString = "occurrenceTiming.boundPeriod.start + TQ1-6"
 * group.element[5].target.display = "occurrenceTiming.boundsPeriod.end"
 * group.element[6].code = #TQ1-6
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -149,6 +151,8 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[1].valueInteger = 0
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
+* group.element[6].target.extension[0].extension[3].url = "fixedValue"
+* group.element[6].target.extension[0].extension[3].valueString = "occurrenceTiming.boundPeriod.end - TQ1-6"
 * group.element[6].target.display = "occurneceTiming.boundsPeriod.start"
 * group.element[7].code = #TQ1-7
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -206,6 +210,8 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[1].valueInteger = 0
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
+* group.element[9].target.extension[0].extension[3].url = "mappedVia"
+* group.element[9].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70485-to-request-priority"
 * group.element[9].target.display = "priority"
 * group.element[10].code = #TQ1-10
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

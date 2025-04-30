@@ -62,6 +62,8 @@ Usage: #definition
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"code"
+* group.element[2].target.extension[0].extension[1].url = "fixedValue"
+* group.element[2].target.extension[0].extension[1].valueString = "\"text/hl7v2\""
 * group.element[2].target.display = "content[2].contentType"
 * group.element[3].code = #OBX-5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -109,4 +111,6 @@ Usage: #definition
 * group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"code"
+* group.element[5].target.extension[0].extension[1].url = "fixedValue"
+* group.element[5].target.extension[0].extension[1].valueString = "\"application/text\""
 * group.element[5].target.display = "content[4].contentType"

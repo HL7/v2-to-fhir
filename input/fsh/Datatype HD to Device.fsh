@@ -61,6 +61,8 @@ Usage: #definition
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"CodeableConcept"
+* group.element[2].target.extension[0].extension[1].url = "mappedVia"
+* group.element[2].target.extension[0].extension[1].valueUrl = "ConceptMap/table-hl70301-to-v2-0301"
 * group.element[2].target.display = "identifier[2].type"
 * group.element[2].target.comment = "Request that DNS, ISO, and UUID (and other Table 0301 values) are added to: http://hl7.org/fhir/valueset-identifier-type.html"
 * group.element[3].code = #HD.3
@@ -77,4 +79,6 @@ Usage: #definition
 * group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[3].target.extension[0].extension[1].url = "fixedValue"
+* group.element[3].target.extension[0].extension[1].valueString = "\"urn:ietf:rfc:3986\""
 * group.element[3].target.display = "identifier[2].system"

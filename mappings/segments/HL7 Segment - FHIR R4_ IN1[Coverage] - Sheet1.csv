@@ -10,7 +10,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 7,IN1-7,Insurance Co Phone Number,XTN,0,-1,,,,,,,,,,,,,
 8,IN1-8,Group Number,ST,0,1,,,,,,,,,,,,,
 9,IN1-9,Group Name,XON,0,-1,,,,,,,,,,,,,
-10,IN1-10,Insured's Group Emp ID,CX,0,-1,"IF CX.5 IS ""SN"" ",,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/R5/StructureDefinition/extension-subscriberId""",,
+10,IN1-10,Insured's Group Emp ID,CX,0,-1,"IF CX.5 IS ""SN"" ",,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/5.0/StructureDefinition/extension-subscriberId""",,
 10,IN1-10,Insured's Group Emp ID,CX,0,-1,"IF CX.5 IS ""SN"" ",,,extension[1].valueIdentifier,,Identifier,,,CX[Identifier],,,,
 10,IN1-10,Insured's Group Emp ID,CX,0,-1,,,,policyHolder([1]Organization.identifier),,Identifier,0,-1,CX[Identifier],,,,"If one has identifiers of other types, one must determine where it fits best."
 11,IN1-11,Insured's Group Emp Name,XON,0,-1,,,,policyHolder[1](Organization),,Reference,,,XON[Organization],,,,
@@ -52,7 +52,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 46,IN1-46,Prior Insurance Plan ID,CWE,0,1,,,,,,,,,,,,,
 47,IN1-47,Coverage Type,CWE,0,1,,,,,,,,,,,,,
 48,IN1-48,Handicap,CWE,0,1,,,,,,,,,,,,,
-49,IN1-49,Insured's ID Number,CX,0,-1,,,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/R5/StructureDefinition/extension-subscriberId""",,
+49,IN1-49,Insured's ID Number,CX,0,-1,,,,extension[1].url,,uri,,,,,"""http://hl7.org/fhir/5.0/StructureDefinition/extension-subscriberId""",,
 49,IN1-49,Insured's ID Number,CX,0,-1,,,,extension[1].valueIdentifier,,Identifier,,,CX[Identifier],,,,
 50,IN1-50,Signature Code,CWE,0,1,,,,,,,,,,,,,
 51,IN1-51,Signature Code Date,DT,0,1,,,,,,,,,,,,,

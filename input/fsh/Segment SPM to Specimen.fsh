@@ -110,6 +110,8 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 0
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "mappedVia"
+* group.element[4].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70487-to-v2-0487"
 * group.element[4].target.display = "type"
 * group.element[5].code = #SPM-6
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -129,6 +131,8 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[1].valueInteger = 0
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
+* group.element[5].target.extension[0].extension[3].url = "mappedVia"
+* group.element[5].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70371-to-v2-0371"
 * group.element[5].target.display = "container.additiveCodeableConcept"
 * group.element[6].code = #SPM-7
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -148,6 +152,8 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[1].valueInteger = 0
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
+* group.element[6].target.extension[0].extension[3].url = "mappedVia"
+* group.element[6].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70488-to-v2-0488"
 * group.element[6].target.display = "collection.method"
 * group.element[6].target.comment = "This should not be populated in a message corresponding to a ServiceRequest (eg ORM)"
 * group.element[7].code = #SPM-8
@@ -168,6 +174,8 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[1].valueInteger = 0
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
+* group.element[7].target.extension[0].extension[3].url = "mappedVia"
+* group.element[7].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[7].target.display = "collection.bodySite"
 * group.element[7].target.comment = "This should not be populated in a message corresponding to a ServiceRequest (eg ORM)"
 * group.element[8].code = #SPM-12
@@ -269,6 +277,8 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[1].valueInteger = 0
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
+* group.element[13].target.extension[0].extension[3].url = "mappedVia"
+* group.element[13].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70136-to-specimen-status"
 * group.element[13].target.display = "status"
 * group.element[14].code = #SPM-24
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -288,6 +298,8 @@ Usage: #definition
 * group.element[14].target.extension[0].extension[1].valueInteger = 0
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = -1
+* group.element[14].target.extension[0].extension[3].url = "mappedVia"
+* group.element[14].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70493-to-v2-0493"
 * group.element[14].target.display = "condition"
 * group.element[15].code = #SPM-27
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -307,6 +319,8 @@ Usage: #definition
 * group.element[15].target.extension[0].extension[1].valueInteger = 0
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
+* group.element[15].target.extension[0].extension[3].url = "mappedVia"
+* group.element[15].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[15].target.display = "container.type"
 * group.element[16].code = #SPM-30
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

@@ -22,4 +22,6 @@ Usage: #definition
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"markdown"
+* group.element[0].target.extension[0].extension[1].url = "fixedValue"
+* group.element[0].target.extension[0].extension[1].valueString = "/include full field (inlcuding delimiters or xml tags)/"
 * group.element[0].target.display = "text"

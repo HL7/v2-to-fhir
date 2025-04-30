@@ -30,6 +30,8 @@ Usage: #definition
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[0].target.extension[0].extension[1].url = "fixedValue"
+* group.element[0].target.extension[0].extension[1].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.subject\""
 * group.element[0].target.display = "extension[1].url"
 * group.element[1].code = #PID-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -79,6 +81,8 @@ Usage: #definition
 * group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[3].target.extension[0].extension[1].url = "fixedValue"
+* group.element[3].target.extension[0].extension[1].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.subject\""
 * group.element[3].target.display = "extension[2].url"
 * group.element[4].code = #PID-3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -128,6 +132,8 @@ Usage: #definition
 * group.element[6].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].target.extension[0].extension[0].url = "type"
 * group.element[6].target.extension[0].extension[0].valueCode = #"uri"
+* group.element[6].target.extension[0].extension[1].url = "fixedValue"
+* group.element[6].target.extension[0].extension[1].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.subject\""
 * group.element[6].target.display = "extension[3].url"
 * group.element[7].code = #PID-4
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

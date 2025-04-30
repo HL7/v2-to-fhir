@@ -83,6 +83,8 @@ Usage: #definition
 * group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"code"
+* group.element[3].target.extension[0].extension[1].url = "fixedValue"
+* group.element[3].target.extension[0].extension[1].valueString = "\"manufacturer-name\""
 * group.element[3].target.display = "deviceName.type"
 * group.element[4].code = #SFT-4
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -136,6 +138,8 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[1].valueInteger = 1
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
+* group.element[6].target.extension[0].extension[3].url = "fixedValue"
+* group.element[6].target.extension[0].extension[3].valueString = "\"https://hl7.org/fhir/5.0/StructureDefinition/extension-Device.version.installDate\""
 * group.element[6].target.display = "version.extension[1].url"
 * group.element[7].code = #SFT-6
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

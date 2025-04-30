@@ -42,7 +42,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 25,ORC-25,Order Status Modifier,CWE,0,1,,,,,,,,,,,,,
 26,ORC-26,Advanced Beneficiary Notice Override Reason,CWE,0,1,,,,,,,,,,,,,
 27,ORC-27,Filler's Expected Availability Date/Time,DTM,0,1,,,,,,,,,,,,,
-28,ORC-28,Confidentiality Code,CWE,0,1,,,,,,,,,,,,,
+28,ORC-28,Confidentiality Code,CWE,0,1,,,,meta.security,,Coding,0,-1,CWE[Coding],ConfidentialityCode,,,
 29,ORC-29,Order Type,CWE,0,1,,,,,,,,,,,,,
 30,ORC-30,Enterer Authorization Mode,CNE,0,1,,,,,,,,,,,,,
 31,ORC-31,Parent Universal Service Identifier,CWE,0,1,,,,,,,,,,,,,

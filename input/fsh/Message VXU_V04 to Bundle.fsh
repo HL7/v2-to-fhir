@@ -214,6 +214,7 @@ Usage: #definition
 * group.element[18].target.equivalence = #equivalent
 * group.element[18].target.code = #Observation[1]
 * group.element[18].target.display = "Observation[1]"
+* group.element[18].target.comment = "Note that when OBX-5 repeats, the standard mapping is to use Observation.component (see OBX[Observation-Component] map) rather than creating separate Observation instances.  However, we are aware that some profiles and implementation guides do separate the OBX into multiple observations depending on the OBX-2 value.  This is an example of a non-standard interpretation as the OBX should have been separated into multiple OBX segments to start.  Please consider the local profiles and implementation guides on how to manage these variants."
 * group.element[19].code = #VXU_V04.PERSON_OBSERVATION.PRT
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "cardinalityMin"

@@ -57,6 +57,8 @@ Usage: #definition
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"Period"
+* group.element[2].target.extension[0].extension[1].url = "fixedValue"
+* group.element[2].target.extension[0].extension[1].valueString = "/.start + AIS-5 according to AIS-6 units/"
 * group.element[2].target.display = "occurrencePeriod.start"
 * group.element[3].code = #AIS-7
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -72,6 +74,8 @@ Usage: #definition
 * group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].target.extension[0].extension[0].url = "type"
 * group.element[3].target.extension[0].extension[0].valueCode = #"Period"
+* group.element[3].target.extension[0].extension[1].url = "fixedValue"
+* group.element[3].target.extension[0].extension[1].valueString = "ServiceRequest.occurrencePeriod.start+ AIS-7"
 * group.element[3].target.display = "occurrencePeriod.end"
 * group.element[4].code = #AIS-11
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

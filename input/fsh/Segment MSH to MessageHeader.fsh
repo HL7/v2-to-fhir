@@ -53,12 +53,9 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "source[1].endpoint"
 * group.element[1].target.comment = """
-We believe that if MSH-24 is vaued, although it is rarely valued, it contains better information for the MessageHeader.source.endpoint.  However, one may either still want to use MSH-3 in total or a combination of content from MSH-3 and MSH-24.  That is a local implementation decision to adjust the mapping accordingly.
+We believe that if MSH-24 is vaued, although MSH-24 is rarely valued, it contains better information for the  MessageHeader.source.endpoint than MSH-3.  However, one may either still want to use MSH-3 in total or a combination of content from MSH-3 and MSH-24.  That is a local implementation decision to adjust the mapping accordingly based on clear knowledge of the content.
 
-Example: MSH|^~%|LAB^2.16.840.1.113883.3.987.1^ISO|...
-Example: MSH|^~%|LAB|…
-
-If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer needs to resolve whether to assign this a known value since they know the context, or add the data absent reason extension to provide a reason and satisfies the mandatory FHIR attribute rules.  Note that the use of the data-absent-reason extension may result  in a FHIR resource that is not usable by the recipient.\
+If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the implementer needs to resolve how to assign MessageHeader.source as it is a required attribute.  Note that a data absent reason extension could be used to provide a reason and satisfy the mandatory FHIR attribute rules.  But do note that the use of the data-absent-reason extension may result  in a FHIR resource that is not usable by the recipient.\
 """
 * group.element[2].code = #MSH-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -98,7 +95,7 @@ If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer ne
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "destination[1].target(Device)"
-* group.element[3].target.comment = "Example: MSH...|RH^2.16.840.1.113883.632.3^ISO|..."
+* group.element[3].target.comment = "Similar as for MSH-3, MSH-5 is paired with MSH-25 and depending on local use may need to use one, the other, or a combination of both.  We believe that MSH-25, when valued, provides the better information given its addition to the standard more recently."
 * group.element[4].code = #MSH-5
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -217,6 +214,8 @@ If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer ne
 * group.element[10].target.extension[0].extension[1].valueInteger = 0
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
+* group.element[10].target.extension[0].extension[3].url = "mappedVia"
+* group.element[10].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70399-to-iso3166-1edition2alpha3"
 * group.element[10].target.display = "sender(Organization.address.country)"
 * group.element[11].code = #MSH-19
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -236,6 +235,8 @@ If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer ne
 * group.element[11].target.extension[0].extension[1].valueInteger = 0
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
+* group.element[11].target.extension[0].extension[3].url = "mappedVia"
+* group.element[11].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[11].target.display = "language"
 * group.element[11].target.comment = "This does only cover the MessageHeader resource. Need to have clarity that if other resources that are part of the message that do not have Resource.meta.language valued, then it is assumed to follow MessageHeader.meta.language?? Doesn't seem RESTful, so what is the default for Resource.meta.language?"
 * group.element[12].code = #MSH-22
@@ -315,6 +316,8 @@ If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer ne
 * group.element[15].target.extension[0].extension[1].valueInteger = 0
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
+* group.element[15].target.extension[0].extension[3].url = "fixedValue"
+* group.element[15].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/R4/extension-data-absent-reason.html\""
 * group.element[15].target.display = "source.endpoint.extension.url"
 * group.element[16].code = #MSH-24
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -334,6 +337,8 @@ If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer ne
 * group.element[16].target.extension[0].extension[1].valueInteger = 0
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
+* group.element[16].target.extension[0].extension[3].url = "fixedValue"
+* group.element[16].target.extension[0].extension[3].valueString = "\"unknown\""
 * group.element[16].target.display = "source.endpoint.extension.valueCode"
 * group.element[16].target.comment = "If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer needs to resolve whether to assign this a known value since they know the context, or add the data absent reason extension to provide a reason and satisfies the mandatory FHIR attribute rules.  Note that the use of the data-absent-reason extension may result  in a FHIR resource that is not usable by the recipient."
 * group.element[17].code = #MSH-25
@@ -374,6 +379,8 @@ If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer ne
 * group.element[18].target.extension[0].extension[1].valueInteger = 0
 * group.element[18].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[18].target.extension[0].extension[2].valueInteger = -1
+* group.element[18].target.extension[0].extension[3].url = "fixedValue"
+* group.element[18].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/R4/extension-data-absent-reason.html\""
 * group.element[18].target.display = "destination[1].endpoint.extension.url"
 * group.element[19].code = #MSH-25
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -393,6 +400,8 @@ If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer ne
 * group.element[19].target.extension[0].extension[1].valueInteger = 0
 * group.element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[19].target.extension[0].extension[2].valueInteger = -1
+* group.element[19].target.extension[0].extension[3].url = "fixedValue"
+* group.element[19].target.extension[0].extension[3].valueString = "\"unknown\""
 * group.element[19].target.display = "destination[1].endpoint.extension.valueCode"
 * group.element[20].code = #MSH-26
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -412,6 +421,8 @@ If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer ne
 * group.element[20].target.extension[0].extension[1].valueInteger = 0
 * group.element[20].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[20].target.extension[0].extension[2].valueInteger = -1
+* group.element[20].target.extension[0].extension[3].url = "mappedVia"
+* group.element[20].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[20].target.display = "meta.security[2]"
 * group.element[21].code = #MSH-27
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -431,4 +442,6 @@ If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer ne
 * group.element[21].target.extension[0].extension[1].valueInteger = 0
 * group.element[21].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[21].target.extension[0].extension[2].valueInteger = -1
+* group.element[21].target.extension[0].extension[3].url = "mappedVia"
+* group.element[21].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[21].target.display = "meta.security[2]"

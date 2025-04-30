@@ -89,4 +89,6 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].valueInteger = 0
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
+* group.element[4].target.extension[0].extension[3].url = "mappedVia"
+* group.element[4].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70278-to-appointmentstatus"
 * group.element[4].target.display = "status"
