@@ -57,6 +57,10 @@ We believe that if MSH-24 is vaued, although MSH-24 is rarely valued, it contain
 
 If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the implementer needs to resolve how to assign MessageHeader.source as it is a required attribute.  Note that a data absent reason extension could be used to provide a reason and satisfy the mandatory FHIR attribute rules.  But do note that the use of the data-absent-reason extension may result  in a FHIR resource that is not usable by the recipient.\
 """
+* group.element[1].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[1].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[1].target.dependsOn[0].value = "IF MSH-24 NOT VALUED"
+* group.element[1].target.dependsOn[0].display = "IF MSH-24 NOT VALUED"
 * group.element[2].code = #MSH-4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -108,6 +112,10 @@ If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the impl
 * group.element[4].target.equivalence = #equivalent
 * group.element[4].target.code = #destination[1]
 * group.element[4].target.display = "destination[1]"
+* group.element[4].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[4].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[4].target.dependsOn[0].value = "IF MSH-25 VALUED"
+* group.element[4].target.dependsOn[0].display = "IF MSH-25 VALUED"
 * group.element[5].code = #MSH-5
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -120,6 +128,10 @@ If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the impl
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #destination[1]
 * group.element[5].target.display = "destination[1]"
+* group.element[5].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[5].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[5].target.dependsOn[0].value = "IF MSH-25 NOT VALUED"
+* group.element[5].target.dependsOn[0].display = "IF MSH-25 NOT VALUED"
 * group.element[6].code = #MSH-6
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -139,6 +151,10 @@ If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the impl
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "destination[1].receiver(Organization)"
+* group.element[6].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[6].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[6].target.dependsOn[0].value = "IF MSH-23 NOT VALUED"
+* group.element[6].target.dependsOn[0].display = "IF MSH-23 NOT VALUED"
 * group.element[7].code = #MSH-8
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -319,6 +335,10 @@ If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the impl
 * group.element[15].target.extension[0].extension[3].url = "fixedValue"
 * group.element[15].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/R4/extension-data-absent-reason.html\""
 * group.element[15].target.display = "source.endpoint.extension.url"
+* group.element[15].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[15].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[15].target.dependsOn[0].value = "IF MSH-24 NOT VALUED AND MSH-3 NOT VALUED"
+* group.element[15].target.dependsOn[0].display = "IF MSH-24 NOT VALUED AND MSH-3 NOT VALUED"
 * group.element[16].code = #MSH-24
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -341,6 +361,10 @@ If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the impl
 * group.element[16].target.extension[0].extension[3].valueString = "\"unknown\""
 * group.element[16].target.display = "source.endpoint.extension.valueCode"
 * group.element[16].target.comment = "If both MSH-3 and MSH-24 are not valued, which is valid, then the implementer needs to resolve whether to assign this a known value since they know the context, or add the data absent reason extension to provide a reason and satisfies the mandatory FHIR attribute rules.  Note that the use of the data-absent-reason extension may result  in a FHIR resource that is not usable by the recipient."
+* group.element[16].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[16].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[16].target.dependsOn[0].value = "IF MSH-24 NOT VALUED AND MSH-3 NOT VALUED"
+* group.element[16].target.dependsOn[0].display = "IF MSH-24 NOT VALUED AND MSH-3 NOT VALUED"
 * group.element[17].code = #MSH-25
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -382,6 +406,10 @@ If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the impl
 * group.element[18].target.extension[0].extension[3].url = "fixedValue"
 * group.element[18].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/R4/extension-data-absent-reason.html\""
 * group.element[18].target.display = "destination[1].endpoint.extension.url"
+* group.element[18].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[18].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[18].target.dependsOn[0].value = "IF MSH-25 NOT VALUED AND MSH-5 NOT VALUED"
+* group.element[18].target.dependsOn[0].display = "IF MSH-25 NOT VALUED AND MSH-5 NOT VALUED"
 * group.element[19].code = #MSH-25
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "type"
@@ -403,6 +431,10 @@ If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the impl
 * group.element[19].target.extension[0].extension[3].url = "fixedValue"
 * group.element[19].target.extension[0].extension[3].valueString = "\"unknown\""
 * group.element[19].target.display = "destination[1].endpoint.extension.valueCode"
+* group.element[19].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[19].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[19].target.dependsOn[0].value = "IF MSH-25 NOT VALUED AND MSH-5 NOT VALUED"
+* group.element[19].target.dependsOn[0].display = "IF MSH-25 NOT VALUED AND MSH-5 NOT VALUED"
 * group.element[20].code = #MSH-26
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "type"

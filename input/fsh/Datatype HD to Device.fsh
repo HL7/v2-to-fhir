@@ -82,3 +82,7 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].url = "fixedValue"
 * group.element[3].target.extension[0].extension[1].valueString = "\"urn:ietf:rfc:3986\""
 * group.element[3].target.display = "identifier[2].system"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF HD.3 IN (\"ISO\", \"UUID\")"
+* group.element[3].target.dependsOn[0].display = "IF HD.3 IN (\"ISO\", \"UUID\")"

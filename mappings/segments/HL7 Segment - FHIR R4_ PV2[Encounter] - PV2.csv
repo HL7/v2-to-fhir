@@ -15,7 +15,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 9,PV2-9,Expected Discharge Date/Time,DTM,0,1,,,,extension[2].url,,uri,0,1,,,"""http://hl7.org/fhir/v\5.0/StructureDefinition/extension-Encounter.plannedEndDate""",,
 9,PV2-9,Expected Discharge Date/Time,DTM,0,1,,,,extension[2].valueDateTime,,dateTime,0,1,,,,,
 10,PV2-10,Estimated Length of Inpatient Stay,NM,0,1,,,,,extension?-estimatedLength,Quantity,0,1,NM[Quantity-LengthOfStay],,,,
-11,PV2-11,Actual Length of Inpatient Stay,NM,0,1,,,,length,,Quantity,0,1,NM[Quantity-LengthOfStay],,,,
+11,PV2-11,Actual Length of Inpatient Stay,NM,0,1,,,,length,,Duration,0,1,NM[Quantity-LengthOfStay],,,,
 12,PV2-12,Visit Description,ST,0,1,,,,text.div,,xhtml,0,1,,,,,
 13,PV2-13,Referral Source Code,XCN,0,-1,,,,participant.individual(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
 13,PV2-13,Referral Source Code,XCN,0,-1,,,,participant.type.coding.code,,code,0,1,,,"""REF""",,

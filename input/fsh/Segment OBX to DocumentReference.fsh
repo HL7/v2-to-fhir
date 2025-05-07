@@ -26,12 +26,16 @@ Usage: #definition
 * group.element[0].extension[0].extension[2].valueInteger = -1
 * group.element[0].display = "Observation Value"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #content[1]
+* group.element[0].target.code = #content[1].attachment
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"Attachment"
-* group.element[0].target.display = "content[1]"
+* group.element[0].target.display = "content[1].attachment"
 * group.element[0].target.comment = "When OBX-5 repeats, each repeat yields a new .content instance."
+* group.element[0].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[0].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[0].target.dependsOn[0].value = "IF OBX-2=\"ED\""
+* group.element[0].target.dependsOn[0].display = "IF OBX-2=\"ED\""
 * group.element[1].code = #OBX-5
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -48,6 +52,10 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[0].valueCode = #"binary64"
 * group.element[1].target.display = "content[2].data"
 * group.element[1].target.comment = "When OBX-5 repeats, each repeat yields a line feed within .content[2].data"
+* group.element[1].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[1].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[1].target.dependsOn[0].value = "IF OBX-2=\"FT\""
+* group.element[1].target.dependsOn[0].display = "IF OBX-2=\"FT\""
 * group.element[2].code = #OBX-5
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -65,6 +73,10 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].url = "fixedValue"
 * group.element[2].target.extension[0].extension[1].valueString = "\"text/hl7v2\""
 * group.element[2].target.display = "content[2].contentType"
+* group.element[2].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[2].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[2].target.dependsOn[0].value = "IF OBX-2=\"FT\""
+* group.element[2].target.dependsOn[0].display = "IF OBX-2=\"FT\""
 * group.element[3].code = #OBX-5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -81,6 +93,10 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[0].valueCode = #"uri"
 * group.element[3].target.display = "content[3].url"
 * group.element[3].target.comment = "When OBX-5 repeats, each repeat yields a new .content instance."
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF OBX-2=\"RP\""
+* group.element[3].target.dependsOn[0].display = "IF OBX-2=\"RP\""
 * group.element[4].code = #OBX-5
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -97,6 +113,10 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[0].valueCode = #"binary64"
 * group.element[4].target.display = "content[4].data"
 * group.element[4].target.comment = "When OBX-5 repeats, each repeat yields a line feed within .content[4].data"
+* group.element[4].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[4].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[4].target.dependsOn[0].value = "IF OBX-2=\"TX\""
+* group.element[4].target.dependsOn[0].display = "IF OBX-2=\"TX\""
 * group.element[5].code = #OBX-5
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -114,3 +134,7 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[1].url = "fixedValue"
 * group.element[5].target.extension[0].extension[1].valueString = "\"application/text\""
 * group.element[5].target.display = "content[4].contentType"
+* group.element[5].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[5].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[5].target.dependsOn[0].value = "IF OBX-2=\"TX\""
+* group.element[5].target.dependsOn[0].display = "IF OBX-2=\"TX\""

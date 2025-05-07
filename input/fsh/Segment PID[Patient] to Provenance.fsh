@@ -19,6 +19,9 @@ Usage: #definition
 * group.element[0].code = #PID
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #recorded
+* group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[0].target.extension[0].extension[0].url = "fixedValue"
+* group.element[0].target.extension[0].extension[0].valueString = "/time of transformation/"
 * group.element[0].target.display = "recorded"
 * group.element[1].code = #PID
 * group.element[1].target.equivalence = #equivalent

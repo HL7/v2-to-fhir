@@ -60,6 +60,10 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[1].url = "fixedValue"
 * group.element[2].target.extension[0].extension[1].valueString = "/.start + AIS-5 according to AIS-6 units/"
 * group.element[2].target.display = "occurrencePeriod.start"
+* group.element[2].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[2].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[2].target.dependsOn[0].value = "IF AIS-4 NOT VALUED"
+* group.element[2].target.dependsOn[0].display = "IF AIS-4 NOT VALUED"
 * group.element[3].code = #AIS-7
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -77,6 +81,10 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].url = "fixedValue"
 * group.element[3].target.extension[0].extension[1].valueString = "ServiceRequest.occurrencePeriod.start+ AIS-7"
 * group.element[3].target.display = "occurrencePeriod.end"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF AIS-4 IS VALUED"
+* group.element[3].target.dependsOn[0].display = "IF AIS-4 IS VALUED"
 * group.element[4].code = #AIS-11
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"

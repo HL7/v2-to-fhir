@@ -459,6 +459,10 @@ Usage: #definition
 * group.element[22].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[22].target.extension[0].extension[1].valueInteger = 1
 * group.element[22].target.display = "[1].status"
+* group.element[22].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[22].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[22].target.dependsOn[0].value = "IF PL.1 AND PL.2 AND PL.3 AND PL.4 AND PL.7 AND PL.8 NOT VALUED"
+* group.element[22].target.dependsOn[0].display = "IF PL.1 AND PL.2 AND PL.3 AND PL.4 AND PL.7 AND PL.8 NOT VALUED"
 * group.element[23].code = #NDL.8
 * group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].extension[0].extension[0].url = "type"
@@ -476,6 +480,10 @@ Usage: #definition
 * group.element[23].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[23].target.extension[0].extension[1].valueInteger = 1
 * group.element[23].target.display = "[2].status"
+* group.element[23].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[23].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[23].target.dependsOn[0].value = "IF PL.2 VALUED"
+* group.element[23].target.dependsOn[0].display = "IF PL.2 VALUED"
 * group.element[24].code = #NDL.8
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[24].extension[0].extension[0].url = "type"
@@ -493,6 +501,10 @@ Usage: #definition
 * group.element[24].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[24].target.extension[0].extension[1].valueInteger = 1
 * group.element[24].target.display = "[3].status"
+* group.element[24].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[24].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[24].target.dependsOn[0].value = "IF PL.3 VALUED"
+* group.element[24].target.dependsOn[0].display = "IF PL.3 VALUED"
 * group.element[25].code = #NDL.8
 * group.element[25].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[25].extension[0].extension[0].url = "type"
@@ -510,6 +522,10 @@ Usage: #definition
 * group.element[25].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[25].target.extension[0].extension[1].valueInteger = 1
 * group.element[25].target.display = "[4].status"
+* group.element[25].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[25].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[25].target.dependsOn[0].value = "IF PL.4 VALUED"
+* group.element[25].target.dependsOn[0].display = "IF PL.4 VALUED"
 * group.element[26].code = #NDL.8
 * group.element[26].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[26].extension[0].extension[0].url = "type"
@@ -527,6 +543,10 @@ Usage: #definition
 * group.element[26].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[26].target.extension[0].extension[1].valueInteger = 1
 * group.element[26].target.display = "[5].status"
+* group.element[26].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[26].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[26].target.dependsOn[0].value = "IF PL.7 VALUED"
+* group.element[26].target.dependsOn[0].display = "IF PL.7 VALUED"
 * group.element[27].code = #NDL.8
 * group.element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[27].extension[0].extension[0].url = "type"
@@ -544,6 +564,10 @@ Usage: #definition
 * group.element[27].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[27].target.extension[0].extension[1].valueInteger = 1
 * group.element[27].target.display = "[6].status"
+* group.element[27].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[27].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[27].target.dependsOn[0].value = "IF PL.8 VALUED"
+* group.element[27].target.dependsOn[0].display = "IF PL.8 VALUED"
 * group.element[28].code = #NDL.10
 * group.element[28].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[28].extension[0].extension[0].url = "type"

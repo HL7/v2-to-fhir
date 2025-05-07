@@ -269,6 +269,9 @@ Usage: #definition
 * group.element[12].display = "Parent Diagnosis"
 * group.element[12].target.equivalence = #equivalent
 * group.element[12].target.code = #diagnosis.condition(Condition.extension[2].url)
+* group.element[12].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[12].target.extension[0].extension[0].url = "fixedValue"
+* group.element[12].target.extension[0].extension[0].valueString = "\"http://hl7.org/fhir/StructureDefinition/condition-dueTo\""
 * group.element[12].target.display = "diagnosis.condition(Condition.extension[2].url)"
 * group.element[13].code = #DG1-22
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

@@ -80,6 +80,10 @@ Usage: #definition
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #Provenance[4]
 * group.element[5].target.display = "Provenance[4]"
+* group.element[5].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[5].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[5].target.dependsOn[0].value = "IF PID-33 AND PID-34 VALUED"
+* group.element[5].target.dependsOn[0].display = "IF PID-33 AND PID-34 VALUED"
 * group.element[6].code = #ORM_O01.PATIENT.PD1
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "cardinalityMin"
@@ -101,6 +105,10 @@ Usage: #definition
 * group.element[7].target.equivalence = #equivalent
 * group.element[7].target.code = #Observation[2]
 * group.element[7].target.display = "Observation[2]"
+* group.element[7].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[7].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[7].target.dependsOn[0].value = "IF PD1-7 VALUED"
+* group.element[7].target.dependsOn[0].display = "IF PD1-7 VALUED"
 * group.element[8].code = #ORM_O01.PATIENT.VISIT.PV1
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
@@ -122,6 +130,10 @@ Usage: #definition
 * group.element[9].target.equivalence = #equivalent
 * group.element[9].target.code = #Basic
 * group.element[9].target.display = "Basic"
+* group.element[9].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[9].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[9].target.dependsOn[0].value = "IF PV1-43 VALUED"
+* group.element[9].target.dependsOn[0].display = "IF PV1-43 VALUED"
 * group.element[10].code = #ORM_O01.PATIENT.VISIT.PV1
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "cardinalityMin"
@@ -142,6 +154,10 @@ Usage: #definition
 * group.element[11].target.equivalence = #equivalent
 * group.element[11].target.code = #Coverage[1]
 * group.element[11].target.display = "Coverage[1]"
+* group.element[11].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[11].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[11].target.dependsOn[0].value = "IF PV1-20 VALUE"
+* group.element[11].target.dependsOn[0].display = "IF PV1-20 VALUE"
 * group.element[12].code = #ORM_O01.PATIENT.VISIT.PV2
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "cardinalityMin"
@@ -219,6 +235,10 @@ Usage: #definition
 * group.element[18].target.code = #Task[1]
 * group.element[18].target.display = "Task[1]"
 * group.element[18].target.comment = "Processing of each ORC segment results in the creation of a new Task resource which is linked back to the ServiceRequest created for the same ORC segment. =*= The creation of a Task resource and its inclusion in the FHIR bundle should only happen when the receiving system is responsible for fulfillment of the ServiceRequest. Other systems may receive notification of the order, but should not receive a Task Resource if they are not the intended filler system. =*= The actual value of the ORC-1 Order Control Code will yield different population of the Task resource."
+* group.element[18].target.dependsOn[0].property = "Computable-FHIRPath"
+* group.element[18].target.dependsOn[0].system = "http://hl7.org/fhirpath/N1"
+* group.element[18].target.dependsOn[0].value = ""
+* group.element[18].target.dependsOn[0].display = ""
 * group.element[19].code = #ORM_O01.ORDER.ORC
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "cardinalityMin"
@@ -240,6 +260,10 @@ Usage: #definition
 * group.element[20].target.code = #ServiceRequest[1]
 * group.element[20].target.display = "ServiceRequest[1]"
 * group.element[20].target.comment = "Incorporate OBR content into the ServiceRequest created from the ORC segment in the same segment group."
+* group.element[20].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[20].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[20].target.dependsOn[0].value = "IF PID VALUED"
+* group.element[20].target.dependsOn[0].display = "IF PID VALUED"
 * group.element[21].code = #ORM_O01.ORDER_DETAIL.CHOICE.OBR
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "cardinalityMin"
@@ -250,6 +274,10 @@ Usage: #definition
 * group.element[21].target.equivalence = #equivalent
 * group.element[21].target.code = #SupplyRequest[1]
 * group.element[21].target.display = "SupplyRequest[1]"
+* group.element[21].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[21].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[21].target.dependsOn[0].value = "IF PID NOT VALUED"
+* group.element[21].target.dependsOn[0].display = "IF PID NOT VALUED"
 * group.element[22].code = #ORM_O01.ORDER_DETAIL.CHOICE.RXO
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "cardinalityMin"
@@ -270,6 +298,10 @@ Usage: #definition
 * group.element[23].target.equivalence = #equivalent
 * group.element[23].target.code = #SupplyRequest[2]
 * group.element[23].target.display = "SupplyRequest[2]"
+* group.element[23].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[23].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[23].target.dependsOn[0].value = "IF PID NOT VALUED"
+* group.element[23].target.dependsOn[0].display = "IF PID NOT VALUED"
 * group.element[24].code = #ORM_O01.ORDER_DETAIL.NTE
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[24].extension[0].extension[0].url = "cardinalityMin"
@@ -301,6 +333,10 @@ Usage: #definition
 * group.element[26].target.equivalence = #equivalent
 * group.element[26].target.code = #Observation[1]
 * group.element[26].target.display = "Observation[1]"
+* group.element[26].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[26].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[26].target.dependsOn[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
+* group.element[26].target.dependsOn[0].display = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
 * group.element[27].code = #ORM_O01.ORDER_DETAIL.OBSERVATION.OBX
 * group.element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[27].extension[0].extension[0].url = "cardinalityMin"
@@ -311,3 +347,7 @@ Usage: #definition
 * group.element[27].target.equivalence = #equivalent
 * group.element[27].target.code = #Observation[1]
 * group.element[27].target.display = "Observation[1]"
+* group.element[27].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[27].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[27].target.dependsOn[0].value = "IF  OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""
+* group.element[27].target.dependsOn[0].display = "IF  OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""

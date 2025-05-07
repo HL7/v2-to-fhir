@@ -16,3 +16,18 @@ Usage: #definition
 * extension[0].extension[1].valueString = "Segment PRT[GeneralPractitioner-PractitionerRole] to Patient.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ocu6pRDaCna8ops1pZ8G2tpTeJ0OWm1llujXitrBJPU/edit#gid=0"
+* group.element[0].code = #PRT-23
+* group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[0].extension[0].extension[0].url = "type"
+* group.element[0].extension[0].extension[0].valueCode = #"CWE"
+* group.element[0].display = "Preferred Method of Contact"
+* group.element[0].target.equivalence = #equivalent
+* group.element[0].target.code = #generalPractitioner(PractitionerRole.extension??-preferredMethodOfContact)
+* group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[0].target.extension[0].extension[0].url = "type"
+* group.element[0].target.extension[0].extension[0].valueCode = #"0..1"
+* group.element[0].target.extension[0].extension[1].url = "cardinalityMin"
+* group.element[0].target.extension[0].extension[1].valueInteger = CWE[CodeableConcept]
+* group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
+* group.element[0].target.extension[0].extension[2].valueInteger = PreferredMethodOfContact
+* group.element[0].target.display = "generalPractitioner(PractitionerRole.extension??-preferredMethodOfContact)"

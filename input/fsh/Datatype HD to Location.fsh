@@ -54,6 +54,10 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "identifier.value"
+* group.element[1].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[1].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[1].target.dependsOn[0].value = "IF HD.3 IN (\"ISO\", \"UUID\")"
+* group.element[1].target.dependsOn[0].display = "IF HD.3 IN (\"ISO\", \"UUID\")"
 * group.element[2].code = #HD.2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"

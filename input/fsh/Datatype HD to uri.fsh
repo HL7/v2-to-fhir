@@ -56,6 +56,10 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[3].url = "fixedValue"
 * group.element[1].target.extension[0].extension[3].valueString = "\"urn:oid:\"+HD.2"
 * group.element[1].target.display = "$value"
+* group.element[1].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[1].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[1].target.dependsOn[0].value = "IF HD.1 NOT VALUED AND IF HD-3 = \"ISO\""
+* group.element[1].target.dependsOn[0].display = "IF HD.1 NOT VALUED AND IF HD-3 = \"ISO\""
 * group.element[2].code = #HD.2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -77,6 +81,10 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[3].url = "fixedValue"
 * group.element[2].target.extension[0].extension[3].valueString = "\"urn:uuid:\"+HD.2"
 * group.element[2].target.display = "$value"
+* group.element[2].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[2].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[2].target.dependsOn[0].value = "IF HD.1 NOT VALUED AND IF HD-3 = \"UUID\""
+* group.element[2].target.dependsOn[0].display = "IF HD.1 NOT VALUED AND IF HD-3 = \"UUID\""
 * group.element[3].code = #HD.2
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -96,3 +104,7 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "$value"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF HD.1 NOT VALUED AND IF HD-3 NOT IN (\"ISO\", \"UUID\")"
+* group.element[3].target.dependsOn[0].display = "IF HD.1 NOT VALUED AND IF HD-3 NOT IN (\"ISO\", \"UUID\")"

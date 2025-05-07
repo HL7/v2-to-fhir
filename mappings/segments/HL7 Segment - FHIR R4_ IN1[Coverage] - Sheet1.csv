@@ -20,7 +20,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 15,IN1-15,Plan Type,CWE,0,1,,,,type,,CodeableConcept,,,CWE[CodeableConcept],PlanId,,,
 16,IN1-16,Name Of Insured,XPN,0,-1,IF IN1-17 IS NOT 'patient',,,subscriber(RelatedPerson),,Reference,,,,,,,
 16,IN1-16,Name Of Insured,XPN,0,-1,IF IN1-17 IS 'patient',,,subscriber(Patient),,Reference,,,,,,,
-17,IN1-17,Insured's Relationship To Patient,CWE,0,1,,,,relationship,,CondeableConcept,,,CWE[CodeableConcept],Relationship,,,
+17,IN1-17,Insured's Relationship To Patient,CWE,0,1,,,,relationship,,CodeableConcept,,,CWE[CodeableConcept],Relationship,,,
 18,IN1-18,Insured's Date Of Birth,DTM,0,1,,,,,,,,,,,,,
 19,IN1-19,Insured's Address,XAD,0,-1,,,,,,,,,,,,,
 20,IN1-20,Assignment Of Benefits,CWE,0,1,,,,,,,,,,,,,

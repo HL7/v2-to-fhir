@@ -54,3 +54,7 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "duration"
+* group.element[1].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[1].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[1].target.dependsOn[0].value = "IF CWE.1 IS NOT VALUED"
+* group.element[1].target.dependsOn[0].display = "IF CWE.1 IS NOT VALUED"

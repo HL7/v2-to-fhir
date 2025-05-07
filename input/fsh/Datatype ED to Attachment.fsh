@@ -37,6 +37,10 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[3].url = "fixedValue"
 * group.element[0].target.extension[0].extension[3].valueString = "\"https://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[0].target.display = "extension[1].url"
+* group.element[0].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[0].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[0].target.dependsOn[0].value = "IF ED.3 NOT VALUED"
+* group.element[0].target.dependsOn[0].display = "IF ED.3 NOT VALUED"
 * group.element[1].code = #ED.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -56,6 +60,10 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "extension[1].valueCodeableConcept"
+* group.element[1].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[1].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[1].target.dependsOn[0].value = "IF ED.3 NOT VALUED"
+* group.element[1].target.dependsOn[0].display = "IF ED.3 NOT VALUED"
 * group.element[2].code = #ED.3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -95,6 +103,10 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "data"
 * group.element[3].target.comment = "Implementations are not always accurate, so to be safe you may want to always assess OBX-5.5 to determine the correct .contentType."
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF ED.4 IN (\"Base64\")"
+* group.element[3].target.dependsOn[0].display = "IF ED.4 IN (\"Base64\")"
 * group.element[4].code = #ED.5
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -117,3 +129,7 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[3].valueString = "/convert from A or HEX to binary64/"
 * group.element[4].target.display = "data"
 * group.element[4].target.comment = "Implementations are not always accurate, so to be safe you may want to always assess OBX-5.5 to determine the correct .contentType."
+* group.element[4].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[4].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[4].target.dependsOn[0].value = "IF ED.4 IN (\"A\", (HEX\")"
+* group.element[4].target.dependsOn[0].display = "IF ED.4 IN (\"A\", (HEX\")"

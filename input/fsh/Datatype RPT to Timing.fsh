@@ -58,6 +58,10 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[3].url = "fixedValue"
 * group.element[1].target.extension[0].extension[3].valueString = "/translate number to day/"
 * group.element[1].target.display = "repeat.dayOfWeek[1]"
+* group.element[1].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[1].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[1].target.dependsOn[0].value = "IF RPT.2 = \"DW\""
+* group.element[1].target.dependsOn[0].display = "IF RPT.2 = \"DW\""
 * group.element[2].code = #RPT.4
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -79,6 +83,10 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[3].url = "fixedValue"
 * group.element[2].target.extension[0].extension[3].valueString = "/translate number to day/"
 * group.element[2].target.display = "repeat.dayOfWeek[2]"
+* group.element[2].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[2].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[2].target.dependsOn[0].value = "IF RPT.2 = \"DW\""
+* group.element[2].target.dependsOn[0].display = "IF RPT.2 = \"DW\""
 * group.element[3].code = #RPT.5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"

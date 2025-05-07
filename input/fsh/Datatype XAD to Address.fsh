@@ -152,6 +152,10 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[3].url = "mappedVia"
 * group.element[6].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70190-to-address-type"
 * group.element[6].target.display = "type"
+* group.element[6].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[6].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[6].target.dependsOn[0].value = "IF XAD.7 IN (\"M\", \"SH\")"
+* group.element[6].target.dependsOn[0].display = "IF XAD.7 IN (\"M\", \"SH\")"
 * group.element[7].code = #XAD.7
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -173,6 +177,10 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[3].url = "mappedVia"
 * group.element[7].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70190-to-address-use"
 * group.element[7].target.display = "use"
+* group.element[7].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[7].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[7].target.dependsOn[0].value = "IF XAD.7 IN (\"BA\", \"BI\", \"C\", \"B\", \"H\", \"O\")"
+* group.element[7].target.dependsOn[0].display = "IF XAD.7 IN (\"BA\", \"BI\", \"C\", \"B\", \"H\", \"O\")"
 * group.element[8].code = #XAD.7
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -194,6 +202,10 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[3].url = "fixedValue"
 * group.element[8].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/iso21090-AD-use\""
 * group.element[8].target.display = "extension[1].url"
+* group.element[8].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[8].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[8].target.dependsOn[0].value = "IF XAD.7 EQUALS \"HV\""
+* group.element[8].target.dependsOn[0].display = "IF XAD.7 EQUALS \"HV\""
 * group.element[9].code = #XAD.7
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -213,6 +225,10 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "extension[1].valueCode"
+* group.element[9].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[9].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[9].target.dependsOn[0].value = "IF XAD.7 EQUALS \"HV\""
+* group.element[9].target.dependsOn[0].display = "IF XAD.7 EQUALS \"HV\""
 * group.element[10].code = #XAD.7
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"

@@ -4,6 +4,6 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 1,RXR-1,Route,CWE,1,1,,,,dosageInstruction.route,,code,0,1,,RouteOfAdministration,,,
 2,RXR-2,Administration Site,CWE,0,1,,,,dosageInstruction.site,,code,0,1,,BodyParts,,,
 3,RXR-3,Administration Device,CWE,0,1,,,,,dosageInstruction.??extension-device??,Reference(Device),0,-1,,,,,
-4,RXR-4,Administration Method,CWE,0,1,,,,dosageInstruciton.method,,CodeableConcept,0,1,CWE[CodeableConcept],AdministrationMethod,,,
+4,RXR-4,Administration Method,CWE,0,1,,,,dosageInstruction.method,,CodeableConcept,0,1,CWE[CodeableConcept],AdministrationMethod,,,
 5,RXR-5,Routing Instruction,CWE,0,1,,,,dosageInstruction.additionalInstruction,,CodeableConcept,0,-1,CWE[CodeableConcept],RoutingInstruction,,,
 6,RXR-6,Administration Site Modifier,CWE,0,1,,,,,,,,,,,,,

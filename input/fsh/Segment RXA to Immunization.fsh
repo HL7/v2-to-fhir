@@ -261,6 +261,10 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[3].url = "mappedVia"
 * group.element[12].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70322-to-event-status"
 * group.element[12].target.display = "status"
+* group.element[12].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[12].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[12].target.dependsOn[0].value = "IF RXA-21 NOT EQUALS \"D\""
+* group.element[12].target.dependsOn[0].display = "IF RXA-21 NOT EQUALS \"D\""
 * group.element[13].code = #RXA-20
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -282,6 +286,10 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[3].url = "fixedValue"
 * group.element[13].target.extension[0].extension[3].valueString = "\"completed\""
 * group.element[13].target.display = "status"
+* group.element[13].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[13].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[13].target.dependsOn[0].value = "IF NOT VALUED AND RXA-21 NOT EQUALS \"D\""
+* group.element[13].target.dependsOn[0].display = "IF NOT VALUED AND RXA-21 NOT EQUALS \"D\""
 * group.element[14].code = #RXA-21
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -303,6 +311,10 @@ Usage: #definition
 * group.element[14].target.extension[0].extension[3].url = "fixedValue"
 * group.element[14].target.extension[0].extension[3].valueString = "\"entered-in-error\""
 * group.element[14].target.display = "status"
+* group.element[14].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[14].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[14].target.dependsOn[0].value = "IF RXA-21 EQUALS \"D\""
+* group.element[14].target.dependsOn[0].display = "IF RXA-21 EQUALS \"D\""
 * group.element[15].code = #RXA-22
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -322,6 +334,10 @@ Usage: #definition
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "recorded"
+* group.element[15].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[15].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[15].target.dependsOn[0].value = "IF RXA-21 EQUALS \"A\""
+* group.element[15].target.dependsOn[0].display = "IF RXA-21 EQUALS \"A\""
 * group.element[16].code = #RXA-27
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"

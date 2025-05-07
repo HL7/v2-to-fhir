@@ -7,7 +7,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 4,NK1-4,Address,XAD,0,-1,,,,contact.address,,Address,0,1,XAD[Address],,,,Note the decreased cardinality for the FHIR map
 5,NK1-5,Phone Number,XTN,0,-1,,,,contact.telecom[1],,ContactPoint,0,-1,XTN[ContactPoint],,,,
 6,NK1-6,Business Phone Number,XTN,0,-1,,,,contact.telecom[2],,ContactPoint,0,-1,XTN[ContactPoint],,,,
-6,NK1-6,Business Phone Number,XTN,0,-1,,,,contact.telecom[2].type.use,,code,0,1,,,"""work""",,
+6,NK1-6,Business Phone Number,XTN,0,-1,,,,contact.telecom[2].use,,code,0,1,,,"""work""",,
 7,NK1-7,Contact Role,CWE,0,1,,,,contact.relationship[2],,CodeableConcept,0,-1,CWE[CodeableConcept],Contact Role,,,"Should we update the names in the base FHIR standard as the names and value sets are confusing?  It's normative, so has to have a very strong case."
 8,NK1-8,Start Date,DT,0,1,,,,contact.period.start,,dateTime,0,1,,,,,
 9,NK1-9,End Date,DT,0,1,,,,contact.period.end,,dateTime,0,1,,,,,

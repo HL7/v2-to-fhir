@@ -154,6 +154,10 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "identifier.system"
 * group.element[6].target.comment = "Typically the assigning authority reflects an organization, but if it is an actual system (EHR 1 vs. EHR 2, both supporting the same organization where one cannot get more specific), then CX.4 should be mapped to .system"
+* group.element[6].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[6].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[6].target.dependsOn[0].value = "IF CX.4 IN http://hl7.org/implement/standards/fhir/identifier-registry.html"
+* group.element[6].target.dependsOn[0].display = "IF CX.4 IN http://hl7.org/implement/standards/fhir/identifier-registry.html"
 * group.element[7].code = #CX.5
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"

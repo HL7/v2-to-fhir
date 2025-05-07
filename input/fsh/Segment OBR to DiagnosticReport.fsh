@@ -177,6 +177,10 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "effectiveDateTime"
 * group.element[7].target.comment = "This should not be populated in a message corresponding to a ServiceRequest (eg ORM)"
+* group.element[7].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[7].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[7].target.dependsOn[0].value = "IF OBR-8 NOT VALUED"
+* group.element[7].target.dependsOn[0].display = "IF OBR-8 NOT VALUED"
 * group.element[8].code = #OBR-7
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -196,6 +200,10 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "effectivePeriod.start"
+* group.element[8].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[8].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[8].target.dependsOn[0].value = "IF OBR-8 VALUED"
+* group.element[8].target.dependsOn[0].display = "IF OBR-8 VALUED"
 * group.element[9].code = #OBR-8
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -277,6 +285,10 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[3].url = "mappedVia"
 * group.element[12].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70123-queries-to-diagnostic-report-status"
 * group.element[12].target.display = "status"
+* group.element[12].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[12].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[12].target.dependsOn[0].value = "IF OBR-25 VALUED"
+* group.element[12].target.dependsOn[0].display = "IF OBR-25 VALUED"
 * group.element[13].code = #OBR-32
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"

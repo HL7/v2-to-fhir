@@ -100,6 +100,10 @@ Usage: #definition
 * group.element[7].target.equivalence = #equivalent
 * group.element[7].target.code = #Provenance[4]
 * group.element[7].target.display = "Provenance[4]"
+* group.element[7].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[7].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[7].target.dependsOn[0].value = "IF PID-33 AND PID-34 VALUED"
+* group.element[7].target.dependsOn[0].display = "IF PID-33 AND PID-34 VALUED"
 * group.element[8].code = #ORU_R01.PATIENT_RESULT.PATIENT.PD1
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
@@ -121,6 +125,10 @@ Usage: #definition
 * group.element[9].target.equivalence = #equivalent
 * group.element[9].target.code = #Observation[4]
 * group.element[9].target.display = "Observation[4]"
+* group.element[9].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[9].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[9].target.dependsOn[0].value = "IF PD1-7 VALUED"
+* group.element[9].target.dependsOn[0].display = "IF PD1-7 VALUED"
 * group.element[10].code = #ORU_R01.PATIENT_RESULT.PATIENT.PRT
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "cardinalityMin"
@@ -135,6 +143,14 @@ Usage: #definition
 Incorporate PRT content into the Patient created from the PID segment when the PRT contains practitioner related data.
 If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
 """
+* group.element[10].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[10].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[10].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"PP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[10].target.dependsOn[0].display = "IF PRT-4.1 EQUALS \"PP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[10].target.dependsOn[1].property = "Computable-FHIRPath"
+* group.element[10].target.dependsOn[1].system = "http://hl7.org/fhirpath/N1"
+* group.element[10].target.dependsOn[1].value = "IF PRT-4.1 EQUALS \"PP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[10].target.dependsOn[1].display = "IF PRT-4.1 EQUALS \"PP\" AND PRT-4.3 EQUALS \"HL70443\""
 * group.element[11].code = #ORU_R01.PATIENT_RESULT.PATIENT.PRT
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
@@ -146,6 +162,14 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[11].target.code = #RelatedPerson[1]
 * group.element[11].target.display = "RelatedPerson[1]"
 * group.element[11].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[11].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[11].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[11].target.dependsOn[0].value = "IF PRT-4.1 NOT EQUALS \"PP\" OR PRT-4.3 NOT EQUALS \"HL70443\""
+* group.element[11].target.dependsOn[0].display = "IF PRT-4.1 NOT EQUALS \"PP\" OR PRT-4.3 NOT EQUALS \"HL70443\""
+* group.element[11].target.dependsOn[1].property = "Computable-FHIRPath"
+* group.element[11].target.dependsOn[1].system = "http://hl7.org/fhirpath/N1"
+* group.element[11].target.dependsOn[1].value = "IF PRT-4.1 NOT EQUALS \"PP\" OR PRT-4.3 NOT EQUALS \"HL70443\""
+* group.element[11].target.dependsOn[1].display = "IF PRT-4.1 NOT EQUALS \"PP\" OR PRT-4.3 NOT EQUALS \"HL70443\""
 * group.element[12].code = #ORU_R01.PATIENT_RESULT.PATIENT.NK1
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "cardinalityMin"
@@ -178,6 +202,10 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[14].target.equivalence = #equivalent
 * group.element[14].target.code = #Observation[1]
 * group.element[14].target.display = "Observation[1]"
+* group.element[14].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[14].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[14].target.dependsOn[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
+* group.element[14].target.dependsOn[0].display = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
 * group.element[15].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.OBX
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "cardinalityMin"
@@ -189,6 +217,10 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[15].target.code = #Observation[1]
 * group.element[15].target.display = "Observation[1]"
 * group.element[15].target.comment = "Note that when OBX-5 repeats, the standard mapping is to use Observation.component (see OBX[Observation-Component] map) rather than creating separate Observation instances.  However, we are aware that some profiles and implementation guides do separate the OBX into multiple observations depending on the OBX-2 value.  This is an example of a non-standard interpretation as the OBX should have been separated into multiple OBX segments to start.  Please consider the local profiles and implementation guides on how to manage these variants."
+* group.element[15].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[15].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[15].target.dependsOn[0].value = "IF  OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""
+* group.element[15].target.dependsOn[0].display = "IF  OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""
 * group.element[16].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "cardinalityMin"
@@ -200,6 +232,10 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[16].target.code = #Device
 * group.element[16].target.display = "Device"
 * group.element[16].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[16].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[16].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[16].target.dependsOn[0].value = "IF PRT-10 VALUED"
+* group.element[16].target.dependsOn[0].display = "IF PRT-10 VALUED"
 * group.element[17].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "cardinalityMin"
@@ -211,6 +247,10 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[17].target.code = #Observation[1]
 * group.element[17].target.display = "Observation[1]"
 * group.element[17].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[17].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[17].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[17].target.dependsOn[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
+* group.element[17].target.dependsOn[0].display = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[18].code = #ORU_R01.PATIENT_RESULT.PATIENT.PATIENT_OBSERVATION.PRT
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "cardinalityMin"
@@ -222,6 +262,10 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[18].target.code = #PractitionerRole[1]
 * group.element[18].target.display = "PractitionerRole[1]"
 * group.element[18].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[18].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[18].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[18].target.dependsOn[0].value = "IF PRT-5 VALUED"
+* group.element[18].target.dependsOn[0].display = "IF PRT-5 VALUED"
 * group.element[19].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "cardinalityMin"
@@ -243,6 +287,10 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[20].target.equivalence = #equivalent
 * group.element[20].target.code = #Basic
 * group.element[20].target.display = "Basic"
+* group.element[20].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[20].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[20].target.dependsOn[0].value = "IF PV1-43 VALUED"
+* group.element[20].target.dependsOn[0].display = "IF PV1-43 VALUED"
 * group.element[21].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV1
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "cardinalityMin"
@@ -263,6 +311,10 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[22].target.equivalence = #equivalent
 * group.element[22].target.code = #Coverage[1]
 * group.element[22].target.display = "Coverage[1]"
+* group.element[22].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[22].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[22].target.dependsOn[0].value = "IF PV1-20 VALUE"
+* group.element[22].target.dependsOn[0].display = "IF PV1-20 VALUE"
 * group.element[23].code = #ORU_R01.PATIENT_RESULT.PATIENT.VISIT.PV2
 * group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].extension[0].extension[0].url = "cardinalityMin"
@@ -319,6 +371,14 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[27].target.equivalence = #equivalent
 * group.element[27].target.code = #PractitionerRole[3]
 * group.element[27].target.display = "PractitionerRole[3]"
+* group.element[27].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[27].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[27].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[27].target.dependsOn[0].display = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[27].target.dependsOn[1].property = "Computable-FHIRPath"
+* group.element[27].target.dependsOn[1].system = "http://hl7.org/fhirpath/N1"
+* group.element[27].target.dependsOn[1].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[27].target.dependsOn[1].display = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
 * group.element[28].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR
 * group.element[28].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[28].extension[0].extension[0].url = "cardinalityMin"
@@ -352,6 +412,10 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[30].target.code = #ServiceRequest[1]
 * group.element[30].target.display = "ServiceRequest[1]"
 * group.element[30].target.comment = "Mapping to ServiceRequest as well is needed if the receiver is not the originator of the order to which this results message responds.  This mapping will be completed once OMG/OML mapping is sufficiently completed.  We will add the other segment mappings below to ServiceRequest then as well."
+* group.element[30].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[30].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[30].target.dependsOn[0].value = "IF ORC VALUED"
+* group.element[30].target.dependsOn[0].display = "IF ORC VALUED"
 * group.element[31].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
 * group.element[31].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[31].extension[0].extension[0].url = "cardinalityMin"
@@ -363,6 +427,14 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[31].target.code = #PractitionerRole[4]
 * group.element[31].target.display = "PractitionerRole[4]"
 * group.element[31].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[31].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[31].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[31].target.dependsOn[0].value = "IF PRT-4.1 IN (\"ARI\",\"TN\",\"TR\") AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[31].target.dependsOn[0].display = "IF PRT-4.1 IN (\"ARI\",\"TN\",\"TR\") AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[31].target.dependsOn[1].property = "Computable-FHIRPath"
+* group.element[31].target.dependsOn[1].system = "http://hl7.org/fhirpath/N1"
+* group.element[31].target.dependsOn[1].value = "IF PRT-4.1 IN (\"ARI\",\"TN\",\"TR\") AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[31].target.dependsOn[1].display = "IF PRT-4.1 IN (\"ARI\",\"TN\",\"TR\") AND PRT-4.3 EQUALS \"HL70443\""
 * group.element[32].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
 * group.element[32].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[32].extension[0].extension[0].url = "cardinalityMin"
@@ -374,6 +446,14 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[32].target.code = #PractitionerRole[5]
 * group.element[32].target.display = "PractitionerRole[5]"
 * group.element[32].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[32].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[32].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[32].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"PRI\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[32].target.dependsOn[0].display = "IF PRT-4.1 EQUALS \"PRI\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[32].target.dependsOn[1].property = "Computable-FHIRPath"
+* group.element[32].target.dependsOn[1].system = "http://hl7.org/fhirpath/N1"
+* group.element[32].target.dependsOn[1].value = "IF PRT-4.1 EQUALS \"PRI\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[32].target.dependsOn[1].display = "IF PRT-4.1 EQUALS \"PRI\" AND PRT-4.3 EQUALS \"HL70443\""
 * group.element[33].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
 * group.element[33].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[33].extension[0].extension[0].url = "cardinalityMin"
@@ -385,6 +465,14 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[33].target.code = #PractitionerRole[6]
 * group.element[33].target.display = "PractitionerRole[6]"
 * group.element[33].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[33].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[33].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[33].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"SC\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[33].target.dependsOn[0].display = "IF PRT-4.1 EQUALS \"SC\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[33].target.dependsOn[1].property = "Computable-FHIRPath"
+* group.element[33].target.dependsOn[1].system = "http://hl7.org/fhirpath/N1"
+* group.element[33].target.dependsOn[1].value = "IF PRT-4.1 EQUALS \"SC\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[33].target.dependsOn[1].display = "IF PRT-4.1 EQUALS \"SC\" AND PRT-4.3 EQUALS \"HL70443\""
 * group.element[34].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
 * group.element[34].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[34].extension[0].extension[0].url = "cardinalityMin"
@@ -396,6 +484,14 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[34].target.code = #PractitionerRole[3]
 * group.element[34].target.display = "PractitionerRole[3]"
 * group.element[34].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[34].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[34].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[34].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[34].target.dependsOn[0].display = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[34].target.dependsOn[1].property = "Computable-FHIRPath"
+* group.element[34].target.dependsOn[1].system = "http://hl7.org/fhirpath/N1"
+* group.element[34].target.dependsOn[1].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group.element[34].target.dependsOn[1].display = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
 * group.element[35].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
 * group.element[35].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[35].extension[0].extension[0].url = "cardinalityMin"
@@ -410,6 +506,10 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation.
 Note that it is not clear that every OBX represents a results that can be associated with the encounter during which it was ordered/performed.\
 """
+* group.element[35].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[35].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[35].target.dependsOn[0].value = "IF (OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\") AND OBX-29 NOT IN (\"QST\", \"SCI\")"
+* group.element[35].target.dependsOn[0].display = "IF (OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\") AND OBX-29 NOT IN (\"QST\", \"SCI\")"
 * group.element[36].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
 * group.element[36].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[36].extension[0].extension[0].url = "cardinalityMin"
@@ -421,6 +521,10 @@ Note that it is not clear that every OBX represents a results that can be associ
 * group.element[36].target.code = #Observation[2]
 * group.element[36].target.display = "Observation[2]"
 * group.element[36].target.comment = "Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation. When multiple OBX segments are tranformed into Observation components in a single Observation resource, implementers should consider how the metadata associated with the result (eg performer, status, date/time, etc) are populated. If the OBX segments being combined into a single resource contain different metadata, it must be considered whether or not the use of components is appropriate."
+* group.element[36].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[36].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[36].target.dependsOn[0].value = "IF (OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\") AND OBX-29 NOT IN (\"QST\", \"SCI\")"
+* group.element[36].target.dependsOn[0].display = "IF (OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\") AND OBX-29 NOT IN (\"QST\", \"SCI\")"
 * group.element[37].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
 * group.element[37].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[37].extension[0].extension[0].url = "cardinalityMin"
@@ -431,6 +535,10 @@ Note that it is not clear that every OBX represents a results that can be associ
 * group.element[37].target.equivalence = #equivalent
 * group.element[37].target.code = #Observation[2]
 * group.element[37].target.display = "Observation[2]"
+* group.element[37].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[37].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[37].target.dependsOn[0].value = "IF (OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\") AND OBX-29 IN (\"QST\", \"SCI\")"
+* group.element[37].target.dependsOn[0].display = "IF (OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\") AND OBX-29 IN (\"QST\", \"SCI\")"
 * group.element[38].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
 * group.element[38].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[38].extension[0].extension[0].url = "cardinalityMin"
@@ -441,6 +549,10 @@ Note that it is not clear that every OBX represents a results that can be associ
 * group.element[38].target.equivalence = #equivalent
 * group.element[38].target.code = #Observation[2]
 * group.element[38].target.display = "Observation[2]"
+* group.element[38].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[38].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[38].target.dependsOn[0].value = "IF (OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\") AND OBX-29 AND OBX-29 IN (\"QST\", \"SCI\")"
+* group.element[38].target.dependsOn[0].display = "IF (OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\") AND OBX-29 AND OBX-29 IN (\"QST\", \"SCI\")"
 * group.element[39].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
 * group.element[39].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[39].extension[0].extension[0].url = "cardinalityMin"
@@ -452,6 +564,10 @@ Note that it is not clear that every OBX represents a results that can be associ
 * group.element[39].target.code = #Device
 * group.element[39].target.display = "Device"
 * group.element[39].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group.element[39].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[39].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[39].target.dependsOn[0].value = "IF PRT-10 VALUED"
+* group.element[39].target.dependsOn[0].display = "IF PRT-10 VALUED"
 * group.element[40].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
 * group.element[40].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[40].extension[0].extension[0].url = "cardinalityMin"
@@ -466,6 +582,10 @@ Note that it is not clear that every OBX represents a results that can be associ
 Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
 If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
 """
+* group.element[40].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[40].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[40].target.dependsOn[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
+* group.element[40].target.dependsOn[0].display = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
 * group.element[41].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
 * group.element[41].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[41].extension[0].extension[0].url = "cardinalityMin"
@@ -480,6 +600,10 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation practitioner information.
 If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
 """
+* group.element[41].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[41].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[41].target.dependsOn[0].value = "IF PRT-5 VALUED"
+* group.element[41].target.dependsOn[0].display = "IF PRT-5 VALUED"
 * group.element[42].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.NTE
 * group.element[42].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[42].extension[0].extension[0].url = "cardinalityMin"
@@ -510,6 +634,10 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[44].target.equivalence = #equivalent
 * group.element[44].target.code = #Observation[3]
 * group.element[44].target.display = "Observation[3]"
+* group.element[44].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[44].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[44].target.dependsOn[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
+* group.element[44].target.dependsOn[0].display = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
 * group.element[45].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION.OBX
 * group.element[45].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[45].extension[0].extension[0].url = "cardinalityMin"
@@ -520,3 +648,7 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group.element[45].target.equivalence = #equivalent
 * group.element[45].target.code = #Observation[3]
 * group.element[45].target.display = "Observation[3]"
+* group.element[45].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[45].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[45].target.dependsOn[0].value = "IF OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""
+* group.element[45].target.dependsOn[0].display = "IF OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""

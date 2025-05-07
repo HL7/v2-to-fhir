@@ -68,6 +68,10 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "valueQuantity.value"
+* group.element[2].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[2].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[2].target.dependsOn[0].value = "IF OBX-2 EQUALS \"NM\""
+* group.element[2].target.dependsOn[0].display = "IF OBX-2 EQUALS \"NM\""
 * group.element[3].code = #OBX-5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -87,6 +91,10 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "valueString"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF OBX-2 IN (\"ST\", \"FT\", \"TX\")"
+* group.element[3].target.dependsOn[0].display = "IF OBX-2 IN (\"ST\", \"FT\", \"TX\")"
 * group.element[4].code = #OBX-5
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -106,6 +114,10 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "valueCodeableConcept[1]"
+* group.element[4].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[4].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[4].target.dependsOn[0].value = "IF OBX-2 EQUALS \"CF\""
+* group.element[4].target.dependsOn[0].display = "IF OBX-2 EQUALS \"CF\""
 * group.element[5].code = #OBX-5
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -125,6 +137,10 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "valueCodeableConcept"
+* group.element[5].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[5].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[5].target.dependsOn[0].value = "IF OBX-2 EQUALS \"CNE\""
+* group.element[5].target.dependsOn[0].display = "IF OBX-2 EQUALS \"CNE\""
 * group.element[6].code = #OBX-5
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -144,6 +160,10 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.display = "valueCodeableConcept"
+* group.element[6].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[6].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[6].target.dependsOn[0].value = "IF OBX-2 EQUALS \"CE\""
+* group.element[6].target.dependsOn[0].display = "IF OBX-2 EQUALS \"CE\""
 * group.element[7].code = #OBX-5
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -163,6 +183,10 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "valueCodeableConcept"
+* group.element[7].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[7].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[7].target.dependsOn[0].value = "IF OBX-2 EQUALS \"CWE\""
+* group.element[7].target.dependsOn[0].display = "IF OBX-2 EQUALS \"CWE\""
 * group.element[8].code = #OBX-5
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -182,6 +206,10 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "valueCodeableConcept"
+* group.element[8].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[8].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[8].target.dependsOn[0].value = "IF OBX-2 EQUALS \"IS\""
+* group.element[8].target.dependsOn[0].display = "IF OBX-2 EQUALS \"IS\""
 * group.element[9].code = #OBX-5
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -201,6 +229,10 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.display = "valuePeriod"
+* group.element[9].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[9].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[9].target.dependsOn[0].value = "IF OBX-2 EQUALS \"DR\""
+* group.element[9].target.dependsOn[0].display = "IF OBX-2 EQUALS \"DR\""
 * group.element[10].code = #OBX-5
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -220,6 +252,10 @@ Usage: #definition
 * group.element[10].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.display = "valueDateTime"
+* group.element[10].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[10].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[10].target.dependsOn[0].value = "IF OBX-2 IN (\"DTM\", \"DT\")"
+* group.element[10].target.dependsOn[0].display = "IF OBX-2 IN (\"DTM\", \"DT\")"
 * group.element[11].code = #OBX-5
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -239,6 +275,10 @@ Usage: #definition
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
 * group.element[11].target.display = "valueRange"
+* group.element[11].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[11].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[11].target.dependsOn[0].value = "IF OBX-2 EQUALS \"NR\""
+* group.element[11].target.dependsOn[0].display = "IF OBX-2 EQUALS \"NR\""
 * group.element[12].code = #OBX-5
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -260,6 +300,10 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[3].url = "fixedValue"
 * group.element[12].target.extension[0].extension[3].valueString = "OBX-5.1+\"-\"+OBX-5.2"
 * group.element[12].target.display = "valueString"
+* group.element[12].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[12].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[12].target.dependsOn[0].value = "IF OBX-2 EQUALS \"VR\""
+* group.element[12].target.dependsOn[0].display = "IF OBX-2 EQUALS \"VR\""
 * group.element[13].code = #OBX-5
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -279,6 +323,10 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "valueTime"
+* group.element[13].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[13].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[13].target.dependsOn[0].value = "IF OBX-2 EQUALS \"TM\""
+* group.element[13].target.dependsOn[0].display = "IF OBX-2 EQUALS \"TM\""
 * group.element[14].code = #OBX-5
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -300,6 +348,10 @@ Usage: #definition
 * group.element[14].target.extension[0].extension[3].url = "fixedValue"
 * group.element[14].target.extension[0].extension[3].valueString = "OBX-5.1+\" \"+OBX-5.2+\" \"+OBX-5.3+\" \"+OBX-5.4\" \"OBX-6\""
 * group.element[14].target.display = "valueString"
+* group.element[14].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[14].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[14].target.dependsOn[0].value = "IF (OBX-2 EQUALS \"SN\"  AND OBX-5.1  EQUALS \"<>\""
+* group.element[14].target.dependsOn[0].display = "IF (OBX-2 EQUALS \"SN\"  AND OBX-5.1  EQUALS \"<>\""
 * group.element[15].code = #OBX-5
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -319,6 +371,10 @@ Usage: #definition
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "valueRatio[1]"
+* group.element[15].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[15].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[15].target.dependsOn[0].value = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 IN (\":\", \"/\")"
+* group.element[15].target.dependsOn[0].display = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 IN (\":\", \"/\")"
 * group.element[16].code = #OBX-5
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -338,6 +394,10 @@ Usage: #definition
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "valueRange[1]"
+* group.element[16].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[16].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[16].target.dependsOn[0].value = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 EQUALS \"-\""
+* group.element[16].target.dependsOn[0].display = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 EQUALS \"-\""
 * group.element[17].code = #OBX-5
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -359,6 +419,10 @@ Usage: #definition
 * group.element[17].target.extension[0].extension[3].url = "fixedValue"
 * group.element[17].target.extension[0].extension[3].valueString = "OBX-5.1+\" \"+OBX-5.2+\" \"+OBX-5.3+\" \"+OBX-5.4\" \"OBX-6\""
 * group.element[17].target.display = "valueString"
+* group.element[17].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[17].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[17].target.dependsOn[0].value = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 EQUALS \"+\""
+* group.element[17].target.dependsOn[0].display = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 EQUALS \"+\""
 * group.element[18].code = #OBX-5
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"
@@ -379,6 +443,10 @@ Usage: #definition
 * group.element[18].target.extension[0].extension[2].valueInteger = 1
 * group.element[18].target.display = "valueQuantity[1]"
 * group.element[18].target.comment = "Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type."
+* group.element[18].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[18].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[18].target.dependsOn[0].value = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 NOT IN (\":\", \"/\", \"-\", \"+\")"
+* group.element[18].target.dependsOn[0].display = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 NOT IN (\":\", \"/\", \"-\", \"+\")"
 * group.element[19].code = #OBX-5
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "type"
@@ -420,6 +488,10 @@ Usage: #definition
 * group.element[20].target.extension[0].extension[2].valueInteger = 1
 * group.element[20].target.display = "valueSampedData"
 * group.element[20].target.comment = "Full guidance on how to populate SampledData based on a single vector or an array will be provided in a future version based on interest.  Please submit a JIRA if you are interested."
+* group.element[20].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[20].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[20].target.dependsOn[0].value = "IF OBX-2 EQUALS \"NA\""
+* group.element[20].target.dependsOn[0].display = "IF OBX-2 EQUALS \"NA\""
 * group.element[21].code = #OBX-5
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "type"
@@ -441,6 +513,10 @@ Usage: #definition
 * group.element[21].target.extension[0].extension[3].url = "fixedValue"
 * group.element[21].target.extension[0].extension[3].valueString = "\"https://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.valueAttachment\""
 * group.element[21].target.display = "extension[1].url"
+* group.element[21].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[21].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[21].target.dependsOn[0].value = "IF OBX-2 EQUALS \"ED\" AND IF OBX-5.4 EQUALS \"Base64\""
+* group.element[21].target.dependsOn[0].display = "IF OBX-2 EQUALS \"ED\" AND IF OBX-5.4 EQUALS \"Base64\""
 * group.element[22].code = #OBX-5
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[22].extension[0].extension[0].url = "type"
@@ -461,6 +537,10 @@ Usage: #definition
 * group.element[22].target.extension[0].extension[2].valueInteger = 1
 * group.element[22].target.display = "extension[1].valueAttachment"
 * group.element[22].target.comment = "We are for now addressing Base64 that cover .pdf, pictures and other binaries.  If somebody does this, we will address those."
+* group.element[22].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[22].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[22].target.dependsOn[0].value = "IF OBX-2 EQUALS \"ED\" AND IF OBX-5.4 EQUALS \"Base64\""
+* group.element[22].target.dependsOn[0].display = "IF OBX-2 EQUALS \"ED\" AND IF OBX-5.4 EQUALS \"Base64\""
 * group.element[23].code = #OBX-5
 * group.element[23].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[23].extension[0].extension[0].url = "type"
@@ -482,6 +562,10 @@ Usage: #definition
 * group.element[23].target.extension[0].extension[3].url = "fixedValue"
 * group.element[23].target.extension[0].extension[3].valueString = "\"https://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.valueAttachment\""
 * group.element[23].target.display = "extension[1].url"
+* group.element[23].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[23].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[23].target.dependsOn[0].value = "IF OBX-2 EQUALS \"RP\""
+* group.element[23].target.dependsOn[0].display = "IF OBX-2 EQUALS \"RP\""
 * group.element[24].code = #OBX-5
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[24].extension[0].extension[0].url = "type"
@@ -502,6 +586,10 @@ Usage: #definition
 * group.element[24].target.extension[0].extension[2].valueInteger = 1
 * group.element[24].target.display = "extension[1].valueAttachment"
 * group.element[24].target.comment = "To be resolved when we resolve DocumentReference and valueAttachment"
+* group.element[24].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[24].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[24].target.dependsOn[0].value = "IF OBX-2 EQUALS \"RP\""
+* group.element[24].target.dependsOn[0].display = "IF OBX-2 EQUALS \"RP\""
 * group.element[25].code = #OBX-6
 * group.element[25].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[25].extension[0].extension[0].url = "type"
@@ -518,6 +606,10 @@ Usage: #definition
 * group.element[25].target.extension[0].extension[0].valueCode = #"Quantity"
 * group.element[25].target.display = "valueQuantity[1]"
 * group.element[25].target.comment = "Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type."
+* group.element[25].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[25].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[25].target.dependsOn[0].value = "IF OBX-2 IN (\"NA\", \"NM\")"
+* group.element[25].target.dependsOn[0].display = "IF OBX-2 IN (\"NA\", \"NM\")"
 * group.element[26].code = #OBX-6
 * group.element[26].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[26].extension[0].extension[0].url = "type"
@@ -534,6 +626,10 @@ Usage: #definition
 * group.element[26].target.extension[0].extension[0].valueCode = #"Quantity"
 * group.element[26].target.display = "valueQuantity[1]"
 * group.element[26].target.comment = "Note that OBX-5 and OBX-6 resolve to different components for the same Quantity data type."
+* group.element[26].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[26].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[26].target.dependsOn[0].value = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 NOT IN (\":\", \"/\", \"-\", \"+\")"
+* group.element[26].target.dependsOn[0].display = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 NOT IN (\":\", \"/\", \"-\", \"+\")"
 * group.element[27].code = #OBX-6
 * group.element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[27].extension[0].extension[0].url = "type"
@@ -549,6 +645,10 @@ Usage: #definition
 * group.element[27].target.extension[0].extension[0].url = "type"
 * group.element[27].target.extension[0].extension[0].valueCode = #"SimpleQuantity"
 * group.element[27].target.display = "valueRange[1].low"
+* group.element[27].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[27].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[27].target.dependsOn[0].value = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 EQUALS \"-\""
+* group.element[27].target.dependsOn[0].display = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 EQUALS \"-\""
 * group.element[28].code = #OBX-6
 * group.element[28].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[28].extension[0].extension[0].url = "type"
@@ -564,6 +664,10 @@ Usage: #definition
 * group.element[28].target.extension[0].extension[0].url = "type"
 * group.element[28].target.extension[0].extension[0].valueCode = #"SimpleQuantity"
 * group.element[28].target.display = "valueRange[1].high"
+* group.element[28].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[28].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[28].target.dependsOn[0].value = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 EQUALS \"-\""
+* group.element[28].target.dependsOn[0].display = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 EQUALS \"-\""
 * group.element[29].code = #OBX-6
 * group.element[29].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[29].extension[0].extension[0].url = "type"
@@ -579,6 +683,10 @@ Usage: #definition
 * group.element[29].target.extension[0].extension[0].url = "type"
 * group.element[29].target.extension[0].extension[0].valueCode = #"Quantity"
 * group.element[29].target.display = "valueRatio[1].numerator"
+* group.element[29].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[29].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[29].target.dependsOn[0].value = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 IN (\":\", \"/\")"
+* group.element[29].target.dependsOn[0].display = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 IN (\":\", \"/\")"
 * group.element[30].code = #OBX-6
 * group.element[30].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[30].extension[0].extension[0].url = "type"
@@ -594,6 +702,10 @@ Usage: #definition
 * group.element[30].target.extension[0].extension[0].url = "type"
 * group.element[30].target.extension[0].extension[0].valueCode = #"Quantity"
 * group.element[30].target.display = "valueRatio[1].denominator"
+* group.element[30].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[30].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[30].target.dependsOn[0].value = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 IN (\":\", \"/\")"
+* group.element[30].target.dependsOn[0].display = "IF OBX-2 EQUALS \"SN\" AND OBX-5.1  NOT EQUALS \"<>\" AND OBX-5.3 IN (\":\", \"/\")"
 * group.element[31].code = #OBX-7
 * group.element[31].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[31].extension[0].extension[0].url = "type"
@@ -715,6 +827,10 @@ Usage: #definition
 * group.element[36].target.extension[0].extension[1].url = "fixedValue"
 * group.element[36].target.extension[0].extension[1].valueString = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[36].target.display = "status.extension[1].url"
+* group.element[36].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[36].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[36].target.dependsOn[0].value = "IF OBX-11 IS \"X\""
+* group.element[36].target.dependsOn[0].display = "IF OBX-11 IS \"X\""
 * group.element[37].code = #OBX-11
 * group.element[37].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[37].extension[0].extension[0].url = "type"
@@ -732,6 +848,10 @@ Usage: #definition
 * group.element[37].target.extension[0].extension[1].url = "fixedValue"
 * group.element[37].target.extension[0].extension[1].valueString = "\"X\""
 * group.element[37].target.display = "status.extension[1].valueCodeableConcept.coding.code"
+* group.element[37].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[37].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[37].target.dependsOn[0].value = "IF OBX-11 IS \"X\""
+* group.element[37].target.dependsOn[0].display = "IF OBX-11 IS \"X\""
 * group.element[38].code = #OBX-11
 * group.element[38].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[38].extension[0].extension[0].url = "type"
@@ -749,6 +869,10 @@ Usage: #definition
 * group.element[38].target.extension[0].extension[1].url = "fixedValue"
 * group.element[38].target.extension[0].extension[1].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0085\""
 * group.element[38].target.display = "status.extension[1].valueCodeableConcept.coding.system"
+* group.element[38].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[38].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[38].target.dependsOn[0].value = "IF OBX-11 IS \"X\""
+* group.element[38].target.dependsOn[0].display = "IF OBX-11 IS \"X\""
 * group.element[39].code = #OBX-11
 * group.element[39].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[39].extension[0].extension[0].url = "type"
@@ -760,7 +884,14 @@ Usage: #definition
 * group.element[39].display = "Observation Result Status"
 * group.element[39].target.equivalence = #equivalent
 * group.element[39].target.code = #dataAbsentReason.coding[2].code
+* group.element[39].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[39].target.extension[0].extension[0].url = "fixedValue"
+* group.element[39].target.extension[0].extension[0].valueString = "\"not-asked\""
 * group.element[39].target.display = "dataAbsentReason.coding[2].code"
+* group.element[39].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[39].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[39].target.dependsOn[0].value = "IF OBX-11 IS \"N\""
+* group.element[39].target.dependsOn[0].display = "IF OBX-11 IS \"N\""
 * group.element[40].code = #OBX-11
 * group.element[40].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[40].extension[0].extension[0].url = "type"
@@ -772,7 +903,14 @@ Usage: #definition
 * group.element[40].display = "Observation Result Status"
 * group.element[40].target.equivalence = #equivalent
 * group.element[40].target.code = #dataAbsentReason.coding[2].system
+* group.element[40].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[40].target.extension[0].extension[0].url = "fixedValue"
+* group.element[40].target.extension[0].extension[0].valueString = "\"http://terminology.hl7.org/CodeSystem/data-absent-reason\""
 * group.element[40].target.display = "dataAbsentReason.coding[2].system"
+* group.element[40].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[40].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[40].target.dependsOn[0].value = "IF OBX-11 IS \"N\""
+* group.element[40].target.dependsOn[0].display = "IF OBX-11 IS \"N\""
 * group.element[41].code = #OBX-14
 * group.element[41].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[41].extension[0].extension[0].url = "type"
@@ -1042,6 +1180,10 @@ Usage: #definition
 * group.element[54].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[54].target.extension[0].extension[2].valueInteger = -1
 * group.element[54].target.display = "performer[2](Organization)"
+* group.element[54].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[54].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[54].target.dependsOn[0].value = "IF OBX-25 NOT VALUED"
+* group.element[54].target.dependsOn[0].display = "IF OBX-25 NOT VALUED"
 * group.element[55].code = #OBX-23
 * group.element[55].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[55].extension[0].extension[0].url = "type"
@@ -1061,6 +1203,10 @@ Usage: #definition
 * group.element[55].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[55].target.extension[0].extension[2].valueInteger = -1
 * group.element[55].target.display = "performer[2](PractitionerRole[1].organization(Organization))"
+* group.element[55].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[55].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[55].target.dependsOn[0].value = "IF OBX-25 VALUED"
+* group.element[55].target.dependsOn[0].display = "IF OBX-25 VALUED"
 * group.element[56].code = #OBX-24
 * group.element[56].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[56].extension[0].extension[0].url = "type"
@@ -1080,6 +1226,10 @@ Usage: #definition
 * group.element[56].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[56].target.extension[0].extension[2].valueInteger = -1
 * group.element[56].target.display = "performer[2](Organization.address)"
+* group.element[56].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[56].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[56].target.dependsOn[0].value = "IF OBX-25 NOT VALUED"
+* group.element[56].target.dependsOn[0].display = "IF OBX-25 NOT VALUED"
 * group.element[57].code = #OBX-24
 * group.element[57].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[57].extension[0].extension[0].url = "type"
@@ -1099,6 +1249,10 @@ Usage: #definition
 * group.element[57].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[57].target.extension[0].extension[2].valueInteger = -1
 * group.element[57].target.display = "performer[2](PractitionerRole[1].organization(Organization.address))"
+* group.element[57].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[57].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[57].target.dependsOn[0].value = "IF OBX-25 VALUED"
+* group.element[57].target.dependsOn[0].display = "IF OBX-25 VALUED"
 * group.element[58].code = #OBX-25
 * group.element[58].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[58].extension[0].extension[0].url = "type"
@@ -1146,6 +1300,9 @@ Usage: #definition
 * group.element[60].display = "Performing Organization Medical Director"
 * group.element[60].target.equivalence = #equivalent
 * group.element[60].target.code = #performer[2](PractitionerRole[1].code.coding.system)
+* group.element[60].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[60].target.extension[0].extension[0].url = "fixedValue"
+* group.element[60].target.extension[0].extension[0].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0912\""
 * group.element[60].target.display = "performer[2](PractitionerRole[1].code.coding.system)"
 * group.element[61].code = #OBX-29
 * group.element[61].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -1269,6 +1426,10 @@ Usage: #definition
 * group.element[66].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.specimen\""
 * group.element[66].target.display = "extension[1].uri"
 * group.element[66].target.comment = "Note that in v2 messages the observations that a calculated observation is derived from on and involve multiple specimens are typically not included with the message. To enable relating the calculated observation to the correct specimens it relates to, the v2 message should include the originating observations that in turn use OBX-33 to link to the correct specimens.  Without that, and if there are multiple specimens in OBX-33, there is no standard method to correctly associate the observation with the correct specimens.  The implementer will have to devise an appropriate method for that in their context."
+* group.element[66].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[66].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[66].target.dependsOn[0].value = "IF OBX-33 COUNT>1"
+* group.element[66].target.dependsOn[0].display = "IF OBX-33 COUNT>1"
 * group.element[67].code = #OBX-33
 * group.element[67].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[67].extension[0].extension[0].url = "type"
@@ -1286,6 +1447,10 @@ Usage: #definition
 * group.element[67].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[67].target.extension[0].extension[1].valueInteger = 1
 * group.element[67].target.display = "extension[1].valueReference(Group.member.entity(Specimen.identifier[1])"
+* group.element[67].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[67].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[67].target.dependsOn[0].value = "IF OBX-33 COUNT>1"
+* group.element[67].target.dependsOn[0].display = "IF OBX-33 COUNT>1"
 * group.element[68].code = #OBX-33
 * group.element[68].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[68].extension[0].extension[0].url = "type"
@@ -1305,6 +1470,10 @@ Usage: #definition
 * group.element[68].target.extension[0].extension[2].url = "fixedValue"
 * group.element[68].target.extension[0].extension[2].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.specimen\""
 * group.element[68].target.display = "extension[2].uri"
+* group.element[68].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[68].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[68].target.dependsOn[0].value = "IF OBX-33 COUNT>1"
+* group.element[68].target.dependsOn[0].display = "IF OBX-33 COUNT>1"
 * group.element[69].code = #OBX-33
 * group.element[69].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[69].extension[0].extension[0].url = "type"
@@ -1322,6 +1491,10 @@ Usage: #definition
 * group.element[69].target.extension[0].extension[1].url = "cardinalityMax"
 * group.element[69].target.extension[0].extension[1].valueInteger = 1
 * group.element[69].target.display = "extension[2].valueReference(Group.member.entity(Specimen.identifier[2]))"
+* group.element[69].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[69].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[69].target.dependsOn[0].value = "IF OBX-33 COUNT>1"
+* group.element[69].target.dependsOn[0].display = "IF OBX-33 COUNT>1"
 * group.element[70].code = #OBX-33
 * group.element[70].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[70].extension[0].extension[0].url = "type"
@@ -1337,6 +1510,10 @@ Usage: #definition
 * group.element[70].target.extension[0].extension[0].url = "type"
 * group.element[70].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[70].target.display = "specimen(Specimen.identifier[1])"
+* group.element[70].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[70].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[70].target.dependsOn[0].value = "IF OBX-33 COUNT=1"
+* group.element[70].target.dependsOn[0].display = "IF OBX-33 COUNT=1"
 * group.element[71].code = #OBX-33
 * group.element[71].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[71].extension[0].extension[0].url = "type"
@@ -1352,3 +1529,7 @@ Usage: #definition
 * group.element[71].target.extension[0].extension[0].url = "type"
 * group.element[71].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[71].target.display = "specimen(Specimen.identifier[2])"
+* group.element[71].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[71].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[71].target.dependsOn[0].value = "IF OBX-33 COUNT=1"
+* group.element[71].target.dependsOn[0].display = "IF OBX-33 COUNT=1"

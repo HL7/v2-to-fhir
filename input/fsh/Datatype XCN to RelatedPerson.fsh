@@ -282,6 +282,10 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "name.period"
+* group.element[13].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[13].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[13].target.dependsOn[0].value = "IF XCN.19 NOT VALUED AND XCN.20 NOT VALUED"
+* group.element[13].target.dependsOn[0].display = "IF XCN.19 NOT VALUED AND XCN.20 NOT VALUED"
 * group.element[14].code = #XCN.18
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"

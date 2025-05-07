@@ -36,6 +36,10 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "Quantity.code"
 * group.element[0].target.comment = "The source of Quantity.value will likely come from a different field (eg. OBX-5 may populate Quantity.value while OBX-6 populates the remaining Quantity elements)."
+* group.element[0].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[0].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[0].target.dependsOn[0].value = "IF CWE.1 IS VALUED AND CWE.3 IS VALUED"
+* group.element[0].target.dependsOn[0].display = "IF CWE.1 IS VALUED AND CWE.3 IS VALUED"
 * group.element[1].code = #CWE.1
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -55,6 +59,10 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[1].target.extension[0].extension[2].valueInteger = 1
 * group.element[1].target.display = "Quantity.unit"
+* group.element[1].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[1].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[1].target.dependsOn[0].value = "If CWE.2 IS NOT VALUED"
+* group.element[1].target.dependsOn[0].display = "If CWE.2 IS NOT VALUED"
 * group.element[2].code = #CWE.2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -93,3 +101,7 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "Quantity.system"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF CWE.1 IS VALUED AND CWE.3 IS VALUED"
+* group.element[3].target.dependsOn[0].display = "IF CWE.1 IS VALUED AND CWE.3 IS VALUED"

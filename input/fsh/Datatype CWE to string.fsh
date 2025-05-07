@@ -35,6 +35,10 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = 1
 * group.element[0].target.display = "$value"
+* group.element[0].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[0].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[0].target.dependsOn[0].value = "IF CWE.9 NOT VALUED"
+* group.element[0].target.dependsOn[0].display = "IF CWE.9 NOT VALUED"
 * group.element[1].code = #CWE.9
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"

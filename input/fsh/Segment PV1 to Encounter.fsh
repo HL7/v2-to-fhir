@@ -58,6 +58,10 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[3].url = "mappedVia"
 * group.element[1].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70004-to-encounter-status"
 * group.element[1].target.display = "status"
+* group.element[1].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[1].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[1].target.dependsOn[0].value = "IF PV1-45 NOT VALUED"
+* group.element[1].target.dependsOn[0].display = "IF PV1-45 NOT VALUED"
 * group.element[2].code = #PV1-3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -99,6 +103,10 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[3].url = "fixedValue"
 * group.element[3].target.extension[0].extension[3].valueString = "\"active\""
 * group.element[3].target.display = "location[1].status"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF PV1-2.1 NOT EQUALS \"P\""
+* group.element[3].target.dependsOn[0].display = "IF PV1-2.1 NOT EQUALS \"P\""
 * group.element[4].code = #PV1-3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -120,6 +128,10 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[3].url = "fixedValue"
 * group.element[4].target.extension[0].extension[3].valueString = "\"planned\""
 * group.element[4].target.display = "location[1].status"
+* group.element[4].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[4].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[4].target.dependsOn[0].value = "IF PV1-2.1 EQUALS \"P\""
+* group.element[4].target.dependsOn[0].display = "IF PV1-2.1 EQUALS \"P\""
 * group.element[5].code = #PV1-4
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -882,6 +894,10 @@ Usage: #definition
 * group.element[42].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70116-to-v2-0116"
 * group.element[42].target.display = "location[1].location(Location.operationalStatus)"
 * group.element[42].target.comment = "The operational status is on the Location resource where the implementer must determine which of the Encounter.location(Location) instances reflect the Bed or Room and apply it to the most granular available."
+* group.element[42].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[42].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[42].target.dependsOn[0].value = "IF PV1-3.2 OR PV1-3.3 VALUED"
+* group.element[42].target.dependsOn[0].display = "IF PV1-3.2 OR PV1-3.3 VALUED"
 * group.element[43].code = #PV1-42
 * group.element[43].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[43].extension[0].extension[0].url = "type"
@@ -980,6 +996,10 @@ Usage: #definition
 * group.element[47].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[47].target.extension[0].extension[2].valueInteger = 1
 * group.element[47].target.display = "= \"finished\""
+* group.element[47].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[47].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[47].target.dependsOn[0].value = "IF PV1-45 VALUED"
+* group.element[47].target.dependsOn[0].display = "IF PV1-45 VALUED"
 * group.element[48].code = #PV1-50
 * group.element[48].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[48].extension[0].extension[0].url = "type"

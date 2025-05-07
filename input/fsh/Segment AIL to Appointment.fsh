@@ -58,7 +58,14 @@ Usage: #definition
 * group.element[2].display = "Start Date/Time Offset"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #participant.period.start
+* group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[2].target.extension[0].extension[0].url = "fixedValue"
+* group.element[2].target.extension[0].extension[0].valueString = "/.start + AIL-7 according to AIL-8 units/"
 * group.element[2].target.display = "participant.period.start"
+* group.element[2].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[2].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[2].target.dependsOn[0].value = "IF AIL-6 NOT VALUED"
+* group.element[2].target.dependsOn[0].display = "IF AIL-6 NOT VALUED"
 * group.element[3].code = #AIL-9
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -70,4 +77,11 @@ Usage: #definition
 * group.element[3].display = "Duration"
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #participant.period.end
+* group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[3].target.extension[0].extension[0].url = "fixedValue"
+* group.element[3].target.extension[0].extension[0].valueString = "Appointment.participant.period.start + AIL-9"
 * group.element[3].target.display = "participant.period.end"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF AIL-6 IS VALUED"
+* group.element[3].target.dependsOn[0].display = "IF AIL-6 IS VALUED"

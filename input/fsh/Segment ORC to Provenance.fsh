@@ -37,6 +37,10 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[3].url = "fixedValue"
 * group.element[0].target.extension[0].extension[3].valueString = "\"CREATE\""
 * group.element[0].target.display = "activity.coding.code"
+* group.element[0].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[0].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[0].target.dependsOn[0].value = "IF ORC-1 EQUALS \"NW\""
+* group.element[0].target.dependsOn[0].display = "IF ORC-1 EQUALS \"NW\""
 * group.element[1].code = #ORC-1
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"
@@ -58,6 +62,10 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[3].url = "fixedValue"
 * group.element[1].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/v3-DataOperation\""
 * group.element[1].target.display = "activity.coding.system"
+* group.element[1].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[1].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[1].target.dependsOn[0].value = "IF ORC-1 EQUALS \"NW\""
+* group.element[1].target.dependsOn[0].display = "IF ORC-1 EQUALS \"NW\""
 * group.element[2].code = #ORC-1
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -79,6 +87,10 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[3].url = "fixedValue"
 * group.element[2].target.extension[0].extension[3].valueString = "\"UPDATE\""
 * group.element[2].target.display = "activity.coding.code"
+* group.element[2].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[2].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[2].target.dependsOn[0].value = "IF ORC-1 EQUALS \"SC\""
+* group.element[2].target.dependsOn[0].display = "IF ORC-1 EQUALS \"SC\""
 * group.element[3].code = #ORC-1
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -100,6 +112,10 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[3].url = "fixedValue"
 * group.element[3].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/v3-DataOperation\""
 * group.element[3].target.display = "activity.coding.system"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF ORC-1 EQUALS \"SC\""
+* group.element[3].target.dependsOn[0].display = "IF ORC-1 EQUALS \"SC\""
 * group.element[4].code = #ORC-1
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -121,6 +137,10 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[3].url = "fixedValue"
 * group.element[4].target.extension[0].extension[3].valueString = "\"CANCEL\""
 * group.element[4].target.display = "activity.coding.code"
+* group.element[4].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[4].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[4].target.dependsOn[0].value = "IF ORC-1 IN (\"OC\", \"CA\")"
+* group.element[4].target.dependsOn[0].display = "IF ORC-1 IN (\"OC\", \"CA\")"
 * group.element[5].code = #ORC-1
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -142,6 +162,10 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[3].url = "fixedValue"
 * group.element[5].target.extension[0].extension[3].valueString = "\"http://terminology.hl7.org/CodeSystem/v3-DataOperation\""
 * group.element[5].target.display = "activity.coding.system"
+* group.element[5].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[5].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[5].target.dependsOn[0].value = "IF ORC-1 IN (\"OC\", \"CA\")"
+* group.element[5].target.dependsOn[0].display = "IF ORC-1 IN (\"OC\", \"CA\")"
 * group.element[6].code = #ORC-9
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -557,5 +581,5 @@ Usage: #definition
 * group.element[26].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[26].target.extension[0].extension[2].valueInteger = -1
 * group.element[26].target.extension[0].extension[3].url = "mappedVia"
-* group.element[26].target.extension[0].extension[3].valueUrl = "ConfidentialityCode"
+* group.element[26].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70177-to-v3-confidentiality"
 * group.element[26].target.display = "meta.security"

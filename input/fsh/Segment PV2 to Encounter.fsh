@@ -46,6 +46,9 @@ Usage: #definition
 * group.element[1].display = "Prior Pending Location"
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #location[5].status
+* group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[1].target.extension[0].extension[0].url = "fixedValue"
+* group.element[1].target.extension[0].extension[0].valueString = "\"planned\""
 * group.element[1].target.display = "location[5].status"
 * group.element[2].code = #PV2-3
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -160,7 +163,7 @@ Usage: #definition
 * group.element[7].target.code = #length
 * group.element[7].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].target.extension[0].extension[0].url = "type"
-* group.element[7].target.extension[0].extension[0].valueCode = #"Quantity"
+* group.element[7].target.extension[0].extension[0].valueCode = #"Duration"
 * group.element[7].target.extension[0].extension[1].url = "cardinalityMin"
 * group.element[7].target.extension[0].extension[1].valueInteger = 0
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
@@ -320,6 +323,9 @@ Usage: #definition
 * group.element[15].display = "Mode of Arrival Code"
 * group.element[15].target.equivalence = #equivalent
 * group.element[15].target.code = #extension[1].url
+* group.element[15].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[15].target.extension[0].extension[0].url = "fixedValue"
+* group.element[15].target.extension[0].extension[0].valueString = "\"http://hl7.org/fhir/StructureDefinition/encounter-modeOfArrival\""
 * group.element[15].target.display = "extension[1].url"
 * group.element[16].code = #PV2-38
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

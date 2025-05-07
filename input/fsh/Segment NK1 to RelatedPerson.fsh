@@ -129,6 +129,9 @@ See https://chat.fhir.org/#narrow/stream/179166-implementers/topic/relationship.
 * group.element[5].display = "Business Phone Number"
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #telecom[2].use
+* group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[5].target.extension[0].extension[0].url = "fixedValue"
+* group.element[5].target.extension[0].extension[0].valueString = "\"work\""
 * group.element[5].target.display = "telecom[2].use"
 * group.element[6].code = #NK1-7
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

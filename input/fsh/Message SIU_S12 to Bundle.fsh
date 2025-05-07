@@ -78,6 +78,10 @@ Usage: #definition
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #ServiceRequest[1..n]
 * group.element[5].target.display = "ServiceRequest[1..n]"
+* group.element[5].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[5].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[5].target.dependsOn[0].value = "IF SCH-26 or SCH-27 VALUED"
+* group.element[5].target.dependsOn[0].display = "IF SCH-26 or SCH-27 VALUED"
 * group.element[6].code = #SIU_S12.SCH
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "cardinalityMin"
@@ -130,6 +134,10 @@ Usage: #definition
 * group.element[10].target.equivalence = #equivalent
 * group.element[10].target.code = #Provenance[4]
 * group.element[10].target.display = "Provenance[4]"
+* group.element[10].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[10].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[10].target.dependsOn[0].value = "IF PID-33 AND PID-34 VALUED"
+* group.element[10].target.dependsOn[0].display = "IF PID-33 AND PID-34 VALUED"
 * group.element[11].code = #SIU_S12.PATIENT.PV1
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
@@ -151,6 +159,10 @@ Usage: #definition
 * group.element[12].target.equivalence = #equivalent
 * group.element[12].target.code = #Basic
 * group.element[12].target.display = "Basic"
+* group.element[12].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[12].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[12].target.dependsOn[0].value = "IF PV1-43 VALUED"
+* group.element[12].target.dependsOn[0].display = "IF PV1-43 VALUED"
 * group.element[13].code = #SIU_S12.PATIENT.PV1
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
@@ -171,6 +183,10 @@ Usage: #definition
 * group.element[14].target.equivalence = #equivalent
 * group.element[14].target.code = #Coverage[1]
 * group.element[14].target.display = "Coverage[1]"
+* group.element[14].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[14].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[14].target.dependsOn[0].value = "IF PV1-20 VALUE"
+* group.element[14].target.dependsOn[0].display = "IF PV1-20 VALUE"
 * group.element[15].code = #SIU_S12.PATIENT.PV2
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "cardinalityMin"
@@ -192,6 +208,10 @@ Usage: #definition
 * group.element[16].target.equivalence = #equivalent
 * group.element[16].target.code = #Observation[1]
 * group.element[16].target.display = "Observation[1]"
+* group.element[16].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[16].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[16].target.dependsOn[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
+* group.element[16].target.dependsOn[0].display = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
 * group.element[17].code = #SIU_S12.PATIENT.OBX
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "cardinalityMin"
@@ -203,6 +223,10 @@ Usage: #definition
 * group.element[17].target.code = #Observation[1]
 * group.element[17].target.display = "Observation[1]"
 * group.element[17].target.comment = "Note that when OBX-5 repeats, the standard mapping is to use Observation.component (see OBX[Observation-Component] map) rather than creating separate Observation instances.  However, we are aware that some profiles and implementation guides do separate the OBX into multiple observations depending on the OBX-2 value.  This is an example of a non-standard interpretation as the OBX should have been separated into multiple OBX segments to start.  Please consider the local profiles and implementation guides on how to manage these variants."
+* group.element[17].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[17].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[17].target.dependsOn[0].value = "IF  OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""
+* group.element[17].target.dependsOn[0].display = "IF  OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""
 * group.element[18].code = #SIU_S12.PATIENT.DG1
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "cardinalityMin"
@@ -238,6 +262,10 @@ Usage: #definition
 Note that each ServiceRequest being created includes data from SCH segment.
 If SCH-26 and SCH-27 repeat, then the implementer needs to determine how to align this with potentially repeating AIS segments.\
 """
+* group.element[20].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[20].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[20].target.dependsOn[0].value = "IF SCH-26 IS VALUED OR SCH-27 IS VALUED"
+* group.element[20].target.dependsOn[0].display = "IF SCH-26 IS VALUED OR SCH-27 IS VALUED"
 * group.element[21].code = #SIU_S12.RESOURCES.SERVICE.NTE
 * group.element[21].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[21].extension[0].extension[0].url = "cardinalityMin"

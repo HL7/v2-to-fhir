@@ -300,5 +300,5 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = -1
 * group.element[13].target.extension[0].extension[3].url = "mappedVia"
-* group.element[13].target.extension[0].extension[3].valueUrl = "ConfidentialityCode"
+* group.element[13].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70177-to-v3-confidentiality"
 * group.element[13].target.display = "meta.security"

@@ -149,7 +149,7 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[6].target.extension[0].extension[2].valueInteger = 1
 * group.element[6].target.extension[0].extension[3].url = "mappedVia"
-* group.element[6].target.extension[0].extension[3].valueUrl = "DegreeLicenseCertificate"
+* group.element[6].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70360-to-v2-0360"
 * group.element[6].target.display = "qualification.code"
 * group.element[7].code = #XCN.9
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -329,6 +329,10 @@ Usage: #definition
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "name.period"
+* group.element[15].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[15].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[15].target.dependsOn[0].value = "IF XCN.19 DOES NOT EXIST AND IF XCN.20 DOES NOT EXIST"
+* group.element[15].target.dependsOn[0].display = "IF XCN.19 DOES NOT EXIST AND IF XCN.20 DOES NOT EXIST"
 * group.element[16].code = #XCN.18
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"

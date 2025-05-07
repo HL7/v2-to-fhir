@@ -131,6 +131,10 @@ Usage: #definition
 * group.element[10].target.equivalence = #equivalent
 * group.element[10].target.code = #Basic
 * group.element[10].target.display = "Basic"
+* group.element[10].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[10].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[10].target.dependsOn[0].value = "IF PV1-43 VALUED"
+* group.element[10].target.dependsOn[0].display = "IF PV1-43 VALUED"
 * group.element[11].code = #MDM_T02.PV1
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
@@ -151,6 +155,10 @@ Usage: #definition
 * group.element[12].target.equivalence = #equivalent
 * group.element[12].target.code = #Coverage[1]
 * group.element[12].target.display = "Coverage[1]"
+* group.element[12].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[12].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[12].target.dependsOn[0].value = "IF PV1-20 VALUE"
+* group.element[12].target.dependsOn[0].display = "IF PV1-20 VALUE"
 * group.element[13].code = #MDM_T02.COMMON_ORDER.ORC
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
@@ -228,6 +236,10 @@ Usage: #definition
 It is up to the implementer to be sensitive whether this message is new to the receiver or an update to a prior one and only update Provenance for new updates.
 Also, as TXA-8 Edit Date Time can repeat, a separate Provenance instance must be created for each edit date time of interest.\
 """
+* group.element[19].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[19].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[19].target.dependsOn[0].value = "IF TXA-8 IS VALUED"
+* group.element[19].target.dependsOn[0].display = "IF TXA-8 IS VALUED"
 * group.element[20].code = #MDM_T02.OBSERVATION.OBX
 * group.element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[20].extension[0].extension[0].url = "cardinalityMin"

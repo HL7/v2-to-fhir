@@ -15,10 +15,13 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment MSH[Transformation] to Provenance.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1byfzqOfOvIVdRkHv2Tto5a-a0YMYWWP0eryaZBvibIo/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1byfzqOfOvIVdRkHv2Tto5a-a0YMYWWP0eryaZBvibIo/edit?gid=0#gid=0"
 * group.element[0].code = #MSH
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #activity.coding.code
+* group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[0].target.extension[0].extension[0].url = "fixedValue"
+* group.element[0].target.extension[0].extension[0].valueString = "\"v2-FHIR transformation\""
 * group.element[0].target.display = "activity.coding.code"
 * group.element[1].code = #MSH
 * group.element[1].target.equivalence = #equivalent
@@ -88,12 +91,21 @@ Usage: #definition
 * group.element[7].code = #MSH
 * group.element[7].target.equivalence = #equivalent
 * group.element[7].target.code = #entity[1].what(DocumentReference.content.attachment.data)
+* group.element[7].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[7].target.extension[0].extension[0].url = "fixedValue"
+* group.element[7].target.extension[0].extension[0].valueString = "/v2.txt or v2.xml into base 64/"
 * group.element[7].target.display = "entity[1].what(DocumentReference.content.attachment.data)"
 * group.element[8].code = #MSH
 * group.element[8].target.equivalence = #equivalent
 * group.element[8].target.code = #entity[1].what(DocumentReference.status)
+* group.element[8].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[8].target.extension[0].extension[0].url = "fixedValue"
+* group.element[8].target.extension[0].extension[0].valueString = "\"current\""
 * group.element[8].target.display = "entity[1].what(DocumentReference.status)"
 * group.element[9].code = #MSH
 * group.element[9].target.equivalence = #equivalent
 * group.element[9].target.code = #entity[1].role
+* group.element[9].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[9].target.extension[0].extension[0].url = "fixedValue"
+* group.element[9].target.extension[0].extension[0].valueString = "\"source\""
 * group.element[9].target.display = "entity[1].role"

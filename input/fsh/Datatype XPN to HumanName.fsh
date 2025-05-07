@@ -170,6 +170,10 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
 * group.element[7].target.display = "[1].period"
+* group.element[7].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[7].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[7].target.dependsOn[0].value = "IF XPN.12 NOT VALUED AND XPN.13 NOT VALUED"
+* group.element[7].target.dependsOn[0].display = "IF XPN.12 NOT VALUED AND XPN.13 NOT VALUED"
 * group.element[8].code = #XPN.11
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"

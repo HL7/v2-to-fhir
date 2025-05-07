@@ -68,7 +68,7 @@ Usage: #definition
 * group.element[2].extension[0].extension[2].valueInteger = 1
 * group.element[2].display = "Administration Method"
 * group.element[2].target.equivalence = #equivalent
-* group.element[2].target.code = #dosageInstruciton.method
+* group.element[2].target.code = #dosageInstruction.method
 * group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].target.extension[0].extension[0].url = "type"
 * group.element[2].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -78,7 +78,7 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.extension[0].extension[3].url = "mappedVia"
 * group.element[2].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70165-to-sct"
-* group.element[2].target.display = "dosageInstruciton.method"
+* group.element[2].target.display = "dosageInstruction.method"
 * group.element[3].code = #RXR-5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"

@@ -82,6 +82,10 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[1].url = "fixedValue"
 * group.element[3].target.extension[0].extension[1].valueString = "\"http://hl7.org/fhir/5.0/StructureDefinition/extension-subscriberId\""
 * group.element[3].target.display = "extension[1].url"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF CX.5 IS \"SN\""
+* group.element[3].target.dependsOn[0].display = "IF CX.5 IS \"SN\""
 * group.element[4].code = #IN1-10
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -97,6 +101,10 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[0].url = "type"
 * group.element[4].target.extension[0].extension[0].valueCode = #"Identifier"
 * group.element[4].target.display = "extension[1].valueIdentifier"
+* group.element[4].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[4].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[4].target.dependsOn[0].value = "IF CX.5 IS \"SN\""
+* group.element[4].target.dependsOn[0].display = "IF CX.5 IS \"SN\""
 * group.element[5].code = #IN1-10
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -194,6 +202,10 @@ Usage: #definition
 * group.element[10].target.extension[0].extension[0].url = "type"
 * group.element[10].target.extension[0].extension[0].valueCode = #"Reference"
 * group.element[10].target.display = "subscriber(RelatedPerson)"
+* group.element[10].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[10].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[10].target.dependsOn[0].value = "IF IN1-17 IS NOT 'patient'"
+* group.element[10].target.dependsOn[0].display = "IF IN1-17 IS NOT 'patient'"
 * group.element[11].code = #IN1-16
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -209,6 +221,10 @@ Usage: #definition
 * group.element[11].target.extension[0].extension[0].url = "type"
 * group.element[11].target.extension[0].extension[0].valueCode = #"Reference"
 * group.element[11].target.display = "subscriber(Patient)"
+* group.element[11].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[11].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[11].target.dependsOn[0].value = "IF IN1-17 IS 'patient'"
+* group.element[11].target.dependsOn[0].display = "IF IN1-17 IS 'patient'"
 * group.element[12].code = #IN1-17
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -222,7 +238,7 @@ Usage: #definition
 * group.element[12].target.code = #relationship
 * group.element[12].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].target.extension[0].extension[0].url = "type"
-* group.element[12].target.extension[0].extension[0].valueCode = #"CondeableConcept"
+* group.element[12].target.extension[0].extension[0].valueCode = #"CodeableConcept"
 * group.element[12].target.extension[0].extension[1].url = "mappedVia"
 * group.element[12].target.extension[0].extension[1].valueUrl = "ConceptMap/table-hl70063-to-v3-rolecode"
 * group.element[12].target.display = "relationship"

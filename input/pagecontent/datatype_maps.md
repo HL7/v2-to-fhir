@@ -74,7 +74,6 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [MSG](ConceptMap-datatype-msg-to-coding.html) - Message Type to FHIR [Coding](http://hl7.org/fhir/R4/datatypes.html#coding)
 * [MSG](ConceptMap-datatype-msg-to-messageheader.html) - Message Type to FHIR [MessageHeader](http://hl7.org/fhir/R4/messageheader.html)
 * [MSG](ConceptMap-datatype-msg-to-code.html) - Message Type to FHIR [code](http://hl7.org/fhir/R4/datatypes.html#code)
-* [NA](ConceptMap-datatype-na-to-sampleddata.html) - Numeric Array to FHIR [SampledData](http://hl7.org/fhir/R4/datatypes.html#sampleddata)
 * [NDL](ConceptMap-datatype-ndl-to-practitionerrole.html) - Name With Date And Location to FHIR [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html)
 * [NM](ConceptMap-datatype-nm-to-quantity.html) - Numeric to FHIR [Quantity](http://hl7.org/fhir/R4/datatypes.html#quantity)
 * [NM[LengthOfStay]](ConceptMap-datatype-nm-lengthofstay-to-quantity.html) - Numeric to FHIR [Quantity](http://hl7.org/fhir/R4/datatypes.html#quantity)

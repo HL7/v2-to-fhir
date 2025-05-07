@@ -75,6 +75,10 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[3].url = "mappedVia"
 * group.element[2].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70276-to-sct"
 * group.element[2].target.display = "reasonCode[1]"
+* group.element[2].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[2].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[2].target.dependsOn[0].value = "IF CWE.3 IS \"HL70276\""
+* group.element[2].target.dependsOn[0].display = "IF CWE.3 IS \"HL70276\""
 * group.element[3].code = #SCH-7
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -97,6 +101,10 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70277-to-v2-0277"
 * group.element[3].target.display = "appointmentType[1]"
 * group.element[3].target.comment = "Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF CWE.3 IS \"HL70277\""
+* group.element[3].target.dependsOn[0].display = "IF CWE.3 IS \"HL70277\""
 * group.element[4].code = #SCH-8
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -119,6 +127,10 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70277-to-v2-0277"
 * group.element[4].target.display = "appointmentType[1]"
 * group.element[4].target.comment = "Note that in V2 this is Table HL70276, but there is a problem with that as it does not reflect SCH-7, rather SCH-8.  We are working on correcting that in HL7 v2."
+* group.element[4].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[4].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[4].target.dependsOn[0].value = "IF CWE.3 IS \"HL70277\""
+* group.element[4].target.dependsOn[0].display = "IF CWE.3 IS \"HL70277\""
 * group.element[5].code = #SCH-9
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -180,6 +192,9 @@ Usage: #definition
 * group.element[8].display = "Placer Contact Person"
 * group.element[8].target.equivalence = #equivalent
 * group.element[8].target.code = #participant[1].type.coding.code
+* group.element[8].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[8].target.extension[0].extension[0].url = "fixedValue"
+* group.element[8].target.extension[0].extension[0].valueString = "#placer contact#"
 * group.element[8].target.display = "participant[1].type.coding.code"
 * group.element[9].code = #SCH-12
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -192,6 +207,9 @@ Usage: #definition
 * group.element[9].display = "Placer Contact Person"
 * group.element[9].target.equivalence = #equivalent
 * group.element[9].target.code = #participant[1].type.coding.system
+* group.element[9].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[9].target.extension[0].extension[0].url = "fixedValue"
+* group.element[9].target.extension[0].extension[0].valueString = "\"http://terminology.hl7.org/CodeSystem/participant-type\""
 * group.element[9].target.display = "participant[1].type.coding.system"
 * group.element[10].code = #SCH-16
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -223,6 +241,9 @@ Usage: #definition
 * group.element[11].display = "Filler Contact Person"
 * group.element[11].target.equivalence = #equivalent
 * group.element[11].target.code = #participant[2].type.coding.code
+* group.element[11].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[11].target.extension[0].extension[0].url = "fixedValue"
+* group.element[11].target.extension[0].extension[0].valueString = "#filler contact#"
 * group.element[11].target.display = "participant[2].type.coding.code"
 * group.element[12].code = #SCH-16
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -235,6 +256,9 @@ Usage: #definition
 * group.element[12].display = "Filler Contact Person"
 * group.element[12].target.equivalence = #equivalent
 * group.element[12].target.code = #participant[2].type.coding.system
+* group.element[12].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[12].target.extension[0].extension[0].url = "fixedValue"
+* group.element[12].target.extension[0].extension[0].valueString = "\"http://terminology.hl7.org/CodeSystem/participant-type\""
 * group.element[12].target.display = "participant[2].type.coding.system"
 * group.element[13].code = #SCH-20
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -266,6 +290,9 @@ Usage: #definition
 * group.element[14].display = "Entered By Person"
 * group.element[14].target.equivalence = #equivalent
 * group.element[14].target.code = #participant[3].type[1].coding.code
+* group.element[14].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[14].target.extension[0].extension[0].url = "fixedValue"
+* group.element[14].target.extension[0].extension[0].valueString = "enterer"
 * group.element[14].target.display = "participant[3].type[1].coding.code"
 * group.element[15].code = #SCH-20
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -278,6 +305,9 @@ Usage: #definition
 * group.element[15].display = "Entered By Person"
 * group.element[15].target.equivalence = #equivalent
 * group.element[15].target.code = #participant[3].type[1].coding.system
+* group.element[15].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[15].target.extension[0].extension[0].url = "fixedValue"
+* group.element[15].target.extension[0].extension[0].valueString = "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
 * group.element[15].target.display = "participant[3].type[1].coding.system"
 * group.element[16].code = #SCH-25
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

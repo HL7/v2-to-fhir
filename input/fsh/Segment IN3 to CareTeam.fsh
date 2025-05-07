@@ -61,4 +61,7 @@ Usage: #definition
 * group.element[2].display = "Case Manager"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #participant.role.text
+* group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[2].target.extension[0].extension[0].url = "fixedValue"
+* group.element[2].target.extension[0].extension[0].valueString = "\"case manager\""
 * group.element[2].target.display = "participant.role.text"

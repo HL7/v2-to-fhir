@@ -28,6 +28,10 @@ Usage: #definition
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #numerator.comparator
 * group.element[0].target.display = "numerator.comparator"
+* group.element[0].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[0].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[0].target.dependsOn[0].value = "IF NOT EQUAL TO \"=\""
+* group.element[0].target.dependsOn[0].display = "IF NOT EQUAL TO \"=\""
 * group.element[1].code = #SN.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"

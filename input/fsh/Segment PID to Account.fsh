@@ -19,6 +19,9 @@ Usage: #definition
 * group.element[0].code = #PID
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #status
+* group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[0].target.extension[0].extension[0].url = "fixedValue"
+* group.element[0].target.extension[0].extension[0].valueString = "\"active\""
 * group.element[0].target.display = "status"
 * group.element[1].code = #PID-18
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

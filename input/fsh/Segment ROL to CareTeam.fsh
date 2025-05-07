@@ -189,6 +189,10 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
 * group.element[8].target.display = "participant.onBehalfOf(Organization[1])"
+* group.element[8].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[8].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[8].target.dependsOn[0].value = "IF ROL-4 VALUED"
+* group.element[8].target.dependsOn[0].display = "IF ROL-4 VALUED"
 * group.element[9].code = #ROL-10
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -210,6 +214,10 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[3].url = "mappedVia"
 * group.element[9].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group.element[9].target.display = "participant.member(Organization[1].type)"
+* group.element[9].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[9].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[9].target.dependsOn[0].value = "IF ROL-4 NOT VALUED"
+* group.element[9].target.dependsOn[0].display = "IF ROL-4 NOT VALUED"
 * group.element[10].code = #ROL-12
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -244,6 +252,10 @@ Usage: #definition
 * group.element[11].target.extension[0].extension[0].url = "type"
 * group.element[11].target.extension[0].extension[0].valueCode = #"Reference"
 * group.element[11].target.display = "participant.onBehalfOf(Organization[1])"
+* group.element[11].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[11].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[11].target.dependsOn[0].value = "IF ROL-4 VALUED"
+* group.element[11].target.dependsOn[0].display = "IF ROL-4 VALUED"
 * group.element[12].code = #ROL-14
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -259,3 +271,7 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[0].url = "type"
 * group.element[12].target.extension[0].extension[0].valueCode = #"Reference"
 * group.element[12].target.display = "participant.member(Organization[1])"
+* group.element[12].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[12].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[12].target.dependsOn[0].value = "IF ROL-4 NOT VALUED"
+* group.element[12].target.dependsOn[0].display = "IF ROL-4 NOT VALUED"

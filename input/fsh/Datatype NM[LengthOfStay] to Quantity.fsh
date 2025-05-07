@@ -31,6 +31,9 @@ Usage: #definition
 * group.element[1].display = "Numeric"
 * group.element[1].target.equivalence = #equivalent
 * group.element[1].target.code = #unit
+* group.element[1].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[1].target.extension[0].extension[0].url = "fixedValue"
+* group.element[1].target.extension[0].extension[0].valueString = "\"days\""
 * group.element[1].target.display = "unit"
 * group.element[2].code = #NM.1
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -39,6 +42,9 @@ Usage: #definition
 * group.element[2].display = "Numeric"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #system
+* group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[2].target.extension[0].extension[0].url = "fixedValue"
+* group.element[2].target.extension[0].extension[0].valueString = "\"http://unitsofmeasure.org/\""
 * group.element[2].target.display = "system"
 * group.element[3].code = #NM.1
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -47,4 +53,7 @@ Usage: #definition
 * group.element[3].display = "Numeric"
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #code
+* group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[3].target.extension[0].extension[0].url = "fixedValue"
+* group.element[3].target.extension[0].extension[0].valueString = "\"d\""
 * group.element[3].target.display = "code"

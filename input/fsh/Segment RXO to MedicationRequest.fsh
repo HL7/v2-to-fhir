@@ -66,6 +66,9 @@ Usage: #definition
 * group.element[3].display = "Requested Give Amount - Minimum"
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #dosageInstruction.doseAndRate[1].type
+* group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[3].target.extension[0].extension[0].url = "fixedValue"
+* group.element[3].target.extension[0].extension[0].valueString = "\"ordered\""
 * group.element[3].target.display = "dosageInstruction.doseAndRate[1].type"
 * group.element[4].code = #RXO-3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -99,6 +102,10 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[1].url = "mappedVia"
 * group.element[5].target.extension[0].extension[1].valueUrl = "unspecified_mapping"
 * group.element[5].target.display = "dosageInstruction.doseAndRate[1].doseRange.low.code"
+* group.element[5].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[5].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[5].target.dependsOn[0].value = "IF RXO-2 IS VALUED AND (IF RXO-4.1 IS VALUED OR RXO-4.3 IS VALUED)"
+* group.element[5].target.dependsOn[0].display = "IF RXO-2 IS VALUED AND (IF RXO-4.1 IS VALUED OR RXO-4.3 IS VALUED)"
 * group.element[6].code = #RXO-4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -114,6 +121,10 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[0].url = "type"
 * group.element[6].target.extension[0].extension[0].valueCode = #"string"
 * group.element[6].target.display = "dosageInstruction.doseAndRate[1].doseRange.low.unit"
+* group.element[6].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[6].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[6].target.dependsOn[0].value = "IF RXO-2 IS VALUED AND (IF RXO-4.1 IS NOT VALUED AND RXO-4.3 IS NOT VALUED)"
+* group.element[6].target.dependsOn[0].display = "IF RXO-2 IS VALUED AND (IF RXO-4.1 IS NOT VALUED AND RXO-4.3 IS NOT VALUED)"
 * group.element[7].code = #RXO-4
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -129,6 +140,10 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[0].url = "type"
 * group.element[7].target.extension[0].extension[0].valueCode = #"code"
 * group.element[7].target.display = "dosageInstruction.doseAndRate[1].doseRange.high.code"
+* group.element[7].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[7].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[7].target.dependsOn[0].value = "IF RXO-2 IS VALUED AND (IF RXO-4.1 IS VALUED OR RXO-4.3 IS VALUED)"
+* group.element[7].target.dependsOn[0].display = "IF RXO-2 IS VALUED AND (IF RXO-4.1 IS VALUED OR RXO-4.3 IS VALUED)"
 * group.element[8].code = #RXO-4
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -144,6 +159,10 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[0].url = "type"
 * group.element[8].target.extension[0].extension[0].valueCode = #"string"
 * group.element[8].target.display = "dosageInstruction.doseAndRate[1].doseRange.high.unit"
+* group.element[8].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[8].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[8].target.dependsOn[0].value = "IF RXO-2 IS VALUED AND (IF RXO-4.1 IS NOT VALUED AND RXO-4.3 IS NOT VALUED)"
+* group.element[8].target.dependsOn[0].display = "IF RXO-2 IS VALUED AND (IF RXO-4.1 IS NOT VALUED AND RXO-4.3 IS NOT VALUED)"
 * group.element[9].code = #RXO-5
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -210,6 +229,10 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[1].url = "mappedVia"
 * group.element[12].target.extension[0].extension[1].valueUrl = "unspecified_mapping"
 * group.element[12].target.display = "dispenseRequest.quantity.code"
+* group.element[12].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[12].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[12].target.dependsOn[0].value = "IF RXO-12.1 IS VALUED OR RXO-12.3 IS VALUED"
+* group.element[12].target.dependsOn[0].display = "IF RXO-12.1 IS VALUED OR RXO-12.3 IS VALUED"
 * group.element[13].code = #RXO-12
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -225,6 +248,10 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[0].url = "type"
 * group.element[13].target.extension[0].extension[0].valueCode = #"string"
 * group.element[13].target.display = "dispenseRequest.quantity.unit"
+* group.element[13].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[13].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[13].target.dependsOn[0].value = "IF RXO-12.1 IS NOT VALUED AND RXO-12.3 IS NOT VALUED"
+* group.element[13].target.dependsOn[0].display = "IF RXO-12.1 IS NOT VALUED AND RXO-12.3 IS NOT VALUED"
 * group.element[14].code = #RXO-13
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -284,6 +311,10 @@ Usage: #definition
 * group.element[17].target.extension[0].extension[1].url = "mappedVia"
 * group.element[17].target.extension[0].extension[1].valueUrl = "unspecified_mapping"
 * group.element[17].target.display = "medicationReference(Medication.ingredient.strength.numerator.code"
+* group.element[17].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[17].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[17].target.dependsOn[0].value = "IF RXO-19.1 IS VALUED OR RXO-19.3 IS VALUED"
+* group.element[17].target.dependsOn[0].display = "IF RXO-19.1 IS VALUED OR RXO-19.3 IS VALUED"
 * group.element[18].code = #RXO-19
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"
@@ -299,6 +330,10 @@ Usage: #definition
 * group.element[18].target.extension[0].extension[0].url = "type"
 * group.element[18].target.extension[0].extension[0].valueCode = #"string"
 * group.element[18].target.display = "medicationReference(Medication.ingredient.strength.numerator.unit"
+* group.element[18].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[18].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[18].target.dependsOn[0].value = "IF RXO-19.1 IS NOT VALUED AND RXO-19.3 IS NOT VALUED"
+* group.element[18].target.dependsOn[0].display = "IF RXO-19.1 IS NOT VALUED AND RXO-19.3 IS NOT VALUED"
 * group.element[19].code = #RXE-19
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "type"
@@ -350,6 +385,9 @@ Usage: #definition
 * group.element[21].display = "Total Daily Dose"
 * group.element[21].target.equivalence = #equivalent
 * group.element[21].target.code = #dosageInstruction.maxDosePerPeriod.denominator.code
+* group.element[21].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[21].target.extension[0].extension[0].url = "fixedValue"
+* group.element[21].target.extension[0].extension[0].valueString = "\"d\""
 * group.element[21].target.display = "dosageInstruction.maxDosePerPeriod.denominator.code"
 * group.element[22].code = #RXO-25
 * group.element[22].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -383,6 +421,10 @@ Usage: #definition
 * group.element[23].target.extension[0].extension[1].url = "mappedVia"
 * group.element[23].target.extension[0].extension[1].valueUrl = "unspecified_mapping"
 * group.element[23].target.display = "medicationReference(Medication.ingredient.strength.denominator.code"
+* group.element[23].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[23].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[23].target.dependsOn[0].value = "IF RXO-26.1 IS VALUED OR RXO-26.3 IS VALUED"
+* group.element[23].target.dependsOn[0].display = "IF RXO-26.1 IS VALUED OR RXO-26.3 IS VALUED"
 * group.element[24].code = #RXO-26
 * group.element[24].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[24].extension[0].extension[0].url = "type"
@@ -398,3 +440,7 @@ Usage: #definition
 * group.element[24].target.extension[0].extension[0].url = "type"
 * group.element[24].target.extension[0].extension[0].valueCode = #"string"
 * group.element[24].target.display = "medicationReference(Medication.ingredient.strength.denominator.unit"
+* group.element[24].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[24].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[24].target.dependsOn[0].value = "IF RXO-26.1 IS NOT VALUED AND RXO-26.3 IS NOT VALUED"
+* group.element[24].target.dependsOn[0].display = "IF RXO-26.1 IS NOT VALUED AND RXO-26.3 IS NOT VALUED"

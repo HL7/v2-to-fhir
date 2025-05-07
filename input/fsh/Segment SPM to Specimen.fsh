@@ -228,6 +228,10 @@ Usage: #definition
 * group.element[10].target.equivalence = #equivalent
 * group.element[10].target.code = #collection.collectedPeriod
 * group.element[10].target.display = "collection.collectedPeriod"
+* group.element[10].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[10].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[10].target.dependsOn[0].value = "IF SPM-17.2 VALUED"
+* group.element[10].target.dependsOn[0].display = "IF SPM-17.2 VALUED"
 * group.element[11].code = #SPM-17
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -240,6 +244,10 @@ Usage: #definition
 * group.element[11].target.equivalence = #equivalent
 * group.element[11].target.code = #collection.collectedDateTime
 * group.element[11].target.display = "collection.collectedDateTime"
+* group.element[11].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[11].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[11].target.dependsOn[0].value = "IF SPM-17.2 NOT VALUED"
+* group.element[11].target.dependsOn[0].display = "IF SPM-17.2 NOT VALUED"
 * group.element[12].code = #SPM-18
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"

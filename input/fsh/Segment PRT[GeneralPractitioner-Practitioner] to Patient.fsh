@@ -26,7 +26,7 @@ Usage: #definition
 * group.element[0].extension[0].extension[2].valueInteger = -1
 * group.element[0].display = "Person"
 * group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #generalPractitioner[Practitioner]
+* group.element[0].target.code = #generalPractitioner(Practitioner)
 * group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"Reference"
@@ -34,4 +34,4 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[1].valueInteger = 0
 * group.element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[0].target.extension[0].extension[2].valueInteger = -1
-* group.element[0].target.display = "generalPractitioner[Practitioner]"
+* group.element[0].target.display = "generalPractitioner(Practitioner)"

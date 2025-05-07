@@ -100,6 +100,10 @@ Usage: #definition
 * group.element[7].target.code = #Provenance[3]
 * group.element[7].target.display = "Provenance[3]"
 * group.element[7].target.comment = "If EVN-5 is not valued, then the MSH may have either the sending responsible organization (MSH-22) or the sending facility (MSH-4) to reasonable approximate the agent relevant for this Provenance instance."
+* group.element[7].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[7].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[7].target.dependsOn[0].value = "IF EVN-5 NOT VALUED AND (MSH-22 IS VALUED OR MSH-4 IS VALUED)"
+* group.element[7].target.dependsOn[0].display = "IF EVN-5 NOT VALUED AND (MSH-22 IS VALUED OR MSH-4 IS VALUED)"
 * group.element[8].code = #ADT_A09.PID
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "cardinalityMin"
@@ -131,6 +135,10 @@ Usage: #definition
 * group.element[10].target.equivalence = #equivalent
 * group.element[10].target.code = #Provenance[4]
 * group.element[10].target.display = "Provenance[4]"
+* group.element[10].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[10].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[10].target.dependsOn[0].value = "IF PID-33 AND PID-34 VALUED"
+* group.element[10].target.dependsOn[0].display = "IF PID-33 AND PID-34 VALUED"
 * group.element[11].code = #ADT_A09.PD1
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "cardinalityMin"
@@ -152,6 +160,10 @@ Usage: #definition
 * group.element[12].target.equivalence = #equivalent
 * group.element[12].target.code = #Observation[1]
 * group.element[12].target.display = "Observation[1]"
+* group.element[12].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[12].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[12].target.dependsOn[0].value = "IF PD1-7 VALUED"
+* group.element[12].target.dependsOn[0].display = "IF PD1-7 VALUED"
 * group.element[13].code = #ADT_A09.PV1
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "cardinalityMin"
@@ -173,6 +185,10 @@ Usage: #definition
 * group.element[14].target.equivalence = #equivalent
 * group.element[14].target.code = #Basic
 * group.element[14].target.display = "Basic"
+* group.element[14].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[14].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[14].target.dependsOn[0].value = "IF PV1-43 VALUED"
+* group.element[14].target.dependsOn[0].display = "IF PV1-43 VALUED"
 * group.element[15].code = #ADT_A09.PV1
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "cardinalityMin"
@@ -193,6 +209,10 @@ Usage: #definition
 * group.element[16].target.equivalence = #equivalent
 * group.element[16].target.code = #Coverage[1]
 * group.element[16].target.display = "Coverage[1]"
+* group.element[16].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[16].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[16].target.dependsOn[0].value = "IF PV1-20 VALUE"
+* group.element[16].target.dependsOn[0].display = "IF PV1-20 VALUE"
 * group.element[17].code = #ADT_A09.PV2
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "cardinalityMin"
@@ -215,6 +235,10 @@ Usage: #definition
 * group.element[18].target.code = #Observation[2]
 * group.element[18].target.display = "Observation[2]"
 * group.element[18].target.comment = "One cannot determine whether this observation made during the PV1/PV2 communicated above, or from a prior visit/stay. It is therefore up to the implementer whether to populate Observation.encounter.reference with the Encounter[1].id or not.  Only when the ADT message involves an event before the encounter occurs, e.g., the intiial registration, it is clear that the observation is NOT associated with Encounter[1]."
+* group.element[18].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[18].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[18].target.dependsOn[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
+* group.element[18].target.dependsOn[0].display = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
 * group.element[19].code = #ADT_A09.OBSERVATION.OBX
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[19].extension[0].extension[0].url = "cardinalityMin"
@@ -226,3 +250,7 @@ Usage: #definition
 * group.element[19].target.code = #Observation[2]
 * group.element[19].target.display = "Observation[2]"
 * group.element[19].target.comment = "One cannot determine whether this observation made during the PV1/PV2 communicated above, or from a prior visit/stay. It is therefore up to the implementer whether to populate Observation.encounter.reference with the Encounter[1].id or not.  Only when the ADT message involves an event before the encounter occurs, e.g., the intiial registration, it is clear that the observation is NOT associated with Encounter[1]."
+* group.element[19].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[19].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[19].target.dependsOn[0].value = "IF  OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""
+* group.element[19].target.dependsOn[0].display = "IF  OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""

@@ -6,7 +6,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 3,TQ1-3,Repeat Pattern,RPT,0,-1,,,,dosageInstruction.timing,,CodeableConcept,0,1,RPT[Timing],,,,
 4,TQ1-4,Explicit Time,TM,0,-1,,,,dosageInstruction.timing.event,,dateTime,0,1,,,,,
 5,TQ1-5,Relative Time and Units,CQ,0,-1,IF TQ1-3.9 IS EMPTY,,,dosageInstruction.timing.repeat.offset,,unsignedInt,0,1,CQ[UnsignedInt],,,,
-6,TQ1-6,Service Duration,CQ,0,1,IF TQ1-7 AND TQ1-8 NOT VALUED,,,occurrenceTiming.boundsDuration,,SimplyQuantity,0,1,CQ[Quantity],,,,The Duration data type is required to be an expression of time using UCUM units
+6,TQ1-6,Service Duration,CQ,0,1,IF TQ1-7 AND TQ1-8 NOT VALUED,,,occurrenceTiming.boundsDuration,,SimpleQuantity,0,1,CQ[Quantity],,,,The Duration data type is required to be an expression of time using UCUM units
 6,TQ1-6,Service Duration,CQ,0,1,IF TQ1-7 VALUED AND TQ1-8 NOT VALUED,,,occurrenceTiming.boundsPeriod.end,,dateTime,0,1,,,occurrenceTiming.boundPeriod.start + TQ1-6,,
 6,TQ1-6,Service Duration,CQ,0,1,IF TQ1-7 NOT VALUED AND TQ1-8 VALUED,,,occurneceTiming.boundsPeriod.start,,dateTime,0,1,,,occurrenceTiming.boundPeriod.end - TQ1-6,,
 7,TQ1-7,Start date/time,DTM,0,1,,,,dosageInstruction.timing.repeat.boundsPeriod.start,,dateTime,0,1,,,,,

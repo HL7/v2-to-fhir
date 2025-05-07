@@ -291,6 +291,10 @@ HL70127 is a user defined table\
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.display = "onsetString"
 * group.element[12].target.comment = "Cannot map to both onsetDateTime and onsetString, so take onsetDateTime if available."
+* group.element[12].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[12].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[12].target.dependsOn[0].value = "IF IAM-11 NOT VALUED"
+* group.element[12].target.dependsOn[0].display = "IF IAM-11 NOT VALUED"
 * group.element[13].code = #IAM-13
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -329,6 +333,10 @@ HL70127 is a user defined table\
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
 * group.element[14].target.display = "recorder.reference(Practitioner.name)"
+* group.element[14].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[14].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[14].target.dependsOn[0].value = "IF IAM-15 NOT VALUED"
+* group.element[14].target.dependsOn[0].display = "IF IAM-15 NOT VALUED"
 * group.element[15].code = #IAM-14
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[15].extension[0].extension[0].url = "type"
@@ -348,6 +356,10 @@ HL70127 is a user defined table\
 * group.element[15].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[15].target.extension[0].extension[2].valueInteger = 1
 * group.element[15].target.display = "recorder.reference(Patient[1].name)"
+* group.element[15].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[15].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[15].target.dependsOn[0].value = "IF IAM-15 EQUALS \"SEL\""
+* group.element[15].target.dependsOn[0].display = "IF IAM-15 EQUALS \"SEL\""
 * group.element[16].code = #IAM-14
 * group.element[16].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[16].extension[0].extension[0].url = "type"
@@ -367,6 +379,10 @@ HL70127 is a user defined table\
 * group.element[16].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[16].target.extension[0].extension[2].valueInteger = 1
 * group.element[16].target.display = "recorder.reference(RelatedPerson.name)"
+* group.element[16].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[16].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[16].target.dependsOn[0].value = "IF IAM-15 VALUED AND NOT \"SEL\""
+* group.element[16].target.dependsOn[0].display = "IF IAM-15 VALUED AND NOT \"SEL\""
 * group.element[17].code = #IAM-15
 * group.element[17].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[17].extension[0].extension[0].url = "type"
@@ -388,6 +404,10 @@ HL70127 is a user defined table\
 * group.element[17].target.extension[0].extension[3].url = "mappedVia"
 * group.element[17].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70063-to-v3-rolecode"
 * group.element[17].target.display = "recorder.reference(RelatedPerson.relationship)"
+* group.element[17].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[17].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[17].target.dependsOn[0].value = "IF IAM-15 VALUED AND NOT \"SEL\""
+* group.element[17].target.dependsOn[0].display = "IF IAM-15 VALUED AND NOT \"SEL\""
 * group.element[18].code = #IAM-17
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[18].extension[0].extension[0].url = "type"

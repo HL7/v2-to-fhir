@@ -258,5 +258,5 @@ Ideally, DiagnosticReport.identifier will be unique. Depending on how the result
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = -1
 * group.element[11].target.extension[0].extension[3].url = "mappedVia"
-* group.element[11].target.extension[0].extension[3].valueUrl = "ConfidentialityCode"
+* group.element[11].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70177-to-v3-confidentiality"
 * group.element[11].target.display = "meta.security"

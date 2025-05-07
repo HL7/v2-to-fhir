@@ -247,6 +247,10 @@ Usage: #definition
 * group.element[11].target.extension[0].extension[3].url = "fixedValue"
 * group.element[11].target.extension[0].extension[3].valueString = "\"current\""
 * group.element[11].target.display = "status"
+* group.element[11].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[11].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[11].target.dependsOn[0].value = "IF TXA-19 = \"AV\""
+* group.element[11].target.dependsOn[0].display = "IF TXA-19 = \"AV\""
 * group.element[12].code = #TXA
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -268,6 +272,10 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[3].url = "fixedValue"
 * group.element[12].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/alternate-codes\""
 * group.element[12].target.display = "status.extension[1].url"
+* group.element[12].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[12].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[12].target.dependsOn[0].value = "IF TXA-19 IN (\"CA\", \"OB\", \"UN\")"
+* group.element[12].target.dependsOn[0].display = "IF TXA-19 IN (\"CA\", \"OB\", \"UN\")"
 * group.element[13].code = #TXA
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -287,6 +295,10 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.display = "status.extension[1].valueCodeableConcept"
+* group.element[13].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[13].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[13].target.dependsOn[0].value = "IF TXA-19 IN (\"CA\", \"OB\", \"UN\")"
+* group.element[13].target.dependsOn[0].display = "IF TXA-19 IN (\"CA\", \"OB\", \"UN\")"
 * group.element[14].code = #TXA
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"

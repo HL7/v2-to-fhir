@@ -63,6 +63,9 @@ Usage: #definition
 * group.element[3].display = "Text"
 * group.element[3].target.equivalence = #equivalent
 * group.element[3].target.code = #deviceName[1].type
+* group.element[3].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[3].target.extension[0].extension[0].url = "fixedValue"
+* group.element[3].target.extension[0].extension[0].valueString = "/select most appropriate value for actual use/"
 * group.element[3].target.display = "deviceName[1].type"
 * group.element[4].code = #CWE.3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -75,6 +78,9 @@ Usage: #definition
 * group.element[4].display = "Name of Coding System"
 * group.element[4].target.equivalence = #equivalent
 * group.element[4].target.code = #identifier[1].system
+* group.element[4].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[4].target.extension[0].extension[0].url = "fixedValue"
+* group.element[4].target.extension[0].extension[0].valueString = "/map HL7 code system to appropriate url/"
 * group.element[4].target.display = "identifier[1].system"
 * group.element[5].code = #CWE.3
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -87,6 +93,9 @@ Usage: #definition
 * group.element[5].display = "Name of Coding System"
 * group.element[5].target.equivalence = #equivalent
 * group.element[5].target.code = #definition(DeviceDefinition.identifier[1].system)
+* group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[5].target.extension[0].extension[0].url = "fixedValue"
+* group.element[5].target.extension[0].extension[0].valueString = "/map HL7 code system to appropriate url/"
 * group.element[5].target.display = "definition(DeviceDefinition.identifier[1].system)"
 * group.element[6].code = #CWE.4
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -135,6 +144,9 @@ Usage: #definition
 * group.element[9].display = "Alternate Text"
 * group.element[9].target.equivalence = #equivalent
 * group.element[9].target.code = #deviceName[2].type
+* group.element[9].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[9].target.extension[0].extension[0].url = "fixedValue"
+* group.element[9].target.extension[0].extension[0].valueString = "/select most appropriate value for actual use/"
 * group.element[9].target.display = "deviceName[2].type"
 * group.element[10].code = #CWE.6
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -147,6 +159,9 @@ Usage: #definition
 * group.element[10].display = "Name of Alternate Coding System"
 * group.element[10].target.equivalence = #equivalent
 * group.element[10].target.code = #identifier[2].system
+* group.element[10].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[10].target.extension[0].extension[0].url = "fixedValue"
+* group.element[10].target.extension[0].extension[0].valueString = "/map HL7 code system to appropriate url/"
 * group.element[10].target.display = "identifier[2].system"
 * group.element[11].code = #CWE.6
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -159,6 +174,9 @@ Usage: #definition
 * group.element[11].display = "Name of Alternate Coding System"
 * group.element[11].target.equivalence = #equivalent
 * group.element[11].target.code = #definition(DeviceDefinition.identifier[2].system)
+* group.element[11].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[11].target.extension[0].extension[0].url = "fixedValue"
+* group.element[11].target.extension[0].extension[0].valueString = "/map HL7 code system to appropriate url/"
 * group.element[11].target.display = "definition(DeviceDefinition.identifier[2].system)"
 * group.element[12].code = #CWE.9
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -183,6 +201,9 @@ Usage: #definition
 * group.element[13].display = "Original Text"
 * group.element[13].target.equivalence = #equivalent
 * group.element[13].target.code = #deviceName[4].type
+* group.element[13].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[13].target.extension[0].extension[0].url = "fixedValue"
+* group.element[13].target.extension[0].extension[0].valueString = "/select most appropriate value for actual use/"
 * group.element[13].target.display = "deviceName[4].type"
 * group.element[14].code = #CWE.10
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -231,6 +252,9 @@ Usage: #definition
 * group.element[17].display = "Second Alternate Text"
 * group.element[17].target.equivalence = #equivalent
 * group.element[17].target.code = #deviceName[3].type
+* group.element[17].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[17].target.extension[0].extension[0].url = "fixedValue"
+* group.element[17].target.extension[0].extension[0].valueString = "/select most appropriate value for actual use/"
 * group.element[17].target.display = "deviceName[3].type"
 * group.element[18].code = #CWE.12
 * group.element[18].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -243,6 +267,9 @@ Usage: #definition
 * group.element[18].display = "Name of Second Alternate Coding System"
 * group.element[18].target.equivalence = #equivalent
 * group.element[18].target.code = #identifier[3].system
+* group.element[18].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[18].target.extension[0].extension[0].url = "fixedValue"
+* group.element[18].target.extension[0].extension[0].valueString = "/map HL7 code system to appropriate url/"
 * group.element[18].target.display = "identifier[3].system"
 * group.element[19].code = #CWE.12
 * group.element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -255,4 +282,7 @@ Usage: #definition
 * group.element[19].display = "Name of Second Alternate Coding System"
 * group.element[19].target.equivalence = #equivalent
 * group.element[19].target.code = #definition(DeviceDefinition.identifier[3].system)
+* group.element[19].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[19].target.extension[0].extension[0].url = "fixedValue"
+* group.element[19].target.extension[0].extension[0].valueString = "/map HL7 code system to appropriate url/"
 * group.element[19].target.display = "definition(DeviceDefinition.identifier[3].system)"

@@ -159,7 +159,7 @@ Usage: #definition
 * group.element[7].extension[0].extension[2].valueInteger = 1
 * group.element[7].display = "Device Donation Identification"
 * group.element[7].target.equivalence = #equivalent
-* group.element[7].target.code = #distinctIdentiifer
+* group.element[7].target.code = #distinctIdentifier
 * group.element[7].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].target.extension[0].extension[0].url = "type"
 * group.element[7].target.extension[0].extension[0].valueCode = #"string"
@@ -167,7 +167,7 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[1].valueInteger = 0
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = 1
-* group.element[7].target.display = "distinctIdentiifer"
+* group.element[7].target.display = "distinctIdentifier"
 * group.element[8].code = #PRT-22
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"

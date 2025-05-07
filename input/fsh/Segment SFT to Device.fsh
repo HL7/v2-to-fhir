@@ -31,6 +31,10 @@ Usage: #definition
 * group.element[0].target.extension[0].extension[0].url = "type"
 * group.element[0].target.extension[0].extension[0].valueCode = #"string"
 * group.element[0].target.display = "manufacturer"
+* group.element[0].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[0].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[0].target.dependsOn[0].value = "If XON.1 IS VALUED AND XON.10 NOT VALUED"
+* group.element[0].target.dependsOn[0].display = "If XON.1 IS VALUED AND XON.10 NOT VALUED"
 * group.element[1].code = #SFT-2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[1].extension[0].extension[0].url = "type"

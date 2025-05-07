@@ -66,6 +66,10 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[2].valueInteger = 1
 * group.element[2].target.display = "code.text"
 * group.element[2].target.comment = "PR1-4 was deprecated in v2.3"
+* group.element[2].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[2].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[2].target.dependsOn[0].value = "IF PR1-3.9 NOT VALUED"
+* group.element[2].target.dependsOn[0].display = "IF PR1-3.9 NOT VALUED"
 * group.element[3].code = #PR1-5
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -85,6 +89,10 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "performedDateTime"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF PR1-7 NOT VALUED"
+* group.element[3].target.dependsOn[0].display = "IF PR1-7 NOT VALUED"
 * group.element[4].code = #PR1-5
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -105,6 +113,10 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[2].valueInteger = 1
 * group.element[4].target.display = "performedDateTime"
 * group.element[4].target.comment = "The Procedure date/time must be at least to the granularity of minutes if a performedPeriod is to be created from PR1-5 and PR1-7"
+* group.element[4].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[4].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[4].target.dependsOn[0].value = "IF PR1-7 VALUED AND PR1-5.5 NOT VALUED"
+* group.element[4].target.dependsOn[0].display = "IF PR1-7 VALUED AND PR1-5.5 NOT VALUED"
 * group.element[5].code = #PR1-5
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -124,6 +136,10 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.display = "performedPeriod.start"
+* group.element[5].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[5].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[5].target.dependsOn[0].value = "IF PR1-7 VALUED AND PR1-5.5 VALUED"
+* group.element[5].target.dependsOn[0].display = "IF PR1-7 VALUED AND PR1-5.5 VALUED"
 * group.element[6].code = #PR1-6
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -165,6 +181,10 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[3].valueString = "Procedure.performedPeriod.start+PR1-7"
 * group.element[7].target.display = "performedPeriod.end"
 * group.element[7].target.comment = "The number of minutes in PR1-7 must be added to the time in PR1-5 to get the endpoint of the performedPeriod (note that other elements of the date/time (hours, date, etc) may also need to be changed depending on the length of the procedure)"
+* group.element[7].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[7].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[7].target.dependsOn[0].value = "IF PR1-5.5 IS VALUED"
+* group.element[7].target.dependsOn[0].display = "IF PR1-5.5 IS VALUED"
 * group.element[8].code = #PR1-8
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"
@@ -175,7 +195,7 @@ Usage: #definition
 * group.element[8].extension[0].extension[2].valueInteger = -1
 * group.element[8].display = "Anesthesiologist"
 * group.element[8].target.equivalence = #equivalent
-* group.element[8].target.code = #perfomer[1].actor(Practitioner)
+* group.element[8].target.code = #performer[1].actor(Practitioner)
 * group.element[8].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].target.extension[0].extension[0].url = "type"
 * group.element[8].target.extension[0].extension[0].valueCode = #"Reference(Practitioner)"
@@ -183,7 +203,7 @@ Usage: #definition
 * group.element[8].target.extension[0].extension[1].valueInteger = 0
 * group.element[8].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[8].target.extension[0].extension[2].valueInteger = 1
-* group.element[8].target.display = "perfomer[1].actor(Practitioner)"
+* group.element[8].target.display = "performer[1].actor(Practitioner)"
 * group.element[9].code = #PR1-8
 * group.element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].extension[0].extension[0].url = "type"
@@ -194,7 +214,7 @@ Usage: #definition
 * group.element[9].extension[0].extension[2].valueInteger = -1
 * group.element[9].display = "Anesthesiologist"
 * group.element[9].target.equivalence = #equivalent
-* group.element[9].target.code = #perfomer[1].function.coding.code
+* group.element[9].target.code = #performer[1].function.coding.code
 * group.element[9].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[9].target.extension[0].extension[0].url = "type"
 * group.element[9].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -204,7 +224,7 @@ Usage: #definition
 * group.element[9].target.extension[0].extension[2].valueInteger = 1
 * group.element[9].target.extension[0].extension[3].url = "fixedValue"
 * group.element[9].target.extension[0].extension[3].valueString = "\"88189002\""
-* group.element[9].target.display = "perfomer[1].function.coding.code"
+* group.element[9].target.display = "performer[1].function.coding.code"
 * group.element[10].code = #PR1-8
 * group.element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].extension[0].extension[0].url = "type"
@@ -215,7 +235,7 @@ Usage: #definition
 * group.element[10].extension[0].extension[2].valueInteger = -1
 * group.element[10].display = "Anesthesiologist"
 * group.element[10].target.equivalence = #equivalent
-* group.element[10].target.code = #perfomer[1].function.coding.uri
+* group.element[10].target.code = #performer[1].function.coding.uri
 * group.element[10].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[10].target.extension[0].extension[0].url = "type"
 * group.element[10].target.extension[0].extension[0].valueCode = #"uri"
@@ -225,7 +245,7 @@ Usage: #definition
 * group.element[10].target.extension[0].extension[2].valueInteger = 1
 * group.element[10].target.extension[0].extension[3].url = "fixedValue"
 * group.element[10].target.extension[0].extension[3].valueString = "\"http://snomed.info/sct\""
-* group.element[10].target.display = "perfomer[1].function.coding.uri"
+* group.element[10].target.display = "performer[1].function.coding.uri"
 * group.element[11].code = #PR1-11
 * group.element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].extension[0].extension[0].url = "type"
@@ -236,7 +256,7 @@ Usage: #definition
 * group.element[11].extension[0].extension[2].valueInteger = -1
 * group.element[11].display = "Surgeon"
 * group.element[11].target.equivalence = #equivalent
-* group.element[11].target.code = #perfomer[2].actor(Practitioner)
+* group.element[11].target.code = #performer[2].actor(Practitioner)
 * group.element[11].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[11].target.extension[0].extension[0].url = "type"
 * group.element[11].target.extension[0].extension[0].valueCode = #"Reference(Practitioner)"
@@ -244,7 +264,7 @@ Usage: #definition
 * group.element[11].target.extension[0].extension[1].valueInteger = 0
 * group.element[11].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[11].target.extension[0].extension[2].valueInteger = 1
-* group.element[11].target.display = "perfomer[2].actor(Practitioner)"
+* group.element[11].target.display = "performer[2].actor(Practitioner)"
 * group.element[12].code = #PR1-11
 * group.element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].extension[0].extension[0].url = "type"
@@ -255,7 +275,7 @@ Usage: #definition
 * group.element[12].extension[0].extension[2].valueInteger = -1
 * group.element[12].display = "Surgeon"
 * group.element[12].target.equivalence = #equivalent
-* group.element[12].target.code = #perfomer[2].function.coding.code
+* group.element[12].target.code = #performer[2].function.coding.code
 * group.element[12].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[12].target.extension[0].extension[0].url = "type"
 * group.element[12].target.extension[0].extension[0].valueCode = #"CodeableConcept"
@@ -265,7 +285,7 @@ Usage: #definition
 * group.element[12].target.extension[0].extension[2].valueInteger = 1
 * group.element[12].target.extension[0].extension[3].url = "fixedValue"
 * group.element[12].target.extension[0].extension[3].valueString = "\"304292004\""
-* group.element[12].target.display = "perfomer[2].function.coding.code"
+* group.element[12].target.display = "performer[2].function.coding.code"
 * group.element[13].code = #PR1-11
 * group.element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].extension[0].extension[0].url = "type"
@@ -276,7 +296,7 @@ Usage: #definition
 * group.element[13].extension[0].extension[2].valueInteger = -1
 * group.element[13].display = "Surgeon"
 * group.element[13].target.equivalence = #equivalent
-* group.element[13].target.code = #perfomer[2].function.coding.uri
+* group.element[13].target.code = #performer[2].function.coding.uri
 * group.element[13].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[13].target.extension[0].extension[0].url = "type"
 * group.element[13].target.extension[0].extension[0].valueCode = #"uri"
@@ -286,7 +306,7 @@ Usage: #definition
 * group.element[13].target.extension[0].extension[2].valueInteger = 1
 * group.element[13].target.extension[0].extension[3].url = "fixedValue"
 * group.element[13].target.extension[0].extension[3].valueString = "\"http://snomed.info/sct\""
-* group.element[13].target.display = "perfomer[2].function.coding.uri"
+* group.element[13].target.display = "performer[2].function.coding.uri"
 * group.element[14].code = #PR1-12
 * group.element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].extension[0].extension[0].url = "type"
@@ -297,7 +317,7 @@ Usage: #definition
 * group.element[14].extension[0].extension[2].valueInteger = -1
 * group.element[14].display = "Procedure Practitioner"
 * group.element[14].target.equivalence = #equivalent
-* group.element[14].target.code = #perfomer[3].actor(Practitioner)
+* group.element[14].target.code = #performer[3].actor(Practitioner)
 * group.element[14].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[14].target.extension[0].extension[0].url = "type"
 * group.element[14].target.extension[0].extension[0].valueCode = #"Reference(Practitioner)"
@@ -305,7 +325,7 @@ Usage: #definition
 * group.element[14].target.extension[0].extension[1].valueInteger = 0
 * group.element[14].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[14].target.extension[0].extension[2].valueInteger = 1
-* group.element[14].target.display = "perfomer[3].actor(Practitioner)"
+* group.element[14].target.display = "performer[3].actor(Practitioner)"
 * group.element[14].target.comment = "Because PR1-12 is less specific than other fields in PR1 in regards to the role of the practitioner, this mapping is not providing a default code for performer.function. But if an implementation knows the function of the providers being exchanged in PR1-12, than a implementation-specific value for performer.function may be assigned on a case by case basis."
 * group.element[15].code = #PR1-15
 * group.element[15].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

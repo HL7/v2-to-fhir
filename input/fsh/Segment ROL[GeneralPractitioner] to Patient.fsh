@@ -116,6 +116,10 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[5].target.extension[0].extension[2].valueInteger = -1
 * group.element[5].target.display = "generalPractitioner(PractitionerRole.Practitioner(Practitioner.address))"
+* group.element[5].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[5].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[5].target.dependsOn[0].value = "IF XAD.7 IN (\"N\",\"BDL\",\"F\",\"H\",\"P\",\"BR\",\"V\")"
+* group.element[5].target.dependsOn[0].display = "IF XAD.7 IN (\"N\",\"BDL\",\"F\",\"H\",\"P\",\"BR\",\"V\")"
 * group.element[6].code = #ROL-11
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
@@ -136,6 +140,10 @@ Usage: #definition
 * group.element[6].target.extension[0].extension[2].valueInteger = -1
 * group.element[6].target.display = "generalPractitioner(PractitionerRole.location(Location.address))"
 * group.element[6].target.comment = "We seek feedback whether we actually should vary this based on ROL-13 being valued.  If not valued, then put it in Patient.generalPractitioner(PractitionerRole.Practitioner(Practitioner.address[2]))"
+* group.element[6].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[6].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[6].target.dependsOn[0].value = "IF XAD.7 IN (\"M\",\"O\",\"S\",\"SH\",\"TM\")"
+* group.element[6].target.dependsOn[0].display = "IF XAD.7 IN (\"M\",\"O\",\"S\",\"SH\",\"TM\")"
 * group.element[7].code = #ROL-11
 * group.element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[7].extension[0].extension[0].url = "type"
@@ -155,6 +163,10 @@ Usage: #definition
 * group.element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[7].target.extension[0].extension[2].valueInteger = -1
 * group.element[7].target.display = "generalPractitioner(PractitionerRole.organization.(Organization.address))"
+* group.element[7].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[7].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[7].target.dependsOn[0].value = "IF XAD.7 IN (\"B\",\"BI\",\"L\")"
+* group.element[7].target.dependsOn[0].display = "IF XAD.7 IN (\"B\",\"BI\",\"L\")"
 * group.element[8].code = #ROL-12
 * group.element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[8].extension[0].extension[0].url = "type"

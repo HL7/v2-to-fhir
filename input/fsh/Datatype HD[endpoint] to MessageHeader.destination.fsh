@@ -53,6 +53,10 @@ Usage: #definition
 * group.element[1].target.extension[0].extension[3].url = "fixedValue"
 * group.element[1].target.extension[0].extension[3].valueString = "\"urn:oid:\"+HD.2"
 * group.element[1].target.display = "endpoint"
+* group.element[1].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[1].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[1].target.dependsOn[0].value = "IF HD-3 = \"ISO\""
+* group.element[1].target.dependsOn[0].display = "IF HD-3 = \"ISO\""
 * group.element[2].code = #HD.2
 * group.element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[2].extension[0].extension[0].url = "type"
@@ -74,6 +78,10 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[3].url = "fixedValue"
 * group.element[2].target.extension[0].extension[3].valueString = "\"urn:uuid:\"+HD.2"
 * group.element[2].target.display = "endpoint"
+* group.element[2].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[2].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[2].target.dependsOn[0].value = "IF HD-3 = \"UUID\""
+* group.element[2].target.dependsOn[0].display = "IF HD-3 = \"UUID\""
 * group.element[3].code = #HD.2
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -93,6 +101,10 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group.element[3].target.extension[0].extension[2].valueInteger = 1
 * group.element[3].target.display = "endpoint"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF HD-3 NOT IN (\"ISO\", \"UUID\")"
+* group.element[3].target.dependsOn[0].display = "IF HD-3 NOT IN (\"ISO\", \"UUID\")"
 * group.element[4].code = #HD.3
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -110,6 +122,10 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[1].url = "fixedValue"
 * group.element[4].target.extension[0].extension[1].valueString = "\"http://hl7.org/fhir/StructureDefinition/data-absent-reason\""
 * group.element[4].target.display = "endpoint.extension.url"
+* group.element[4].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[4].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[4].target.dependsOn[0].value = "IF NOT VALUED"
+* group.element[4].target.dependsOn[0].display = "IF NOT VALUED"
 * group.element[5].code = #HD.3
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"
@@ -127,3 +143,7 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[1].url = "fixedValue"
 * group.element[5].target.extension[0].extension[1].valueString = "\"unknown\""
 * group.element[5].target.display = "endpoint.extension.valueCode"
+* group.element[5].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[5].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[5].target.dependsOn[0].value = "IF NOT VALUED"
+* group.element[5].target.dependsOn[0].display = "IF NOT VALUED"

@@ -106,6 +106,9 @@ Usage: #definition
 * group.element[4].display = "Place of Worship"
 * group.element[4].target.equivalence = #equivalent
 * group.element[4].target.code = #extension[2].url
+* group.element[4].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[4].target.extension[0].extension[0].url = "fixedValue"
+* group.element[4].target.extension[0].extension[0].valueString = "\"http://hl7.org/fhir/StructureDefinition/patient-congregation\""
 * group.element[4].target.display = "extension[2].url"
 * group.element[5].code = #PD1-14
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

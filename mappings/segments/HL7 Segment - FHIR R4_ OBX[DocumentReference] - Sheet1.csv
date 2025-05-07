@@ -5,7 +5,7 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 2,OBX-2,Value Type,ID,0,1,,,,,,,,,,,,,
 3,OBX-3,Observation Identifier,CWE,1,1,,,,,,,,,,,,,
 4,OBX-4,Observation Sub-ID,OG,0,1,,,,,,,,,,,,,
-5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2=""ED""",,,content[1],,Attachment,,,ED[Attachment],,,,"When OBX-5 repeats, each repeat yields a new .content instance."
+5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2=""ED""",,,content[1].attachment,,Attachment,,,ED[Attachment],,,,"When OBX-5 repeats, each repeat yields a new .content instance."
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2=""FT""",,,content[2].data,,binary64,,,,,,,"When OBX-5 repeats, each repeat yields a line feed within .content[2].data"
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2=""FT""",,,content[2].contentType,,code,,,,,"""text/hl7v2""",,
 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2=""RP""",,,content[3].url,,uri,,,,,,,"When OBX-5 repeats, each repeat yields a new .content instance."

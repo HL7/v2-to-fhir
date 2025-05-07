@@ -69,6 +69,10 @@ Usage: #definition
 * group.element[2].target.extension[0].extension[3].url = "mappedVia"
 * group.element[2].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70062-to-v3-actreason"
 * group.element[2].target.display = "reason"
+* group.element[2].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[2].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[2].target.dependsOn[0].value = "IF EVN-4 NOT \"U\""
+* group.element[2].target.dependsOn[0].display = "IF EVN-4 NOT \"U\""
 * group.element[3].code = #EVN-4
 * group.element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[3].extension[0].extension[0].url = "type"
@@ -90,6 +94,10 @@ Usage: #definition
 * group.element[3].target.extension[0].extension[3].url = "fixedValue"
 * group.element[3].target.extension[0].extension[3].valueString = "\"http://hl7.org/fhir/StructureDefinition/data-absent-reason\""
 * group.element[3].target.display = "reason.extension[1].url"
+* group.element[3].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[3].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[3].target.dependsOn[0].value = "IF EVN-4 IS \"U\""
+* group.element[3].target.dependsOn[0].display = "IF EVN-4 IS \"U\""
 * group.element[4].code = #EVN-4
 * group.element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[4].extension[0].extension[0].url = "type"
@@ -111,6 +119,10 @@ Usage: #definition
 * group.element[4].target.extension[0].extension[3].url = "fixedValue"
 * group.element[4].target.extension[0].extension[3].valueString = "\"unknown\""
 * group.element[4].target.display = "reason.extension[1].valueCodeableConcept"
+* group.element[4].target.dependsOn[0].property = "Computable-ANTLR"
+* group.element[4].target.dependsOn[0].system = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html"
+* group.element[4].target.dependsOn[0].value = "IF EVN-4 IS \"U\""
+* group.element[4].target.dependsOn[0].display = "IF EVN-4 IS \"U\""
 * group.element[5].code = #EVN-5
 * group.element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].extension[0].extension[0].url = "type"

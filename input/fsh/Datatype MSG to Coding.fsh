@@ -19,6 +19,9 @@ Usage: #definition
 * group.element[0].code = #MSG
 * group.element[0].target.equivalence = #equivalent
 * group.element[0].target.code = #display
+* group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[0].target.extension[0].extension[0].url = "fixedValue"
+* group.element[0].target.extension[0].extension[0].valueString = "MSG.1+\"^\"+MSG.2+\"^\"+MSG.3"
 * group.element[0].target.display = "display"
 * group.element[1].code = #MSG.2
 * group.element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -43,4 +46,7 @@ Usage: #definition
 * group.element[2].display = "Trigger Event"
 * group.element[2].target.equivalence = #equivalent
 * group.element[2].target.code = #system
+* group.element[2].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group.element[2].target.extension[0].extension[0].url = "fixedValue"
+* group.element[2].target.extension[0].extension[0].valueString = "\"http://terminology.hl7.org/CodeSystem/v2-0003\""
 * group.element[2].target.display = "system"

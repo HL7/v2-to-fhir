@@ -124,7 +124,7 @@ Usage: #definition
 * group.element[5].extension[0].extension[2].valueInteger = -1
 * group.element[5].display = "Business Phone Number"
 * group.element[5].target.equivalence = #equivalent
-* group.element[5].target.code = #contact.telecom[2].type.use
+* group.element[5].target.code = #contact.telecom[2].use
 * group.element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[5].target.extension[0].extension[0].url = "type"
 * group.element[5].target.extension[0].extension[0].valueCode = #"code"
@@ -134,7 +134,7 @@ Usage: #definition
 * group.element[5].target.extension[0].extension[2].valueInteger = 1
 * group.element[5].target.extension[0].extension[3].url = "fixedValue"
 * group.element[5].target.extension[0].extension[3].valueString = "\"work\""
-* group.element[5].target.display = "contact.telecom[2].type.use"
+* group.element[5].target.display = "contact.telecom[2].use"
 * group.element[6].code = #NK1-7
 * group.element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group.element[6].extension[0].extension[0].url = "type"
