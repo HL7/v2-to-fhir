@@ -84,6 +84,10 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     private static Map<String,Triple<String,Integer,String>> tableLinks = new TreeMap<>();
     private static Map<String,Triple<String,Integer,String>> dataTypeLinks = new TreeMap<>();
     private static final String[] KNOWN_CODESYSTEM_URLS = { Converter.SNOMEDCT_URL };
+	private static final String ANTLR_PROPERTY = "Computable-ANTLR";
+	private static final String ANTLR_SYSTEM = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html";
+	private static final String FHIRPATH_PROPERTY = "Computable-FHIRPath";
+	private static final String FHIRPATH_SYSTEM = "http://hl7.org/fhirpath/N1";
 
     private static Map<String, String> mappedLinks  = new HashMap<>();
     static {
@@ -353,6 +357,22 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                         pw.printf("* group.element[%d].target.comment = \"%s\"%n", mappedRows,
                             escapeFshString(comments));
                     }
+                    
+                    // Add ANTLR and FHIR Conditions
+                    String index = "0";
+                    if (!StringUtils.isEmpty(row.conditionANTLR)) {
+                    	pw.printf("* group.element[%d].target.dependsOn[0].property = \"%s\"%n", mappedRows, ANTLR_PROPERTY);
+                    	pw.printf("* group.element[%d].target.dependsOn[0].system = \"%s\"%n", mappedRows, ANTLR_SYSTEM);
+                    	pw.printf("* group.element[%d].target.dependsOn[0].value = \"%s\"%n", mappedRows, escapeFshString(row.conditionANTLR));
+                    	pw.printf("* group.element[%d].target.dependsOn[0].display = \"%s\"%n", mappedRows, escapeFshString(row.conditionANTLR));
+                    	index = "1";
+                    }
+                    if (!StringUtils.isEmpty(row.conditionFHIRPath)) {
+                    	pw.printf("* group.element[%d].target.dependsOn[%s].property = \"%s\"%n", mappedRows, index, FHIRPATH_PROPERTY);
+                    	pw.printf("* group.element[%d].target.dependsOn[%s].system = \"%s\"%n", mappedRows, index, FHIRPATH_SYSTEM);
+                    	pw.printf("* group.element[%d].target.dependsOn[%s].value = \"%s\"%n", mappedRows, index, escapeFshString(row.conditionANTLR));
+                    	pw.printf("* group.element[%d].target.dependsOn[%s].display = \"%s\"%n", mappedRows, index, escapeFshString(row.conditionANTLR));
+                    }
                 }
                 ++mappedRows;
             }
@@ -446,7 +466,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 	}
 	
 	private void addConstraints(PrintWriter pw, String string, int row, String dataType, String min, String max, String value, String vocab) {
-        if (!StringUtils.isAllBlank(dataType, min, max)) {
+        if (!StringUtils.isAllBlank(dataType, min, max, value, vocab)) {
             pw.printf(string + ".extension[0].url = \"%s/StructureDefinition/TypeInfo\"%n", row, IG_URL);
 
             int parts = 0;
@@ -685,7 +705,8 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                 links.append(makeLink(link, FHIR_BASE + "datatypes-definitions.html#" + fhirPart + "." + link));
             } else if ((link = isResourceField(fhirPart + "." + fhirLink, count)) != null) {
                 name = StringUtils.substringBefore(link, ".");
-                links.append(makeLink(link, FHIR_BASE + fhirPart + "." + name + "-definitions.html#" + link));
+                // Fix for FHIR Attribute links
+                links.append(makeLink(link, FHIR_BASE + name + "-definitions.html#" + link));
             } else if ((link = isFhirDataTypeField(fhirLink, count)) != null) {
                 // If a FHIR Data Type field, link to fhir/R4/datatypes-definitions.html#{field}
                 links.append(makeLink(link, FHIR_BASE + "datatypes-definitions.html#" + link));
