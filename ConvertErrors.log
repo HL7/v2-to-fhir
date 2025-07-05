@@ -178,25 +178,25 @@ W59) identifier used where Identifier meant.
 W60) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PRT[Device] - Sheet1.csv(:14)
 	near: 10,PRT-10,Device,EI,0,-1,,,If not an HRF or AIDC,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,
-W61) identifier used where Identifier meant.
+W61) Missing vocabulary mapping for SegmentActionCode	at mappings/segments/HL7 Segment - FHIR R4_ PRT[Patient-GeneralPractitioner-PractitionerRole] - Sheet1.csv(:4)
+	near: 02.00.00,PRT-2,Action Code,ID,1,1,,,if mapped to a restful service to progress the message.,Operation,,,,,,SegmentActionCode,,,
+W62) identifier used where Identifier meant.
+	at mappings/segments/HL7 Segment - FHIR R4_ PRT[Patient-GeneralPractitioner-PractitionerRole] - Sheet1.csv(:26)
+	near: No corresponding line (26) in source file!
+W63) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PRT[PractitionerRole] - Sheet1.csv(:44)
 	near: No corresponding line (44) in source file!
-W62) address used where Address meant.
+W64) address used where Address meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv(:17)
 	near: 14,PRT-14,Address,XAD,0,-1,,,,address,,Address,0,-1,XAD[Address],,,,
-W63) identifier used where Identifier meant.
+W65) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv(:43)
 	near: No corresponding line (43) in source file!
-W64) Missing vocabulary mapping for AmbulatoryStatus	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:34)
-	near: 15,PV1-15,Ambulatory Status,CWE,0,-1,,,,hospitalization.specialArrangement,,CodeableConcept,0,-1,CWE[CodeableConcept],AmbulatoryStatus,,,
-W65) identifier used where Identifier meant.
+W66) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:41)
 	near: 19,PV1-19,Visit Number,CX,0,1,,,,identifier[1],,Identifier,0,-1,CX[Identifier],,,,
-W66) identifier used where Identifier meant.
+W67) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:77)
 	near: 50,PV1-50,Alternate Visit ID,CX,0,-1,,,,identifier[2],,Identifier,0,-1,CX[Identifier],,,,
-W67) DateTime used where dateTime meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ ROL[CareTeam] - Sheet1.csv(:9)
-	near: 5,ROL-5,Role Begin Date/Time,DTM,0,1,,,,participant.period.start,,DateTime,0,1,DTM[DateTime],,,,
 W68) DateTime used where dateTime meant.
-	at mappings/seg
+	
