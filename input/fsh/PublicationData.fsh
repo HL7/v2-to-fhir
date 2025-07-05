@@ -5,5 +5,5 @@ RuleSet: PublicationData
 * publisher = "HL7 International, Inc"
 * contact.telecom.system = #email
 * contact.telecom.value = "v2-to-fhir@lists.hl7.org"
-* date = "2025-05-07"
+* date = "2025-07-05"
 * copyright = "Copyright (c) 2025, HL7 International, Inc., All Rights Reserved."

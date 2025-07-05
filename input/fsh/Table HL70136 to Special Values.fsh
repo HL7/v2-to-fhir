@@ -9,7 +9,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70136-to-special-values"
 * name = "TableHL70136ToSpecialValues"
 * sourceUri = "http://terminology.hl7.org/ValueSet/v2-0136"
-* targetUri = "null"
+* targetUri = "http://terminology.hl7.org/ValueSet/special-values"
 * insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
@@ -18,11 +18,13 @@ Usage: #definition
 * extension[0].extension[1].valueString = "Table HL70136 to Special Values.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1MyCLfcQhfwFMXIqTKkSsWrhkPj4FueY1qg0EuMW8tmU/edit#gid=0"
-* group.element[0].code = #Y
-* group.element[0].display = "Yes"
-* group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #true
-* group.element[1].code = #N
-* group.element[1].display = "No"
-* group.element[1].target.equivalence = #equivalent
-* group.element[1].target.code = #false
+* group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0532"
+* group[0].target = "http://terminology.hl7.org/CodeSystem/special-values"
+* group[0].element[0].code = #Y
+* group[0].element[0].display = "Yes"
+* group[0].element[0].target.equivalence = #equivalent
+* group[0].element[0].target.code = #true
+* group[0].element[1].code = #N
+* group[0].element[1].display = "No"
+* group[0].element[1].target.equivalence = #equivalent
+* group[0].element[1].target.code = #false

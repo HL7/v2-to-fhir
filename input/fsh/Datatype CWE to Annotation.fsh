@@ -16,12 +16,12 @@ Usage: #definition
 * extension[0].extension[1].valueString = "Datatype CWE to Annotation.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1iqys8nuFDvOmbxp5CQjvX6FbuqEmZygJaZyp9rShzqA/edit#gid=0"
-* group.element[0].code = #CWE
-* group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #text
-* group.element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
-* group.element[0].target.extension[0].extension[0].url = "type"
-* group.element[0].target.extension[0].extension[0].valueCode = #"markdown"
-* group.element[0].target.extension[0].extension[1].url = "fixedValue"
-* group.element[0].target.extension[0].extension[1].valueString = "/include full field (inlcuding delimiters or xml tags)/"
-* group.element[0].target.display = "text"
+* group[0].element[0].code = #CWE
+* group[0].element[0].target.equivalence = #equivalent
+* group[0].element[0].target.code = #text
+* group[0].element[0].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group[0].element[0].target.extension[0].extension[0].url = "type"
+* group[0].element[0].target.extension[0].extension[0].valueCode = #"markdown"
+* group[0].element[0].target.extension[0].extension[1].url = "assignment"
+* group[0].element[0].target.extension[0].extension[1].valueString = "/include full field (inlcuding delimiters or xml tags)/"
+* group[0].element[0].target.display = "text"

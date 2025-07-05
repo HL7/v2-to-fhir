@@ -16,12 +16,12 @@ Usage: #definition
 * extension[0].extension[1].valueString = "Datatype IS to code.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/110zIdufyvcKXndEAuYtFE5Ky9RgPFRA8wyy5z_T7eZE/edit#gid=0"
-* group.element[0].code = #IS.1
-* group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
-* group.element[0].extension[0].extension[0].url = "cardinalityMin"
-* group.element[0].extension[0].extension[0].valueInteger = 1
-* group.element[0].extension[0].extension[1].url = "cardinalityMax"
-* group.element[0].extension[0].extension[1].valueInteger = 1
-* group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #$value
-* group.element[0].target.display = "$value"
+* group[0].element[0].code = #IS.1
+* group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group[0].element[0].extension[0].extension[0].url = "cardinalityMin"
+* group[0].element[0].extension[0].extension[0].valueInteger = 1
+* group[0].element[0].extension[0].extension[1].url = "cardinalityMax"
+* group[0].element[0].extension[0].extension[1].valueInteger = 1
+* group[0].element[0].target.equivalence = #equivalent
+* group[0].element[0].target.code = #$value
+* group[0].element[0].target.display = "$value"
