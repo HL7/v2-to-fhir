@@ -1,0 +1,8 @@
+HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+0,,,,,,,,,dimensions,,positiveInt,1,1,,,,,"Represents the number of dimensions in the array.  For a full guidance on how to populate a FHIR sampledData data type from a v2 Numeric Array, see the Observations - NA to SampleData section in the Implementation Considerations chapter."
+1,NA.1,Value1,NM,0,1,,,,data,,string,0,1,,,NA.1,,
+2,NA.2,Value2,NM,0,1,,,,data,,string,0,1,,,"NA.1 + ""^"" + NA.2",,
+3,NA.3,Value3,NM,0,1,,,,data,,string,0,1,,,"NA.1 + ""^"" + NA.2 + ""^"" + NA.3",,
+4,NA.4,Value4,NM,0,1,,,,data,,string,0,1,,,"NA.1 + ""^"" + NA.2 + ""^"" + NA.3 + ""^"" NA.4",,
