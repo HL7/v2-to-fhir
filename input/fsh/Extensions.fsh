@@ -4,7 +4,9 @@ Description: "Type information for conversion"
 * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * extension contains type 0..1 MS and
     cardinalityMin 0..1 MS and
-    cardinalityMax 0..1 MS
+    cardinalityMax 0..1 MS and
+    assignment 0..1 MS and
+    mappedVia 0..1 MS
 
 * extension[type].value[x] only code
 * extension[type] ^short = "Data Type of the item"
@@ -12,6 +14,10 @@ Description: "Type information for conversion"
 * extension[cardinalityMin] ^short = "Minimum cardinality of the item"
 * extension[cardinalityMax].value[x] only integer
 * extension[cardinalityMax] ^short = "Maximum cardinality of the item"
+* extension[assignment].value[x] only string
+* extension[assignment] ^short = "Assignment string value for the item"
+* extension[mappedVia].value[x] only url
+* extension[mappedVia] ^short = "Url of the mapping artifact for the item"
 
 Extension: RelatedArtifact
 Context: ConceptMap
