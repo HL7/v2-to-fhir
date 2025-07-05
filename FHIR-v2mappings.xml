@@ -269,6 +269,7 @@
 <artifact id="ConceptMap/table-hl70162-to-v2-0162" key="ConceptMap-table-hl70162-to-v2-0162" name="Table HL70162 to V2 0162 Map"/>
 <artifact id="ConceptMap/table-hl70163-to-v2-0163" key="ConceptMap-table-hl70163-to-v2-0163" name="Table HL70163 to V2 0163 Map"/>
 <artifact id="ConceptMap/table-hl70165-to-sct" key="ConceptMap-table-hl70165-to-sct" name="Table HL70165 to Sct Map"/>
+<artifact id="ConceptMap/table-hl70177-to-v3-confidentiality" key="ConceptMap-table-hl70177-to-v3-confidentiality" name="Table HL70177 to V3 Confidentiality Map"/>
 <artifact id="ConceptMap/table-hl70185-to-v2-0185" key="ConceptMap-table-hl70185-to-v2-0185" name="Table HL70185 to V2 0185 Map"/>
 <artifact id="ConceptMap/table-hl70190-to-address-type" key="ConceptMap-table-hl70190-to-address-type" name="Table HL70190 to Address Type Map"/>
 <artifact id="ConceptMap/table-hl70190-to-address-use" key="ConceptMap-table-hl70190-to-address-use" name="Table HL70190 to Address Use Map"/>
@@ -288,9 +289,11 @@
 <artifact id="ConceptMap/table-hl70315-to-v2-0315" key="ConceptMap-table-hl70315-to-v2-0315" name="Table HL70315 to V2 0315 Map"/>
 <artifact id="ConceptMap/table-hl70322-to-event-status" key="ConceptMap-table-hl70322-to-event-status" name="Table HL70322 to Event Status Map"/>
 <artifact id="ConceptMap/table-hl70335-to-v2-0335" key="ConceptMap-table-hl70335-to-v2-0335" name="Table HL70335 to V2 0335 Map"/>
+<artifact id="ConceptMap/table-hl70360-to-v2-0360" key="ConceptMap-table-hl70360-to-v2-0360" name="Table HL70360 to V2 0360 Map"/>
 <artifact id="ConceptMap/table-hl70364-to-v2-0364" key="ConceptMap-table-hl70364-to-v2-0364" name="Table HL70364 to V2 0364 Map"/>
 <artifact id="ConceptMap/table-hl70371-to-v2-0371" key="ConceptMap-table-hl70371-to-v2-0371" name="Table HL70371 to V2 0371 Map"/>
-<artifact id="ConceptMap/table-hl70399-to-iso3166-1edition2alpha3" key="ConceptMap-table-hl70399-to-iso3166-1edition2alpha3" name="Table HL70399 to Iso3166 1edition2alpha3 Map"/>
+<artifact id="ConceptMap/table-hl70399-to-iso-3166-1" key="ConceptMap-table-hl70399-to-iso-3166-1" name="Table HL70399 to ISO 3166-1 Map"/>
+<artifact deprecated="true" id="ConceptMap/table-hl70399-to-iso3166-1edition2alpha3" key="ConceptMap-table-hl70399-to-iso3166-1edition2alpha3" name="Table HL70399 to Iso3166 1edition2alpha3 Map"/>
 <artifact deprecated="true" id="ConceptMap/table-hl70406-to-v2-0406" key="ConceptMap-table-hl70406-to-v2-0406" name="Table HL70406 to V2 0406 Map"/>
 <artifact id="ConceptMap/table-hl70430-to-v2-0430" key="ConceptMap-table-hl70430-to-v2-0430" name="Table HL70430 to V2 0430 Map"/>
 <artifact id="ConceptMap/table-hl70432-to-v2-0432" key="ConceptMap-table-hl70432-to-v2-0432" name="Table HL70432 to V2 0432 Map"/>
