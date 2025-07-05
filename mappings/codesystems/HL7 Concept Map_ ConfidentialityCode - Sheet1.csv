@@ -9,7 +9,7 @@ VIP,Very important person or celebrity,HL70177,,,,VIP,,Very important person or 
 PSY,Psychiatric patient,HL70177,,,,PSY,,psychiatry disorder information sensitivity,http://terminology.hl7.org/CodeSystem/v3-Confidentiality,,
 AID,AIDS patient,HL70177,,,,HIV,,HIV/AIDS information sensitivity,http://terminology.hl7.org/CodeSystem/v3-Confidentiality,,
 HIV,HIV(+) patient,HL70177,,,,HIV,,HIV/AIDS information sensitivity,http://terminology.hl7.org/CodeSystem/v3-Confidentiality,,
-ETH,Alcohol/drug treatment patient,HL70177,,,,ETHUD,,alcohol use disorder information sensitivity,http://terminology.hl7.org/CodeSystem/v3-Confidentiality,,
+ETH,Alcohol/drug treatment patient,HL70177,,,,ETHUD,,alcohol use disorder information sensitivity,http://terminology.hl7.org/CodeSystem/v3-ActCode,,
 ,,,,,,U,,unrestricted,http://terminology.hl7.org/CodeSystem/v3-Confidentiality,,
 ,,,,,,L,,low,http://terminology.hl7.org/CodeSystem/v3-Confidentiality,,
 ,,,,,,M,,moderate,http://terminology.hl7.org/CodeSystem/v3-Confidentiality,,

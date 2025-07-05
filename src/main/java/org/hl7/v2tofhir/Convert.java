@@ -306,8 +306,12 @@ public class Convert {
             subchap.setData(Triple.of(Convert.UNKNOWN,
                 c.getSourceFileName() + " to FHIR " + c.getTargetName(), c.getHtmlFileName()));
         } else {
+            String tname = c.getTargetName();
+            if (tname.equals("Urn:iso:std:iso:3166")) {
+                tname = "ISO 3166-1";
+            }
             subchap.setData(Triple.of(dtData.getRight() + c.getQualifier(),
-                dtData.getMiddle()  + " to FHIR [" + c.getTargetName() + "](" + getFhirLocation(m, c.getTargetName(), c.getTarget()) + ")",
+                dtData.getMiddle()  + " to FHIR [" + tname + "](" + getFhirLocation(m, c.getTargetName(), c.getTarget()) + ")",
                 c.getHtmlFileName()));
         }
     }
@@ -347,15 +351,22 @@ public class Convert {
         if (m.get("FHIR Data Type").get(targetName) != null) {
             return FHIR_PREFIX + "/datatypes.html#" + targetName;
         }
+        // special case of V2 Table 0360, which doesn't have a single code system in FHIR R4 (it has two - one for V2 2.3.1-2.6, and another one for 2.7+)
+        // so in this case we will keep the target (THO) url
+        if (targetName.contains("v2 0360")) {
+            return target;
+        }
         if (targetName.contains("v2")) {
             return FHIR_PREFIX + "/" + targetName.replace(" ", "/") + "/index.html";
         }
         if (targetName.contains("v3")) {
             return FHIR_PREFIX + ucName.replace("V3", "/v3/").replace(" ", "") + "/cs.html";
         }
-        
         if (target.startsWith("http://")) {
         	return target;
+        }
+        if (targetName.equals("urn:iso:std:iso:3166")) {
+        	return "https://hl7.org/fhir/R4/iso3166.html";
         }
         return FHIR_PREFIX + "/codesystem-" + targetName.replace(" ", "-") + ".html";
     }

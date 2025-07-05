@@ -16,15 +16,15 @@ Usage: #definition
 * extension[0].extension[1].valueString = "Datatype EI[DefaultAssigner] to Identifier.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1P-B_L7iPadbO4VD2zcyjUGfEeXtjlYqgUNTd7idvohE/edit#gid=0"
-* group.element[0].code = #EI.1
-* group.element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
-* group.element[0].extension[0].extension[0].url = "type"
-* group.element[0].extension[0].extension[0].valueCode = #"ST"
-* group.element[0].extension[0].extension[1].url = "cardinalityMin"
-* group.element[0].extension[0].extension[1].valueInteger = 0
-* group.element[0].extension[0].extension[2].url = "cardinalityMax"
-* group.element[0].extension[0].extension[2].valueInteger = 1
-* group.element[0].display = "Entity Identifier"
-* group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #value
-* group.element[0].target.display = "value"
+* group[0].element[0].code = #EI.1
+* group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group[0].element[0].extension[0].extension[0].url = "type"
+* group[0].element[0].extension[0].extension[0].valueCode = #"ST"
+* group[0].element[0].extension[0].extension[1].url = "cardinalityMin"
+* group[0].element[0].extension[0].extension[1].valueInteger = 0
+* group[0].element[0].extension[0].extension[2].url = "cardinalityMax"
+* group[0].element[0].extension[0].extension[2].valueInteger = 1
+* group[0].element[0].display = "Entity Identifier"
+* group[0].element[0].target.equivalence = #equivalent
+* group[0].element[0].target.code = #value
+* group[0].element[0].target.display = "value"

@@ -59,6 +59,8 @@ public class ConceptMapInput implements Convertible, Cloneable {
         r.sourceCode = this.v2Code;
         r.sourceDisplay = this.v2Text;
         r.comments = this.comments;
+        r.v2CodeSystem = this.v2CodeSystem;
+        r.fhirCodeSystem = this.fhirCodeSystem;
         return r;
     }
 

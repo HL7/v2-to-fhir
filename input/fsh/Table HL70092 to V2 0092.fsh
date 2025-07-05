@@ -9,7 +9,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70092-to-v2-0092"
 * name = "TableHL70092ToV20092"
 * sourceUri = "http://terminology.hl7.org/ValueSet/v2-0092"
-* targetUri = "null"
+* targetUri = "http://terminology.hl7.org/ValueSet/v2-0092"
 * insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
@@ -18,8 +18,10 @@ Usage: #definition
 * extension[0].extension[1].valueString = "Table HL70092 to V2 0092.fsh"
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1etqlWirZVdqipXGQ_9Uq1Wl6bN4DMp-SdL6Y8MnE4WE/edit#gid=0"
-* group.element[0].code = #R
-* group.element[0].display = "Re-admission"
-* group.element[0].target.equivalence = #equivalent
-* group.element[0].target.code = #R
-* group.element[0].target.display = "Re-admission"
+* group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0092"
+* group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0092"
+* group[0].element[0].code = #R
+* group[0].element[0].display = "Re-admission"
+* group[0].element[0].target.equivalence = #equivalent
+* group[0].element[0].target.code = #R
+* group[0].element[0].target.display = "Re-admission"

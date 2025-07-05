@@ -29,6 +29,7 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.ArrayList;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -77,6 +78,8 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         String vocab;
         String segmentMap;
         String references;
+        String v2CodeSystem;
+        String fhirCodeSystem;
     }
 
     private static Map<String,Triple<String,Integer,String>> fhirLinks = new TreeMap<>();
@@ -85,9 +88,8 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     private static Map<String,Triple<String,Integer,String>> dataTypeLinks = new TreeMap<>();
     private static final String[] KNOWN_CODESYSTEM_URLS = { Converter.SNOMEDCT_URL };
 	private static final String ANTLR_PROPERTY = "Computable-ANTLR";
-	private static final String ANTLR_SYSTEM = "http://hl7.org/fhir/uv/v2mappings/antlr_condition_syntax.html";
 	private static final String FHIRPATH_PROPERTY = "Computable-FHIRPath";
-	private static final String FHIRPATH_SYSTEM = "http://hl7.org/fhirpath/N1";
+	private static final String NARRATIVE_PROPERTY = "Narrative-Condition";
 
     private static Map<String, String> mappedLinks  = new HashMap<>();
     static {
@@ -240,7 +242,11 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
     public String getFishFileName() {
         String targetnm = null;
         if (targetName != null) {
-            targetnm = targetName.replace(HTML_SUFFIX, "");
+            if (targetName.equals("Urn:iso:std:iso:3166")) {
+                targetnm = "ISO 3166-1";
+            } else {
+                targetnm = targetName.replace(HTML_SUFFIX, "");
+            }
         }
         return String.format("%s %s%s to %s.fsh", type, sourceName, StringUtils.defaultString(qualifier), targetnm);
     }
@@ -281,11 +287,60 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             notes.getParentFile().mkdirs();
         }
 
+        // before writing the header, first separate the rows into groups by the target system
+        int count = 0;
+        int groupIndexNext = 0;
+        int groupIndex;
+        HashMap<String, Integer> groups = new HashMap<>();
+        ArrayList<ArrayList<Row>> rowGroups = new ArrayList<>();
+        for (T bean : beans) {
+            // skip the first two lines
+            if (count++ < 2) {
+                continue;
+            }
+            // Convert the line
+            Row row = bean.convert();
+
+            // If there is no conversion, go to the next line
+            if (row == null) {
+                continue;
+            }
+
+            if (StringUtils.isBlank(row.sourceCode)) {
+                // Don't worry about lines with sort order of "0".
+                if (bean instanceof DatatypeInput && !"0".equals(((DatatypeInput)bean).getSort())) {
+                    warn("Missing source for mapping", count);
+                }
+                continue;
+            }
+
+            // check if this is a new group, and if so add the system uri to the HashMap
+            if (!groups.containsKey(row.fhirCodeSystem)) {
+                groups.put(row.fhirCodeSystem, groupIndexNext);
+                groupIndex = groupIndexNext;
+                // initialize the inner ArrayList for rows for the new group
+                rowGroups.add(new ArrayList<>());
+                groupIndexNext++; // increment the index for the next group (if any)
+            } else {
+                // get the index value for this group (based on the target code system)
+                groupIndex = groups.get(row.fhirCodeSystem);
+            }
+            // add the new row in the correct group in the ArrayList
+            rowGroups.get(groupIndex).add(row);
+        }
+
+        String targetHeader = target;
+        if (rowGroups.size() > 1) {
+            // in the case of multiple code systems in the map (multiple groups), set the value set uri in targetHeader to the 
+            // empty string value before calling writeHeader, so that no value for 'targetUri' will be included in the ConceptMap
+            targetHeader = "";
+        }
+        
         try (PrintWriter pw = new PrintWriter(new FileWriter(f));
             PrintWriter introWriter = new PrintWriter(new FileWriter(intro));
             PrintWriter notesWriter = new PrintWriter(new FileWriter(notes));
         ) {
-            writeHeader(loc.getName(), pw, filename, type, sourceName, targetName, getFHIRDescription(), source, target, qualifier);
+            writeHeader(loc.getName(), pw, filename, type, sourceName, targetName, getFHIRDescription(), source, targetHeader, qualifier);
             if (sourceUrl != null) {
                 pw.printf("* extension[0].url = \"%s/StructureDefinition/RelatedArtifact\"%n", IG_URL);
                 pw.printf("* extension[0].extension[0].url = \"type\"%n");
@@ -296,85 +351,96 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                 pw.printf("* extension[0].extension[2].url = \"url\"%n");
                 pw.printf("* extension[0].extension[2].valueUri = \"%s\"%n", sourceUrl);
             }
-            int count = 0;
-            int mappedRows = 0;
 
-            for (T bean : beans) {
-                // skip the first two lines
-                if (count++ < 2) {
-                    continue;
-                }
-                // Convert the line
-                Row row = bean.convert();
-
-                // If there is no conversion, go to the next line
-                if (row == null) {
-                    continue;
-                }
-
-                if (StringUtils.isBlank(row.sourceCode)) {
-                	// Don't worry about lines with sort order of "0".
-                	if (bean instanceof DatatypeInput && !"0".equals(((DatatypeInput)bean).getSort())) {
-                		warn("Missing source for mapping", count);
-                	}
-                    continue;
-                }
-
-                pw.printf("* group.element[%d].code = #%s%n", mappedRows, row.sourceCode.trim());
-                addConstraints(pw, "* group.element[%d]", mappedRows, row.sourceType, row.sourceMin, row.sourceMax, null, null);
-
-                if (!StringUtils.isEmpty(row.sourceDisplay)) {
-                    pw.printf("* group.element[%d].display = \"%s\"%n", mappedRows, escapeFshString(row.sourceDisplay));
-                }
-
-                pw.printf("* group.element[%d].target.equivalence = #%s%n", mappedRows,
-                    StringUtils.isEmpty(row.targetCode) ? "unmatched" : "equivalent");
-
-                if (!StringUtils.isBlank(row.targetCode)) {
-                    String targetCode = row.targetCode.contains("=")
-                        ? escapeFshString(StringUtils.substringBefore(row.targetCode, "="))
-                        : row.targetCode;
-                    String targetDisplay = row.targetCode.contains("=")
-                        ? "= " + StringUtils.substringAfter(row.targetCode, "=")
-                        : row.targetDisplay;
-
-                    String comments = StringUtils.defaultString(row.comments);
-                    if (targetCode.contains(",") || targetCode.contains(" ")) {
-                        String[] parts = targetCode.split("[, ]");
-                        comments = targetCode.substring(parts[0].length()) + ".  " + comments;
-                        targetCode = parts[0];
+            // now generate the FSH output for the rows, arranged by group
+            int mappedGroups = 0;
+            int mappedRows;
+            String targetSystem;
+            for (ArrayList<Row> group : rowGroups) {
+                if (type == TABLE_TYPE) {
+                    // output the group.source code system uri value
+                    if (source != null && toValueSetUri(type, source) != null) {
+                        if (source.equals("HL70399")) {
+                            // handle the special case of the value set for V2 Table 0399 (country codes)
+                            pw.printf("* group[%d].source = \"%s\"%n", mappedGroups, "urn:iso:std:iso:3166");
+                        } else if (source.equals("HL70136")) {
+                            // handle the special case of the value set for V2 Table 0136 (yes-no-Indicator)
+                            // the Table 0136 value set codes are now drawn from the Table 0532 (expandedYes-NoIndicator)
+                            pw.printf("* group[%d].source = \"%s\"%n", mappedGroups, "http://terminology.hl7.org/CodeSystem/v2-0532");
+                        } else if (source.equals("HL70078")) {
+                            // handle the special case of the value set for V2 Table 0078 (hl7VS-interpretationCode)
+                            // the Table 0078 value set codes are now drawn from the V3 ObservationInterpretation code system
+                            pw.printf("* group[%d].source = \"%s\"%n", mappedGroups, "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation");
+                        } else {
+                            pw.printf("* group[%d].source = \"%s\"%n", mappedGroups, toValueSetUri(type, source).replace("ValueSet", "CodeSystem"));
+                        }
                     }
-
-                    pw.printf("* group.element[%d].target.code = #%s%n", mappedRows, targetCode.trim());
-
-                    addConstraints(pw, "* group.element[%d].target", mappedRows, row.targetType, row.targetMin, row.targetMax, row.targetValue, row.vocab);
-
-                    if (!StringUtils.isEmpty(escapeFshString(targetDisplay))) {
-                        pw.printf("* group.element[%d].target.display = \"%s\"%n", mappedRows,
-                            escapeFshString(targetDisplay));
-                    }
-                    if (!StringUtils.isEmpty(escapeFshString(comments))) {
-                        pw.printf("* group.element[%d].target.comment = \"%s\"%n", mappedRows,
-                            escapeFshString(comments));
-                    }
-                    
-                    // Add ANTLR and FHIR Conditions
-                    String index = "0";
-                    if (!StringUtils.isEmpty(row.conditionANTLR)) {
-                    	pw.printf("* group.element[%d].target.dependsOn[0].property = \"%s\"%n", mappedRows, ANTLR_PROPERTY);
-                    	pw.printf("* group.element[%d].target.dependsOn[0].system = \"%s\"%n", mappedRows, ANTLR_SYSTEM);
-                    	pw.printf("* group.element[%d].target.dependsOn[0].value = \"%s\"%n", mappedRows, escapeFshString(row.conditionANTLR));
-                    	pw.printf("* group.element[%d].target.dependsOn[0].display = \"%s\"%n", mappedRows, escapeFshString(row.conditionANTLR));
-                    	index = "1";
-                    }
-                    if (!StringUtils.isEmpty(row.conditionFHIRPath)) {
-                    	pw.printf("* group.element[%d].target.dependsOn[%s].property = \"%s\"%n", mappedRows, index, FHIRPATH_PROPERTY);
-                    	pw.printf("* group.element[%d].target.dependsOn[%s].system = \"%s\"%n", mappedRows, index, FHIRPATH_SYSTEM);
-                    	pw.printf("* group.element[%d].target.dependsOn[%s].value = \"%s\"%n", mappedRows, index, escapeFshString(row.conditionANTLR));
-                    	pw.printf("* group.element[%d].target.dependsOn[%s].display = \"%s\"%n", mappedRows, index, escapeFshString(row.conditionANTLR));
+                    // output the group.target code system uri value
+                    targetSystem = ((Row)group.get(0)).fhirCodeSystem;
+                    if (targetSystem != null && !targetSystem.equals("")) {
+                        pw.printf("* group[%d].target = \"%s\"%n", mappedGroups, targetSystem);
                     }
                 }
-                ++mappedRows;
+                mappedRows = 0;
+                for (Row row : group) {
+                    pw.printf("* group[%d].element[%d].code = #%s%n", mappedGroups, mappedRows, row.sourceCode.trim());
+                    addConstraints(pw, "* group[%d].element[%d]", mappedGroups, mappedRows, row.sourceType, row.sourceMin, row.sourceMax, null, null);
+
+                    if (!StringUtils.isEmpty(row.sourceDisplay)) {
+                        pw.printf("* group[%d].element[%d].display = \"%s\"%n", mappedGroups, mappedRows, escapeFshString(row.sourceDisplay));
+                    }
+
+                    pw.printf("* group[%d].element[%d].target.equivalence = #%s%n", mappedGroups, mappedRows,
+                        StringUtils.isEmpty(row.targetCode) ? "unmatched" : "equivalent");
+
+                    if (!StringUtils.isBlank(row.targetCode)) {
+                        String targetCode = row.targetCode.contains("=")
+                            ? escapeFshString(StringUtils.substringBefore(row.targetCode, "="))
+                            : row.targetCode;
+                        String targetDisplay = row.targetCode.contains("=")
+                            ? "= " + StringUtils.substringAfter(row.targetCode, "=")
+                            : row.targetDisplay;
+
+                        String comments = StringUtils.defaultString(row.comments);
+                        if (targetCode.contains(",") || (targetCode.contains(" ") && (!targetCode.startsWith("\"") || !targetCode.endsWith("\""))) ) {
+                            String[] parts = targetCode.split("[, ]");
+                            comments = targetCode.substring(parts[0].length()) + ".  " + comments;
+                            targetCode = parts[0];
+                        }
+
+                        pw.printf("* group[%d].element[%d].target.code = #%s%n", mappedGroups, mappedRows, targetCode.trim());
+
+                        addConstraints(pw, "* group[%d].element[%d].target", mappedGroups, mappedRows, row.targetType, row.targetMin, row.targetMax, row.targetValue, row.vocab);
+
+                        if (!StringUtils.isEmpty(escapeFshString(targetDisplay))) {
+                            pw.printf("* group[%d].element[%d].target.display = \"%s\"%n", mappedGroups, mappedRows,
+                                escapeFshString(targetDisplay));
+                        }
+                        if (!StringUtils.isEmpty(escapeFshString(comments))) {
+                            pw.printf("* group[%d].element[%d].target.comment = \"%s\"%n", mappedGroups, mappedRows,
+                                escapeFshString(comments));
+                        }
+                        
+                        // Add ANTLR, FHIRPath and Narrative Conditions
+                        Integer index = 0;
+                        if (!StringUtils.isEmpty(row.conditionANTLR)) {
+                            pw.printf("* group[%d].element[%d].target.dependsOn[0].property = \"%s\"%n", mappedGroups, mappedRows, ANTLR_PROPERTY);
+                            pw.printf("* group[%d].element[%d].target.dependsOn[0].value = \"%s\"%n", mappedGroups, mappedRows, escapeFshString(row.conditionANTLR));
+                            index = index + 1;
+                        }
+                        if (!StringUtils.isEmpty(row.conditionFHIRPath)) {
+                            pw.printf("* group[%d].element[%d].target.dependsOn[%s].property = \"%s\"%n", mappedGroups, mappedRows, index, FHIRPATH_PROPERTY);
+                            pw.printf("* group[%d].element[%d].target.dependsOn[%s].value = \"%s\"%n", mappedGroups, mappedRows, index, escapeFshString(row.conditionFHIRPath));
+                            index = index + 1;
+                        }
+                        if (!StringUtils.isEmpty(row.conditionNarrative)) {
+                            pw.printf("* group[%d].element[%d].target.dependsOn[%s].property = \"%s\"%n", mappedGroups, mappedRows, index, NARRATIVE_PROPERTY);
+                            pw.printf("* group[%d].element[%d].target.dependsOn[%s].value = \"%s\"%n", mappedGroups, mappedRows, index, escapeFshString(row.conditionNarrative));
+                        }
+                    }
+                    mappedRows++;
+                }
+                mappedGroups++;
             }
 
             if (introWriter != null) {
@@ -395,14 +461,19 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 
     private static void writeHeader(String fn, PrintWriter pw,
         String sourceFilename, String type, String sourceName, String targetName, String fhirType,
-        String source, String target, String qualifier
-    ) {
+        String source, String target, String qualifier) {
         String filename = fn;
         String titleStr;
-        if (!qualifier.equals("")) {
-            titleStr = type + " " + sourceName + " " + qualifier + " to " + targetName + " Map";
+        String targetNm;
+        if (targetName.equals("Urn:iso:std:iso:3166")) {
+            targetNm = "ISO 3166-1";
         } else {
-            titleStr = type + " " + sourceName + " to " + targetName + " Map";
+            targetNm = targetName;
+        }
+        if (!qualifier.equals("")) {
+            titleStr = type + " " + sourceName + " " + qualifier + " to " + targetNm + " Map";
+        } else {
+            titleStr = type + " " + sourceName + " to " + targetNm + " Map";
         }
         if (source == null) {
             titleStr = titleStr + " - Unsupported";
@@ -419,15 +490,38 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         pw.printf("* id = \"%s\"%n", makeId(filename));
         pw.printf("* url = \"%s/ConceptMap/%s\"%n", IG_URL, makeId(filename));
         pw.printf("* name = \"%s\"%n", makeName(filename));
-        String vs = toValueSetUri(type, source);
+        String vs;
+        if (source.equals("HL70399")) {
+            // handle the special case of the value set for V2 Table 0399 (country codes)
+            vs = toValueSetUri(type, "HL7notAllCodes-0399");
+        } else if (source.equals("HL70078")) {
+            // handle the special case of the value set for V2 Table 0078 (hl7VS-interpretationCode)
+            // the V2 value set and code system have been deprecating, and the codes are not being supported on tx.fhir.org
+            // so using the V3 value set instead
+            vs = "http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation";
+        } else {
+            vs = toValueSetUri(type, source);
+        }
         if (vs != null) {
             pw.printf("* sourceUri = \"%s\"%n", vs);
         } else {
         	System.err.printf("Source: %s %s %s%n", sourceName, type, source);
         }
-        vs = toValueSetUri(type, target);
+        if (target.equals("urn:iso:std:iso:3166")){
+            // handle the special case of the value set for ISO 3166 Part 1 3-letter country Codes
+            vs = "http://hl7.org/fhir/ValueSet/iso3166-1-3";
+        } else if (target.equals("http://terminology.hl7.org/CodeSystem/practitioner-role")) {
+            // handle the special case of the FHIR value set for practitioner-role (this code system has a THO url)
+            vs = "http://hl7.org/fhir/ValueSet/practitioner-role";
+        } else {
+            vs = toValueSetUri(type, target);
+        }
         if (vs != null) {
-            pw.printf("* targetUri = \"%s\"%n", toValueSetUri(type, vs));
+            if (!vs.equals("")) {
+                // only specify the target value set if there is a single code system group in the map
+                // if there are multiple code systems present in the map, the vs variable will be set to the empty string
+                pw.printf("* targetUri = \"%s\"%n", vs);
+            }
         } else {
         	System.err.printf("Target: %s %s%n", targetName, target);
         }
@@ -445,6 +539,10 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 		if (uri == null) {
 			return null;
 		}
+		if (uri.equals("")) {
+			// pass the empty string value through (for checking in writeHeader)
+            return uri;
+		}
 		if (uri.contains("/R4/")) {
 			uri = uri.replace("/R4/", "/");
 		}
@@ -458,47 +556,51 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 		if (StringUtils.startsWithIgnoreCase(uri, "http://terminology.hl7.org/CodeSystem/")) {
 			return "http://terminology.hl7.org/ValueSet/" + StringUtils.substringAfter(uri, "/CodeSystem/");
 		}
-		if (StringUtils.startsWithIgnoreCase(uri, "http://hl7.org/fhir/ValueSet/")) {
+		if (StringUtils.startsWithIgnoreCase(uri, "http://hl7.org/fhir/ValueSet/")
+            || StringUtils.startsWithIgnoreCase(uri, "urn:")) {
 			return uri;
 		}
 		
 		return null;
 	}
 	
-	private void addConstraints(PrintWriter pw, String string, int row, String dataType, String min, String max, String value, String vocab) {
+	private void addConstraints(PrintWriter pw, String string, int group, int row, String dataType, String min, String max, String value, String vocab) {
         if (!StringUtils.isAllBlank(dataType, min, max, value, vocab)) {
-            pw.printf(string + ".extension[0].url = \"%s/StructureDefinition/TypeInfo\"%n", row, IG_URL);
+            pw.printf(string + ".extension[0].url = \"%s/StructureDefinition/TypeInfo\"%n", group, row, IG_URL);
 
             int parts = 0;
             if (!StringUtils.isBlank(dataType)) {
-                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", row, parts, "type");
-                pw.printf(string + ".extension[0].extension[%d].valueCode = #\"%s\"%n", row, parts++, dataType);
+                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", group, row, parts, "type");
+                pw.printf(string + ".extension[0].extension[%d].valueCode = #\"%s\"%n", group, row, parts++, dataType);
             }
             if (!StringUtils.isBlank(min)) {
-                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", row, parts, "cardinalityMin");
-                pw.printf(string + ".extension[0].extension[%d].valueInteger = %s%n", row, parts++, min);
+                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", group, row, parts, "cardinalityMin");
+                pw.printf(string + ".extension[0].extension[%d].valueInteger = %s%n", group, row, parts++, min);
             }
             if (!StringUtils.isBlank(max)) {
-                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", row, parts, "cardinalityMax");
-                pw.printf(string + ".extension[0].extension[%d].valueInteger = %s%n", row, parts++, max);
+                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", group, row, parts, "cardinalityMax");
+                pw.printf(string + ".extension[0].extension[%d].valueInteger = %s%n", group, row, parts++, max);
             }
             if (!StringUtils.isBlank(value)) {
-                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", row, parts, "fixedValue");
-                pw.printf(string + ".extension[0].extension[%d].valueString = \"%s\"%n", row, parts++, escapeFshString(value));
+                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", group, row, parts, "assignment");
+                pw.printf(string + ".extension[0].extension[%d].valueString = \"%s\"%n", group, row, parts++, escapeFshString(value));
             }
             if (!StringUtils.isBlank(vocab)) {
             	String link = ConceptMapConverter.getLinkFromName(vocab);
                 if (link != null) {
                 	vocab = link.replace(HTML_SUFFIX, "").replace(CONCEPT_MAP_FILENAME, "ConceptMap/");
                 }
-                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", row, parts, "mappedVia");
-                pw.printf(string + ".extension[0].extension[%d].valueUrl = \"%s\"%n", row, parts++, vocab);
+                pw.printf(string + ".extension[0].extension[%d].url = \"%s\"%n", group, row, parts, "mappedVia");
+                pw.printf(string + ".extension[0].extension[%d].valueUrl = \"%s\"%n", group, row, parts++, vocab);
             }
         }
     }
 
     private String getFHIRDescription() {
         String target = getTargetName().replace(",html", "");
+        if (target.equals("Urn:iso:std:iso:3166")) {
+            target = "ISO 3166-1";
+        }
         switch (type) {
         case TABLE_TYPE:
             return String.format("%s Value Set", target);
@@ -686,16 +788,24 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                         fhirLink.replace(FHIR_TERM + "CodeSystem/v3-", FHIR_BASE + "v3/") +
                         "/cs.html")
                 );
-            } else if (StringUtils.startsWith(fhirLink,  FHIR_TERM + "CodeSystem/v2-")) {
+            } else if (StringUtils.startsWith(fhirLink,  FHIR_TERM + "CodeSystem/v2-")) {                
                 // if it starts with  http://terminology.hl7.org/CodeSystem/v2- replace with http://hl7.org/fhir/R4/v2/
                 // and append /index.html
-                links.append(makeLink(fhirLink,
-                    fhirLink.replace(FHIR_TERM + "CodeSystem/v2-", FHIR_BASE + "v2/") + "/index.html")
-                );
+                if (StringUtils.startsWith(fhirLink,  FHIR_TERM + "CodeSystem/v2-0360")) {
+                    // but first handle the special case of V2 Table 0360, which doesn't have a single code system in FHIR R4 (it has two - one for V2 2.3.1-2.6, and another one for 2.7+)
+                    // so in this case we will keep the THO url
+                    links.append(makeLink(fhirLink, fhirLink));
+                } else {
+                    links.append(makeLink(fhirLink,
+                        fhirLink.replace(FHIR_TERM + "CodeSystem/v2-", FHIR_BASE + "v2/") + "/index.html")
+                    );
+                }
             } else if (StringUtils.startsWith(fhirLink,  FHIR_TERM + "CodeSystem/")) {
                 links.append(makeLink(fhirLink, fhirLink));
             } else if (Arrays.asList(KNOWN_CODESYSTEM_URLS).contains(fhirLink)) {
                 links.append(makeLink(fhirLink, fhirLink));
+            } else if (StringUtils.equals(fhirLink, "urn:iso:std:iso:3166")) {
+                links.append(makeLink(fhirLink, "https://hl7.org/fhir/R4/iso3166.html"));
             } else if (isMetaField(fhirLink)) {
                 links.append(makeLink(fhirLink, FHIR_BASE + "resource.html#Meta"));
             } else if ((link = isFhirDataType(fhirLink, count)) != null) {

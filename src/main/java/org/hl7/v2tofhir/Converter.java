@@ -18,6 +18,7 @@ import java.io.IOException;
 public interface Converter {
 
     String SNOMEDCT_URL = "http://snomed.info/sct";
+    String ISO3166_1_URL = "https://hl7.org/fhir/R4/iso3166.html";
 
 	/**
      * Load the specified input into the converter
