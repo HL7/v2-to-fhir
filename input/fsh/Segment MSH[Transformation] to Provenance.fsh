@@ -36,7 +36,7 @@ Usage: #definition
 * group[0].element[1].target.extension[0].extension[1].url = "cardinalityMax"
 * group[0].element[1].target.extension[0].extension[1].valueInteger = 1
 * group[0].element[1].target.extension[0].extension[2].url = "assignment"
-* group[0].element[1].target.extension[0].extension[2].valueString = "\"to be established\""
+* group[0].element[1].target.extension[0].extension[2].valueString = "\"http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir\""
 * group[0].element[1].target.display = "activity.coding.system"
 * group[0].element[2].code = #MSH
 * group[0].element[2].target.equivalence = #equivalent

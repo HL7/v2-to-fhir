@@ -144,6 +144,7 @@
 <artifact id="ConceptMap/message-oru-r01-to-bundle" key="ConceptMap-message-oru-r01-to-bundle" name="Message ORU_R01 to Bundle Map"/>
 <artifact id="ConceptMap/message-siu-s12-to-bundle" key="ConceptMap-message-siu-s12-to-bundle" name="Message SIU_S12 to Bundle Map"/>
 <artifact id="ConceptMap/message-vxu-v04-to-bundle" key="ConceptMap-message-vxu-v04-to-bundle" name="Message VXU_V04 to Bundle Map"/>
+<artifact id="CodeSystem/provenance-activity-type-v2-to-fhir" key="CodeSystem-provenance-activity-type-v2-to-fhir" name="Provenance Activity Type CodeSystem - V2 To FHIR"/>
 <artifact id="StructureDefinition/RelatedArtifact" key="StructureDefinition-RelatedArtifact" name="RelatedArtifact"/>
 <artifact id="ConceptMap/segment-aig-to-appointment" key="ConceptMap-segment-aig-to-appointment" name="Segment AIG to Appointment Map"/>
 <artifact id="ConceptMap/segment-ail-to-appointment" key="ConceptMap-segment-ail-to-appointment" name="Segment AIL to Appointment Map"/>
