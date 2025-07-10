@@ -9,13 +9,6 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-txa-to-provenance"
 * name = "SegmentTXAToProvenance"
 * insert PublicationData
-* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
-* extension[0].extension[0].url = "type"
-* extension[0].extension[0].valueCode = #derived-from
-* extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Segment TXA to Provenance.fsh"
-* extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/14WD1YPRWINIG4WQ4GuBI77_6xTSdFW17aH3IrbHUyvo/edit?gid=0#gid=0"
 * group[0].element[0].code = #TXA
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

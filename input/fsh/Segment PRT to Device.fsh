@@ -9,13 +9,6 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-prt-to-device"
 * name = "SegmentPRTToDevice"
 * insert PublicationData
-* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
-* extension[0].extension[0].url = "type"
-* extension[0].extension[0].valueCode = #derived-from
-* extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Segment PRT to Device.fsh"
-* extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kApBsX909N_5B--utrkPcLtEvI9m5We5GyRDk0dH1sU/edit#gid=0"
 * group[0].element[0].code = #PRT-10
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

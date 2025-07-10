@@ -9,13 +9,6 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-orc-to-provenance"
 * name = "SegmentORCToProvenance"
 * insert PublicationData
-* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
-* extension[0].extension[0].url = "type"
-* extension[0].extension[0].valueCode = #derived-from
-* extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Segment ORC to Provenance.fsh"
-* extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1L4SJinq7WpD-V-feaIEtbplAx9gfYbe6cYmjdkuzd4E/edit#gid=0"
 * group[0].element[0].code = #ORC-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -9,13 +9,6 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-rxo-to-medicationrequest"
 * name = "SegmentRXOToMedicationRequest"
 * insert PublicationData
-* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
-* extension[0].extension[0].url = "type"
-* extension[0].extension[0].valueCode = #derived-from
-* extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Segment RXO to MedicationRequest.fsh"
-* extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1IikDPobXAskISQ4b6rkBIBWPhBr02mrB4eUHy6eXzQ0/edit#gid=0"
 * group[0].element[0].code = #RXO
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #intent

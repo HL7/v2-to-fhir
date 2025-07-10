@@ -9,13 +9,6 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-prt-to-relatedperson"
 * name = "SegmentPRTToRelatedPerson"
 * insert PublicationData
-* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
-* extension[0].extension[0].url = "type"
-* extension[0].extension[0].valueCode = #derived-from
-* extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Segment PRT to RelatedPerson.fsh"
-* extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/17gCMgdR8Jq9viGiCTN67QvGEnJLNMlyVaMT5325tmh4/edit#gid=0"
 * group[0].element[0].code = #PRT-4
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

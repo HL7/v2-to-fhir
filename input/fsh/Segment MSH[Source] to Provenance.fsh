@@ -9,13 +9,6 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-msh-source-to-provenance"
 * name = "SegmentMSHSourceToProvenance"
 * insert PublicationData
-* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
-* extension[0].extension[0].url = "type"
-* extension[0].extension[0].valueCode = #derived-from
-* extension[0].extension[1].url = "label"
-* extension[0].extension[1].valueString = "Segment MSH[Source] to Provenance.fsh"
-* extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1F5aYk6tFCYTQd_qEaEc5G85ZcCm98R5B-sq2JGqUagk/edit#gid=0"
 * group[0].element[0].code = #MSH
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #entity[1].what(DocumentReference.content.attachment.url)
