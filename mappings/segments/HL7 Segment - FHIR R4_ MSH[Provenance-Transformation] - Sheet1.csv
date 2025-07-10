@@ -2,7 +2,7 @@ HL7 v2,,,,,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
 Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
 (IS, ID, CE, CNE, CWE)",Assignment,,
 0,MSH,,,,,,,,activity.coding.code,,,0,1,,,"""v2-fhir-transformation""",,
-0,MSH,,,,,,,,activity.coding.system,,,0,1,,,"""to be established""",,
+0,MSH,,,,,,,,activity.coding.system,,,0,1,,,"""http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir""",,
 0,MSH,,,,,,,,recorded,,,1,1,,,/timestamp of tranformation/,,
 0,MSH,,,,,,,,policy,,,0,-1,,,/uri of the policy governing transformation of the v2 to FHIR/,,
 0,MSH,,,,,,,,agent[1].type.coding.code,,string,0,1,,,"""assembler""",,
