@@ -3,6 +3,13 @@
 %ConceptMap.group[0]: No Source Code System, so the source codes cannot be checked
 %ConceptMap.group[0]: No Target Code System, so the target codes cannot be checked
 
+# The ConceptMap group[1] source codes all have equivalence = #unmatched, therefore there is no target "code system" and system url to specify.
+%ConceptMap.group[1]: No Target Code System, so the target codes cannot be checked
+
+# Since the ISO 3166-1 code system content is 'not-present', the terminology server is unable to verify these codes
+WARNING: ConceptMap/table-hl70399-to-iso-3166-1: ConceptMap.group[0].source: Source Code System urn:iso:std:iso:3166 doesn't have all content (content = not-present), so the source codes cannot be checked
+WARNING: ConceptMap/table-hl70399-to-iso-3166-1: ConceptMap.group[0].target: Target Code System urn:iso:std:iso:3166 doesn't have all content (content = not-present), so the target codes cannot be checked
+
 # The content uses the '<' and '>' characters, but it is not embedded HTML or XML and poses no security risk.
 %The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
@@ -17,3 +24,7 @@
 # These references to 'unspecified_mapping' or ConceptMap instances in the TypeInfo 'mappedVia' sub-extension are not expected to be resolvable as URLs.
 %.value.ofType(url): No definition could be found for URL value 'unspecified_mapping'
 %.value.ofType(url): No definition could be found for URL value 'ConceptMap/%
+
+# The provenance-activity-type-v2-to-fhir code system is a temporary code system defined in this IG.  The 'v2-fhir-transformation' code is expected to be added to an existing THO code system and included in the provenance-activity-type value set in a future release.  The warning regarding the lack of a version reference in the code system canonical URL is expected and is not an issue.
+INFORMATION: CodeSystem/provenance-activity-type-v2-to-fhir: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+WARNING: ConceptMap-segment-msh-transformation-to-provenance.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 291, column 580: The link 'http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir' for "http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir" is a canonical link and is therefore unsafe with regard to versions
