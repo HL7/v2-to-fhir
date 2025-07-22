@@ -5,3 +5,15 @@
 
 # The content uses the '<' and '>' characters, but it is not embedded HTML or XML and poses no security risk
 %The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+
+# These ConceptMap dependsOn properties do not have defined URLs
+%.property: No definition could be found for URL value 'Narrative-Condition'
+%.property: No definition could be found for URL value 'Computable-ANTLR'
+%.property: No definition could be found for URL value 'Computable-FHIRPath'
+
+# These are the Google spreadsheet URLs, which do resolve
+%.value.ofType(uri): No definition could be found for URL value 'https://docs.google.com/spreadsheets%
+
+# These extension references are not expected to resolve as URLs
+%.value.ofType(url): No definition could be found for URL value 'unspecified_mapping'
+%.value.ofType(url): No definition could be found for URL value 'ConceptMap/%
