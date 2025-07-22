@@ -9,6 +9,13 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-nte-to-observation"
 * name = "SegmentNTEToObservation"
 * insert PublicationData
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
+* extension[0].extension[0].url = "type"
+* extension[0].extension[0].valueCode = #derived-from
+* extension[0].extension[1].url = "label"
+* extension[0].extension[1].valueString = "Segment NTE to Observation.fsh"
+* extension[0].extension[2].url = "url"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1AUqCO66awBsL8wzgMesb5jou2q7fVXozQlwz5pC9-3o/edit#gid=0"
 * group[0].element[0].code = #NTE-3
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

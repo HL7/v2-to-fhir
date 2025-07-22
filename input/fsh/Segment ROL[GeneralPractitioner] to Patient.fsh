@@ -9,6 +9,13 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-rol-generalpractitioner-to-patient"
 * name = "SegmentROLGeneralPractitionerToPatient"
 * insert PublicationData
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
+* extension[0].extension[0].url = "type"
+* extension[0].extension[0].valueCode = #derived-from
+* extension[0].extension[1].url = "label"
+* extension[0].extension[1].valueString = "Segment ROL[GeneralPractitioner] to Patient.fsh"
+* extension[0].extension[2].url = "url"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1k_CXL1pI4XSfDj93bYImERZ_fm5Cwm9tzQj_IKHBAeI/edit#gid=0"
 * group[0].element[0].code = #ROL-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

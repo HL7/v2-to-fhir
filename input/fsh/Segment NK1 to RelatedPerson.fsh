@@ -9,6 +9,13 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-nk1-to-relatedperson"
 * name = "SegmentNK1ToRelatedPerson"
 * insert PublicationData
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
+* extension[0].extension[0].url = "type"
+* extension[0].extension[0].valueCode = #derived-from
+* extension[0].extension[1].url = "label"
+* extension[0].extension[1].valueString = "Segment NK1 to RelatedPerson.fsh"
+* extension[0].extension[2].url = "url"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ATQBezpmTFj-ClJ2qMfAiz8sG6d_EGj3mInQl7RSlts/edit#gid=0"
 * group[0].element[0].code = #NK1-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

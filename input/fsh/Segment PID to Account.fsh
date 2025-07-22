@@ -9,6 +9,13 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-pid-to-account"
 * name = "SegmentPIDToAccount"
 * insert PublicationData
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
+* extension[0].extension[0].url = "type"
+* extension[0].extension[0].valueCode = #derived-from
+* extension[0].extension[1].url = "label"
+* extension[0].extension[1].valueString = "Segment PID to Account.fsh"
+* extension[0].extension[2].url = "url"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1i1A5E-IkTnWarRsHoz-ii_0m2tYyhRjCe1TEodq18fA/edit#gid=0"
 * group[0].element[0].code = #PID
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #status

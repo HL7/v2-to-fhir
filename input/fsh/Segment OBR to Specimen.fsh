@@ -9,6 +9,13 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/segment-obr-to-specimen"
 * name = "SegmentOBRToSpecimen"
 * insert PublicationData
+* extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
+* extension[0].extension[0].url = "type"
+* extension[0].extension[0].valueCode = #derived-from
+* extension[0].extension[1].url = "label"
+* extension[0].extension[1].valueString = "Segment OBR to Specimen.fsh"
+* extension[0].extension[2].url = "url"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1BWxCsh7UjOJwv1_ARyLJe4cvU_gybW5MdSXTBcTa44c/edit#gid=0"
 * group[0].element[0].code = #OBR-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"
