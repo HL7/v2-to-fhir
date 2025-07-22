@@ -3,17 +3,17 @@
 %ConceptMap.group[0]: No Source Code System, so the source codes cannot be checked
 %ConceptMap.group[0]: No Target Code System, so the target codes cannot be checked
 
-# The content uses the '<' and '>' characters, but it is not embedded HTML or XML and poses no security risk
+# The content uses the '<' and '>' characters, but it is not embedded HTML or XML and poses no security risk.
 %The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
-# These ConceptMap dependsOn properties do not have defined URLs
+# These ConceptMap dependsOn properties do not have defined URLs.
 %.property: No definition could be found for URL value 'Narrative-Condition'
 %.property: No definition could be found for URL value 'Computable-ANTLR'
 %.property: No definition could be found for URL value 'Computable-FHIRPath'
 
-# These are the Google spreadsheet URLs, which do resolve
+# These URL references in the RelatedArtifact 'derived-from' sub-extension are to the Google spreadsheets.  The URLs do resolve correctly in a Web browser.  The extension content is also not currently being rendered in the Narrative Content tab.
 %.value.ofType(uri): No definition could be found for URL value 'https://docs.google.com/spreadsheets%
 
-# These extension references are not expected to resolve as URLs
+# These references to 'unspecified_mapping' or ConceptMap instances in the TypeInfo 'mappedVia' sub-extension are not expected to be resolvable as URLs.
 %.value.ofType(url): No definition could be found for URL value 'unspecified_mapping'
 %.value.ofType(url): No definition could be found for URL value 'ConceptMap/%
