@@ -446,11 +446,11 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             if (introWriter != null) {
                 introWriter.printf(
                     "%nThis ConceptMap represents the mapping from the HL7 V2 %s to the FHIR %s. "
-                        + "See also the <a href='https://github.com/HL7/v2-to-fhir/blob/master/tank/%s'>FHIR Shorthand</a> or "
+                        + "See also the <a href='https://github.com/HL7/v2-to-fhir/blob/master/input/fsh/%s'>FHIR Shorthand</a> or "
                         + "the <a href='https://github.com/HL7/v2-to-fhir/blob/master/mappings/%s'>CSV Source</a>.%n",
                         getV2Description(),
                         getFHIRDescription(),
-                        output, StringUtils.substringAfterLast(theSource.getPath().replace("\\","/"), "mappings/"));
+                        output.replace("[", "%5B").replace("]", "%5D"), StringUtils.substringAfterLast(theSource.getPath().replace("\\","/"), "mappings/").replace("[", "%5B").replace("]", "%5D"));
 
                 writeIntro(beans, introWriter);
             }
