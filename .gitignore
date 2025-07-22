@@ -1,3 +1,5 @@
+# standard, generated and temporary folders #
+################
 /bin/
 /target/
 /archive/
@@ -8,6 +10,6 @@
 /output/
 /template/
 
-
-
-
+# generated Jira Spec file #
+################
+FHIR-v2mappings.xml
