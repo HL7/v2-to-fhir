@@ -21,10 +21,17 @@ WARNING: ConceptMap/table-hl70399-to-iso-3166-1: ConceptMap.group[0].target: Tar
 # These URL references in the RelatedArtifact 'derived-from' sub-extension are to the Google spreadsheets.  The URLs do resolve correctly in a Web browser.  The extension content is also not currently being rendered in the Narrative Content tab.
 %.value.ofType(uri): No definition could be found for URL value 'https://docs.google.com/spreadsheets%
 
-# These references to 'unspecified_mapping' or ConceptMap instances in the TypeInfo 'mappedVia' sub-extension are not expected to be resolvable as URLs.
+# These references to 'unspecified_mapping', 'SegmentActionCode' or ConceptMap instances in the TypeInfo 'mappedVia' sub-extension are not expected to be resolvable as URLs.
 %.value.ofType(url): No definition could be found for URL value 'unspecified_mapping'
 %.value.ofType(url): No definition could be found for URL value 'ConceptMap/%
+WARNING: ConceptMap/segment-prt-generalpractitioner-practitionerrole-to-patient: ConceptMap.group[0].element[0].target[0].extension[0].extension[0].value.ofType(url): No definition could be found for URL value 'SegmentActionCode' 
 
 # The provenance-activity-type-v2-to-fhir code system is a temporary code system defined in this IG.  The 'v2-fhir-transformation' code is expected to be added to an existing THO code system and included in the provenance-activity-type value set in a future release.  The warning regarding the lack of a version reference in the code system canonical URL is expected and is not an issue.
 INFORMATION: CodeSystem/provenance-activity-type-v2-to-fhir: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-WARNING: ConceptMap-segment-msh-transformation-to-provenance.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 291, column 580: The link 'http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir' for "http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir" is a canonical link and is therefore unsafe with regard to versions
+WARNING: ConceptMap-segment-msh-transformation-to-provenance.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 296, column 580: The link 'http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir' for "http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir" is a canonical link and is therefore unsafe with regard to versions 
+
+# There is no action to take based on this information message, as it is due to the terminology server behavior for supporting SNOMED CT.
+%.target: Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
+
+# There is no action to take based on this information message, as it is due to the Publisher behavior for handling large ConceptMap instances.
+INFORMATION: ConceptMap/table-hl70550-to-v2-0550: ConceptMap: The concept map has too many codes to validate (886) 
