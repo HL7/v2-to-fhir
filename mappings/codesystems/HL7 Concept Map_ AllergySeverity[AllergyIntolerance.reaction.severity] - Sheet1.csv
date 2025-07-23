@@ -1,6 +1,6 @@
 HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,,,,Comment
 Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-SV,Severe,HL70128,,,,severe,,Severe,https://www.hl7.org/fhir/reaction-event-severity.html,,
-MO,Moderate,HL70128,,,,moderate,,Moderate,https://www.hl7.org/fhir/reaction-event-severity.html,,
-MI,Mild,HL70128,,,,mild,,Mild,https://www.hl7.org/fhir/reaction-event-severity.html,,
+SV,Severe,HL70128,,,,severe,,Severe,http://hl7.org/fhir/reaction-event-severity,,
+MO,Moderate,HL70128,,,,moderate,,Moderate,http://hl7.org/fhir/reaction-event-severity,,
+MI,Mild,HL70128,,,,mild,,Mild,http://hl7.org/fhir/reaction-event-severity,,
 U,Unknown,HL70128,,,,,,,,,

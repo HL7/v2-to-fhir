@@ -18,7 +18,7 @@ Usage: #definition
 * extension[0].extension[2].url = "url"
 * extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1sMIR0cGVDt34suaYtk-yH0DA6lVdpV3yrthqOcZLOKg/edit#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0128"
-* group[0].target = "https://www.hl7.org/fhir/reaction-event-severity.html"
+* group[0].target = "http://hl7.org/fhir/reaction-event-severity"
 * group[0].element[0].code = #SV
 * group[0].element[0].display = "Severe"
 * group[0].element[0].target.equivalence = #equivalent
