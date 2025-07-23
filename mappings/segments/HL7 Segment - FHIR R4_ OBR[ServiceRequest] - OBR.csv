@@ -21,7 +21,8 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 11,OBR-11,Specimen Action Code,ID,0,1,"IF OBR-11 EQUALS ""G""","element(""11"")=""G""",,intent,,code,1,1,,,"""reflex-order""",,
 11,OBR-11,Specimen Action Code,ID,0,1,"IF OBR-11 NOT IN (""G"",""A"")","element(""11"")! IN (""G"",""A"")",,intent,,,,,,,"""order""",,
 12,OBR-12,Danger Code,CWE,0,1,,,,,,,,,,,,,
-13,OBR-13,Relevant Clinical Information,CWE,0,-1,,,If this does not represent fasting status,,supportingInfo.extension??-R5-SupportingInfo,CodeableConcept,0,-1,CWE[CodeableConcept],,,,"If desired, implementers could map to supportingInfo using the Observation or other references if they know exactly what it is and have the relevant resource.code values to add."
+13,OBR-13,Relevant Clinical Information,CWE,0,-1,,,If this does not represent fasting status,extension[1].url,,uri,0,-1,,,"""http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.supportingInfo""",,"If desired, implementers could map to supportingInfo using the Observation or other references if they know exactly what it is and have the relevant resource.code values to add."
+13,OBR-13,Relevant Clinical Information,CWE,0,-1,,,If this does not represent fasting status,extension[1].valueCodeableReference.concept,,CodeableReference(Any),0,-1,CWE[CodeableConcept],,,,
 13,OBR-13,Relevant Clinical Information,CWE,0,-1,,,If this represents fasting status then use OBR[Specimen] mapping.,,,,,,,,,,
 14,OBR-14,Specimen Received Date/Time *,TS,0,1,,,,,,,,,,,,,
 15,OBR-15,Specimen Source,CM,0,1,,,,,,,,,,,,,
