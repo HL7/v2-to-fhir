@@ -212,5 +212,5 @@ Usage: #definition
 * group[1].element[31].display = "Order/service changed, unsol."
 * group[1].element[31].target.equivalence = #unmatched
 * group[1].element[32].code = #MC
-* group[1].element[32].display = "Miscellaneous Charge – not associated with an order"
+* group[1].element[32].display = "Miscellaneous Charge - not associated with an order"
 * group[1].element[32].target.equivalence = #unmatched

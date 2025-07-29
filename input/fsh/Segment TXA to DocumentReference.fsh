@@ -54,7 +54,7 @@ Usage: #definition
 * group[0].element[1].target.extension[0].extension[2].url = "cardinalityMax"
 * group[0].element[1].target.extension[0].extension[2].valueInteger = 1
 * group[0].element[1].target.display = "content.attachment.contentType"
-* group[0].element[2].code = #TXA
+* group[0].element[2].code = #TXA-6
 * group[0].element[2].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[2].extension[0].extension[0].url = "type"
 * group[0].element[2].extension[0].extension[0].valueCode = #"DTM"
@@ -75,7 +75,7 @@ Usage: #definition
 * group[0].element[2].target.display = "date"
 * group[0].element[2].target.dependsOn[0].property = "Narrative-Condition"
 * group[0].element[2].target.dependsOn[0].value = "If time is included"
-* group[0].element[3].code = #TXA
+* group[0].element[3].code = #TXA-6
 * group[0].element[3].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[3].extension[0].extension[0].url = "type"
 * group[0].element[3].extension[0].extension[0].valueCode = #"DTM"
@@ -98,7 +98,7 @@ Usage: #definition
 * group[0].element[3].target.display = "extension[1].url"
 * group[0].element[3].target.dependsOn[0].property = "Narrative-Condition"
 * group[0].element[3].target.dependsOn[0].value = "If time is not included and FHIR R6.0 is available."
-* group[0].element[4].code = #TXA
+* group[0].element[4].code = #TXA-6
 * group[0].element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[4].extension[0].extension[0].url = "type"
 * group[0].element[4].extension[0].extension[0].valueCode = #"DTM"
@@ -115,7 +115,7 @@ Usage: #definition
 * group[0].element[4].target.display = "extension[1].valueDate"
 * group[0].element[4].target.dependsOn[0].property = "Narrative-Condition"
 * group[0].element[4].target.dependsOn[0].value = "If time is not included and FHIR R6.0 is available."
-* group[0].element[5].code = #TXA
+* group[0].element[5].code = #TXA-9
 * group[0].element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[5].extension[0].extension[0].url = "type"
 * group[0].element[5].extension[0].extension[0].valueCode = #"XCN"
@@ -134,7 +134,7 @@ Usage: #definition
 * group[0].element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group[0].element[5].target.extension[0].extension[2].valueInteger = -1
 * group[0].element[5].target.display = "author(Practitioner)"
-* group[0].element[6].code = #TXA
+* group[0].element[6].code = #TXA-10
 * group[0].element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[6].extension[0].extension[0].url = "type"
 * group[0].element[6].extension[0].extension[0].valueCode = #"XCN"
@@ -153,7 +153,7 @@ Usage: #definition
 * group[0].element[6].target.extension[0].extension[2].url = "cardinalityMax"
 * group[0].element[6].target.extension[0].extension[2].valueInteger = 1
 * group[0].element[6].target.display = "authenticator(Practitioner)"
-* group[0].element[7].code = #TXA
+* group[0].element[7].code = #TXA-12
 * group[0].element[7].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[7].extension[0].extension[0].url = "type"
 * group[0].element[7].extension[0].extension[0].valueCode = #"EI"
@@ -172,7 +172,7 @@ Usage: #definition
 * group[0].element[7].target.extension[0].extension[2].url = "cardinalityMax"
 * group[0].element[7].target.extension[0].extension[2].valueInteger = 1
 * group[0].element[7].target.display = "masterIdentifier"
-* group[0].element[8].code = #TXA
+* group[0].element[8].code = #TXA-16
 * group[0].element[8].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[8].extension[0].extension[0].url = "type"
 * group[0].element[8].extension[0].extension[0].valueCode = #"ST"
@@ -192,7 +192,7 @@ Usage: #definition
 * group[0].element[8].target.extension[0].extension[2].valueInteger = -1
 * group[0].element[8].target.display = "identifier[1]"
 * group[0].element[8].target.comment = "Need to ensure that the full path is represented."
-* group[0].element[9].code = #TXA
+* group[0].element[9].code = #TXA-17
 * group[0].element[9].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[9].extension[0].extension[0].url = "type"
 * group[0].element[9].extension[0].extension[0].valueCode = #"ID"
@@ -211,7 +211,7 @@ Usage: #definition
 * group[0].element[9].target.extension[0].extension[2].url = "cardinalityMax"
 * group[0].element[9].target.extension[0].extension[2].valueInteger = 1
 * group[0].element[9].target.display = "docStatus"
-* group[0].element[10].code = #TXA
+* group[0].element[10].code = #TXA-18
 * group[0].element[10].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[10].extension[0].extension[0].url = "type"
 * group[0].element[10].extension[0].extension[0].valueCode = #"ID"
@@ -232,7 +232,7 @@ Usage: #definition
 * group[0].element[10].target.extension[0].extension[3].url = "mappedVia"
 * group[0].element[10].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70272-to-v2-0272"
 * group[0].element[10].target.display = "securityLabel"
-* group[0].element[11].code = #TXA
+* group[0].element[11].code = #TXA-19
 * group[0].element[11].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[11].extension[0].extension[0].url = "type"
 * group[0].element[11].extension[0].extension[0].valueCode = #"ID"
@@ -255,7 +255,7 @@ Usage: #definition
 * group[0].element[11].target.display = "status"
 * group[0].element[11].target.dependsOn[0].property = "Computable-ANTLR"
 * group[0].element[11].target.dependsOn[0].value = "IF TXA-19 = \"AV\""
-* group[0].element[12].code = #TXA
+* group[0].element[12].code = #TXA-19
 * group[0].element[12].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[12].extension[0].extension[0].url = "type"
 * group[0].element[12].extension[0].extension[0].valueCode = #"ID"
@@ -278,7 +278,7 @@ Usage: #definition
 * group[0].element[12].target.display = "status.extension[1].url"
 * group[0].element[12].target.dependsOn[0].property = "Computable-ANTLR"
 * group[0].element[12].target.dependsOn[0].value = "IF TXA-19 IN (\"CA\", \"OB\", \"UN\")"
-* group[0].element[13].code = #TXA
+* group[0].element[13].code = #TXA-19
 * group[0].element[13].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[13].extension[0].extension[0].url = "type"
 * group[0].element[13].extension[0].extension[0].valueCode = #"ID"
@@ -299,7 +299,7 @@ Usage: #definition
 * group[0].element[13].target.display = "status.extension[1].valueCodeableConcept"
 * group[0].element[13].target.dependsOn[0].property = "Computable-ANTLR"
 * group[0].element[13].target.dependsOn[0].value = "IF TXA-19 IN (\"CA\", \"OB\", \"UN\")"
-* group[0].element[14].code = #TXA
+* group[0].element[14].code = #TXA-25
 * group[0].element[14].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[14].extension[0].extension[0].url = "type"
 * group[0].element[14].extension[0].extension[0].valueCode = #"ST"

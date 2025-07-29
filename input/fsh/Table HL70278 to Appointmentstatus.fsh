@@ -23,7 +23,7 @@ Usage: #definition
 * group[0].element[0].display = "Pending"
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #pending
-* group[0].element[0].target.display = "Proposed"
+* group[0].element[0].target.display = "Pending"
 * group[0].element[1].code = #Waitlist
 * group[0].element[1].display = "Waitlist"
 * group[0].element[1].target.equivalence = #equivalent

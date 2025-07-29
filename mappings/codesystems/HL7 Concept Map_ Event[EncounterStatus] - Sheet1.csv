@@ -1,10 +1,10 @@
 HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
 Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-A01,Admit/Visit Notification,HL70003,,,,in-progress,,In Progress,http://hl7.org/fhir/encounter-status,,
-A02,Transfer A Patient,HL70003,,,,in-progress,,In Progress,http://hl7.org/fhir/encounter-status,,
-A03,Discharge/End Visit,HL70003,,,,finished,,Finished,http://hl7.org/fhir/encounter-status,,
-A04,Register Visit,HL70003,,,,planned,,Planned,http://hl7.org/fhir/encounter-status,,
-A05,Pre-Admit,HL70003,,,,planned,,Planned,http://hl7.org/fhir/encounter-status,,
-A08,Update Patient Information,HL70003,,,,unknown,,Unknown,http://hl7.org/fhir/encounter-status,,"Since the transaction does not convey the status of the encounter, the status value cannot be set correctly.  So it is either unknown or should have a reasonable data absent reason."
-A11,Cancel admit/visit notification,HL70003,,,,cancelled,,Cancelled,http://hl7.org/fhir/encounter-status,,
-A13,Cancel discharge/end visit,HL70003,,,,in-progress,,In Progress,http://hl7.org/fhir/encounter-status,,
+A01,ADT/ACK - Admit/Visit Notification,HL70003,,,,in-progress,,In Progress,http://hl7.org/fhir/encounter-status,,
+A02,ADT/ACK - Transfer A Patient,HL70003,,,,in-progress,,In Progress,http://hl7.org/fhir/encounter-status,,
+A03,ADT/ACK - Discharge/End Visit,HL70003,,,,finished,,Finished,http://hl7.org/fhir/encounter-status,,
+A04,ADT/ACK - Register Visit,HL70003,,,,planned,,Planned,http://hl7.org/fhir/encounter-status,,
+A05,ADT/ACK - Pre-Admit,HL70003,,,,planned,,Planned,http://hl7.org/fhir/encounter-status,,
+A08,ADT/ACK - Update Patient Information,HL70003,,,,unknown,,Unknown,http://hl7.org/fhir/encounter-status,,"Since the transaction does not convey the status of the encounter, the status value cannot be set correctly.  So it is either unknown or should have a reasonable data absent reason."
+A11,ADT/ACK - Cancel admit/visit notification,HL70003,,,,cancelled,,Cancelled,http://hl7.org/fhir/encounter-status,,
+A13,ADT/ACK - Cancel discharge/end visit,HL70003,,,,in-progress,,In Progress,http://hl7.org/fhir/encounter-status,,

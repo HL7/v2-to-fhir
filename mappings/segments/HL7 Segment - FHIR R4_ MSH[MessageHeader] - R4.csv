@@ -9,8 +9,8 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the implementer needs to resolve how to assign MessageHeader.source as it is a required attribute.  Note that a data absent reason extension could be used to provide a reason and satisfy the mandatory FHIR attribute rules.  But do note that the use of the data-absent-reason extension may result  in a FHIR resource that is not usable by the recipient."
 4,MSH-4,Sending Facility,HD,0,1,,,,sender(Organization),,Reference(Organization),0,1,HD[Organization],,,,
 5,MSH-5,Receiving Application,HD,0,1,,,,destination[1].target(Device),,Reference(Device),0,1,HD[Device],,,,"Similar as for MSH-3, MSH-5 is paired with MSH-25 and depending on local use may need to use one, the other, or a combination of both.  We believe that MSH-25, when valued, provides the better information given its addition to the standard more recently."
-5,MSH-5,Receiving Application,HD,0,1,IF MSH-25 VALUED,,,destination[1],,,,,HD[MessageHeader.destination-name],,,,
-5,MSH-5,Receiving Application,HD,0,1,IF MSH-25 NOT VALUED,,,destination[1],,,,,HD[MessageHeader.destination-endpoint],,,,
+5,MSH-5,Receiving Application,HD,0,1,IF MSH-25 VALUED,,,destination[1].name,,name,,,HD[MessageHeader.destination-name],,,,
+5,MSH-5,Receiving Application,HD,0,1,IF MSH-25 NOT VALUED,,,destination[1].endpoint,,url,,,HD[MessageHeader.destination-endpoint],,,,
 6,MSH-6,Receiving Facility,HD,0,-1,IF MSH-23 NOT VALUED,,,destination[1].receiver(Organization),,Reference(Organization),0,1,HD[Organization],,,,
 7,MSH-7,Date/Time of Message,DTM,1,1,,,,,,,,,,,,,"If a message is always conveyed in a Bundle, then Bundle.timestamp could work. However, Bundle.timestamp may be better used to reflect the conversion.
 

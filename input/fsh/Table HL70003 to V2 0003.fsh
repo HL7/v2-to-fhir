@@ -1771,10 +1771,10 @@ Usage: #definition
 * group[0].element[349].target.code = #U04
 * group[0].element[349].target.display = "SSR/ACK - specimen status request"
 * group[0].element[350].code = #U05
-* group[0].element[350].display = "INU/ACK - Automated equipment inventory update"
+* group[0].element[350].display = "NU/ACK - Automated equipment inventory update"
 * group[0].element[350].target.equivalence = #equivalent
 * group[0].element[350].target.code = #U05
-* group[0].element[350].target.display = "INU/ACK - Automated equipment inventory update"
+* group[0].element[350].target.display = "NU/ACK - Automated equipment inventory update"
 * group[0].element[351].code = #U06
 * group[0].element[351].display = "INR/ACK - Automated equipment inventory request"
 * group[0].element[351].target.equivalence = #equivalent

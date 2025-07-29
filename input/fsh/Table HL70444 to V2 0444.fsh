@@ -24,9 +24,9 @@ Usage: #definition
 * group[0].element[0].display = "Prefix Given Middle Family Suffix"
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #G
-* group[0].element[0].target.display = "Prefix Given Family Suffix"
+* group[0].element[0].target.display = "Prefix Given Middle Family Suffix"
 * group[0].element[1].code = #F
 * group[0].element[1].display = "Prefix Family Middle Given Suffix"
 * group[0].element[1].target.equivalence = #equivalent
 * group[0].element[1].target.code = #F
-* group[0].element[1].target.display = "Prefix Family Given Suffix"
+* group[0].element[1].target.display = "Prefix Family Middle Given Suffix"

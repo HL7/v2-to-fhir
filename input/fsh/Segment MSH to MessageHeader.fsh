@@ -108,8 +108,11 @@ If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the impl
 * group[0].element[4].extension[0].extension[2].valueInteger = 1
 * group[0].element[4].display = "Receiving Application"
 * group[0].element[4].target.equivalence = #equivalent
-* group[0].element[4].target.code = #destination[1]
-* group[0].element[4].target.display = "destination[1]"
+* group[0].element[4].target.code = #destination[1].name
+* group[0].element[4].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group[0].element[4].target.extension[0].extension[0].url = "type"
+* group[0].element[4].target.extension[0].extension[0].valueCode = #"name"
+* group[0].element[4].target.display = "destination[1].name"
 * group[0].element[4].target.dependsOn[0].property = "Computable-ANTLR"
 * group[0].element[4].target.dependsOn[0].value = "IF MSH-25 VALUED"
 * group[0].element[5].code = #MSH-5
@@ -122,8 +125,11 @@ If both MSH-3 and MSH-24 are not valued, which is valid in HL7 v2, then the impl
 * group[0].element[5].extension[0].extension[2].valueInteger = 1
 * group[0].element[5].display = "Receiving Application"
 * group[0].element[5].target.equivalence = #equivalent
-* group[0].element[5].target.code = #destination[1]
-* group[0].element[5].target.display = "destination[1]"
+* group[0].element[5].target.code = #destination[1].endpoint
+* group[0].element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group[0].element[5].target.extension[0].extension[0].url = "type"
+* group[0].element[5].target.extension[0].extension[0].valueCode = #"url"
+* group[0].element[5].target.display = "destination[1].endpoint"
 * group[0].element[5].target.dependsOn[0].property = "Computable-ANTLR"
 * group[0].element[5].target.dependsOn[0].value = "IF MSH-25 NOT VALUED"
 * group[0].element[6].code = #MSH-6

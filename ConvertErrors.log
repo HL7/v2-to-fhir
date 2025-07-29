@@ -95,108 +95,102 @@ W32) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv(:8)
 	near: 3,OBR-3,Filler Order Number,EI,0,1,IF ORC-3 NOT VALUED,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W33) identifier used where Identifier meant.
+	at mappings/segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv(:42)
+	near: 29,OBR-29,ParentResults Observation Identifier,EIP,0,1,IF OBR-29.1 VALUED AND OBR-50 NOT VALUED,,"If OBR-29.2 is also valued, implementation needs to decide which one to use.",basedOn[1].identifier,,identifier,0,-1,EIP[Identifier-PlacerAssignedIdentifier],,,,
+W34) identifier used where Identifier meant.
+	at mappings/segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv(:44)
+	near: 29,OBR-29,ParentResults Observation Identifier,EIP,0,1,IF OBR-29.2 VALUED AND OBR-50 NOT VALUED,,"If OBR-29.1 is also valued, implementation needs to decide which one to use.",basedOn[2].identifier,,identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,
+W35) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ OBR[ServiceRequest] - OBR.csv(:70)
 	near: 53,OBR-53,Alternate Placer Order Number,CX,0,-1,,,,identifier[3],,Identifier,0,-1,CX[Identifier],,,,
-W34) quantity used where Quantity meant.
+W36) quantity used where Quantity meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:8)
 	near: 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NM""",,,component[each].valueQuantity,,quantity,0,1,NM[Quantity],,,,
-W35) identifier used where Identifier meant.
+W37) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:54)
 	near: 15,OBX-15,Producer's ID,CWE,0,1,,,,,extension??-producerIdentifier,identifier,0,1,CWE[Identifier],,,,
-W36) identifier used where Identifier meant.
+W38) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation-Component] - OBX.csv(:63)
 	near: 21,OBX-21,Observation Instance Identifier,EI,0,1,,,,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,
-W37) quantity used where Quantity meant.
+W39) quantity used where Quantity meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:7)
 	near: 5,OBX-5,Observation Value,varies,0,-1,"IF OBX-2 EQUALS ""NM""",,,valueQuantity.value,,quantity,0,1,NM[Quantity],,,,
-W38) identifier used where Identifier meant.
+W40) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:51)
 	near: 15,OBX-15,Producer's ID,CWE,0,1,,,,performer[2](Organization),,identifier,0,1,CWE[Organization],,,,"We are mapping this to an identifier considering the definition (used for a unique identifier of the producer), although that does not fit the use of the CWE data type in HL7 v2.  Depending on context (e.g., US CLIA or IHE LTW, or ILW) this may reflect a location (US CLIA) or an organization (IHE LTW or ILW)."
-W39) identifier used where Identifier meant.
+W41) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ OBX[Observation] - OBX.csv(:61)
 	near: 21,OBX-21,Observation Instance Identifier,EI,0,1,,,,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,
-W40) identifier used where Identifier meant.
+W42) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[DiagnosticReport] - ORC.csv(:4)
 	near: 2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
-W41) identifier used where Identifier meant.
+W43) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[DiagnosticReport] - ORC.csv(:8)
 	near: 3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
-W42) identifier used where Identifier meant.
+W44) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[DiagnosticReport] - ORC.csv(:11)
 	near: 4,ORC-4,Placer Group Number,EIP,0,1,,,,identifier[3],,Identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,
-W43) identifier used where Identifier meant.
+W45) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[DiagnosticReport] - ORC.csv(:12)
 	near: 4,ORC-4,Placer Group Number,EIP,0,1,,,,identifier[4],,Identifier,0,-1,EIP[Identifier-PlacerAssignedIdentifier],,,,
-W44) identifier used where Identifier meant.
+W46) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[Immunization] - ORC.csv(:4)
 	near: 2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
-W45) identifier used where Identifier meant.
+W47) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[Immunization] - ORC.csv(:7)
 	near: 3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
-W46) identifier used where Identifier meant.
+W48) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[Immunization] - ORC.csv(:10)
 	near: 4,ORC-4,Placer Group Number,EIP,0,1,,,,identifier[3],,Identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,
-W47) identifier used where Identifier meant.
+W49) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[Immunization] - ORC.csv(:11)
 	near: 4,ORC-4,Placer Group Number,EIP,0,1,,,,identifier[4],,Identifier,0,-1,EIP[Identifier-PlacerAssignedIdentifier],,,,
-W48) identifier used where Identifier meant.
+W50) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[MedicationAdministration] - Sheet1.csv(:7)
 	near: 2,ORC-2,Placer Order Number,EI,0,1,,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
-W49) identifier used where Identifier meant.
+W51) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[MedicationAdministration] - Sheet1.csv(:10)
 	near: 3,ORC-3,Filler Order Number,EI,0,1,,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
-W50) identifier used where Identifier meant.
+W52) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:9)
 	near: 2,ORC-2,Placer Order Number,EI,0,1,IF OBR-2 NOT VALUED,"OBR.element(""2"").empty()",,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
-W51) identifier used where Identifier meant.
+W53) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:12)
 	near: 3,ORC-3,Filler Order Number,EI,0,1,IF OBR-3 NOT VALUED,"OBR.element(""3"").empty()",,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
-W52) identifier used where Identifier meant.
+W54) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ ORC[ServiceRequest] - ORC.csv(:58)
 	near: 33,ORC-33,Alternate Placer Order Number,CX,0,-1,IF OBR-53 NOT VALUED,"OBR.element(""2"").empty()",,identifier[4],,Identifier,0,-1,CX[Identifier],,,,
-W53) identifier used where Identifier meant.
+W55) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PID[Account] - Sheet1.csv(:22)
 	near: 18,PID-18,Patient Account Number,CX,0,1,,,,identifier,,Identifier,0,-1,CX[Identifier],,,,
-W54) identifier used where Identifier meant.
+W56) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:4)
 	near: 2,PID-2,Patient ID,CX,0,1,,,,identifier[1],,Identifier,0,-1,CX[Identifier],,,,
-W55) identifier used where Identifier meant.
+W57) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:5)
 	near: 3,PID-3,Patient Identifier List,CX,1,-1,,,,identifier[2],,Identifier,0,-1,CX[Identifier],,,,
-W56) identifier used where Identifier meant.
+W58) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:6)
 	near: 4,PID-4,Alternate Patient ID - PID,CX,0,1,,,,identifier[3],,Identifier,0,-1,CX[Identifier],,,,
-W57) address used where Address meant.
+W59) address used where Address meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:16)
 	near: 11,PID-11,Patient Address,XAD,0,-1,,,,address[1],,Address,0,-1,XAD[Address],,,,
-W58) identifier used where Identifier meant.
+W60) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PID[Patient] - PID.csv(:35)
 	near: 20,PID-20,Driver's License Number - Patient,DLN,0,1,,,,identifier[5],,Identifier,0,1,DLN[Identifier],,,,
-W59) identifier used where Identifier meant.
+W61) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PR1[Procedure] - PR1[Procedure].csv(:29)
 	near: 19,PR1-19,Procedure Identifier,EI,0,1,,,,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,
-W60) identifier used where Identifier meant.
+W62) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PRT[Device] - Sheet1.csv(:14)
 	near: 10,PRT-10,Device,EI,0,-1,,,If not an HRF or AIDC,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,
-W61) Missing vocabulary mapping for SegmentActionCode	at mappings/segments/HL7 Segment - FHIR R4_ PRT[Patient-GeneralPractitioner-PractitionerRole] - Sheet1.csv(:4)
+W63) Missing vocabulary mapping for SegmentActionCode	at mappings/segments/HL7 Segment - FHIR R4_ PRT[Patient-GeneralPractitioner-PractitionerRole] - Sheet1.csv(:4)
 	near: 02.00.00,PRT-2,Action Code,ID,1,1,,,if mapped to a restful service to progress the message.,Operation,,,,,,SegmentActionCode,,,
-W62) identifier used where Identifier meant.
+W64) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PRT[Patient-GeneralPractitioner-PractitionerRole] - Sheet1.csv(:26)
 	near: No corresponding line (26) in source file!
-W63) identifier used where Identifier meant.
+W65) identifier used where Identifier meant.
 	at mappings/segments/HL7 Segment - FHIR R4_ PRT[PractitionerRole] - Sheet1.csv(:44)
 	near: No corresponding line (44) in source file!
-W64) address used where Address meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv(:17)
-	near: 14,PRT-14,Address,XAD,0,-1,,,,address,,Address,0,-1,XAD[Address],,,,
-W65) identifier used where Identifier meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv(:43)
-	near: No corresponding line (43) in source file!
-W66) identifier used where Identifier meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:41)
-	near: 19,PV1-19,Visit Number,CX,0,1,,,,identifier[1],,Identifier,0,-1,CX[Identifier],,,,
-W67) identifier used where Identifier meant.
-	at mappings/segments/HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv(:77)
-	near: 50,PV1-50,Alternate Visit ID,CX,0,-1,,,,identifier[2],,Identifier,0,-1,CX[Identifier],,,,
-W68) DateTime used where dateTime meant.
-	
+W66) address used where Address meant.
+	at mappings/segment

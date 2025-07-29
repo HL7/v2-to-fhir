@@ -5,6 +5,6 @@ FA,Food allergy,HL70127,,,,food,,Food,http://hl7.org/fhir/allergy-intolerance-ca
 MA,Miscellaneous allergy,HL70127,,,,,,,,,
 MC,Miscellaneous contraindication,HL70127,,,,,,,,,
 EA,Environmental allergy,HL70127,,,,environment,,Environment,http://hl7.org/fhir/allergy-intolerance-category,,
-AA,Animal allergy,HL70127,,,,biologic,,Environment,http://hl7.org/fhir/allergy-intolerance-category,,
+AA,Animal allergy,HL70127,,,,biologic,,Biologic,http://hl7.org/fhir/allergy-intolerance-category,,
 PA,Plant allergy,HL70127,,,,environment,,Environment,http://hl7.org/fhir/allergy-intolerance-category,,
 LA,Pollen allergy,HL70127,,,,environment,,Environment,http://hl7.org/fhir/allergy-intolerance-category,,

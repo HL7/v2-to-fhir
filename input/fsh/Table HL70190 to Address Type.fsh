@@ -64,7 +64,7 @@ Usage: #definition
 * group[1].element[10].display = "Permanent"
 * group[1].element[10].target.equivalence = #unmatched
 * group[1].element[11].code = #RH
-* group[1].element[11].display = "Registry home"
+* group[1].element[11].display = "Registry home. Refers to the information system, typically managed by a public health agency, that stores patient information such as immunization histories or cancer data, regardless of where the patient obtains services."
 * group[1].element[11].target.equivalence = #unmatched
 * group[1].element[12].code = #BR
 * group[1].element[12].display = "Residence at birth (home address at time of birth)"

@@ -350,7 +350,7 @@ U01,ESU/ACK - Automated equipment status update,HL70003,,,,U01,,ESU/ACK - Automa
 U02,ESR/ACK - Automated equipment status request,HL70003,,,,U02,,ESR/ACK - Automated equipment status request,http://terminology.hl7.org/CodeSystem/v2-0003,,
 U03,SSU/ACK - Specimen status update,HL70003,,,,U03,,SSU/ACK - Specimen status update,http://terminology.hl7.org/CodeSystem/v2-0003,,
 U04,SSR/ACK - specimen status request,HL70003,,,,U04,,SSR/ACK - specimen status request,http://terminology.hl7.org/CodeSystem/v2-0003,,
-U05,INU/ACK - Automated equipment inventory update,HL70003,,,,U05,,INU/ACK - Automated equipment inventory update,http://terminology.hl7.org/CodeSystem/v2-0003,,
+U05,NU/ACK - Automated equipment inventory update,HL70003,,,,U05,,NU/ACK - Automated equipment inventory update,http://terminology.hl7.org/CodeSystem/v2-0003,,
 U06,INR/ACK - Automated equipment inventory request,HL70003,,,,U06,,INR/ACK - Automated equipment inventory request,http://terminology.hl7.org/CodeSystem/v2-0003,,
 U07,EAC/ACK - Automated equipment command,HL70003,,,,U07,,EAC/ACK - Automated equipment command,http://terminology.hl7.org/CodeSystem/v2-0003,,
 U08,EAR/ACK - Automated equipment response,HL70003,,,,U08,,EAR/ACK - Automated equipment response,http://terminology.hl7.org/CodeSystem/v2-0003,,

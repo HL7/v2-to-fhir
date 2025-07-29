@@ -72,7 +72,7 @@ Usage: #definition
 * group[0].element[4].target.code = #Provenance[1].entity.what(Device)
 * group[0].element[4].target.display = "Provenance[1].entity.what(Device)"
 * group[0].element[4].target.dependsOn[0].property = "Narrative-Condition"
-* group[0].element[4].target.dependsOn[0].value = "If the software does represent not the original source system"
+* group[0].element[4].target.dependsOn[0].value = "If the software does not represent the original source system"
 * group[0].element[5].code = #OML_O21.SFT
 * group[0].element[5].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[5].extension[0].extension[0].url = "cardinalityMin"

@@ -26,10 +26,10 @@ Usage: #definition
 * group[0].element[0].target.code = #A
 * group[0].element[0].target.display = "An age-based population"
 * group[0].element[1].code = #N
-* group[0].element[1].display = "None – generic normal range"
+* group[0].element[1].display = "None - generic normal range"
 * group[0].element[1].target.equivalence = #equivalent
 * group[0].element[1].target.code = #N
-* group[0].element[1].target.display = "None – generic normal range"
+* group[0].element[1].target.display = "None - generic normal range"
 * group[0].element[2].code = #R
 * group[0].element[2].display = "A race-based population"
 * group[0].element[2].target.equivalence = #equivalent

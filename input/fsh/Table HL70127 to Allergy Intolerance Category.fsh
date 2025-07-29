@@ -38,7 +38,7 @@ Usage: #definition
 * group[0].element[3].display = "Animal allergy"
 * group[0].element[3].target.equivalence = #equivalent
 * group[0].element[3].target.code = #biologic
-* group[0].element[3].target.display = "Environment"
+* group[0].element[3].target.display = "Biologic"
 * group[0].element[4].code = #PA
 * group[0].element[4].display = "Plant allergy"
 * group[0].element[4].target.equivalence = #equivalent

@@ -20,7 +20,7 @@ Usage: #definition
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0912"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/practitioner-role"
 * group[0].element[0].code = #PH
-* group[0].element[0].display = "Pharmacist (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)"
+* group[0].element[0].display = "Pharmacist"
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #pharmacist
 * group[0].element[0].target.display = "Pharmacist"
@@ -47,7 +47,7 @@ Usage: #definition
 * group[1].element[6].display = "Attending Provider"
 * group[1].element[6].target.equivalence = #unmatched
 * group[1].element[7].code = #AUT
-* group[1].element[7].display = "AUT Author/Event Initiator"
+* group[1].element[7].display = "Author/Event Initiator"
 * group[1].element[7].target.equivalence = #unmatched
 * group[1].element[8].code = #CP
 * group[1].element[8].display = "Consulting Provider"
@@ -56,7 +56,7 @@ Usage: #definition
 * group[1].element[9].display = "Dispensing Provider"
 * group[1].element[9].target.equivalence = #unmatched
 * group[1].element[10].code = #EP
-* group[1].element[10].display = "Entering Provider (probably not the same as transcriptionist)"
+* group[1].element[10].display = "Entering Person"
 * group[1].element[10].target.equivalence = #unmatched
 * group[1].element[11].code = #EQUIP
 * group[1].element[11].display = "Equipment"
@@ -116,13 +116,13 @@ Usage: #definition
 * group[1].element[29].display = "Transcriptionist"
 * group[1].element[29].target.equivalence = #unmatched
 * group[1].element[30].code = #VP
-* group[1].element[30].display = "Verifying Provider"
+* group[1].element[30].display = "Verifier (Verifying Person)"
 * group[1].element[30].target.equivalence = #unmatched
 * group[1].element[31].code = #VPS
 * group[1].element[31].display = "Verifying Pharmaceutical Supplier (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)"
 * group[1].element[31].target.equivalence = #unmatched
 * group[1].element[32].code = #VTS
-* group[1].element[32].display = "Verifying Treatment Supplier (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)"
+* group[1].element[32].display = "Verifying Treatment Supplier"
 * group[1].element[32].target.equivalence = #unmatched
 * group[1].element[33].code = #WAY
 * group[1].element[33].display = "Waypoint"

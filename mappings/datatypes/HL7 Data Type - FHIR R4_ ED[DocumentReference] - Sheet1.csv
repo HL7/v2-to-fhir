@@ -7,5 +7,4 @@ Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Computa
 2,ED.2,Type of Data,ID,1,1,IF ED.3 NOT VALUED,,,content.attachment.extension[1].valueCodeableConcept,,CodeableConcept,1,1,,,,,
 3,ED.3,Data Subtype,ID,0,1,,,,content.attachment.contentType,,code,0,1,,,,,
 4,ED.4,Encoding,ID,1,1,,,,,,,,,,,,,
-5,ED.5,Data,TX,1,1,"IF ED.4 IN (""Base64"")",,,content.attachment.data,,base64Binary,0,1,,,,,"Implementations are not always accurate, so to be safe you may want to always assess OBX-5.5 to determine the correct .contentType."
-5,ED.5,Data,TX,1,1,"IF ED.4 IN (""A"", (HEX"")",,,content.attachment.data,,base64Binary,0,1,,,/convert from A or HEX to binary64/,,"Implementations are not always accurate, so to be safe you may want to always assess OBX-5.5 to determine the correct .contentType."
+5,ED.5,Data,TX,1,1,,,,content.attachment.data,,base64Binary,0,1,,,/convert from A or HEX to binary64/,,"Implementations are not always accurate, so to be safe you may want to always assess OBX-5.5 to determine the correct .contentType."

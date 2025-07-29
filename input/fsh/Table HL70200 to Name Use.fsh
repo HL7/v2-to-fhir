@@ -38,7 +38,7 @@ Usage: #definition
 * group[0].element[3].display = "Maiden Name"
 * group[0].element[3].target.equivalence = #equivalent
 * group[0].element[3].target.code = #maiden
-* group[0].element[3].target.display = "Maiden"
+* group[0].element[3].target.display = "Name changed for Marriage"
 * group[0].element[4].code = #MSK
 * group[0].element[4].display = "Masked"
 * group[0].element[4].target.equivalence = #equivalent

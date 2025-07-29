@@ -1,6 +1,6 @@
 HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
 Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-Pending,Pending,HL70278,,,,pending,,Proposed,http://hl7.org/fhir/appointmentstatus,,
+Pending,Pending,HL70278,,,,pending,,Pending,http://hl7.org/fhir/appointmentstatus,,
 Waitlist,Waitlist,HL70278,,,,waitlist,,Waitlisted,http://hl7.org/fhir/appointmentstatus,,
 Booked,Booked,HL70278,,,,booked,,Booked,http://hl7.org/fhir/appointmentstatus,,
 Started,Started,HL70278,,,,checked-in,,Checked In,http://hl7.org/fhir/appointmentstatus,,
@@ -11,3 +11,5 @@ Deleted,Deleted,HL70278,,,,entered-in-error,,Entered In Error,http://hl7.org/fhi
 Blocked,Blocked,HL70278,,,,,,,,,
 Overbook,Overbook,HL70278,,,,,,,,,
 Noshow,Noshow,HL70278,,,,noshow,,No Show,http://hl7.org/fhir/appointmentstatus,,
+,,,,,,proposed,,Proposed,http://hl7.org/fhir/appointmentstatus,,
+,,,,,,arrived,,Arrived,http://hl7.org/fhir/appointmentstatus,,
