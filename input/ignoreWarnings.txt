@@ -26,9 +26,8 @@ WARNING: ConceptMap/table-hl70399-to-iso-3166-1: ConceptMap.group[0].target: Tar
 %.value.ofType(url): No definition could be found for URL value 'ConceptMap/%
 WARNING: ConceptMap/segment-prt-generalpractitioner-practitionerrole-to-patient: ConceptMap.group[0].element[0].target[0].extension[0].extension[0].value.ofType(url): No definition could be found for URL value 'SegmentActionCode' 
 
-# The provenance-activity-type-v2-to-fhir code system is a temporary code system defined in this IG.  The 'v2-fhir-transformation' code is expected to be added to an existing THO code system and included in the provenance-activity-type value set in a future release.  The warning regarding the lack of a version reference in the code system canonical URL is expected and is not an issue.
+# The provenance-activity-type-v2-to-fhir code system is a temporary code system defined in this IG.  The 'v2-fhir-transformation' code is expected to be added to an existing THO code system and included in the provenance-activity-type value set in a future release.
 INFORMATION: CodeSystem/provenance-activity-type-v2-to-fhir: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-WARNING: ConceptMap-segment-msh-transformation-to-provenance.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 296, column 580: The link 'http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir' for "http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir" is a canonical link and is therefore unsafe with regard to versions 
 
 # There is no action to take based on this information message, as it is due to the terminology server behavior for supporting SNOMED CT.
 %.target: Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
