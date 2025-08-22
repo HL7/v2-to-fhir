@@ -22,7 +22,7 @@ IND,Indeterminate,HL70078,,,,IND,,Indeterminate,http://terminology.hl7.org/CodeS
 L,Low,HL70078,,,,L,,Low,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,
 LL,Critical low,HL70078,,,,LL,,Critical low,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,
 LU,Significantly low,HL70078,,,,LU,,Significantly low,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,
-MS,moderately susceptible,HL70078,,,,MS,,Moderately susceptible.,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,inactive' in http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation
+MS,moderately susceptible,HL70078,,,,MS,,moderately susceptible,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,inactive' in http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation
 N,Normal,HL70078,,,,N,,Normal,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,
 NCL,No CLSI defined breakpoint,HL70078,,,,NCL,,No CLSI defined breakpoint,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,
 ND,Not Detected,HL70078,,,,ND,,Not detected,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,
@@ -41,7 +41,7 @@ SYN-R,Synergy - resistant,HL70078,,,,SYN-R,,Synergy - resistant,http://terminolo
 SYN-S,Synergy - susceptible,HL70078,,,,SYN-S,,Synergy - susceptible,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,
 TOX,Cytotoxic substance present,HL70078,,,,,,,,,inactive' in http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation
 U,Significant change up,HL70078,,,,U,,Significant change up,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,
-VS,very susceptible,HL70078,,,,VS,,Very susceptible.,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,inactive' in http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation
+VS,very susceptible,HL70078,,,,VS,,very susceptible,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,inactive' in http://terminology.hl7.org/ValueSet/v3-ObservationInterpretation
 UNE,Unexpected,HL70078,,,,UNE,,Unexpected,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,
 W,Worse,HL70078,,,,W,,Worse,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,
 WR,Weakly reactive,HL70078,,,,WR,,Weakly reactive,http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation,,

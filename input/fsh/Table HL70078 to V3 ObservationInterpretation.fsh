@@ -123,7 +123,7 @@ Usage: #definition
 * group[0].element[20].display = "moderately susceptible"
 * group[0].element[20].target.equivalence = #equivalent
 * group[0].element[20].target.code = #MS
-* group[0].element[20].target.display = "Moderately susceptible."
+* group[0].element[20].target.display = "moderately susceptible"
 * group[0].element[21].code = #N
 * group[0].element[21].display = "Normal"
 * group[0].element[21].target.equivalence = #equivalent
@@ -198,7 +198,7 @@ Usage: #definition
 * group[0].element[35].display = "very susceptible"
 * group[0].element[35].target.equivalence = #equivalent
 * group[0].element[35].target.code = #VS
-* group[0].element[35].target.display = "Very susceptible."
+* group[0].element[35].target.display = "very susceptible"
 * group[0].element[36].code = #UNE
 * group[0].element[36].display = "Unexpected"
 * group[0].element[36].target.equivalence = #equivalent
