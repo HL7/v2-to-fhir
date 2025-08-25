@@ -10,10 +10,10 @@ N,Not asked; used to affirmatively document that the observation identified in t
 O,Order detail description only (no result),HL70085,,,,,,,,,
 P,Preliminary results,HL70085,,,,preliminary,,Preliminary,http://hl7.org/fhir/observation-status,,
 R,Results entered -- not verified,HL70085,,,,,,,,,
-S,Partial results. Deprecated. Retained only for backward compatibility as of V2.6.,HL70085,,,,,,,,,
+S,Partial results.   Deprecated. Retained only for backward compatibility as of V2.6.,HL70085,,,,,,,,,
 V,"Verified - Final results reviewed and confirmed to be correct, no change to result value, normal range or abnormal flag",HL70085,,,,,"Create JIRA: Final results reviewed and confirmed to be correct, no change to result value, normal range or abnormal flag",,,,"Depending on the interepretation and which verification step is being referenced (e.g., the one before finalizing, or after finalizing to validate/verify it is actually correct), this may need to become an originalCodeableConcept on Observation.status or an Observation.note."
 X,Results cannot be obtained for this observation,HL70085,,,,cancelled,,,http://hl7.org/fhir/observation-status,,"And set data-absent-reason on Observation.value to ""cannot-be-obtained"""
-U,"Results status change to final without retransmitting results already sent as 'preliminary.' E.g., radiology changes status from preliminary to final",HL70085,,,,,,,,,
+U,"Results status change to final without retransmitting results already sent as 'preliminary.'  E.g., radiology changes status from preliminary to final",HL70085,,,,,,,,,
 W,"Post original as wrong, e.g., transmitted for wrong patient",HL70085,,,,entered-in-error,,Entered in Error,http://hl7.org/fhir/observation-status,,
 ,,,,,,,now,,,,"Now: The existence of the observation is registered, but there is no result yet available."
 ,,,,,,,draft update,,,,"Draft Update: A placeholder Observation has been created in anticipation for documenting the actual result(s).  The creation may be at varying states of preparation or performance, e.g., for lab results the specimen is collected but not yet arrived in the lab or specimen in Lab but results pending."

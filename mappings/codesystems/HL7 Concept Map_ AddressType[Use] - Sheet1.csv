@@ -2,8 +2,8 @@ HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,,
 Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System
 BA,Bad address,HL70190,,,,old,,Old / Incorrect,http://hl7.org/fhir/address-use
 BI,Billing Address,HL70190,,,,billing,,Billing,http://hl7.org/fhir/address-use
-N,"Birth (nee) (birth address, not otherwise specified)",HL70190,,,,,,,
-BDL,Birth delivery location (address where birth occurred),HL70190,,,,,,,
+N,"Birth (nee)  (birth address, not otherwise specified)",HL70190,,,,,,,
+BDL,Birth delivery location  (address where birth occurred),HL70190,,,,,,,
 F,Country Of Origin,HL70190,,,,,,,
 C,Current Or Temporary,HL70190,,,,temp,,Temporary,http://hl7.org/fhir/address-use
 B,Firm/Business,HL70190,,,,work,,Work,http://hl7.org/fhir/address-use

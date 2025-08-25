@@ -1,7 +1,7 @@
 HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
 Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
 V,Very restricted,HL70272,,,,V,,Very restricted,http://terminology.hl7.org/CodeSystem/v2-0272,,
-R,Restricted,HL70272,,,,R,,restricted,http://terminology.hl7.org/CodeSystem/v3-ActCode,,
+R,Restricted,HL70272,,,,R,,Restricted,http://terminology.hl7.org/CodeSystem/v2-0272,,
 U,Usual control,HL70272,,,,U,,Usual control,http://terminology.hl7.org/CodeSystem/v2-0272,,
 ,,,,,,N,,normal,http://terminology.hl7.org/CodeSystem/v3-ActCode,,
 ,,,,,,ETH,,substance abuse information sensitivity,http://terminology.hl7.org/CodeSystem/v3-ActCode,,
