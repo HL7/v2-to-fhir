@@ -50,7 +50,7 @@ Usage: #definition
 * group[1].element[2].display = "Dispensing Provider"
 * group[1].element[2].target.equivalence = #unmatched
 * group[1].element[3].code = #EP
-* group[1].element[3].display = "Entering Provider"
+* group[1].element[3].display = "Entering Provider (probably not the same as transcriptionist?)"
 * group[1].element[3].target.equivalence = #unmatched
 * group[1].element[4].code = #FHCP
 * group[1].element[4].display = "Family Health Care Professional"
@@ -65,7 +65,7 @@ Usage: #definition
 * group[1].element[7].display = "Ordering Provider"
 * group[1].element[7].target.equivalence = #unmatched
 * group[1].element[8].code = #PH
-* group[1].element[8].display = "Pharmacist"
+* group[1].element[8].display = "Pharmacist   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)"
 * group[1].element[8].target.equivalence = #unmatched
 * group[1].element[9].code = #RO
 * group[1].element[9].display = "Responsible Observer"
@@ -86,10 +86,10 @@ Usage: #definition
 * group[1].element[14].display = "Verifying Provider"
 * group[1].element[14].target.equivalence = #unmatched
 * group[1].element[15].code = #VPS
-* group[1].element[15].display = "Verifying Pharmaceutical Supplier"
+* group[1].element[15].display = "Verifying Pharmaceutical Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)"
 * group[1].element[15].target.equivalence = #unmatched
 * group[1].element[16].code = #VTS
-* group[1].element[16].display = "Verifying Treatment Supplier"
+* group[1].element[16].display = "Verifying Treatment Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)"
 * group[1].element[16].target.equivalence = #unmatched
 * group[2].source = "http://terminology.hl7.org/CodeSystem/v2-0443"
 * group[2].target = "http://snomed.info/sct"

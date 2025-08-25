@@ -21,10 +21,10 @@ Usage: #definition
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0161"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0161"
 * group[0].element[0].code = #N
-* group[0].element[0].display = "Substitutions are NOT authorized. (This is the default - null.)"
+* group[0].element[0].display = "Substitutions are NOT authorized.  (This is the default - null.)"
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #N
-* group[0].element[0].target.display = "Substitutions are NOT authorized. (This is the default - null.)"
+* group[0].element[0].target.display = "Substitutions are NOT authorized.  (This is the default - null.)"
 * group[0].element[1].code = #G
 * group[0].element[1].display = "Allow generic substitutions."
 * group[0].element[1].target.equivalence = #equivalent

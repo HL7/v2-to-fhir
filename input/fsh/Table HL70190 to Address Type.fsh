@@ -37,10 +37,10 @@ Usage: #definition
 * group[1].element[1].display = "Billing Address"
 * group[1].element[1].target.equivalence = #unmatched
 * group[1].element[2].code = #N
-* group[1].element[2].display = "Birth (nee) (birth address, not otherwise specified)"
+* group[1].element[2].display = "Birth (nee)  (birth address, not otherwise specified)"
 * group[1].element[2].target.equivalence = #unmatched
 * group[1].element[3].code = #BDL
-* group[1].element[3].display = "Birth delivery location (address where birth occurred)"
+* group[1].element[3].display = "Birth delivery location  (address where birth occurred)"
 * group[1].element[3].target.equivalence = #unmatched
 * group[1].element[4].code = #F
 * group[1].element[4].display = "Country Of Origin"

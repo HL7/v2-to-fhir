@@ -66,10 +66,10 @@ Usage: #definition
 * group[0].element[8].target.code = #CP
 * group[0].element[8].target.display = "Cytopathology"
 * group[0].element[9].code = #EC
-* group[0].element[9].display = "Electrocardiac (e.g., EKG, EEC, Holter)"
+* group[0].element[9].display = "Electrocardiac (e.g., EKG,  EEC, Holter)"
 * group[0].element[9].target.equivalence = #equivalent
 * group[0].element[9].target.code = #EC
-* group[0].element[9].target.display = "Electrocardiac (e.g., EKG, EEC, Holter)"
+* group[0].element[9].target.display = "Electrocardiac (e.g., EKG,  EEC, Holter)"
 * group[0].element[10].code = #EN
 * group[0].element[10].display = "Electroneuro (EEG, EMG,EP,PSG)"
 * group[0].element[10].target.equivalence = #equivalent

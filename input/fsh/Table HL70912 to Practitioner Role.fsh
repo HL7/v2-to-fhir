@@ -119,10 +119,10 @@ Usage: #definition
 * group[1].element[30].display = "Verifier (Verifying Person)"
 * group[1].element[30].target.equivalence = #unmatched
 * group[1].element[31].code = #VPS
-* group[1].element[31].display = "Verifying Pharmaceutical Supplier (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)"
+* group[1].element[31].display = "Verifying Pharmaceutical Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)"
 * group[1].element[31].target.equivalence = #unmatched
 * group[1].element[32].code = #VTS
-* group[1].element[32].display = "Verifying Treatment Supplier"
+* group[1].element[32].display = "Verifying Treatment Supplier   (not sure how to dissect Pharmacist/Treatment Supplier's Verifier ID)"
 * group[1].element[32].target.equivalence = #unmatched
 * group[1].element[33].code = #WAY
 * group[1].element[33].display = "Waypoint"

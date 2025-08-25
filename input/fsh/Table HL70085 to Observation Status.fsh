@@ -70,11 +70,11 @@ Usage: #definition
 * group[1].element[4].display = "Results entered -- not verified"
 * group[1].element[4].target.equivalence = #unmatched
 * group[1].element[5].code = #S
-* group[1].element[5].display = "Partial results. Deprecated. Retained only for backward compatibility as of V2.6."
+* group[1].element[5].display = "Partial results.   Deprecated. Retained only for backward compatibility as of V2.6."
 * group[1].element[5].target.equivalence = #unmatched
 * group[1].element[6].code = #V
 * group[1].element[6].display = "Verified - Final results reviewed and confirmed to be correct, no change to result value, normal range or abnormal flag"
 * group[1].element[6].target.equivalence = #unmatched
 * group[1].element[7].code = #U
-* group[1].element[7].display = "Results status change to final without retransmitting results already sent as 'preliminary.' E.g., radiology changes status from preliminary to final"
+* group[1].element[7].display = "Results status change to final without retransmitting results already sent as 'preliminary.'  E.g., radiology changes status from preliminary to final"
 * group[1].element[7].target.equivalence = #unmatched

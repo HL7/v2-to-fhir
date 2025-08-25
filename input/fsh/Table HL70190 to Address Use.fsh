@@ -51,10 +51,10 @@ Usage: #definition
 * group[0].element[5].target.display = "Work"
 * group[1].source = "http://terminology.hl7.org/CodeSystem/v2-0190"
 * group[1].element[0].code = #N
-* group[1].element[0].display = "Birth (nee) (birth address, not otherwise specified)"
+* group[1].element[0].display = "Birth (nee)  (birth address, not otherwise specified)"
 * group[1].element[0].target.equivalence = #unmatched
 * group[1].element[1].code = #BDL
-* group[1].element[1].display = "Birth delivery location (address where birth occurred)"
+* group[1].element[1].display = "Birth delivery location  (address where birth occurred)"
 * group[1].element[1].target.equivalence = #unmatched
 * group[1].element[2].code = #F
 * group[1].element[2].display = "Country Of Origin"
