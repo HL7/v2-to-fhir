@@ -9,6 +9,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70272-to-v2-0272"
 * name = "TableHL70272ToV20272"
 * sourceUri = "http://terminology.hl7.org/ValueSet/v2-0272"
+* targetUri = "http://terminology.hl7.org/ValueSet/v2-0272"
 * insert PublicationData
 * extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/RelatedArtifact"
 * extension[0].extension[0].url = "type"
@@ -24,15 +25,13 @@ Usage: #definition
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #V
 * group[0].element[0].target.display = "Very restricted"
-* group[0].element[1].code = #U
-* group[0].element[1].display = "Usual control"
+* group[0].element[1].code = #R
+* group[0].element[1].display = "Restricted"
 * group[0].element[1].target.equivalence = #equivalent
-* group[0].element[1].target.code = #U
-* group[0].element[1].target.display = "Usual control"
-* group[1].source = "http://terminology.hl7.org/CodeSystem/v2-0272"
-* group[1].target = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* group[1].element[0].code = #R
-* group[1].element[0].display = "Restricted"
-* group[1].element[0].target.equivalence = #equivalent
-* group[1].element[0].target.code = #R
-* group[1].element[0].target.display = "restricted"
+* group[0].element[1].target.code = #R
+* group[0].element[1].target.display = "Restricted"
+* group[0].element[2].code = #U
+* group[0].element[2].display = "Usual control"
+* group[0].element[2].target.equivalence = #equivalent
+* group[0].element[2].target.code = #U
+* group[0].element[2].target.display = "Usual control"
