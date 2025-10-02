@@ -127,3 +127,6 @@ WARNING: ConceptMap/segment-pid-to-patient: ConceptMap.group[0].element[26].targ
 WARNING: ConceptMap/segment-pr1-to-procedure: ConceptMap.group[0].element[4].target[0]: A equivalent relationship has already been defined from the code PR1-5 to the code performedDateTime, but this defines a new relationship equivalent
 WARNING: ConceptMap/segment-pv1-to-encounter: ConceptMap.group[0].element[4].target[0]: A equivalent relationship has already been defined from the code PV1-3 to the code location[1].status, but this defines a new relationship equivalent
 WARNING: ConceptMap/segment-rxa-to-immunization: ConceptMap.group[0].element[13].target[0]: A equivalent relationship has already been defined from the code RXA-20 to the code status, but this defines a new relationship equivalent
+
+# The provenance-activity-type-v2-to-fhir code system is defined in this IG, and the reference not identifying a specific version is not an issue.
+WARNING: ConceptMap-segment-msh-transformation-to-provenance.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 292, column 580: The link 'http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir' for "http://hl7.org/fhir/uv/v2mappings/CodeSystem/provenance-activity-type-v2-to-fhir" is a canonical link and is therefore unsafe with regard to versions
