@@ -21,6 +21,7 @@ import java.util.TreeMap;
 import org.apache.commons.lang3.tuple.Triple;
 
 import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvValidationException;
 
 public class ConverterMap {
     private static Map<String, Map<String, Triple<String, String, String>>> m = null;
@@ -50,9 +51,8 @@ public class ConverterMap {
                 // Also map for case correction issues in input.
                 m2.put(id.toLowerCase(), t);
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            return;
         }
     }
 

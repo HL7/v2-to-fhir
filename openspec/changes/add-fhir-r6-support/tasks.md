@@ -30,12 +30,30 @@
 
 ## 2. Stage 2 — Restore a clean build against current data
 
-- [ ] 2.1 Review and commit the in-progress dependency-currency changes already on this
-  branch (opencsv 5.12.0, commons-io 2.21.0, commons-text 1.14.0, junit 5.14.1, the
-  resulting `CsvValidationException` catch-clause fixes in `Convert.java`/
-  `ConverterMap.java`).
-- [ ] 2.2 Run `mvn compile package` and confirm a clean build with the updated
-  dependencies.
+- [x] 2.1 Review and commit the in-progress dependency-currency changes already on this
+  branch (opencsv 5.12.0, commons-io, commons-text, junit, the resulting
+  `CsvValidationException` catch-clause fixes in `Convert.java`/`ConverterMap.java`).
+  Expanded beyond the branch's original bumps after checking every dependency and plugin
+  for currency, not just the four already touched: commons-io → 2.22.0, commons-text →
+  1.15.0, junit-jupiter-engine → 5.14.4 (staying on 5.x; 6.x exists but is a separate
+  migration), opencsv confirmed already latest (5.12.0, 0 known CVEs) — no change.
+  `commons-lang3` added as an explicit direct dependency (3.20.0): it's imported directly
+  throughout (`StringUtils`, `Triple`, `WordUtils`) but was only resolving transitively via
+  commons-text, which is fragile. Plugin versions brought current too: maven-compiler-plugin
+  → 3.15.0, maven-jar-plugin → 3.5.1, maven-surefire-plugin → 3.5.4, maven-javadoc-plugin →
+  3.12.0. Consolidated onto a single execution path in the process: removed
+  `maven-assembly-plugin` (its `jar-with-dependencies` fat jar was used by only
+  `downloadsheets.cmd`) in favor of the plain `v2-to-fhir.jar` + `target/lib/` pattern
+  `build.bat` and CI already used — `java -jar target/v2-to-fhir.jar <args>` now works
+  standalone via the jar's own manifest `Class-Path`/`Main-Class`, no `-cp` or explicit
+  main class needed anywhere. Updated `build.bat`, `update-csvs.yaml`, `downloadsheets.cmd`,
+  `get.cmd` (which previously ran `-cp target\classes` with no dependencies on the
+  classpath at all — broken as found), and `mappings/README.md` to match.
+- [x] 2.2 Run `mvn compile package` and confirm a clean build with the updated
+  dependencies. Verified via `mvn clean package` after every version/plugin change, and
+  re-verified the master-inventory refresh and artifact-sheet download end to end against
+  the consolidated jar (identical results to the pre-consolidation runs: 4/4 tabs, 0
+  errors; 17 files, 0 errors, 1 warning).
 - [ ] 2.3 Run a full `build.bat` against the current (pre-E2) `mappings/` data and confirm
   the IG still builds and publishes successfully — this is Stage 2's definition of done.
 - [ ] 2.4 Note the dependency bump rationale (opencsv's `CsvValidationException` API
