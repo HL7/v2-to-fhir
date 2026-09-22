@@ -853,6 +853,38 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         return "F-R6".equals(release) ? FHIR_BASE_R6 : FHIR_BASE;
     }
 
+    // R4's FHIR Data Types all live on one combined "datatypes.html" catalog page - R6
+    // split several of them out onto dedicated topic pages instead, confirmed live against
+    // the 6.0.0-snapshot1 build while chasing a broken-link regression this change
+    // introduced (CodeableReference, the one R6-only data type actually referenced by real
+    // mapping content right now, 404's on datatypes.html - it lives on references.html).
+    // Only entries actually verified live are listed; other R6-only additions in
+    // chapterdata.csv (integer64, CanonicalResource, MetadataResource) were NOT found on
+    // datatypes.html either but their real page wasn't tracked down since nothing currently
+    // targets them - if a future row does, verify and add an entry here first.
+    private static final Map<String, String> R6_DATATYPE_PAGE_OVERRIDES = new HashMap<>();
+    static {
+        R6_DATATYPE_PAGE_OVERRIDES.put("CodeableReference", "references.html");
+        R6_DATATYPE_PAGE_OVERRIDES.put("MonetaryComponent", "metadatatypes.html");
+        R6_DATATYPE_PAGE_OVERRIDES.put("ExtendedContactDetail", "metadatatypes.html");
+        R6_DATATYPE_PAGE_OVERRIDES.put("VirtualServiceDetail", "metadatatypes.html");
+        R6_DATATYPE_PAGE_OVERRIDES.put("Availability", "metadatatypes.html");
+        R6_DATATYPE_PAGE_OVERRIDES.put("DosageCondition", "dosage.html");
+        R6_DATATYPE_PAGE_OVERRIDES.put("DosageDetails", "dosage.html");
+        R6_DATATYPE_PAGE_OVERRIDES.put("DosageSafety", "dosage.html");
+    }
+
+    /** The FHIR Data Type catalog page for {@code name} under {@code release} - "datatypes.html" unless overridden above. */
+    private static String dataTypePage(String release, String name) {
+        if ("F-R6".equals(release)) {
+            String override = R6_DATATYPE_PAGE_OVERRIDES.get(name);
+            if (override != null) {
+                return override;
+            }
+        }
+        return "datatypes.html";
+    }
+
     /**
      * Picks the release to try first for a row's link resolution: "F-R4" if present (or if
      * the row has no version tags at all - the legacy/pre-migration case, which must resolve
@@ -939,7 +971,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                 links.append(makeLink(fhirLink, FHIR_BASE + "resource.html#Meta"));
             } else if ((dtLink = isFhirDataType(fhirLink, count, versionTags)) != null) {
                 // If a FHIR Data Type, link to  http://hl7.org/fhir/R4/datatypes.html#{datatype}
-                links.append(makeLink(dtLink.getLeft(), fhirBase(dtLink.getRight()) + "datatypes.html#" + dtLink.getLeft()));
+                links.append(makeLink(dtLink.getLeft(), fhirBase(dtLink.getRight()) + dataTypePage(dtLink.getRight(), dtLink.getLeft()) + "#" + dtLink.getLeft()));
             } else if (((dtLink = isFhirDataTypeField(fhirPart + "." + fhirLink, count, versionTags)) != null)) {
                 links.append(makeLink(dtLink.getLeft(), fhirBase(dtLink.getRight()) + "datatypes-definitions.html#" + fhirPart + "." + dtLink.getLeft()));
             } else if ((dtLink = isResourceField(fhirPart + "." + fhirLink, count, versionTags)) != null) {
