@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CWE[string] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CWE[string] - Sheet1.csv
 Instance: DatatypeCWEToString
 InstanceOf: ConceptMap
 Title: "Datatype CWE to string Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CWE to string.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1r_ejjzPHKpkLImJFkHStL0veWe-yN96Tdv93U17mLVQ/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/12X5HtK05KVeX3DEvQoWXHPKjhpD8Hivh8Cl8tgp2CLM/edit?gid=0#gid=0"
 * group[0].element[0].code = #CWE.2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

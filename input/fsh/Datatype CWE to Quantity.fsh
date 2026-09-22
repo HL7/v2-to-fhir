@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CWE[Quantity] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CWE[Quantity] - Sheet1.csv
 Instance: DatatypeCWEToQuantity
 InstanceOf: ConceptMap
 Title: "Datatype CWE to Quantity Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CWE to Quantity.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/10NSiYc6zH_no7e-kRsnq4ZcosHYAHYKSa9wPvnY-Yfk/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/14jebDkp8hS-oUc4nlVhPNhL1xPWV87DqJz1Vmlc0Qos/edit?gid=0#gid=0"
 * group[0].element[0].code = #CWE.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

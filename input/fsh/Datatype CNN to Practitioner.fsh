@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CNN[Practitioner] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CNN[Practitioner] - Sheet1.csv
 Instance: DatatypeCNNToPractitioner
 InstanceOf: ConceptMap
 Title: "Datatype CNN to Practitioner Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CNN to Practitioner.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/10RIiHor6MGnmIBrj1tKkhW2kkrgvODeTjDpJAj3R40Q/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1684w1AIkNDo0wc0AW_zgP1wJSr4TIOJOWwi69dE9WRo/edit?gid=0#gid=0"
 * group[0].element[0].code = #CNN.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

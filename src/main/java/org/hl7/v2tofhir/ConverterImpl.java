@@ -35,6 +35,7 @@ import java.util.ArrayList;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.apache.commons.lang3.tuple.Triple;
 import org.apache.commons.text.WordUtils;
 
@@ -562,7 +563,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         } else {
             targetNm = targetName;
         }
-        if (!qualifier.equals("")) {
+        if (!StringUtils.isEmpty(qualifier)) {
             titleStr = type + " " + sourceName + " " + qualifier + " to " + targetNm + " Map";
         } else {
             titleStr = type + " " + sourceName + " to " + targetNm + " Map";
@@ -583,10 +584,10 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         pw.printf("* url = \"%s/ConceptMap/%s\"%n", IG_URL, makeId(filename));
         pw.printf("* name = \"%s\"%n", makeName(filename));
         String vs;
-        if (source.equals("HL70399")) {
+        if (Strings.CS.equals(source, "HL70399")) {
             // handle the special case of the value set for V2 Table 0399 (country codes)
             vs = toValueSetUri(type, "HL7notAllCodes-0399");
-        } else if (source.equals("HL70078")) {
+        } else if (Strings.CS.equals(source, "HL70078")) {
             // handle the special case of the value set for V2 Table 0078 (hl7VS-interpretationCode)
             // the V2 value set and code system have been deprecating, and the codes are not being supported on tx.fhir.org
             // so using the V3 value set instead
@@ -599,10 +600,10 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         } else {
         	System.err.printf("Source: %s %s %s%n", sourceName, type, source);
         }
-        if (target.equals("urn:iso:std:iso:3166")){
+        if (Strings.CS.equals(target, "urn:iso:std:iso:3166")){
             // handle the special case of the value set for ISO 3166 Part 1 3-letter country Codes
             vs = "http://hl7.org/fhir/ValueSet/iso3166-1-3";
-        } else if (target.equals("http://terminology.hl7.org/CodeSystem/practitioner-role")) {
+        } else if (Strings.CS.equals(target, "http://terminology.hl7.org/CodeSystem/practitioner-role")) {
             // handle the special case of the FHIR value set for practitioner-role (this code system has a THO url)
             vs = "http://hl7.org/fhir/ValueSet/practitioner-role";
         } else {
@@ -1167,7 +1168,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         found = false;
         for (Map.Entry<String, Map<String, Triple<String, String, String>>> e: ConverterMap.getMap().entrySet()) {
             if (Arrays.asList("FHIR Data Type", "FHIR Resource").contains(e.getKey())) {
-                if (e.getValue().get(qualParts[0]) != null) {
+                if (e.getValue().get(qualParts[0].toLowerCase()) != null) {
                     found = true;
                     break;
                 }
@@ -1184,21 +1185,21 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         switch (typeFound) {
         case DATATYPE_TYPE:
             filename = qualParts.length > 1 ?
-                String.format("HL7 Data Type - FHIR R4_ %s[%s-%s] - Sheet1.csv", type, qualParts[0], qualParts[1]) :
-                String.format("HL7 Data Type - FHIR R4_ %s[%s] - Sheet1.csv", type, qualParts[0]);
+                String.format("HL7 Data Type - FHIR E2_ %s[%s-%s] - Sheet1.csv", type, qualParts[0], qualParts[1]) :
+                String.format("HL7 Data Type - FHIR E2_ %s[%s] - Sheet1.csv", type, qualParts[0]);
             break;
         case MESSAGE_TYPE:
             filename = qualParts.length > 1 ?
-                String.format("HL7 Message - FHIR R4_ %s[%s-%s] - Sheet1.csv", type, qualParts[0], qualParts[1]) :
-                String.format("HL7 Message - FHIR R4_ %s[%s] - Sheet1.csv", type, qualParts[0]);
+                String.format("HL7 Message - FHIR E2_ %s[%s-%s] - Sheet1.csv", type, qualParts[0], qualParts[1]) :
+                String.format("HL7 Message - FHIR E2_ %s[%s] - Sheet1.csv", type, qualParts[0]);
             break;
         case SEGMENT_TYPE:
             filename = qualParts.length > 1 ?
-                String.format("HL7 Segment - FHIR R4_ %s[%s-%s] - Sheet1.csv", type, qualParts[0], qualParts[1]) :
-                String.format("HL7 Segment - FHIR R4_ %s[%s] - Sheet1.csv", type, qualParts[0]);
+                String.format("HL7 Segment - FHIR E2_ %s[%s-%s] - Sheet1.csv", type, qualParts[0], qualParts[1]) :
+                String.format("HL7 Segment - FHIR E2_ %s[%s] - Sheet1.csv", type, qualParts[0]);
             break;
         case TABLE_TYPE:
-            filename = String.format("HL7 Concept Map - FHIR R4_ %s - Sheet1.csv", type);
+            filename = String.format("HL7 Concept Map - FHIR E2_ %s - Sheet1.csv", type);
             break;
         }
 

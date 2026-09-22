@@ -460,7 +460,7 @@ public class Convert {
 		    // 1 = FHIR, 2 = V2, 3-5, 6 = URL
 
 		    for (int i = 3; i < 6 && i < nextLine.length; i++) {
-		        if (nextLine[i].startsWith("https")) {
+		        if (nextLine[i].startsWith("https://") || nextLine[i].startsWith("http://")) {
 		            theUrl = nextLine[i];
 		            break;
 		        }
