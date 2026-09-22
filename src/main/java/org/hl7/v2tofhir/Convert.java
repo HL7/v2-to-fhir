@@ -39,12 +39,17 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Triple;
 
 import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvValidationException;
 
 public class Convert {
 
     private static String MAP_OUTPUT_DIR = "input/pagecontent/";
     private static final String FHIR_PREFIX = "http://hl7.org/fhir/R4";
     private static final String FILE_TO_URLMAP = "filetourl.properties";
+    /** The Google Sheets ID of the master V2-to-FHIR mapping inventory workbook. */
+    private static final String MASTER_INVENTORY_WORKBOOK_ID = "1yb1AJXyDsyCvLFb67UFtz6g4UeeKUoaUWp04tDxvg2E";
+    /** The tab names in the master inventory workbook that have a corresponding local inventory CSV. */
+    private static final String[] MASTER_INVENTORY_TABS = { "Message", "Segment", "Data Type", "Code System" };
     private static int fileCount = 0;
     public static Map<String, Set<Converter>> generated = new HashMap<>();
     public static Map<String, String> outputFileMap = new HashMap<>();
@@ -78,6 +83,9 @@ public class Convert {
                 outputFileMap.put(".", new File(output).getPath());
                 downloadAll(download, output, false);
                 writeFileToUrlMap(output);
+                continue;
+            } else if (arg.equals("-m")) {
+                downloadMasterInventory(output);
                 continue;
             }
             File f = new File(arg);
@@ -439,7 +447,10 @@ public class Convert {
         } catch (IOException ioex) {
             System.err.printf("Failure reading from %s%n", download);
             ioex.printStackTrace();
-        }
+        } catch (CsvValidationException e) {
+        	System.err.printf("Validation error reading from %s%n", download);
+			e.printStackTrace();
+		}
     }
     
 	private static String downloadFile(String output, String[] nextLine) {
@@ -483,6 +494,51 @@ public class Convert {
 		}
 		return theUrl;
 	}
+
+    /**
+     * Refresh the local master inventory CSVs (Message, Segment, Data Type, Code System)
+     * directly from the master Google Sheets workbook, one tab at a time, replacing the
+     * manual "File &gt; Download &gt; CSV" export previously required for each tab.
+     * @param output    The folder in which to write the refreshed inventory CSVs.
+     */
+    private static void downloadMasterInventory(String output) {
+        for (String tab : MASTER_INVENTORY_TABS) {
+            downloadMasterInventoryTab(output, tab);
+        }
+    }
+
+    private static void downloadMasterInventoryTab(String output, String tab) {
+        String theUrl = String.format(
+            "https://docs.google.com/spreadsheets/d/%s/gviz/tq?tqx=out:csv&sheet=%s",
+            MASTER_INVENTORY_WORKBOOK_ID, tab.replace(" ", "%20"));
+        String outputFn = "v2-to-FHIR Map Inventory - " + tab + ".csv";
+        try {
+            URLConnection con = new URL(theUrl).openConnection();
+            con.setRequestProperty("Accept", "text/csv");
+            con.connect();
+            try (InputStream s = con.getInputStream()) {
+                String content = IOUtils.toString(s, StandardCharsets.UTF_8);
+                if (content.contains("DOCTYPE") || content.contains("<html")) {
+                    ConverterImpl.report(true, outputFn, 1, "Cannot access master inventory tab '%s'.%n", tab);
+                } else if (!content.startsWith("\"" + tab + "\",")) {
+                    // An unrecognized tab name is not an error response - gviz/tq silently falls back
+                    // to the workbook's first tab instead. Detect that by checking that the returned
+                    // header's first column echoes the requested tab name, so a typo'd or renamed tab
+                    // is reported rather than silently overwriting the wrong inventory file.
+                    ConverterImpl.report(true, outputFn, 1,
+                        "Master inventory tab '%s' not found in the workbook (got unexpected content instead).%n", tab);
+                } else {
+                    File outputFile = new File(output, outputFn);
+                    FileUtils.writeStringToFile(outputFile, content, StandardCharsets.UTF_8);
+                    System.out.printf("Refreshed master inventory tab '%s' to %s%n", tab, outputFile.getPath());
+                }
+            }
+            fileCount++;
+        } catch (IOException ioex) {
+            System.err.printf("Failure downloading master inventory tab '%s'%n", tab);
+            ioex.printStackTrace();
+        }
+    }
 
     private static URLConnection getConnection(String theUrl) throws IOException, MalformedURLException {
         URLConnection con = new URL(StringUtils.substringBeforeLast(theUrl,"/") + "/export?format=csv").openConnection();

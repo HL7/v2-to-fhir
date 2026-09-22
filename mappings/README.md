@@ -1,20 +1,31 @@
-This folder contains CSV source files for all mapping tables.  These are downloaded by traversing links
-in the [master table](https://docs.google.com/spreadsheets/d/1PaFYPSSq4oplTvw_4OgOn6h2Bs_CMvCAU9CqC4tPBgk/edit#gid=484860251)
-and using File|Download|Comma-separate values (.csv - current sheet) in Google Sheets.
+This folder contains CSV source files for all mapping tables.
 
-The easy way to download these is to use Convert
+## Refreshing the master inventory
 
-Download the Code System, Data Type, Message, and Segment tabs of the master list into
-individual CSV files in the mappings folder.  Then download all the links to CSV files
-using Convert as follows:
+The four master inventory files (`v2-to-FHIR Map Inventory - Code System.csv`,
+`- Data Type.csv`, `- Message.csv`, `- Segment.csv`) are pulled directly from the
+[master workbook](https://docs.google.com/spreadsheets/d/1yb1AJXyDsyCvLFb67UFtz6g4UeeKUoaUWp04tDxvg2E)
+using Convert, rather than a manual File > Download > CSV export per tab:
 
-    java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Code System.csv"
-    java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Data Type.csv"
-    java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Message.csv"
-    java org.hl7.v2toFHIR.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Segment.csv"
+    java -cp target\v2-to-fhir-jar-with-dependencies.jar org.hl7.v2tofhir.Convert -omappings -m
 
-Note: To downlooad only those that are ready, change -d to -r in the above command.
+This overwrites the four inventory files in this folder with the current content of the
+workbook's Message, Segment, Data Type, and Code System tabs.
+
+## Downloading the linked artifact sheets
+
+Download the CSV files linked from those four inventory files using Convert as follows:
+
+    java -cp target\v2-to-fhir-jar-with-dependencies.jar org.hl7.v2tofhir.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Code System.csv"
+    java -cp target\v2-to-fhir-jar-with-dependencies.jar org.hl7.v2tofhir.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Data Type.csv"
+    java -cp target\v2-to-fhir-jar-with-dependencies.jar org.hl7.v2tofhir.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Message.csv"
+    java -cp target\v2-to-fhir-jar-with-dependencies.jar org.hl7.v2tofhir.Convert -omappings "-dmappings/v2-to-FHIR Map Inventory - Segment.csv"
+
+Note: To download only those that are ready, change `-d` to `-r` in the above command.
+
+`downloadsheets.cmd` and `get.cmd` run these same download steps for you against the
+build jar and `target/classes`, respectively.
 
 Next, generate the mappings using Convert as follows:
 
-    java org.hl7.v2toFHIR.Convert mappings
+    java -cp target\v2-to-fhir-jar-with-dependencies.jar org.hl7.v2tofhir.Convert mappings

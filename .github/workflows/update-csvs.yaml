@@ -51,6 +51,12 @@ jobs:
           $JAVA_HOME/bin/java -cp target/v2-to-fhir.jar:target/lib/* org.hl7.v2tofhir.Convert -oinput/fsh mappings/messages mappings/segments mappings/datatypes mappings/codesystems || echo Conversion failed, continuing anyway
 
       - name: Commit and Push changes
+        # Temporarily disabled during the add-fhir-r6-support change (Stage 1, task 1.6):
+        # this workflow's conversion step tolerates failure and still commits/pushes, which
+        # could land broken FSH if a master-inventory refresh lands before Stage 3's Input
+        # classes can parse the new (E2) column layout. Re-enable in Stage 3 (task 3.7) once
+        # that layout-detection lands. See openspec/changes/add-fhir-r6-support/design.md.
+        if: false
         run: |
           git config --global user.name 'Automated CSV Converter'
           git config --global user.email 'actions@users.noreply.github.com'
