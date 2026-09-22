@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ DG1[Condition] - Sheet1.csv
+// HL7 Segment - FHIR E2_ DG1[Condition] - Sheet1.csv
 Instance: SegmentDG1ToCondition
 InstanceOf: ConceptMap
 Title: "Segment DG1 to Condition Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment DG1 to Condition.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1dDE9G4Az3mE7a0mBw98PJeN9HzHQmX-ZR7ijKAiAAbA/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ZzoiMYjhmmkuHbvFk2VEbT9yOK3yJAi3GhQCFtvka8o/edit?gid=0#gid=0"
 * group[0].element[0].code = #DG1-3
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ FN[HumanName] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ FN[HumanName] - Sheet1.csv
 Instance: DatatypeFNToHumanName
 InstanceOf: ConceptMap
 Title: "Datatype FN to HumanName Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype FN to HumanName.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/16_unbJhBhLcdgy0KhkwtNfZiK2RzGOVghUlm6VKjWmc/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1hfOOWtYXjvmP8jTiuMEZc6fl1yiNoDmHMTZFWZ2Vk5s/edit?gid=0#gid=0"
 * group[0].element[0].code = #FN.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

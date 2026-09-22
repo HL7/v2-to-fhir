@@ -1,6 +1,0 @@
-HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,,,,Comment
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-SV,Severe,HL70128,,,,high,,High Risk,http://hl7.org/fhir/allergy-intolerance-criticality,,
-MO,Moderate,HL70128,,,,,,,,,
-MI,Mild,HL70128,,,,low,,Low Risk,http://hl7.org/fhir/allergy-intolerance-criticality,,
-U,Unknown,HL70128,,,,,,,,,

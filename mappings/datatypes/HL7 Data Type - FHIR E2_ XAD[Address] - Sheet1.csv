@@ -1,0 +1,33 @@
+HL7 v2,,,,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,XAD.1,Street Address,SAD,0,1,"F-R4, F-R6",,,,,line[1-3],,string,0,-1,SAD[Address],,,,
+2,XAD.2,Other Designation,ST,0,1,"F-R4, F-R6",,,,,line[4],,string,0,-1,,,,,Note that XAD.1 is mapped to Address.line as well using the SAD data type.  That may yield up to three address lines.
+3,XAD.3,City,ST,0,1,"F-R4, F-R6",,,,,city,,string,0,1,,,,,
+4,XAD.4,State or Province,ST,0,1,"F-R4, F-R6",,,,,state,,string,0,1,,,,,
+5,XAD.5,Zip or Postal Code,ST,0,1,"F-R4, F-R6",,,,,postalCode,,string,0,1,,,,,
+6,XAD.6,Country,ID,0,1,"F-R4, F-R6",,,,,country,,string,0,1,,,,,
+7,XAD.7,Address Type,ID,0,1,"F-R4, F-R6",,"IF XAD.7 IN (""M"", ""SH"")",,,type,,code,0,1,,AddressType[Type],,,
+7,XAD.7,Address Type,ID,0,1,"F-R4, F-R6",,"IF XAD.7 IN (""BA"", ""BI"", ""C"", ""B"", ""H"", ""O"")",,,use,,code,0,1,,AddressType[Use],,,
+7,XAD.7,Address Type,ID,0,1,"F-R4, F-R6",,"IF XAD.7 EQUALS ""HV""",,,extension[1].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/iso21090-AD-use""",,
+7,XAD.7,Address Type,ID,0,1,"F-R4, F-R6",,"IF XAD.7 EQUALS ""HV""",,,extension[1].valueCode,,code,1,1,,,,,
+7,XAD.7,Address Type,ID,0,1,"F-R4, F-R6",,,,,extension[2].uri,,,,,,,,,
+7,XAD.7,Address Type,ID,0,1,"F-R4, F-R6",,,,,extension[2].valueCodeableConcept.coding.value,,code,,,,,,,
+7,XAD.7,Address Type,ID,0,1,"F-R4, F-R6",,,,,extension[2].valueCodeableConcept.coding.system,,uri,,,,,"""http://terminology.hl7.org/CodeSystem/v2-0190""",,
+8,XAD.8,Other Geographic Designation,ST,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+9,XAD.9,County/Parish Code,CWE,0,1,"F-R4, F-R6",,,,,district,,string,0,1,CWE[string],,,,
+10,XAD.10,Census Tract,CWE,0,1,"F-R4, F-R6",,,,,extension[3].url,,uri,1,1,,,"""http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract""",,
+10,XAD.10,Census Tract,CWE,0,1,"F-R4, F-R6",,,,,extension[3].valueCode,,string,1,1,CWE[string],,,,
+11,XAD.11,Address Representation Code,ID,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+12,XAD.12,Address Validity Range,DR,0,1,"F-R4, F-R6",,,,,period,,Period,0,1,DR[Period],,,,
+13,XAD.13,Effective Date,DTM,0,1,"F-R4, F-R6",,,,,period.start,,dateTime,0,1,,,,,
+14,XAD.14,Expiration Date,DTM,0,1,"F-R4, F-R6",,,,,period.end,,dateTime,0,1,,,,,
+15,XAD.15,Expiration Reason,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+16,XAD.16,Temporary Indicator,ID,0,1,"F-R4, F-R6",,,,,,,,,,,,,,Overlaps with Address.use and Address.type
+17,XAD.17,Bad Address Indicator,ID,0,1,"F-R4, F-R6",,,,,,,,,,,,,,Overlaps with Address.use and Address.type
+18,XAD.18,Address Usage,ID,0,1,"F-R4, F-R6",,,,,,,,,,,,,,Overlaps with Address.use and Address.type
+19,XAD.19,Addressee,ST,0,1,"F-R4, F-R6",,,,,line[5],,string,0,-1,,,,,There is an existing ADXP extension if we prefer
+20,XAD.20,Comment,ST,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+21,XAD.21,Preference Order,NM,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+22,XAD.22,Protection Code,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+23,XAD.23,Address Identifier,EI,0,1,"F-R4, F-R6",,,,,,,,,,,,,,

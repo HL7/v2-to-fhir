@@ -1,4 +1,4 @@
-// HL7 Concept Map_ HospitalService - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ HospitalService - Sheet1.csv
 Instance: TableHL70069ToServiceType
 InstanceOf: ConceptMap
 Title: "Table HL70069 to Service Type Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70069 to Service Type.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1fSIQqfva5y93Y_3UAE6SnSodQevLGUuumI2WFiedc8k/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1JztG_42Sl_PMBdGgYiPGSfD4ZCychvVxUpYQCoCmtq0/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0069"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/service-type"
 * group[0].element[0].code = #MED

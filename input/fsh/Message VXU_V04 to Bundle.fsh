@@ -1,4 +1,4 @@
-// HL7 Message - FHIR R4_ VXU_V04 - Sheet1.csv
+// HL7 Message - FHIR E2_ VXU_V04 - Sheet1.csv
 Instance: MessageVXU_V04ToBundle
 InstanceOf: ConceptMap
 Title: "Message VXU_V04 to Bundle Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Message VXU:V04 to Bundle.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1_7maXDpc_qMMRzMm0x6d90-Hj6vvhGyO2kyFX0tpuZs/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Szx39jLcrCy1ThR4J2vxnAvxGk7g-s2hG4p9jRFAGc0/edit?gid=0#gid=0"
 * group[0].element[0].code = #VXU_V04.MSH
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "cardinalityMin"

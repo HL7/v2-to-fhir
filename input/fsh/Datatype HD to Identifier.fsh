@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ HD[Identifier] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ HD[Identifier] - Sheet1.csv
 Instance: DatatypeHDToIdentifier
 InstanceOf: ConceptMap
 Title: "Datatype HD to Identifier Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype HD to Identifier.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Ao9N1tFgkzTMGA1y0stCr0sgDk6vVtzT6TnpdByshC4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1uqOEDWZn8euYNU2y9ftf7zwSZd3ZXXjUwA5OZJxJhsY/edit?gid=0#gid=0"
 * group[0].element[0].code = #HD.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

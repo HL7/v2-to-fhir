@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ DR[dateTime] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ DR[dateTime] - Sheet1.csv
 Instance: DatatypeDRToDateTime
 InstanceOf: ConceptMap
 Title: "Datatype DR to dateTime Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype DR to dateTime.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1tE6xgT7ns7kFg0aBWUgKociuXfuKrdnm01Gy6nHWcOU/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1r6ir_zxd9YhGA3uDHrp20EgeEhWwOs-3vBDeCPfAFxg/edit?gid=0#gid=0"
 * group[0].element[0].code = #DR.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

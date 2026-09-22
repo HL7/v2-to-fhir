@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ ID[Coding] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ ID[Coding] - Sheet1.csv
 Instance: DatatypeIDToCoding
 InstanceOf: ConceptMap
 Title: "Datatype ID to Coding Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype ID to Coding.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1DR9Rw8yw4F4RhbpHd0RE9ng-KLTb81RmuTOxTgVcaVc/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13K75WyUejviH03bjgqtMFoqv6mRnlb6dR5fTIOcIy3w/edit?gid=0#gid=0"
 * group[0].element[0].code = #ID.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ EI[Condition] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ EI[Condition] - Sheet1.csv
 Instance: DatatypeEIToCondition
 InstanceOf: ConceptMap
 Title: "Datatype EI to Condition Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype EI to Condition.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1JZT3RMYHWaeaCiurh4LAkxGpGIp4U8RbbQBQ1yt5KK4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Txx2AEld1Rzlbw3XD1QA6bPt4HR0nMl2P2SzVkRcknc/edit?gid=0#gid=0"
 * group[0].element[0].code = #EI.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

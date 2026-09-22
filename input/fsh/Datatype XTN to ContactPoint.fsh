@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ XTN[ContactPoint] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ XTN[ContactPoint] - Sheet1.csv
 Instance: DatatypeXTNToContactPoint
 InstanceOf: ConceptMap
 Title: "Datatype XTN to ContactPoint Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype XTN to ContactPoint.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1g4TA7CC4zHkWmGvGQdskKJ3DrOdVQVS3MooE_iU9CuU/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1dXrdEvGblAAUFs1ac74k2Igobr5fnatkBwsRqgYNeFM/edit?gid=0#gid=0"
 * group[0].element[0].code = #XTN.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

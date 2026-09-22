@@ -1,0 +1,11 @@
+HL7 v2,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,Comments
+Code,Text,Code System,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,Code,Display,Code System,,
+A,Admitting,HL70052,"F-R4, F-R6",,,,,AD,Admission Diagnosis,http://terminology.hl7.org/CodeSystem/diagnosis-role,,
+W,Working,HL70052,"F-R4, F-R6",,,,,,,,,
+F,Final,HL70052,"F-R4, F-R6",,,,,,,,,
+,,,"F-R4, F-R6",,,,,DD,Discharge diagnosis,http://terminology.hl7.org/CodeSystem/diagnosis-role,,
+,,,"F-R4, F-R6",,,,,CC,Chief complaint,http://terminology.hl7.org/CodeSystem/diagnosis-role,,
+,,,"F-R4, F-R6",,,,,CM,Comorbidity diagnosis,http://terminology.hl7.org/CodeSystem/diagnosis-role,,
+,,,"F-R4, F-R6",,,,,pre-op,pre-op diagnosis,http://terminology.hl7.org/CodeSystem/diagnosis-role,,
+,,,"F-R4, F-R6",,,,,post-op,post-op diagnosis,http://terminology.hl7.org/CodeSystem/diagnosis-role,,
+,,,"F-R4, F-R6",,,,,billing,Billing,http://terminology.hl7.org/CodeSystem/diagnosis-role,,

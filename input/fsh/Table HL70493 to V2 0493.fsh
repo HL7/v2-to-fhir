@@ -1,4 +1,4 @@
-// HL7 Concept Map_ SpecimenCondition - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ SpecimenCondition - Sheet1.csv
 Instance: TableHL70493ToV20493
 InstanceOf: ConceptMap
 Title: "Table HL70493 to V2 0493 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70493 to V2 0493.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1U7r8bjIN7VdzCVTnWOpxSSTbiCkuwSOqdlUuM6yrMk4/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Ugi7NtIPEgay_F8RYrMI2tsgn4MhmQMhygjFRQZzGN0/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0493"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0493"
 * group[0].element[0].code = #AUT

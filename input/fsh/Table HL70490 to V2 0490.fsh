@@ -1,4 +1,4 @@
-// HL7 Concept Map_ SpecimenRejectReason - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ SpecimenRejectReason - Sheet1.csv
 Instance: TableHL70490ToV20490
 InstanceOf: ConceptMap
 Title: "Table HL70490 to V2 0490 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70490 to V2 0490.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1r1-CV9pi_ravlxzhSjB97bDs4Jp0HSOa8r_2-0UuMGg/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1zH_r_RB5VdEWKum5aiApn7OcjXhSpYVadc9EBMtlmSg/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0490"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0490"
 * group[0].element[0].code = #EX

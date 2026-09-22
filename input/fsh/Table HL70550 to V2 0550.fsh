@@ -1,4 +1,4 @@
-// HL7 Concept Map_ BodyParts - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ BodyParts - Sheet1.csv
 Instance: TableHL70550ToV20550
 InstanceOf: ConceptMap
 Title: "Table HL70550 to V2 0550 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70550 to V2 0550.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1HykMDnoHklH8LL686JJpZ_oBunpKTLGwor2ZnbgSqT0/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/12t7dBjcZAkGPkyT-IKQde1NpjaNwWYw4P1XDLUtn-R8/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0550"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0550"
 * group[0].element[0].code = #JUGE

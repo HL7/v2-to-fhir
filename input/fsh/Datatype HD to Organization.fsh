@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ HD[Organization] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ HD[Organization] - Sheet1.csv
 Instance: DatatypeHDToOrganization
 InstanceOf: ConceptMap
 Title: "Datatype HD to Organization Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype HD to Organization.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1zLANrSl_qRMGtJED5BnklU9EipB4xeU4rgmtr03hbIA/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1GRfhRcOskHXZQZw9OEnc5G1M45YFbWdtD6RjoBzOEBs/edit?gid=0#gid=0"
 * group[0].element[0].code = #HD.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

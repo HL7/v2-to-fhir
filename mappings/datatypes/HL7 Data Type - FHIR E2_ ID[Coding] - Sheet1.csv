@@ -1,0 +1,4 @@
+HL7 v2,,,,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,ID.1,Identifier,ST,1,1,"F-R4, F-R6",,,,,code,,code,0,1,,,,,

@@ -1,4 +1,4 @@
-// HL7 Concept Map_ EventReason - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ EventReason - Sheet1.csv
 Instance: TableHL70062ToV3ActReason
 InstanceOf: ConceptMap
 Title: "Table HL70062 to V3 ActReason Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70062 to V3 ActReason.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/15frIhGeIKMZUXJ2DEsM7clJCSFWrYjCug5M5p_z4qOo/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1xfV8DMs66dSu_HVtHq9VsOZQ7KC7Xq8cNpjeVxHbwxw/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0062"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
 * group[0].element[0].code = #01

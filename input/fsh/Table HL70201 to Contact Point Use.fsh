@@ -1,4 +1,4 @@
-// HL7 Concept Map_ TelecommunicationUseCode - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ TelecommunicationUseCode - Sheet1.csv
 Instance: TableHL70201ToContactPointUse
 InstanceOf: ConceptMap
 Title: "Table HL70201 to Contact Point Use Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70201 to Contact Point Use.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1EE3a5UIGXLi8wMDr49fWTEVx8QS2GFqYgitE3vLOQTQ/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1yrSw8JSNSKCNq10So-zo9DsoSQxp8EB7EdWusSMZ5S4/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0201"
 * group[0].target = "http://hl7.org/fhir/contact-point-use"
 * group[0].element[0].code = #PRN

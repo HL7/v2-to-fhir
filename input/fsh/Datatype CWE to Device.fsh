@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CWE[Device] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CWE[Device] - Sheet1.csv
 Instance: DatatypeCWEToDevice
 InstanceOf: ConceptMap
 Title: "Datatype CWE to Device Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CWE to Device.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13LJngzZ_t2CzddzgZu8MR1dbNJfyH9mWN1cRzRs7VIQ/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Ferk30bObvh-z9thWiyTt4uhWPOl4b3DvGqEV_zFab8/edit?gid=0#gid=0"
 * group[0].element[0].code = #CWE.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

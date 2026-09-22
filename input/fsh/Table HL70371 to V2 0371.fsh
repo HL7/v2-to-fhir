@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AdditivePreservative - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AdditivePreservative - Sheet1.csv
 Instance: TableHL70371ToV20371
 InstanceOf: ConceptMap
 Title: "Table HL70371 to V2 0371 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70371 to V2 0371.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1u8m8K-QMGTs7IT0nbw1jh4lGUH58XXmleONGkuxgOR0/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13coAdaeTABz2RZ1nR3liBqbAB4d4lN0wsTRX1eZNUbY/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0371"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0371"
 * group[0].element[0].code = #F10

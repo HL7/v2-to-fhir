@@ -1,4 +1,4 @@
-// HL7 Concept Map_ ConfidentialityCode - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ ConfidentialityCode - Sheet1.csv
 Instance: TableHL70177ToV3Confidentiality
 InstanceOf: ConceptMap
 Title: "Table HL70177 to V3 Confidentiality Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70177 to V3 Confidentiality.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1f8yszYhQYL0muat4Hp3lF5dB9DVPsMJ1BGQn3KC84PQ/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1y4wB5aAsCoPGfRxC9EEU-n2t-A7iIEluvDuVnQFQUcQ/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0177"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
 * group[0].element[0].code = #V

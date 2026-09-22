@@ -1,4 +1,4 @@
-// HL7 Concept Map_ OrganizationalNameType - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ OrganizationalNameType - Sheet1.csv
 Instance: TableHL70204ToV20204
 InstanceOf: ConceptMap
 Title: "Table HL70204 to V2 0204 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70204 to V2 0204.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/16h7s6tlvAS0vjsbTxHUdAhojioKgK7Jmxxu1rFaDHDc/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1KHqdCMt0iZ9cNq3vprJ9hoC_94ybzmm2MeN90701LgA/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0204"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0204"
 * group[0].element[0].code = #A

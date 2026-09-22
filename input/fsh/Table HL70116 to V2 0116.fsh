@@ -1,4 +1,4 @@
-// HL7 Concept Map_ BedStatus - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ BedStatus - Sheet1.csv
 Instance: TableHL70116ToV20116
 InstanceOf: ConceptMap
 Title: "Table HL70116 to V2 0116 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70116 to V2 0116.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1xkkG9vSa4C5vAbTLvPT0BHYBWEiOtus8BHVrr7fU1xc/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1LQO7J3-Y7uXzsujOy_B--3TNF3KhgNQqxra5-ciCJ_0/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0116"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0116"
 * group[0].element[0].code = #C

@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CQ[decimal] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CQ[decimal] - Sheet1.csv
 Instance: DatatypeCQToDecimal
 InstanceOf: ConceptMap
 Title: "Datatype CQ to decimal Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CQ to decimal.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/12vu2fD4SxfM1d8T-ifKbbbsCy-SMyWCyAcb0PRxBICU/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1bXZJpJsEc3KcyyoPN1Hue5mppzKI-A8A-KfcNJOvX2g/edit?gid=0#gid=0"
 * group[0].element[0].code = #CQ.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -1,6 +1,0 @@
-HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-F,Family only,HL70215,,,,F,,Family only,http://terminology.hl7.org/CodeSystem/v2-0215,,
-N,No Publicity,HL70215,,,,N,,No Publicity,http://terminology.hl7.org/CodeSystem/v2-0215,,
-O,Other,HL70215,,,,O,,Other,http://terminology.hl7.org/CodeSystem/v2-0215,,
-U,Unknown,HL70215,,,,U,,Unknown,http://terminology.hl7.org/CodeSystem/v2-0215,,

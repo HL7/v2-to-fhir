@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ AIP[Appointment] - Sheet1.csv
+// HL7 Segment - FHIR E2_ AIP[Appointment] - Sheet1.csv
 Instance: SegmentAIPToAppointment
 InstanceOf: ConceptMap
 Title: "Segment AIP to Appointment Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment AIP to Appointment.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1xyWdix_ljILp2hGI_pHaYvU-JVc5v7t1z3DmAK2K-o0/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Bn3D3TpM5TiORCwFB0F1OErc_3N1vvkEs85Ii0L9Qb4/edit?gid=0#gid=0"
 * group[0].element[0].code = #AIP-3
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

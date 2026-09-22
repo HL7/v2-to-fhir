@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ NR[Range] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ NR[Range] - Sheet1.csv
 Instance: DatatypeNRToRange
 InstanceOf: ConceptMap
 Title: "Datatype NR to Range Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype NR to Range.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1o7Z8P8sOk9fjHiUYFfv1hVNhuKVdm34MmivLiyqdXUY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1GkZiMnMQJMZHNfDlB2DKDXgvv2VdmVlHilkJH-rOVNk/edit?gid=0#gid=0"
 * group[0].element[0].code = #NR.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

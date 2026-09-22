@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PV1[Basic-EncounterHistory] - PV1.csv
+// HL7 Segment - FHIR E2_ PV1[Basic-EncounterHistory] - PV1.csv
 Instance: SegmentPV1EncounterHistoryToBasic
 InstanceOf: ConceptMap
 Title: "Segment PV1 [EncounterHistory] to Basic Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PV1[EncounterHistory] to Basic.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1IImvKb98HDkCh-Gf0cRkBhfU1L8K9dT4KMJayiYwZ78/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1frewhfVv8ew7-FfZLSQDLxhPGtiz2C0IyVxQDiZNztE/edit?gid=0#gid=0"
 * group[0].element[0].code = #PV1-11
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

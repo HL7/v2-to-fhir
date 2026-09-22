@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CX[string] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CX[string] - Sheet1.csv
 Instance: DatatypeCXToString
 InstanceOf: ConceptMap
 Title: "Datatype CX to string Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CX to string.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1IWUHkEnYB8mCCwzvO9cyt0OGsvIBUG0IAygcMgvInPk/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ncB1KTFsZLoYGS6LDIys4TuYDssXbcHZrJEbrwZGwdo/edit?gid=0#gid=0"
 * group[0].element[0].code = #CX.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

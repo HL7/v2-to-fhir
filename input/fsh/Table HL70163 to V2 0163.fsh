@@ -1,4 +1,4 @@
-// HL7 Concept Map_ BodySite - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ BodySite - Sheet1.csv
 Instance: TableHL70163ToV20163
 InstanceOf: ConceptMap
 Title: "Table HL70163 to V2 0163 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70163 to V2 0163.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Bk09POJ7Iqb9oozYAJJEUEnHZwnmH15kHbtCvbbpixc/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1xobfvxTnro5-ddT7yKkHSoMucPUneb7VTvsU3WPb76Q/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0163"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0163"
 * group[0].element[0].code = #BE

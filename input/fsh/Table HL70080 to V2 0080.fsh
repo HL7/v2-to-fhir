@@ -1,4 +1,4 @@
-// HL7 Concept Map_ NatureOfAbnormalTesting - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ NatureOfAbnormalTesting - Sheet1.csv
 Instance: TableHL70080ToV20080
 InstanceOf: ConceptMap
 Title: "Table HL70080 to V2 0080 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70080 to V2 0080.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1xwKH-TZTVdS5-CrBlJ6nPE-EvH2bUlYPpeoT-v794q8/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1f03bScVYX6xbGTBs32eP0Sh6uMMJp0UHvxK7kb9wXo0/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0080"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0080"
 * group[0].element[0].code = #A

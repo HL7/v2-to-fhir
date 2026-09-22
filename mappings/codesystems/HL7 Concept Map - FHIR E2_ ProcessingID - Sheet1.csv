@@ -1,0 +1,7 @@
+HL7 v2,,,FHIR Version,,Condition (IF TRUE),,,HL7 FHIR,,
+Code,Text,Code System,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,Code,Display,Code System
+D,Debugging,HL70103,"F-R4, F-R6",,,,,D,Debugging,http://terminology.hl7.org/CodeSystem/v2-0103
+P,Production,HL70103,"F-R4, F-R6",,,,,P,Production,http://terminology.hl7.org/CodeSystem/v2-0103
+T,Training,HL70103,"F-R4, F-R6",,,,,T,Training,http://terminology.hl7.org/CodeSystem/v2-0103
+N,Non-Production Testing,HL70103,"F-R4, F-R6",,,,,N,Non-Production Testing,http://terminology.hl7.org/CodeSystem/v2-0103
+V,Validation,HL70103,"F-R4, F-R6",,,,,V,Validation,http://terminology.hl7.org/CodeSystem/v2-0103

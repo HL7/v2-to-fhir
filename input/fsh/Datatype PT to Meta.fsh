@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ PT[Meta] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ PT[Meta] - Sheet1.csv
 Instance: DatatypePTToMeta
 InstanceOf: ConceptMap
 Title: "Datatype PT to Meta Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype PT to Meta.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1WAGzkLwwhJJGdsry9llddsgZpwjs3D1xoeir_guRVKI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1zNiVyRPsPXQuOsiHJCP3ZOQAcs-fsMnktHW712OSLUY/edit?gid=0#gid=0"
 * group[0].element[0].code = #PT.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

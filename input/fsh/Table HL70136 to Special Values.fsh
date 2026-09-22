@@ -1,4 +1,4 @@
-// HL7 Concept Map_ YesNoIndicator - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ YesNoIndicator - Sheet1.csv
 Instance: TableHL70136ToSpecialValues
 InstanceOf: ConceptMap
 Title: "Table HL70136 to Special Values Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70136 to Special Values.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1MyCLfcQhfwFMXIqTKkSsWrhkPj4FueY1qg0EuMW8tmU/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/11Wj1RyYa8YRYmz3Oo5xgnt37_ExNHbEHvuYPwJ14qzY/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0532"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/special-values"
 * group[0].element[0].code = #Y

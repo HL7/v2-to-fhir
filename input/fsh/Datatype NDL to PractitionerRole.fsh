@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ NDL[PractitionerRole] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ NDL[PractitionerRole] - Sheet1.csv
 Instance: DatatypeNDLToPractitionerRole
 InstanceOf: ConceptMap
 Title: "Datatype NDL to PractitionerRole Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype NDL to PractitionerRole.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/11OXFdsd0KLUaUQRmYawlszF5dcRZQ6CGJudPaBFTmPM/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1trBIgdusr0UoESSWl5mo-LsYDBNsvW8Hs32BE_lET10/edit?gid=0#gid=0"
 * group[0].element[0].code = #NDL.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

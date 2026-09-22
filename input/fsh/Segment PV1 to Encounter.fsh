@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PV1[Encounter] - PV1.csv
+// HL7 Segment - FHIR E2_ PV1[Encounter] - PV1.csv
 Instance: SegmentPV1ToEncounter
 InstanceOf: ConceptMap
 Title: "Segment PV1 to Encounter Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PV1 to Encounter.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Sqt8f_LpBVMIdJxcAlB4emDOBqXV8rhy60V2_yaDp7c/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ddZISFjqKmbv3g6uO472eD4ESnlSibtlQZ9V2lP-tmA/edit?gid=0#gid=0"
 * group[0].element[0].code = #PV1-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"
@@ -35,7 +35,7 @@ Usage: #definition
 * group[0].element[0].target.extension[0].extension[2].url = "cardinalityMax"
 * group[0].element[0].target.extension[0].extension[2].valueInteger = 1
 * group[0].element[0].target.extension[0].extension[3].url = "mappedVia"
-* group[0].element[0].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70004-to-v3-actcode"
+* group[0].element[0].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group[0].element[0].target.display = "class"
 * group[0].element[1].code = #PV1-2
 * group[0].element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

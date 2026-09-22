@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CWE[Observation-SupportingInfo] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CWE[Observation-SupportingInfo] - Sheet1.csv
 Instance: DatatypeCWESupportingInfoToObservation
 InstanceOf: ConceptMap
 Title: "Datatype CWE [SupportingInfo] to Observation Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CWE[SupportingInfo] to Observation.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1vSwxT_mkiwYr4ueODQhxrOM7Q79Y14SXcF3oHejKmE4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1V3nPnLHxsgvg_sUkAUenZt_xm0gt7y79WrnPk3kFWkA/edit?gid=0#gid=0"
 * group[0].element[0].code = #CWE
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #code

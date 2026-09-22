@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ ID[CodeableConcept-UniversalID] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ ID[CodeableConcept-UniversalID] - Sheet1.csv
 Instance: DatatypeIDUniversalIDToCodeableConcept
 InstanceOf: ConceptMap
 Title: "Datatype ID [UniversalID] to CodeableConcept Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype ID[UniversalID] to CodeableConcept.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1YnP5iXEswInGxwYcRjg81HU4ACsjRJPpQVfOzwVRdIg/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1bLJvlFEeAPDCMRy31-E-gOtAM476jFY3WId7HfCVJe0/edit?gid=0#gid=0"
 * group[0].element[0].code = #ID.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

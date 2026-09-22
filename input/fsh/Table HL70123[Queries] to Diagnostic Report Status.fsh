@@ -1,4 +1,4 @@
-// HL7 Concept Map_ ResultStatus[Non-Queries] - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ ResultStatus[Non-Queries] - Sheet1.csv
 Instance: TableHL70123QueriesToDiagnosticReportStatus
 InstanceOf: ConceptMap
 Title: "Table HL70123 [Queries] to Diagnostic Report Status Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70123[Queries] to Diagnostic Report Status.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1PZzztfsx_yRfvrl3i9on8Tc-yXZCzbK1wnVgts-SxSQ/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1P2htCRmgAe-1pJ33swF5c5h_ahJaiHhDjoImxOZPmsQ/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0123"
 * group[0].target = "http://hl7.org/fhir/diagnostic-report-status"
 * group[0].element[0].code = #O

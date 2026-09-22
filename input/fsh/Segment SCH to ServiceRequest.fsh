@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ SCH[ServiceRequest] - Sheet1.csv
+// HL7 Segment - FHIR E2_ SCH[ServiceRequest] - Sheet1.csv
 Instance: SegmentSCHToServiceRequest
 InstanceOf: ConceptMap
 Title: "Segment SCH to ServiceRequest Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment SCH to ServiceRequest.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1jgI6oX8Et5hXuh7tCtGKM3eVxfbzGQwYerXslDU8EOE/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1tpPP1sIihHsHp3D__IXsK-ngG10M-lbDRCk6CkzQL1s/edit?gid=0#gid=0"
 * group[0].element[0].code = #SCH
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #status

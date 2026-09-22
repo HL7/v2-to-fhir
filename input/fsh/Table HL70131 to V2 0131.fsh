@@ -1,4 +1,4 @@
-// HL7 Concept Map_ ContactRole - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ ContactRole - Sheet1.csv
 Instance: TableHL70131ToV20131
 InstanceOf: ConceptMap
 Title: "Table HL70131 to V2 0131 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70131 to V2 0131.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1IKIju2kedkokH5NGLWUlR1_Xsbdcplfb3wInd-W2lFE/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1AJubmSwsrT1Cv6t7U0PhL2sO9goySGiDx0B0QeFrmoE/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0131"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0131"
 * group[0].element[0].code = #E

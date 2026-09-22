@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ TXA[DocumentReference] - Sheet1.csv
+// HL7 Segment - FHIR E2_ TXA[DocumentReference] - Sheet1.csv
 Instance: SegmentTXAToDocumentReference
 InstanceOf: ConceptMap
 Title: "Segment TXA to DocumentReference Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment TXA to DocumentReference.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1KG7hMdxhhmXcRL12IJz_e8OAf-6iMACovo6KtsM1Tpk/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1a0yUBzz0itH9DXlsqI4LHi33Mc3soJDLi1PIXOp9VJQ/edit?gid=0#gid=0"
 * group[0].element[0].code = #TXA-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

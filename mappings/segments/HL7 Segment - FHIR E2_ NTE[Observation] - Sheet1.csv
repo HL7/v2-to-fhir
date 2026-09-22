@@ -1,0 +1,12 @@
+HL7 v2,,,,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,NTE-1,Set ID,SI,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+2,NTE-2,Source of Comment,ID,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+3,NTE-3,Comment,FT,0,-1,"F-R4, F-R6",,,,,note.text,,markdown,1,1,,,,,
+4,NTE-4,Comment Type,CWE,0,1,"F-R4, F-R6",,,,,,extension??-noteType,CodeableConcept,0,1,CWE[CodeableConcept],CommentType,,,
+5,NTE-5,Entered By,XCN,0,1,"F-R4, F-R6",,,,,note.authorReference(Practitioner),,Reference(Practitioner),0,1,XCN[Practitioner],,,,
+6,NTE-6,Entered Date/Time,DTM,0,1,"F-R4, F-R6",,,,,note.time,,dateTime,0,1,,,,,
+7,NTE-7,Effective Start Date ,DTM,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+8,NTE-8,Expiration Date,DTM,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+9,NTE-9,Coded Comment,CWE,0,-1,"F-R4, F-R6",,,,,,,,,,,,,,

@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ ED[Attachment] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ ED[Attachment] - Sheet1.csv
 Instance: DatatypeEDToAttachment
 InstanceOf: ConceptMap
 Title: "Datatype ED to Attachment Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype ED to Attachment.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1SGCbdWUV21fClCmnt3zNqOMzeV5Bt2FcBIoO7eP51YM/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1jYafiUR-ljmC5alRc7PXJtETnAbDVrl0Q1qkJP-iyvE/edit?gid=0#gid=0"
 * group[0].element[0].code = #ED.2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

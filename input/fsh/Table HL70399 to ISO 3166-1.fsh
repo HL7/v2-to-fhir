@@ -1,4 +1,4 @@
-// HL7 Concept Map_ CountryCode - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ CountryCode - Sheet1.csv
 Instance: TableHL70399ToISO31661
 InstanceOf: ConceptMap
 Title: "Table HL70399 to ISO 3166-1 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70399 to ISO 3166-1.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1LMZem4sRx927Ye02ZYEOCDHjjgVzdCcF5NIr7-Wfj-o/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1R7g9C3CbISzhjrWl4fZdvcWBAMeulUXUWcU_fY2vwJQ/edit?gid=0#gid=0"
 * group[0].source = "urn:iso:std:iso:3166"
 * group[0].target = "urn:iso:std:iso:3166"
 * group[0].element[0].code = #AFG

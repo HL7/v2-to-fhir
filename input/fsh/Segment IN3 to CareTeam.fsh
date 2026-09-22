@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ IN3[CareTeam] - Sheet1.csv
+// HL7 Segment - FHIR E2_ IN3[CareTeam] - Sheet1.csv
 Instance: SegmentIN3ToCareTeam
 InstanceOf: ConceptMap
 Title: "Segment IN3 to CareTeam Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment IN3 to CareTeam.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kWvcYxTaofNaqq5k5qjsqBEQRsjGGKiwAyCoTc8ADhY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1RknxMT9MvJDfUXKsnDaYgZwD-gJkHOP2Wsedb8KYlwQ/edit?gid=0#gid=0"
 * group[0].element[0].code = #IN3-21
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

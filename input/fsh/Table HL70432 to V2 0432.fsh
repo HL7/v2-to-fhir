@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AdmissionLevelOfCareCode - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AdmissionLevelOfCareCode - Sheet1.csv
 Instance: TableHL70432ToV20432
 InstanceOf: ConceptMap
 Title: "Table HL70432 to V2 0432 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70432 to V2 0432.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Va5F4KJWOsdZ02fAh_LpIR_FBhHn99uJnNqxGoaFcnc/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1zCXtNpsyzmGnFX8u2BSDOOK-jOpHj2SV9b6n2rDXFcM/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0432"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0432"
 * group[0].element[0].code = #AC

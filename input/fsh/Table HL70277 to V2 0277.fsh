@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AppointmentTypeCodes - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AppointmentTypeCodes - Sheet1.csv
 Instance: TableHL70277ToV20277
 InstanceOf: ConceptMap
 Title: "Table HL70277 to V2 0277 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70277 to V2 0277.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1LctuGxG7IDDNuMCS_L4usmZhP49YpqTl6Lx59FmeIcA/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/18GWnHX1hWLkPpWRfcMyPWzyYp0EliLZNY7wZ48MpKyw/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0277"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0277"
 * group[0].element[0].code = #Normal

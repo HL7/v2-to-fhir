@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ SCH[Provenance] - Sheet1.csv
+// HL7 Segment - FHIR E2_ SCH[Provenance] - Sheet1.csv
 Instance: SegmentSCHToProvenance
 InstanceOf: ConceptMap
 Title: "Segment SCH to Provenance Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment SCH to Provenance.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1s9NknTF0KLMmFa3HWUuv4oCHMD4rJr6u2Sfzn4x-SF4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/11RPa9urtjpjC8hqgXflEvV0rKYagza48wlM9ZvN-ZAg/edit?gid=0#gid=0"
 * group[0].element[0].code = #SCH-20
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

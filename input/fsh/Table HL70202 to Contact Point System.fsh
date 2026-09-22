@@ -1,4 +1,4 @@
-// HL7 Concept Map_ TelecommunicationEquipmentType - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ TelecommunicationEquipmentType - Sheet1.csv
 Instance: TableHL70202ToContactPointSystem
 InstanceOf: ConceptMap
 Title: "Table HL70202 to Contact Point System Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70202 to Contact Point System.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1FhoR5oxEWdHmpR5S0_wYPstdy1lwv7rL-JWJu_DE_Vs/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Nrn30pTmyKKLrf74uFYXQNDIp55ru-rqVhGnDa4RuX0/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0202"
 * group[0].target = "http://hl7.org/fhir/contact-point-system"
 * group[0].element[0].code = #PH

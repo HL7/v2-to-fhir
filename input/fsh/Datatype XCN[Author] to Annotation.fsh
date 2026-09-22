@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ XCN[Annotation-Author] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ XCN[Annotation-Author] - Sheet1.csv
 Instance: DatatypeXCNAuthorToAnnotation
 InstanceOf: ConceptMap
 Title: "Datatype XCN [Author] to Annotation Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype XCN[Author] to Annotation.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1PdQh4b6-1m2cQM1qNKGWxwaGBWpULUPp-8zq7ZMvwV8/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1FHnqeasjrR-j4-etzxMG5PfYidVU-lPdNPxRbBQz14o/edit?gid=0#gid=0"
 * group[0].element[0].code = #XCN.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

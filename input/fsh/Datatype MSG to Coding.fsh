@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ MSG[Coding] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ MSG[Coding] - Sheet1.csv
 Instance: DatatypeMSGToCoding
 InstanceOf: ConceptMap
 Title: "Datatype MSG to Coding Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype MSG to Coding.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1_JTzM3A-qTbPJfspjEO-VB0Bmx3zoxQz_E2mKUAB4lM/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1FC7wUvzos0dRQhQyMX08pvm_YwrqFM89tpyidfkWj7c/edit?gid=0#gid=0"
 * group[0].element[0].code = #MSG
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #display

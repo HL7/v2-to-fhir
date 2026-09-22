@@ -1,4 +1,4 @@
-// HL7 Concept Map_ OrderControlCode[ServiceRequest.status] - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ OrderControlCode[ServiceRequest.status] - Sheet1.csv
 Instance: TableHL70119ToRequestStatus
 InstanceOf: ConceptMap
 Title: "Table HL70119 to Request Status Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70119 to Request Status.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1-M3ehfvgrNyOwWBIP3--KMEN6A0vi90W-hnkdrUIYIg/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Lg4J-IxmvEnObRv-3upLIJIJZfEXjPz3zTZplsNI2q8/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0119"
 * group[0].target = "http://hl7.org/fhir/request-status"
 * group[0].element[0].code = #AF

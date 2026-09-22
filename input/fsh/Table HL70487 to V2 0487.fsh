@@ -1,4 +1,4 @@
-// HL7 Concept Map_ SpecimenType - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ SpecimenType - Sheet1.csv
 Instance: TableHL70487ToV20487
 InstanceOf: ConceptMap
 Title: "Table HL70487 to V2 0487 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70487 to V2 0487.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1lJmLyEs1rNyvr4Xepf5qTCJKQ_nHmeBMANqafle4Hpc/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1YDc-3RibqNu2aSs1oBPFUkdlHWpJPQJEtSMLvuB5Oyc/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0487"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0487"
 * group[0].element[0].code = #ABS

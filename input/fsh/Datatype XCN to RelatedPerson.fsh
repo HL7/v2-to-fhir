@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ XCN[RelatedPerson] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ XCN[RelatedPerson] - Sheet1.csv
 Instance: DatatypeXCNToRelatedPerson
 InstanceOf: ConceptMap
 Title: "Datatype XCN to RelatedPerson Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype XCN to RelatedPerson.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Ecs9dRMCkOSeTlRj8G7PyL_uuv-32UZ_J7fD-JqC5ws/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1S3nT_2btr6SD5dhlvS-9zmPn1Jx1rXtSUhdgmVn6nNI/edit?gid=0#gid=0"
 * group[0].element[0].code = #XCN.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

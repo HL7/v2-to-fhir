@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AllergySeverity[AllergyIntolerance.reaction.severity] - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AllergySeverity[AllergyIntolerance.reaction.severity] - Sheet1.csv
 Instance: TableHL70128ToReactionEventSeverity
 InstanceOf: ConceptMap
 Title: "Table HL70128 to Reaction Event Severity Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70128 to Reaction Event Severity.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1sMIR0cGVDt34suaYtk-yH0DA6lVdpV3yrthqOcZLOKg/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1j6np7pEWT2_X4V715eTDoY0QcWIRHoFduIhQ1nTKg18/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0128"
 * group[0].target = "http://hl7.org/fhir/reaction-event-severity"
 * group[0].element[0].code = #SV

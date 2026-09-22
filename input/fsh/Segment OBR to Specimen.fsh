@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ OBR[Specimen] - Sheet1.csv
+// HL7 Segment - FHIR E2_ OBR[Specimen] - Sheet1.csv
 Instance: SegmentOBRToSpecimen
 InstanceOf: ConceptMap
 Title: "Segment OBR to Specimen Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment OBR to Specimen.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1BWxCsh7UjOJwv1_ARyLJe4cvU_gybW5MdSXTBcTa44c/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1c6QA5xIKk-KOQMLTR-7TXtYay2wMVli5iG9bHUkdYXI/edit?gid=0#gid=0"
 * group[0].element[0].code = #OBR-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

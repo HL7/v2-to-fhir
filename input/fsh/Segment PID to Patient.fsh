@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PID[Patient] - PID.csv
+// HL7 Segment - FHIR E2_ PID[Patient] - PID.csv
 Instance: SegmentPIDToPatient
 InstanceOf: ConceptMap
 Title: "Segment PID to Patient Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PID to Patient.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1_MOAJOykRWct_9cBG-EcPcWSpSObQFLboPB579DIoAI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1mCS_rIWnjnsQA3jay2TFwy9rVwRCMPuHy5Fp-LBLFLw/edit?gid=0#gid=0"
 * group[0].element[0].code = #PID-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

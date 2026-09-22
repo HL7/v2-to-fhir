@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CQ[Quantity] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CQ[Quantity] - Sheet1.csv
 Instance: DatatypeCQToQuantity
 InstanceOf: ConceptMap
 Title: "Datatype CQ to Quantity Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CQ to Quantity.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Hb0fSXbCl6EUvwRSOjAz0TdYTvgphzcfkc6iQjGPLGo/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1IUiddDkzI0eot4tuK5MqK-SkquY1t7PbggtpOndyigQ/edit?gid=0#gid=0"
 * group[0].element[0].code = #CQ.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

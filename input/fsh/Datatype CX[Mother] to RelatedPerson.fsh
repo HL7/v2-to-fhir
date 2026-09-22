@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CX[RelatedPerson-Mother] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CX[RelatedPerson-Mother] - Sheet1.csv
 Instance: DatatypeCXMotherToRelatedPerson
 InstanceOf: ConceptMap
 Title: "Datatype CX [Mother] to RelatedPerson Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CX[Mother] to RelatedPerson.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1_Wxt3nDxMfR946FnjQSNPgPSNgxh7mHPeHooHGX2jeU/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1txeYrn8es6OXaL7TP3v9At6fmvDzQv1VHR414RjZEPU/edit?gid=0#gid=0"
 * group[0].element[0].code = #CX.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

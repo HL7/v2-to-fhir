@@ -1,4 +1,4 @@
-// HL7 Concept Map_ LivingWillCode - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ LivingWillCode - Sheet1.csv
 Instance: TableHL70315ToV20315
 InstanceOf: ConceptMap
 Title: "Table HL70315 to V2 0315 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70315 to V2 0315.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13BsPLL6w_cY2WpvpikQcwD1T4X5Vg7cm94BNNwLwp5Q/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Fblun9EmSAfFGPjgW9OgI5FxMkX-tBYLDrg21D-o1UY/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0315"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0315"
 * group[0].element[0].code = #Y

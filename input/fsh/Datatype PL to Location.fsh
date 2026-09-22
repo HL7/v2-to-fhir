@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ PL[Location] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ PL[Location] - Sheet1.csv
 Instance: DatatypePLToLocation
 InstanceOf: ConceptMap
 Title: "Datatype PL to Location Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype PL to Location.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/17b4wqJOzGieNBSdHYZt3ymKucsRDd_h8leaiz_umG7E/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1OMcSbU8bvoU_lEyjQNovJsD71uup98CbP3b88MEt6O0/edit?gid=0#gid=0"
 * group[0].element[0].code = #PL.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

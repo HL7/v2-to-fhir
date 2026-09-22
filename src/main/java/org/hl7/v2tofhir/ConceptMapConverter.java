@@ -30,8 +30,16 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
         super(ConceptMapInput.class, sourceUrl);
         load(f);
         String name = f.getName().toLowerCase().replaceAll("[^a-z_ ]+","");
-        String link = StringUtils.substringBetween(name, "map_ ", " ");
-        if (link == null) {
+        // The table name follows the last underscore, regardless of whether the sheet
+        // name is "... Concept Map_ <table>..." (pre-E2) or "... Concept Map - FHIR
+        // E2_ <table>..." (E2) - both leave the table name immediately after the last
+        // "_" once digits/hyphens/brackets are stripped above. Anchoring on the literal
+        // "map_ " (as before) broke once sheet titles started inserting a FHIR version
+        // qualifier between "Map" and the table name.
+        String afterLastUnderscore = StringUtils.substringAfterLast(name, "_");
+        String link = afterLastUnderscore == null
+            ? null : StringUtils.substringBefore(afterLastUnderscore.trim(), " ");
+        if (StringUtils.isBlank(link)) {
             warn("link is null for: %s%n", 0, name);
             return;
         }

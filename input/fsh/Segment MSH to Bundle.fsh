@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ MSH[Bundle] - Sheet1.csv
+// HL7 Segment - FHIR E2_ MSH[Bundle] - Sheet1.csv
 Instance: SegmentMSHToBundle
 InstanceOf: ConceptMap
 Title: "Segment MSH to Bundle Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment MSH to Bundle.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1oOy6JW4Mv5VL8DsoA05bYZCUa1JqP4GCYNPF5GJTLxQ/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1r8tthis8-OqQonlkUzuPASiTDvufr040fM8S2_U7W64/edit?gid=0#gid=0"
 * group[0].element[0].code = #MSH
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #type

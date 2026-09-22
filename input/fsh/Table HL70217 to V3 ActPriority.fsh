@@ -1,4 +1,4 @@
-// HL7 Concept Map_ EncounterPriority - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ EncounterPriority - Sheet1.csv
 Instance: TableHL70217ToV3ActPriority
 InstanceOf: ConceptMap
 Title: "Table HL70217 to V3 ActPriority Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70217 to V3 ActPriority.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/12v60aOPnLth4NipsjZyT9ibz5E7JSLgSsPMop2U1JgA/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kTeWdscEkE625Z5xSoPEV5-FIXV56C8LJo7OT383-lM/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0217"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v3-ActPriority"
 * group[0].element[0].code = #1

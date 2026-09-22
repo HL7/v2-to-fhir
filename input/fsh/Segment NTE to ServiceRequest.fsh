@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ NTE[ServiceRequest] - NTE.csv
+// HL7 Segment - FHIR E2_ NTE[ServiceRequest] - NTE.csv
 Instance: SegmentNTEToServiceRequest
 InstanceOf: ConceptMap
 Title: "Segment NTE to ServiceRequest Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment NTE to ServiceRequest.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ycH9LSI0xRyZqiRmh233wdpmJ-MyjzPFe4015X2TDDY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/16Bq_InrfxPLht_sxwA9KZJfCxlI1Nf9We5owoWvjtms/edit?gid=0#gid=0"
 * group[0].element[0].code = #NTE-3
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

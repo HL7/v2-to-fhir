@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AllergenType[AllergyIntoleranceCategory] - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AllergenType[AllergyIntoleranceCategory] - Sheet1.csv
 Instance: TableHL70127ToAllergyIntoleranceCategory
 InstanceOf: ConceptMap
 Title: "Table HL70127 to Allergy Intolerance Category Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70127 to Allergy Intolerance Category.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kRIGg82psj97HFzQx5-t34LbHBzhAQzFqM1BT2uNVSI/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Azb-varHwiRqggzLT5M4xkwEu7yjHj3P5mU7_xtmkNs/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0127"
 * group[0].target = "http://hl7.org/fhir/allergy-intolerance-category"
 * group[0].element[0].code = #DA

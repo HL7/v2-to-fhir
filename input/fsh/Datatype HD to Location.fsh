@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ HD[Location] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ HD[Location] - Sheet1.csv
 Instance: DatatypeHDToLocation
 InstanceOf: ConceptMap
 Title: "Datatype HD to Location Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype HD to Location.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/126xjG_YCcKYzO7f10dtlBOBUMNZZXkteoE2zNu-_J40/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1iSE7WMUgX-WB5LaVzLKAUncOVREB0-s8Mji0QEoECrQ/edit?gid=0#gid=0"
 * group[0].element[0].code = #HD.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

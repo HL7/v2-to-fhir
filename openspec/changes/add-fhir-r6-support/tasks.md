@@ -117,9 +117,43 @@
   real `openspec/changes/add-fhir-r6-support/` instead of "not created yet"); no
   `mappings/README.md` change needed here, since this mechanism is internal to `Convert`'s
   parsing, not part of the download/refresh commands that file documents.
-- [ ] 3.6 Re-run the Stage 1 master-inventory refresh for real and pull a full corpus
+- [x] 3.6 Re-run the Stage 1 master-inventory refresh for real and pull a full corpus
   refresh; confirm no misparsing/regressions across the whole mapping corpus with the new
-  layout-detection logic in place.
+  layout-detection logic in place. Refreshed all four master inventory files (`-m`) and
+  the full "ready" corpus (296 artifact sheets, matching CI's own `-r` invocation) for
+  real. Found and fixed two real issues along the way, neither in the splicing logic
+  itself:
+  - `ConceptMapConverter`'s constructor derived each table's vocabulary-link key by
+    anchoring on the literal substring `"map_ "` in the lowercased filename - broken by
+    the sheets' new naming convention, which inserts `"- FHIR E2_"` between "Map" and the
+    table name, so `"map_ "` no longer appears anywhere. This silently failed vocabulary
+    linking for every single Concept Map file (296/296), which cascaded into ~260 spurious
+    "Missing vocabulary mapping" warnings on Segment/Data Type rows. Fixed by extracting
+    the table name from *after the last underscore* instead, which works under both the
+    old and new naming conventions.
+  - `ConverterImpl.load()`'s artifact-type detection required an exact `"HL7 <Type>"`
+    substring match, inconsistent with `Convert.getType()`'s more lenient (no "HL7 "
+    required, case-insensitive) dispatch used to pick the right `*Converter` subclass in
+    the first place. One live sheet (`Data Type - FHIR E2_ DLN[Identifier]`) was titled
+    without the "HL7 " prefix - correctly dispatched to `DatatypeConverter` by
+    `Convert.getType()`, but `ConverterImpl.load()` then left `type` null, crashing
+    `getFHIRDescription()` with an NPE and aborting map-table generation for the *entire*
+    run. Fixed by matching leniently in both places, consistently.
+
+  Also found (not a code issue) two content typos in live sheets - `ORC[ServiceRequest]`
+  and `OBR[ServiceRequest]` each referenced `EIP[Identifier-FliierAssignedOrderNumber]`/
+  `EIP[Identifier-PlaceAssignedOrderNumber]`, typo'd against the real
+  `EIP[Identifier-FillerAssignedIdentifier]`/`EIP[Identifier-PlacerAssignedIdentifier]`
+  data type sheets - plus the DLN naming issue above. All three fixed live at the source
+  by the user during this session, and re-verified by re-downloading and reconverting.
+
+  Final clean run: **294 files processed, 0 errors, 86 warnings, exit code 0** (baseline
+  before this refresh was 292/0/83 on stale pre-E2 data - the small deltas are genuine
+  upstream content growth, not regressions). Confirmed zero version-tag leakage
+  (`grep -rc "F-R4\|F-R6" input/fsh/` → 0 matches) across all 294 generated files, and the
+  large `mappings/`/`input/fsh/` diff (814 files) is overwhelmingly the R4→E2 sheet-title
+  rename applied wholesale across the corpus (delete-old-name + add-new-name pairs for the
+  same artifact), not content loss - spot-verified against several samples.
 - [ ] 3.7 Remove the Stage 1.6 CI guard on `update-csvs.yaml` now that `Convert` safely
   handles both old- and new-layout sheets, and confirm a real push exercises it cleanly.
 

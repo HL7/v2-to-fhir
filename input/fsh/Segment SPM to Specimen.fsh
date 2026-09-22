@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ SPM[Specimen] - SPM.csv
+// HL7 Segment - FHIR E2_ SPM[Specimen] - SPM.csv
 Instance: SegmentSPMToSpecimen
 InstanceOf: ConceptMap
 Title: "Segment SPM to Specimen Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment SPM to Specimen.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1RhRXhpavSHLckCYV2bJg_b0onlcjMTKLGbCb7ocsfCo/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1qoQ7HfkoXRZ0mQ0kM1SsP4B05-6yWwKH6yEAbiJgDfw/edit?gid=0#gid=0"
 * group[0].element[0].code = #SPM-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"
@@ -401,6 +401,8 @@ Usage: #definition
 * group[0].element[19].target.extension[0].extension[1].valueInteger = 0
 * group[0].element[19].target.extension[0].extension[2].url = "cardinalityMax"
 * group[0].element[19].target.extension[0].extension[2].valueInteger = 1
+* group[0].element[19].target.extension[0].extension[3].url = "assignment"
+* group[0].element[19].target.extension[0].extension[3].valueString = "\"STN\""
 * group[0].element[19].target.display = "identifier[3].type.coding.code"
 * group[0].element[20].code = #SPM-32
 * group[0].element[20].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

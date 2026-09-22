@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CX[Identifier] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CX[Identifier] - Sheet1.csv
 Instance: DatatypeCXToIdentifier
 InstanceOf: ConceptMap
 Title: "Datatype CX to Identifier Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CX to Identifier.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1wZsWZMw0kBpu-oWB1U3iljL0m_7PLGM9tFfSqBUoRU4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1haDgUNWUIcCXc_4Qdv8L8v3YCfMQGsFfiGEDj3YtMNE/edit?gid=0#gid=0"
 * group[0].element[0].code = #CX.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

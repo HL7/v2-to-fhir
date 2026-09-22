@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CWE[Identifier] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CWE[Identifier] - Sheet1.csv
 Instance: DatatypeCWEToIdentifier
 InstanceOf: ConceptMap
 Title: "Datatype CWE to Identifier Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CWE to Identifier.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1uMJal5GjmIC2nJcjd6m0kDY0o7iuOb9O3oSwTjpHtYs/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1NgS3CDO8xwlM5gadBkJcitAx5k3x2wvbBOTlo8eezSQ/edit?gid=0#gid=0"
 * group[0].element[0].code = #CWE.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

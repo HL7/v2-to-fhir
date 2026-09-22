@@ -1,4 +1,4 @@
-// HL7 Concept Map_ DegreeLicenseCertificate - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ DegreeLicenseCertificate - Sheet1.csv
 Instance: TableHL70360ToV20360
 InstanceOf: ConceptMap
 Title: "Table HL70360 to V2 0360 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70360 to V2 0360.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1hwElMvBeMgqshNl5Wm_YxToPC-szr8rCF90DT6h-Kzk/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ak3KrdmgvAfAUDZM8DZxU54MtGLhcKcJedRz-cN868I/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0360"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0360"
 * group[0].element[0].code = #PN

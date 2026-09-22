@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ HD[Device] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ HD[Device] - Sheet1.csv
 Instance: DatatypeHDToDevice
 InstanceOf: ConceptMap
 Title: "Datatype HD to Device Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype HD to Device.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/17DkmOwfcOoVQObJa39jY65XiEbXR7ozzvlgw6S_S0a4/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Y7YAW_rfHEuYayCan5KNJ2i_p037dilDEnm-KBMgQTA/edit?gid=0#gid=0"
 * group[0].element[0].code = #HD.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

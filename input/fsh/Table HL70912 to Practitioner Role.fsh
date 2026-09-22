@@ -1,4 +1,4 @@
-// HL7 Concept Map_ Participation - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ Participation - Sheet1.csv
 Instance: TableHL70912ToPractitionerRole
 InstanceOf: ConceptMap
 Title: "Table HL70912 to Practitioner Role Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70912 to Practitioner Role.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1rbjK6-XxY2BoCpVRWy_Mrvkl9PTk_8zw0GIeng8zz-4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1hCx2gfyZB5Z2KGydWUUVq3cizEzRDGJJfolsZnWvU9s/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0912"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/practitioner-role"
 * group[0].element[0].code = #PH

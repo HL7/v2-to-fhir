@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ NM[positiveInt] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ NM[positiveInt] - Sheet1.csv
 Instance: DatatypeNMToPositiveInt
 InstanceOf: ConceptMap
 Title: "Datatype NM to positiveInt Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype NM to positiveInt.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1I1IbZW4etDX-TRXqeYr3mmLJZq55pILgoOOBx4gwBJU/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1QIu57t0MFUQArwXXwt--6iMBDf5wfgdiCHf1tQZajzU/edit?gid=0#gid=0"
 * group[0].element[0].code = #NM.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -1,4 +1,4 @@
-// HL7 Concept Map_ Religion - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ Religion - Sheet1.csv
 Instance: TableHL70006ToV3ReligiousAffiliation
 InstanceOf: ConceptMap
 Title: "Table HL70006 to V3 ReligiousAffiliation Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70006 to V3 ReligiousAffiliation.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1y4Y1YDT48qL5Rqdob7hoyghJx70ks0qp68-hcOrdgcs/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1XHd8Z1ME5k0OT097_i7MxmBSHO90HyVehucZ8GjMnHU/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0006"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"
 * group[0].element[0].code = #A

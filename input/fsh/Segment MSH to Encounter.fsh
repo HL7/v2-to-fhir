@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ MSH[Encounter] - Sheet1.csv
+// HL7 Segment - FHIR E2_ MSH[Encounter] - Sheet1.csv
 Instance: SegmentMSHToEncounter
 InstanceOf: ConceptMap
 Title: "Segment MSH to Encounter Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment MSH to Encounter.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1fXNLyF4mpBOtnmC2Y3ZvuBPf9UwL3pXWsH9mPADqn4g/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1rwcdfZv4aAqSwsHQnTrd4dJV2k0ELvYtoxOiDU1V_S0/edit?gid=0#gid=0"
 * group[0].element[0].code = #MSH-9
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

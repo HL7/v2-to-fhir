@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ EI[Coding] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ EI[Coding] - Sheet1.csv
 Instance: DatatypeEIToCoding
 InstanceOf: ConceptMap
 Title: "Datatype EI to Coding Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype EI to Coding.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1VUiS1wxVE8cPLeWbJs8HP3rjuwlc9Dg4fSBLsHMKWDg/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1_WR9TS7IW4J3ILfCP_Q-LvWf79QZ2zgTq_55iyKKpfk/edit?gid=0#gid=0"
 * group[0].element[0].code = #EI.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

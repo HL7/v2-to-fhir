@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PV1[Patient] - Sheet1.csv
+// HL7 Segment - FHIR E2_ PV1[Patient] - Sheet1.csv
 Instance: SegmentPV1ToPatient
 InstanceOf: ConceptMap
 Title: "Segment PV1 to Patient Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PV1 to Patient.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1SeTn6m72yUh4hho7jqN-YmuHbnO6LlGlZur7BVrpfrI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1EeX--_OO0cj7-Tlkt1gSlv9o1fP6G9Cvcez3R-stlx4/edit?gid=0#gid=0"
 * group[0].element[0].code = #PV1-16
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

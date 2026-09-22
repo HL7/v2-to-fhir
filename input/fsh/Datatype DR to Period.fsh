@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ DR[Period] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ DR[Period] - Sheet1.csv
 Instance: DatatypeDRToPeriod
 InstanceOf: ConceptMap
 Title: "Datatype DR to Period Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype DR to Period.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Y-KQhTaOTH5XsQKiQkYsF_DVBA0BRTNH3lDXyUDJlyY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1x2CU_0pK54x6FuGa5ZZdHfhvxZh8g1TcA-HZDfHYFZs/edit?gid=0#gid=0"
 * group[0].element[0].code = #DR.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

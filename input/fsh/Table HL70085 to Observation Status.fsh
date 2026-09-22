@@ -1,4 +1,4 @@
-// HL7 Concept Map_ ObservationResultStatusCodesInterpretation - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ ObservationResultStatusCodesInterpretation - Sheet1.csv
 Instance: TableHL70085ToObservationStatus
 InstanceOf: ConceptMap
 Title: "Table HL70085 to Observation Status Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70085 to Observation Status.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1RsA6SEYsjfrR6TbwY1JHBetrPyRED2RDzTa1jvHRvX0/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Im93ho2a_F6VXb68D-J0fdBR1bGwUxGMjYO2eRqnn3E/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0085"
 * group[0].target = "http://hl7.org/fhir/observation-status"
 * group[0].element[0].code = #A

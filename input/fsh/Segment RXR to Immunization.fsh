@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ RXR[Immunization] - RXR.csv
+// HL7 Segment - FHIR E2_ RXR[Immunization] - RXR.csv
 Instance: SegmentRXRToImmunization
 InstanceOf: ConceptMap
 Title: "Segment RXR to Immunization Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment RXR to Immunization.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ts04HItJMXe0nBzWKvmwibsLHYPvgokYl6Kn4Q_OMlY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1PgHA4XaBOEkv_oUo4q8QkGsNbk1B5dhGFpegkqglcU8/edit?gid=0#gid=0"
 * group[0].element[0].code = #RXR-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

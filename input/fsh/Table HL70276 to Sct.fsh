@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AppointmentReasonCodes - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AppointmentReasonCodes - Sheet1.csv
 Instance: TableHL70276ToSct
 InstanceOf: ConceptMap
 Title: "Table HL70276 to Sct Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70276 to Sct.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13B4B6YFRgukI2tipC7QOJ1J8i4iNJ2aYzQRuirCyFBg/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/11A0gDFUC3OtN0niZ8PTAYzou5pWS8UTvyP-rEPe7M8Q/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0276"
 * group[0].target = "http://snomed.info/sct"
 * group[0].element[0].code = #ROUTINE

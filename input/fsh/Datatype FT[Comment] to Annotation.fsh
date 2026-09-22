@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ FT[Annotation-Comment] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ FT[Annotation-Comment] - Sheet1.csv
 Instance: DatatypeFTCommentToAnnotation
 InstanceOf: ConceptMap
 Title: "Datatype FT [Comment] to Annotation Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype FT[Comment] to Annotation.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1dHH3qkL9xxzPYl4gMeyjI2IZgTK9OaR1ssIVZyxsAEg/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/16kcN5p4AFz31K0ONy_H2vCfqeJjj_jdM9gpmbnAZ5T4/edit?gid=0#gid=0"
 * group[0].element[0].code = #FT-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

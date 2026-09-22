@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PID[Account] - Sheet1.csv
+// HL7 Segment - FHIR E2_ PID[Account] - Sheet1.csv
 Instance: SegmentPIDToAccount
 InstanceOf: ConceptMap
 Title: "Segment PID to Account Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PID to Account.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1i1A5E-IkTnWarRsHoz-ii_0m2tYyhRjCe1TEodq18fA/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1fx6jQaGRlyMlIhjGr_vW4ibe3obmGo2O8x8ZfdOvoAo/edit?gid=0#gid=0"
 * group[0].element[0].code = #PID
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #status

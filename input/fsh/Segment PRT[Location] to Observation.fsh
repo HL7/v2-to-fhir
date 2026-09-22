@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PRT[Observation-Location] - Sheet1.csv
+// HL7 Segment - FHIR E2_ PRT[Observation-Location] - Sheet1.csv
 Instance: SegmentPRTLocationToObservation
 InstanceOf: ConceptMap
 Title: "Segment PRT [Location] to Observation Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PRT[Location] to Observation.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1gkOgbr2gquM9h-9ObweIkFs4PaljwESWO-N7iueGtOY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1CuyUNSFpOOeAfPZVOOeSTRTan4Z-4McypYErpb4Dr9c/edit?gid=0#gid=0"
 * group[0].element[0].code = #PRT-9
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

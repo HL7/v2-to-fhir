@@ -1,0 +1,13 @@
+HL7 v2,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+,,,"F-R4, F-R6",,,,,home,,Home,http://terminology.hl7.org/CodeSystem/discharge-disposition,,
+,,,"F-R4, F-R6",,,,,alt-home,,Alternative home,http://terminology.hl7.org/CodeSystem/discharge-disposition,,
+,,,"F-R4, F-R6",,,,,other-hcf,,Other healthcare facility,http://terminology.hl7.org/CodeSystem/discharge-disposition,,
+,,,"F-R4, F-R6",,,,,hosp,,Hospice,http://terminology.hl7.org/CodeSystem/discharge-disposition,,
+,,,"F-R4, F-R6",,,,,long,,Long-term care,http://terminology.hl7.org/CodeSystem/discharge-disposition,,
+,,,"F-R4, F-R6",,,,,aadvice,,Left against advice,http://terminology.hl7.org/CodeSystem/discharge-disposition,,
+,,,"F-R4, F-R6",,,,,exp,,Expired,http://terminology.hl7.org/CodeSystem/discharge-disposition,,
+,,,,,,,,psy,,Psychiatric hospital,http://terminology.hl7.org/CodeSystem/discharge-disposition,,
+,,,,,,,,rehab,,Rehabilitation,http://terminology.hl7.org/CodeSystem/discharge-disposition,,
+,,,,,,,,snf,,Skilled nursing facility,http://terminology.hl7.org/CodeSystem/discharge-disposition,,
+,,,,,,,,oth,,Other,http://terminology.hl7.org/CodeSystem/discharge-disposition,,

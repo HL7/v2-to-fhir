@@ -1,0 +1,9 @@
+HL7 v2,,,,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments,,JIRA REF
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,,,
+1,RXR-1,Route,CWE,1,1,"F-R4, F-R6",,,,,route,,CodeableConcept,0,1,CWE[CodeableConcept],RouteOfAdministration,,,,,
+2,RXR-2,Administration Site,CWE,0,1,"F-R4, F-R6",,,,,site,,CodeableConcept,0,1,CWE[CodeableConcept],BodyParts,,,,,
+3,RXR-3,Administration Device,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,,,
+4,RXR-4,Administration Method,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,,,
+5,RXR-5,Routing Instruction,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,,,
+6,RXR-6,Administration Site Modifier,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,,,

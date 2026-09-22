@@ -1,0 +1,8 @@
+HL7 v2,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+,,,"F-R4, F-R6",,,,,EXT,,extended courtesy,http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy,,
+,,,"F-R4, F-R6",,,,,NRM,,normal courtesy,http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy,,
+,,,"F-R4, F-R6",,,,,PRF,,professional courtesy,http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy,,
+,,,"F-R4, F-R6",,,,,STF,,staff,http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy,,
+,,,"F-R4, F-R6",,,,,VIP,,very important person,http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy,,
+,,,"F-R4, F-R6",,,,,UNK,,unknown,http://terminology.hl7.org/CodeSystem/v3-NullFlavor,,

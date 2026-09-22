@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ RXO[MedicationRequest] - Sheet1.csv
+// HL7 Segment - FHIR E2_ RXO[MedicationRequest] - Sheet1.csv
 Instance: SegmentRXOToMedicationRequest
 InstanceOf: ConceptMap
 Title: "Segment RXO to MedicationRequest Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment RXO to MedicationRequest.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1IikDPobXAskISQ4b6rkBIBWPhBr02mrB4eUHy6eXzQ0/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1NDfO-FBnTaykjerodaOo6IXRtf23xdj1Nge1spcOX6Y/edit?gid=0#gid=0"
 * group[0].element[0].code = #RXO
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #intent

@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ NTE[DocumentReference] - Sheet1.csv
+// HL7 Segment - FHIR E2_ NTE[DocumentReference] - Sheet1.csv
 Instance: SegmentNTEToDocumentReference
 InstanceOf: ConceptMap
 Title: "Segment NTE to DocumentReference Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment NTE to DocumentReference.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1MUqrAxKoauqgjVAtbRIFrKY3gCMALy7sTe0_LdX7JH4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1rGyFsAZXxxlmePCzlXlm3T84ulZcKVpiWP-TJ9MX9wE/edit?gid=0#gid=0"
 * group[0].element[0].code = #NTE-3
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AdministrationMethod - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AdministrationMethod - Sheet1.csv
 Instance: TableHL70165ToSct
 InstanceOf: ConceptMap
 Title: "Table HL70165 to Sct Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70165 to Sct.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1hCWNjv3S_VkWTC5U7QFbWJIvF-3sm1Vlj12rFkMcPGc/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1pbHMqDWj5teLxWUwmQLEwU8it8XATlfUpPg1BjKDv2c/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0165"
 * group[0].target = "http://snomed.info/sct"
 * group[0].element[0].code = #CH

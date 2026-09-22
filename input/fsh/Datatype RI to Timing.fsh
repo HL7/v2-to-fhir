@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ RI[Timing] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ RI[Timing] - Sheet1.csv
 Instance: DatatypeRIToTiming
 InstanceOf: ConceptMap
 Title: "Datatype RI to Timing Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype RI to Timing.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1CzyaN_QGJDg6RMgwDyhMgwIsEUOek0IKJmt7e_aPCDE/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Gc6H79XkWGTNfP_uz18Dw0rdzN3U6e00QHKimpzpltQ/edit?gid=0#gid=0"
 * group[0].element[0].code = #RI-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

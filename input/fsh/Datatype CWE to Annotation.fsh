@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CWE[Annotation] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CWE[Annotation] - Sheet1.csv
 Instance: DatatypeCWEToAnnotation
 InstanceOf: ConceptMap
 Title: "Datatype CWE to Annotation Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CWE to Annotation.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1iqys8nuFDvOmbxp5CQjvX6FbuqEmZygJaZyp9rShzqA/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1TSqL6FPY8eBJwZ0Yk6CqRE3R6jIcjgg0HHuYazO2i18/edit?gid=0#gid=0"
 * group[0].element[0].code = #CWE
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #text

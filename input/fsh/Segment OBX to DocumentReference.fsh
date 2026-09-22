@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ OBX[DocumentReference] - Sheet1.csv
+// HL7 Segment - FHIR E2_ OBX[DocumentReference] - Sheet1.csv
 Instance: SegmentOBXToDocumentReference
 InstanceOf: ConceptMap
 Title: "Segment OBX to DocumentReference Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment OBX to DocumentReference.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1CqIMtAqzUDiqaBOdyoJ76jPrHCRAVQTlKFxaf1JF07Q/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1v9UdNnekjueMTERaw2Li6XbbLBgcyHLcUN3bj8c8cco/edit?gid=0#gid=0"
 * group[0].element[0].code = #OBX-5
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

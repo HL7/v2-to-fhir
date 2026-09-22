@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AllergenType[AllergyIntoleranceOriginalCategory] - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AllergenType[AllergyIntoleranceOriginalCategory] - Sheet1.csv
 Instance: TableHL70127ToV20127
 InstanceOf: ConceptMap
 Title: "Table HL70127 to V2 0127 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70127 to V2 0127.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1MnZzLYKreOvD41o_OaOfZIhUFF3B-93cAmEcNs_Q9BY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1fLEeFVWdHmxYD0N9u1LX3e_6Y4B8CBJhwPJ2AxLabaI/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0127"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0127"
 * group[0].element[0].code = #DA

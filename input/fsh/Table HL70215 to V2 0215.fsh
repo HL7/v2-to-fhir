@@ -1,4 +1,4 @@
-// HL7 Concept Map_ PublicityCode - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ PublicityCode - Sheet1.csv
 Instance: TableHL70215ToV20215
 InstanceOf: ConceptMap
 Title: "Table HL70215 to V2 0215 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70215 to V2 0215.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Ny3NtsgyW7xToVtjTMO_Zzng9ZZLghgPZdn7dYvcu2g/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1a3Fp8pgh4QfYlKu7pemxvcKeMz28BJt9i69eUYVcDc0/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0215"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0215"
 * group[0].element[0].code = #F

@@ -1,4 +1,4 @@
-// HL7 Concept Map_ OrderType - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ OrderType - Sheet1.csv
 Instance: TableHL70482ToV3RoleCode
 InstanceOf: ConceptMap
 Title: "Table HL70482 to V3 RoleCode Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70482 to V3 RoleCode.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1uTlF1ZBSs6GIksOREp3pcBLGNphcpxOrn5NBBEiRTd4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1s4p7o2RHPxLLY9G4h18uVWzUyHQ1J4T4x6FojJCPEt8/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0482"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 * group[0].element[0].code = #I

@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CWE[Organization] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CWE[Organization] - Sheet1.csv
 Instance: DatatypeCWEToOrganization
 InstanceOf: ConceptMap
 Title: "Datatype CWE to Organization Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CWE to Organization.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1WA2er1u1qS9eHFuGDo_MDZstWxdyg_34YnlohIO2dBU/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1dbN8fjyYvq09FNUvmuquZZL9LcXZNkphznYMYnu0SV8/edit?gid=0#gid=0"
 * group[0].element[0].code = #CWE.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

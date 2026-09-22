@@ -1,4 +1,4 @@
-// HL7 Concept Map_ UniversalIDType - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ UniversalIDType - Sheet1.csv
 Instance: TableHL70301ToV20301
 InstanceOf: ConceptMap
 Title: "Table HL70301 to V2 0301 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70301 to V2 0301.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1YC0HqPfyRswWwvWh_9iHaTECvY8m2vk4DjYl0K56pc0/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/18zK7OEeaDqYUKqPkYMoCyzgbpqgBH0Z2QetE5m5mpDk/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0301"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0301"
 * group[0].element[0].code = #DNS

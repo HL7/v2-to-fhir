@@ -1,0 +1,6 @@
+HL7 v2,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+Y,Yes,HL70136,"F-R4, F-R6",,,,,available,,Available,http://hl7.org/fhir/specimen-status,,
+N,No,HL70136,"F-R4, F-R6",,,,,unavailable,,Unavailable,http://hl7.org/fhir/specimen-status,,
+,,,"F-R4, F-R6",,,,,unsatisfactory,,Unsatisfactory,http://hl7.org/fhir/specimen-status,,
+,,,"F-R4, F-R6",,,,,entered-in-error,,Entered in Error,http://hl7.org/fhir/specimen-status,,

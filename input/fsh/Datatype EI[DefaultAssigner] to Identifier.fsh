@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ EI[Identifier-DefaultAssigner] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ EI[Identifier-DefaultAssigner] - Sheet1.csv
 Instance: DatatypeEIDefaultAssignerToIdentifier
 InstanceOf: ConceptMap
 Title: "Datatype EI [DefaultAssigner] to Identifier Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype EI[DefaultAssigner] to Identifier.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1P-B_L7iPadbO4VD2zcyjUGfEeXtjlYqgUNTd7idvohE/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1eguc6vrshIPdpZvD5BXPBCrilZ3ujAI4RFQVRIepwrw/edit?gid=0#gid=0"
 * group[0].element[0].code = #EI.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

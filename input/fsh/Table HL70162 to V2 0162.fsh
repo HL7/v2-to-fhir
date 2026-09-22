@@ -1,4 +1,4 @@
-// HL7 Concept Map_ RouteOfAdministration - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ RouteOfAdministration - Sheet1.csv
 Instance: TableHL70162ToV20162
 InstanceOf: ConceptMap
 Title: "Table HL70162 to V2 0162 Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70162 to V2 0162.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1JlVL70OZfA5iSB-i4oLScSBH31scFuyI0Abs_88nmzc/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1hrZKwfPGO8ey5vSFeB7pHtXIdFJqlW6lX-NLU-2SxQ8/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0162"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0162"
 * group[0].element[0].code = #AP

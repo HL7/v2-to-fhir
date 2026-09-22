@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CWE[PractitionerRole] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CWE[PractitionerRole] - Sheet1.csv
 Instance: DatatypeCWEToPractitionerRole
 InstanceOf: ConceptMap
 Title: "Datatype CWE to PractitionerRole Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CWE to PractitionerRole.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/17rAsM14GKm-hwj88gnygm2C6lVt_nYnzJ6SR0sM_2qo/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Y2gF2MJ2xtPTkf37pIoJJZ3pwgv3hPrUfwraLAlsfJE/edit?gid=0#gid=0"
 * group[0].element[0].code = #CWE.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

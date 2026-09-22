@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ EI[Identifier-Extension] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ EI[Identifier-Extension] - Sheet1.csv
 Instance: DatatypeEIExtensionToIdentifier
 InstanceOf: ConceptMap
 Title: "Datatype EI [Extension] to Identifier Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype EI[Extension] to Identifier.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1pKB8A1ZmR2uym9H5Isdh8VNvO30t61xpjHBjaUKGaio/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1z_mtv50CJIs8Lq2cnns2VuNcp6ecFfezzOO_WXi9tgQ/edit?gid=0#gid=0"
 * group[0].element[0].code = #EI.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

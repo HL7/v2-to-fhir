@@ -1,4 +1,4 @@
-// HL7 Concept Map_ NameAssemblyOrder - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ NameAssemblyOrder - Sheet1.csv
 Instance: TableHL70444ToV20444
 InstanceOf: ConceptMap
 Title: "Table HL70444 to V2 0444 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70444 to V2 0444.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1d1PTZpzWZPTQ6Ke3fJeirYxfuQu9t1BetnUHq26UDgA/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1PE9Iq8DMR3ZoYvY99RMRCN-bbgDKrWOnl6eijseXjZA/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0444"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0444"
 * group[0].element[0].code = #G

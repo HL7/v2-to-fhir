@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ TQ[Task-ExecutionPeriod] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ TQ[Task-ExecutionPeriod] - Sheet1.csv
 Instance: DatatypeTQExecutionPeriodToTask
 InstanceOf: ConceptMap
 Title: "Datatype TQ [ExecutionPeriod] to Task Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype TQ[ExecutionPeriod] to Task.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1f4PcY0fzBbcg7ewW67TpNGPKDZHMtA8AKRHuRVLrzqc/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1LKWy02JdK1VSDwYK-6daDN-ujDRCl9pGi8nwOVn6YyY/edit?gid=0#gid=0"
 * group[0].element[0].code = #TQ.4
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AddressType[Use] - Sheet1.csv
+// Copy of HL7 Concept Map_ AddressType[Use] - Sheet1.csv
 Instance: TableHL70190ToAddressUse
 InstanceOf: ConceptMap
 Title: "Table HL70190 to Address Use Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70190 to Address Use.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1eJAihkIzcTOd9SY-xoXaboRDdUM6T8Wabi73wurU1hA/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Vnpj8K_Y7pjfjv1TLv1jp7pkYi09DgtEzQ3jnriN3d4/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0190"
 * group[0].target = "http://hl7.org/fhir/address-use"
 * group[0].element[0].code = #BA

@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ RP[Attachment] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ RP[Attachment] - Sheet1.csv
 Instance: DatatypeRPToAttachment
 InstanceOf: ConceptMap
 Title: "Datatype RP to Attachment Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype RP to Attachment.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/14JpjWqo_RG1Q_tYJYpV0__SVyflLsveSVYnlryTaoB0/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1X1-nH4er8Oo7lJHZlhmLsO3cT2ur0FqjTHTbx6rUT1U/edit?gid=0#gid=0"
 * group[0].element[0].code = #RP.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

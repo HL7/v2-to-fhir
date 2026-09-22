@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ OBR[DiagnosticReport] - OBR.csv
+// HL7 Segment - FHIR E2_ OBR[DiagnosticReport] - OBR.csv
 Instance: SegmentOBRToDiagnosticReport
 InstanceOf: ConceptMap
 Title: "Segment OBR to DiagnosticReport Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment OBR to DiagnosticReport.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kd4z6vi8QtN2BqmaAWFJ6tzCnUQzzpybJAVCeqKkzCg/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1B02lNp1GSCY8SiU2FkIDsW_nMyZitrN9dZ4NvEAfaBo/edit?gid=0#gid=0"
 * group[0].element[0].code = #OBR-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

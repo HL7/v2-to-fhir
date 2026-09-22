@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AllowSubstitution - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AllowSubstitution - Sheet1.csv
 Instance: TableHL70161ToV20161
 InstanceOf: ConceptMap
 Title: "Table HL70161 to V2 0161 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70161 to V2 0161.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1giNdFr1kWkyyBeotwZ_o92J5HFKa440vbF8k48mFCcY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1WrAR7Pc1U1Eg7xotwqhs6TmoqFwsGklsYhymdfrRvd8/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0161"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0161"
 * group[0].element[0].code = #N

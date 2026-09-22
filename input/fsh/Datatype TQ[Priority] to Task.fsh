@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ TQ[Task-Priority] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ TQ[Task-Priority] - Sheet1.csv
 Instance: DatatypeTQPriorityToTask
 InstanceOf: ConceptMap
 Title: "Datatype TQ [Priority] to Task Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype TQ[Priority] to Task.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1B_WY_ONY5EEt1t9X-1VZtWokiOOYTL2sgnXy7k8i9Js/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1EcoiuTY0NbZENw-ZKH5-LHB0udx606nr0BEtFNAKoSY/edit?gid=0#gid=0"
 * group[0].element[0].code = #TQ.6
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

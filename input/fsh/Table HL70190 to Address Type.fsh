@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AddressType[Type] - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AddressType[Type] - Sheet1.csv
 Instance: TableHL70190ToAddressType
 InstanceOf: ConceptMap
 Title: "Table HL70190 to Address Type Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70190 to Address Type.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1NwT6PQDhxnzaKcGOdZkioyHlt6WgaZBe_0KM_UJFNxE/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1tUIJls7GYmqa_sBaS0FpangAEUFSf7WDFuPN6GFsDhw/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0190"
 * group[0].target = "http://hl7.org/fhir/address-type"
 * group[0].element[0].code = #M

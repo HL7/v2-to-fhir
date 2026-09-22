@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ RPT[Timing] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ RPT[Timing] - Sheet1.csv
 Instance: DatatypeRPTToTiming
 InstanceOf: ConceptMap
 Title: "Datatype RPT to Timing Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype RPT to Timing.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1C6fGBJDwx5EkYnOwYNvwuDmKsb55pCVWW3Odn9QysIQ/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1BvcqMVoM1DmBY6pjWBtOQ8YuLUnwvCkvoIGlecbh9CE/edit?gid=0#gid=0"
 * group[0].element[0].code = #RPT.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

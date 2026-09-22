@@ -1,4 +1,4 @@
-// HL7 Message - FHIR R4_ ADT_A06 - Sheet1.csv
+// HL7 Message - FHIR E2_ ADT_A06 - Sheet1.csv
 Instance: MessageADT_A06ToBundle
 InstanceOf: ConceptMap
 Title: "Message ADT_A06 to Bundle Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Message ADT:A06 to Bundle.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1jG7x_d9Pc1ZIRRxPTAw-twONy61hPpH5zc10UxAA9cw/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1vebe6l_NLHBehoMPKrsKS3u4e_ZZ_53Wv1TPdO-TNVA/edit?gid=0#gid=0"
 * group[0].element[0].code = #ADT_A06.MSH
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "cardinalityMin"

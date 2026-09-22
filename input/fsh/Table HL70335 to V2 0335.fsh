@@ -1,4 +1,4 @@
-// HL7 Concept Map_ RepeatPattern - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ RepeatPattern - Sheet1.csv
 Instance: TableHL70335ToV20335
 InstanceOf: ConceptMap
 Title: "Table HL70335 to V2 0335 Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70335 to V2 0335.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1OBcSumRh0MVFA2C5YXcGsld9hxufvQWdhYINrTRvcWE/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/19SEA4vTuP_Q0wqHXZC68Hb_HuTP767e8rB7MmFBmVaM/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0335"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0335"
 * group[0].element[0].code = #Q<integer>S

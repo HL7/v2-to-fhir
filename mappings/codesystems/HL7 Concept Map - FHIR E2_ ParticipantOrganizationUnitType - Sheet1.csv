@@ -1,0 +1,21 @@
+HL7 v2,,,FHIR Version,,Condition (IF TRUE),,HL7 FHIR,,
+Code,Text,Code System,Core Version,Incubator Version,Computable,Narrative,Code,Display,Code System
+H,Home,HL70406,"F-R4, F-R6",,,,,,
+O,Office,HL70406,"F-R4, F-R6",,,,,,
+1,Hospital,HL70406,"F-R4, F-R6",,,,,,
+2,Physician Clinic,HL70406,"F-R4, F-R6",,,,,,
+3,Long Term Care,HL70406,"F-R4, F-R6",,,,,,
+4,Acute Care,HL70406,"F-R4, F-R6",,,,,,
+5,Other,HL70406,"F-R4, F-R6",,,,,,
+,,,"F-R4, F-R6",,,,prov,Healthcare Provider,An organization that provides healthcare services.
+,,,"F-R4, F-R6",,,,dept,Hospital Department,A department or ward within a hospital (Generally is not applicable to top level organizations)
+,,,"F-R4, F-R6",,,,team,Organizational team,"An organizational team is usually a grouping of practitioners that perform a specific function within an organization (which could be a top level organization, or a department)."
+,,,"F-R4, F-R6",,,,govt,Government,"A political body, often used when including organization records for government bodies such as a Federal Government, State or Local Government."
+,,,"F-R4, F-R6",,,,ins,Insurance Company,A company that provides insurance to its subscribers that may include healthcare related policies.
+,,,"F-R4, F-R6",,,,pay,Payer,"A company, charity, or governmental organization, which processes claims and/or issues payments to providers on behalf of patients or groups of patients."
+,,,"F-R4, F-R6",,,,edu,Educational Institute,An educational institution that provides education or research facilities.
+,,,"F-R4, F-R6",,,,reli,Religious Institution,An organization that is identified as a part of a religious institution.
+,,,"F-R4, F-R6",,,,crs,Clinical Research Sponsor,An organization that is identified as a Pharmaceutical/Clinical Research Sponsor.
+,,,"F-R4, F-R6",,,,cg,Community Group,An un-incorporated community group.
+,,,"F-R4, F-R6",,,,bus,Non-Healthcare Business or Corporation,An organization that is a registered business or corporation but not identified by other types.
+,,,"F-R4, F-R6",,,,other,Other,Other type of organization not already specified.

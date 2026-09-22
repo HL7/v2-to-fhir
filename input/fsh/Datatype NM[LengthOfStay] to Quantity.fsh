@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ NM[Quantity-LengthOfStay] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ NM[Quantity-LengthOfStay] - Sheet1.csv
 Instance: DatatypeNMLengthOfStayToQuantity
 InstanceOf: ConceptMap
 Title: "Datatype NM [LengthOfStay] to Quantity Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype NM[LengthOfStay] to Quantity.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/10xbEUhs5LEydlRYgH_Ok_9y8Vn_b3peUxFfHJLtNMmI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1EfmHMDzcw_u2T3jQf30ENQGLC4QxAL1Gz5OqKkFCI6I/edit?gid=0#gid=0"
 * group[0].element[0].code = #NM.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

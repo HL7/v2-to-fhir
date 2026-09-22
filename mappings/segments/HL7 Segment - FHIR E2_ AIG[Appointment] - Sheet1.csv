@@ -1,0 +1,17 @@
+HL7 v2,,,,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,AIG-1,set ID -AIG,SI,1,1,"F-R4, F-R6",,,,,,,,,,,,,,
+2,AIG-2,Segment Action Code,ID,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+3,AIG-3,Resource ID,CWE,0,1,"F-R4, F-R6",,,,If AIG-4 reflects a location,participant.actor(Location.identifier),,identifier,0,1,CWE[Identifier],,,,
+4,AIG-4,Resource Type,CWE,1,1,"F-R4, F-R6",,,,,participant.type,,CodeableConcept,0,-1,CWE[CodeableConcept],,,,
+5,AIG-5,Resource Group,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+6,AIG-6,Resource Quantity,NM,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+7,AIG-7,Resource Quantity Units,CNE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+8,AIG-8,Start Date/Time,DTM,0,1,"F-R4, F-R6",,,,,participant.period.start,,,,,,,,,
+9,AIG-9,Start Date/Time Offset,NM,0,1,"F-R4, F-R6",,IF AIG-8 NOT VALUED,,,participant.period.start,,,,,,,/.start + AIG-9 according to AIG-10 units/,,
+10,AIG-10,Start Date/Time Offset Units,CNE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+11,AIG-11,Duration,NM,0,1,"F-R4, F-R6",,IF AIG-8 IS VALUED,,,participant.period.end,,,,,,,Appointment.participant.period.start + AIG-11,,
+12,AIG-12,Duration Units,CNE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+13,AIG-13,Allow Substitution Code,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+14,AIG-14,Filler Status Code,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,

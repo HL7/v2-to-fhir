@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ MSH[MessageHeader] - R4.csv
+// HL7 Segment - FHIR E2_ MSH[MessageHeader] - R4.csv
 Instance: SegmentMSHToMessageHeader
 InstanceOf: ConceptMap
 Title: "Segment MSH to MessageHeader Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment MSH to MessageHeader.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13pgda5xl-PwCgB9j0axyymwwv7RJVcrIzY8Ah1y1Y1M/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1zFJXswpQhZ3R9y9S9rLeUPJ3m9WuWUolLEtO4ZDDvsM/edit?gid=0#gid=0"
 * group[0].element[0].code = #MSH-3
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

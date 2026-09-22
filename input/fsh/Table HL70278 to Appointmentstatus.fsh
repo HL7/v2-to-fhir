@@ -1,4 +1,4 @@
-// HL7 Concept Map_ FillerStatusCodes[Appointment] - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ FillerStatusCodes[Appointment] - Sheet1.csv
 Instance: TableHL70278ToAppointmentstatus
 InstanceOf: ConceptMap
 Title: "Table HL70278 to Appointmentstatus Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70278 to Appointmentstatus.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1JSunQweA2Ab70tLNJUR8gZTYDq3ToDJv0mXS1cwJmd4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1RzGMRh8znUHL8oOWPMyAtrhOxhNlgYkfJJnogfiRC-k/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0278"
 * group[0].target = "http://hl7.org/fhir/appointmentstatus"
 * group[0].element[0].code = #Pending

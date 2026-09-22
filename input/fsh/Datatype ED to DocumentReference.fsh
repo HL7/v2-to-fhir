@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ ED[DocumentReference] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ ED[DocumentReference] - Sheet1.csv
 Instance: DatatypeEDToDocumentReference
 InstanceOf: ConceptMap
 Title: "Datatype ED to DocumentReference Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype ED to DocumentReference.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1LnY0-HZxstOum6gIlV73mLi2z_7p06HkiEwI8myaN6w/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/19oKYuPU38q3EP5Eyu01IFlk82SME9EZFoWRP44i3PXo/edit?gid=0#gid=0"
 * group[0].element[0].code = #ED.2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

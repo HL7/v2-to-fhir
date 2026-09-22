@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ XON[string] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ XON[string] - Sheet1.csv
 Instance: DatatypeXONToString
 InstanceOf: ConceptMap
 Title: "Datatype XON to string Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype XON to string.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1BjunTEyDupmLMWItIuAcpm7lReujQTNVley0HrZJU7s/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/16pgLLNU1MZTFbMFheBmqgHhwJd2p5WvTHT04zI_jg1I/edit?gid=0#gid=0"
 * group[0].element[0].code = #XON.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

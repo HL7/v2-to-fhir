@@ -1,7 +1,0 @@
-HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-Y,"Yes, patient has a living will",HL70315,,,,Y,,"Yes, patient has a living will",http://terminology.hl7.org/CodeSystem/v2-0315,,
-F,"Yes, patient has a living will but it is not on file",HL70315,,,,F,,"Yes, patient has a living will but it is not on file",http://terminology.hl7.org/CodeSystem/v2-0315,,
-N,"No, patient does not have a living will and no information was provided",HL70315,,,,N,,"No, patient does not have a living will and no information was provided",http://terminology.hl7.org/CodeSystem/v2-0315,,
-I,"No, patient does not have a living will but information was provided",HL70315,,,,I,,"No, patient does not have a living will but information was provided",http://terminology.hl7.org/CodeSystem/v2-0315,,
-U,Unknown,HL70315,,,,U,,Unknown,http://terminology.hl7.org/CodeSystem/v2-0315,,

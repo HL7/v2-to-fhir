@@ -1,4 +1,4 @@
-// HL7 Message - FHIR R4_ ORM_O01 - Sheet1.csv
+// HL7 Message - FHIR E2_ ORM_O01 - Sheet1.csv
 Instance: MessageORM_O01ToBundle
 InstanceOf: ConceptMap
 Title: "Message ORM_O01 to Bundle Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Message ORM:O01 to Bundle.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/19C2jjzXZ8D7Um1iB-e6NmLfZVPvyZNkgwU8IxCJiwGs/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1eNiDnjSlvt1FHvJXqbz-dgZ7Yb9lCkALWx_rzEbN0bU/edit?gid=0#gid=0"
 * group[0].element[0].code = #ORM_O01.MSH
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "cardinalityMin"
@@ -231,8 +231,6 @@ Usage: #definition
 * group[0].element[18].target.code = #Task[1]
 * group[0].element[18].target.display = "Task[1]"
 * group[0].element[18].target.comment = "Processing of each ORC segment results in the creation of a new Task resource which is linked back to the ServiceRequest created for the same ORC segment. =*= The creation of a Task resource and its inclusion in the FHIR bundle should only happen when the receiving system is responsible for fulfillment of the ServiceRequest. Other systems may receive notification of the order, but should not receive a Task Resource if they are not the intended filler system. =*= The actual value of the ORC-1 Order Control Code will yield different population of the Task resource."
-* group[0].element[18].target.dependsOn[0].property = "Computable-FHIRPath"
-* group[0].element[18].target.dependsOn[0].value = "h"
 * group[0].element[19].code = #ORM_O01.ORDER.ORC
 * group[0].element[19].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[19].extension[0].extension[0].url = "cardinalityMin"

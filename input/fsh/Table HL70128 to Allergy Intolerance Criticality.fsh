@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AllergySeverity[AllergyIntolerance.criticality] - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AllergySeverity[AllergyIntolerance.criticality] - Sheet1.csv
 Instance: TableHL70128ToAllergyIntoleranceCriticality
 InstanceOf: ConceptMap
 Title: "Table HL70128 to Allergy Intolerance Criticality Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70128 to Allergy Intolerance Criticality.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1au42G-4z1OKLQp9hQkGVtauaiyYl6rHaGjLswnCgPjo/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1UZBhNGegtTJDoMNU0QCs1s1TyXCFVEZay43QG7DI3g0/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0128"
 * group[0].target = "http://hl7.org/fhir/allergy-intolerance-criticality"
 * group[0].element[0].code = #SV

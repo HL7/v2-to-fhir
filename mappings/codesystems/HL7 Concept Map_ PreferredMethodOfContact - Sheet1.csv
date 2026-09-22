@@ -1,8 +1,0 @@
-HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-B,Beeper Number,HL70185,,,,B,,Beeper Number,http://terminology.hl7.org/CodeSystem/v2-0185,,
-C,Cellular Phone Number,HL70185,,,,C,,Cellular Phone Number,http://terminology.hl7.org/CodeSystem/v2-0185,,
-E,E-Mail Address (for backward compatibility),HL70185,,,,E,,E-Mail Address (for backward compatibility),http://terminology.hl7.org/CodeSystem/v2-0185,,
-F,FAX Number,HL70185,,,,F,,FAX Number,http://terminology.hl7.org/CodeSystem/v2-0185,,
-H,Home Phone Number,HL70185,,,,H,,Home Phone Number,http://terminology.hl7.org/CodeSystem/v2-0185,,
-O,Office Phone Number,HL70185,,,,O,,Office Phone Number,http://terminology.hl7.org/CodeSystem/v2-0185,,

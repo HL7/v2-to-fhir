@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ SN[Quantity] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ SN[Quantity] - Sheet1.csv
 Instance: DatatypeSNToQuantity
 InstanceOf: ConceptMap
 Title: "Datatype SN to Quantity Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype SN to Quantity.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1azu9FNtDrbtyTB9dj1doDW315ngDrPlqrLARvvVHNb8/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1TZbTwtWNHUAkp_kx5lsIryeWL6YkaPDbCFcd0CM0J5A/edit?gid=0#gid=0"
 * group[0].element[0].code = #SN.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

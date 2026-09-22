@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ XCN[Patient] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ XCN[Patient] - Sheet1.csv
 Instance: DatatypeXCNToPatient
 InstanceOf: ConceptMap
 Title: "Datatype XCN to Patient Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype XCN to Patient.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1zgeUgPr_mtwoMW54zFcRc6H76Pc3BXjMQMCCqL8PUcQ/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1pm9Qg5RtmCLZeN2sQl3B2SwfgA-GyWKaS2Fhc5JA2gA/edit?gid=0#gid=0"
 * group[0].element[0].code = #XCN.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

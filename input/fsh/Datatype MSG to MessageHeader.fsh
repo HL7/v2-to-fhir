@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ MSG[MessageHeader] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ MSG[MessageHeader] - Sheet1.csv
 Instance: DatatypeMSGToMessageHeader
 InstanceOf: ConceptMap
 Title: "Datatype MSG to MessageHeader Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype MSG to MessageHeader.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1appiDYpk63FqFSOU7wuR2rmvTTffeBJGXKDDVDRdWTY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1dO3rNE3NYmU5uENsPAR6fb361AxVxgp3DA4iXCFJpwQ/edit?gid=0#gid=0"
 * group[0].element[0].code = #MSG.2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

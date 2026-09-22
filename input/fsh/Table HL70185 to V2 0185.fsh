@@ -1,4 +1,4 @@
-// HL7 Concept Map_ PreferredMethodOfContact - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ PreferredMethodOfContact - Sheet1.csv
 Instance: TableHL70185ToV20185
 InstanceOf: ConceptMap
 Title: "Table HL70185 to V2 0185 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70185 to V2 0185.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1L_AfyPgHtp2gKwuLLUtqYwT7FZPpqtfQaxaJAkLqj04/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/15dgXD9E_8yZiYuclIcGopNj0jj42YC2JyQIe8Xr5xL8/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0185"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0185"
 * group[0].element[0].code = #B

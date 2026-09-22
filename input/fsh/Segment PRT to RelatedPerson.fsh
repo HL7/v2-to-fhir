@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PRT[RelatedPerson] - Sheet1.csv
+// HL7 Segment - FHIR E2_ PRT[RelatedPerson] - Sheet1.csv
 Instance: SegmentPRTToRelatedPerson
 InstanceOf: ConceptMap
 Title: "Segment PRT to RelatedPerson Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PRT to RelatedPerson.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/17gCMgdR8Jq9viGiCTN67QvGEnJLNMlyVaMT5325tmh4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1KZzZKPdRLpWhtIf_PB_IFFXQyBwBuG5QKYvEHB6aZNU/edit?gid=0#gid=0"
 * group[0].element[0].code = #PRT-4
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

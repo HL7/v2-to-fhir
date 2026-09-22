@@ -1,0 +1,11 @@
+HL7 v2,,,,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+0,MRG,,,,,"F-R4, F-R6",,,,,status,,code,1,1,,,"""unknown""",,"The MRG segment does not include a status.  Since the prior account may still be active or already inactive, the implementer may have better awareness of which status to use."
+1,MRG-1,Prior Patient Identifier List,CX,1,-1,"F-R4, F-R6",,,,,,,,,,,,,,
+2,MRG-2,Prior Alternate Patient ID,CX,1,-1,"F-R4, F-R6",,,,,,,,,,,,,,
+3,MRG-3,Prior Patient Account Number,CX,0,1,"F-R4, F-R6",,,,,identifier,,Identifier,0,-1,CX[Identifier],,,,
+4,MRG-4,Prior Patient ID,CX,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+5,MRG-5,Prior Visit Number,CX,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+6,MRG-6,Prior Alternate Visit ID,CX,0,-1,"F-R4, F-R6",,,,,,,,,,,,,,
+7,MRG-7,Prior Patient Name,XPN,0,-1,"F-R4, F-R6",,,,,,,,,,,,,,

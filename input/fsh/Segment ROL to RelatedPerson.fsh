@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ ROL[RelatedPerson] - Sheet1.csv
+// HL7 Segment - FHIR E2_ ROL[RelatedPerson] - Sheet1.csv
 Instance: SegmentROLToRelatedPerson
 InstanceOf: ConceptMap
 Title: "Segment ROL to RelatedPerson Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment ROL to RelatedPerson.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/11aEEi0skCde4ANez6cvm75IFqi2cTaVtUc2MJvnDlpY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1coywGlM3HBjzxljuAErmSgaQuo1V4UBDEr-V6mcEAYU/edit?gid=0#gid=0"
 * group[0].element[0].code = #ROL-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

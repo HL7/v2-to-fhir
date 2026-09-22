@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AdministrativeSex - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AdministrativeSex - Sheet1.csv
 Instance: TableHL70001ToAdministrativeGender
 InstanceOf: ConceptMap
 Title: "Table HL70001 to Administrative Gender Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70001 to Administrative Gender.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1VxG2IpKlMJE_aC4hDB-PXKM6q2vC_E950WO2Nbctr5U/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13VKHzh6nPtK2mQf3YOvbUFCGbnutQyrzP5zIhGGnUEU/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0001"
 * group[0].target = "http://hl7.org/fhir/administrative-gender"
 * group[0].element[0].code = #F

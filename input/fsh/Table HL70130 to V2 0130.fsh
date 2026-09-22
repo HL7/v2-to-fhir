@@ -1,4 +1,4 @@
-// HL7 Concept Map_ VisitUserCode - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ VisitUserCode - Sheet1.csv
 Instance: TableHL70130ToV20130
 InstanceOf: ConceptMap
 Title: "Table HL70130 to V2 0130 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70130 to V2 0130.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/11sSjJv_FutvNhkDs-S81ARyRj5_D1J2kPGEJATjhQWk/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1eGNaeUoaAjZ7-2ZGDR2FDTuZIVbiPCZq_EctwkyG_AA/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0130"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0130"
 * group[0].element[0].code = #TE

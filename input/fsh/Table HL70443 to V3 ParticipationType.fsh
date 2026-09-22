@@ -1,4 +1,4 @@
-// HL7 Concept Map_ ProviderRole - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ ProviderRole - Sheet1.csv
 Instance: TableHL70443ToV3ParticipationType
 InstanceOf: ConceptMap
 Title: "Table HL70443 to V3 ParticipationType Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70443 to V3 ParticipationType.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Mw2am81E0fuDQ-kNrCEc-LwgZ6PlxHNauOBzZ8y5qUM/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1iUtY7pug4JvWuGIkHs4HRbEG7RSEv1E1RJe6G5iVmus/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0443"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
 * group[0].element[0].code = #AD

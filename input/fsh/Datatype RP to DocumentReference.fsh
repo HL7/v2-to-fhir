@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ RP[DocumentReference] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ RP[DocumentReference] - Sheet1.csv
 Instance: DatatypeRPToDocumentReference
 InstanceOf: ConceptMap
 Title: "Datatype RP to DocumentReference Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype RP to DocumentReference.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kJzKw6MDLJ-ZN-nou885pyd3Fb1fP3Jl45Av6ywfNqM/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kuUw3ZdK1_oDuO_xHZuQhZ_Avs2tfjgIyBhC1SvTxzw/edit?gid=0#gid=0"
 * group[0].element[0].code = #RP.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

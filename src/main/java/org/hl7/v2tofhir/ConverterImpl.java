@@ -165,20 +165,29 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             targetName = target.replace(HTML_SUFFIX, "");
         }
 
-        beans = loadBeans(f, filename.contains("HL7 Concept"));
+        // Match leniently (case-insensitive, "HL7 " prefix optional) rather than requiring
+        // an exact "HL7 <Type>" substring - some source sheet titles are missing the "HL7 "
+        // prefix (a data-entry inconsistency upstream), and Convert.getType() already
+        // dispatches to the right *Converter subclass leniently, so ConverterImpl.load()
+        // should recognize the same files consistently rather than leaving type null and
+        // crashing map-table generation later.
+        boolean isConceptMap = StringUtils.containsIgnoreCase(filename, "Concept Map");
+        beans = loadBeans(f, isConceptMap);
 
-        if (filename.contains("HL7 Concept")) {
+        if (isConceptMap) {
             type = TABLE_TYPE;
             sourceName = parts[1];
             setTableNames();
-        } else if (filename.contains("HL7 Segment")) {
+        } else if (StringUtils.containsIgnoreCase(filename, "Segment")) {
             type = SEGMENT_TYPE;
-        } else if (filename.contains("HL7 Data Type")) {
+        } else if (StringUtils.containsIgnoreCase(filename, "Data Type")) {
             type = DATATYPE_TYPE;
-        } else if (filename.contains("HL7 Message")) {
+        } else if (StringUtils.containsIgnoreCase(filename, "Message")) {
             type = MESSAGE_TYPE;
             target = targetName = "Bundle";
             sourceName = source = parts[2] + "_" + parts[3];
+        } else {
+            warn("Cannot determine artifact type from filename '%s' - map-table generation will skip it.", 0, filename);
         }
     }
 

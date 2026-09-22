@@ -1,4 +1,4 @@
-// HL7 Concept Map_ EventRelatedPeriod - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ EventRelatedPeriod - Sheet1.csv
 Instance: TableHL70528ToV3TimingEvent
 InstanceOf: ConceptMap
 Title: "Table HL70528 to V3 TimingEvent Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70528 to V3 TimingEvent.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/17o6vrrfJcGXA4EBuYcVhZs98dAJe5VS_TZ0LJYmVoTU/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ANsRO1QBzwfOt1uJh81jPNKhkSX00ig3eODHKaZVGec/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0528"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
 * group[0].element[0].code = #HS

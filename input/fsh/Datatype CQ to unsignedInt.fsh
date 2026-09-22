@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CQ[unsignedInt] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CQ[unsignedInt] - Sheet1.csv
 Instance: DatatypeCQToUnsignedInt
 InstanceOf: ConceptMap
 Title: "Datatype CQ to unsignedInt Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CQ to unsignedInt.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1vztiQ1Egc2E91ZVonjtUtB-aBsNq4jYOIFqqK6RnyHw/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Dr318ViThrceee7jo9w1CePjyR8eTSRPi5zx-01aAUs/edit?gid=0#gid=0"
 * group[0].element[0].code = #CQ.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

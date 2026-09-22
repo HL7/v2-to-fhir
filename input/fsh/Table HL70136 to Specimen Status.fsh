@@ -1,4 +1,4 @@
-// HL7 Concept Map_ YesNoIndicator[AvailabilityStatus] - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ YesNoIndicator[AvailabilityStatus] - Sheet1.csv
 Instance: TableHL70136ToSpecimenStatus
 InstanceOf: ConceptMap
 Title: "Table HL70136 to Specimen Status Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70136 to Specimen Status.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1A0BO7VVM63LqFDBt0sD_4jqI_tZJcFsng3O-fcCnHz8/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1m-NouRAJcHwomFda0SmFVJ28Kd08XlH65Fz0Cy_DT0s/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0532"
 * group[0].target = "http://hl7.org/fhir/specimen-status"
 * group[0].element[0].code = #Y

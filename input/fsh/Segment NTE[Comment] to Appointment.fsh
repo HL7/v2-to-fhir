@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ NTE[Appointment-Comment] - NTE.csv
+// HL7 Segment - FHIR E2_ NTE[Appointment-Comment] - NTE.csv
 Instance: SegmentNTECommentToAppointment
 InstanceOf: ConceptMap
 Title: "Segment NTE [Comment] to Appointment Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment NTE[Comment] to Appointment.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1fksIG8cf2DGSE7uHc_-UnP1VCfPGmObeREWqaQTNIRg/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1qPWw14rz25q_jCw0FL8746muto5UDJ3M2WcLSmExZUE/edit?gid=0#gid=0"
 * group[0].element[0].code = #NTE-3
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CWE[CodeableConcept] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CWE[CodeableConcept] - Sheet1.csv
 Instance: DatatypeCWEToCodeableConcept
 InstanceOf: ConceptMap
 Title: "Datatype CWE to CodeableConcept Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CWE to CodeableConcept.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/11lVAfG6s5woVJf2_gy6fUiEM0xFtOAjgQJ_xJvkxfXo/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1qzL7X8-iGqOMOLJzuDllaJRxYr8-L8ZM9xMFwybbqzM/edit?gid=0#gid=0"
 * group[0].element[0].code = #CWE.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

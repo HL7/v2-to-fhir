@@ -1,4 +1,4 @@
-// HL7 Concept Map_ CommentType - Sheet1.csv
+// HL7 Concept Map- FHIR E2_ CommentType - Sheet1.csv
 Instance: TableHL70364ToV20364
 InstanceOf: ConceptMap
 Title: "Table HL70364 to V2 0364 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70364 to V2 0364.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kpfJ4WKuc_Gc6sSIUgnTMTpjiAvDRrtP_V4_ylfHxDQ/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1i9m3Dfws5HqqolyUl3VluYyAF49puCQpS4pUaXsTWnU/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0364"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0364"
 * group[0].element[0].code = #PI

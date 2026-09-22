@@ -1,4 +1,4 @@
-// HL7 Concept Map_ IdentifierType - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ IdentifierType - Sheet1.csv
 Instance: TableHL70203ToV20203
 InstanceOf: ConceptMap
 Title: "Table HL70203 to V2 0203 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70203 to V2 0203.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ynFVTj3fQrQAvpGK7XAEODEzRaMdIexWD8MpT70VfE4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1BLk7OqU3vnbmPBUVjbRRzQZBDf2ByDd8RPBsLE37NQg/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * group[0].element[0].code = #ACSN

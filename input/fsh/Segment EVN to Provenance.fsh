@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ EVN[Provenance] - Sheet1.csv
+// HL7 Segment - FHIR E2_ EVN[Provenance] - Sheet1.csv
 Instance: SegmentEVNToProvenance
 InstanceOf: ConceptMap
 Title: "Segment EVN to Provenance Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment EVN to Provenance.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1DQSPNj6BnLgUiYgJvNmk1XcfZz_vYg1IZk03wbHJ0bQ/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1frLOT6jGnhx5yia69isxQcGqw5zb1m1LC0WOYUC3w-c/edit?gid=0#gid=0"
 * group[0].element[0].code = #EVN
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #activity.coding.display

@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ PLN[Identifier] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ PLN[Identifier] - Sheet1.csv
 Instance: DatatypePLNToIdentifier
 InstanceOf: ConceptMap
 Title: "Datatype PLN to Identifier Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype PLN to Identifier.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ac4z8T-3r5guzjHNW60VjDBfBFnVaHV2e2bXhlJSkjg/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1pEtKkSAvg7JC4x_RYFIs5GZgNZE1etqC2eEB1YzZgKo/edit?gid=0#gid=0"
 * group[0].element[0].code = #PLN.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

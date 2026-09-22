@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ IS[string] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ IS[string] - Sheet1.csv
 Instance: DatatypeISToString
 InstanceOf: ConceptMap
 Title: "Datatype IS to string Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype IS to string.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1QGUiAHG5X-tdMrfrM9JNPYvdxKzq2NqhM7r26o0sfTE/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1K2gZjIYbxqc1lTIqrK9ZPVvbytKQTLfR0M_SFWA73_4/edit?gid=0#gid=0"
 * group[0].element[0].code = #IS.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "cardinalityMin"

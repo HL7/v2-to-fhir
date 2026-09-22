@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ SPS[Specimen-Source] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ SPS[Specimen-Source] - Sheet1.csv
 Instance: DatatypeSPSSourceToSpecimen
 InstanceOf: ConceptMap
 Title: "Datatype SPS [Source] to Specimen Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype SPS[Source] to Specimen.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1z_uMkI5txS3zB5YlhNdrrLULdaeW-mchihfO-sDiG5k/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1G1nyWYyrRq4lGbvYZR5Jjh5NxzxJl6D10w2Mb8tqxRs/edit?gid=0#gid=0"
 * group[0].element[0].code = #SPS.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

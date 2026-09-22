@@ -1,0 +1,16 @@
+HL7 v2,,,,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute/ Data Type,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,
+1,CX.1,ID Number,ST,1,1,"F-R4, F-R6",,,,,$value,,string,0,1,,,,,
+2,CX.2,Identifier Check Digit,ST,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+3,CX.3,Check Digit Scheme,ID,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+4,CX.4,Assigning Authority,HD,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+4,CX.4,Assigning Authority,HD,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+5,CX.5,Identifier Type Code,ID,1,1,"F-R4, F-R6",,,,,,,,,,,,,,
+6,CX.6,Assigning Facility,HD,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+7,CX.7,Effective Date,DT,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+8,CX.8,Expiration Date,DT,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+9,CX.9,Assigning Jurisdiction,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+10,CX.10,Assigning Agency or Department,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+11,CX.11,Security Check,ST,0,1,"F-R4, F-R6",,,,,,,,,,,,,,
+12,CX.12,Security Check Scheme,ID,0,1,"F-R4, F-R6",,,,,,,,,,,,,,

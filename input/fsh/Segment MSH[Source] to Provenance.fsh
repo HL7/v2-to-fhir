@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ MSH[Provenance-Source] - R4.csv
+// HL7 Segment - FHIR E2_ MSH[Provenance-Source] - R4.csv
 Instance: SegmentMSHSourceToProvenance
 InstanceOf: ConceptMap
 Title: "Segment MSH [Source] to Provenance Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment MSH[Source] to Provenance.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1F5aYk6tFCYTQd_qEaEc5G85ZcCm98R5B-sq2JGqUagk/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/11wMxbT5jmqTBh6iQKrCqsXeLKFvZJTvRBjVTAVSzK8g/edit?gid=0#gid=0"
 * group[0].element[0].code = #MSH
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #entity[1].what(DocumentReference.content.attachment.url)

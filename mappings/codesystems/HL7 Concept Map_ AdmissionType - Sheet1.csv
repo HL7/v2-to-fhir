@@ -1,9 +1,0 @@
-HL7 v2,,,Condition (IF True),,,HL7 FHIR,,,,,Comments
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-A,Accident,HL70007,,,,A,,Accident,http://terminology.hl7.org/CodeSystem/v2-0007,,
-E,Emergency,HL70007,,,,E,,Emergency,http://terminology.hl7.org/CodeSystem/v2-0007,,
-L,Labor and Delivery,HL70007,,,,L,,Labor and Delivery,http://terminology.hl7.org/CodeSystem/v2-0007,,
-R,Routine,HL70007,,,,R,,Routine,http://terminology.hl7.org/CodeSystem/v2-0007,,
-N,Newborn (Birth in healthcare facility),HL70007,,,,N,,Newborn (Birth in healthcare facility),http://terminology.hl7.org/CodeSystem/v2-0007,,
-U,Urgent,HL70007,,,,U,,Urgent,http://terminology.hl7.org/CodeSystem/v2-0007,,
-C,Elective,HL70007,,,,C,,Elective,http://terminology.hl7.org/CodeSystem/v2-0007,,

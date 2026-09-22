@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ SFT[MessageHeader] - Sheet1.csv
+// HL7 Segment - FHIR E2_ SFT[MessageHeader] - Sheet1.csv
 Instance: SegmentSFTToMessageHeader
 InstanceOf: ConceptMap
 Title: "Segment SFT to MessageHeader Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment SFT to MessageHeader.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1XsVWY6amPZPo_zDxRywAxAJqX1_BzD8-7gt729NKdH4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1G6Yyvla-8Ja4JAjLa3RrYyfiJ2sVUQKnVeNwjnTODvE/edit?gid=0#gid=0"
 * group[0].element[0].code = #SFT-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

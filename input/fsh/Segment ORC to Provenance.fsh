@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ ORC[Provenance] - ORC.csv
+// HL7 Segment - FHIR E2_ ORC[Provenance] - ORC.csv
 Instance: SegmentORCToProvenance
 InstanceOf: ConceptMap
 Title: "Segment ORC to Provenance Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment ORC to Provenance.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1L4SJinq7WpD-V-feaIEtbplAx9gfYbe6cYmjdkuzd4E/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1qKVN-WZ1VrpLc8naMYZP8bvNbV_5i4ryUgqz89Tsge8/edit?gid=0#gid=0"
 * group[0].element[0].code = #ORC-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

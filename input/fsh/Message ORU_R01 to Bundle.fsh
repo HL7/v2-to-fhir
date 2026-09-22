@@ -1,4 +1,4 @@
-// HL7 Message - FHIR R4_ ORU_R01 - Sheet1.csv
+// HL7 Message - FHIR E2_ ORU_R01 - Sheet1.csv
 Instance: MessageORU_R01ToBundle
 InstanceOf: ConceptMap
 Title: "Message ORU_R01 to Bundle Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Message ORU:R01 to Bundle.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1gHK6_PFyr7PXns7wLDs0LSLsbjm0x-4bWUu3crXMKMI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/13ptF5qhTqPTVkigGILQIrpM7UzITtQGOu9f3GTGvUf4/edit?gid=0#gid=0"
 * group[0].element[0].code = #ORU_R01.MSH
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "cardinalityMin"
@@ -229,8 +229,8 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group[0].element[16].extension[0].extension[1].valueInteger = -1
 * group[0].element[16].display = "Participation (Observation Participation)"
 * group[0].element[16].target.equivalence = #equivalent
-* group[0].element[16].target.code = #Device
-* group[0].element[16].target.display = "Device"
+* group[0].element[16].target.code = #Device[1]
+* group[0].element[16].target.display = "Device[1]"
 * group[0].element[16].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group[0].element[16].target.dependsOn[0].property = "Computable-ANTLR"
 * group[0].element[16].target.dependsOn[0].value = "IF PRT-10 VALUED"
@@ -361,33 +361,35 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group[0].element[26].target.display = "ServiceRequest[1]"
 * group[0].element[26].target.dependsOn[0].property = "Narrative-Condition"
 * group[0].element[26].target.dependsOn[0].value = "If a ServiceRequest needs to be created for the receiver."
-* group[0].element[27].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.PRT
+* group[0].element[27].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.ORC
 * group[0].element[27].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[27].extension[0].extension[0].url = "cardinalityMin"
-* group[0].element[27].extension[0].extension[0].valueInteger = 0
+* group[0].element[27].extension[0].extension[0].valueInteger = 1
 * group[0].element[27].extension[0].extension[1].url = "cardinalityMax"
-* group[0].element[27].extension[0].extension[1].valueInteger = -1
-* group[0].element[27].display = "Participation (for Observation)"
+* group[0].element[27].extension[0].extension[1].valueInteger = 1
+* group[0].element[27].display = "Order common"
 * group[0].element[27].target.equivalence = #equivalent
-* group[0].element[27].target.code = #PractitionerRole[3]
-* group[0].element[27].target.display = "PractitionerRole[3]"
-* group[0].element[27].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[27].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
-* group[0].element[27].target.dependsOn[1].property = "Computable-FHIRPath"
-* group[0].element[27].target.dependsOn[1].value = "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
-* group[0].element[27].target.dependsOn[2].property = "Narrative-Condition"
-* group[0].element[27].target.dependsOn[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
-* group[0].element[28].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR
+* group[0].element[27].target.code = #Task[1]
+* group[0].element[27].target.display = "Task[1]"
+* group[0].element[27].target.comment = "Processing of each ORC segment results in the creation of a new Task resource which is linked back to the ServiceRequest created for the same ORC segment. =*= The creation of a Task resource and its inclusion in the FHIR bundle should only happen when the receiving system is responsible for fulfillment of the ServiceRequest. Other systems may receive notification of the order, but should not receive a Task Resource if they are not the intended filler system. =*= The actual value of the ORC-1 Order Control Code will yield different population of the Task resource."
+* group[0].element[27].target.dependsOn[0].property = "Narrative-Condition"
+* group[0].element[27].target.dependsOn[0].value = "If a ServiceRequest needs to be created for the receiver."
+* group[0].element[28].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.COMMON_ORDER.PRT
 * group[0].element[28].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[28].extension[0].extension[0].url = "cardinalityMin"
-* group[0].element[28].extension[0].extension[0].valueInteger = 1
+* group[0].element[28].extension[0].extension[0].valueInteger = 0
 * group[0].element[28].extension[0].extension[1].url = "cardinalityMax"
-* group[0].element[28].extension[0].extension[1].valueInteger = 1
-* group[0].element[28].display = "Observations Request"
+* group[0].element[28].extension[0].extension[1].valueInteger = -1
+* group[0].element[28].display = "Participation (for Observation)"
 * group[0].element[28].target.equivalence = #equivalent
-* group[0].element[28].target.code = #DiagnosticReport[1]
-* group[0].element[28].target.display = "DiagnosticReport[1]"
-* group[0].element[28].target.comment = "Incorporate OBR content into the DiagnosticReport created from the ORC segment in the same segment group."
+* group[0].element[28].target.code = #PractitionerRole[3]
+* group[0].element[28].target.display = "PractitionerRole[3]"
+* group[0].element[28].target.dependsOn[0].property = "Computable-ANTLR"
+* group[0].element[28].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group[0].element[28].target.dependsOn[1].property = "Computable-FHIRPath"
+* group[0].element[28].target.dependsOn[1].value = "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
+* group[0].element[28].target.dependsOn[2].property = "Narrative-Condition"
+* group[0].element[28].target.dependsOn[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group[0].element[29].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR
 * group[0].element[29].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[29].extension[0].extension[0].url = "cardinalityMin"
@@ -396,9 +398,9 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group[0].element[29].extension[0].extension[1].valueInteger = 1
 * group[0].element[29].display = "Observations Request"
 * group[0].element[29].target.equivalence = #equivalent
-* group[0].element[29].target.code = #Specimen[1]
-* group[0].element[29].target.display = "Specimen[1]"
-* group[0].element[29].target.comment = "The OBR specimen data yields one Specimen resource that all Observations generated for the same OBR need to reference."
+* group[0].element[29].target.code = #DiagnosticReport[1]
+* group[0].element[29].target.display = "DiagnosticReport[1]"
+* group[0].element[29].target.comment = "Incorporate OBR content into the DiagnosticReport created from the ORC segment in the same segment group."
 * group[0].element[30].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR
 * group[0].element[30].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[30].extension[0].extension[0].url = "cardinalityMin"
@@ -407,47 +409,39 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group[0].element[30].extension[0].extension[1].valueInteger = 1
 * group[0].element[30].display = "Observations Request"
 * group[0].element[30].target.equivalence = #equivalent
-* group[0].element[30].target.code = #ServiceRequest[1]
-* group[0].element[30].target.display = "ServiceRequest[1]"
-* group[0].element[30].target.comment = "Mapping to ServiceRequest as well is needed if the receiver is not the originator of the order to which this results message responds.  This mapping will be completed once OMG/OML mapping is sufficiently completed.  We will add the other segment mappings below to ServiceRequest then as well."
-* group[0].element[30].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[30].target.dependsOn[0].value = "IF ORC VALUED"
-* group[0].element[30].target.dependsOn[1].property = "Narrative-Condition"
-* group[0].element[30].target.dependsOn[1].value = "If a ServiceRequest needs to be created for the receiver."
-* group[0].element[31].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
+* group[0].element[30].target.code = #Specimen[1]
+* group[0].element[30].target.display = "Specimen[1]"
+* group[0].element[30].target.comment = "The OBR specimen data yields one Specimen resource that all Observations generated for the same OBR need to reference."
+* group[0].element[31].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR
 * group[0].element[31].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[31].extension[0].extension[0].url = "cardinalityMin"
-* group[0].element[31].extension[0].extension[0].valueInteger = 0
+* group[0].element[31].extension[0].extension[0].valueInteger = 1
 * group[0].element[31].extension[0].extension[1].url = "cardinalityMax"
-* group[0].element[31].extension[0].extension[1].valueInteger = -1
-* group[0].element[31].display = "Participation (for Observation)"
+* group[0].element[31].extension[0].extension[1].valueInteger = 1
+* group[0].element[31].display = "Observations Request"
 * group[0].element[31].target.equivalence = #equivalent
-* group[0].element[31].target.code = #PractitionerRole[4]
-* group[0].element[31].target.display = "PractitionerRole[4]"
-* group[0].element[31].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group[0].element[31].target.code = #ServiceRequest[1]
+* group[0].element[31].target.display = "ServiceRequest[1]"
+* group[0].element[31].target.comment = "Mapping to ServiceRequest as well is needed if the receiver is not the originator of the order to which this results message responds.  This mapping will be completed once OMG/OML mapping is sufficiently completed.  We will add the other segment mappings below to ServiceRequest then as well."
 * group[0].element[31].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[31].target.dependsOn[0].value = "IF PRT-4.1 IN (\"ARI\",\"TN\",\"TR\") AND PRT-4.3 EQUALS \"HL70443\""
-* group[0].element[31].target.dependsOn[1].property = "Computable-FHIRPath"
-* group[0].element[31].target.dependsOn[1].value = "PRT.element(4.1) in (\"ARI\",\"TN\", \"TR\")and(PRT.element(4.3)=\"HL70443\")"
-* group[0].element[31].target.dependsOn[2].property = "Narrative-Condition"
-* group[0].element[31].target.dependsOn[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
-* group[0].element[32].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
+* group[0].element[31].target.dependsOn[0].value = "IF ORC VALUED"
+* group[0].element[31].target.dependsOn[1].property = "Narrative-Condition"
+* group[0].element[31].target.dependsOn[1].value = "If a ServiceRequest needs to be created for the receiver."
+* group[0].element[32].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBR
 * group[0].element[32].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[32].extension[0].extension[0].url = "cardinalityMin"
-* group[0].element[32].extension[0].extension[0].valueInteger = 0
+* group[0].element[32].extension[0].extension[0].valueInteger = 1
 * group[0].element[32].extension[0].extension[1].url = "cardinalityMax"
-* group[0].element[32].extension[0].extension[1].valueInteger = -1
-* group[0].element[32].display = "Participation (for Observation)"
+* group[0].element[32].extension[0].extension[1].valueInteger = 1
+* group[0].element[32].display = "Observations Request"
 * group[0].element[32].target.equivalence = #equivalent
-* group[0].element[32].target.code = #PractitionerRole[5]
-* group[0].element[32].target.display = "PractitionerRole[5]"
-* group[0].element[32].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group[0].element[32].target.code = #Task[1]
+* group[0].element[32].target.display = "Task[1]"
+* group[0].element[32].target.comment = "Processing of each ORC segment results in the creation of a new Task resource which is linked back to the ServiceRequest created for the same ORC segment. =*= The creation of a Task resource and its inclusion in the FHIR bundle should only happen when the receiving system is responsible for fulfillment of the ServiceRequest. Other systems may receive notification of the order, but should not receive a Task Resource if they are not the intended filler system. =*= The actual value of the ORC-1 Order Control Code will yield different population of the Task resource."
 * group[0].element[32].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[32].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"PRI\" AND PRT-4.3 EQUALS \"HL70443\""
-* group[0].element[32].target.dependsOn[1].property = "Computable-FHIRPath"
-* group[0].element[32].target.dependsOn[1].value = "(PRT.element(4.1)=\"PRI\")and(PRT.element(4.3)=\"HL70443\")"
-* group[0].element[32].target.dependsOn[2].property = "Narrative-Condition"
-* group[0].element[32].target.dependsOn[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
+* group[0].element[32].target.dependsOn[0].value = "IF ORC VALUED"
+* group[0].element[32].target.dependsOn[1].property = "Narrative-Condition"
+* group[0].element[32].target.dependsOn[1].value = "If a ServiceRequest needs to be created for the receiver."
 * group[0].element[33].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
 * group[0].element[33].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[33].extension[0].extension[0].url = "cardinalityMin"
@@ -456,13 +450,13 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group[0].element[33].extension[0].extension[1].valueInteger = -1
 * group[0].element[33].display = "Participation (for Observation)"
 * group[0].element[33].target.equivalence = #equivalent
-* group[0].element[33].target.code = #PractitionerRole[6]
-* group[0].element[33].target.display = "PractitionerRole[6]"
+* group[0].element[33].target.code = #PractitionerRole[4]
+* group[0].element[33].target.display = "PractitionerRole[4]"
 * group[0].element[33].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group[0].element[33].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[33].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"SC\" AND PRT-4.3 EQUALS \"HL70443\""
+* group[0].element[33].target.dependsOn[0].value = "IF PRT-4.1 IN (\"ARI\",\"TN\",\"TR\") AND PRT-4.3 EQUALS \"HL70443\""
 * group[0].element[33].target.dependsOn[1].property = "Computable-FHIRPath"
-* group[0].element[33].target.dependsOn[1].value = "(element(\"4.1\")=\"SC\")and(element(\"4.3\")=\"HL70443\")"
+* group[0].element[33].target.dependsOn[1].value = "PRT.element(4.1) in (\"ARI\",\"TN\", \"TR\")and(PRT.element(4.3)=\"HL70443\")"
 * group[0].element[33].target.dependsOn[2].property = "Narrative-Condition"
 * group[0].element[33].target.dependsOn[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group[0].element[34].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
@@ -473,44 +467,49 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group[0].element[34].extension[0].extension[1].valueInteger = -1
 * group[0].element[34].display = "Participation (for Observation)"
 * group[0].element[34].target.equivalence = #equivalent
-* group[0].element[34].target.code = #PractitionerRole[3]
-* group[0].element[34].target.display = "PractitionerRole[3]"
+* group[0].element[34].target.code = #PractitionerRole[5]
+* group[0].element[34].target.display = "PractitionerRole[5]"
 * group[0].element[34].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group[0].element[34].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[34].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group[0].element[34].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"PRI\" AND PRT-4.3 EQUALS \"HL70443\""
 * group[0].element[34].target.dependsOn[1].property = "Computable-FHIRPath"
-* group[0].element[34].target.dependsOn[1].value = "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
+* group[0].element[34].target.dependsOn[1].value = "(PRT.element(4.1)=\"PRI\")and(PRT.element(4.3)=\"HL70443\")"
 * group[0].element[34].target.dependsOn[2].property = "Narrative-Condition"
 * group[0].element[34].target.dependsOn[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
-* group[0].element[35].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
+* group[0].element[35].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
 * group[0].element[35].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[35].extension[0].extension[0].url = "cardinalityMin"
-* group[0].element[35].extension[0].extension[0].valueInteger = 1
+* group[0].element[35].extension[0].extension[0].valueInteger = 0
 * group[0].element[35].extension[0].extension[1].url = "cardinalityMax"
-* group[0].element[35].extension[0].extension[1].valueInteger = 1
-* group[0].element[35].display = "Observation related to OBR"
+* group[0].element[35].extension[0].extension[1].valueInteger = -1
+* group[0].element[35].display = "Participation (for Observation)"
 * group[0].element[35].target.equivalence = #equivalent
-* group[0].element[35].target.code = #Observation[2]
-* group[0].element[35].target.display = "Observation[2]"
-* group[0].element[35].target.comment = """
-Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation.
-Note that it is not clear that every OBX represents a results that can be associated with the encounter during which it was ordered/performed.\
-"""
+* group[0].element[35].target.code = #PractitionerRole[6]
+* group[0].element[35].target.display = "PractitionerRole[6]"
+* group[0].element[35].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group[0].element[35].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[35].target.dependsOn[0].value = "IF (OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\") AND OBX-29 NOT IN (\"QST\", \"SCI\")"
-* group[0].element[36].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
+* group[0].element[35].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"SC\" AND PRT-4.3 EQUALS \"HL70443\""
+* group[0].element[35].target.dependsOn[1].property = "Computable-FHIRPath"
+* group[0].element[35].target.dependsOn[1].value = "(element(\"4.1\")=\"SC\")and(element(\"4.3\")=\"HL70443\")"
+* group[0].element[35].target.dependsOn[2].property = "Narrative-Condition"
+* group[0].element[35].target.dependsOn[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
+* group[0].element[36].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.PRT
 * group[0].element[36].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[36].extension[0].extension[0].url = "cardinalityMin"
-* group[0].element[36].extension[0].extension[0].valueInteger = 1
+* group[0].element[36].extension[0].extension[0].valueInteger = 0
 * group[0].element[36].extension[0].extension[1].url = "cardinalityMax"
-* group[0].element[36].extension[0].extension[1].valueInteger = 1
-* group[0].element[36].display = "Observation related to OBR"
+* group[0].element[36].extension[0].extension[1].valueInteger = -1
+* group[0].element[36].display = "Participation (for Observation)"
 * group[0].element[36].target.equivalence = #equivalent
-* group[0].element[36].target.code = #Observation[2]
-* group[0].element[36].target.display = "Observation[2]"
-* group[0].element[36].target.comment = "Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation. When multiple OBX segments are tranformed into Observation components in a single Observation resource, implementers should consider how the metadata associated with the result (eg performer, status, date/time, etc) are populated. If the OBX segments being combined into a single resource contain different metadata, it must be considered whether or not the use of components is appropriate."
+* group[0].element[36].target.code = #PractitionerRole[3]
+* group[0].element[36].target.display = "PractitionerRole[3]"
+* group[0].element[36].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group[0].element[36].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[36].target.dependsOn[0].value = "IF (OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\") AND OBX-29 NOT IN (\"QST\", \"SCI\")"
+* group[0].element[36].target.dependsOn[0].value = "IF PRT-4.1 EQUALS \"OP\" AND PRT-4.3 EQUALS \"HL70443\""
+* group[0].element[36].target.dependsOn[1].property = "Computable-FHIRPath"
+* group[0].element[36].target.dependsOn[1].value = "(element(\"4.1\")=\"OP\")and(element(\"4.3\")=\"HL70443\")"
+* group[0].element[36].target.dependsOn[2].property = "Narrative-Condition"
+* group[0].element[36].target.dependsOn[2].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
 * group[0].element[37].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
 * group[0].element[37].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[37].extension[0].extension[0].url = "cardinalityMin"
@@ -521,8 +520,12 @@ Note that it is not clear that every OBX represents a results that can be associ
 * group[0].element[37].target.equivalence = #equivalent
 * group[0].element[37].target.code = #Observation[2]
 * group[0].element[37].target.display = "Observation[2]"
+* group[0].element[37].target.comment = """
+Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation.
+Note that it is not clear that every OBX represents a results that can be associated with the encounter during which it was ordered/performed.\
+"""
 * group[0].element[37].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[37].target.dependsOn[0].value = "IF (OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\") AND OBX-29 IN (\"QST\", \"SCI\")"
+* group[0].element[37].target.dependsOn[0].value = "IF (OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\") AND OBX-29 NOT IN (\"QST\", \"SCI\")"
 * group[0].element[38].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
 * group[0].element[38].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[38].extension[0].extension[0].url = "cardinalityMin"
@@ -533,41 +536,33 @@ Note that it is not clear that every OBX represents a results that can be associ
 * group[0].element[38].target.equivalence = #equivalent
 * group[0].element[38].target.code = #Observation[2]
 * group[0].element[38].target.display = "Observation[2]"
+* group[0].element[38].target.comment = "Implementers should consider the use case where OBX-5 repeats in a given OBX segment. Because the Observation value element is not allowed to repeat, multiple occurrences of OBX-5 must be handled either through the creation of multiple Observation resources, the use of Observation components, the concatenation of the results into a single value or another solution appropriate for the data and the implementation. When multiple OBX segments are tranformed into Observation components in a single Observation resource, implementers should consider how the metadata associated with the result (eg performer, status, date/time, etc) are populated. If the OBX segments being combined into a single resource contain different metadata, it must be considered whether or not the use of components is appropriate."
 * group[0].element[38].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[38].target.dependsOn[0].value = "IF (OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\") AND OBX-29 AND OBX-29 IN (\"QST\", \"SCI\")"
-* group[0].element[39].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
+* group[0].element[38].target.dependsOn[0].value = "IF (OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\") AND OBX-29 NOT IN (\"QST\", \"SCI\")"
+* group[0].element[39].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
 * group[0].element[39].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[39].extension[0].extension[0].url = "cardinalityMin"
-* group[0].element[39].extension[0].extension[0].valueInteger = 0
+* group[0].element[39].extension[0].extension[0].valueInteger = 1
 * group[0].element[39].extension[0].extension[1].url = "cardinalityMax"
-* group[0].element[39].extension[0].extension[1].valueInteger = -1
-* group[0].element[39].display = "Participation (Observation Participation)"
+* group[0].element[39].extension[0].extension[1].valueInteger = 1
+* group[0].element[39].display = "Observation related to OBR"
 * group[0].element[39].target.equivalence = #equivalent
-* group[0].element[39].target.code = #Device
-* group[0].element[39].target.display = "Device"
-* group[0].element[39].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
+* group[0].element[39].target.code = #Observation[2]
+* group[0].element[39].target.display = "Observation[2]"
 * group[0].element[39].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[39].target.dependsOn[0].value = "IF PRT-10 VALUED"
-* group[0].element[39].target.dependsOn[1].property = "Narrative-Condition"
-* group[0].element[39].target.dependsOn[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
-* group[0].element[40].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
+* group[0].element[39].target.dependsOn[0].value = "IF (OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\") AND OBX-29 IN (\"QST\", \"SCI\")"
+* group[0].element[40].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.OBX
 * group[0].element[40].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[40].extension[0].extension[0].url = "cardinalityMin"
-* group[0].element[40].extension[0].extension[0].valueInteger = 0
+* group[0].element[40].extension[0].extension[0].valueInteger = 1
 * group[0].element[40].extension[0].extension[1].url = "cardinalityMax"
-* group[0].element[40].extension[0].extension[1].valueInteger = -1
-* group[0].element[40].display = "Participation (Observation Participation)"
+* group[0].element[40].extension[0].extension[1].valueInteger = 1
+* group[0].element[40].display = "Observation related to OBR"
 * group[0].element[40].target.equivalence = #equivalent
 * group[0].element[40].target.code = #Observation[2]
 * group[0].element[40].target.display = "Observation[2]"
-* group[0].element[40].target.comment = """
-Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
-If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
-"""
 * group[0].element[40].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[40].target.dependsOn[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
-* group[0].element[40].target.dependsOn[1].property = "Narrative-Condition"
-* group[0].element[40].target.dependsOn[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
+* group[0].element[40].target.dependsOn[0].value = "IF (OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\") AND OBX-29 AND OBX-29 IN (\"QST\", \"SCI\")"
 * group[0].element[41].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
 * group[0].element[41].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[41].extension[0].extension[0].url = "cardinalityMin"
@@ -576,57 +571,101 @@ If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with 
 * group[0].element[41].extension[0].extension[1].valueInteger = -1
 * group[0].element[41].display = "Participation (Observation Participation)"
 * group[0].element[41].target.equivalence = #equivalent
-* group[0].element[41].target.code = #PractitionerRole[7]
-* group[0].element[41].target.display = "PractitionerRole[7]"
-* group[0].element[41].target.comment = """
-Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation practitioner information.
-If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
-"""
+* group[0].element[41].target.code = #Device
+* group[0].element[41].target.display = "Device"
+* group[0].element[41].target.comment = "If PRT-2 is set to \"D\" and \"inactive\" cannot be used, please submit a JIRA with context and rationale."
 * group[0].element[41].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[41].target.dependsOn[0].value = "IF PRT-5 VALUED"
+* group[0].element[41].target.dependsOn[0].value = "IF PRT-10 VALUED"
 * group[0].element[41].target.dependsOn[1].property = "Narrative-Condition"
 * group[0].element[41].target.dependsOn[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
-* group[0].element[42].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.NTE
+* group[0].element[42].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
 * group[0].element[42].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[42].extension[0].extension[0].url = "cardinalityMin"
 * group[0].element[42].extension[0].extension[0].valueInteger = 0
 * group[0].element[42].extension[0].extension[1].url = "cardinalityMax"
 * group[0].element[42].extension[0].extension[1].valueInteger = -1
-* group[0].element[42].display = "Notes and comments"
+* group[0].element[42].display = "Participation (Observation Participation)"
 * group[0].element[42].target.equivalence = #equivalent
-* group[0].element[42].target.code = #Observation[2].note
-* group[0].element[42].target.display = "Observation[2].note"
-* group[0].element[43].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPM
+* group[0].element[42].target.code = #Observation[2]
+* group[0].element[42].target.display = "Observation[2]"
+* group[0].element[42].target.comment = """
+Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation location information.
+If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
+"""
+* group[0].element[42].target.dependsOn[0].property = "Computable-ANTLR"
+* group[0].element[42].target.dependsOn[0].value = "IF PRT-9 VALUED OR IF PRT-14 VALUED"
+* group[0].element[42].target.dependsOn[1].property = "Narrative-Condition"
+* group[0].element[42].target.dependsOn[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
+* group[0].element[43].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.PRT
 * group[0].element[43].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[43].extension[0].extension[0].url = "cardinalityMin"
-* group[0].element[43].extension[0].extension[0].valueInteger = 1
+* group[0].element[43].extension[0].extension[0].valueInteger = 0
 * group[0].element[43].extension[0].extension[1].url = "cardinalityMax"
-* group[0].element[43].extension[0].extension[1].valueInteger = 1
-* group[0].element[43].display = "Specimen"
+* group[0].element[43].extension[0].extension[1].valueInteger = -1
+* group[0].element[43].display = "Participation (Observation Participation)"
 * group[0].element[43].target.equivalence = #equivalent
-* group[0].element[43].target.code = #Specimen[n]
-* group[0].element[43].target.display = "Specimen[n]"
-* group[0].element[44].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION.OBX
+* group[0].element[43].target.code = #PractitionerRole[7]
+* group[0].element[43].target.display = "PractitionerRole[7]"
+* group[0].element[43].target.comment = """
+Incorporate PRT content into the Observation created from the OBX segment in the same segment group when it represents observation practitioner information.
+If PRT-2 is set to "D" and "inactive" cannot be used, please submit a JIRA with context and rationale.\
+"""
+* group[0].element[43].target.dependsOn[0].property = "Computable-ANTLR"
+* group[0].element[43].target.dependsOn[0].value = "IF PRT-5 VALUED"
+* group[0].element[43].target.dependsOn[1].property = "Narrative-Condition"
+* group[0].element[43].target.dependsOn[1].value = "If PRT-2 is valued to \"D\", delete, then the implementer needs to consider whether to create a Device with Device.status = \"inactive\"."
+* group[0].element[44].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION.NTE
 * group[0].element[44].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[44].extension[0].extension[0].url = "cardinalityMin"
-* group[0].element[44].extension[0].extension[0].valueInteger = 1
+* group[0].element[44].extension[0].extension[0].valueInteger = 0
 * group[0].element[44].extension[0].extension[1].url = "cardinalityMax"
-* group[0].element[44].extension[0].extension[1].valueInteger = 1
-* group[0].element[44].display = "Observation (for Patient ID)"
+* group[0].element[44].extension[0].extension[1].valueInteger = -1
+* group[0].element[44].display = "Notes and comments"
 * group[0].element[44].target.equivalence = #equivalent
-* group[0].element[44].target.code = #Observation[3]
-* group[0].element[44].target.display = "Observation[3]"
-* group[0].element[44].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[44].target.dependsOn[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
-* group[0].element[45].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION.OBX
+* group[0].element[44].target.code = #Observation[2]
+* group[0].element[44].target.display = "Observation[2]"
+* group[0].element[45].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPM
 * group[0].element[45].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[45].extension[0].extension[0].url = "cardinalityMin"
 * group[0].element[45].extension[0].extension[0].valueInteger = 1
 * group[0].element[45].extension[0].extension[1].url = "cardinalityMax"
 * group[0].element[45].extension[0].extension[1].valueInteger = 1
-* group[0].element[45].display = "Observation (for Patient ID)"
+* group[0].element[45].display = "Specimen"
 * group[0].element[45].target.equivalence = #equivalent
-* group[0].element[45].target.code = #Observation[3]
-* group[0].element[45].target.display = "Observation[3]"
-* group[0].element[45].target.dependsOn[0].property = "Computable-ANTLR"
-* group[0].element[45].target.dependsOn[0].value = "IF OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""
+* group[0].element[45].target.code = #Specimen[n]
+* group[0].element[45].target.display = "Specimen[n]"
+* group[0].element[46].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPM
+* group[0].element[46].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group[0].element[46].extension[0].extension[0].url = "cardinalityMin"
+* group[0].element[46].extension[0].extension[0].valueInteger = 1
+* group[0].element[46].extension[0].extension[1].url = "cardinalityMax"
+* group[0].element[46].extension[0].extension[1].valueInteger = 1
+* group[0].element[46].display = "Specimen"
+* group[0].element[46].target.equivalence = #equivalent
+* group[0].element[46].target.code = #ServiceRequest[1]
+* group[0].element[46].target.display = "ServiceRequest[1]"
+* group[0].element[46].target.comment = "This provides a reject reason for the specimen in context of the specific test as the specimen may still be usable for other tests."
+* group[0].element[47].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION.OBX
+* group[0].element[47].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group[0].element[47].extension[0].extension[0].url = "cardinalityMin"
+* group[0].element[47].extension[0].extension[0].valueInteger = 1
+* group[0].element[47].extension[0].extension[1].url = "cardinalityMax"
+* group[0].element[47].extension[0].extension[1].valueInteger = 1
+* group[0].element[47].display = "Observation (for Patient ID)"
+* group[0].element[47].target.equivalence = #equivalent
+* group[0].element[47].target.code = #Observation[3]
+* group[0].element[47].target.display = "Observation[3]"
+* group[0].element[47].target.dependsOn[0].property = "Computable-ANTLR"
+* group[0].element[47].target.dependsOn[0].value = "IF OBX-5 LST.count LESS THAN OR EQUALS 1 OR OBX-2 IS \"NA\""
+* group[0].element[48].code = #ORU_R01.PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN.SPECIMEN_OBSERVATION.OBX
+* group[0].element[48].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
+* group[0].element[48].extension[0].extension[0].url = "cardinalityMin"
+* group[0].element[48].extension[0].extension[0].valueInteger = 1
+* group[0].element[48].extension[0].extension[1].url = "cardinalityMax"
+* group[0].element[48].extension[0].extension[1].valueInteger = 1
+* group[0].element[48].display = "Observation (for Patient ID)"
+* group[0].element[48].target.equivalence = #equivalent
+* group[0].element[48].target.code = #Observation[3]
+* group[0].element[48].target.display = "Observation[3]"
+* group[0].element[48].target.dependsOn[0].property = "Computable-ANTLR"
+* group[0].element[48].target.dependsOn[0].value = "IF OBX-5 LST.count GREATER THAN 1 AND OBX-2 IS NOT \"NA\""

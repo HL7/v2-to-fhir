@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ NK1[Patient] - Sheet1.csv
+// HL7 Segment - FHIR E2_ NK1[Patient] - Sheet1.csv
 Instance: SegmentNK1ToPatient
 InstanceOf: ConceptMap
 Title: "Segment NK1 to Patient Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment NK1 to Patient.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1h9Z67WhrMJ5Va4CEY1UV_Fowy_mPHGJK-OvN6fW0GIk/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1JtkOuuY5lj7ivpfFS-YobUwxrb3rD0RCHiMbGNypolc/edit?gid=0#gid=0"
 * group[0].element[0].code = #NK1-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

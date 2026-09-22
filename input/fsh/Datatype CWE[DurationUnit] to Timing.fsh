@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CWE[Timing-DurationUnit] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CWE[Timing-DurationUnit] - Sheet1.csv
 Instance: DatatypeCWEDurationUnitToTiming
 InstanceOf: ConceptMap
 Title: "Datatype CWE [DurationUnit] to Timing Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CWE[DurationUnit] to Timing.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1peXd1bfzbP54t4Ns267PTNjDR1wX1HqF28C6o5P_-LY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ouxPdKkS3Kl1wJke84TxQwr0hPn4-nnA82VUam3ng1c/edit?gid=0#gid=0"
 * group[0].element[0].code = #CWE.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

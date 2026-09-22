@@ -1,4 +1,4 @@
-// HL7 Concept Map_ Event[EncounterStatus] - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ Event[EncounterStatus] - Sheet1.csv
 Instance: TableHL70003ToEncounterStatus
 InstanceOf: ConceptMap
 Title: "Table HL70003 to Encounter Status Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70003 to Encounter Status.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1WbXyGSjeff_jxywyFy2WQwbwb_Q308ywdcnHQmbZRGY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1RiDqMXDoBdbmBc6UL4wjcMECgIby-_cy2gTBvrBFMJk/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0003"
 * group[0].target = "http://hl7.org/fhir/encounter-status"
 * group[0].element[0].code = #A01

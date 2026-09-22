@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ AL1[AllergyIntolerance] - AL1.csv
+// HL7 Segment - FHIR E2_ AL1[AllergyIntolerance] - AL1.csv
 Instance: SegmentAL1ToAllergyIntolerance
 InstanceOf: ConceptMap
 Title: "Segment AL1 to AllergyIntolerance Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment AL1 to AllergyIntolerance.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/10aUgY2Kw3sYlbaw-QHykWri8J3Fb3J_Xc7DvCY_nzyE/edit?usp=sharing"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1XEj0F91HYwPgwGObAld3sKbko-DwB2G-SswM9QxiFas/edit?gid=0#gid=0"
 * group[0].element[0].code = #AL1
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #clinicalStatus.coding.code

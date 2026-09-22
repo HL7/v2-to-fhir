@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ TQ[Appointment] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ TQ[Appointment] - Sheet1.csv
 Instance: DatatypeTQToAppointment
 InstanceOf: ConceptMap
 Title: "Datatype TQ to Appointment Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype TQ to Appointment.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1XZpe0uglU5LxEU2k0aHbtGNTD1hW5bANkF10i27olYg/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1whj9-kvKHzep88YjDiXxHWYw5LE0hWKxmnwBH_8oSVU/edit?gid=0#gid=0"
 * group[0].element[0].code = #TQ.4
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

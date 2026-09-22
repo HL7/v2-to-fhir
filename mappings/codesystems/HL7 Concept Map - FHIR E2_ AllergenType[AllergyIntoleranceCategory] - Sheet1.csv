@@ -1,0 +1,10 @@
+HL7 v2,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,Comments
+Code,Text,Code System,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+DA,Drug allergy,HL70127,"F-R4, F-R6",,,,,medication,,Medication,http://hl7.org/fhir/allergy-intolerance-category,,
+FA,Food allergy,HL70127,"F-R4, F-R6",,,,,food,,Food,http://hl7.org/fhir/allergy-intolerance-category,,
+MA,Miscellaneous allergy,HL70127,"F-R4, F-R6",,,,,,,,,,
+MC,Miscellaneous contraindication,HL70127,"F-R4, F-R6",,,,,,,,,,
+EA,Environmental allergy,HL70127,"F-R4, F-R6",,,,,environment,,Environment,http://hl7.org/fhir/allergy-intolerance-category,,
+AA,Animal allergy,HL70127,"F-R4, F-R6",,,,,biologic,,Biologic,http://hl7.org/fhir/allergy-intolerance-category,,
+PA,Plant allergy,HL70127,"F-R4, F-R6",,,,,environment,,Environment,http://hl7.org/fhir/allergy-intolerance-category,,
+LA,Pollen allergy,HL70127,"F-R4, F-R6",,,,,environment,,Environment,http://hl7.org/fhir/allergy-intolerance-category,,

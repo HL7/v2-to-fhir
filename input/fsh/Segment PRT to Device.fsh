@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PRT[Device] - Sheet1.csv
+// HL7 Segment - FHIR E2_ PRT[Device] - Sheet1.csv
 Instance: SegmentPRTToDevice
 InstanceOf: ConceptMap
 Title: "Segment PRT to Device Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PRT to Device.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kApBsX909N_5B--utrkPcLtEvI9m5We5GyRDk0dH1sU/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1bbcf_AarxbCPrwkbFfs7yJs1Y813KtIWmq9HDCYPaG0/edit?gid=0#gid=0"
 * group[0].element[0].code = #PRT-10
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

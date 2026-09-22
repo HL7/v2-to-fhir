@@ -1,6 +1,0 @@
-HL7 v2,,,Condition (IF TRUE),,,HL7 FHIR,,,,,Comment
-Code,Text,Code System,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
-SV,Severe,HL70128,,,,SV,,Severe,http://terminology.hl7.org/CodeSystem/v2-0128,,
-MO,Moderate,HL70128,,,,MO,,Moderate,http://terminology.hl7.org/CodeSystem/v2-0128,,
-MI,Mild,HL70128,,,,MI,,Mild,http://terminology.hl7.org/CodeSystem/v2-0128,,
-U,Unknown,HL70128,,,,U,,Unknown,http://terminology.hl7.org/CodeSystem/v2-0128,,

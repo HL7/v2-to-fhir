@@ -1,4 +1,4 @@
-// HL7 Concept Map_ CompletionStatus - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ CompletionStatus - Sheet1.csv
 Instance: TableHL70322ToEventStatus
 InstanceOf: ConceptMap
 Title: "Table HL70322 to Event Status Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70322 to Event Status.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1H1xwOSKaUkI5J7JUPiWR01WWFOnEQzwxwGLizknf0V4/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1SX4XikfsR3tBt3URTwiEFpvbXf1zkIYNi4KCCKYDXTc/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0322"
 * group[0].target = "http://hl7.org/fhir/event-status"
 * group[0].element[0].code = #CP

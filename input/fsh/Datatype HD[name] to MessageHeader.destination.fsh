@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ HD[MessageHeader.destination-name] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ HD[MessageHeader.destination-name] - Sheet1.csv
 Instance: DatatypeHDNameToMessageHeaderDestination
 InstanceOf: ConceptMap
 Title: "Datatype HD [name] to MessageHeader.destination Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype HD[name] to MessageHeader.destination.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1MZ2k1XgrAcvf4KCxSx_2bKwrdtOZHQDvKgCmXwrDUqY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/18U9fhU7Ka4y39_3piVTHW2Qc-EDjPVu-qg4A0V_kMZY/edit?gid=0#gid=0"
 * group[0].element[0].code = #HD.2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

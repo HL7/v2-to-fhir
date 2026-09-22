@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ NA[SampledData] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ NA[SampledData] - Sheet1.csv
 Instance: DatatypeNAToSampledData
 InstanceOf: ConceptMap
 Title: "Datatype NA to SampledData Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype NA to SampledData.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1GCew5Q2d9I6IiZminQ7DHWqMaD7eJWy1yau1fLqYpJs/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Ix0uI2xltTpVo9dW2RtevsCirabLgdiC1rsVkHaEEBM/edit?gid=0#gid=0"
 * group[0].element[0].code = #NA.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ OG[Extension-Subidentifier] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ OG[Extension-Subidentifier] - Sheet1.csv
 Instance: DatatypeOGSubidentifierToExtension
 InstanceOf: ConceptMap
 Title: "Datatype OG [Subidentifier] to Extension Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype OG[Subidentifier] to Extension.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1b5obkzO4CkZ8IRVI_b2kaKrPbHAgdNMvjc-ez3IxJig/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1jK02xqOYU-EcG0Nj1rJKe-1BapjE-1s05P-kG_uip_Y/edit?gid=0#gid=0"
 * group[0].element[0].code = #OG.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"
@@ -32,8 +32,6 @@ Usage: #definition
 * group[0].element[0].target.extension[0].extension[0].valueInteger = 1
 * group[0].element[0].target.extension[0].extension[1].url = "cardinalityMax"
 * group[0].element[0].target.extension[0].extension[1].valueInteger = 1
-* group[0].element[0].target.extension[0].extension[2].url = "assignment"
-* group[0].element[0].target.extension[0].extension[2].valueString = "\"http://hl7.org/fhir/StructureDefinition/observation-v2-subid\""
 * group[0].element[0].target.display = "extension[1]:group.url"
 * group[0].element[1].code = #OG.1
 * group[0].element[1].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
@@ -121,7 +119,7 @@ Usage: #definition
 * group[0].element[5].extension[0].extension[2].valueInteger = 1
 * group[0].element[5].display = "Sequence"
 * group[0].element[5].target.equivalence = #equivalent
-* group[0].element[5].target.code = #extension[1]:group.valueDecimal
+* group[0].element[5].target.code = #extension[1]:sequence.valueDecimal
 * group[0].element[5].target.extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[5].target.extension[0].extension[0].url = "type"
 * group[0].element[5].target.extension[0].extension[0].valueCode = #"decimal"
@@ -129,7 +127,7 @@ Usage: #definition
 * group[0].element[5].target.extension[0].extension[1].valueInteger = 1
 * group[0].element[5].target.extension[0].extension[2].url = "cardinalityMax"
 * group[0].element[5].target.extension[0].extension[2].valueInteger = 1
-* group[0].element[5].target.display = "extension[1]:group.valueDecimal"
+* group[0].element[5].target.display = "extension[1]:sequence.valueDecimal"
 * group[0].element[6].code = #OG.4
 * group[0].element[6].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[6].extension[0].extension[0].url = "type"

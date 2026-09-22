@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AdmissionType - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AdmissionType - Sheet1.csv
 Instance: TableHL70007ToV20007
 InstanceOf: ConceptMap
 Title: "Table HL70007 to V2 0007 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70007 to V2 0007.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1KJsdOBI-L2BD2DpItURTDZ7o-rGNEYIZZMBNEoiqhrI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1YirXWTz-z4mwLhFNeiaPySn1r60OFHOIU4AP4ikKjZc/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0007"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0007"
 * group[0].element[0].code = #A

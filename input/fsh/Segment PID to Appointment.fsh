@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PID[Appointment] - PID.csv
+// HL7 Segment - FHIR E2_ PID[Appointment] - PID.csv
 Instance: SegmentPIDToAppointment
 InstanceOf: ConceptMap
 Title: "Segment PID to Appointment Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PID to Appointment.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/179qbacXadBfYInQC-qj3gcfozPKqhxq109i4GgaHocQ/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1Y4V-ICwKmDl1FG__v8RbZ1_CO3v9mYRxy2ysV6_kTrg/edit?gid=0#gid=0"
 * group[0].element[0].code = #PID-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ RXR[MedicationRequest] - Sheet1.csv
+// HL7 Segment - FHIR E2_ RXR[MedicationRequest] - Sheet1.csv
 Instance: SegmentRXRToMedicationRequest
 InstanceOf: ConceptMap
 Title: "Segment RXR to MedicationRequest Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment RXR to MedicationRequest.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1WEXn8hEZ9ul6R2Ip-3YTh5Z4RTAN5kSDG9f_HOfL1UY/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kGnPA0lxq-m2GF3ELN9wPe3VfDbvo561NWaKoGoQHdQ/edit?gid=0#gid=0"
 * group[0].element[0].code = #RXR-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

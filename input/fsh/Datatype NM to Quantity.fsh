@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ NM[Quantity] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ NM[Quantity] - Sheet1.csv
 Instance: DatatypeNMToQuantity
 InstanceOf: ConceptMap
 Title: "Datatype NM to Quantity Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype NM to Quantity.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1g4uO4eRFeRsOhiR5G_PIqMs8rTMIxjF1qk9izKcunnI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1s6rxo8fyRQmOLUaSB6kIsS9IozEncm_bNu30Sl3STlw/edit?gid=0#gid=0"
 * group[0].element[0].code = #NM.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "cardinalityMin"

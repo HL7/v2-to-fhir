@@ -83,6 +83,7 @@ is described in the section on [mapping](#mapping) at the bottom of this page.
 * [PRT[GeneralPractitioner-PractitionerRole]](ConceptMap-segment-prt-generalpractitioner-practitionerrole-to-patient.html) - Participation Information to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [PRT[GeneralPractitioner-Practitioner]](ConceptMap-segment-prt-generalpractitioner-practitioner-to-patient.html) - Participation Information to FHIR [Patient](http://hl7.org/fhir/R4/patient.html)
 * [PRT[Location]](ConceptMap-segment-prt-location-to-observation.html) - Participation Information to FHIR [Observation](http://hl7.org/fhir/R4/observation.html)
+* [SPM](ConceptMap-segment-spm-to-servicerequest.html) - Specimen to FHIR [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)
 * [SPM](ConceptMap-segment-spm-to-specimen.html) - Specimen to FHIR [Specimen](http://hl7.org/fhir/R4/specimen.html)
 
 ### Chapter  9  Medical Records/Information Management

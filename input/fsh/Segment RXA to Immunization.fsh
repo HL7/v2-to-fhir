@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ RXA[Immunization] - RXA.csv
+// HL7 Segment - FHIR E2_ RXA[Immunization] - RXA.csv
 Instance: SegmentRXAToImmunization
 InstanceOf: ConceptMap
 Title: "Segment RXA to Immunization Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment RXA to Immunization.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1QN5bQ2mC4QZqo9MTkZGhzI-tqFnlEOy1CcBschYnQ20/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1cJr6CiffSG5faO5o4U8tZyTmer8Dz8ZTJN0OHg6Q5es/edit?gid=0#gid=0"
 * group[0].element[0].code = #RXA-3
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

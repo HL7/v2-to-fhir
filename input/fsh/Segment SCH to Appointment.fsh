@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ SCH[Appointment] - Sheet1.csv
+// HL7 Segment - FHIR E2_ SCH[Appointment] - Sheet1.csv
 Instance: SegmentSCHToAppointment
 InstanceOf: ConceptMap
 Title: "Segment SCH to Appointment Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment SCH to Appointment.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1S47XTStisnXo1osyf8tR8yDySkWM1tb4MFrHIU1Es48/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1xwoVCCUVbaQOlwr9E5LJgSztp9sQ1a5kbU2ZVzHKSxE/edit?gid=0#gid=0"
 * group[0].element[0].code = #SCH-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

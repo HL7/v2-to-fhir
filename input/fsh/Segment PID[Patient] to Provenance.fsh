@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PID[Provenance-Patient] - PID.csv
+// HL7 Segment - FHIR E2_ PID[Provenance-Patient] - PID.csv
 Instance: SegmentPIDPatientToProvenance
 InstanceOf: ConceptMap
 Title: "Segment PID [Patient] to Provenance Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PID[Patient] to Provenance.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1n_mRDFUD-LI6_fVxNurlTCU53Rn6AfDnE75wPH6hC4I/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1lztekDdQQVhFdX4c94QUgXlhtLuGcrpwMD3ISFZXb80/edit?gid=0#gid=0"
 * group[0].element[0].code = #PID
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #recorded

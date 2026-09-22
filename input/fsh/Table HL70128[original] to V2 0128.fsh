@@ -1,4 +1,4 @@
-// HL7 Concept Map_ AllergySeverity[AllergyIntolerance.criticality-original] - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ AllergySeverity[AllergyIntolerance.criticality-original] - Sheet1.csv
 Instance: TableHL70128OriginalToV20128
 InstanceOf: ConceptMap
 Title: "Table HL70128 [original] to V2 0128 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70128[original] to V2 0128.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1F3YGZuimTTxay5ngXQKu2Gvy5VvEom5xLvtWvHWJbkk/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1YkuC3Kn4wiNcugCAaKbJ6mx0I9s_srXSh5TGJhhRug8/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0128"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0128"
 * group[0].element[0].code = #SV

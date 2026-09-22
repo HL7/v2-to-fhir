@@ -1,4 +1,4 @@
-// HL7 Concept Map_ MaritalStatus - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ MaritalStatus - Sheet1.csv
 Instance: TableHL70002ToV3MaritalStatus
 InstanceOf: ConceptMap
 Title: "Table HL70002 to V3 MaritalStatus Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70002 to V3 MaritalStatus.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1HfYIHuf_CVC28fRhy3wgGSRZ5XtWKSERNNrcR45wSkA/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ShpuXsIQcbzF35pY5SehvooJWa_wA5qSxb6MPUanReE/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0002"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
 * group[0].element[0].code = #A

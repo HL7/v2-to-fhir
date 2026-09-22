@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PR1[Procedure] - PR1[Procedure].csv
+// HL7 Segment - FHIR E2_ PR1[Procedure] - PR1[Procedure].csv
 Instance: SegmentPR1ToProcedure
 InstanceOf: ConceptMap
 Title: "Segment PR1 to Procedure Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PR1 to Procedure.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/12jwNxyJ4zvjtbYbDGgnd_Pg7GsuG0iQK3TlJtDsADOU/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1vO0cuE78-Z343IeIh5WS38mXIgfCdp89246s6SOsdGQ/edit?gid=0#gid=0"
 * group[0].element[0].code = #PR1
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #status

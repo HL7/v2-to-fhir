@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ DG1[EpisodeOfCare] - Sheet1.csv
+// HL7 Segment - FHIR E2_ DG1[EpisodeOfCare] - Sheet1.csv
 Instance: SegmentDG1ToEpisodeOfCare
 InstanceOf: ConceptMap
 Title: "Segment DG1 to EpisodeOfCare Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment DG1 to EpisodeOfCare.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1seZccIaX-x7-8vVxT1JiiG5Hm1dtWgYcI2RxiiKzh-o/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1uLVCkd73etN6dzaMj4RXKz35XGAHSFkYp5vPkUqlFk8/edit?gid=0#gid=0"
 * group[0].element[0].code = #DG1-3
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"
@@ -92,7 +92,7 @@ Usage: #definition
 * group[0].element[3].target.extension[0].extension[2].url = "cardinalityMax"
 * group[0].element[3].target.extension[0].extension[2].valueInteger = 1
 * group[0].element[3].target.extension[0].extension[3].url = "mappedVia"
-* group[0].element[3].target.extension[0].extension[3].valueUrl = "ConceptMap/table-hl70052-to-diagnosis-role"
+* group[0].element[3].target.extension[0].extension[3].valueUrl = "unspecified_mapping"
 * group[0].element[3].target.display = "diagnosis.role"
 * group[0].element[4].code = #DG1-15
 * group[0].element[4].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"

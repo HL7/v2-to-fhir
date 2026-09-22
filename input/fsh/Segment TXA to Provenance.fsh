@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ TXA[Provenance] - Sheet1.csv
+// HL7 Segment - FHIR E2_ TXA[Provenance] - Sheet1.csv
 Instance: SegmentTXAToProvenance
 InstanceOf: ConceptMap
 Title: "Segment TXA to Provenance Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment TXA to Provenance.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/14WD1YPRWINIG4WQ4GuBI77_6xTSdFW17aH3IrbHUyvo/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1RrHssu8Lf2xaRX9GYnRrPDnHcrlsfG9tgU3E5YfY5DA/edit?gid=0#gid=0"
 * group[0].element[0].code = #TXA
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

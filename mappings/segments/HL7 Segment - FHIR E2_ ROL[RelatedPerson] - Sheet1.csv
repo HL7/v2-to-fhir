@@ -1,0 +1,17 @@
+HL7 v2,,,,,,FHIR Version,,Condition (IF True),,,HL7 FHIR,,,,,,,,,Comments,,JIRA REF
+Sort Order,Identifier,Name,Data Type,Cardinality - Min,Cardinality - Max,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,FHIR Attribute,,Data Type,Cardinality - Min,Cardinality - Max,Data Type Mapping,"Vocabulary Mapping
+(IS, ID, CE, CNE, CWE)",Assignment,,,,
+1,ROL-1,Role Instance ID,EI,0,1,"F-R4, F-R6",,,,,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,,,
+2,ROL-2,Action Code,ID,1,1,"F-R4, F-R6",,,,if mapped to a restful service to progress the message.,,,,,,,,,,,,
+3,ROL-3,Role-ROL,CWE,1,1,"F-R4, F-R6",,,,,relationship,,CodeableConcept,0,-1,CWE[CodeableConcept],ProviderRole,,,,,
+4,ROL-4,Role Person,XCN,1,-1,"F-R4, F-R6",,,,,$this,,,,,XCN[RelatedPerson],,,,"A given ROL segment should create a single RelatedPerson resource, with the name coming from ROL-4 via the Data Type Map provided here and other attributes (eg. address, phone number) from other ROL fields. Therefor, when performing $this, the data type map updates the RelatedPerson resource created from this ROL[RelatedPerson] map.",,
+5,ROL-5,Role Begin Date/Time,DTM,0,1,"F-R4, F-R6",,,,,period.start,,dateTime,0,1,,,,,,,
+6,ROL-6,Role End Date/Time,DTM,0,1,"F-R4, F-R6",,,,,period.end,,dateTime,0,1,,,,,,,
+7,ROL-7,Role Duration,CWE,0,1,"F-R4, F-R6",,,,,,extension?-duration,code,0,1,CWE[code],,,,,,
+8,ROL-8,Role Action Reason,CWE,0,1,"F-R4, F-R6",,,,,,,,,,,,,,,,
+9,ROL-9,Provider Type,CWE,0,-1,"F-R4, F-R6",,,,,,extension?-providerType,CodeableConcept,0,-1,CWE[CodeableConcept],,,,,,
+10,ROL-10,Organization Unit Type,CWE,0,1,"F-R4, F-R6",,,,,,extension?-organizationType,CodeableConcept,0,1,CWE[CodeableConcept],,,,,,
+11,ROL-11,Office/Home Address/Birthplace,XAD,0,-1,"F-R4, F-R6",,,,,address,,Address,0,-1,XAD[Address],,,,,,
+12,ROL-12,Phone,XTN,0,-1,"F-R4, F-R6",,,,,telecom,,ContactPoint,0,-1,XTN[ContactPoint],,,,,,
+13,ROL-13,Person's Location,PL,0,1,"F-R4, F-R6",,,,,,extension?-location(Location),Reference(Location),0,1,PL[Location],,,,,,
+14,ROL-14,Organization,XON,0,1,"F-R4, F-R6",,,,,,extension?-organization(Organization),Reference(Organization),0,1,XON[Organization],,,,,,

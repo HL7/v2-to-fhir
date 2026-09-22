@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ TQ1[ServiceRequest] - TQ1.csv
+// HL7 Segment - FHIR E2_ TQ1[ServiceRequest] - TQ1.csv
 Instance: SegmentTQ1ToServiceRequest
 InstanceOf: ConceptMap
 Title: "Segment TQ1 to ServiceRequest Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment TQ1 to ServiceRequest.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ArKfApTgRxut0iBM4BnkqS9-QnOfqcKD2oZmrWzTE1I/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1f-3PECZtzaRp0lNinSwNYBxCKeasP41jch2fPvbuT-s/edit?gid=0#gid=0"
 * group[0].element[0].code = #TQ1-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

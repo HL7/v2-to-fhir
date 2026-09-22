@@ -1,4 +1,4 @@
-// HL7 Message - FHIR R4_ MDM_T02 - Sheet1.csv
+// HL7 Message - FHIR E2_ MDM_T02 - Sheet1.csv
 Instance: MessageMDM_T02ToBundle
 InstanceOf: ConceptMap
 Title: "Message MDM_T02 to Bundle Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Message MDM:T02 to Bundle.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1KXumJbfcuuPNcbMjp2esj2kJSj-RkU8CqQYhUfXrp9c/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/14MrAtDbvZdjbKMeSqACg5BzD08zvlu1N9Y3rlsN1v_U/edit?gid=0#gid=0"
 * group[0].element[0].code = #MDM_T02.MSH
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "cardinalityMin"

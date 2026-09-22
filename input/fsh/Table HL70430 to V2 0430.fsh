@@ -1,4 +1,4 @@
-// HL7 Concept Map_ ModeOfArrivalCode - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ ModeOfArrivalCode - Sheet1.csv
 Instance: TableHL70430ToV20430
 InstanceOf: ConceptMap
 Title: "Table HL70430 to V2 0430 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70430 to V2 0430.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1cq-jINNYePVc6dACBzBbFzTv7ry8e6w8ZXgHmmW7WeE/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/126xYvbvnizjzJRH_0mZBJaLihzA54W2Hf0dAiPcnybw/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0430"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0430"
 * group[0].element[0].code = #A

@@ -1,4 +1,4 @@
-// HL7 Concept Map_ EventType - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ EventType - Sheet1.csv
 Instance: TableHL70003ToV20003
 InstanceOf: ConceptMap
 Title: "Table HL70003 to V2 0003 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70003 to V2 0003.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1U5k6lNkp837kP27XfWGJOS2wleSIiNtwAUVVf2oYlYI/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1xSvSPt5Yv4S7kW8P6L_4iyO9pMwg1aHiPKWhE7M4S1k/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0003"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0003"
 * group[0].element[0].code = #A01

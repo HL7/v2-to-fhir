@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PD1[Observation-LivingWill] - PD1.csv
+// HL7 Segment - FHIR E2_ PD1[Observation-LivingWill] - PD1.csv
 Instance: SegmentPD1LivingWillToObservation
 InstanceOf: ConceptMap
 Title: "Segment PD1 [LivingWill] to Observation Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PD1[LivingWill] to Observation.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1v2Ip_zAEz8INIx7tLmTa4PwyG6IfEUD1wjzVLJls4Ik/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1lYi-iuDhDpFyC8ZPe6dv_VT2qIZmRbeQmLDqT9jQmmw/edit?gid=0#gid=0"
 * group[0].element[0].code = #PD1-7
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

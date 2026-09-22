@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ IS[CodeableConcept] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ IS[CodeableConcept] - Sheet1.csv
 Instance: DatatypeISToCodeableConcept
 InstanceOf: ConceptMap
 Title: "Datatype IS to CodeableConcept Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype IS to CodeableConcept.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1fBH2ZjXa4pzEl8am0-MuY8NOibIh7nn2TkwimzilGaU/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/162BE2iL7RunVz6yVVRAqOdpO8mugcUjlyqduiIPjhUA/edit?gid=0#gid=0"
 * group[0].element[0].code = #IS.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

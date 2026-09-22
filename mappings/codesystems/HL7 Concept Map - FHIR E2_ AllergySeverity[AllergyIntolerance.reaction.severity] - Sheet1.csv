@@ -1,0 +1,6 @@
+HL7 v2,,,FHIR Version,,Condition (IF TRUE),,,HL7 FHIR,,,,,Comment
+Code,Text,Code System,Core Version,Incubator Version,Computable ANTLR,Computable FHIRPath,Narrative,Code,,Display,Code System,,
+SV,Severe,HL70128,"F-R4, F-R6",,,,,severe,,Severe,http://hl7.org/fhir/reaction-event-severity,,
+MO,Moderate,HL70128,"F-R4, F-R6",,,,,moderate,,Moderate,http://hl7.org/fhir/reaction-event-severity,,
+MI,Mild,HL70128,"F-R4, F-R6",,,,,mild,,Mild,http://hl7.org/fhir/reaction-event-severity,,
+U,Unknown,HL70128,"F-R4, F-R6",,,,,,,,,,

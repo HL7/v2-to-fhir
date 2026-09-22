@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ MSH[Provenance-Transformation] - Sheet1.csv
+// HL7 Segment - FHIR E2_ MSH[Provenance-Transformation] - Sheet1.csv
 Instance: SegmentMSHTransformationToProvenance
 InstanceOf: ConceptMap
 Title: "Segment MSH [Transformation] to Provenance Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment MSH[Transformation] to Provenance.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1byfzqOfOvIVdRkHv2Tto5a-a0YMYWWP0eryaZBvibIo/edit?gid=0#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1LZd_htvANGGdEBUqYQnQuP0ouyClfI91wkR-byuvl7U/edit?gid=0#gid=0"
 * group[0].element[0].code = #MSH
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #activity.coding.code

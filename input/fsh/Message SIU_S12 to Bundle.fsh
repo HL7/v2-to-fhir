@@ -1,4 +1,4 @@
-// HL7 Message - FHIR R4_ SIU_S12 - Sheet1.csv
+// HL7 Message - FHIR E2_ SIU_S12 - Sheet1.csv
 Instance: MessageSIU_S12ToBundle
 InstanceOf: ConceptMap
 Title: "Message SIU_S12 to Bundle Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Message SIU:S12 to Bundle.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1kbcOetUxBZWvGNxHAmJgjZFMoDVNHvJufAEs8-p4y24/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1zLiRF5iEyBTcApRCN6fVaRv_2Ud4i8JoS2gOSjRpWYA/edit?gid=0#gid=0"
 * group[0].element[0].code = #SIU_S12.MSH
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "cardinalityMin"

@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ CQ[code] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ CQ[code] - Sheet1.csv
 Instance: DatatypeCQToCode
 InstanceOf: ConceptMap
 Title: "Datatype CQ to code Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype CQ to code.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1BFNRs6fNoqFyXGmzfYB1-G3SGCMuHXuLAk0vXQyittQ/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1rNslpUwP7d2kR8UiLooFDVtXxLY46zKXOXgFzvwfptI/edit?gid=0#gid=0"
 * group[0].element[0].code = #CQ.2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

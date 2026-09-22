@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PRT[CareTeam] - Sheet1.csv
+// HL7 Segment - FHIR E2_ PRT[CareTeam] - Sheet1.csv
 Instance: SegmentPRTToCareTeam
 InstanceOf: ConceptMap
 Title: "Segment PRT to CareTeam Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PRT to CareTeam.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1TcwjfyUSD-659jlIoZIne7O0JoxHPo6yhd4aaBGVrtE/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1CNDNgVQANctRyEhkH7JAiYBONuj64SryBYM2ktKFfqY/edit?gid=0#gid=0"
 * group[0].element[0].code = #PRT-4
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

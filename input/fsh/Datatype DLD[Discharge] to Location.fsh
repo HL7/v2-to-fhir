@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ DLD[Location-Discharge] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ DLD[Location-Discharge] - Sheet1.csv
 Instance: DatatypeDLDDischargeToLocation
 InstanceOf: ConceptMap
 Title: "Datatype DLD [Discharge] to Location Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype DLD[Discharge] to Location.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1lUw9g0EWTpvOZ-4GBPpvOh-djKs_38GZTDxhMz3WgwE/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1GsHiSp-PJG0dOVW4lLbxjnQ6V-seRFaKXZTDfevWGEs/edit?gid=0#gid=0"
 * group[0].element[0].code = #DLD.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

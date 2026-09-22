@@ -1,4 +1,4 @@
-// HL7 Concept Map_ ReadmissionIndicator - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ ReadmissionIndicator - Sheet1.csv
 Instance: TableHL70092ToV20092
 InstanceOf: ConceptMap
 Title: "Table HL70092 to V2 0092 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70092 to V2 0092.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1etqlWirZVdqipXGQ_9Uq1Wl6bN4DMp-SdL6Y8MnE4WE/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1QvuiZo_F0sESNJV-pumTzZ3jYM4XrY9HQlNx_Pw2iBA/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0092"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0092"
 * group[0].element[0].code = #R

@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ ROL[Patient-GeneralPractitioner] - Sheet1.csv
+// HL7 Segment - FHIR E2_ ROL[Patient-GeneralPractitioner] - Sheet1.csv
 Instance: SegmentROLGeneralPractitionerToPatient
 InstanceOf: ConceptMap
 Title: "Segment ROL [GeneralPractitioner] to Patient Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment ROL[GeneralPractitioner] to Patient.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1k_CXL1pI4XSfDj93bYImERZ_fm5Cwm9tzQj_IKHBAeI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1MB_SjYZ2r_IAM7_sJuGyZd90YT3AF99tUEzFhKs6f58/edit?gid=0#gid=0"
 * group[0].element[0].code = #ROL-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -1,4 +1,4 @@
-// HL7 Concept Map_ DiagnosticServiceSectionID - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ DiagnosticServiceSectionID - Sheet1.csv
 Instance: TableHL70074ToV20074
 InstanceOf: ConceptMap
 Title: "Table HL70074 to V2 0074 Map"
@@ -17,7 +17,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70074 to V2 0074.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/190IK3DXu5_bpGgesA5ZZ_YxN009gyutbuT5yztzB3BI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1LZEeZwqNMMFKIJOP6H-0kboI4RgqqqoeOTNpCD9r9yY/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0074"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v2-0074"
 * group[0].element[0].code = #AU

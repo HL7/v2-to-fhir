@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ PV2[Encounter] - PV2.csv
+// HL7 Segment - FHIR E2_ PV2[Encounter] - PV2.csv
 Instance: SegmentPV2ToEncounter
 InstanceOf: ConceptMap
 Title: "Segment PV2 to Encounter Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment PV2 to Encounter.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1ILbJ8GmvNdEW4XmvrmEHtZxsRM1bk5hHl5WD2oDSa4Q/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/15pxdl_obDL21QULu_u5BW5jYA-7tC2939-iEsxPe1sQ/edit?gid=0#gid=0"
 * group[0].element[0].code = #PV2-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ ORC[MedicationAdministration] - Sheet1.csv
+// HL7 Segment - FHIR E2_ ORC[MedicationAdministration] - Sheet1.csv
 Instance: SegmentORCToMedicationAdministration
 InstanceOf: ConceptMap
 Title: "Segment ORC to MedicationAdministration Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment ORC to MedicationAdministration.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1O0eVdxnh7r1vdaoPGyFnAJX9KwlAexK3Iz7psqrR8ZA/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1dtNh3Lov2RRBSRYRj35VWoXJbFYlhboZROSqt4iaEeg/edit?gid=0#gid=0"
 * group[0].element[0].code = #ORC-1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

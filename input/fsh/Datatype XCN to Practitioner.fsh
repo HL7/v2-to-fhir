@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ XCN[Practitioner] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ XCN[Practitioner] - Sheet1.csv
 Instance: DatatypeXCNToPractitioner
 InstanceOf: ConceptMap
 Title: "Datatype XCN to Practitioner Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype XCN to Practitioner.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1hp-FZG0jKhKmxbVddilKKCc24RLAvum6g14q8o-3frk/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1diWfEjO52rxmu01sGEsDJzoDoflkgM9o-9FD5TQ1mRA/edit?gid=0#gid=0"
 * group[0].element[0].code = #XCN.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

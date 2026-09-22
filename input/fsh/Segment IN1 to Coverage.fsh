@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ IN1[Coverage] - Sheet1.csv
+// HL7 Segment - FHIR E2_ IN1[Coverage] - Sheet1.csv
 Instance: SegmentIN1ToCoverage
 InstanceOf: ConceptMap
 Title: "Segment IN1 to Coverage Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment IN1 to Coverage.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1-8U35_8X9wQTQAchyVAujF4TFrbcjyDeloU2gpHT2_o/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1JSjddqkb-aU1bNnIguBI7s_PQrcQVGn5k8WvvEwldsI/edit?gid=0#gid=0"
 * group[0].element[0].code = #IN1-2
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

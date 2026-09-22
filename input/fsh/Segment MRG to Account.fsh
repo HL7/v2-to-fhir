@@ -1,4 +1,4 @@
-// HL7 Segment - FHIR R4_ MRG[Account] - Sheet1.csv
+// HL7 Segment - FHIR E2_ MRG[Account] - Sheet1.csv
 Instance: SegmentMRGToAccount
 InstanceOf: ConceptMap
 Title: "Segment MRG to Account Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Segment MRG to Account.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1WY6xTT0gdBZqqlwz59QcRpyE9MFUKzWoHm7lG84VABg/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/120WFPXJgIQ_ShXNWRR9UkXlUreGELA2Ea_zFELwV_cI/edit?gid=0#gid=0"
 * group[0].element[0].code = #MRG
 * group[0].element[0].target.equivalence = #equivalent
 * group[0].element[0].target.code = #status

@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ EI[Device-udiCarrier] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ EI[Device-udiCarrier] - Sheet1.csv
 Instance: DatatypeEIUdiCarrierToDevice
 InstanceOf: ConceptMap
 Title: "Datatype EI [udiCarrier] to Device Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype EI[udiCarrier] to Device.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1uMZ5C8gEzU9qMKXYUUdesF9HFubW6s8BFYzD-DOgRro/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1TyPdGWUf2s1vkwyNs0SNAs5jwFvlj9tgNkHO2lC4fCI/edit?gid=0#gid=0"
 * group[0].element[0].code = #EI.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"

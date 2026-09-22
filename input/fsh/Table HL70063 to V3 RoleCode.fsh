@@ -1,4 +1,4 @@
-// HL7 Concept Map_ Relationship - Sheet1.csv
+// HL7 Concept Map - FHIR E2_ Relationship - Sheet1.csv
 Instance: TableHL70063ToV3RoleCode
 InstanceOf: ConceptMap
 Title: "Table HL70063 to V3 RoleCode Map"
@@ -16,7 +16,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Table HL70063 to V3 RoleCode.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1BDbtJ9kKKpDXIG8GAaRyqpb_iUKBaaU4b0bcxHo0KoI/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1-b1FiSs0iHtCDMb4jJE3hy3oAnnfHfKDAteoEdmYWcI/edit?gid=0#gid=0"
 * group[0].source = "http://terminology.hl7.org/CodeSystem/v2-0063"
 * group[0].target = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
 * group[0].element[0].code = #SEL

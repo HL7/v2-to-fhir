@@ -1,4 +1,4 @@
-// HL7 Data Type - FHIR R4_ XPN[HumanName] - Sheet1.csv
+// HL7 Data Type - FHIR E2_ XPN[HumanName] - Sheet1.csv
 Instance: DatatypeXPNToHumanName
 InstanceOf: ConceptMap
 Title: "Datatype XPN to HumanName Map"
@@ -15,7 +15,7 @@ Usage: #definition
 * extension[0].extension[1].url = "label"
 * extension[0].extension[1].valueString = "Datatype XPN to HumanName.fsh"
 * extension[0].extension[2].url = "url"
-* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1z8_nsSAHtkBLV0vPQuYJ50lLuh0p3Kv1dAkecl-f7oM/edit#gid=0"
+* extension[0].extension[2].valueUri = "https://docs.google.com/spreadsheets/d/1VrO71QV-srPoLqFFSbSmmMmgxUAbnRKPNLroi95ix9o/edit?gid=0#gid=0"
 * group[0].element[0].code = #XPN.1
 * group[0].element[0].extension[0].url = "http://hl7.org/fhir/uv/v2mappings/StructureDefinition/TypeInfo"
 * group[0].element[0].extension[0].extension[0].url = "type"
