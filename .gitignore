@@ -20,3 +20,8 @@ FHIR-v2mappings.xml
 # Java settings #
 ################
 .classpath
+/bin/
+
+# Claude Code local settings (machine-specific, not for source control) #
+################
+.claude/settings.local.json
