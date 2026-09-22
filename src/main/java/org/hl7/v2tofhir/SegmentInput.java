@@ -55,6 +55,16 @@ public class SegmentInput implements Cloneable, Convertible {
     String fhirValue;
     @CsvBindByPosition(position=18)
     String comments;
+    /** Not opencsv-bound; set by ConverterImpl.load() after parsing. See Convertible. */
+    String versionTagsRaw;
+    @Override
+    public void setVersionTagsRaw(String raw) {
+        this.versionTagsRaw = raw;
+    }
+    @Override
+    public String getVersionTagsRaw() {
+        return versionTagsRaw;
+    }
     public SegmentInput copy() {
         try {
             return (SegmentInput) clone();
@@ -88,6 +98,7 @@ public class SegmentInput implements Cloneable, Convertible {
         r.mapping = this.v2DataTypeMap;
         r.vocab = this.fhirVocab;
         r.comments = this.comments;
+        r.versionTags = parseVersionTags();
         return r;
     }
 }

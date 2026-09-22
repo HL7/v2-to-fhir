@@ -55,6 +55,16 @@ public class DatatypeInput implements Convertible, Cloneable {
     String fhirValue;
     @CsvBindByPosition(position=18)
     String comments;
+    /** Not opencsv-bound; set by ConverterImpl.load() after parsing. See Convertible. */
+    String versionTagsRaw;
+    @Override
+    public void setVersionTagsRaw(String raw) {
+        this.versionTagsRaw = raw;
+    }
+    @Override
+    public String getVersionTagsRaw() {
+        return versionTagsRaw;
+    }
     @Override
     public Row convert() {
         Row r = new Row();
@@ -84,6 +94,7 @@ public class DatatypeInput implements Convertible, Cloneable {
         r.targetMin = this.fhirMax;
         r.targetMax = this.fhirMax;
         r.comments = this.comments;
+        r.versionTags = parseVersionTags();
         return r;
     }
 

@@ -17,6 +17,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.StringReader;
+import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -36,7 +38,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Triple;
 import org.apache.commons.text.WordUtils;
 
+import com.opencsv.CSVReader;
+import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBeanBuilder;
+import com.opencsv.exceptions.CsvValidationException;
 
 public abstract class ConverterImpl<T extends Convertible> implements Converter {
 
@@ -80,6 +85,8 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         String references;
         String v2CodeSystem;
         String fhirCodeSystem;
+        /** FHIR release(s) (e.g. "F-R4", "F-R6") this row applies to; empty if untagged. */
+        Set<String> versionTags = java.util.Collections.emptySet();
     }
 
     private static Map<String,Triple<String,Integer,String>> fhirLinks = new TreeMap<>();
@@ -158,9 +165,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             targetName = target.replace(HTML_SUFFIX, "");
         }
 
-        try (FileReader r = new FileReader(f)) {
-            beans = new CsvToBeanBuilder<T>(r).withType(classType).build().parse();
-        }
+        beans = loadBeans(f, filename.contains("HL7 Concept"));
 
         if (filename.contains("HL7 Concept")) {
             type = TABLE_TYPE;
@@ -175,6 +180,84 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             target = targetName = "Bundle";
             sourceName = source = parts[2] + "_" + parts[3];
         }
+    }
+
+    private static final String CORE_VERSION_HEADER = "Core Version";
+
+    /**
+     * Loads the CSV rows for this file and binds them to beans.
+     *
+     * Sheets that have migrated to the new (E2) layout carry two extra columns - Core
+     * Version and Incubator Version - inserted immediately after Cardinality - Max
+     * (Message/Segment/Data Type, column index 6) or Code System (Concept Map, column
+     * index 3), shifting every later column by +2. Detected per file by checking whether
+     * row 2 (the field-name header row) literally reads "Core Version" at that index.
+     *
+     * Rather than maintaining two sets of {@code @CsvBindByPosition} indices, a migrated
+     * file's rows are normalized back to the pre-migration shape (the two tag columns are
+     * spliced out and their values captured) before being handed to the unchanged,
+     * existing positional binding - so a not-yet-migrated file and a migrated file both
+     * parse through the exact same bean positions.
+     *
+     * @param f            The CSV file to load.
+     * @param isConceptMap True if this is a Concept Map (vocabulary) sheet, which has the
+     *                     tag columns at index 3 rather than 6.
+     * @return             The parsed beans, each with its captured version-tag string (if
+     *                     any) already set via {@link Convertible#setVersionTagsRaw}.
+     */
+    private List<T> loadBeans(File f, boolean isConceptMap) throws IOException {
+        int tagColIdx = isConceptMap ? 3 : 6;
+        List<String[]> rows = new ArrayList<>();
+        try (FileReader fr = new FileReader(f);
+            CSVReader r = new CSVReader(fr)) {
+            String[] line;
+            while ((line = r.readNext()) != null) {
+                rows.add(line);
+            }
+        } catch (CsvValidationException e) {
+            throw new IOException(e);
+        }
+
+        boolean newLayout = rows.size() > 1
+            && rows.get(1).length > tagColIdx
+            && CORE_VERSION_HEADER.equals(StringUtils.trim(rows.get(1)[tagColIdx]));
+
+        List<String> versionTagsRaw = new ArrayList<>(rows.size());
+        for (int i = 0; i < rows.size(); i++) {
+            String[] row = rows.get(i);
+            if (!newLayout) {
+                versionTagsRaw.add(null);
+                continue;
+            }
+            String core = tagColIdx < row.length ? row[tagColIdx] : "";
+            String incubator = tagColIdx + 1 < row.length ? row[tagColIdx + 1] : "";
+            versionTagsRaw.add(StringUtils.isAllBlank(core, incubator) ? null : core + "," + incubator);
+            if (tagColIdx < row.length) {
+                int removeCount = Math.min(2, row.length - tagColIdx);
+                String[] spliced = new String[row.length - removeCount];
+                System.arraycopy(row, 0, spliced, 0, tagColIdx);
+                System.arraycopy(row, tagColIdx + removeCount, spliced, tagColIdx, row.length - tagColIdx - removeCount);
+                rows.set(i, spliced);
+            }
+        }
+
+        StringWriter sw = new StringWriter();
+        try (CSVWriter cw = new CSVWriter(sw)) {
+            for (String[] row : rows) {
+                cw.writeNext(row);
+            }
+        }
+
+        List<T> result;
+        try (StringReader sr = new StringReader(sw.toString())) {
+            result = new CsvToBeanBuilder<T>(sr).withType(classType).build().parse();
+        }
+
+        for (int i = 0; i < result.size() && i < versionTagsRaw.size(); i++) {
+            result.get(i).setVersionTagsRaw(versionTagsRaw.get(i));
+        }
+
+        return result;
     }
 
     public void setTableNames() {

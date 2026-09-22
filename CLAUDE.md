@@ -99,8 +99,26 @@ Conversion dispatches by filename substring (see `Convert.getType()`):
 | `Converter` / `Convertible` | Interfaces: `Converter` = one source file's conversion session (load/store/getters); `Convertible` = one CSV row's `convert()` into a `ConverterImpl.Row`. |
 | `ConverterImpl.java` | Abstract base for all converters. **This is where FHIR-version-specific behavior lives**: hardcoded `FHIR_BASE = "https://hl7.org/fhir/R4/"`, all link-building (`makeFhirLink`, `makeSegmentLink`, `makeDataTypeLink`, `makeTableLink`), and **FSH emission for `ConceptMap` instances** (`store()`, `writeHeader()`, `addConstraints()` — the latter emits the `dependsOn` extensions for ANTLR/FHIRPath/Narrative conditions). |
 | `MessageConverter`, `SegmentConverter`, `DatatypeConverter`, `ConceptMapConverter` | Thin `ConverterImpl<T>` subclasses per artifact type; mostly just wire up the right `Convertible` bean type and `writeIntro()`. |
-| `MessageInput`, `SegmentInput`, `DatatypeInput`, `ConceptMapInput` | **Positional CSV row beans** (`@CsvBindByPosition`). Each hardcodes exact column indices for its sheet's current layout and implements `convert()` → `ConverterImpl.Row`. **Any new column inserted into the Google Sheets shifts every position after it and will silently misparse data unless these classes are updated.** |
+| `MessageInput`, `SegmentInput`, `DatatypeInput`, `ConceptMapInput` | **Positional CSV row beans** (`@CsvBindByPosition`), all still bound to the original (pre-E2) column positions — see "Dual-layout CSV parsing" below for how newer (E2) sheets are handled without changing these. Each implements `convert()` → `ConverterImpl.Row`, including `r.versionTags = parseVersionTags()` (from `Convertible`'s default method) to carry forward the row's Core/Incubator Version tags, if any. |
 | `ConverterMap.java` | Loads `mappings/chapterdata.csv` into lookup tables (FHIR Resource/Data Type names, V2 chapter/section numbers, etc.) used to build TOC entries and resolve link targets. Currently a single flat table with no FHIR-version dimension. |
+
+### Dual-layout CSV parsing (Core Version / Incubator Version columns)
+
+Sheets migrated to the new (E2) format carry two extra columns — **Core Version** and
+**Incubator Version** — inserted right after `Cardinality - Max` (Message/Segment/Data
+Type, column index 6) or `Code System` (Concept Map, column index 3), shifting every later
+column by +2. Rather than maintaining two sets of `@CsvBindByPosition` indices per bean
+class, `ConverterImpl.loadBeans()` detects the layout per file (does row 2's column at that
+index literally read `"Core Version"`?) and, for a migrated file, **splices those two
+columns out of every row** (capturing their combined value) before handing the row to the
+unchanged, original-position bean binding. So a not-yet-migrated file and a migrated file
+both parse through the exact same `@CsvBindByPosition` indices — the four `*Input.java`
+classes never needed to change. The captured value is set on each bean via
+`Convertible.setVersionTagsRaw()` after parsing, then split/trimmed into
+`ConverterImpl.Row.versionTags` by each bean's `convert()` (via the shared
+`Convertible.parseVersionTags()` default method). A file with no Core Version column at
+all (not yet migrated) gets an empty tag set for every row — same behavior as before this
+existed.
 
 ## Key files outside `src/`
 
@@ -135,16 +153,23 @@ to `1.0.0`. This is groundwork for Stage 1, not R6-specific logic yet.
 source data, driven by the new **Core Version** (`F-R4` / `F-R6` / both) column being added
 to every Google Sheet tab.
 
-**Stages:**
-1. Get the guide building cleanly against the *current* (pre-Core-Version-column) data on
-   this branch — dependency/tooling currency, no behavior change. (In progress.)
-2. Design and implement Core Version-aware parsing and dual R4/R6 output.
+Full plan (proposal/specs/design/tasks): `openspec/changes/add-fhir-r6-support/`. Status
+per `tasks.md`:
+1. **Stage 1 (done)** — automated master-inventory refresh from the master Google Sheets
+   workbook (`Convert -m`), replacing manual per-tab export.
+2. **Stage 2 (done)** — dependency/plugin/CI currency; confirmed a full `build.bat`
+   (including SUSHI + IG Publisher) still builds cleanly against current data.
+3. **Stage 3 (in progress)** — per-row Core/Incubator Version tag parsing. See "Dual-layout
+   CSV parsing" above.
+4. **Stage 4 (not started)** — version-aware link resolution (`ConverterMap`/`makeFhirLink`
+   need an R6 name dimension) and the one-build-vs-two-builds IG Publisher spike.
 
-See the OpenSpec change (once created — this repo has no `openspec/` directory yet) or
-conversation history for the detailed design. **Do not assume the R4 `ConceptMap` shape can
-be reused unmodified for R6** — R6 renames `equivalence`→`relationship`,
+**Do not assume the R4 `ConceptMap` shape can be reused unmodified for a future,
+genuinely-R6-shaped emitter** — R6 renames `equivalence`→`relationship`,
 `source`/`target`→`sourceScope[x]`/`targetScope[x]`, and replaces `dependsOn.property` (a URI)
 with `dependsOn.attribute` (a `code` resolved against a new top-level `property`/
 `additionalAttribute` declaration on the ConceptMap) — which is exactly the mechanism
 `ConverterImpl.addConstraints()` uses today for the ANTLR/FHIRPath/Narrative condition
-extensions. This is a real design problem, not a mechanical rename.
+extensions. **This change deliberately does not do that** (see the proposal's "Why") — R6
+output stays inside the existing R4-shaped `ConceptMap`; only target names/links vary by
+tag. A genuinely R6-shaped emitter is scoped as a separate, future change.

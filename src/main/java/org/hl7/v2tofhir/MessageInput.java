@@ -45,6 +45,16 @@ public class MessageInput implements Cloneable, Convertible {
     String reference;
     @CsvBindByPosition(position=13)
     String comments;
+    /** Not opencsv-bound; set by ConverterImpl.load() after parsing. See Convertible. */
+    String versionTagsRaw;
+    @Override
+    public void setVersionTagsRaw(String raw) {
+        this.versionTagsRaw = raw;
+    }
+    @Override
+    public String getVersionTagsRaw() {
+        return versionTagsRaw;
+    }
     public MessageInput copy() {
         try {
             return (MessageInput) clone();
@@ -73,6 +83,7 @@ public class MessageInput implements Cloneable, Convertible {
         r.comments = this.comments;
         r.segmentMap = this.segmentMap;
         r.references = this.reference;
+        r.versionTags = parseVersionTags();
         return r;
     }
 

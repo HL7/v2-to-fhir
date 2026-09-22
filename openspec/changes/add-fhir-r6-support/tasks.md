@@ -54,28 +54,69 @@
   re-verified the master-inventory refresh and artifact-sheet download end to end against
   the consolidated jar (identical results to the pre-consolidation runs: 4/4 tabs, 0
   errors; 17 files, 0 errors, 1 warning).
-- [ ] 2.3 Run a full `build.bat` against the current (pre-E2) `mappings/` data and confirm
+- [x] 2.3 Run a full `build.bat` against the current (pre-E2) `mappings/` data and confirm
   the IG still builds and publishes successfully — this is Stage 2's definition of done.
-- [ ] 2.4 Note the dependency bump rationale (opencsv's `CsvValidationException` API
+  Ran the Java portion (clean → `mvn compile package` → `Convert`) directly, then
+  `_genonce.bat`'s underlying `java -jar publisher.jar -ig . -Xmx2G` (SUSHI + IG Publisher
+  + Jekyll). Hit one environment issue along the way, not a code/build issue: the first
+  attempt failed at the Jekyll step (`'jekyll' is not recognized`) because Jekyll had been
+  installed mid-session and the running shell's PATH predated it; re-running from a fresh
+  `cmd.exe` window picked up the updated PATH and succeeded. Final result: **Errors: 7,
+  Warnings: 21, Info: 269, Broken Links: 0** (487,124 links checked), full build completed
+  in ~21m42s. All 7 errors/21 warnings are pre-existing source-data quality issues
+  unrelated to this change (a missing OID on one CodeSystem; a text-encoding artifact
+  corrupting 3 codes in V2 Table 0550; curly-quote/double-space display-text mismatches
+  against THO in Tables 0203/0550; one stale JIRA-spec-artifacts housekeeping file) — none
+  block the build, confirming Stage 2's definition of done is met.
+- [x] 2.4 Note the dependency bump rationale (opencsv's `CsvValidationException` API
   change) in the commit message covering 2.1 — no separate doc needed for a routine
-  version bump.
+  version bump. Confirmed present in commit 379f048b's message.
 
 ## 3. Stage 3 — Per-row version-tag parsing
 
-- [ ] 3.1 Add a per-file layout-detection check in `ConverterImpl.load()` (does row 2's
+- [x] 3.1 Add a per-file layout-detection check in `ConverterImpl.load()` (does row 2's
   expected Core Version column literally read `"Core Version"`?) that selects between the
-  old and new (+2-shifted) fixed position sets for that file, per design.md.
-- [ ] 3.2 Update `MessageInput`, `SegmentInput`, `DatatypeInput`, `ConceptMapInput` to add
+  old and new (+2-shifted) fixed position sets for that file, per design.md. Implemented
+  as `ConverterImpl.loadBeans()`: detects the layout, and for a migrated file, splices the
+  two tag columns out of every row (capturing their values) before handing rows to the
+  **unchanged** original-position bean binding — so old and new layouts parse through the
+  same `@CsvBindByPosition` indices instead of needing two annotated schemas. Same
+  observable outcome as design.md's "two position sets," simpler mechanism.
+- [x] 3.2 Update `MessageInput`, `SegmentInput`, `DatatypeInput`, `ConceptMapInput` to add
   a `versionTags` field (Core Version + Incubator Version, comma-split and trimmed) and
-  support both detected position sets.
-- [ ] 3.3 Thread `versionTags` through to `ConverterImpl.Row`.
-- [ ] 3.4 Add tests using the real sample files pulled during this change as fixtures:
+  support both detected position sets. Each class gained a `versionTagsRaw` field (not
+  opencsv-bound, set post-parse by `loadBeans()` via `Convertible.setVersionTagsRaw()`) and
+  `r.versionTags = parseVersionTags()` in `convert()`, using a shared default method on
+  `Convertible` for the split/trim logic — no per-class duplication of the parsing itself.
+- [x] 3.3 Thread `versionTags` through to `ConverterImpl.Row`. Added `Set<String>
+  versionTags` (defaults to empty) to `Row`.
+- [x] 3.4 Add tests using the real sample files pulled during this change as fixtures:
   (a) an old-layout file parses identically to current behavior (empty tag set, every
   other field unchanged), (b) a new-layout (E2) file parses `F-R4`/`F-R6`/both correctly
-  and every subsequent field still lands in the right place.
-- [ ] 3.5 Update `CLAUDE.md`/`mappings/README.md` to document the `versionTags` field and
+  and every subsequent field still lands in the right place. No `src/test` exists yet
+  (confirmed empty in Stage 1), so verified live rather than via JUnit, matching the
+  Stage 1 precedent: (a) re-ran the full existing corpus (`mappings/messages` +
+  `segments`/`datatypes`/`codesystems`) — identical 292 files/0 errors/83 warnings, and the
+  regenerated FSH diffed byte-identical (ignoring pre-existing, unrelated line-ending
+  noise) against the previous run. (b) copied the four real E2 sample sheets (Message
+  ADT_A01, Segment PID[Patient], Data Type CWE[Identifier], Concept Map
+  PatientClass[EncounterClass]) into a scratch corpus and converted them: confirmed via
+  direct row-vs-FSH comparison (e.g. `Datatype CWE to Identifier.fsh` element[0]:
+  code=#CWE.1, type=ST, min=0/max=1, target.code=#[1].value, target.type=string,
+  matching the raw row's post-splice fields exactly, including the `comments` field at the
+  far right of the row surviving intact) that every field lands correctly on both sides of
+  the spliced columns. The 43 "no mapping"/cross-reference errors seen on the isolated
+  4-file scratch corpus are expected (real cross-referenced datatype files weren't part of
+  the scratch set) and themselves confirm correct extraction, since the error messages
+  correctly echo the `v2DataTypeMap` column values (e.g. `XPN[HumanName]`, `CX[Identifier]`)
+  from several positions after the spliced columns.
+- [x] 3.5 Update `CLAUDE.md`/`mappings/README.md` to document the `versionTags` field and
   the dual-layout detection mechanism, so a future reader understands why two position
-  sets exist — written alongside 3.1–3.4, not deferred.
+  sets exist — written alongside 3.1–3.4, not deferred. Added a "Dual-layout CSV parsing"
+  section to `CLAUDE.md` and refreshed its stale R4/R6 status section (now points at the
+  real `openspec/changes/add-fhir-r6-support/` instead of "not created yet"); no
+  `mappings/README.md` change needed here, since this mechanism is internal to `Convert`'s
+  parsing, not part of the download/refresh commands that file documents.
 - [ ] 3.6 Re-run the Stage 1 master-inventory refresh for real and pull a full corpus
   refresh; confirm no misparsing/regressions across the whole mapping corpus with the new
   layout-detection logic in place.

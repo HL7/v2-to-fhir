@@ -44,6 +44,16 @@ public class ConceptMapInput implements Convertible, Cloneable {
     String fhirCodeSystem;
     @CsvBindByPosition(position=10)
     String comments;
+    /** Not opencsv-bound; set by ConverterImpl.load() after parsing. See Convertible. */
+    String versionTagsRaw;
+    @Override
+    public void setVersionTagsRaw(String raw) {
+        this.versionTagsRaw = raw;
+    }
+    @Override
+    public String getVersionTagsRaw() {
+        return versionTagsRaw;
+    }
     @Override
     public Row convert() {
         Row r = new Row();
@@ -61,6 +71,7 @@ public class ConceptMapInput implements Convertible, Cloneable {
         r.comments = this.comments;
         r.v2CodeSystem = this.v2CodeSystem;
         r.fhirCodeSystem = this.fhirCodeSystem;
+        r.versionTags = parseVersionTags();
         return r;
     }
 
