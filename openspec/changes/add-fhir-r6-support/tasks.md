@@ -147,15 +147,53 @@
   data type sheets - plus the DLN naming issue above. All three fixed live at the source
   by the user during this session, and re-verified by re-downloading and reconverting.
 
-  Final clean run: **294 files processed, 0 errors, 86 warnings, exit code 0** (baseline
-  before this refresh was 292/0/83 on stale pre-E2 data - the small deltas are genuine
-  upstream content growth, not regressions). Confirmed zero version-tag leakage
-  (`grep -rc "F-R4\|F-R6" input/fsh/` → 0 matches) across all 294 generated files, and the
-  large `mappings/`/`input/fsh/` diff (814 files) is overwhelmingly the R4→E2 sheet-title
-  rename applied wholesale across the corpus (delete-old-name + add-new-name pairs for the
-  same artifact), not content loss - spot-verified against several samples.
-- [ ] 3.7 Remove the Stage 1.6 CI guard on `update-csvs.yaml` now that `Convert` safely
-  handles both old- and new-layout sheets, and confirm a real push exercises it cleanly.
+  Initial run reported **294 files processed, 0 errors, 86 warnings, exit code 0** - this
+  claim turned out to be built on a contaminated run and was corrected afterward (see
+  below); the earlier "0 errors" was wrong.
+
+  **Post-commit correction**: discovered immediately after committing that both
+  `build.bat` and CI's "Recreate SUSHI Files" step in `update-csvs.yaml` were clearing
+  `input/*.fsh` (the wrong directory - generated output actually lands in `input/fsh/*.fsh`)
+  and had been doing so all session, so stale/error-stub files from earlier runs (including
+  now-fixed error conditions) were silently surviving every "clean" run and contaminating
+  validation. Fixed both scripts to `rm -f input/fsh/*.fsh`. A truly clean rerun
+  (`rm -rf input/fsh output fsh-generated`, then reconvert) surfaced **5 real errors** the
+  contaminated run had been masking: two genuinely missing datatype sheets (`CNN[Practitioner]`,
+  `CWE[Quantity]`), one malformed source-data cell (`RXO[MedicationRequest]` row 38, unbalanced
+  parenthesis), and two datatype names (`EIP[Identifier-Filler/PlacerAssignedIdentifier]`)
+  that had been split into four more specific sheets upstream without `SPM[Specimen]` being
+  updated to reference the new names.
+
+  Chasing those 5 down the diagnostics themselves turned out to be unreliable, and root-caused
+  five separate bugs in `Convert.java`/`ConverterImpl.java` (see commit `8355acca`): a stale
+  "FHIR R4_" naming template in the "Missing file:" hint (live sheets use "FHIR E2_"); an
+  unconditional NPE in `writeHeader()` whenever `qualifier`/`source`/`target` are the
+  deliberate `null` sentinel for an unsupported artifact, which had been silently leaving
+  every "Unsupported ...fsh" stub as a 0-byte file forever; a download filter that only
+  recognized `https`-prefixed Link cells, silently skipping `http` ones; and a case-sensitive
+  FHIR Data Type/Resource lookup producing false "not a recognized FHIR artifact" diagnoses
+  for correctly-cased references. Fixed all five.
+
+  With the code fixed, re-diagnosed the remaining content: `CNN[Practitioner]` was blocked by
+  a `http`-vs-`https` Link cell (user fixed the sheet); `CWE[Quantity]`, `CWE[string]`, and
+  (unrelated but discovered in the same row range) `CWE[PractitionerRole]` were blocked by a
+  stray character corrupting three adjacent Link cells' CSV column alignment, causing
+  downloads to be cross-attributed to the wrong filenames (user fixed all three cells). Both
+  resolved once re-downloaded. The `RXO[MedicationRequest]` row 38 parenthesis and the
+  `SPM[Specimen]` old-name references were left for the sheet owners/domain experts to
+  resolve (the correct target for the SPM rows depends on V2 semantics this tool can't infer).
+
+  **Final verified state**: **297 files processed, 2 errors, 86 warnings, exit code 1** - the
+  2 remaining errors are the deliberately-deferred `SPM[Specimen]` references, documented
+  above, not regressions. Zero exceptions swallowed into `ConvertErrors.log`, zero 0-byte
+  "Unsupported ...fsh" stubs. Corrective commit `8355acca` follows `04f95a12` rather than
+  amending it, per this project's "always create new commits" convention.
+- [x] 3.7 Remove the Stage 1.6 CI guard on `update-csvs.yaml` now that `Convert` safely
+  handles both old- and new-layout sheets. Guard removed (the `if: false` on "Commit and
+  Push changes", along with its comment block, is gone) and the same wrong-directory
+  clean-step bug found in 3.6 was fixed here too. **Still open**: "confirm a real push
+  exercises it cleanly" requires an actual push to the HL7 remote, which per this session's
+  standing policy needs explicit user confirmation before it happens - not yet done.
 
 ## 4. Stage 4a — R6 name data and version-aware link resolution
 
