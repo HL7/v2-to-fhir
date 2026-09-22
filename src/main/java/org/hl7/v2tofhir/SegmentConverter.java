@@ -70,8 +70,8 @@ public class SegmentConverter extends ConverterImpl<SegmentInput> implements Con
             String[] cols = { bean.v2Sort, escapeHtmlString(bean.v2Code), escapeHtmlString(bean.v2Name),
                 bean.v2Datatype, bean.v2Min, bean.v2Max, escapeHtmlString(bean.conditionANTLR),
                 escapeHtmlString(bean.conditionfhirPath), escapeHtmlString(bean.conditionNarrative),
-                makeFhirLink(bean.fhirCode, count), escapeHtmlString(bean.fhirExtension),
-                makeFhirLink(bean.fhirDatatype, count), bean.fhirMin, bean.fhirMax,
+                makeFhirLink(bean.fhirCode, count, bean.parseVersionTags()), escapeHtmlString(bean.fhirExtension),
+                makeFhirLink(bean.fhirDatatype, count, bean.parseVersionTags()), bean.fhirMin, bean.fhirMax,
                 makeDataTypeLink(bean.v2DataTypeMap, bean.fhirDatatype, count), 
                 makeTableLink(bean.fhirVocab, count),
                 escapeHtmlString(bean.fhirValue), escapeHtmlString(bean.comments) };

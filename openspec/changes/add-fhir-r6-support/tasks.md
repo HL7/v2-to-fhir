@@ -197,29 +197,83 @@
 
 ## 4. Stage 4a — R6 name data and version-aware link resolution
 
-- [ ] 4.1 Add a version dimension to `mappings/chapterdata.csv`'s `FHIR Resource`/
+- [x] 4.1 Add a version dimension to `mappings/chapterdata.csv`'s `FHIR Resource`/
   `FHIR Data Type` rows; populate the new R6 rows from design.md's confirmed FHIR R4→R6
   type-system diff (authoritative source: `metadatatypes.html`'s "Changes from R4 to R6"
-  table).
-- [ ] 4.2 Update `ConverterMap.load()`/`getMap()` to filter/select entries by requested
-  FHIR version.
-- [ ] 4.3 Add a test confirming a known R6-added name (e.g. `NutritionIntake`) resolves
+  table). Added a 5th `Version` column, populated mechanically from design.md's already-
+  confirmed add/remove lists via a scratch script: 207 existing `FHIR Resource`/`FHIR Data
+  Type` rows tagged `F-R4` (44 confirmed-removed names, including the `MedicinalProduct`
+  family) or `F-R4, F-R6` (everything else); 36 new rows appended for the confirmed R6
+  additions, tagged `F-R6` (17 classified as `FHIR Data Type`, 19 as `FHIR Resource` by
+  FHIR naming convention - design.md's source table doesn't itself carry this split, so
+  this classification is mine, not independently re-verified name-by-name).
+- [x] 4.2 Update `ConverterMap.load()`/`getMap()` to filter/select entries by requested
+  FHIR version. Added a `getMap(String release)` overload: entries with a recorded Version
+  tag set are filtered to those containing `release`; entries with none (every non-`FHIR
+  Resource`/`FHIR Data Type` category, plus any resource/data-type row not yet given a tag)
+  pass through unconditionally. `getMap()` (no arg) is unchanged and still used by
+  `Convert.java`'s chapter/TOC index generation, which has no per-row release to filter by.
+- [x] 4.3 Add a test confirming a known R6-added name (e.g. `NutritionIntake`) resolves
   under R6 lookup, and a known-removed one (`SupplyRequest`) is correctly reported as
-  absent from FHIR R6 core.
-- [ ] 4.4 Document the `chapterdata.csv` version-column convention in `mappings/README.md`
-  — alongside 4.1–4.3, not deferred.
-- [ ] 4.5 Parameterize `FHIR_BASE` and the link-building methods (`makeFhirLink` and
+  absent from FHIR R6 core. No JUnit test infra exists yet (`junit-jupiter-engine` is
+  declared but not `-api`; `src/test` still doesn't exist) - verified live instead, matching
+  the Stage 3.4 precedent, via a temporary `ScratchVersionCheck` class (compiled, run,
+  deleted - not committed). All 8 checks passed: `NutritionIntake` resolves under
+  `getMap("F-R6")` and is absent under `getMap("F-R4")`; `SupplyRequest` resolves under
+  `getMap("F-R4")` and is absent under `getMap("F-R6")`; an untagged legacy row (`Patient`)
+  resolves under both; a non-versioned category (`Segment`) is unaffected by the R6 filter;
+  and the no-arg `getMap()` is unaffected.
+- [x] 4.4 Document the `chapterdata.csv` version-column convention in `mappings/README.md`
+  — alongside 4.1–4.3, not deferred. Added a "chapterdata.csv's Version column" section
+  covering the tag vocabulary, the "no tag = valid everywhere" default, the one-time-
+  snapshot caveat (will go stale if FHIR's R6 type list changes again before this ships),
+  and how `getMap(release)`/`makeFhirLink`'s fallback resolution use it.
+- [x] 4.5 Parameterize `FHIR_BASE` and the link-building methods (`makeFhirLink` and
   friends) in `ConverterImpl` to take a release parameter instead of the static R4
-  constant.
-- [ ] 4.6 Update call sites to pass each row's version tag(s); for a row tagged with more
+  constant. Scoped to `makeFhirLink` itself plus its private helpers
+  (`isFhirDataType`/`isFhirDataTypeField`/`isResource`/`isResourceField`) - `makeSegmentLink`/
+  `makeTableLink`/`makeDataTypeLink` ("friends" per the task title) turned out not to touch
+  `FHIR_BASE` or `ConverterMap`'s Resource/Data Type categories at all (they build internal
+  `ConceptMap-*.html` cross-links, not raw FHIR spec links), so they needed no change.
+  Added `FHIR_BASE_R6 = "https://hl7.org/fhir/6.0.0-snapshot1/"` alongside the existing R4
+  constant - confirmed live that `https://hl7.org/fhir/R6/` 404s (R6 has no stable published
+  path yet), and reused the same `6.0.0-snapshot1` snapshot design.md's own research already
+  verified live. `makeFhirLink` shadows the class-level `FHIR_BASE` with a row-resolved local
+  of the same name, so its many pre-existing internal `FHIR_BASE` references pick up the
+  right release without individually touching each one - only the four Resource/Data-Type-
+  lookup branches, which need per-branch resolution (see 4.6), were touched individually.
+- [x] 4.6 Update call sites to pass each row's version tag(s); for a row tagged with more
   than one release, resolve independently per release per the modified
-  `mapping-conversion/link-resolution` spec's new scenario.
-- [ ] 4.7 Add tests covering: an R4-only row resolves against R4, an R6-only row resolves
+  `mapping-conversion/link-resolution` spec's new scenario. `isFhirDataType`/`isResource`
+  now take the row's version-tag set, try the row's primary release first (its `F-R4` tag if
+  present - preserving exact legacy behavior for the ~99% of untagged/R4-tagged rows -
+  otherwise whichever other tag it has), and only if not found there, independently retry
+  any other tagged release, returning which release actually resolved it (via `Pair<name,
+  release>` rather than a bare name) so the caller picks the matching base URL, and emitting
+  a warning when a name resolves under one tagged release but not the other. All four real
+  call sites (`SegmentConverter`/`DatatypeConverter`/`MessageConverter`/`ConceptMapConverter`'s
+  `writeIntro()`) updated to pass `bean.parseVersionTags()`. One caller
+  (`getFHIRDescription()`) has no per-row context at all (it describes the whole artifact,
+  not one row) - passes `null`, resolving exactly as before (primary = R4).
+- [x] 4.7 Add tests covering: an R4-only row resolves against R4, an R6-only row resolves
   against R6, and a dual-tagged row whose name is valid under only one release resolves
-  correctly for that release while flagging for the other.
-- [ ] 4.8 File the residual content task for the mapping-sheet owners: tag ORM_O01's
+  correctly for that release while flagging for the other. Covered by 4.3's live checks
+  (R4-only `SupplyRequest`, R6-only `NutritionIntake`) plus a live full-corpus rerun after
+  4.5/4.6 landed: `OBR[ServiceRequest]` row 25 (`CodeableReference(Any)`, tagged `F-R4,
+  F-R6`) now resolves against R6 (`https://hl7.org/fhir/6.0.0-snapshot1/datatypes.html#
+  CodeableReference`, previously a non-existent-under-R4 link once 4.1 made `CodeableReference`
+  recognized at all) and logs `W35) CodeableReference is not a recognized FHIR Data Type
+  under F-R4, but is under F-R6.` - exactly the "resolves for the valid release, flags for
+  the other" scenario. Confirmed via a real-diff check (`git diff --ignore-space-at-eol`)
+  that this is the *only* content change across the entire 297-file corpus from 4.1-4.6 -
+  no other row's output changed.
+- [x] 4.8 File the residual content task for the mapping-sheet owners: tag ORM_O01's
   `SupplyRequest` rows with an Incubator Version value pointing at the OO Incubator IG,
-  once the sheet owners confirm the exact tag format that column expects.
+  once the sheet owners confirm the exact tag format that column expects. Already filed in
+  design.md's "Residual task, for mapping content owners, not code" paragraph (with the OO
+  Incubator IG URL and the reasoning); this task item exists to confirm it's recorded
+  durably, which it is - no further action taken here, per design.md's explicit "not a
+  decision to make in code."
 
 ## 5. Stage 4b — One-build-vs-two-builds spike and final verification
 

@@ -77,7 +77,7 @@ public class ConceptMapConverter extends ConverterImpl<ConceptMapInput> implemen
                 escapeHtmlString(bean.v2Code), escapeHtmlString(bean.v2Text), escapeHtmlString(bean.v2CodeSystem),
                 escapeHtmlString(bean.conditionANTLR), escapeHtmlString(bean.conditionfhirPath), escapeHtmlString(bean.conditionNarrative),
                 escapeHtmlString(bean.fhirCode), escapeHtmlString(bean.fhirExtension), escapeHtmlString(bean.fhirDisplay),
-                makeFhirLink(bean.fhirCodeSystem, count),
+                makeFhirLink(bean.fhirCodeSystem, count, bean.parseVersionTags()),
                 escapeHtmlString(bean.comments)
             };
             w.print("<tr>");

@@ -72,7 +72,7 @@ public class MessageConverter extends ConverterImpl<MessageInput> implements Con
             String cols[] = {
                 bean.v2Sort, bean.v2Code, escapeHtmlString(bean.v2Message), escapeHtmlString(bean.v2Name), bean.v2Min, bean.v2Max,
                 escapeHtmlString(bean.conditionANTLR), escapeHtmlString(bean.conditionfhirPath), escapeHtmlString(bean.conditionNarrative),
-                makeFhirLink(bean.fhirCode, count), makeSegmentLink(bean.segmentMap, bean.fhirCode, count),
+                makeFhirLink(bean.fhirCode, count, bean.parseVersionTags()), makeSegmentLink(bean.segmentMap, bean.fhirCode, count),
                 escapeHtmlString(bean.reference), escapeHtmlString(bean.comments)
             };
             w.print("<tr>");

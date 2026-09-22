@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Strings;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.lang3.tuple.Triple;
 import org.apache.commons.text.WordUtils;
 
@@ -54,6 +55,11 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
 	private static final String TABLE_TYPE = "Table";
 	private static final String CONCEPT_MAP_FILENAME = "ConceptMap-";
 	private static final String FHIR_BASE = "https://hl7.org/fhir/R4/";
+	// FHIR R6 has no stable "/R6/" published URL yet (confirmed 404 as of this change) -
+	// the versioned snapshot build is the best available base until R6 actually publishes,
+	// per design.md's own R4->R6 diff research, which used this same URL. Update once R6
+	// publishes at a stable path.
+	private static final String FHIR_BASE_R6 = "https://hl7.org/fhir/6.0.0-snapshot1/";
 	private static final String FHIR_TERM = "http://terminology.hl7.org/";
     private static final String IG_URL = "http://hl7.org/fhir/uv/v2mappings";
     private static boolean reportErrorsOnly = false;
@@ -701,7 +707,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
             return "Message Bundle";
         case SEGMENT_TYPE:
         case DATATYPE_TYPE:
-            return String.format("%s %s", target, isResource(target, 0) != null ? "Resource" : DATA_TYPE);
+            return String.format("%s %s", target, isResource(target, 0, null) != null ? "Resource" : DATA_TYPE);
         }
         return null;
     }
@@ -842,12 +848,41 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         return qualifier;
     }
 
-    protected String makeFhirLink(String fhirCode, int count) {
+    /** Returns the FHIR spec base URL for a single release tag (e.g. "F-R4", "F-R6"). */
+    private static String fhirBase(String release) {
+        return "F-R6".equals(release) ? FHIR_BASE_R6 : FHIR_BASE;
+    }
+
+    /**
+     * Picks the release to try first for a row's link resolution: "F-R4" if present (or if
+     * the row has no version tags at all - the legacy/pre-migration case, which must resolve
+     * exactly as it always has), otherwise whichever other tag is present.
+     */
+    private static String resolveRelease(Set<String> versionTags) {
+        if (versionTags == null || versionTags.isEmpty() || versionTags.contains("F-R4")) {
+            return "F-R4";
+        }
+        return versionTags.iterator().next();
+    }
+
+    /** The release tags in {@code versionTags} other than {@code primary}, tried as fallbacks. */
+    private static Iterable<String> otherReleases(Set<String> versionTags, String primary) {
+        if (versionTags == null) {
+            return java.util.Collections.emptyList();
+        }
+        java.util.List<String> others = new java.util.ArrayList<>(versionTags);
+        others.remove(primary);
+        return others;
+    }
+
+    protected String makeFhirLink(String fhirCode, int count, Set<String> versionTags) {
 
         if (StringUtils.isEmpty(fhirCode) || "N/A".equals(fhirCode.trim().toUpperCase())) {
             return fhirCode;
         }
 
+        String primary = resolveRelease(versionTags);
+        String FHIR_BASE = fhirBase(primary);
         String fhirLinks[] = null;
 
         // Remove everything after the equals
@@ -859,6 +894,7 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         // Create a link for every part remaining.
         StringBuilder links = new StringBuilder();
         String name = null;
+        Pair<String, String> dtLink = null;
         int pos = 0;
         for (String fhirLink: fhirLinks) {
             if (fhirLink == null) {
@@ -901,25 +937,28 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
                 links.append(makeLink(fhirLink, "https://hl7.org/fhir/R4/iso3166.html"));
             } else if (isMetaField(fhirLink)) {
                 links.append(makeLink(fhirLink, FHIR_BASE + "resource.html#Meta"));
-            } else if ((link = isFhirDataType(fhirLink, count)) != null) {
+            } else if ((dtLink = isFhirDataType(fhirLink, count, versionTags)) != null) {
                 // If a FHIR Data Type, link to  http://hl7.org/fhir/R4/datatypes.html#{datatype}
-                links.append(makeLink(link, FHIR_BASE + "datatypes.html#" + link));
-            } else if (((link = isFhirDataTypeField(fhirPart + "." + fhirLink, count)) != null)) {
-                links.append(makeLink(link, FHIR_BASE + "datatypes-definitions.html#" + fhirPart + "." + link));
-            } else if ((link = isResourceField(fhirPart + "." + fhirLink, count)) != null) {
+                links.append(makeLink(dtLink.getLeft(), fhirBase(dtLink.getRight()) + "datatypes.html#" + dtLink.getLeft()));
+            } else if (((dtLink = isFhirDataTypeField(fhirPart + "." + fhirLink, count, versionTags)) != null)) {
+                links.append(makeLink(dtLink.getLeft(), fhirBase(dtLink.getRight()) + "datatypes-definitions.html#" + fhirPart + "." + dtLink.getLeft()));
+            } else if ((dtLink = isResourceField(fhirPart + "." + fhirLink, count, versionTags)) != null) {
+                link = dtLink.getLeft();
                 name = StringUtils.substringBefore(link, ".");
                 // Fix for FHIR Attribute links
-                links.append(makeLink(link, FHIR_BASE + name + "-definitions.html#" + link));
-            } else if ((link = isFhirDataTypeField(fhirLink, count)) != null) {
+                links.append(makeLink(link, fhirBase(dtLink.getRight()) + name + "-definitions.html#" + link));
+            } else if ((dtLink = isFhirDataTypeField(fhirLink, count, versionTags)) != null) {
                 // If a FHIR Data Type field, link to fhir/R4/datatypes-definitions.html#{field}
-                links.append(makeLink(link, FHIR_BASE + "datatypes-definitions.html#" + link));
-            } else if ((link = isResource(fhirLink, count)) != null) {
+                links.append(makeLink(dtLink.getLeft(), fhirBase(dtLink.getRight()) + "datatypes-definitions.html#" + dtLink.getLeft()));
+            } else if ((dtLink = isResource(fhirLink, count, versionTags)) != null) {
                 // If a FHIR Resource, link to fhir/R4/{resource}.html
-                links.append(makeLink(link, FHIR_BASE + link.toLowerCase() + HTML_SUFFIX));
-            } else if ((link = isResourceField(fhirLink, count)) != null) {
+                link = dtLink.getLeft();
+                links.append(makeLink(link, fhirBase(dtLink.getRight()) + link.toLowerCase() + HTML_SUFFIX));
+            } else if ((dtLink = isResourceField(fhirLink, count, versionTags)) != null) {
                 // If a FHIR Resource field, link to fhir/R4/{resource}-definitions.html#{field}
+                link = dtLink.getLeft();
                 name = StringUtils.substringBefore(link, ".");
-                links.append(makeLink(link, FHIR_BASE + name.toLowerCase() + "-definitions.html#" + link));
+                links.append(makeLink(link, fhirBase(dtLink.getRight()) + name.toLowerCase() + "-definitions.html#" + link));
             } else if (fhirLink.matches("^p?[0-9\\-]*$")) {
                 links.append(fhirLink);
             } else {
@@ -937,38 +976,63 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         return links.toString();
     }
 
-    private String isFhirDataTypeField(String fhirLink, int count) {
-        String link = null;
-        if (fhirLink.contains(".") && (link = isFhirDataType(StringUtils.substringBefore(fhirLink,"."), 0)) != null) {
-            link += "." + StringUtils.substringAfter(fhirLink,".");
+    private Pair<String, String> isFhirDataTypeField(String fhirLink, int count, Set<String> versionTags) {
+        Pair<String, String> found = null;
+        if (fhirLink.contains(".") && (found = isFhirDataType(StringUtils.substringBefore(fhirLink,"."), 0, versionTags)) != null) {
+            String link = found.getLeft() + "." + StringUtils.substringAfter(fhirLink,".");
             if (!link.equals(fhirLink)) {
                 warn("%s used where %s meant.%n", count, fhirLink, link);
             }
-            return link;
+            return Pair.of(link, found.getRight());
         }
         return null;
     }
 
-    private String isFhirDataType(String fhirLink, int count) {
-        Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap();
-        Triple<String, String, String> t = null;
-        if ((t = m.get("FHIR Data Type").get(fhirLink.toLowerCase())) != null) {
+    /**
+     * Looks up {@code fhirLink} as a FHIR Data Type, resolving the row's primary release
+     * first (see {@link #resolveRelease}) and, if not found there, independently trying any
+     * other release the row is also tagged with - so a name valid under only one of a row's
+     * multiple tagged releases (e.g. R6-only CodeableReference on an "F-R4, F-R6" row) still
+     * resolves, against the release it's actually valid under, rather than falling through to
+     * a broken-link fallback. Returns the canonical name paired with whichever release
+     * actually resolved it (needed by the caller to pick the matching FHIR_BASE), or null.
+     */
+    private Pair<String, String> isFhirDataType(String fhirLink, int count, Set<String> versionTags) {
+        String primary = resolveRelease(versionTags);
+        Pair<String, String> found = isFhirDataTypeForRelease(fhirLink, count, primary);
+        if (found != null) {
+            return found;
+        }
+        for (String alt : otherReleases(versionTags, primary)) {
+            found = isFhirDataTypeForRelease(fhirLink, count, alt);
+            if (found != null) {
+                warn("%s is not a recognized FHIR Data Type under %s, but is under %s.%n", count, fhirLink, primary, alt);
+                return found;
+            }
+        }
+        return null;
+    }
+
+    private Pair<String, String> isFhirDataTypeForRelease(String fhirLink, int count, String release) {
+        Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap(release);
+        Triple<String, String, String> t = m.get("FHIR Data Type").get(fhirLink.toLowerCase());
+        if (t != null) {
             if (!t.getRight().equals(fhirLink) && count != 0) {
                 warn("%s used where %s meant.%n", count, fhirLink, t.getRight());
             }
-            return t.getRight();
+            return Pair.of(t.getRight(), release);
         }
         return null;
     }
 
-    private String isResourceField(String fhirLink, int count) {
-        String link = null;
-        if (fhirLink.contains(".") && (link = isResource(StringUtils.substringBefore(fhirLink,"."), 0)) != null) {
-            link += "." + StringUtils.substringAfter(fhirLink, ".");
+    private Pair<String, String> isResourceField(String fhirLink, int count, Set<String> versionTags) {
+        Pair<String, String> found = null;
+        if (fhirLink.contains(".") && (found = isResource(StringUtils.substringBefore(fhirLink,"."), 0, versionTags)) != null) {
+            String link = found.getLeft() + "." + StringUtils.substringAfter(fhirLink, ".");
             if (!link.equals(fhirLink) && count != 0) {
                 warn("%s used where %s meant.%n", count, fhirLink, link);
             }
-            return link;
+            return Pair.of(link, found.getRight());
         }
         return null;
     }
@@ -977,16 +1041,34 @@ public abstract class ConverterImpl<T extends Convertible> implements Converter 
         return fhirLink.contains("meta.");
     }
 
-    private String isResource(String fhirLink, int count) {
-        Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap();
-        Triple<String, String, String> t = null;
-        if (fhirLink != null) {
-            if ((t = m.get("FHIR Resource").get(fhirLink.toLowerCase())) != null) {
-                if (!t.getRight().equals(fhirLink)) {
-                    warn("%s used where %s meant.%n", count, fhirLink, t.getRight());
-                }
-                return t.getRight();
+    /** Same independent-per-release resolution strategy as {@link #isFhirDataType}, for FHIR Resources. */
+    private Pair<String, String> isResource(String fhirLink, int count, Set<String> versionTags) {
+        if (fhirLink == null) {
+            return null;
+        }
+        String primary = resolveRelease(versionTags);
+        Pair<String, String> found = isResourceForRelease(fhirLink, count, primary);
+        if (found != null) {
+            return found;
+        }
+        for (String alt : otherReleases(versionTags, primary)) {
+            found = isResourceForRelease(fhirLink, count, alt);
+            if (found != null) {
+                warn("%s is not a recognized FHIR Resource under %s, but is under %s.%n", count, fhirLink, primary, alt);
+                return found;
             }
+        }
+        return null;
+    }
+
+    private Pair<String, String> isResourceForRelease(String fhirLink, int count, String release) {
+        Map<String, Map<String, Triple<String, String, String>>> m = ConverterMap.getMap(release);
+        Triple<String, String, String> t = m.get("FHIR Resource").get(fhirLink.toLowerCase());
+        if (t != null) {
+            if (!t.getRight().equals(fhirLink)) {
+                warn("%s used where %s meant.%n", count, fhirLink, t.getRight());
+            }
+            return Pair.of(t.getRight(), release);
         }
         return null;
     }
