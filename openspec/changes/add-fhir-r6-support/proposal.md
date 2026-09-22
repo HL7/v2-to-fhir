@@ -173,16 +173,16 @@ values it can't resolve against the R4 core package) is the key open question be
 
 ## Open Questions Carried Into design.md
 
-1. **The central open question:** does the IG Publisher, with the IG still declaring
+1. ~~**The central open question:** does the IG Publisher, with the IG still declaring
    `fhirVersion: 4.0.1`, tolerate a `ConceptMap.group.target`/`element.target.code` value that
    references a FHIR R6 resource/field/code-system name or canonical URL it cannot resolve
    against the loaded R4 core package (soft warning, as with today's arbitrary V2/V3
-   terminology references) — or does it hard-fail? This determines whether Stage 4 step (b)
-   (R6 output) fits inside the existing single IG build, or needs a second, separate one.
-   Requires a small spike, not just research.
-2. If the spike in #1 shows a second build is required: exact mechanics of running it from
-   this repo (directory layout, `sushi-config.yaml` naming, CI wiring, whether it's declared
-   `fhirVersion: 4.0.1` too or something else) — design.md.
+   terminology references) — or does it hard-fail?~~ **Resolved via a real spike build
+   (design.md): neither - the field has no terminology binding at all, so an unresolvable
+   value is never even checked.** One existing IG build handles both releases; no second
+   build needed.
+2. ~~If the spike in #1 shows a second build is required: exact mechanics of running it from
+   this repo...~~ **Moot** - the spike showed a second build isn't required.
 3. ~~Given the FHIR R6 `ConceptMap` shape changes, does R6 output require a parallel
    `ConceptMapConverter`/emission path?~~ **Resolved, out of scope:** no — this change does
    not emit R6-shaped `ConceptMap`s at all (see "Why"/"What Changes"). That work is deferred

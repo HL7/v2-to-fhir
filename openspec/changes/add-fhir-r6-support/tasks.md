@@ -277,20 +277,54 @@
 
 ## 5. Stage 4b — One-build-vs-two-builds spike and final verification
 
-- [ ] 5.1 Spike: with `sushi-config.yaml` still declaring `fhirVersion: 4.0.1`, build a
+- [x] 5.1 Spike: with `sushi-config.yaml` still declaring `fhirVersion: 4.0.1`, build a
   minimal test `ConceptMap` FSH whose `target.code`/`group.target` references an R6-only
   name (e.g. `NutritionIntake`) and run SUSHI + the IG Publisher; observe whether it
   soft-warns (as with today's unresolvable V2/V3 terminology references) or hard-fails.
-- [ ] 5.2 Record the spike's outcome and decision in `design.md`, resolving the
-  "explicitly not decided here" section with the actual result.
-- [ ] 5.3 Depending on the outcome: either (a) confirm the single existing
+  Added a scratch `ZZZ-r6-spike-test.fsh` (deleted after recording the result, never
+  committed) with `target.code = #NutritionIntake[1]` and ran the real SUSHI + IG Publisher
+  build twice: once to observe the raw result, once more after fixing an unrelated bug the
+  first run's error count exposed (see 5.5). Result: **the Publisher doesn't validate the
+  value at all** - `ConceptMap.group.element.target.code` carries no terminology binding in
+  either FHIR release, so a value the loaded R4 package can't resolve is simply never
+  checked. Confirmed via zero mentions of `NutritionIntake` anywhere in the generated
+  `qa.html`, despite confirming the scratch resource itself WAS processed (6 mentions of
+  its own instance name in the same file) - not a false negative from the resource being
+  skipped.
+- [x] 5.2 Record the spike's outcome and decision in `design.md`, resolving the
+  "explicitly not decided here" section with the actual result. Rewrote that section (now
+  titled "...resolved by spike - one build") and updated `proposal.md`'s Open Questions #1
+  and #2 to strike through as resolved, matching the existing pattern used for #3/#4.
+- [x] 5.3 Depending on the outcome: either (a) confirm the single existing
   `sushi-config.yaml`/build handles both R4- and R6-tagged content, or (b) scaffold a
   second `sushi-config.yaml`/build directory for the R6 edition per design.md's mechanics
-  question — whichever the spike calls for.
-- [ ] 5.4 Full build verification, step (a): with only R4-tagged rows exercised, confirm
-  the existing R4 IG output is unchanged and still builds cleanly.
-- [ ] 5.5 Full build verification, step (b): exercising R6-tagged rows from the refreshed
+  question — whichever the spike calls for. (a): confirmed directly by 5.1's spike - no
+  second build is needed since the Publisher places no validation demands on R6-tagged
+  `target.code` values at all under the existing single build.
+- [x] 5.4 Full build verification, step (a): with only R4-tagged rows exercised, confirm
+  the existing R4 IG output is unchanged and still builds cleanly. Confirmed via the same
+  live build runs: `qa.html`'s error count matched (then, after 5.5's fix, improved on)
+  the historical Stage 2.3 baseline of 7 errors, with no new R4-side regressions - every
+  content difference traced back to an intentional R6-related change, not accidental R4
+  breakage.
+- [x] 5.5 Full build verification, step (b): exercising R6-tagged rows from the refreshed
   corpus, confirm acceptable output — correct R6 links/names, no unexpected validation
-  failures — completing Stage 4's two-step definition of done.
-- [ ] 5.6 Record the verified R4/R6 build results in `design.md` (or a short build log
-  referenced from it), closing out Stage 4 and this change.
+  failures — completing Stage 4's two-step definition of done. Running the real build (not
+  just unit-level checks) caught two real problems no earlier verification step surfaced:
+  (1) the first spike run reported 7832 errors instead of ~7 - traced to `Extensions.fsh`
+  (hand-authored, wrongly deleted as "stale" earlier this session) being missing, unrelated
+  to R6 work but only visible by actually running the Publisher - fixed and documented
+  separately (see the "Restore two hand-authored input/fsh files" commit). (2) After that
+  fix, a real but narrower R6 regression: `CodeableReference`'s link 404'd because R6
+  reorganized `datatypes.html` into per-topic pages - fixed via `ConverterImpl`'s new
+  `R6_DATATYPE_PAGE_OVERRIDES` table (see design.md). Final verified state: `qa.html`
+  errors = 6 (one better than the 7-error historical baseline), the one R6-tagged data type
+  actually in use (`CodeableReference`) resolves cleanly and correctly against the R6
+  snapshot build. The separate HTML-cross-link "Broken Links" counter (492K+ links checked,
+  including external ones) fluctuated 14/15 between otherwise-identical runs - treated as
+  external-network measurement noise, not chased further, since it's independent of
+  `qa.html`'s error tracking and the one link this stage specifically targeted
+  (`CodeableReference`) was directly confirmed fixed by name.
+- [x] 5.6 Record the verified R4/R6 build results in `design.md` (or a short build log
+  referenced from it), closing out Stage 4 and this change. Recorded in design.md's
+  rewritten one-build-vs-two-builds section (see 5.2).

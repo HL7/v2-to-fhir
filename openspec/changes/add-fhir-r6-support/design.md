@@ -168,14 +168,43 @@ should still treat `SupplyRequest` as absent from *FHIR R6 core* (per the diff a
 whether/how Incubator-tagged rows resolve differently is part of the future, separately-
 scoped Incubator support this proposal already treats as analogous-but-deferred.
 
-### Stage 4's one-build-vs-two-builds question is explicitly not decided here
-Per proposal.md's Open Question #1, this is resolved by a spike (does the IG Publisher, with
-`fhirVersion: 4.0.1` declared, tolerate a `target.code`/`group.target` value it can't
-resolve against the loaded R4 package, or does it hard-fail). The emission and
-link-resolution code from the two decisions above are written so that either outcome — one
-build containing both R4- and R6-targeted `ConceptMap`s, or two separate R4-declared builds
-partitioned by tag — works without further code changes; only build/publish orchestration
-would differ.
+### Stage 4's one-build-vs-two-builds question: resolved by spike - one build
+Per proposal.md's Open Question #1, this was resolved by actually running the real SUSHI +
+IG Publisher build (`sushi-config.yaml` still declaring `fhirVersion: 4.0.1`) against a
+scratch `ConceptMap` whose `target.code` referenced `NutritionIntake` - a resource
+confirmed R6-only, absent from the loaded R4 core package.
+
+**Result: the Publisher neither hard-fails nor soft-warns - it doesn't validate the value
+at all.** `ConceptMap.group.element.target.code` has no terminology binding in FHIR's own
+`ConceptMap` StructureDefinition (R4 or R6), so a value the loaded R4 package can't resolve
+is simply never checked against anything. Confirmed twice: once against the scratch
+resource directly (zero mentions of `NutritionIntake` anywhere in the generated
+`qa.html`, despite the resource itself being confirmed processed - 6 mentions of its own
+instance name), and again on a from-scratch rerun without the scratch resource, to confirm
+the qa.html/error-count baseline (Errors: 7, matching Stage 2.3's historical baseline
+exactly) was unaffected either way.
+
+**Decision: one build.** No second `sushi-config.yaml`/build directory is needed - the
+existing single R4-declared build already tolerates R6-tagged `target.code`/`group.target`
+values with no validation friction at all, exactly the outcome this design's emission and
+link-resolution code was already written to support without further changes.
+
+**A real finding from running the actual build, not from the spike question itself:**
+this same build run surfaced that FHIR R6 reorganized its documentation - several data
+types that share R4's single combined `datatypes.html` catalog page now live on dedicated
+topic pages in R6 (`CodeableReference` on `references.html`, several others on
+`metadatatypes.html`/`dosage.html`). `ConverterImpl`'s link resolution assumed R4's
+one-page convention held for R6 too, producing a broken link for `CodeableReference` (the
+one R6-only data type any current mapping content actually targets). Fixed with a small,
+explicitly-scoped page-override table (see `ConverterImpl.R6_DATATYPE_PAGE_OVERRIDES`) -
+verified via another live build that the resulting `qa.html` error count dropped to 6
+(one *below* the historical baseline, since this was a pre-existing-shaped defect exposed
+by giving `CodeableReference` a resolvable name at all in Stage 4a, not a new one). Only
+the data types actually exercised were verified against the live R6 snapshot build; other
+R6-only additions in `chapterdata.csv` (e.g. `integer64`, `CanonicalResource`,
+`MetadataResource`) were checked and NOT found on `datatypes.html` either, but their real
+page wasn't tracked down since nothing currently targets them - verify and extend the
+override table first if a future mapping row does.
 
 ## Risks / Trade-offs
 
