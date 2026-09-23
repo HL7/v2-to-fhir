@@ -1,4 +1,4 @@
-// mappings\segments\HL7 Segment - FHIR E2_ SPM[Specimen] - SPM.csv:6
+// mappings/segments/HL7 Segment - FHIR E2_ SPM[Specimen] - SPM.csv:6
 Instance: UnsupportedDatatypeEIPPlacerAssignedIdentifierToIdentifier
 InstanceOf: ConceptMap
 Title: "Datatype EIP to Identifier Map - Unsupported"

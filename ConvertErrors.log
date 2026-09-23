@@ -1,261 +1,183 @@
 W1) duration used where Duration meant.
-	at mappings.datatypes(HL7 Data Type - FHIR E2_ CWE[Duration] - Sheet1.csv:3)
+	at mappings/datatypes/HL7 Data Type - FHIR E2_ CWE[Duration] - Sheet1.csv(:3)
 	near: 1,CWE.1,Identifier,ST,0,1,"F-R4, F-R6",,,,,duration,,code,0,1,,,,,
 W2) duration used where Duration meant.
-	at mappings.datatypes(HL7 Data Type - FHIR E2_ CWE[Duration] - Sheet1.csv:4)
+	at mappings/datatypes/HL7 Data Type - FHIR E2_ CWE[Duration] - Sheet1.csv(:4)
 	near: 2,CWE.2,Text,ST,0,1,"F-R4, F-R6",,IF CWE.1 IS NOT VALUED,,,duration,,code,0,1,,,,,
 W3) DateTime used where dateTime meant.
-	at mappings.datatypes(HL7 Data Type - FHIR E2_ DTM[dateTime] - Sheet1.csv:3)
+	at mappings/datatypes/HL7 Data Type - FHIR E2_ DTM[dateTime] - Sheet1.csv(:3)
 	near: No corresponding line (3) in source file!
 W4) quantity used where Quantity meant.
-	at mappings.datatypes(HL7 Data Type - FHIR E2_ PRL[Observation] - OBX.csv:5)
+	at mappings/datatypes/HL7 Data Type - FHIR E2_ PRL[Observation] - OBX.csv(:5)
 	near: No corresponding line (5) in source file!
-W5) Missing source for mapping	at mappings.datatypes(HL7 Data Type - FHIR E2_ SPS[Specimen-Source] - Sheet1.csv:12)
+W5) Missing source for mapping	at mappings/datatypes/HL7 Data Type - FHIR E2_ SPS[Specimen-Source] - Sheet1.csv(:12)
 	near: No corresponding line (12) in source file!
 W6) simpleQuantity used where SimpleQuantity meant.
-	at mappings.datatypes(HL7 Data Type - FHIR E2_ TQ[MedicationRequest] - Sheet1.csv:3)
+	at mappings/datatypes/HL7 Data Type - FHIR E2_ TQ[MedicationRequest] - Sheet1.csv(:3)
 	near: 1,TQ.1,Quantity,CQ,0,1,"F-R4, F-R6",,,,,dosageInstruction.doseAndRate.doseQuantity,,simpleQuantity,0,1,CQ[Quantity],,,,
 W7) period used where Period meant.
-	at mappings.datatypes(HL7 Data Type - FHIR E2_ XAD[Address] - Sheet1.csv:21)
+	at mappings/datatypes/HL7 Data Type - FHIR E2_ XAD[Address] - Sheet1.csv(:21)
 	near: 12,XAD.12,Address Validity Range,DR,0,1,"F-R4, F-R6",,,,,period,,Period,0,1,DR[Period],,,,
 W8) coding used where Coding meant.
-	at mappings.datatypes(HL7 Data Type - FHIR E2_ XON[Location] - Sheet1.csv:4)
+	at mappings/datatypes/HL7 Data Type - FHIR E2_ XON[Location] - Sheet1.csv(:4)
 	near: 2,XON.2,Organization Name Type Code,CWE,0,1,"F-R4, F-R6",,,,,,Location.#ext-nameType#,coding,0,1,CWE[coding],OrganizationalNameType,,,
 W9) coding used where Coding meant.
-	at mappings.datatypes(HL7 Data Type - FHIR E2_ XON[Organization] - Sheet1.csv:4)
+	at mappings/datatypes/HL7 Data Type - FHIR E2_ XON[Organization] - Sheet1.csv(:4)
 	near: 2,XON.2,Organization Name Type Code,CWE,0,1,"F-R4, F-R6",,,,,,extension??-nameType,coding,0,1,CWE[Coding],OrganizationalNameType,,,
 W10) identifier used where Identifier meant.
-	at mappings.datatypes(HL7 Data Type - FHIR E2_ XON[Organization] - Sheet1.csv:5)
+	at mappings/datatypes/HL7 Data Type - FHIR E2_ XON[Organization] - Sheet1.csv(:5)
 	near: 3,XON.3,ID Number,NM,0,1,"F-R4, F-R6",,IF XON-10 NOT VALUED,,,identifier.value,,identifier,0,-1,,,,,
 W11) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ AIG[Appointment] - Sheet1.csv:5)
+	at mappings/segments/HL7 Segment - FHIR E2_ AIG[Appointment] - Sheet1.csv(:5)
 	near: 3,AIG-3,Resource ID,CWE,0,1,"F-R4, F-R6",,,,If AIG-4 reflects a location,participant.actor(Location.identifier),,identifier,0,1,CWE[Identifier],,,,
 W12) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ AIS[ServiceRequest] - Sheet1.csv:5)
+	at mappings/segments/HL7 Segment - FHIR E2_ AIS[ServiceRequest] - Sheet1.csv(:5)
 	near: 3,AIS-3,Universal Service Identifier,CWE,0,1,"F-R4, F-R6",,,,,identifier[1],,,,,CWE[Identifier],,,,
 W13) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ AIS[ServiceRequest] - Sheet1.csv:13)
+	at mappings/segments/HL7 Segment - FHIR E2_ AIS[ServiceRequest] - Sheet1.csv(:13)
 	near: 11,AIS-11,Placer Supplemental Service Information,CWE,0,-1,"F-R4, F-R6",,,,,identifier[2],,,,,CWE[Identifier],,,,
 W14) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ AIS[ServiceRequest] - Sheet1.csv:14)
+	at mappings/segments/HL7 Segment - FHIR E2_ AIS[ServiceRequest] - Sheet1.csv(:14)
 	near: No corresponding line (14) in source file!
 W15) DateTime used where dateTime meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ DG1[Condition] - Sheet1.csv:7)
+	at mappings/segments/HL7 Segment - FHIR E2_ DG1[Condition] - Sheet1.csv(:7)
 	near: 5,DG1-5,Diagnosis Date/Time,DTM,0,1,"F-R4, F-R6",,,,,onsetDateTime,,DateTime,0,1,,,,,Should confirm that these two concepts are equivalent. Condition.recordedDate is also available
 W16) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ DG1[Condition] - Sheet1.csv:24)
+	at mappings/segments/HL7 Segment - FHIR E2_ DG1[Condition] - Sheet1.csv(:24)
 	near: 20,DG1-20,Diagnosis Identifier,EI,0,1,"F-R4, F-R6",,,,,identifier,,identifier,0,-1,EI[Identifier-Extension],,,,
 W17) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ DG1[Condition] - Sheet1.csv:24)
+	at mappings/segments/HL7 Segment - FHIR E2_ DG1[Condition] - Sheet1.csv(:24)
 	near: 20,DG1-20,Diagnosis Identifier,EI,0,1,"F-R4, F-R6",,,,,identifier,,identifier,0,-1,EI[Identifier-Extension],,,,
 W18) DateTime used where dateTime meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ DG1[Encounter] - Sheet1.csv:7)
+	at mappings/segments/HL7 Segment - FHIR E2_ DG1[Encounter] - Sheet1.csv(:7)
 	near: 5,DG1-5,Diagnosis Date/Time,DTM,0,1,"F-R4, F-R6",,,,,diagnosis.condition(Condition.onsetDateTime),,DateTime,0,1,,,,,Should confirm that these two concepts are equivalent. Condition.recordedDate is also available
 W19) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ DG1[Encounter] - Sheet1.csv:24)
+	at mappings/segments/HL7 Segment - FHIR E2_ DG1[Encounter] - Sheet1.csv(:24)
 	near: 20,DG1-20,Diagnosis Identifier,EI,0,1,"F-R4, F-R6",,,,,diagnosis.condition(Condition.identifier),,identifier,0,-1,EI[Identifier-Extension],,,,We should confirm that this is truly a unique ID before it gets used as .id. It may need to be combined with a visit ID to make it fully unique.
 W20) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ DG1[EpisodeOfCare] - Sheet1.csv:24)
+	at mappings/segments/HL7 Segment - FHIR E2_ DG1[EpisodeOfCare] - Sheet1.csv(:24)
 	near: 20,DG1-20,Diagnosis Identifier,EI,0,1,"F-R4, F-R6",,,,,diagnosis.condition(Condition.identifier),,identifier,0,-1,EI[Identifier-Extension],,,,We should confirm that this is truly a unique ID before it gets used as .id. It may need to be combined with a visit ID to make it fully unique.
 W21) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ IAM[AllergyIntolerance] - Sheet1.csv:18)
+	at mappings/segments/HL7 Segment - FHIR E2_ IAM[AllergyIntolerance] - Sheet1.csv(:18)
 	near: 7,IAM-7,Allergy Unique Identifier,EI,0,1,"F-R4, F-R6",,,,,identifier,,identifier,0,-1,EI[Identifier-Extension],,,,
 W22) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ IAM[AllergyIntolerance] - Sheet1.csv:18)
+	at mappings/segments/HL7 Segment - FHIR E2_ IAM[AllergyIntolerance] - Sheet1.csv(:18)
 	near: 7,IAM-7,Allergy Unique Identifier,EI,0,1,"F-R4, F-R6",,,,,identifier,,identifier,0,-1,EI[Identifier-Extension],,,,
 W23) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ IN1[Coverage] - Sheet1.csv:4)
+	at mappings/segments/HL7 Segment - FHIR E2_ IN1[Coverage] - Sheet1.csv(:4)
 	near: 2,IN1-2,Health Plan ID,CWE,1,1,"F-R4, F-R6",,,,,identifier,,Identifier,0,-1,CWE[Identifier],,,,
 W24) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ MRG[Account] - Sheet1.csv:6)
+	at mappings/segments/HL7 Segment - FHIR E2_ MRG[Account] - Sheet1.csv(:6)
 	near: 3,MRG-3,Prior Patient Account Number,CX,0,1,"F-R4, F-R6",,,,,identifier,,Identifier,0,-1,CX[Identifier],,,,
 W25) meta used where Meta meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ MSH[MessageHeader] - R4.csv:17)
+	at mappings/segments/HL7 Segment - FHIR E2_ MSH[MessageHeader] - R4.csv(:17)
 	near: 11,MSH-11,Processing ID,PT,1,1,"F-R4, F-R6",,,,,meta,,meta,0,-1,PT[Meta],,,,
 W26) meta used where Meta meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ MSH[MessageHeader] - R4.csv:17)
+	at mappings/segments/HL7 Segment - FHIR E2_ MSH[MessageHeader] - R4.csv(:17)
 	near: 11,MSH-11,Processing ID,PT,1,1,"F-R4, F-R6",,,,,meta,,meta,0,-1,PT[Meta],,,,
 W27) address used where Address meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ NK1[RelatedPerson] - Sheet1.csv:6)
+	at mappings/segments/HL7 Segment - FHIR E2_ NK1[RelatedPerson] - Sheet1.csv(:6)
 	near: 4,NK1-4,Address,XAD,0,-1,"F-R4, F-R6",,,,,address[1],,Address,0,-1,XAD[Address],,,,
 W28) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ NK1[RelatedPerson] - Sheet1.csv:15)
+	at mappings/segments/HL7 Segment - FHIR E2_ NK1[RelatedPerson] - Sheet1.csv(:15)
 	near: 12,NK1-12,Next of Kin / Associated Parties Employee Number,CX,0,1,"F-R4, F-R6",,,,,identifier[1]       ,,Identifier,0,-1,CX[Identifier],,,,
 W29) address used where Address meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ NK1[RelatedPerson] - Sheet1.csv:35)
+	at mappings/segments/HL7 Segment - FHIR E2_ NK1[RelatedPerson] - Sheet1.csv(:35)
 	near: 32,NK1-32,Contact Person's Address,XAD,0,-1,"F-R4, F-R6",,,,,address[2],,Address,0,-1,XAD[Address],,,,
 W30) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ NK1[RelatedPerson] - Sheet1.csv:36)
+	at mappings/segments/HL7 Segment - FHIR E2_ NK1[RelatedPerson] - Sheet1.csv(:36)
 	near: 33,NK1-33,Next of Kin/Associated Party's Identifiers,CX,0,-1,"F-R4, F-R6",,,,,identifier[2]       ,,Identifier,0,-1,CX[Identifier],,,,
 W31) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBR[DiagnosticReport] - OBR.csv:4)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBR[DiagnosticReport] - OBR.csv(:4)
 	near: 2,OBR-2,Placer Order Number,EI,0,1,"F-R4, F-R6",,,,If ORC-2 of the same ORC/OBR pair is not valued OR there is ORC segment in the current ORDER_OBSERVATION segment group,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W32) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBR[DiagnosticReport] - OBR.csv:7)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBR[DiagnosticReport] - OBR.csv(:7)
 	near: 3,OBR-3,Filler Order Number,EI,0,1,"F-R4, F-R6",,,,If ORC-3 of the same ORC/OBR pair is not valued OR there is ORC segment in the current ORDER_OBSERVATION segment group,identifier[2],,Identifier,0,1,EI[Identifier-Extension],,,,
 W33) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv:5)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv(:5)
 	near: 2,OBR-2,Placer Order Number,EI,0,1,"F-R4, F-R6",,IF ORC-2 NOT VALUED,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W34) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv:8)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv(:8)
 	near: 3,OBR-3,Filler Order Number,EI,0,1,"F-R4, F-R6",,IF ORC-3 NOT VALUED,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W35) CodeableReference is not a recognized FHIR Data Type under F-R4, but is under F-R6.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv:24)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv(:24)
 	near: 13,OBR-13,Relevant Clinical Information,CWE,0,-1,"F-R4, F-R6",,,,If this does not represent fasting status,extension[1].valueCodeableReference.concept,,CodeableReference(Any),0,-1,CWE[CodeableConcept],,,,
 W36) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv:42)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv(:42)
 	near: 29,OBR-29,Paren tResults Observation Identifier,EIP,0,1,"F-R4, F-R6",,IF OBR-29.1 VALUED AND OBR-50 NOT VALUED,,"If OBR-29.2 is also valued, implementation needs to decide which one to use.",basedOn[1].identifier,,identifier,0,-1,EIP[Identifier-PlacerAssignedIdentifier],,,,
 W37) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv:44)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv(:44)
 	near: 29,OBR-29,Parent Results Observation Identifier,EIP,0,1,"F-R4, F-R6",,IF OBR-29.2 VALUED AND OBR-50 NOT VALUED,,"If OBR-29.1 is also valued, implementation needs to decide which one to use.",basedOn[2].identifier,,identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,
 W38) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv:70)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBR[ServiceRequest] - OBR.csv(:70)
 	near: 53,OBR-53,Alternate Placer Order Number,CX,0,-1,"F-R4, F-R6",,,,,identifier[3],,Identifier,0,-1,CX[Identifier],,,,
 W39) quantity used where Quantity meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBX[Observation-Component] - OBX.csv:9)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBX[Observation-Component] - OBX.csv(:9)
 	near: 5,OBX-5,Observation Value,varies,0,-1,"F-R4, F-R6",,"IF OBX-2 EQUALS ""NM""",,,component[each].valueQuantity,,quantity,0,1,NM[Quantity],,,,
 W40) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBX[Observation-Component] - OBX.csv:55)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBX[Observation-Component] - OBX.csv(:55)
 	near: 15,OBX-15,Producer's ID,CWE,0,1,"F-R4, F-R6",,,,,,extension??-producerIdentifier,identifier,0,1,CWE[Identifier],,,,
 W41) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBX[Observation-Component] - OBX.csv:64)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBX[Observation-Component] - OBX.csv(:64)
 	near: 21,OBX-21,Observation Instance Identifier,EI,0,1,"F-R4, F-R6",,,,,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,
 W42) quantity used where Quantity meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBX[Observation] - OBX.csv:8)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBX[Observation] - OBX.csv(:8)
 	near: 5,OBX-5,Observation Value,varies,0,-1,"F-R4, F-R6",,"IF OBX-2 EQUALS ""NM""",,,valueQuantity.value,,quantity,0,1,NM[Quantity],,,,
 W43) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBX[Observation] - OBX.csv:52)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBX[Observation] - OBX.csv(:52)
 	near: 15,OBX-15,Producer's ID,CWE,0,1,"F-R4, F-R6",,,,,performer[2](Organization),,identifier,0,1,CWE[Organization],,,,"We are mapping this to an identifier considering the definition (used for a unique identifier of the producer), although that does not fit the use of the CWE data type in HL7 v2.  Depending on context (e.g., US CLIA or IHE LTW, or ILW) this may reflect a location (US CLIA) or an organization (IHE LTW or ILW)."
 W44) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ OBX[Observation] - OBX.csv:62)
+	at mappings/segments/HL7 Segment - FHIR E2_ OBX[Observation] - OBX.csv(:62)
 	near: 21,OBX-21,Observation Instance Identifier,EI,0,1,"F-R4, F-R6",,,,,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,
 W45) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[DiagnosticReport] - ORC.csv:4)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[DiagnosticReport] - ORC.csv(:4)
 	near: 2,ORC-2,Placer Order Number,EI,0,1,"F-R4, F-R6",,,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W46) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[DiagnosticReport] - ORC.csv:8)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[DiagnosticReport] - ORC.csv(:8)
 	near: 3,ORC-3,Filler Order Number,EI,0,1,"F-R4, F-R6",,,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W47) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[DiagnosticReport] - ORC.csv:11)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[DiagnosticReport] - ORC.csv(:11)
 	near: 4,ORC-4,Placer Group Number,EIP,0,1,"F-R4, F-R6",,,,,identifier[3],,Identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,
 W48) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[DiagnosticReport] - ORC.csv:12)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[DiagnosticReport] - ORC.csv(:12)
 	near: 4,ORC-4,Placer Group Number,EIP,0,1,"F-R4, F-R6",,,,,identifier[4],,Identifier,0,-1,EIP[Identifier-PlacerAssignedIdentifier],,,,
 W49) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[Immunization] - ORC.csv:4)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[Immunization] - ORC.csv(:4)
 	near: 2,ORC-2,Placer Order Number,EI,0,1,"F-R4, F-R6",,,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W50) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[Immunization] - ORC.csv:7)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[Immunization] - ORC.csv(:7)
 	near: 3,ORC-3,Filler Order Number,EI,0,1,"F-R4, F-R6",,,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W51) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[Immunization] - ORC.csv:10)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[Immunization] - ORC.csv(:10)
 	near: 4,ORC-4,Placer Group Number,EIP,0,1,"F-R4, F-R6",,,,,identifier[3],,Identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,
 W52) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[Immunization] - ORC.csv:11)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[Immunization] - ORC.csv(:11)
 	near: 4,ORC-4,Placer Group Number,EIP,0,1,"F-R4, F-R6",,,,,identifier[4],,Identifier,0,-1,EIP[Identifier-PlacerAssignedIdentifier],,,,
 W53) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[MedicationAdministration] - Sheet1.csv:7)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[MedicationAdministration] - Sheet1.csv(:7)
 	near: 2,ORC-2,Placer Order Number,EI,0,1,"F-R4, F-R6",,,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W54) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[MedicationAdministration] - Sheet1.csv:10)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[MedicationAdministration] - Sheet1.csv(:10)
 	near: 3,ORC-3,Filler Order Number,EI,0,1,"F-R4, F-R6",,,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W55) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[ServiceRequest] - ORC.csv:9)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[ServiceRequest] - ORC.csv(:9)
 	near: 2,ORC-2,Placer Order Number,EI,0,1,"F-R4, F-R6",,IF OBR-2 NOT VALUED,"OBR.element(""2"").empty()",,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W56) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[ServiceRequest] - ORC.csv:12)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[ServiceRequest] - ORC.csv(:12)
 	near: 3,ORC-3,Filler Order Number,EI,0,1,"F-R4, F-R6",,IF OBR-3 NOT VALUED,"OBR.element(""3"").empty()",,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,
 W57) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[ServiceRequest] - ORC.csv:21)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[ServiceRequest] - ORC.csv(:21)
 	near: 4,ORC-4,Placer Group Number,EIP,0,1,"F-R4, F-R6",,IF ORC-4.2 VALUED AND ORC-38 IS NOT VALUED,,"If ORC-4 data type ""EIP"" is used",identifier[3],,Identifier,0,1,EIP[Identifier-FillerAssignedGroupNumber],,,,
 W58) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ORC[ServiceRequest] - ORC.csv:61)
+	at mappings/segments/HL7 Segment - FHIR E2_ ORC[ServiceRequest] - ORC.csv(:61)
 	near: 33,ORC-33,Alternate Placer Order Number,CX,0,-1,"F-R4, F-R6",,IF OBR-53 NOT VALUED,"OBR.element(""2"").empty()",,identifier[4],,Identifier,0,-1,CX[Identifier],,,,
 W59) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PID[Account] - Sheet1.csv:22)
+	at mappings/segments/HL7 Segment - FHIR E2_ PID[Account] - Sheet1.csv(:22)
 	near: 18,PID-18,Patient Account Number,CX,0,1,"F-R4, F-R6",,,,,identifier,,Identifier,0,-1,CX[Identifier],,,,
 W60) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PID[Patient] - PID.csv:4)
+	at mappings/segments/HL7 Segment - FHIR E2_ PID[Patient] - PID.csv(:4)
 	near: 2,PID-2,Patient ID,CX,0,1,"F-R4, F-R6",,,,,identifier[1],,Identifier,0,-1,CX[Identifier],,,,
 W61) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PID[Patient] - PID.csv:5)
+	at mappings/segments/HL7 Segment - FHIR E2_ PID[Patient] - PID.csv(:5)
 	near: 3,PID-3,Patient Identifier List,CX,1,-1,"F-R4, F-R6",,,,,identifier[2],,Identifier,0,-1,CX[Identifier],,,,
-W62) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PID[Patient] - PID.csv:6)
-	near: 4,PID-4,Alternate Patient ID - PID,CX,0,1,"F-R4, F-R6",,,,,identifier[3],,Identifier,0,-1,CX[Identifier],,,,
-W63) address used where Address meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PID[Patient] - PID.csv:16)
-	near: 11,PID-11,Patient Address,XAD,0,-1,"F-R4, F-R6",,,,,address[1],,Address,0,-1,XAD[Address],,,,
-W64) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PID[Patient] - PID.csv:35)
-	near: 20,PID-20,Driver's License Number - Patient,DLN,0,1,"F-R4, F-R6",,,,,identifier[5],,Identifier,0,1,DLN[Identifier],,,,
-W65) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PR1[Procedure] - PR1[Procedure].csv:29)
-	near: 19,PR1-19,Procedure Identifier,EI,0,1,"F-R4, F-R6",,,,,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,
-W66) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PRT[Device] - Sheet1.csv:14)
-	near: 10,PRT-10,Device,EI,0,-1,"F-R4, F-R6",,,,If not an HRF or AIDC,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,
-W67) Missing vocabulary mapping for SegmentActionCode	at mappings.segments(HL7 Segment - FHIR E2_ PRT[Patient-GeneralPractitioner-PractitionerRole] - Sheet1.csv:4)
-	near: 02.00.00,PRT-2,Action Code,ID,1,1,"F-R4, F-R6",,,,if mapped to a restful service to progress the message.,Operation,,,,,,SegmentActionCode,,,,,
-W68) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PRT[Patient-GeneralPractitioner-PractitionerRole] - Sheet1.csv:26)
-	near: No corresponding line (26) in source file!
-W69) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PRT[PractitionerRole] - Sheet1.csv:44)
-	near: No corresponding line (44) in source file!
-W70) address used where Address meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PRT[RelatedPerson] - Sheet1.csv:17)
-	near: 14,PRT-14,Address,XAD,0,-1,"F-R4, F-R6",,,,,address,,Address,0,-1,XAD[Address],,,,,,
-W71) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PRT[RelatedPerson] - Sheet1.csv:43)
-	near: No corresponding line (43) in source file!
-W72) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PV1[Encounter] - PV1.csv:41)
-	near: 19,PV1-19,Visit Number,CX,0,1,"F-R4, F-R6",,,,,identifier[1],,Identifier,0,-1,CX[Identifier],,,,,,
-W73) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ PV1[Encounter] - PV1.csv:77)
-	near: 50,PV1-50,Alternate Visit ID,CX,0,-1,"F-R4, F-R6",,,,,identifier[2],,Identifier,0,-1,CX[Identifier],,,,,,
-W74) DateTime used where dateTime meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ROL[CareTeam] - Sheet1.csv:9)
-	near: 5,ROL-5,Role Begin Date/Time,DTM,0,1,"F-R4, F-R6",,,,,participant.period.start,,DateTime,0,1,DTM[DateTime],,,,,,
-W75) DateTime used where dateTime meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ROL[CareTeam] - Sheet1.csv:10)
-	near: 6,ROL-6,Role End Date/Time,DTM,0,1,"F-R4, F-R6",,,,,participant.period.end,,DateTime,0,1,DTM[DateTime],,,,,,
-W76) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ROL[RelatedPerson] - Sheet1.csv:3)
-	near: 1,ROL-1,Role Instance ID,EI,0,1,"F-R4, F-R6",,,,,identifier,,Identifier,0,-1,EI[Identifier-Extension],,,,,,
-W77) address used where Address meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ ROL[RelatedPerson] - Sheet1.csv:13)
-	near: 11,ROL-11,Office/Home Address/Birthplace,XAD,0,-1,"F-R4, F-R6",,,,,address,,Address,0,-1,XAD[Address],,,,,,
-W78) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ SCH[Appointment] - Sheet1.csv:3)
-	near: 1,SCH-1,Placer Appointment ID,EI,0,1,"F-R4, F-R6",,,,,identifier[1],,Identifier,0,-1,EI[Identifier-Extension],,,,,,
-W79) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ SCH[Appointment] - Sheet1.csv:4)
-	near: 2,SCH-2,Filler Appointment ID,EI,0,1,"F-R4, F-R6",,,,,identifier[2],,Identifier,0,-1,EI[Identifier-Extension],,,,,,
-W80) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ SCH[ServiceRequest] - Sheet1.csv:36)
-	near: 26,SCH-26,Placer Order Number,EI,0,-1,"F-R4, F-R6",,,,,identifier[1],,,,,,,,,,,
-W81) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ SCH[ServiceRequest] - Sheet1.csv:37)
-	near: No corresponding line (37) in source file!
-W82) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ SPM[Specimen] - SPM.csv:4)
-	near: 2,SPM-2,Specimen ID,EIP,0,1,"F-R4, F-R6",,,,,identifier[1],,Identifier,0,-1,EIP[Identifier-PlacerAssignedIdentifier],,,,,,
-W83) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ SPM[Specimen] - SPM.csv:5)
-	near: 2,SPM-2,Specimen ID,EIP,0,1,"F-R4, F-R6",,,,,identifier[2],,Identifier,0,-1,EIP[Identifier-FillerAssignedIdentifier],,,,,,
-W84) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ SPM[Specimen] - SPM.csv:36)
-	near: 31,SPM-31,Other Specimen ID,CX,0,-1,"F-R4, F-R6",,,,,identifier[2],,Identifier,0,-1,CX[Identifier],,,,,,
-W85) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ SPM[Specimen] - SPM.csv:37)
-	near: 32,SPM-32,Shipment ID,EI,0,1,"F-R4, F-R6",,,,,identifier[3],,Identifier,0,-1,EI[Identifier-Extension],,,,,,
-W86) simpleQuantity used where SimpleQuantity meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ TQ1[MedicationRequest] - Sheet1.csv:4)
-	near: 2,TQ1-2,Quantity,CQ,0,1,"F-R4, F-R6",,,,,dosageInstruction.doseAndRate.doseQuantity,,simpleQuantity,0,1,CQ[Quantity],,,,,,
-W87) identifier used where Identifier meant.
-	at mappings.segments(HL7 Segment - FHIR E2_ TXA[DocumentReference] - Sheet1.csv:21)
-	near: 16,TXA-16,Unique Document File Name,ST,0,1,"F-R4, F-R6",,,,,identifier[1],,Identifier,0,-1,ST[Identifier],,,,Need to ensure that the full path is represented.,,
-E1) No mapping for EIP[Identifier-FillerAssignedIdentifier]. Missing file: HL7 Data Type - FHIR E2_ EIP[Identifier-FillerAssignedIdentifier] - Sheet1.csv
-	at mappings.segments(HL7 Segment - FHIR E2_ SPM[Specimen] - SPM.csv:7)
+W62) identifier used where Identifi
